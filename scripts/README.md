@@ -80,7 +80,14 @@ Automatically notify subscribers when a new blog post is published.
 
    The workflow uses `environment: github-pages`, so the key must live in that environment (or in repository secrets).
 
-3. **Local testing**
+   **Important:** Re-running an old failed job does not pick up workflow fixes. After changing the workflow, use **Actions → Send Newsletter → Run workflow** (manual dispatch) or push a new blog post change.
+
+3. **Manual test in GitHub Actions**
+   - Actions → **Send Newsletter** → **Run workflow**
+   - Leave **Dry run** checked first to verify the secret is wired correctly
+   - Uncheck **Dry run** and run again to send for posts changed in the latest commit
+
+4. **Local testing**
    ```bash
    export BUTTONDOWN_API_KEY="your-token-here"
    npm run send:newsletter -- --dry-run --post whole-engineer
