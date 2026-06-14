@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Calendar, ChevronRight, Rss, Search } from 'lucide-react';
+import { Calendar, ChevronRight, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { getAllBlogPosts, getPublishedPosts, formatDate, type BlogPostMeta } from '../utils/blogUtils';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -163,14 +163,7 @@ const BlogList: React.FC = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 pt-32 pb-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6">
-              {t('blog.title')}
-            </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              {t('blog.loading')}
-            </p>
-          </div>
+          <p className="text-center text-slate-600 mb-10">{t('blog.loading')}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[...Array(6)].map((_, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm animate-pulse">
@@ -189,28 +182,6 @@ const BlogList: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 pt-32 pb-20">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6">
-            {t('blog.title')}
-          </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            {t('blog.subtitle')}
-          </p>
-          <div className="mt-6">
-            <a
-              href="/rss.xml"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 transition-colors"
-              title="Subscribe to RSS Feed"
-            >
-              <Rss className="w-5 h-5" />
-              <span className="font-medium">RSS Feed</span>
-            </a>
-          </div>
-        </div>
-
         {/* Filters */}
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 md:p-6 mb-10 space-y-5">
           {/* Search */}

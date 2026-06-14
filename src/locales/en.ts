@@ -19,10 +19,10 @@ export const en = {
       viewAll: 'Read all',
     },
     subscribe: {
-      title: 'Subscribe',
+      headline: 'Email me when I publish',
       placeholder: 'your@email.com',
       button: 'Subscribe',
-      note: 'Get an email when a new post goes live. Unsubscribe anytime.',
+      note: 'Unsubscribe anytime.',
     },
     latest: {
       title: 'Latest',
@@ -41,8 +41,6 @@ export const en = {
 
   // Blog
   blog: {
-    title: 'Latest Thoughts',
-    subtitle: 'Insights on building systems, leveraging technology, and creating meaningful impact through software, content, and AI.',
     loading: 'Loading blog posts...',
     readMore: 'Read More',
     backToBlog: 'Back to Blog',

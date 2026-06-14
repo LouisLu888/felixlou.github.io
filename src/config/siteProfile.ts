@@ -16,14 +16,20 @@ export const VALUE_STACK_SERIES = {
   ],
 };
 
+export const FEATURED_POST_SLUGS = [
+  'value-creator-to-value-owner',
+  'b2b-sales-insights',
+  'cross-cultural-parenting',
+];
+
 export const careerTimeline: TimelineEntry[] = [
   {
     period: '2026 – 今',
     role: 'GTM Lead',
     company: 'Amplitude',
     note: {
-      zh: 'GTM × Engineering · 把碎片化的人工作流变成可落地的系统',
-      en: 'GTM × Engineering · turning fragmented human workflows into scalable systems',
+      zh: 'GTM × Engineering, building company brain',
+      en: 'GTM × Engineering, building company brain',
     },
     href: 'https://amplitude.com',
   },

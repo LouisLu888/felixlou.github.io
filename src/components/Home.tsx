@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getAllBlogPosts, getPublishedPosts, formatDate, type BlogPostMeta } from '../utils/blogUtils';
-import { careerTimeline, EMAIL, VALUE_STACK_SERIES, BUTTONDOWN } from '../config/siteProfile';
+import { careerTimeline, EMAIL, FEATURED_POST_SLUGS, BUTTONDOWN } from '../config/siteProfile';
 
 const Home: React.FC = () => {
   const { language, t } = useLanguage();
@@ -30,8 +30,8 @@ const Home: React.FC = () => {
 
   const latestPosts = posts.slice(0, 3);
 
-  const featuredPosts = VALUE_STACK_SERIES.parts
-    .map(({ slug }) => posts.find((p) => p.id === slug))
+  const featuredPosts = FEATURED_POST_SLUGS
+    .map((slug) => posts.find((p) => p.id === slug))
     .filter((post): post is BlogPostMeta => Boolean(post));
 
   const pick = <T,>(item: { zh: T; en: T }): T => item[language];
@@ -69,58 +69,57 @@ const Home: React.FC = () => {
           </div>
         </header>
 
-        {/* Content archive */}
-        <section className="border border-slate-200 rounded-xl p-5 space-y-3">
-          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
-            {t('home.contentArchive.title')}
-          </h2>
-          {contentStats && (
-            <p className="text-slate-600 text-sm leading-relaxed">
-              {t('home.contentArchive.stats')
-                .replace('{total}', String(contentStats.total))
-                .replace('{original}', String(contentStats.originalCount))
-                .replace('{wechat}', String(contentStats.wechatCount))
-                .replace('{start}', String(contentStats.minYear))
-                .replace('{end}', String(contentStats.maxYear))}
-            </p>
-          )}
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-1.5 text-amber-600 hover:text-amber-700 font-medium text-sm"
-          >
-            {t('home.contentArchive.viewAll')}
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </section>
-
-        {/* Subscribe */}
-        <section className="space-y-3">
-          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
-            {t('home.subscribe.title')}
-          </h2>
-          <form
-            action={BUTTONDOWN.embedAction}
-            method="post"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col sm:flex-row gap-2"
-          >
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder={t('home.subscribe.placeholder')}
-              className="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent text-slate-800 placeholder:text-slate-400"
-            />
-            <input type="hidden" name="embed" value="1" />
-            <button
-              type="submit"
-              className="px-4 py-2 text-sm font-medium bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors shrink-0"
+        {/* Content archive + subscribe */}
+        <section className="border border-slate-200 rounded-xl overflow-hidden">
+          <div className="p-5 space-y-2">
+            <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
+              {t('home.contentArchive.title')}
+            </h2>
+            {contentStats && (
+              <p className="text-slate-600 text-sm leading-relaxed">
+                {t('home.contentArchive.stats')
+                  .replace('{total}', String(contentStats.total))
+                  .replace('{original}', String(contentStats.originalCount))
+                  .replace('{wechat}', String(contentStats.wechatCount))
+                  .replace('{start}', String(contentStats.minYear))
+                  .replace('{end}', String(contentStats.maxYear))}
+              </p>
+            )}
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-1.5 text-amber-600 hover:text-amber-700 font-medium text-sm"
             >
-              {t('home.subscribe.button')}
-            </button>
-          </form>
-          <p className="text-sm text-slate-500">{t('home.subscribe.note')}</p>
+              {t('home.contentArchive.viewAll')}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="bg-amber-50 border-t border-amber-100 p-5 space-y-3">
+            <p className="text-base font-semibold text-slate-800">{t('home.subscribe.headline')}</p>
+            <p className="text-sm text-slate-600 -mt-1">{t('home.subscribe.note')}</p>
+            <form
+              action={BUTTONDOWN.embedAction}
+              method="post"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col sm:flex-row gap-2 pt-1"
+            >
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder={t('home.subscribe.placeholder')}
+                className="flex-1 px-3 py-2.5 text-sm border border-amber-200 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent text-slate-800 placeholder:text-slate-400"
+              />
+              <input type="hidden" name="embed" value="1" />
+              <button
+                type="submit"
+                className="px-5 py-2.5 text-sm font-semibold bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors shrink-0 shadow-sm"
+              >
+                {t('home.subscribe.button')}
+              </button>
+            </form>
+          </div>
         </section>
 
         {/* Experience timeline */}

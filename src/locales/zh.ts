@@ -19,10 +19,10 @@ export const zh = {
       viewAll: '阅读全部',
     },
     subscribe: {
-      title: '订阅更新',
+      headline: '新文章发布时，邮件通知我',
       placeholder: 'your@email.com',
       button: '订阅',
-      note: '新文章发布时收到邮件通知，可随时退订。',
+      note: '可随时退订。',
     },
     latest: {
       title: '最新文章',
@@ -41,8 +41,6 @@ export const zh = {
 
   // Blog
   blog: {
-    title: '最新思考',
-    subtitle: '关于构建系统、利用技术以及通过软件、内容和AI创造有意义影响的见解。',
     loading: '正在加载博客文章...',
     readMore: '阅读更多',
     backToBlog: '返回博客',
