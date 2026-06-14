@@ -5,10 +5,51 @@
     <link>https://www.jiabinlu.com</link>
     <description>Insights on building systems, leveraging technology, and creating meaningful impact through software, content, and AI.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Sep 2025 00:20:17 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 04:46:58 GMT</lastBuildDate>
     <atom:link href="https://www.jiabinlu.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>东西方育儿文化的张力：如何在两种价值观之间找到平衡？</title>
+      <title>从 Value Creator 到 Value Owner：在打工和赚钱之间，还隔着一层 Ownership</title>
+      <link>https://www.jiabinlu.com/blog/value-creator-to-value-owner</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/value-creator-to-value-owner</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Salary 让你过日子，equity 让你致富。在创造价值和获得财富之间，还隔着一层东西——Ownership。</description>
+      <category>感悟, AI</category>
+    </item>
+    <item>
+      <title>AI 把工程师的成长路径砸碎了—写代码的边际成本归零之后，工程师还值什么钱？</title>
+      <link>https://www.jiabinlu.com/blog/whole-engineer</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/whole-engineer</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description>2011 年 patio11 看到的那条认知裂缝，AI 在 2024 年之后把它撕开成了一道峡谷。裂缝两边的人，工资差距会以前所未有的速度拉开。</description>
+      <category>感悟, AI</category>
+    </item>
+    <item>
+      <title>AI 让 Solution 层崩塌，剩下的能力才决定你值多少钱</title>
+      <link>https://www.jiabinlu.com/blog/solution-outcome-value</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/solution-outcome-value</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description>这条路径只有三段：Solution → Outcome → Value。它适用于所有创造价值的人。AI 正在把 Solution 层的成本拉向零，留给人类的稀缺位置只剩下两块：判断什么 Outcome 值得追，以及把追到的 Outcome 翻译成对整个系统的 Value。</description>
+      <category>感悟, AI</category>
+    </item>
+    <item>
+      <title>和10位B2B Sales聊完之后，我对这个角色的理解彻底改观了</title>
+      <link>https://www.jiabinlu.com/blog/b2b-sales-insights</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/b2b-sales-insights</guid>
+      <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
+      <description>我最近和差不多10位Sales（主要是AE）进行了深入的一对一聊天。每次聊完，我都觉得非常受启发，仿佛打开了一扇我过去从未认真探索过的大门。</description>
+      <category>感悟</category>
+    </item>
+    <item>
+      <title>Wyoming LLC 注册踩坑记：为什么我最终选择解散公司</title>
+      <link>https://www.jiabinlu.com/blog/wyoming-llc-trap</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/wyoming-llc-trap</guid>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 GMT</pubDate>
+      <description>
+今年年初，我想做点副业。那时觉得成立一个公司能隔离风险，于是就在网上搜资料。搜索结果里到处都是推荐在 Wyoming（怀俄明州） 注册 LLC：手续简单、费用便宜、不用交企业税、隐私保护强。看起来很美好，于是我在 LegalZoom 上稀里糊涂注册了一个 Wyoming LLC，还顺便开了银行账户。...</description>
+      <category>创业经验</category>
+    </item>
+    <item>
+      <title>在美国做东亚父母：如何养出独立又亲密的孩子？</title>
       <link>https://www.jiabinlu.com/blog/cross-cultural-parenting</link>
       <guid isPermaLink="true">https://www.jiabinlu.com/blog/cross-cultural-parenting</guid>
       <pubDate>Sun, 31 Aug 2025 00:00:00 GMT</pubDate>
@@ -137,6 +178,470 @@
       <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
       <description>想去东南亚旅行很久了，终于在忙碌中&apos;偷&apos;出两周时间成行。这趟旅程，我每天步数在 15,000 到 25,000 之间，用脚丈量七座城市，在有限时间内快速领略多元文化、历史与人情。</description>
       <category>旅行</category>
+    </item>
+    <item>
+      <title>车轮上的百态人生：我与司机们的奇妙旅程</title>
+      <link>https://www.jiabinlu.com/blog/车轮上的百态人生_我与司机们的奇妙旅程</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/车轮上的百态人生_我与司机们的奇妙旅程</guid>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 GMT</pubDate>
+      <description>在旧金山，我遇到了一位颇具传奇色彩的巴西司机。他曾是一位“大厨”，在健身房楼下经营着一家简餐店，主营巴西美食与果汁奶昔。然而，疫情的突袭让健身房人去楼空，他的小店也无奈关门。即便如此，司机依旧自豪地告诉我，即便在闭店后，仍有许多老顾客打电话...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>我的2024年终终结</title>
+      <link>https://www.jiabinlu.com/blog/我的2024年终终结</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/我的2024年终终结</guid>
+      <pubDate>Mon, 23 Dec 2024 00:00:00 GMT</pubDate>
+      <description>到了30+，有了孩子，工作繁忙，时间就过的很快，如果没有在生命的坐标轴上刻下几个“精彩瞬间”，时间彷佛就那么过了。作为一个已经懒于发朋友圈的人，一个年终总结是我最后的“倔强”，一是为自己总结下过去的一年，也给朋友们分享下自己的生活和收获。</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>关于放松的5大迷思</title>
+      <link>https://www.jiabinlu.com/blog/关于放松的5大迷思</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/关于放松的5大迷思</guid>
+      <pubDate>Sun, 18 Jun 2023 00:00:00 GMT</pubDate>
+      <description>现代生活的快节奏和高压力使得放松成为了现代人的迫切需求。然而，我们必须认识到，在追求放松的过程中存在许多误区。</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>2022年，你过的怎么样？这是我的年终总结</title>
+      <link>https://www.jiabinlu.com/blog/2022年_你过的怎么样_这是我的年终总结</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/2022年_你过的怎么样_这是我的年终总结</guid>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+      <description>**1.****今年的目标是否实现了？**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>如何找到低风险高回报的公司(三) - 我看好的几个公司</title>
+      <link>https://www.jiabinlu.com/blog/如何找到低风险高回报的公司三-我看好的几个公司</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/如何找到低风险高回报的公司三-我看好的几个公司</guid>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 GMT</pubDate>
+      <description>**Crossing the Chasm 和 Inside the Tornado**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>如何找到低风险高回报的公司：技术生命周期理论和跨越鸿沟</title>
+      <link>https://www.jiabinlu.com/blog/如何找到低风险高回报的公司_技术生命周期理论和跨越鸿沟</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/如何找到低风险高回报的公司_技术生命周期理论和跨越鸿沟</guid>
+      <pubDate>Thu, 14 Oct 2021 00:00:00 GMT</pubDate>
+      <description>**技术生命周期理论**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>如何找到低风险高回报的公司（一）</title>
+      <link>https://www.jiabinlu.com/blog/如何找到低风险高回报的公司一</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/如何找到低风险高回报的公司一</guid>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 GMT</pubDate>
+      <description>哪个“价值投资者”不想找到一个低风险高回报的投资机会呢？</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>工作5年，不要再想着证明自己了</title>
+      <link>https://www.jiabinlu.com/blog/工作5年_不要再想着证明自己了</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/工作5年_不要再想着证明自己了</guid>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 GMT</pubDate>
+      <description>**你想证明自己吗？**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>The Five Dysfunctions of a Team</title>
+      <link>https://www.jiabinlu.com/blog/The_Five_Dysfunctions_of_a_Team</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/The_Five_Dysfunctions_of_a_Team</guid>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 GMT</pubDate>
+      <description>我司CEO说这是他最喜欢的书，因此，在一个恬静的下午，我就读了这本书。</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>现在最火的SaaS 公司如何做销售?</title>
+      <link>https://www.jiabinlu.com/blog/现在最火的SaaS_公司如何做销售_</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/现在最火的SaaS_公司如何做销售_</guid>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 GMT</pubDate>
+      <description>Learn to sell. Learn to build. If you can do both, you will be unstoppable. -- Naval Ravikant</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>华人就只能默默coding吗？我内心是拒绝的</title>
+      <link>https://www.jiabinlu.com/blog/华人就只能默默coding吗_我内心是拒绝的</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/华人就只能默默coding吗_我内心是拒绝的</guid>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 GMT</pubDate>
+      <description>书接上回，[你的编程能力从什么时候开始突飞猛进？](http://mp.weixin.qq.com/s?__biz=MzI1MzY3MDQwMA==&amp;mid=2247483951&amp;idx=1&amp;sn=3486789150a7e40898303...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>你的编程能力从什么时候开始突飞猛进？</title>
+      <link>https://www.jiabinlu.com/blog/你的编程能力从什么时候开始突飞猛进_</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/你的编程能力从什么时候开始突飞猛进_</guid>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 GMT</pubDate>
+      <description>知乎上有篇文章&quot;你的编程能力从什么时候开始突飞猛进?&quot;, 底下有很多精彩的回答。正好最近跟一些朋友有点交流，就想整理下，希望对大家，尤其是刚入行的朋友们有些帮助。文章不限于”编程能力“，更像是整体的”软件工程师工作能力“，今天第一篇文章回顾...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>You are what you listen -- 我关注的Podcast/播客</title>
+      <link>https://www.jiabinlu.com/blog/You_are_what_you_listen-我关注的Podcast_播客</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/You_are_what_you_listen-我关注的Podcast_播客</guid>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 GMT</pubDate>
+      <description>Benchmark 合伙人 Sarah Tavel 发表了她对疫情下 ToC 创业的看法，并提出了一个新的分析框架：石头-沙子-水。这个框架很有意思，基于注意力消费来区别所有ToC 类产品。我把消费者在一天中的注意力分为三种不同类型的“事件...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>如何选择Offer？亚马逊领导力准则在实践中的又一应用</title>
+      <link>https://www.jiabinlu.com/blog/如何选择Offer_亚马逊领导力准则在实践中的又一应用</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/如何选择Offer_亚马逊领导力准则在实践中的又一应用</guid>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 GMT</pubDate>
+      <description>我发现教人neogigate offer的帖子有好多，无论是中文的还是英文的。但是教人选Offer的帖子却屈指可数，compensation肯定不是选择一个Offer的唯一指标（不然你很可能会后悔），所以我想讨论下怎么选择一个Offer。*...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>第二次跳槽：10+公司面试体验 和 100+好公司推荐（建议收藏）</title>
+      <link>https://www.jiabinlu.com/blog/第二次跳槽_10_公司面试体验_和_100_好公司推荐建议收藏</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/第二次跳槽_10_公司面试体验_和_100_好公司推荐建议收藏</guid>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 GMT</pubDate>
+      <description>在年前签了offer，officially结束了这次跳槽，来总结下这次跳槽，对自己是一个总结，也希望我的经历可以帮助到大家。首先，来看下结果：</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>吃货视角：Doordash请继续努力</title>
+      <link>https://www.jiabinlu.com/blog/吃货视角_Doordash请继续努力</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/吃货视角_Doordash请继续努力</guid>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 GMT</pubDate>
+      <description>“打了三个电话还是没打通”，大年初一的晚上，我们准备点个外卖。</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>You are what you watch -- 我关注的Youtube账号（下）</title>
+      <link>https://www.jiabinlu.com/blog/You_are_what_you_watch-我关注的Youtube账号下</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/You_are_what_you_watch-我关注的Youtube账号下</guid>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 GMT</pubDate>
+      <description>书接上回，今天是我关注的Youtbe账号的下半部分：**职业成长，技术和股票投资**。上半部分是：美食，科普，电影解说和单口喜剧，见[You are what you watch -- 我关注的Youtube账号（上）](http://mp...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>Clubhouse： 一场正在演化的大型社会实验</title>
+      <link>https://www.jiabinlu.com/blog/Clubhouse__一场正在演化的大型社会实验</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/Clubhouse__一场正在演化的大型社会实验</guid>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 GMT</pubDate>
+      <description>为什么Clubhouse这么火？从2020年末听说这个app，我就开始好奇。上周终于找到朋友邀请，加入了Clubhouse。加入的第一天随便听了一个Women in technology的room，听了几分钟，感觉就是几个人在分享经验，没觉...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>You are what you watch -- 我关注的Youtube账号（上）</title>
+      <link>https://www.jiabinlu.com/blog/You_are_what_you_watch-我关注的Youtube账号上</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/You_are_what_you_watch-我关注的Youtube账号上</guid>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 GMT</pubDate>
+      <description>现在每天大约看Youtube 2个小时，包括做饭，吃饭(一般看国产电视剧或综艺)，睡觉前，所以Youtube是我重要的精神食粮。不知道大家是不是也是Youtube或者Bilibili的重度用户。总之, 抽空整理了下我关注的，经常看的Yout...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>2019回顾</title>
+      <link>https://www.jiabinlu.com/blog/2019回顾</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/2019回顾</guid>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 GMT</pubDate>
+      <description>已经是2020年了，想想2010年的现在还在高三最紧张的时候，时间过得真快。这十年可能是人生变化最快的时间，从高三到大学，到研究生，到工作。人生的轨迹也是神奇，10年前我怎么也想不到我的人生轨迹是这样。介于如此，我就不展望2020了，还是回...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>The clean coder: Chapter 3 — Saying yes</title>
+      <link>https://www.jiabinlu.com/blog/The_clean_coder__Chapter_3-Saying_yes</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/The_clean_coder__Chapter_3-Saying_yes</guid>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 GMT</pubDate>
+      <description>There are three parts to making a commitment:</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>The clean coder — Chapter 2: Saying No</title>
+      <link>https://www.jiabinlu.com/blog/The_clean_coder-Chapter_2__Saying_No</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/The_clean_coder-Chapter_2__Saying_No</guid>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 GMT</pubDate>
+      <description>“Do; or do not. There is no trying.” — Yoda</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>The clean coder -- Chapter 1: Professionalism</title>
+      <link>https://www.jiabinlu.com/blog/The_clean_coder-Chapter_1__Professionalism</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/The_clean_coder-Chapter_1__Professionalism</guid>
+      <pubDate>Mon, 13 Aug 2018 00:00:00 GMT</pubDate>
+      <description>Another solid book by “Uncle Bob”. The other famous books by him are _clean code_ and _clean architecture__._</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>金融学读书笔记（五）-- 银行</title>
+      <link>https://www.jiabinlu.com/blog/金融学读书笔记五-银行</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/金融学读书笔记五-银行</guid>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 GMT</pubDate>
+      <description>**1）中国银行圈的血统和阶级**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>金融学笔记四--银行赚钱的秘密</title>
+      <link>https://www.jiabinlu.com/blog/金融学笔记四__银行赚钱的秘密</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/金融学笔记四__银行赚钱的秘密</guid>
+      <pubDate>Thu, 02 Aug 2018 00:00:00 GMT</pubDate>
+      <description>**第一课： 银行躺着赚钱的秘密**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>金融学读书笔记（三）</title>
+      <link>https://www.jiabinlu.com/blog/金融学读书笔记三</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/金融学读书笔记三</guid>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 GMT</pubDate>
+      <description>第一讲：货币是国家信用的背书</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>金融学读书笔记（二）</title>
+      <link>https://www.jiabinlu.com/blog/金融学读书笔记二</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/金融学读书笔记二</guid>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 GMT</pubDate>
+      <description>**第四课: 中央货币财政体系**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>金融学课笔记（一）</title>
+      <link>https://www.jiabinlu.com/blog/金融学课笔记一</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/金融学课笔记一</guid>
+      <pubDate>Mon, 30 Jul 2018 00:00:00 GMT</pubDate>
+      <description>**第一课：开篇词**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>10 ways to have a better conversation | Celeste Headlee</title>
+      <link>https://www.jiabinlu.com/blog/10_ways_to_have_a_better_conversation-Celeste_Headlee</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/10_ways_to_have_a_better_conversation-Celeste_Headlee</guid>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 GMT</pubDate>
+      <description>I abosolutely love this talk, funny, useful and enlightened. I definetely recommend everyone watch it. I can give a brie...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>Clean Code: Chapter 5 to 7</title>
+      <link>https://www.jiabinlu.com/blog/Clean_Code__Chapter_5_to_7</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/Clean_Code__Chapter_5_to_7</guid>
+      <pubDate>Sat, 04 Nov 2017 00:00:00 GMT</pubDate>
+      <description>Chapter 7: Error Handling</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>Clean code(Chapter 4 to 6)</title>
+      <link>https://www.jiabinlu.com/blog/Clean_codeChapter_4_to_6</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/Clean_codeChapter_4_to_6</guid>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 GMT</pubDate>
+      <description>**Chapter 4: Comments**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>Coding界的如来神掌</title>
+      <link>https://www.jiabinlu.com/blog/Coding界的如来神掌</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/Coding界的如来神掌</guid>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 GMT</pubDate>
+      <description>Chapter 1: Clean code. What? Why? How?</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>Random diary -- A perfect day for me</title>
+      <link>https://www.jiabinlu.com/blog/Random_diary-A_perfect_day_for_me</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/Random_diary-A_perfect_day_for_me</guid>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 GMT</pubDate>
+      <description>Today is a really good day for me. Get up in the morning, feeling sleepy but passionate. </description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>10 steps to a successful career</title>
+      <link>https://www.jiabinlu.com/blog/10_steps_to_a_successful_career</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/10_steps_to_a_successful_career</guid>
+      <pubDate>Sun, 23 Jul 2017 00:00:00 GMT</pubDate>
+      <description>Learn, practice and teach</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>人是理性的吗？人是自私的吗？</title>
+      <link>https://www.jiabinlu.com/blog/人是理性的吗_人是自私的吗_</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/人是理性的吗_人是自私的吗_</guid>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 GMT</pubDate>
+      <description>第五讲 不确定性，进化与经济理论（人是理性的吗）</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>经济学初体验-下</title>
+      <link>https://www.jiabinlu.com/blog/经济学初体验_下</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/经济学初体验_下</guid>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 GMT</pubDate>
+      <description>书接上回，上回讲到经济学的适用范围无所不在和公平效率之间的辩证统一。</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>薛兆丰的北大经济学-读书笔记</title>
+      <link>https://www.jiabinlu.com/blog/薛兆丰的北大经济学_读书笔记</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/薛兆丰的北大经济学_读书笔记</guid>
+      <pubDate>Sun, 16 Jul 2017 00:00:00 GMT</pubDate>
+      <description>最近在得到上听（看）薛兆丰的经济学专栏，很受启发，分享给大家：</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>一部羞耻的电影</title>
+      <link>https://www.jiabinlu.com/blog/一部羞耻的电影</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/一部羞耻的电影</guid>
+      <pubDate>Sun, 28 May 2017 00:00:00 GMT</pubDate>
+      <description>_“15岁的少年米夏·伯格（大卫·克劳斯 David Kross 饰）偶遇36岁的中年神秘女列车售票员汉娜（凯特·温丝莱特 Kate Winslet 饰），后来两个发展出一段秘密的情人关系。汉娜最喜欢躺在米夏怀里听米夏为他读书，她总是沉浸在...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>Neuralin and the Brain&apos;s Magical Future</title>
+      <link>https://www.jiabinlu.com/blog/Neuralin_and_the_Brain_s_Magical_Future</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/Neuralin_and_the_Brain_s_Magical_Future</guid>
+      <pubDate>Thu, 04 May 2017 00:00:00 GMT</pubDate>
+      <description>这篇文章是我很喜欢的一个很萌的网站waitbutwhy.com上最近的一片文章，很有意思，我就心血来潮，准备翻译了，一个是让更多人看到，一个也可以试着投给作者，看看能不能发表一个中文版本，因为有的文章是有中文版本的，可能没有人愿意翻译，最近...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>关于时区，相信我，你知道的不是全部</title>
+      <link>https://www.jiabinlu.com/blog/关于时区_相信我_你知道的不是全部</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/关于时区_相信我_你知道的不是全部</guid>
+      <pubDate>Tue, 02 May 2017 00:00:00 GMT</pubDate>
+      <description>**时区(Timezone)**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>Work smart, have fun，make history！</title>
+      <link>https://www.jiabinlu.com/blog/Work_smart__have_fun_make_history_</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/Work_smart__have_fun_make_history_</guid>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 GMT</pubDate>
+      <description>今天听了一个很棒很有趣的TED演讲，分享给大家，语速很快，在有字幕的情况下，听了两遍才听懂：</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>高晓松《鱼羊野史》读书笔记-2</title>
+      <link>https://www.jiabinlu.com/blog/高晓松_鱼羊野史_读书笔记_2</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/高晓松_鱼羊野史_读书笔记_2</guid>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 GMT</pubDate>
+      <description>今天分享1.11-1.20号的一些有趣事件看法：</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>高晓松给年轻人的21句话，太经典了！</title>
+      <link>https://www.jiabinlu.com/blog/高晓松给年轻人的21句话_太经典了_</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/高晓松给年轻人的21句话_太经典了_</guid>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 GMT</pubDate>
+      <description>最近正在读高晓松的《鱼羊野史》，这是一本按day by day的顺序讲一系列历史，文化，任务，军事等综合起来的大杂烩，从中可以一窥高晓松先生的人生智慧。高晓松先生自述”由于我半生不务正业，主要是不知哪种营生堪当正业，就读了若干闲书，跑了许多...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>这部剧！真的！有毒！慎入！</title>
+      <link>https://www.jiabinlu.com/blog/这部剧_真的_有毒_慎入_</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/这部剧_真的_有毒_慎入_</guid>
+      <pubDate>Sat, 15 Apr 2017 00:00:00 GMT</pubDate>
+      <description>细心的读者同志已经注意到，我已经三天没有更新公众号，为人民服务了。这是为什么呢？</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>比热点慢一拍，谈谈UA强行拖拽乘客事件</title>
+      <link>https://www.jiabinlu.com/blog/比热点慢一拍_谈谈UA强行拖拽乘客事件</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/比热点慢一拍_谈谈UA强行拖拽乘客事件</guid>
+      <pubDate>Tue, 11 Apr 2017 00:00:00 GMT</pubDate>
+      <description>昨天发完文章后，朋友问我为什么不谈谈UA强行拖拽乘客事件，说实话我昨晚也是绞尽脑汁地去想写什么，然而根本没有想到去蹭一个热点，在没想到的潜意识里我是根本不想去蹭一个热点，甚至会刻意回避一个热点。过往的经验告诉我，热点往往事实模糊，混杂着激烈...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>如梦幻泡影，如露亦如电</title>
+      <link>https://www.jiabinlu.com/blog/如梦幻泡影_如露亦如电</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/如梦幻泡影_如露亦如电</guid>
+      <pubDate>Mon, 10 Apr 2017 00:00:00 GMT</pubDate>
+      <description>**坚持，好难**</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>西雅图的吃吃吃--点菜篇</title>
+      <link>https://www.jiabinlu.com/blog/西雅图的吃吃吃__点菜篇</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/西雅图的吃吃吃__点菜篇</guid>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 GMT</pubDate>
+      <description>来西雅图快十个月了，也吃了不少中餐，跟北卡大农村比，中餐馆单从数量上绝对是完胜了。虽说不如洛杉矶，纽约中餐那么正宗好吃，也不乏可圈可点之处。想起偶尔有好友让我推荐餐馆，秉着重复三次就要把它程序化解决的原则，我就总结下我吃过的中餐，下次再有人...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>那些banana的一星差评</title>
+      <link>https://www.jiabinlu.com/blog/那些banana的一星差评</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/那些banana的一星差评</guid>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 GMT</pubDate>
+      <description>应广大同事要求，又逢周末，我们来看一下banana在Amazon Fresh上的差评。</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>为什么亚马逊需要那么多程序员？</title>
+      <link>https://www.jiabinlu.com/blog/为什么亚马逊需要那么多程序员_</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/为什么亚马逊需要那么多程序员_</guid>
+      <pubDate>Fri, 07 Apr 2017 00:00:00 GMT</pubDate>
+      <description>前段时间跟一个文科的妹子聊天，她问我为什么亚马逊需要那么多程序员，感觉网站也没什么变化啊？我想大多数非程序员都有此困惑吧，我今天想简单说下自己的理解。</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>深夜，跟她们吃了王一碗</title>
+      <link>https://www.jiabinlu.com/blog/深夜_跟她们吃了王一碗</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/深夜_跟她们吃了王一碗</guid>
+      <pubDate>Wed, 05 Apr 2017 00:00:00 GMT</pubDate>
+      <description>今晚我一个人去community center打羽毛球，打的时候遇到一个上高中的华裔女孩和她的姨婆，知道她们没有车后，我提议要送她们回家，她们就住captial hill，十几分钟的车程，举脚之劳嘛。然后那个女孩说她们要去吃王一碗因为她很喜...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>抬杠--上</title>
+      <link>https://www.jiabinlu.com/blog/抬杠__上</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/抬杠__上</guid>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 GMT</pubDate>
+      <description>还记得上大学时经常跟舍友抬杠，经常吵得面红耳赤，脸红脖子粗，有的时候争辩完想起了新的论据还要再“续”一次（秒），还时常“以一敌三”，舍友有时候戏谑地叫我“抬杠帝”。那时候觉得真理只有一个啊，真理越变越明啊，我们辩论是为了寻找真理啊。至于争论...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>愿以王冠换蓝花</title>
+      <link>https://www.jiabinlu.com/blog/愿以王冠换蓝花</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/愿以王冠换蓝花</guid>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 GMT</pubDate>
+      <description>在Austin的三天眨眼间就过去了，在返程的航班上我写下这篇文章，记录美好的时光。</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>我喜欢的人</title>
+      <link>https://www.jiabinlu.com/blog/我喜欢的人</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/我喜欢的人</guid>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 GMT</pubDate>
+      <description>吴军是我很喜欢的作家，他的每一本书，从《数学之美》，《浪潮之巅》到《文明之光》，《大学之路》我都看过，我也订阅了他在《得到》上的专栏，几乎每篇都看过。我对很多问题的看法都来自于他，从吴军老师那里，经常能听到很多我很认同，但是境界比我高的观点...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>无常</title>
+      <link>https://www.jiabinlu.com/blog/无常</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/无常</guid>
+      <pubDate>Thu, 30 Mar 2017 00:00:00 GMT</pubDate>
+      <description>毕业后，我们散落在东南西北各地，10个月没见，甚是想念，商量好一起去德州聚一聚。西雅图的我们直飞奥斯汀，加州的同学也恰好从西雅图转机，还是同一班的我们三个恰好也从西雅图转机，还是同一航班，想着三个人坐飞机就不会无聊了，计划可以说是完美。出发...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>那些年我走过的误区 -- 潇洒不潇洒</title>
+      <link>https://www.jiabinlu.com/blog/那些年我走过的误区-潇洒不潇洒</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/那些年我走过的误区-潇洒不潇洒</guid>
+      <pubDate>Wed, 29 Mar 2017 00:00:00 GMT</pubDate>
+      <description>似乎到现在我的中二病还是没见好，对很多事情的看法都仍然很任性，很理想主义。大概从我小学作文课上学会了“金玉其外，败絮其中“开始，我就开始以内心美为荣，以外表美为耻。潜意识总是认为外表美+内在美＝C（C是常量），如果外表美多一份内在就不少一份...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>Gates &amp; Melinda Foundation 一游</title>
+      <link>https://www.jiabinlu.com/blog/Gates-Melinda_Foundation_一游</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/Gates-Melinda_Foundation_一游</guid>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 GMT</pubDate>
+      <description>中午突然在Chinese-in-sea mail list收到一个邮件问有没有人想去Gates &amp; Melinda foundation的一个Asian event，对Gates &amp; Melinda foundation，慈善事业和Asia...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>他用手机给我拍了张照片，收了我14刀</title>
+      <link>https://www.jiabinlu.com/blog/他用手机给我拍了张照片_收了我14刀</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/他用手机给我拍了张照片_收了我14刀</guid>
+      <pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate>
+      <description>因为OPT Extension要交两张纸质的照片，我吃完饭”梳洗打扮“后就去楼下的walgreen照相。到了后小哥热情的接待了我，然后把一个挂在一个门上的白色背景帘拉了下来，紧接着掏出了自己的手机给我拍照，我说你们没有相机吗？小哥说，相机前...</description>
+      <category>公众号</category>
+    </item>
+    <item>
+      <title>开天辟地</title>
+      <link>https://www.jiabinlu.com/blog/开天辟地</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/开天辟地</guid>
+      <pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate>
+      <description>不要慌，天地已在，无需开辟。我不是想讲盘古开天辟地，亚当夏娃造人的故事，我是想记录我开这个公众号的心路历程。</description>
+      <category>公众号</category>
     </item>
   </channel>
 </rss>

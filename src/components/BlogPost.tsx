@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-re
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
-import { getBlogPost, formatDate, getAdjacentPosts, type BlogPost as BlogPostType, type BlogPostMeta } from '../utils/blogUtils';
+import { getBlogPost, formatDate, getAdjacentPosts, getSeriesAdjacentPosts, type BlogPost as BlogPostType, type BlogPostMeta } from '../utils/blogUtils';
 import { useLanguage } from '../contexts/LanguageContext';
 import BlogImage from './BlogImage';
 
@@ -14,6 +14,7 @@ const BlogPost: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [adjacentPosts, setAdjacentPosts] = useState<{ prev: BlogPostMeta | null; next: BlogPostMeta | null }>({ prev: null, next: null });
+  const [seriesPosts, setSeriesPosts] = useState<{ prev: BlogPostMeta | null; next: BlogPostMeta | null }>({ prev: null, next: null });
   const { t } = useLanguage();
   
   // Comment state
@@ -42,6 +43,13 @@ const BlogPost: React.FC = () => {
         if (blogPost) {
           const adjacent = await getAdjacentPosts(id);
           setAdjacentPosts(adjacent);
+
+          if (blogPost.series) {
+            const seriesAdjacent = await getSeriesAdjacentPosts(id, blogPost.series, blogPost.seriesPart);
+            setSeriesPosts(seriesAdjacent);
+          } else {
+            setSeriesPosts({ prev: null, next: null });
+          }
         }
       } catch (err) {
         setError(true);
@@ -106,7 +114,7 @@ const BlogPost: React.FC = () => {
 
         {/* Article Header */}
         <header className="mb-12">
-          <div className="flex items-center space-x-4 text-sm text-slate-500 mb-4">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500 mb-4">
             <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-medium">
               {post.category}
             </span>
@@ -118,6 +126,9 @@ const BlogPost: React.FC = () => {
               <Clock className="w-4 h-4 mr-1" />
               <span>{post.readTime}</span>
             </div>
+            {post.source && (
+              <span className="text-slate-400">来源：{post.source}</span>
+            )}
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
@@ -195,6 +206,37 @@ const BlogPost: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Series Navigation */}
+        {post.series && (
+          <div className="mt-12 p-5 border border-amber-200 bg-amber-50/50 rounded-xl">
+            <p className="text-xs font-medium text-amber-700 uppercase tracking-wide mb-3">
+              {t('blog.seriesNav')}
+              {post.seriesTitle && ` · ${post.seriesTitle}`}
+              {post.seriesPart != null && (
+                <span className="normal-case ml-1">
+                  ({t('blog.seriesPart').replace('{part}', String(post.seriesPart))})
+                </span>
+              )}
+            </p>
+            <div className="flex justify-between items-start gap-4 text-sm">
+              {seriesPosts.prev ? (
+                <Link to={`/blog/${seriesPosts.prev.id}`} className="flex-1 text-slate-700 hover:text-amber-700 transition-colors">
+                  ← {seriesPosts.prev.title}
+                </Link>
+              ) : (
+                <span className="flex-1 text-slate-400">—</span>
+              )}
+              {seriesPosts.next ? (
+                <Link to={`/blog/${seriesPosts.next.id}`} className="flex-1 text-right text-slate-700 hover:text-amber-700 transition-colors">
+                  {seriesPosts.next.title} →
+                </Link>
+              ) : (
+                <span className="flex-1 text-right text-slate-400">—</span>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Post Navigation */}
         <div className="mt-16 border-t pt-8">

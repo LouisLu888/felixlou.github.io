@@ -61,3 +61,50 @@ If you encounter authentication issues:
 3. Ensure you have internet connectivity
 
 For API errors, the script will display detailed error messages to help diagnose the issue.
+
+## Newsletter (Buttondown)
+
+Automatically notify subscribers when a new blog post is published.
+
+### Setup
+
+1. **Get your Buttondown API key**
+   - Open [Buttondown Settings → API](https://buttondown.com/settings/api)
+   - Create a key with **email** (write) and **sending** permissions
+
+2. **Add GitHub secret** (for CI automation)
+   - Repository → Settings → Secrets → Actions
+   - Name: `BUTTONDOWN_API_KEY`
+   - Value: your API token
+
+3. **Local testing**
+   ```bash
+   export BUTTONDOWN_API_KEY="your-token-here"
+   npm run send:newsletter -- --dry-run --post whole-engineer
+   ```
+
+### Usage
+
+```bash
+# Preview what would be sent
+npm run send:newsletter -- --dry-run --post my-post-slug
+
+# Send one post manually
+npm run send:newsletter -- --post my-post-slug
+
+# List unsent published posts
+npm run send:newsletter -- --list
+
+# Resend (ignore sent state)
+npm run send:newsletter -- --force --post my-post-slug
+```
+
+### Automation
+
+The GitHub Action `.github/workflows/send-newsletter.yml` runs on push to `master` when files under `public/blog-posts/` change. It:
+
+1. Detects which posts changed in the commit
+2. Sends a Buttondown email for each new published post (`published: false` is skipped)
+3. Records sent slugs in `scripts/.newsletter-sent.json` to avoid duplicates
+
+Subscribe form on the homepage: [buttondown.com/325louis](https://buttondown.com/325louis)

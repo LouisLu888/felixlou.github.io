@@ -1,181 +1,214 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ChevronRight, 
-  BookOpen, 
-  Calendar, 
-  Mail, 
-  Linkedin, 
-  Twitter,
-  Heart,
-  Brain,
-  Users,
-  Target,
-  Clock,
-  Check
-} from 'lucide-react';
+import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { getAllBlogPosts, getPublishedPosts, formatDate, type BlogPostMeta } from '../utils/blogUtils';
+import { careerTimeline, EMAIL, VALUE_STACK_SERIES, BUTTONDOWN } from '../config/siteProfile';
 
 const Home: React.FC = () => {
-  const [selectedTimeSlot, setSelectedTimeSlot] = useState('');
-  const [showBookingForm, setShowBookingForm] = useState(false);
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const [posts, setPosts] = useState<BlogPostMeta[]>([]);
 
-  const beliefs = [
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: t('home.beliefs.growthMindset.title'),
-      description: t('home.beliefs.growthMindset.description')
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: t('home.beliefs.actionWithPrecision.title'),
-      description: t('home.beliefs.actionWithPrecision.description')
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: t('home.beliefs.humility.title'),
-      description: t('home.beliefs.humility.description')
-    },
-    {
-      icon: <Heart className="w-6 h-6" />,
-      title: t('home.beliefs.lifeIsAJourney.title'),
-      description: t('home.beliefs.lifeIsAJourney.description')
+  useEffect(() => {
+    async function load() {
+      const all = await getAllBlogPosts();
+      const visible = import.meta.env.MODE === 'production' ? getPublishedPosts(all) : all;
+      setPosts(visible);
     }
-  ];
+    load();
+  }, []);
 
+  const contentStats = useMemo(() => {
+    if (posts.length === 0) return null;
+    const years = posts.map((p) => p.date.slice(0, 4));
+    const minYear = Math.min(...years.map(Number));
+    const maxYear = Math.max(...years.map(Number));
+    const wechatCount = posts.filter((p) => p.source).length;
+    const originalCount = posts.length - wechatCount;
+    return { total: posts.length, wechatCount, originalCount, minYear, maxYear };
+  }, [posts]);
+
+  const latestPosts = posts.slice(0, 3);
+
+  const featuredPosts = VALUE_STACK_SERIES.parts
+    .map(({ slug }) => posts.find((p) => p.id === slug))
+    .filter((post): post is BlogPostMeta => Boolean(post));
+
+  const pick = <T,>(item: { zh: T; en: T }): T => item[language];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
-              <img 
-                src="/profile.jpg" 
-                alt="Jiabin Lu Profile" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-            {t('home.hero.title')}
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">{t('home.hero.subtitle')}</span>
-          </h1>
-          <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            {t('home.hero.description')}
+    <div className="min-h-screen bg-white text-slate-800">
+      <div className="max-w-2xl mx-auto px-6 pt-28 pb-20 space-y-14">
+
+        {/* Hero */}
+        <header className="space-y-4">
+          <h1 className="text-3xl font-bold tracking-tight">{t('home.hero.name')}</h1>
+          <p className="text-slate-500">{t('home.hero.location')}</p>
+          <p className="text-lg text-slate-700 leading-relaxed">
+            {t('home.hero.descriptionBefore')}
+            <a
+              href="https://gtm-pod.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-600 hover:text-amber-700 underline underline-offset-2"
+            >
+              gtm-pod.com
+            </a>
+            {t('home.hero.descriptionAfter')}
           </p>
-
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-800 mb-12 text-center">{t('home.about.title')}</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6 text-slate-600 leading-relaxed">
-                <p className="text-lg">
-                  {t('home.about.description')}
-                </p>
-                <p>
-                  {t('home.about.passion')}
-                </p>
-                <p>
-                  {t('home.about.journey')}
-                </p>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl">
-                <h3 className="font-semibold text-slate-800 mb-2">{t('home.about.currentFocus')}</h3>
-                <p className="text-slate-600">{t('home.about.currentFocusDesc')}</p>
-              </div>
-              <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl">
-                <h3 className="font-semibold text-slate-800 mb-2">{t('home.about.experience')}</h3>
-                <p className="text-slate-600">{t('home.about.experienceDesc')}</p>
-              </div>
-              <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl">
-                <h3 className="font-semibold text-slate-800 mb-2">{t('home.about.passionTitle')}</h3>
-                <p className="text-slate-600">{t('home.about.passionDesc')}</p>
-              </div>
-            </div>
+          <div className="flex items-center gap-4 pt-1">
+            <a href={`mailto:${EMAIL}`} className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="Email">
+              <Mail className="w-5 h-5" />
+            </a>
+            <a href="https://www.linkedin.com/in/jiabinlu/" className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="LinkedIn">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="https://x.com/jiabinlu123" className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="X">
+              <Twitter className="w-5 h-5" />
+            </a>
           </div>
-        </div>
-      </section>
+        </header>
 
-      {/* Beliefs Section */}
-      <section id="beliefs" className="py-20 px-6 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">{t('home.beliefs.title')}</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              {t('home.beliefs.subtitle')}
+        {/* Content archive */}
+        <section className="border border-slate-200 rounded-xl p-5 space-y-3">
+          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
+            {t('home.contentArchive.title')}
+          </h2>
+          {contentStats && (
+            <p className="text-slate-600 text-sm leading-relaxed">
+              {t('home.contentArchive.stats')
+                .replace('{total}', String(contentStats.total))
+                .replace('{original}', String(contentStats.originalCount))
+                .replace('{wechat}', String(contentStats.wechatCount))
+                .replace('{start}', String(contentStats.minYear))
+                .replace('{end}', String(contentStats.maxYear))}
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {beliefs.map((belief, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-amber-100 p-3 rounded-lg text-amber-600 flex-shrink-0">
-                    {belief.icon}
-                  </div>
+          )}
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-1.5 text-amber-600 hover:text-amber-700 font-medium text-sm"
+          >
+            {t('home.contentArchive.viewAll')}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </section>
+
+        {/* Subscribe */}
+        <section className="space-y-3">
+          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
+            {t('home.subscribe.title')}
+          </h2>
+          <form
+            action={BUTTONDOWN.embedAction}
+            method="post"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col sm:flex-row gap-2"
+          >
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder={t('home.subscribe.placeholder')}
+              className="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent text-slate-800 placeholder:text-slate-400"
+            />
+            <input type="hidden" name="embed" value="1" />
+            <button
+              type="submit"
+              className="px-4 py-2 text-sm font-medium bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors shrink-0"
+            >
+              {t('home.subscribe.button')}
+            </button>
+          </form>
+          <p className="text-sm text-slate-500">{t('home.subscribe.note')}</p>
+        </section>
+
+        {/* Experience timeline */}
+        <section className="space-y-4">
+          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
+            {t('home.experience.title')}
+          </h2>
+          <ul className="space-y-5">
+            {careerTimeline.map((entry) => (
+              <li key={`${entry.period}-${entry.company}`} className="text-sm">
+                <div className="flex gap-4">
+                  <span className="text-slate-400 tabular-nums shrink-0 w-24">{entry.period}</span>
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-800 mb-3">{belief.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{belief.description}</p>
+                    <p className="text-slate-800">
+                      {entry.role}
+                      {' @ '}
+                      {entry.href ? (
+                        <a href={entry.href} target="_blank" rel="noopener noreferrer" className="hover:text-amber-600 transition-colors">
+                          {entry.company}
+                        </a>
+                      ) : (
+                        entry.company
+                      )}
+                    </p>
+                    {entry.note && (
+                      <p className="text-slate-500 mt-0.5">{pick(entry.note)}</p>
+                    )}
                   </div>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+          </ul>
+        </section>
 
+        {/* Latest posts */}
+        <section className="space-y-4">
+          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
+            {t('home.latest.title')}
+          </h2>
+          <ul className="space-y-5">
+            {latestPosts.map((post) => (
+              <li key={post.id}>
+                <Link to={`/blog/${post.id}`} className="group block">
+                  <p className="text-xs text-slate-400 mb-1">{formatDate(post.date)}</p>
+                  <p className="font-medium text-slate-800 group-hover:text-amber-600 transition-colors leading-snug">
+                    {post.title}
+                  </p>
+                  {post.excerpt && (
+                    <p className="text-sm text-slate-500 mt-1 line-clamp-2">{post.excerpt}</p>
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Link to="/blog" className="text-sm text-amber-600 hover:text-amber-700 font-medium inline-flex items-center gap-1">
+            {t('home.latest.viewAll')}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </section>
 
+        {/* Featured posts */}
+        <section className="space-y-4">
+          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
+            {t('home.series.title')}
+          </h2>
+          <ul className="space-y-5">
+            {featuredPosts.map((post) => (
+              <li key={post.id}>
+                <Link to={`/blog/${post.id}`} className="group block">
+                  <p className="text-xs text-slate-400 mb-1">{formatDate(post.date)}</p>
+                  <p className="font-medium text-slate-800 group-hover:text-amber-600 transition-colors leading-snug">
+                    {post.title}
+                  </p>
+                  {post.excerpt && (
+                    <p className="text-sm text-slate-500 mt-1 line-clamp-2">{post.excerpt}</p>
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      {/* Connect Section */}
-      <section id="connect" className="py-20 px-6 bg-slate-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">{t('home.connect.title')}</h2>
-          <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
-            {t('home.connect.description')}
-          </p>
-          
-          <div className="max-w-md mx-auto">
-            <div className="bg-slate-700 p-8 rounded-xl">
-              <Mail className="w-8 h-8 text-amber-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-4">{t('home.connect.getInTouch')}</h3>
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                {t('home.connect.contactDescription')}
-              </p>
-              <div className="flex justify-center space-x-4">
-                <a href="mailto:jiabinlu325204@gmail.com" className="bg-amber-500 p-3 rounded-lg hover:bg-amber-400 transition-colors">
-                  <Mail className="w-5 h-5 text-white" />
-                </a>
-                <a href="https://www.linkedin.com/in/jiabinlu/" className="bg-slate-600 p-3 rounded-lg hover:bg-slate-500 transition-colors">
-                  <Linkedin className="w-5 h-5 text-white" />
-                </a>
-                <a href="https://x.com/jiabinlu123" className="bg-slate-600 p-3 rounded-lg hover:bg-slate-500 transition-colors">
-                  <Twitter className="w-5 h-5 text-white" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="mb-4">{t('home.footer.copyright')}</p>
-          
-        </div>
-      </footer>
+        <footer className="text-xs text-slate-400 pt-4">
+          {t('home.footer.copyright')}
+        </footer>
+      </div>
     </div>
   );
 };
 
-export default Home; 
+export default Home;

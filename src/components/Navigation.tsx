@@ -59,18 +59,9 @@ const Navigation: React.FC = () => {
                         <Link to="/blog" className={linkClass('/blog')}>
                           {t('nav.blog')}
                         </Link>
-                        <Link to="/portfolio" className={linkClass('/portfolio')}>
-                          {t('nav.portfolio')}
-                        </Link>
-                        <a href="/#about" className={linkClass('/#about')}>
-                          {t('nav.about')}
-                        </a>
                         {/* <Link to="/books" className={linkClass('/books')}>
                           {t('nav.books')}
                         </Link> */}
-                        <a href="/#connect" className={linkClass('/#connect')}>
-                          {t('nav.connect')}
-                        </a>
                         
                         {/* Language Switcher */}
                         <div className="relative group">
@@ -122,18 +113,9 @@ const Navigation: React.FC = () => {
                   <Link to="/blog" className={`block py-2 ${linkClass('/blog')}`}>
                     {t('nav.blog')}
                   </Link>
-                  <Link to="/portfolio" className={`block py-2 ${linkClass('/portfolio')}`}>
-                    {t('nav.portfolio')}
-                  </Link>
-                  <a href="/#about" className={`block py-2 ${linkClass('/#about')}`}>
-                    {t('nav.about')}
-                  </a>
                   {/* <Link to="/books" className={`block py-2 ${linkClass('/books')}`}>
                     {t('nav.books')}
                   </Link> */}
-                  <a href="/#connect" className={`block py-2 ${linkClass('/#connect')}`}>
-                    {t('nav.connect')}
-                  </a>
                   
                   {/* Mobile Language Switcher */}
                   <div className="border-t pt-4 mt-4">

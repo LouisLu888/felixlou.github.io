@@ -1,0 +1,45 @@
+name: Send Newsletter
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'public/blog-posts/**'
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Send newsletter for changed posts
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: node scripts/send-newsletter.js --changed-only
+
+      - name: Commit sent state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/.newsletter-sent.json
+          if git diff --staged --quiet; then
+            echo "No sent-state changes to commit."
+          else
+            git commit -m "chore: update newsletter sent state"
+            git push
+          fi

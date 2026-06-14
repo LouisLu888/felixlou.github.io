@@ -9,6 +9,10 @@ export interface BlogPost {
   category: string;
   excerpt: string;
   published: boolean;
+  source?: string;
+  series?: string;
+  seriesPart?: number;
+  seriesTitle?: string;
   content: string;
 }
 
@@ -20,6 +24,10 @@ export interface BlogPostMeta {
   category: string;
   excerpt: string;
   published: boolean;
+  source?: string;
+  series?: string;
+  seriesPart?: number;
+  seriesTitle?: string;
 }
 
 export async function getAllBlogPosts(): Promise<BlogPostMeta[]> {
@@ -43,7 +51,11 @@ export async function getAllBlogPosts(): Promise<BlogPostMeta[]> {
           readTime: data.readTime || '5 min read',
           category: data.category || 'General',
           excerpt: data.excerpt || '',
-          published: data.published ?? false
+          published: data.published ?? false,
+          source: data.source,
+          series: data.series,
+          seriesPart: data.seriesPart ? Number(data.seriesPart) : undefined,
+          seriesTitle: data.seriesTitle,
         });
         console.log(`Successfully loaded blog post: ${id}`);
       } else {
@@ -79,6 +91,10 @@ export async function getBlogPost(id: string): Promise<BlogPost | null> {
       category: data.category || 'General',
       excerpt: data.excerpt || '',
       published: data.published ?? false,
+      source: data.source,
+      series: data.series,
+      seriesPart: data.seriesPart ? Number(data.seriesPart) : undefined,
+      seriesTitle: data.seriesTitle,
       content
     };
   } catch (error) {
@@ -118,4 +134,36 @@ export async function getAdjacentPosts(currentId: string): Promise<{ prev: BlogP
   const nextPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
   
   return { prev: prevPost, next: nextPost };
+}
+
+export async function getSeriesAdjacentPosts(
+  currentId: string,
+  seriesId: string,
+  seriesPart?: number
+): Promise<{ prev: BlogPostMeta | null; next: BlogPostMeta | null }> {
+  const allPosts = await getAllBlogPosts();
+  const publishedPosts = import.meta.env.MODE === 'production'
+    ? getPublishedPosts(allPosts)
+    : allPosts;
+
+  const seriesPosts = publishedPosts
+    .filter((post) => post.series === seriesId)
+    .sort((a, b) => (a.seriesPart ?? 0) - (b.seriesPart ?? 0));
+
+  if (seriesPosts.length === 0) {
+    return { prev: null, next: null };
+  }
+
+  const currentIndex = seriesPart != null
+    ? seriesPosts.findIndex((post) => post.seriesPart === seriesPart)
+    : seriesPosts.findIndex((post) => post.id === currentId);
+
+  if (currentIndex === -1) {
+    return { prev: null, next: null };
+  }
+
+  return {
+    prev: currentIndex > 0 ? seriesPosts[currentIndex - 1] : null,
+    next: currentIndex < seriesPosts.length - 1 ? seriesPosts[currentIndex + 1] : null,
+  };
 }

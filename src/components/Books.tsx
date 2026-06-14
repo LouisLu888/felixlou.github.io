@@ -22,6 +22,7 @@ import {
   type Book 
 } from '../utils/bookUtils';
 import { useLanguage } from '../contexts/LanguageContext';
+import { EMAIL } from '../config/siteProfile';
 
 const Books: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -358,12 +359,12 @@ const Books: React.FC = () => {
             <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
               {t('books.bookRecommendationsDescription')}
             </p>
-            <Link 
-              to="/#connect"
+            <a
+              href={`mailto:${EMAIL}`}
               className="inline-flex items-center bg-amber-500 text-white px-6 py-3 rounded-lg hover:bg-amber-600 transition-colors font-medium"
             >
               {t('books.shareRecommendations')}
-            </Link>
+            </a>
           </div>
         </div>
 
