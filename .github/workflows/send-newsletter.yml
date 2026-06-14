@@ -9,6 +9,7 @@ on:
 jobs:
   send-newsletter:
     runs-on: ubuntu-latest
+    environment: github-pages
     permissions:
       contents: write
 

@@ -73,9 +73,12 @@ Automatically notify subscribers when a new blog post is published.
    - Create a key with **email** (write) and **sending** permissions
 
 2. **Add GitHub secret** (for CI automation)
-   - Repository → Settings → Secrets → Actions
+   - Repository → Settings → Environments → **github-pages** → Environment secrets
    - Name: `BUTTONDOWN_API_KEY`
    - Value: your API token
+   - (Alternatively: Repository → Settings → Secrets and variables → Actions → Repository secrets)
+
+   The workflow uses `environment: github-pages`, so the key must live in that environment (or in repository secrets).
 
 3. **Local testing**
    ```bash
