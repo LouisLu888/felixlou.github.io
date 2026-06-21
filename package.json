@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run generate:rss && npm run copy-blog-posts",
+    "build": "npm run generate:blog-index && vite build && npm run generate:rss && npm run copy-blog-posts",
+    "generate:blog-index": "node scripts/generate-blog-index.js",
     "copy-blog-posts": "cp -r public/blog-posts docs/ && cp -r public/images docs/ && touch docs/.nojekyll",
     "generate:rss": "node scripts/generate-rss.js",
     "lint": "eslint .",

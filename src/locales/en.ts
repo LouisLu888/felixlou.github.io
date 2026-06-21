@@ -68,6 +68,11 @@ export const en = {
     seriesValueStack: 'From Code to Ownership',
     seriesPart: 'Part {part}',
     seriesNav: 'Series',
+    subscribe: {
+      label: 'Email',
+      placeholder: 'you@example.com',
+      button: 'Subscribe',
+    },
   },
 
   // Books

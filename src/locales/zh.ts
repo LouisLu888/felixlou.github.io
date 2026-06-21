@@ -68,6 +68,11 @@ export const zh = {
     seriesValueStack: '从写代码到拥有价值',
     seriesPart: '第 {part} 篇',
     seriesNav: '系列导航',
+    subscribe: {
+      label: '邮箱',
+      placeholder: 'you@example.com',
+      button: '订阅更新',
+    },
   },
 
   // Books

@@ -7,6 +7,7 @@ import rehypeHighlight from 'rehype-highlight';
 import { getBlogPost, formatDate, getAdjacentPosts, getSeriesAdjacentPosts, type BlogPost as BlogPostType, type BlogPostMeta } from '../utils/blogUtils';
 import { useLanguage } from '../contexts/LanguageContext';
 import BlogImage from './BlogImage';
+import SubscribeCTA from './SubscribeCTA';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -169,6 +170,8 @@ const BlogPost: React.FC = () => {
             {post.content}
           </ReactMarkdown>
         </div>
+
+        <SubscribeCTA className="mt-16 pt-8 border-t border-slate-100" />
 
         {/* Author Note */}
         <div className="mt-16 p-6 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl">

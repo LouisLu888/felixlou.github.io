@@ -252,18 +252,7 @@ Honeycomb 联合创始人 Charity Majors 多次写过同一个观点：senior en
 
 ---
 
-## References
+**系列续篇**
 
-[1] Patrick McKenzie, "Don't Call Yourself A Programmer, And Other Career Advice," kalzumeus.com, 2011-10-28. https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/
-
-[2] Marty Cagan, *Inspired: How to Create Tech Products Customers Love*, 2nd ed., Wiley, 2017. ISBN 978-1119387503.
-
-[3] Will Larson, *Staff Engineer: Leadership Beyond the Management Track*, self-published, 2021. ISBN 978-1736417911.
-
-[4] Camille Fournier, *The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change*, O'Reilly, 2017. ISBN 978-1491973899.
-
-[5] Charity Majors, "The Future of Ops Careers," honeycomb.io/blog. https://www.honeycomb.io/blog/the-future-of-ops-careers
-
-[6] Eirini Kalliamvakou, "Research: Quantifying GitHub Copilot's impact on developer productivity and happiness," The GitHub Blog, 2022-09-07. https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/
-
-[7] Andrej Karpathy, X (Twitter) post, 2023-01-24. https://x.com/karpathy/status/1617979122625712128
+- **Part 2 · 泛化到所有人：** [AI 让 Solution 层崩塌，剩下的能力才决定你值多少钱](/blog/solution-outcome-value)
+- **Part 3 · 更下一步：** [从 Value Creator 到 Value Owner：在打工和赚钱之间，还隔着一层 Ownership](/blog/value-creator-to-value-owner)

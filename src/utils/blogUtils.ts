@@ -1,4 +1,3 @@
-import matter from 'gray-matter';
 import { BLOG_POST_FILES } from '../config/blogPosts';
 
 export interface BlogPost {
@@ -30,34 +29,58 @@ export interface BlogPostMeta {
   seriesTitle?: string;
 }
 
+const BLOG_INDEX_PATH = '/blog-posts/index.json';
+let blogPostMetaCache: BlogPostMeta[] | null = null;
+
+function sortPostsByDateDesc(posts: BlogPostMeta[]): BlogPostMeta[] {
+  return [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+function metaFromFrontmatter(fileName: string, data: Record<string, unknown>): BlogPostMeta {
+  return {
+    id: fileName.replace('.md', ''),
+    title: typeof data.title === 'string' ? data.title : 'Untitled',
+    date: typeof data.date === 'string' ? data.date : new Date().toISOString().split('T')[0],
+    readTime: typeof data.readTime === 'string' ? data.readTime : '5 min read',
+    category: typeof data.category === 'string' ? data.category : 'General',
+    excerpt: typeof data.excerpt === 'string' ? data.excerpt : '',
+    published: typeof data.published === 'boolean' ? data.published : false,
+    source: typeof data.source === 'string' ? data.source : undefined,
+    series: typeof data.series === 'string' ? data.series : undefined,
+    seriesPart: data.seriesPart != null ? Number(data.seriesPart) : undefined,
+    seriesTitle: typeof data.seriesTitle === 'string' ? data.seriesTitle : undefined,
+  };
+}
+
 export async function getAllBlogPosts(): Promise<BlogPostMeta[]> {
+  if (blogPostMetaCache) {
+    return blogPostMetaCache;
+  }
+
+  if (import.meta.env.MODE === 'production') {
+    try {
+      const response = await fetch(BLOG_INDEX_PATH);
+      if (response.ok) {
+        const posts = (await response.json()) as BlogPostMeta[];
+        blogPostMetaCache = sortPostsByDateDesc(posts);
+        return blogPostMetaCache;
+      }
+    } catch (error) {
+      console.warn('Falling back to markdown blog metadata loading:', error);
+    }
+  }
+
   const posts: BlogPostMeta[] = [];
+  const matter = (await import('gray-matter')).default;
   
   for (const fileName of BLOG_POST_FILES) {
     try {
-      console.log(`Attempting to fetch: /blog-posts/${fileName}`);
       const response = await fetch(`/blog-posts/${fileName}`);
-      console.log(`Response status for ${fileName}:`, response.status);
       
       if (response.ok) {
         const markdown = await response.text();
         const { data } = matter(markdown);
-        
-        const id = fileName.replace('.md', '');
-        posts.push({
-          id,
-          title: data.title || 'Untitled',
-          date: data.date || new Date().toISOString().split('T')[0],
-          readTime: data.readTime || '5 min read',
-          category: data.category || 'General',
-          excerpt: data.excerpt || '',
-          published: data.published ?? false,
-          source: data.source,
-          series: data.series,
-          seriesPart: data.seriesPart ? Number(data.seriesPart) : undefined,
-          seriesTitle: data.seriesTitle,
-        });
-        console.log(`Successfully loaded blog post: ${id}`);
+        posts.push(metaFromFrontmatter(fileName, data));
       } else {
         console.error(`Failed to load ${fileName}: ${response.status} ${response.statusText}`);
       }
@@ -66,9 +89,8 @@ export async function getAllBlogPosts(): Promise<BlogPostMeta[]> {
     }
   }
   
-  console.log(`Total posts loaded: ${posts.length}`);
-  // Sort by date (newest first)
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  blogPostMetaCache = sortPostsByDateDesc(posts);
+  return blogPostMetaCache;
 }
 
 export async function getBlogPost(id: string): Promise<BlogPost | null> {
@@ -81,6 +103,7 @@ export async function getBlogPost(id: string): Promise<BlogPost | null> {
     }
     
     const markdown = await response.text();
+    const matter = (await import('gray-matter')).default;
     const { data, content } = matter(markdown);
     
     return {
