@@ -61,7 +61,7 @@ Send blog post notifications via Buttondown.
 
 Options:
   --post <slug>     Send notification for a specific post
-  --changed-only    Only posts changed in the last git commit (for CI)
+  --changed-only    Only posts changed in the pushed commit range (for CI)
   --all             Send all unsent posts (default: newest only)
   --dry-run         Preview email without sending
   --force           Send even if already marked as sent
@@ -93,14 +93,19 @@ function saveSentState(state) {
 
 function getChangedPostFiles() {
   try {
-    const output = execSync('git diff --name-only HEAD~1 HEAD -- public/blog-posts/', {
-      encoding: 'utf-8',
-      stdio: ['ignore', 'pipe', 'ignore'],
-    }).trim();
+    const base = process.env.GITHUB_EVENT_BEFORE || 'HEAD~1';
+    const head = process.env.GITHUB_SHA || 'HEAD';
+    const output = execSync(
+      `git -c core.quotePath=false diff --name-only -z ${base} ${head} -- public/blog-posts/`,
+      {
+        encoding: 'utf-8',
+        stdio: ['ignore', 'pipe', 'ignore'],
+      }
+    );
 
     if (!output) return [];
     return output
-      .split('\n')
+      .split('\0')
       .map((line) => path.basename(line.trim()))
       .filter((name) => name.endsWith('.md'));
   } catch {

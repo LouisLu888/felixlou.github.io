@@ -117,4 +117,12 @@ The GitHub Action `.github/workflows/send-newsletter.yml` runs on push to `maste
 2. Sends a Buttondown email for each new published post (`published: false` is skipped)
 3. Records sent slugs in `scripts/.newsletter-sent.json` to avoid duplicates
 
+Do not enable Buttondown RSS-to-email unless you upgrade to a plan that supports it and disable this workflow first. Running both would duplicate sends.
+
+To backfill or retry one missed post, run **Actions → Send Newsletter → Run workflow**, uncheck dry run, and set `post_slug` to the blog slug, for example:
+
+```text
+美国签证被拒两次第三次通过
+```
+
 Subscribe form on the homepage: [buttondown.com/325louis](https://buttondown.com/325louis)

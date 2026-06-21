@@ -11,6 +11,10 @@ on:
         description: 'Dry run (no email sent)'
         type: boolean
         default: true
+      post_slug:
+        description: 'Optional blog post slug to send'
+        type: string
+        required: false
 
 jobs:
   send-newsletter:
@@ -50,10 +54,14 @@ jobs:
       - name: Send newsletter for changed posts
         env:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          GITHUB_SHA: ${{ github.sha }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             if [ "${{ inputs.dry_run }}" = "true" ]; then
-              node scripts/send-newsletter.js --dry-run --post whole-engineer
+              node scripts/send-newsletter.js --dry-run --post "${{ inputs.post_slug || 'whole-engineer' }}"
+            elif [ -n "${{ inputs.post_slug }}" ]; then
+              node scripts/send-newsletter.js --post "${{ inputs.post_slug }}"
             else
               node scripts/send-newsletter.js --changed-only
             fi
