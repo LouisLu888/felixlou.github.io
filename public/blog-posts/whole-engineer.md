@@ -256,3 +256,4 @@ Honeycomb 联合创始人 Charity Majors 多次写过同一个观点：senior en
 
 - **Part 2 · 泛化到所有人：** [AI 让 Solution 层崩塌，剩下的能力才决定你值多少钱](/blog/solution-outcome-value)
 - **Part 3 · 更下一步：** [从 Value Creator 到 Value Owner：在打工和赚钱之间，还隔着一层 Ownership](/blog/value-creator-to-value-owner)
+
