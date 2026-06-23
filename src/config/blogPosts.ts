@@ -1,4 +1,5 @@
 export const BLOG_POST_FILES = [
+  'three-side-business-directions.md',
   '美国签证被拒两次第三次通过.md',
   'whole-engineer.md',
   'solution-outcome-value.md',
