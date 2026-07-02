@@ -23,6 +23,7 @@ export const BLOG_POST_FILES = [
   'cross-cultural-parenting.md',
   'chenglu-interview.md',
   'b2b-sales-insights.md',
+  // WeChat articles (小唐思考人生的公众号)
   '10_steps_to_a_successful_career.md',
   '10_ways_to_have_a_better_conversation-Celeste_Headlee.md',
   '2019回顾.md',
