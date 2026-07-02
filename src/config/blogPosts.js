@@ -1,4 +1,5 @@
 export const BLOG_POST_FILES = [
+  'audience-first-or-problem-first.md',
   'three-side-business-directions.md',
   '美国签证被拒两次第三次通过.md',
   'whole-engineer.md',
