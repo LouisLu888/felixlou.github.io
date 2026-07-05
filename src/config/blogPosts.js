@@ -1,4 +1,5 @@
 export const BLOG_POST_FILES = [
+  'AI抹平了技术差距剩下的是时间差距.md',
   '从0到1的困惑.md',
   'three-side-business-directions.md',
   '美国签证被拒两次第三次通过.md',
