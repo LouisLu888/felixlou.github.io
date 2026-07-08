@@ -10,8 +10,11 @@ export const zh = {
     hero: {
       name: '卢佳斌 Jiabin Lu',
       location: '旧金山湾区 · San Francisco Bay Area',
-      descriptionBefore: 'GTM Eng Lead @ Amplitude，之前做 OLAP database 与 Engineer manager。目前在做 ',
-      descriptionAfter: ' —— 追踪 AI 在 GTM 各角色里的真实落地。写博客记录从 Eng 到 Value Creator 到 Value Owner 的思考。',
+      description: 'GTM Eng Lead @ Amplitude，之前做 OLAP database 与 Engineer manager。',
+      bullet1Before: '目前在做 ',
+      bullet1After: ' —— 追踪 AI 在 GTM 各角色里的真实落地。',
+      bullet2: '写博客记录从 Eng 到 Value Creator 到 Value Owner 的思考。',
+      bullet3After: ' —— 内容创作 OS。',
     },
     contentArchive: {
       title: '公开内容',

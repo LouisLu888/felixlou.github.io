@@ -10,8 +10,11 @@ export const en = {
     hero: {
       name: 'Jiabin Lu 卢佳斌',
       location: 'San Francisco Bay Area · 旧金山湾区',
-      descriptionBefore: 'GTM Eng Lead at Amplitude — previously OLAP databases and Engineering Manager. Building ',
-      descriptionAfter: ' to track how AI is actually landing across GTM roles. Writing about the path from Eng to Value Creator to Value Owner.',
+      description: 'GTM Eng Lead at Amplitude — previously OLAP databases and Engineering Manager.',
+      bullet1Before: 'Building ',
+      bullet1After: ' — tracking how AI is actually landing across GTM roles.',
+      bullet2: 'Writing about the path from Eng to Value Creator to Value Owner.',
+      bullet3After: ' — a content creation OS.',
     },
     contentArchive: {
       title: 'Public Content',

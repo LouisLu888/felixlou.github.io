@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getAllBlogPosts, getPublishedPosts, formatDate, type BlogPostMeta } from '../utils/blogUtils';
-import { careerTimeline, EMAIL, FEATURED_POST_SLUGS, BUTTONDOWN } from '../config/siteProfile';
+import { EMAIL, FEATURED_POST_SLUGS, BUTTONDOWN } from '../config/siteProfile';
 
 const Home: React.FC = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
   const [posts, setPosts] = useState<BlogPostMeta[]>([]);
 
   useEffect(() => {
@@ -34,8 +34,6 @@ const Home: React.FC = () => {
     .map((slug) => posts.find((p) => p.id === slug))
     .filter((post): post is BlogPostMeta => Boolean(post));
 
-  const pick = <T,>(item: { zh: T; en: T }): T => item[language];
-
   return (
     <div className="min-h-screen bg-white text-slate-800">
       <div className="max-w-2xl mx-auto px-6 pt-28 pb-20 space-y-14">
@@ -45,17 +43,34 @@ const Home: React.FC = () => {
           <h1 className="text-3xl font-bold tracking-tight">{t('home.hero.name')}</h1>
           <p className="text-slate-500">{t('home.hero.location')}</p>
           <p className="text-lg text-slate-700 leading-relaxed">
-            {t('home.hero.descriptionBefore')}
-            <a
-              href="https://gtm-pod.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-amber-600 hover:text-amber-700 underline underline-offset-2"
-            >
-              gtm-pod.com
-            </a>
-            {t('home.hero.descriptionAfter')}
+            {t('home.hero.description')}
           </p>
+          <ul className="list-disc list-outside pl-5 space-y-1.5 text-lg text-slate-700 leading-relaxed">
+            <li>
+              {t('home.hero.bullet1Before')}
+              <a
+                href="https://gtm-pod.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-600 hover:text-amber-700 underline underline-offset-2"
+              >
+                gtm-pod.com
+              </a>
+              {t('home.hero.bullet1After')}
+            </li>
+            <li>{t('home.hero.bullet2')}</li>
+            <li>
+              <a
+                href="http://contentseed.jiabinlu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-600 hover:text-amber-700 underline underline-offset-2"
+              >
+                contentseed.jiabinlu.com
+              </a>
+              {t('home.hero.bullet3After')}
+            </li>
+          </ul>
           <div className="flex items-center gap-4 pt-1">
             <a href={`mailto:${EMAIL}`} className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="Email">
               <Mail className="w-5 h-5" />
@@ -120,38 +135,6 @@ const Home: React.FC = () => {
               </button>
             </form>
           </div>
-        </section>
-
-        {/* Experience timeline */}
-        <section className="space-y-4">
-          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
-            {t('home.experience.title')}
-          </h2>
-          <ul className="space-y-5">
-            {careerTimeline.map((entry) => (
-              <li key={`${entry.period}-${entry.company}`} className="text-sm">
-                <div className="flex gap-4">
-                  <span className="text-slate-400 tabular-nums shrink-0 w-24">{entry.period}</span>
-                  <div>
-                    <p className="text-slate-800">
-                      {entry.role}
-                      {' @ '}
-                      {entry.href ? (
-                        <a href={entry.href} target="_blank" rel="noopener noreferrer" className="hover:text-amber-600 transition-colors">
-                          {entry.company}
-                        </a>
-                      ) : (
-                        entry.company
-                      )}
-                    </p>
-                    {entry.note && (
-                      <p className="text-slate-500 mt-0.5">{pick(entry.note)}</p>
-                    )}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
         </section>
 
         {/* Latest posts */}
