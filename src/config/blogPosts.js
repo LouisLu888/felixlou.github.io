@@ -1,6 +1,6 @@
 export const BLOG_POST_FILES = [
-  '不用title你怎么介绍自己.md',
-  'AI抹平了技术差距剩下的是时间差距.md',
+  'introduce-yourself-without-title.md',
+  'ai-time-gap.md',
   '从0到1的困惑.md',
   'three-side-business-directions.md',
   '美国签证被拒两次第三次通过.md',
