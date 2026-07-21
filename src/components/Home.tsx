@@ -70,6 +70,17 @@ const Home: React.FC = () => {
               </a>
               {t('home.hero.bullet3After')}
             </li>
+            <li>
+              <a
+                href="https://open-curiosity.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-600 hover:text-amber-700 underline underline-offset-2"
+              >
+                open-curiosity.com
+              </a>
+              {t('home.hero.bullet4After')}
+            </li>
           </ul>
           <div className="flex items-center gap-4 pt-1">
             <a href={`mailto:${EMAIL}`} className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="Email">

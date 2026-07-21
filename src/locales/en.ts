@@ -15,6 +15,7 @@ export const en = {
       bullet1After: ' — tracking how AI is actually landing across GTM roles.',
       bullet2: 'Writing about the path from Eng to Value Creator to Value Owner.',
       bullet3After: ' — a content creation OS.',
+      bullet4After: ' — a space for exploring ideas with curiosity.',
     },
     contentArchive: {
       title: 'Public Content',

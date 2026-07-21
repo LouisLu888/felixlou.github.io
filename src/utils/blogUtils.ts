@@ -131,7 +131,12 @@ export function getPublishedPosts(posts: BlogPostMeta[]): BlogPostMeta[] {
 }
 
 export function formatDate(dateString: string): string {
-  const date = new Date(dateString);
+  // Parse YYYY-MM-DD as local time; `new Date('2026-07-05')` is UTC midnight,
+  // which renders as the previous day in negative-UTC timezones.
+  const [year, month, day] = dateString.split('-').map(Number);
+  const date = Number.isFinite(year) && Number.isFinite(month) && Number.isFinite(day)
+    ? new Date(year, month - 1, day)
+    : new Date(dateString);
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',

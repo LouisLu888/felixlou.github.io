@@ -15,6 +15,7 @@ export const zh = {
       bullet1After: ' —— 追踪 AI 在 GTM 各角色里的真实落地。',
       bullet2: '写博客记录从 Eng 到 Value Creator 到 Value Owner 的思考。',
       bullet3After: ' —— 内容创作 OS。',
+      bullet4After: ' —— 一个带着好奇心探索想法的地方。',
     },
     contentArchive: {
       title: '公开内容',
