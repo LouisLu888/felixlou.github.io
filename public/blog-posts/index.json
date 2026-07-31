@@ -1,5 +1,32 @@
 [
   {
+    "id": "cost-changes-everything",
+    "title": "Do Things That Don't Scale：成本改变一切",
+    "date": "2026-07-31",
+    "readTime": "7 min read",
+    "category": "创业经验",
+    "excerpt": "过去被否决掉的清单，正在变成现在的机会清单。",
+    "published": true
+  },
+  {
+    "id": "infinite-dimensional-world",
+    "title": "世界是无限维的，我把足够多的镜子拼起来，帮你看见真的世界",
+    "date": "2026-07-11",
+    "readTime": "5 min read",
+    "category": "产品开发",
+    "excerpt": "单看一面镜子，你以为那就是世界；把越来越多的视角连到一起，才会看到一个越来越完整的世界。",
+    "published": true
+  },
+  {
+    "id": "greek-mythology-map",
+    "title": "一张图看懂希腊罗马神话：63 位神与英雄的关系网",
+    "date": "2026-07-09",
+    "readTime": "3 min read",
+    "category": "产品开发",
+    "excerpt": "人名太多、关系太乱，每次都卡在同一个地方。所以把这张网摊开画了出来。",
+    "published": true
+  },
+  {
     "id": "introduce-yourself-without-title",
     "title": "不用 title，你怎么介绍自己？",
     "date": "2026-07-07",

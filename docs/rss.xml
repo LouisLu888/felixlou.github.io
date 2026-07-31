@@ -5,8 +5,32 @@
     <link>https://www.jiabinlu.com</link>
     <description>Insights on building systems, leveraging technology, and creating meaningful impact through software, content, and AI.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 06:31:03 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 15:05:02 GMT</lastBuildDate>
     <atom:link href="https://www.jiabinlu.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Do Things That Don&apos;t Scale：成本改变一切</title>
+      <link>https://www.jiabinlu.com/blog/cost-changes-everything</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/cost-changes-everything</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+      <description>过去被否决掉的清单，正在变成现在的机会清单。</description>
+      <category>创业经验</category>
+    </item>
+    <item>
+      <title>世界是无限维的，我把足够多的镜子拼起来，帮你看见真的世界</title>
+      <link>https://www.jiabinlu.com/blog/infinite-dimensional-world</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/infinite-dimensional-world</guid>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <description>单看一面镜子，你以为那就是世界；把越来越多的视角连到一起，才会看到一个越来越完整的世界。</description>
+      <category>产品开发</category>
+    </item>
+    <item>
+      <title>一张图看懂希腊罗马神话：63 位神与英雄的关系网</title>
+      <link>https://www.jiabinlu.com/blog/greek-mythology-map</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/blog/greek-mythology-map</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>人名太多、关系太乱，每次都卡在同一个地方。所以把这张网摊开画了出来。</description>
+      <category>产品开发</category>
+    </item>
     <item>
       <title>不用 title，你怎么介绍自己？</title>
       <link>https://www.jiabinlu.com/blog/introduce-yourself-without-title</link>

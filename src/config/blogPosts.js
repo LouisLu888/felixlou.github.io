@@ -1,4 +1,7 @@
 export const BLOG_POST_FILES = [
+  'cost-changes-everything.md',
+  'greek-mythology-map.md',
+  'infinite-dimensional-world.md',
   'introduce-yourself-without-title.md',
   'ai-time-gap.md',
   '从0到1的困惑.md',
