@@ -382,6 +382,13 @@ body.editing [contenteditable="true"]{outline:1px dashed var(--zhu);outline-offs
 .edit-hint{position:fixed;top:18px;left:76px;z-index:10001;font-family:var(--f-mono);font-size:13px;
   letter-spacing:.1em;color:var(--zhu);background:rgba(237,231,219,.94);padding:8px 12px;display:none}
 body.editing .edit-hint{display:block}
+
+/* === 迭代速度公式 === */
+.stmt .fml{margin-top:46px;font-family:var(--f-mono);font-weight:700;font-size:40px;letter-spacing:.02em;
+  color:var(--t-cream);border-top:2px solid rgba(255,255,255,.28);border-bottom:2px solid rgba(255,255,255,.28);
+  padding:26px 0;display:inline-block}
+.stmt .fml .fr{font-size:48px}
+.stmt .fml .fs{opacity:.55;padding:0 4px}
 </style>
 </head>
 <body>
@@ -471,7 +478,7 @@ body.editing .edit-hint{display:block}
       <div class="reveal">
         <ul class="lst">
           <li><b>整体理念非常好</b>，系统已经相当完整</li>
-          <li>我们是<b>一起诊断</b>，不是我给她挑毛病</li>
+          <li>我们是<b>一起诊断</b>，不是我给他挑毛病</li>
           <li>连做得最好的人也会撞上这些</li>
         </ul>
       </div>
@@ -597,9 +604,10 @@ body.editing .edit-hint{display:block}
 
 <section class="slide std" data-kicker="P1 · 用户思维" data-wf="P1">
   <div class="hd reveal">
-    <h2>最简单也最有效的办法：<span class="zhu-t">物理上坐过去</span></h2>
+    <h2>即使是内部用户，<span class="zhu-t">也不简单</span></h2>
+    <div class="dek">最简单也最有效的办法，是物理上坐过去。</div>
   </div>
-  <div class="bd reveal">
+  <div class="bd reveal" style="display:flex;align-items:center">
     <div class="field">
       <div class="lbl">我的现场</div>
       <p>我们工程团队本来在三楼。为了能贴近用户、每天面对面地聊，我就搬到了二楼——<b>我是公司唯一一个坐在二楼、跟 Go-to-Market 团队一起办公的工程师。</b></p>
@@ -638,7 +646,7 @@ body.editing .edit-hint{display:block}
 
 <section class="slide ink stmt small" data-kicker="P1 · 用户思维" data-wf="P1">
   <div class="q reveal">好的问题是：<span class="z">你上一次遇到这个问题是什么时候？<br>当时你是怎么解决的？为这件事你花过多少钱？</span></div>
-  <div class="after reveal">这三个问题的共同点是：问的都是<b style="color:var(--t-cream)">已经发生过的事实</b>，不是对未来的猜测。事实撒不了谎，猜测全是客气话。</div>
+  <div class="after reveal">这三个问题的共同点是：问的都是<b style="color:var(--t-cream)">已经发生过的事实</b>，不是对未来的猜测。事实撒不了谎，猜测全是客气话。<br><br>其实<b style="color:var(--t-cream)">做一个好的产品，跟做一个好的销售，在很大程度上是一样的</b>——都是先把对方真正遇到的问题问清楚，而不是急着介绍自己有什么。</div>
 </section>
 
 <section class="slide std" data-kicker="P2 · MVP" data-wf="P2">
@@ -646,16 +654,20 @@ body.editing .edit-hint{display:block}
     <h2>MVP 不是「小一号的产品」</h2>
     <div class="dek">它是「能以最小代价测掉最高风险假设的东西」。可以是一个落地页、一封邮件、一个人肉后台。</div>
   </div>
-  <div class="bd">
-    <div class="cols">
+  <div class="bd" style="display:flex;align-items:center">
+    <div class="cols" style="width:100%">
       <div class="reveal">
-        <p class="body">而在测之前，要先搞清楚一件事：<span class="k">这个问题本身是不是 valid 的。</span></p>
-        <p class="body">我们经常看到一个小痛点就去做了。但这个痛点可能根本不痛，或者只是一个很小的问题——你即使解决了，也只是 incremental 的，带来 10%、20% 的提高。</p>
+        <div class="field">
+          <div class="lbl">该做的</div>
+          <p>把<b>最核心的那一条 workflow</b> 先 build 出来，然后只看一件事：<b>最核心的这个东西，到底 work 不 work。</b></p>
+          <p style="margin-top:20px">这就是 MVP 唯一的作用——<span class="k">以最小的代价，测掉最高的风险。</span></p>
+        </div>
       </div>
       <div class="reveal">
         <div class="field">
-          <div class="lbl">什么时候它是负价值</div>
-          <p>用户为了用你这个东西，需要换一套系统、换一套流程，那他的<b>迁移成本比这 10% 还多</b>。这个时候你的产品不只是没价值，<b>是负价值。</b></p>
+          <div class="lbl">最常见的错法</div>
+          <p>核心还没验证，就先去补边边角角的 feature、先去铺额外的分发渠道。</p>
+          <p style="margin-top:20px">如果最核心的那件事本身不值得做，<b>这些加得再多，一样不管用。</b></p>
         </div>
       </div>
     </div>
@@ -663,7 +675,8 @@ body.editing .edit-hint{display:block}
 </section>
 
 <section class="slide zhu stmt small" data-kicker="P2 · MVP" data-wf="P2">
-  <div class="q reveal">你要问的不是「这个东西能不能提高 10%」，<br>是「为了这 10%，他愿不愿意把原来的做法整个换掉」。</div>
+  <div class="q reveal">先把最核心的那条路<span style="color:#fff">走通</span>，<br>再谈边边角角。</div>
+  <div class="after reveal">核心不成立，你加再多的功能、再多的分发渠道，都是在给一个走不通的东西做装修。</div>
 </section>
 
 <section class="slide std" data-kicker="P2 · MVP · 案例" data-wf="P2">
@@ -720,7 +733,7 @@ body.editing .edit-hint{display:block}
 
 <section class="slide ink stmt small" data-kicker="P3 · 衡量标准" data-wf="P3">
   <div class="q reveal">你的主要工作不再是做，而是<span class="z">定标准</span>。</div>
-  <div class="after reveal">因为只要标准定得清楚、而且能测，AI 就能自己往上爬。标准定不清楚，你给它再多算力它也在原地打转。</div>
+  <div class="after reveal">因为只要标准定得清楚、而且能测，AI 就能自己往上爬。标准定不清楚，你给它再多算力它也在原地打转。<br><br>这一点上，<b style="color:var(--t-cream)">管 AI 和管人其实是一样的</b>——好的管理者，主要工作也不是自己下场做，是把目标和验收标准定清楚。</div>
 </section>
 
 <!-- ============================================================
@@ -767,7 +780,8 @@ body.editing .edit-hint{display:block}
 
 <section class="slide zhu stmt" data-kicker="E1 · 快速迭代" data-wf="E1">
   <div class="q reveal">快速迭代不是为了跑得快，<br>是为了<span style="color:#fff">错得快</span>。</div>
-  <div class="after reveal">世界是不确定的，商业也是不确定的。你根本不知道客户到底真正想要什么。你越早知道自己错在哪，越早能做出真正符合市场的东西。</div>
+  <div class="fml reveal">迭代速度　=　<span class="fr">1</span> <span class="fs">/</span> ( 协调成本 <span class="fs">×</span> 生产成本 <span class="fs">×</span> 反馈延迟 )</div>
+  <div class="after reveal">世界是不确定的，商业也是不确定的。你根本不知道客户到底真正想要什么。你越早知道自己错在哪，越早能做出真正符合市场的东西。<br><br>所以想快，只有三条路：<b style="color:#fff">降低协调成本</b>（少开会、少交接）、<b style="color:#fff">降低生产成本</b>（这是 AI 帮你的部分）、<b style="color:#fff">缩短反馈延迟</b>（更早拿到真实反馈）。</div>
 </section>
 
 <section class="slide std" data-kicker="E2 · 交付鸿沟" data-wf="E2">
@@ -893,7 +907,7 @@ body.editing .edit-hint{display:block}
 </section>
 
 <section class="slide ink stmt" data-kicker="O1 · 系统性思维" data-wf="O1">
-  <div class="q reveal">不花在<span class="z">瓶颈（Bottleneck）</span>上的时间，<br>都是最大的浪费。</div>
+  <div class="q reveal" style="font-size:84px"><span style="white-space:nowrap">不花在<span class="z">瓶颈（Bottleneck）</span>上的时间，</span><br><span style="white-space:nowrap">都是最大的浪费。</span></div>
 </section>
 
 <section class="slide std" data-kicker="O1 · 系统性思维" data-wf="O1">
