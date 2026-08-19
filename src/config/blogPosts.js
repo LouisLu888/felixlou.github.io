@@ -1,4 +1,5 @@
 export const BLOG_POST_FILES = [
+  'first-money-rethinking-distribution.md',
   'cost-changes-everything.md',
   'greek-mythology-map.md',
   'infinite-dimensional-world.md',
