@@ -70,6 +70,22 @@ src/
 - Let user handle git operations manually
 - Only suggest commit messages, don't execute them
 
+## Newsletter: Pushing a Post Sends Email
+
+Any push to `master` touching `public/blog-posts/**` triggers
+`.github/workflows/send-newsletter.yml`, which sends a Buttondown email to all subscribers.
+This fires on the push itself — no manual step, no confirmation.
+
+**When the user says "skip newsletter", "不用发订阅邮件", or anything equivalent, put
+`[skip-newsletter]` in the commit message.** The workflow's job-level `if` checks
+`github.event.head_commit.message` and skips the job entirely.
+
+```bash
+git commit -m "Add post: <title> [skip-newsletter]"
+```
+
+On a multi-commit push, only the last commit is exposed as `head_commit` — put the marker there.
+
 ## Development Notes
 
 - TypeScript configuration includes strict mode

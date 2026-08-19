@@ -18,6 +18,10 @@ on:
 
 jobs:
   send-newsletter:
+    # Put [skip-newsletter] in the commit message to publish a post without emailing subscribers.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      !contains(github.event.head_commit.message, '[skip-newsletter]')
     runs-on: ubuntu-latest
     environment: github-pages
     permissions:

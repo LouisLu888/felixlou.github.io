@@ -10,6 +10,21 @@ A thoughtful tech leader's personal website built with React, TypeScript, and Ta
 - 1:1 consultation booking system
 - Responsive design with modern aesthetics
 
+## Publishing a Blog Post
+
+Add the markdown file to `public/blog-posts/`, register it in `src/config/blogPosts.js`, run
+`npm run build`, then commit and push.
+
+**Pushing a change under `public/blog-posts/` emails all newsletter subscribers automatically**
+(GitHub Action `.github/workflows/send-newsletter.yml` → Buttondown). To publish silently, put
+`[skip-newsletter]` in the commit message:
+
+```bash
+git commit -m "Add post: my new post [skip-newsletter]"
+```
+
+Full newsletter docs: [`scripts/README.md`](scripts/README.md#newsletter-buttondown).
+
 ## GitHub Pages Deployment
 
 This project is configured for easy deployment to GitHub Pages:

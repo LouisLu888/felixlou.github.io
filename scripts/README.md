@@ -117,6 +117,24 @@ The GitHub Action `.github/workflows/send-newsletter.yml` runs on push to `maste
 2. Sends a Buttondown email for each new published post (`published: false` is skipped)
 3. Records sent slugs in `scripts/.newsletter-sent.json` to avoid duplicates
 
+#### Publishing without sending an email
+
+Put `[skip-newsletter]` anywhere in the commit message. The workflow's job-level `if` checks
+`github.event.head_commit.message` and skips the whole job, so no email goes out:
+
+```bash
+git commit -m "Add post: my new post [skip-newsletter]"
+```
+
+Notes:
+
+- On a multi-commit push, GitHub only exposes the **last** commit as `head_commit`. Put the marker
+  in the final commit message of the push.
+- Manual runs (**Actions → Send Newsletter → Run workflow**) ignore the marker — dispatch always runs.
+- Skipping leaves the post unsent in `scripts/.newsletter-sent.json`. A later push that touches
+  `public/blog-posts/**` will pick it up as a changed post only if that push changes the post file
+  again; to email it later on purpose, use manual dispatch with `post_slug`.
+
 Do not enable Buttondown RSS-to-email unless you upgrade to a plan that supports it and disable this workflow first. Running both would duplicate sends.
 
 To backfill or retry one missed post, run **Actions → Send Newsletter → Run workflow**, uncheck dry run, and set `post_slug` to the blog slug, for example:
