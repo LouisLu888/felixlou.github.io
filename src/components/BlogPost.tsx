@@ -146,7 +146,9 @@ const BlogPost: React.FC = () => {
                        prose-a:text-amber-600 prose-a:no-underline hover:prose-a:text-amber-700
                        prose-code:text-amber-600 prose-code:bg-amber-50 prose-code:px-1 prose-code:rounded
                        prose-pre:bg-slate-50 prose-pre:border
-                       prose-strong:text-slate-800 prose-strong:font-bold">
+                       prose-strong:text-slate-800 prose-strong:font-bold
+                       prose-hr:my-8 prose-hr:border-slate-200
+                       prose-h2:mt-8 prose-h3:mt-7">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeHighlight]}
