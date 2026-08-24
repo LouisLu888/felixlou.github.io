@@ -46,7 +46,7 @@ export const en = {
   // WeChat
   wechat: {
     headline: 'Add me on WeChat',
-    description: 'Scan to reach me directly — AI adoption, career paths, or pushback on anything I wrote here. Mention which post brought you.',
+    description: 'Weighing whether to build with AI, how to go about it, or looking for a speaker for your community? Scan and let\'s talk.',
     handle: 'WeChat: {name}',
     alt: 'WeChat QR code',
   },
