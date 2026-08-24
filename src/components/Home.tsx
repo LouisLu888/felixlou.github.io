@@ -4,6 +4,7 @@ import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getAllBlogPosts, getPublishedPosts, formatDate, type BlogPostMeta } from '../utils/blogUtils';
 import { EMAIL, FEATURED_POST_SLUGS, BUTTONDOWN } from '../config/siteProfile';
+import WeChatCTA from './WeChatCTA';
 
 const Home: React.FC = () => {
   const { t } = useLanguage();
@@ -94,6 +95,9 @@ const Home: React.FC = () => {
             </a>
           </div>
         </header>
+
+        {/* WeChat — primary contact */}
+        <WeChatCTA />
 
         {/* Content archive + subscribe */}
         <section className="border border-slate-200 rounded-xl overflow-hidden">

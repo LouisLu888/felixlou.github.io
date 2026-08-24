@@ -94,3 +94,8 @@ export const BUTTONDOWN = {
   subscribeUrl: 'https://buttondown.com/325louis',
   embedAction: 'https://buttondown.com/api/emails/embed-subscribe/325louis',
 };
+
+export const WECHAT = {
+  displayName: '沐风',
+  qrImage: '/images/contact/wechat-qr.jpg',
+};

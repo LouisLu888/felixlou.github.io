@@ -1,1 +1,0 @@
-var e=[`value-creator-to-value-owner`,`b2b-sales-insights`,`cross-cultural-parenting`],t=`jiabinlu325204@gmail.com`,n={username:`325louis`,subscribeUrl:`https://buttondown.com/325louis`,embedAction:`https://buttondown.com/api/emails/embed-subscribe/325louis`};export{t as n,e as r,n as t};

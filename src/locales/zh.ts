@@ -43,6 +43,14 @@ export const zh = {
     },
   },
 
+  // WeChat
+  wechat: {
+    headline: '扫码加我微信',
+    description: '想聊 AI 落地、职业路径，或者对文章里的判断有不同看法，直接加微信找我。添加时说一句你从哪篇文章来的。',
+    handle: '微信号：{name}',
+    alt: '微信二维码',
+  },
+
   // Blog
   blog: {
     loading: '正在加载博客文章...',

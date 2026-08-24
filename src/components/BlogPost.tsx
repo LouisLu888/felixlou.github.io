@@ -8,6 +8,7 @@ import { getBlogPost, formatDate, getAdjacentPosts, getSeriesAdjacentPosts, type
 import { useLanguage } from '../contexts/LanguageContext';
 import BlogImage from './BlogImage';
 import SubscribeCTA from './SubscribeCTA';
+import WeChatCTA from './WeChatCTA';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -171,7 +172,9 @@ const BlogPost: React.FC = () => {
           </ReactMarkdown>
         </div>
 
-        <SubscribeCTA className="mt-16 pt-8 border-t border-slate-100" />
+        <WeChatCTA className="mt-16 pt-8 border-t border-slate-100" />
+
+        <SubscribeCTA className="mt-8" />
 
         {/* Author Note */}
         <div className="mt-16 p-6 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl">

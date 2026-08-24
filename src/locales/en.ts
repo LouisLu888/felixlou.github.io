@@ -43,6 +43,14 @@ export const en = {
     },
   },
 
+  // WeChat
+  wechat: {
+    headline: 'Add me on WeChat',
+    description: 'Scan to reach me directly — AI adoption, career paths, or pushback on anything I wrote here. Mention which post brought you.',
+    handle: 'WeChat: {name}',
+    alt: 'WeChat QR code',
+  },
+
   // Blog
   blog: {
     loading: 'Loading blog posts...',
