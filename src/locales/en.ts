@@ -49,6 +49,9 @@ export const en = {
     description: 'Weighing whether to build with AI, how to go about it, or looking for a speaker for your community? Scan and let\'s talk.',
     handle: 'WeChat: {name}',
     alt: 'WeChat QR code',
+    mpHeadline: 'Follow on WeChat Official Account',
+    mpDescription: 'Every new piece like this one goes out there first.',
+    mpAlt: 'WeChat Official Account QR code',
   },
 
   // Blog

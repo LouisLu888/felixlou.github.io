@@ -49,6 +49,9 @@ export const zh = {
     description: '如果你在思考该不该做 AI、怎么做 AI，或者想给你的社群请分享嘉宾，欢迎加微信找我聊聊。',
     handle: '微信号：{name}',
     alt: '微信二维码',
+    mpHeadline: '关注公众号',
+    mpDescription: '这类分析和实操方法，新文章都会第一时间发在公众号上。',
+    mpAlt: '公众号二维码',
   },
 
   // Blog

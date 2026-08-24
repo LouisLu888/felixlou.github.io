@@ -98,4 +98,5 @@ export const BUTTONDOWN = {
 export const WECHAT = {
   displayName: '沐风',
   qrImage: '/images/contact/wechat-qr.jpg',
+  mpQrImage: '/images/contact/wechat-mp-qr.jpg',
 };
