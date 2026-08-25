@@ -1,4 +1,5 @@
 export const BLOG_POST_FILES = [
+  'mjaa-leadership.md',
   'attention-meeting-room.md',
   'ai-consulting-say-no.md',
   'first-money-rethinking-distribution.md',
