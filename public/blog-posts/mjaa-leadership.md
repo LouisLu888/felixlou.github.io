@@ -298,8 +298,14 @@ Marketing yourself 最好的方式，并不是不断告诉别人自己有多厉�
 
 MJAA 的官网在 [mjaamentorship.org](https://mjaamentorship.org/)。
 
-这一届（2026-2027）的申请马上就要截止了。这周六，8 月 29 日下午 1 点（太平洋时间）他们有一场线上 [Open House](https://mjaamentorship.org/etn/mentorship-program-open-house-082926/)，Zoom，一个小时，可以先去听一听这个 program 到底是怎么运作的。
+2026-2027 这一届正在招人，滚动录取，每届 mentee 名额有限，想申请的话越早越好。
 
-如果你本来就在犹豫要不要申请，这场值得先去，再决定。
+这周六有一场线下的 [Open House](https://mjaamentorship.org/etn/mentorship-program-open-house-082926/)，免费：
+
+- 时间：8 月 29 日（周六）下午 1:00–2:00（太平洋时间）
+- 地点：Skyway Center, 655 Skyway Rd, San Carlos, CA 94070
+- 由 MJAA 的 CEO David Jeng 主讲
+
+如果你本来就在犹豫要不要申请，这场值得先去，当面把问题问清楚再决定。
 
 如果你想聊聊自己的情况，也欢迎扫下面的二维码加我微信。
