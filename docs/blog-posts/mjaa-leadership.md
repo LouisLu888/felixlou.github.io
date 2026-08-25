@@ -34,9 +34,9 @@ excerpt: "真正的 leadership 并不是有多少人向你汇报，而是即使�
 
 ---
 
-## MJAA 到底有什么不一样？
+MJAA 到底有什么不一样？
 
-### 1. Workshop 质量非常高，但真正重要的是它改变了我对 leadership 的理解
+## 一、Workshop 质量非常高，但真正重要的是它改变了我对 leadership 的理解
 
 MJAA 的 workshop 会讲很多 leadership 相关的话题，比如：
 
@@ -48,7 +48,7 @@ How to communicate，how to influence without authority，how to network，以�
 
 其中一个对我影响最大的改变，就是：
 
-**Always put business interest first.**
+### Always put business interest first
 
 很多职场建议教我们的其实是 performance-oriented 或者 promotion-oriented thinking：
 
@@ -88,7 +88,7 @@ CEO 是怎么思考这个问题的？
 
 某种意义上，当你不再总想着如何 optimize 自己的 career，反而更有可能把自己的 career 做好。
 
-### 2. Influence 并不来自你的 title
+### Influence 并不来自你的 title
 
 这是另外一个对我影响非常大的 lesson：
 
@@ -124,7 +124,7 @@ Authority 和 influence 是两件完全不同的事情。
 
 **而是即使没有人向你汇报，你仍然能够把一群人带到同一个方向，并最终把事情做成。**
 
-### 3. Marketing and selling yourself 并不是 bragging
+### Marketing and selling yourself 并不是 bragging
 
 这一点对工程师尤其重要。
 
@@ -172,7 +172,7 @@ Marketing yourself 最好的方式，并不是不断告诉别人自己有多厉�
 
 ---
 
-## 对我来说，MJAA 最有价值的部分其实是 Family
+## 二、对我来说，MJAA 最有价值的部分其实是 Family
 
 除了 workshop，MJAA 有一个我非常喜欢的设计，叫做 Family。
 
@@ -226,7 +226,7 @@ Marketing yourself 最好的方式，并不是不断告诉别人自己有多厉�
 
 ---
 
-## 这也是为什么我觉得 MJAA 不只是一个 leadership program
+## 三、这也是为什么我觉得 MJAA 不只是一个 leadership program
 
 很多 leadership program 的模式是：
 
@@ -291,3 +291,13 @@ Marketing yourself 最好的方式，并不是不断告诉别人自己有多厉�
 直到今天，当我遇到困难，或者面对一些重要的 career decision 时，我仍然会 reach out to my family and mentor for help。
 
 对我来说，这可能就是 MJAA 最有价值的地方。
+
+---
+
+## 想了解更多
+
+MJAA 的官网在 [mjaamentorship.org](https://mjaamentorship.org/)。
+
+他们会定期办 [Open House](https://mjaamentorship.org/etn/mentorship-program-open-house-082926/)，可以先去听一听，了解这个 program 到底是怎么运作的。
+
+如果你想聊聊自己的情况，也欢迎扫下面的二维码加我微信。
