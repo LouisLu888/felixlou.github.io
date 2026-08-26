@@ -1,0 +1,17 @@
+<svg viewBox="0 0 380 230" role="img" xmlns="http://www.w3.org/2000/svg"><title>主动性的默认方向</title>
+<rect x="0" y="0" width="380" height="230" fill="#FFFFFF"/>
+<path d="M44 58 L172 56 L174 152 L46 154 Z" stroke="#1F1F1F" stroke-width="1.4" fill="none" stroke-dasharray="5 6"/>
+<path d="M206 58 L318 56 L320 152 L208 154 Z" stroke="#1F1F1F" stroke-width="1.4" fill="none" stroke-dasharray="5 6"/>
+<g stroke="#1F1F1F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M84 88 L136 86 L137 122 L85 124 Z"/>
+<circle cx="242" cy="80" r="9"/><path d="M242 89 L241 116"/><path d="M228 98 L268 94"/><path d="M241 116 L230 138"/></g>
+<g stroke="#E2571E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M241 116 L300 134"/><circle cx="336" cy="116" r="7"/>
+<path d="M336 103 L336 98"/><path d="M348 116 L354 116"/><path d="M345 106 L349 102"/><path d="M345 126 L349 130"/><path d="M336 129 L336 134"/>
+<path d="M268 94 L322 112"/></g>
+<text x="190" y="34" text-anchor="middle" font-size="13" fill="#1F1F1F">主动性的默认方向是相反的</text>
+<text x="108" y="176" text-anchor="middle" font-size="12" fill="#1F1F1F">agent：只做你写下的</text>
+<text x="108" y="195" text-anchor="middle" font-size="12" fill="#1F1F1F">要写很多字才扩一点</text>
+<text x="264" y="176" text-anchor="middle" font-size="12" fill="#E2571E">人：自带往外走的力</text>
+<text x="264" y="195" text-anchor="middle" font-size="12" fill="#E2571E">但极容易被管没</text>
+<text x="190" y="220" text-anchor="middle" font-size="12" fill="#1F1F1F">所以不是激发，是不要破坏</text></svg>

@@ -15,6 +15,7 @@ function toPostMeta(fileName, data) {
   return {
     id: fileName.replace(/\.md$/, ''),
     title: data.title || 'Untitled',
+    subtitle: data.subtitle,
     date: data.date || new Date().toISOString().split('T')[0],
     readTime: data.readTime || '5 min read',
     category: data.category || 'General',

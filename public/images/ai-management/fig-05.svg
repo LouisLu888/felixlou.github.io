@@ -1,0 +1,16 @@
+<svg viewBox="0 0 380 240" role="img" xmlns="http://www.w3.org/2000/svg"><title>积累的两种形态</title>
+<rect x="0" y="0" width="380" height="240" fill="#FFFFFF"/>
+<g stroke="#1F1F1F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M52 84 L144 82 L145 108 L53 110 Z"/><path d="M52 116 L144 114 L145 140 L53 142 Z"/><path d="M52 148 L144 146 L145 172 L53 174 Z"/>
+<circle cx="66" cy="96" r="3"/><circle cx="66" cy="128" r="3"/><circle cx="66" cy="160" r="3"/>
+<circle cx="278" cy="94" r="9"/><path d="M278 103 L277 132"/><path d="M264 112 L292 110"/><path d="M277 132 L262 150"/><path d="M277 132 L294 148"/></g>
+<g stroke="#E2571E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="278" cy="116" r="6"/>
+<path d="M278 104 L278 99"/><path d="M290 116 L296 116"/><path d="M266 116 L260 116"/><path d="M287 107 L291 103"/><path d="M269 107 L265 103"/>
+<path d="M306 158 L330 152"/><path d="M322 146 L331 152 L324 160"/></g>
+<path d="M198 62 L198 182" stroke="#1F1F1F" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="190" y="36" text-anchor="middle" font-size="13" fill="#1F1F1F">积累的两种形态</text>
+<text x="98" y="200" text-anchor="middle" font-size="12" fill="#1F1F1F">基础设施</text>
+<text x="98" y="219" text-anchor="middle" font-size="12" fill="#1F1F1F">显式、可复制、留在公司</text>
+<text x="285" y="200" text-anchor="middle" font-size="12" fill="#E2571E">手艺与品味</text>
+<text x="285" y="219" text-anchor="middle" font-size="12" fill="#E2571E">写不进文档、带得走</text></svg>

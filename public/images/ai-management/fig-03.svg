@@ -1,0 +1,13 @@
+<svg viewBox="0 0 380 235" role="img" xmlns="http://www.w3.org/2000/svg"><title>检查点的位置</title>
+<rect x="0" y="0" width="380" height="235" fill="#FFFFFF"/>
+<g stroke="#1F1F1F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M44 78 L296 76"/><path d="M286 68 L297 76 L286 84"/>
+<path d="M44 176 L336 174"/><path d="M326 166 L337 174 L326 182"/>
+<circle cx="60" cy="62" r="7"/><path d="M60 69 L60 74"/>
+<circle cx="60" cy="160" r="7"/><path d="M60 167 L60 172"/></g>
+<g stroke="#E2571E" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M312 64 L338 90"/><path d="M338 64 L312 90"/></g>
+<g stroke="#E2571E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="112" cy="174" r="11"/><path d="M107 174 L111 179 L118 169"/></g>
+<text x="170" y="36" text-anchor="middle" font-size="13" fill="#1F1F1F">只在 deadline 看结果</text>
+<text x="170" y="110" text-anchor="middle" font-size="12" fill="#1F1F1F">两周之后才知道跑偏了</text>
+<text x="170" y="140" text-anchor="middle" font-size="13" fill="#1F1F1F">先出计划，再执行</text>
+<text x="112" y="206" text-anchor="middle" font-size="12" fill="#E2571E">20% 处看最丑的稿</text></svg>

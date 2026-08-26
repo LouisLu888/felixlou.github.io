@@ -136,6 +136,12 @@ const BlogPost: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
             {post.title}
           </h1>
+
+          {post.subtitle && (
+            <p className="mt-4 text-lg text-slate-500 leading-relaxed">
+              {post.subtitle}
+            </p>
+          )}
         </header>
 
         {/* Article Content */}
@@ -167,7 +173,12 @@ const BlogPost: React.FC = () => {
                     {...props}
                   />
                 );
-              }
+              },
+              table: ({ ...props }) => (
+                <div className="overflow-x-auto">
+                  <table {...props} />
+                </div>
+              )
             }}
           >
             {post.content}

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 380 225" role="img" xmlns="http://www.w3.org/2000/svg"><title>权限按操作配</title>
+<rect x="0" y="0" width="380" height="225" fill="#FFFFFF"/>
+<g stroke="#1F1F1F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M48 70 L106 68 L108 152 L50 154 Z"/><path d="M96 108 L100 111"/>
+<path d="M123 68 L181 70 L179 154 L121 152 Z"/><path d="M171 110 L175 113"/>
+<path d="M198 70 L256 68 L258 152 L200 154 Z"/><path d="M246 108 L250 111"/>
+<path d="M273 68 L331 70 L329 154 L271 152 Z"/></g>
+<g stroke="#E2571E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M288 106 L316 105 L317 128 L289 129 Z"/>
+<path d="M294 105 L293 96 A9 9 0 0 1 311 95 L311 104"/></g>
+<text x="190" y="34" text-anchor="middle" font-size="13" fill="#1F1F1F">权限按操作配，不按人配</text>
+<text x="78" y="174" text-anchor="middle" font-size="12" fill="#1F1F1F">读资料</text>
+<text x="151" y="174" text-anchor="middle" font-size="12" fill="#1F1F1F">写草稿</text>
+<text x="228" y="174" text-anchor="middle" font-size="12" fill="#1F1F1F">内部发</text>
+<text x="301" y="174" text-anchor="middle" font-size="12" fill="#1F1F1F">删数据</text>
+<text x="190" y="204" text-anchor="middle" font-size="12" fill="#E2571E">不可逆 + 影响大 → 必须等我拍板</text></svg>

@@ -1,0 +1,9 @@
+<svg viewBox="0 0 380 265" role="img" xmlns="http://www.w3.org/2000/svg"><title>上下文是编译</title>
+<rect x="0" y="0" width="380" height="265" fill="#FFFFFF"/>
+<g stroke="#1F1F1F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M58 52 L104 48 L107 78 L61 82 Z"/><path d="M120 44 L168 46 L166 76 L118 74 Z"/><path d="M182 50 L228 47 L231 79 L185 82 Z"/><path d="M244 45 L290 48 L288 78 L242 75 Z"/><path d="M300 54 L340 51 L343 80 L303 83 Z"/>
+<path d="M104 106 L276 104 L221 156 L221 178 L159 178 L159 156 Z"/></g>
+<g stroke="#E2571E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M152 198 L229 196 L231 230 L154 232 Z"/><path d="M164 210 L216 209"/><path d="M164 221 L206 220"/></g>
+<text x="190" y="32" text-anchor="middle" font-size="13" fill="#1F1F1F">你脑子里的一切</text>
+<text x="190" y="253" text-anchor="middle" font-size="12" fill="#E2571E">只给会改变他选择的信息</text></svg>

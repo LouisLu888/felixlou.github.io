@@ -3,6 +3,7 @@ import { BLOG_POST_FILES } from '../config/blogPosts';
 export interface BlogPost {
   id: string;
   title: string;
+  subtitle?: string;
   date: string;
   readTime: string;
   category: string;
@@ -18,6 +19,7 @@ export interface BlogPost {
 export interface BlogPostMeta {
   id: string;
   title: string;
+  subtitle?: string;
   date: string;
   readTime: string;
   category: string;
@@ -40,6 +42,7 @@ function metaFromFrontmatter(fileName: string, data: Record<string, unknown>): B
   return {
     id: fileName.replace('.md', ''),
     title: typeof data.title === 'string' ? data.title : 'Untitled',
+    subtitle: typeof data.subtitle === 'string' ? data.subtitle : undefined,
     date: typeof data.date === 'string' ? data.date : new Date().toISOString().split('T')[0],
     readTime: typeof data.readTime === 'string' ? data.readTime : '5 min read',
     category: typeof data.category === 'string' ? data.category : 'General',
@@ -109,6 +112,7 @@ export async function getBlogPost(id: string): Promise<BlogPost | null> {
     return {
       id,
       title: data.title || 'Untitled',
+      subtitle: data.subtitle,
       date: data.date || new Date().toISOString().split('T')[0],
       readTime: data.readTime || '5 min read',
       category: data.category || 'General',

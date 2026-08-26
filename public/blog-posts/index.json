@@ -1,5 +1,15 @@
 [
   {
+    "id": "learn-management-from-ai",
+    "title": "用 agent 的标准要求输入，用人的标准期待输出",
+    "subtitle": "跟 AI 系统设计学管理",
+    "date": "2026-08-25",
+    "readTime": "11 min read",
+    "category": "职场",
+    "excerpt": "你给 agent 写 prompt 的严谨程度，就是管理本该有的严谨程度。",
+    "published": true
+  },
+  {
     "id": "mjaa-leadership",
     "title": "大多数领导力课程教你如何升职，而它让我变成了更好的领导者",
     "date": "2026-08-24",

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 380 205" role="img" xmlns="http://www.w3.org/2000/svg"><title>输入与输出的两套标准</title>
+<rect x="0" y="0" width="380" height="205" fill="#FFFFFF"/>
+<g stroke="#1F1F1F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="190" cy="66" r="9"/><path d="M190 75 L189 108"/><path d="M189 108 L178 132"/><path d="M189 108 L201 131"/>
+<path d="M189 86 L138 92"/><path d="M189 86 L242 92"/>
+<path d="M58 66 L124 64 L126 124 L60 126 Z"/>
+<path d="M70 82 L76 88 L86 76"/><path d="M70 100 L76 106 L86 94"/><path d="M70 116 L76 122 L86 110"/>
+<path d="M94 82 L114 81"/><path d="M94 100 L112 99"/><path d="M94 116 L115 115"/></g>
+<g stroke="#E2571E" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="300" cy="94" r="10"/>
+<path d="M300 76 L300 68"/><path d="M300 112 L300 120"/><path d="M318 94 L326 94"/><path d="M282 94 L274 94"/><path d="M313 81 L319 75"/><path d="M313 107 L319 113"/><path d="M287 81 L281 75"/><path d="M287 107 L281 113"/></g>
+<text x="92" y="152" text-anchor="middle" font-size="12" fill="#1F1F1F">输入向 agent 看齐</text>
+<text x="92" y="171" text-anchor="middle" font-size="12" fill="#1F1F1F">显式、可判定</text>
+<text x="292" y="152" text-anchor="middle" font-size="12" fill="#E2571E">输出向人看齐</text>
+<text x="292" y="171" text-anchor="middle" font-size="12" fill="#E2571E">判断、手艺、意外</text>
+<text x="190" y="196" text-anchor="middle" font-size="13" fill="#1F1F1F">两套标准，方向相反</text></svg>
