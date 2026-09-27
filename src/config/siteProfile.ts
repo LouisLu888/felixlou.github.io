@@ -100,3 +100,9 @@ export const WECHAT = {
   qrImage: '/images/contact/wechat-qr.jpg',
   mpQrImage: '/images/contact/wechat-mp-qr.jpg',
 };
+
+export const PRODUCTS = {
+  fixclip: {
+    buyUrl: 'https://panda.lemonsqueezy.com/checkout/buy/428fbb52-8630-4b87-b769-92a6f899bcb1',
+  },
+};

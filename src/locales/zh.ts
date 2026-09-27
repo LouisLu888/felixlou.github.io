@@ -3,6 +3,8 @@ export const zh = {
   nav: {
     blog: '博客',
     books: '书库',
+    services: '咨询',
+    products: '产品',
   },
 
   // Home Page
@@ -52,6 +54,53 @@ export const zh = {
     mpHeadline: '关注公众号',
     mpDescription: '这类分析和实操方法，新文章都会第一时间发在公众号上。',
     mpAlt: '公众号二维码',
+  },
+
+  // Services
+  services: {
+    title: '咨询服务',
+    intro: '我给小老板和小团队做 AI 落地与商业咨询。你带着真实的业务问题来，我们一起判断 AI 该不该用、用在哪、先做哪一步。',
+    whoTitle: '适合谁',
+    who1: '10 人左右的小公司、工作室、线下服务机构的创始人或负责人',
+    who2: '想用 AI 提效，但不确定从哪里下手，或者之前找人做过系统没跑通',
+    who3: '在产品、获客、定价、团队分工上有具体的商业问题想找人聊透',
+    helpTitle: '我能帮你做什么',
+    help1Title: '先算账，再动手',
+    help1: '把一个想法的真实成本（需求澄清、建造、维护、采纳、变更、注意力）摆出来，判断现在值不值得做。很多时候结论是先别做。',
+    help2Title: 'AI 落地路径',
+    help2: '从你的日常流程出发，找出最适合交给 AI 的环节，给出工具选型和可以马上执行的第一步。',
+    help3Title: '流程结构化',
+    help3: '规模还没到自动化的时候，先把流程、客户信息和团队分工整理成结构，为以后的自动化打基础。',
+    help4Title: '商业问题',
+    help4: '定价、获客、产品方向、团队协作等工作和生意里的具体问题。',
+    pricingTitle: '价格',
+    tier1Name: '初步咨询',
+    tier1Duration: '45 分钟',
+    tier1Price: '¥888',
+    tier1Desc: '处理一个具体的小问题，也给一些学习和使用 AI 的建议。',
+    tier2Name: '深入咨询',
+    tier2Duration: '1.5 小时',
+    tier2Price: '¥1588',
+    tier2Desc: '处理工作和商业里的具体问题，适合需要一起梳理流程、算账、定方案的情况。',
+    bookTitle: '如何预约',
+    bookDesc: '扫码加我微信，简单说一下你的业务和想解决的问题，我们约时间。',
+    caseTitle: '一次真实咨询的记录',
+    caseLink: '她花钱来问我怎么用 AI，我用两个小时劝她别做',
+  },
+
+  // Products
+  products: {
+    title: '产品',
+    intro: '我自己做、自己在用的小工具。',
+    oneTime: '一次性购买',
+    buy: '购买',
+    fixclip: {
+      name: 'Fix Clip',
+      platform: 'macOS App',
+      tagline: '修复 Mac 与 iPhone / iPad 之间 Universal Clipboard 不同步的问题。',
+      description: 'iPhone 上复制、Mac 上粘贴不出来，或者反过来？这通常是 Mac 端负责跨设备剪贴板的系统进程卡在了过期状态。Fix Clip 一键重置这些进程，不用重启电脑，也不用去终端敲命令。',
+      price: '$9.99',
+    },
   },
 
   // Blog

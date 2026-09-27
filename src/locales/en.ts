@@ -3,6 +3,8 @@ export const en = {
   nav: {
     blog: 'Blog',
     books: 'Books',
+    services: 'Consulting',
+    products: 'Products',
   },
 
   // Home Page
@@ -52,6 +54,53 @@ export const en = {
     mpHeadline: 'Follow on WeChat Official Account',
     mpDescription: 'Every new piece like this one goes out there first.',
     mpAlt: 'WeChat Official Account QR code',
+  },
+
+  // Services
+  services: {
+    title: 'Consulting',
+    intro: 'I help small business owners and small teams put AI to work and think through business problems. Bring a real problem; together we decide whether AI fits, where it fits, and what to do first.',
+    whoTitle: 'Who it\'s for',
+    who1: 'Founders and operators of small companies, studios, and local service businesses (around 10 people)',
+    who2: 'Teams that want AI to save time but don\'t know where to start, or have tried building a system before and it didn\'t stick',
+    who3: 'Owners with concrete questions on product, customer acquisition, pricing, or team structure',
+    helpTitle: 'What I help with',
+    help1Title: 'Do the math before building',
+    help1: 'Lay out the real cost of an idea (requirements, build, maintenance, adoption, change friction, attention) and decide whether it pays off now. Often the answer is: not yet.',
+    help2Title: 'AI adoption path',
+    help2: 'Start from your daily workflow, find the steps best handed to AI, pick tools, and define a first step you can execute right away.',
+    help3Title: 'Structure before automation',
+    help3: 'Before you have the scale to automate, organize your process, customer data, and roles so automation is possible later.',
+    help4Title: 'Business questions',
+    help4: 'Pricing, customer acquisition, product direction, team collaboration, and other concrete problems in your work and business.',
+    pricingTitle: 'Pricing',
+    tier1Name: 'Intro session',
+    tier1Duration: '45 min',
+    tier1Price: '¥888',
+    tier1Desc: 'One focused question, plus advice on learning and using AI.',
+    tier2Name: 'Deep-dive session',
+    tier2Duration: '1.5 hours',
+    tier2Price: '¥1588',
+    tier2Desc: 'Concrete work and business problems where we map the workflow, run the numbers, and settle on a plan together.',
+    bookTitle: 'How to book',
+    bookDesc: 'Add me on WeChat, tell me briefly about your business and the problem, and we\'ll set a time.',
+    caseTitle: 'Notes from a real session (Chinese)',
+    caseLink: 'She paid to ask me how to use AI. I spent two hours talking her out of it.',
+  },
+
+  // Products
+  products: {
+    title: 'Products',
+    intro: 'Small tools I build and use myself.',
+    oneTime: 'One-time purchase',
+    buy: 'Buy',
+    fixclip: {
+      name: 'Fix Clip',
+      platform: 'macOS app',
+      tagline: 'Fixes Universal Clipboard sync between your Mac and iPhone / iPad.',
+      description: 'Copy on iPhone, nothing to paste on Mac, or the other way around? Usually the Mac-side Continuity processes behind the shared clipboard are stuck in a stale state. Fix Clip resets them in one click: no reboot, no Terminal commands.',
+      price: '$9.99',
+    },
   },
 
   // Blog

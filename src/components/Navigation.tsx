@@ -59,6 +59,12 @@ const Navigation: React.FC = () => {
                         <Link to="/blog" className={linkClass('/blog')}>
                           {t('nav.blog')}
                         </Link>
+                        <Link to="/services" className={linkClass('/services')}>
+                          {t('nav.services')}
+                        </Link>
+                        <Link to="/products" className={linkClass('/products')}>
+                          {t('nav.products')}
+                        </Link>
                         {/* <Link to="/books" className={linkClass('/books')}>
                           {t('nav.books')}
                         </Link> */}
@@ -112,6 +118,12 @@ const Navigation: React.FC = () => {
                 <div className="px-6 py-4 space-y-4">
                   <Link to="/blog" className={`block py-2 ${linkClass('/blog')}`}>
                     {t('nav.blog')}
+                  </Link>
+                  <Link to="/services" className={`block py-2 ${linkClass('/services')}`}>
+                    {t('nav.services')}
+                  </Link>
+                  <Link to="/products" className={`block py-2 ${linkClass('/products')}`}>
+                    {t('nav.products')}
                   </Link>
                   {/* <Link to="/books" className={`block py-2 ${linkClass('/books')}`}>
                     {t('nav.books')}
