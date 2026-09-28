@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { PRODUCTS } from '../config/siteProfile';
 
@@ -45,12 +45,10 @@ const Products: React.FC = () => {
                 </div>
                 <a
                   href={buyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors shadow-sm"
                 >
                   {t('products.buy')}
-                  <ExternalLink className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </article>

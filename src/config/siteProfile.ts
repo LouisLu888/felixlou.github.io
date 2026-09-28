@@ -104,6 +104,6 @@ export const WECHAT = {
 export const PRODUCTS = {
   fixclip: {
     pageUrl: '/products/fix-clipboard/',
-    buyUrl: 'https://panda.lemonsqueezy.com/checkout/buy/428fbb52-8630-4b87-b769-92a6f899bcb1',
+    buyUrl: '/products/fix-clipboard/#pro',
   },
 };
