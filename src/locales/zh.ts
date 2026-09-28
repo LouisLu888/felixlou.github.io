@@ -92,14 +92,16 @@ export const zh = {
   products: {
     title: '产品',
     intro: '我自己做、自己在用的小工具。',
-    oneTime: '一次性购买',
+    learnMore: '查看产品页',
     buy: '购买',
     fixclip: {
-      name: 'Fix Clip',
+      name: 'Fix Clipboard',
       platform: 'macOS App',
-      tagline: '修复 Mac 与 iPhone / iPad 之间 Universal Clipboard 不同步的问题。',
-      description: 'iPhone 上复制、Mac 上粘贴不出来，或者反过来？这通常是 Mac 端负责跨设备剪贴板的系统进程卡在了过期状态。Fix Clip 一键重置这些进程，不用重启电脑，也不用去终端敲命令。',
+      tagline: '修复 Mac 与 iPhone / iPad 之间复制粘贴不同步的问题。',
+      description: 'iPhone 上刚复制，Mac 却粘贴不出来？Fix Clipboard 在菜单栏一键重置 Mac 端的共享服务，再试一次跨设备复制粘贴。手动修复永久免费；Pro 会在网络变化和 Mac 唤醒后自动尝试修复。',
       price: '$9.99',
+      priceLabel: 'Pro · 一次性购买',
+      freeNote: '免费版可直接下载',
     },
   },
 

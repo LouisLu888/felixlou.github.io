@@ -1,12 +1,12 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { PRODUCTS } from '../config/siteProfile';
 
 const Products: React.FC = () => {
   const { t } = useLanguage();
 
-  const products = [{ key: 'fixclip', buyUrl: PRODUCTS.fixclip.buyUrl }];
+  const products = [{ key: 'fixclip', ...PRODUCTS.fixclip }];
 
   return (
     <div className="min-h-screen bg-white text-slate-800">
@@ -17,18 +17,31 @@ const Products: React.FC = () => {
         </header>
 
         <div className="space-y-5">
-          {products.map(({ key, buyUrl }) => (
+          {products.map(({ key, pageUrl, buyUrl }) => (
             <article key={key} className="p-5 sm:p-6 border border-slate-200 rounded-xl space-y-3">
               <div className="flex items-baseline justify-between gap-3">
-                <h2 className="text-xl font-semibold">{t(`products.${key}.name`)}</h2>
+                <h2 className="text-xl font-semibold">
+                  {/* Static page served outside the SPA, so a plain <a> forces a full load */}
+                  <a href={pageUrl} className="hover:text-amber-600 transition-colors">
+                    {t(`products.${key}.name`)}
+                  </a>
+                </h2>
                 <span className="text-sm text-slate-500">{t(`products.${key}.platform`)}</span>
               </div>
               <p className="text-slate-700 font-medium">{t(`products.${key}.tagline`)}</p>
               <p className="text-sm text-slate-600 leading-relaxed">{t(`products.${key}.description`)}</p>
+              <a
+                href={pageUrl}
+                className="inline-flex items-center gap-1.5 text-sm text-amber-600 hover:text-amber-700 font-medium"
+              >
+                {t('products.learnMore')}
+                <span className="text-slate-500 font-normal">· {t(`products.${key}.freeNote`)}</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
               <div className="flex items-center justify-between gap-3 pt-2">
                 <div>
                   <span className="text-2xl font-bold text-amber-600">{t(`products.${key}.price`)}</span>
-                  <span className="text-sm text-slate-500 ml-2">{t('products.oneTime')}</span>
+                  <span className="text-sm text-slate-500 ml-2">{t(`products.${key}.priceLabel`)}</span>
                 </div>
                 <a
                   href={buyUrl}

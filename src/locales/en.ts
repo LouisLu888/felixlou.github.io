@@ -92,14 +92,16 @@ export const en = {
   products: {
     title: 'Products',
     intro: 'Small tools I build and use myself.',
-    oneTime: 'One-time purchase',
+    learnMore: 'Product page',
     buy: 'Buy',
     fixclip: {
-      name: 'Fix Clip',
+      name: 'Fix Clipboard',
       platform: 'macOS app',
-      tagline: 'Fixes Universal Clipboard sync between your Mac and iPhone / iPad.',
-      description: 'Copy on iPhone, nothing to paste on Mac, or the other way around? Usually the Mac-side Continuity processes behind the shared clipboard are stuck in a stale state. Fix Clip resets them in one click: no reboot, no Terminal commands.',
+      tagline: 'Fixes copy-paste sync between your Mac and iPhone / iPad.',
+      description: 'Copied on iPhone, nothing to paste on Mac? Fix Clipboard resets the Mac-side sharing services from the menu bar in one click, so you can try the cross-device paste again. Manual fix is free forever; Pro automatically retries after network changes and when your Mac wakes.',
       price: '$9.99',
+      priceLabel: 'Pro · one-time purchase',
+      freeNote: 'Free version available',
     },
   },
 
