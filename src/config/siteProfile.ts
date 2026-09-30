@@ -104,6 +104,6 @@ export const WECHAT = {
 export const PRODUCTS = {
   fixclip: {
     pageUrl: '/products/fix-clipboard/',
-    buyUrl: '/products/fix-clipboard/#pro',
+    buyUrl: '/products/fix-clipboard/#download',
   },
 };
