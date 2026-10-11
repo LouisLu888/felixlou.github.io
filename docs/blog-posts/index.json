@@ -1,5 +1,14 @@
 [
   {
+    "id": "keep-asking-for-an-opportunity",
+    "title": "故事分享：我一生克服了很多很难的挑战，靠的就是这个",
+    "date": "2026-10-10",
+    "readTime": "4 min read",
+    "category": "个人成长",
+    "excerpt": "一位退休女士回忆年轻时申请计算机硕士遭拒的经历：争取两个星期、重写文书、重新提交三封推荐信，最终获得录取。遇到拒绝，继续为自己争取机会。",
+    "published": true
+  },
+  {
     "id": "learn-management-from-ai",
     "title": "用 agent 的标准要求输入，用人的标准期待输出",
     "subtitle": "跟 AI 系统设计学管理",
