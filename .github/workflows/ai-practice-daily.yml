@@ -24,6 +24,8 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    # Screening + writing with Opus takes a few minutes; cap runaway runs.
+    timeout-minutes: 30
     permissions:
       contents: write
     steps:
@@ -41,15 +43,27 @@ jobs:
       - name: Fetch sources
         run: cd ai-practice/scripts && node fetch-sources.js
 
+      # Two ways to pay for Claude, checked in this order:
+      # 1. ANTHROPIC_API_KEY: Claude API, billed per token
+      # 2. CLAUDE_CODE_OAUTH_TOKEN: your Claude subscription via the Claude Code
+      #    CLI (create it locally with `claude setup-token`)
       - name: Curate with Claude
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          FORCE_FLAG: ${{ inputs.force && '--force' || '' }}
         run: |
-          if [ -z "$ANTHROPIC_API_KEY" ]; then
-            echo "::warning::ANTHROPIC_API_KEY not set; candidates fetched, no issue generated"
-            exit 0
+          cd ai-practice/scripts
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            node curate.js --engine api $FORCE_FLAG
+          elif [ -n "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            # An empty ANTHROPIC_API_KEY would shadow the subscription token.
+            unset ANTHROPIC_API_KEY
+            npm install -g @anthropic-ai/claude-code
+            node curate.js --engine cli $FORCE_FLAG
+          else
+            echo "::warning::Neither ANTHROPIC_API_KEY nor CLAUDE_CODE_OAUTH_TOKEN is set; candidates fetched, no issue generated"
           fi
-          cd ai-practice/scripts && node curate.js ${{ inputs.force && '--force' || '' }}
 
       - name: Build indexes and publish to docs/
         run: cd ai-practice/scripts && node build-index.js

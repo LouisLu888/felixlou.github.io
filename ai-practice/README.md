@@ -63,7 +63,12 @@ cd ../../docs && python3 -m http.server 8787   # http://localhost:8787/ai-practi
 
 ## 上线前要做的一次性设置
 
-在 GitHub 仓库 Settings → Secrets and variables → Actions 添加 `ANTHROPIC_API_KEY`。没有它，流水线照常抓取，但不出新一期。然后在 Actions 页手动运行一次 **AI 实战派 daily issue**。
+成稿需要 Claude，两种方式任选其一，作为仓库 secret 加在 Settings → Secrets and variables → Actions：
+
+1. `CLAUDE_CODE_OAUTH_TOKEN`（当前用的这种）：走你的 Claude 订阅，不另外按 API 用量计费。在本机运行 `claude setup-token` 生成，然后 `gh secret set CLAUDE_CODE_OAUTH_TOKEN -R LouisLu888/felixlou.github.io` 粘贴进去。workflow 会在运行时安装 Claude Code，用 `--engine cli` 成稿。
+2. `ANTHROPIC_API_KEY`：走 Claude API，按 token 计费。两个都设置时优先用它。
+
+都没有时，流水线照常抓取，但不出新一期。设置后在 Actions 页手动运行一次 **AI 实战派 daily issue** 验证。
 
 ## 成本
 
