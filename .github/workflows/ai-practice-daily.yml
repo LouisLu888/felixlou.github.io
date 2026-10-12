@@ -16,6 +16,10 @@ on:
         description: 'Regenerate today even if the issue exists'
         type: boolean
         default: false
+      check_only:
+        description: 'Only run the source health check (no fetch state, no commit)'
+        type: boolean
+        default: false
 
 concurrency:
   group: ai-practice-daily
@@ -40,7 +44,12 @@ jobs:
       - name: Install dependencies
         run: cd ai-practice/scripts && npm ci
 
+      - name: Check sources only
+        if: ${{ inputs.check_only }}
+        run: cd ai-practice/scripts && node check-sources.js
+
       - name: Fetch sources
+        if: ${{ !inputs.check_only }}
         run: cd ai-practice/scripts && node fetch-sources.js
 
       # Two ways to pay for Claude, checked in this order:
@@ -48,6 +57,7 @@ jobs:
       # 2. CLAUDE_CODE_OAUTH_TOKEN: your Claude subscription via the Claude Code
       #    CLI (create it locally with `claude setup-token`)
       - name: Curate with Claude
+        if: ${{ !inputs.check_only }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -66,11 +76,13 @@ jobs:
           fi
 
       - name: Build indexes and publish to docs/
+        if: ${{ !inputs.check_only }}
         run: cd ai-practice/scripts && node build-index.js
 
       # No [skip ci] in the message: on a branch-deployed Pages site it would
       # also skip the Pages build, and the new issue would never go live.
       - name: Commit
+        if: ${{ !inputs.check_only }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
