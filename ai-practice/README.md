@@ -69,6 +69,8 @@ GitHub Actions 每天 14:23 UTC（约太平洋时间 7:23）运行：
 4. 成品整体放慢到 0.94 倍（`TEMPO`），因为 gpt-4o-mini-tts 不支持语速参数，默认读得偏快。
 5. 英文术语读音表在 `config/pronunciation.json`，只作用于送给 TTS 的文本；听到读错的词就加一条。
 
+上架小宇宙需要两样东西，都已写进 feed：`itunes:owner` 邮箱（325louis@gmail.com，认领节目时收验证码，公开可见），以及 AI 生成标识。中国大陆 2025 年 9 月起施行 AI 生成内容标识规定，所以每集开头固定一句「本节目语音由 AI 合成」，节目简介和每集简介也注明（`AI_DISCLOSURE`）。
+
 ## 本地运行
 
 ```bash

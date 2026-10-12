@@ -29,8 +29,10 @@ const BASE_URL = "https://www.jiabinlu.com/ai-practice/podcast/";
 const SHOW = {
   title: "AI 实干派",
   author: "卢佳斌",
+  // Podcast directories (小宇宙, Apple, Spotify) send ownership codes here. Public.
+  email: "325louis@gmail.com",
   link: "https://www.jiabinlu.com/ai-practice/",
-  description: "看真正用 AI 拿到结果的人怎么做：用 AI 提效、做成商业闭环、拿到收入。jiabinlu.com/ai-practice 每日一期的语音版。",
+  description: "看真正用 AI 拿到结果的人怎么做：用 AI 提效、做成商业闭环、拿到收入。jiabinlu.com/ai-practice 每日一期的语音版。本节目口播稿与语音均由 AI 生成合成。",
   language: "zh-cn",
 };
 const AUDIO_DIR = join(PODCAST_DIR, "audio");
@@ -55,13 +57,13 @@ function hms(seconds) {
 
 function renderFeed(episodes) {
   const items = episodes.map((ep) => {
-    const notes = `<p><a href="${esc(ep.link)}">图文版</a></p>` + ep.items.map((it) =>
+    const notes = `<p><a href="${esc(ep.link)}">图文版</a> · 本集口播稿与语音由 AI 生成合成</p>` + ep.items.map((it) =>
       `<p><b>${esc(it.headline)}</b><br>${it.sources.map((s) => `<a href="${esc(s.url)}">${esc(s.label || s.title)}</a>`).join(" · ")}</p>`
     ).join("");
     return `    <item>
       <title>${esc(`${ep.date} · ${ep.title}`)}</title>
       <link>${esc(ep.link)}</link>
-      <description>${esc(ep.summary)}</description>
+      <description>${esc(`${ep.summary}（本集语音由 AI 合成）`)}</description>
       <content:encoded><![CDATA[${notes.replace(/]]>/g, "]]&gt;")}]]></content:encoded>
       <enclosure url="${esc(ep.audioUrl)}" length="${ep.audioBytes}" type="audio/mpeg"/>
       <guid isPermaLink="false">ai-practice-${ep.date}</guid>
@@ -81,6 +83,7 @@ function renderFeed(episodes) {
     <description>${esc(SHOW.description)}</description>
     <language>${SHOW.language}</language>
     <itunes:author>${esc(SHOW.author)}</itunes:author>
+    <itunes:owner><itunes:name>${esc(SHOW.author)}</itunes:name><itunes:email>${esc(SHOW.email)}</itunes:email></itunes:owner>
     <itunes:image href="${BASE_URL}cover.jpg"/>
     <image><url>${BASE_URL}cover.jpg</url><title>${esc(SHOW.title)}</title><link>${esc(SHOW.link)}</link></image>
     <itunes:category text="Technology"/>

@@ -61,6 +61,8 @@ const TTS_INSTRUCTIONS = [
   "Pronunciation: 英文人名、公司名、产品名和技术词按美式英语原样读，不要读成中文腔。缩写按字母读。",
 ].join("\n");
 
+const AI_DISCLOSURE = "本节目语音由 AI 合成。";
+
 const WEEKDAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 
 function parseArgs(argv) {
@@ -232,7 +234,9 @@ async function main() {
   // segment, so the voice carries through instead of reading isolated lines.
   if (!draft.intro.includes("实干派")) draft.intro = `这里是 AI 实干派。${draft.intro}`;
   const segments = draft.segments.map((seg) => [...seg.paragraphs]);
-  segments[0].unshift(draft.intro);
+  // Explicit AI label at the start: mainland China's AI-generated content
+  // labeling rules (in force since 2025-09) apply once the show is on 小宇宙.
+  segments[0].unshift(AI_DISCLOSURE, draft.intro);
   segments[segments.length - 1].push(draft.outro);
   const script = segments.map((paras) => paras.join("\n")).join("\n\n");
   await writeFile(join(args.out, "script.txt"), script);
