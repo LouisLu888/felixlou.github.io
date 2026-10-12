@@ -139,7 +139,9 @@ async function viewDay(date) {
       <header class="issue-head">
         <div class="eyebrow">AI 实干派 ${pad3(day.number)} · ${fmtDate(issue.date)} · 约 ${day.readingMinutes} 分钟读完${issue.sample ? '<span class="badge-sample">样刊</span>' : ""}</div>
         <h1>${esc(issue.title)}</h1>
+        <div class="permalinks"><a href="/ai-practice/d/${date}/">本期永久链接</a></div>
       </header>
+      ${issue.editorNote ? `<section class="editor-note"><h2>编辑按</h2>${md(issue.editorNote)}</section>` : ""}
       <section class="tldr">
         <h2>30 秒速读</h2>
         <ul>${issue.items
@@ -155,7 +157,7 @@ async function viewDay(date) {
         .map(
           (it, i) => `<section class="item" id="${esc(it.id)}">
             ${itemMeta(it)}
-            <h3>${String(i + 1).padStart(2, "0")}｜${esc(it.headline)}</h3>
+            <h3>${String(i + 1).padStart(2, "0")}｜${esc(it.headline)} <a class="share-link" href="/ai-practice/i/${esc(it.id)}/" title="这一条的永久链接，适合分享">链接</a></h3>
             <details class="facts-wrap" open><summary>要点</summary>${itemFacts(it)}</details>
             <div class="body">${md(it.body)}</div>
             ${sourcesLine(it)}

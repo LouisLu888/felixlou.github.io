@@ -289,11 +289,15 @@ async function main() {
   for (const h of dropped) console.error(`  Over budget, dropped: ${h}`);
   out.items.forEach((it, i) => (it.id = `${date}-${String(i + 1).padStart(2, "0")}`));
   out.readingMinutes = Math.ceil(issueReadingMinutes(out));
+  const candidatesBySource = {};
+  for (const c of pool.candidates) candidatesBySource[c.source] = (candidatesBySource[c.source] || 0) + 1;
   out.meta = {
     generatedAt: new Date().toISOString(),
     engine,
     candidateCount: pool.candidates.length,
-    shortlist,
+    // Kept for source-stats.js: which source each candidate and pick came from.
+    candidatesBySource,
+    shortlist: shortlist?.map((s) => ({ ...s, source: byId.get(s.id).source, title: byId.get(s.id).title })) ?? null,
     droppedForLength: dropped,
     screen: screenMeta,
     ...meta,

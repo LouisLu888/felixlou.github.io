@@ -33,9 +33,24 @@ GitHub Actions 每天 14:23 UTC（约太平洋时间 7:23）运行：
    2. 成稿：Claude 读这 12 条全文，按 `prompts/curate.md` 挑 3 到 6 条写成中文，输出 `public/ai-practice/data/issues/<date>.json`。
 3. `build-index.js`：生成按日期和按栏目的索引，再把 `public/ai-practice/` 镜像到 `docs/ai-practice/`。
 4. 提交到 master。jiabinlu.com 直接从 `docs/` 发布，提交即上线，不需要跑博客的 Vite 构建。
-5. `send-email.js`：等 Pages 部署约 90 秒后，通过 Resend 把当期发到 `NEWSLETTER_TO`。`state/sent.json` 记录已发日期，重跑不会重复发。本地预览：`node send-email.js --date <日期> --dry-run`，生成 `state/email-preview.html`。
+5. 静态页面：`build-index.js` 同时生成每期 `/ai-practice/d/<日期>/`、每条 `/ai-practice/i/<条目>/`、每个栏目 `/ai-practice/c/<栏目>/` 和订阅页 `/ai-practice/subscribe/`，带 Open Graph 分享卡片（`og/<日期>.png`，`og-images.js` 用无头 Chrome 生成），以及 `sitemap.xml`、`feed.xml`（RSS）和全站 `robots.txt`。单页应用 `/ai-practice/` 保持不变，每条加了指向静态页的「链接」。
+6. `send-email.js`：等 Pages 部署约 90 秒后，通过 Resend 把当期发到 `NEWSLETTER_TO`。`state/sent.json` 记录已发日期，重跑不会重复发。本地预览：`node send-email.js --date <日期> --dry-run`，生成 `state/email-preview.html`。
 
 `public/` 是源，`docs/` 是副本。手动跑 `npm run build` 构建博客时，Vite 会清空 `docs/` 再从 `public/` 复制，所以 AI 实干派的页面会原样保留。
+
+### 订阅（Buttondown）
+
+网页和静态页底部有订阅表单，提交到博客已有的 Buttondown 账号（`325louis`），打上 `ai-practice` 和 `ai-practice-daily` 或 `ai-practice-weekly` 标签。`AI 实干派 subscribers` workflow 每天太平洋时间 9:23 运行 `send-subscribers.js`：给每日订阅者发当期，周日另给每周订阅者发一周精选。
+
+Buttondown 账号和博客共用一个订阅列表，博客的新文章通知会发给所有人，所以 AI 实干派的订阅者也会收到博客通知（表单上写明了）。反过来，每封 AI 实干派邮件都带标签过滤，标签 ID 在发送时解析；解析不到就不发，绝不无过滤地发送。邮件不进博客的公开归档。手动运行默认 dry run。
+
+### 编辑按
+
+在 `ai-practice/notes/<日期>.md` 写一两句，提交后 `AI 实干派 notes` workflow 会合并进当期页面。说明见 `notes/README.md`。
+
+### 来源命中率
+
+每次构建都会更新 `state/source-stats.md`：每个来源的候选数、初筛入选数、成稿数和最近成稿日期。第 6 周复盘时，候选多而成稿为 0 的来源优先降权或移除。
 
 ### 15 分钟读完
 

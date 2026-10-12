@@ -137,51 +137,75 @@
     "shortlist": [
       {
         "id": "c6",
-        "reason": "谁：Simon Willison 本人；怎么用：做饭时用 ChatGPT 桌面版 Codex 的语音模式，连着本地开发环境改博客；结果：上线了 Newsletters 索引页。完整的工作流演示。"
+        "reason": "谁：Simon Willison 本人；怎么用：做饭时用 ChatGPT 桌面版 Codex 的语音模式，连着本地开发环境改博客；结果：上线了 Newsletters 索引页。完整的工作流演示。",
+        "source": "Simon Willison",
+        "title": "A new feature for my blog, built using my voice"
       },
       {
         "id": "c22",
-        "reason": "谁：陈然（清华、CMU，做过两年全职奶爸）；怎么用：做零人运营的备考网站，回到职场后用 AI 重做业务、系统和交付，用量到百亿 token；结果：中文一手的副业和职业转型经历，对大厂读者参考价值很高。"
+        "reason": "谁：陈然（清华、CMU，做过两年全职奶爸）；怎么用：做零人运营的备考网站，回到职场后用 AI 重做业务、系统和交付，用量到百亿 token；结果：中文一手的副业和职业转型经历，对大厂读者参考价值很高。",
+        "source": "陈然 ranchen.org",
+        "title": "陈然：全职奶爸，清华，CMU，AI斩杀线，0人公司，百亿token，财务规划，职业选择，创业收购，主体性，硅谷"
       },
       {
         "id": "c26",
-        "reason": "谁：19 岁、之前没上线过任何 app 的 Vadim；怎么用：产品 100% 靠 AI 写，在 IG 上发内容拉增长；结果：5 个月做到 1 万美元/月、2 万用户。有数字的经营复盘（与 c24 重复，留这一条）。"
+        "reason": "谁：19 岁、之前没上线过任何 app 的 Vadim；怎么用：产品 100% 靠 AI 写，在 IG 上发内容拉增长；结果：5 个月做到 1 万美元/月、2 万用户。有数字的经营复盘（与 c24 重复，留这一条）。",
+        "source": "Starter Story (YouTube)",
+        "title": "My First SaaS Project Just Hit $11K/Month"
       },
       {
         "id": "c19",
-        "reason": "谁：Magnific 联合创始人 Javi Lopez；怎么用：一个人用 AI 做了 17 分钟的 Backrooms 短片，讲了具体经验，比如别做手持镜头、要拉一支小团队；结果：做成了长片。内容创作者可以照着学（注意：这期由 Magnific 赞助）。"
+        "reason": "谁：Magnific 联合创始人 Javi Lopez；怎么用：一个人用 AI 做了 17 分钟的 Backrooms 短片，讲了具体经验，比如别做手持镜头、要拉一支小团队；结果：做成了长片。内容创作者可以照着学（注意：这期由 Magnific 赞助）。",
+        "source": "Theoretically Media",
+        "title": "What No One Tells You About Making a 17-Minute AI Backrooms Film"
       },
       {
         "id": "c60",
-        "reason": "谁：全栈工程师 Ras Mic；怎么用：四步 agentic 工程流程，分别是任务隔离、给 agent 搭好结构、做验证回路、让 agent 审 PR，还讲了哪一步他从不交给 agent；结果：能上线真实 app、不产出垃圾代码。个人和小团队可以直接照做。"
+        "reason": "谁：全栈工程师 Ras Mic；怎么用：四步 agentic 工程流程，分别是任务隔离、给 agent 搭好结构、做验证回路、让 agent 审 PR，还讲了哪一步他从不交给 agent；结果：能上线真实 app、不产出垃圾代码。个人和小团队可以直接照做。",
+        "source": "Behind the Craft (Peter Yang)",
+        "title": "The 4-Step Agentic Engineering Workflow I Use to Ship Real Apps | Ras Mic"
       },
       {
         "id": "c9",
-        "reason": "谁：OpenAI 产品负责人 Kath Korevec；怎么用：用 ChatGPT Sites 加 Slack、Notion 连接器给团队搭了一个事故指挥站，还有一句话让 Codex 自动接好连接器的用法；结果：内部用了一年多的真实工作流。"
+        "reason": "谁：OpenAI 产品负责人 Kath Korevec；怎么用：用 ChatGPT Sites 加 Slack、Notion 连接器给团队搭了一个事故指挥站，还有一句话让 Codex 自动接好连接器的用法；结果：内部用了一年多的真实工作流。",
+        "source": "How I AI (Claire Vo)",
+        "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)"
       },
       {
         "id": "c13",
-        "reason": "谁：Every 的平台负责人 Willie Williams 和 Dan Shipper；怎么用：从每人各跑一个 OpenClaw，改成全公司共用一个 agent；结果：上线了 Every Agent。小团队组织方式的一手复盘。"
+        "reason": "谁：Every 的平台负责人 Willie Williams 和 Dan Shipper；怎么用：从每人各跑一个 OpenClaw，改成全公司共用一个 agent；结果：上线了 Every Agent。小团队组织方式的一手复盘。",
+        "source": "The Every Podcast (AI & I)",
+        "title": "Why Every Traded Personal Agents for One Company Agent"
       },
       {
         "id": "c80",
-        "reason": "谁：Engine 创始人 Elia Wallen；怎么用：一家 1000 人、成立 11 年的公司，公开地用 AI 改造自己；结果：估值 21 亿美元、3.3 万客户、盈利。少见的传统公司 AI 转型案例，适合大厂读者。"
+        "reason": "谁：Engine 创始人 Elia Wallen；怎么用：一家 1000 人、成立 11 年的公司，公开地用 AI 改造自己；结果：估值 21 亿美元、3.3 万客户、盈利。少见的传统公司 AI 转型案例，适合大厂读者。",
+        "source": "Supercompanies (Greg Shove / Section)",
+        "title": "From Corporate Housing to a $2.1B Travel Company With Elia Wallen, Founder of Engine"
       },
       {
         "id": "c10",
-        "reason": "认知类：Google Labs 负责人 Josh Woodward 讲怎么像 labs 团队一样找想法、做实验、判断什么时候该放弃，还有他的“almost possible”框架。一线负责人有依据的判断，大厂员工和创业者都用得上。"
+        "reason": "认知类：Google Labs 负责人 Josh Woodward 讲怎么像 labs 团队一样找想法、做实验、判断什么时候该放弃，还有他的“almost possible”框架。一线负责人有依据的判断，大厂员工和创业者都用得上。",
+        "source": "Lenny's Newsletter",
+        "title": "Why every company now needs to think and operate like a lab team | Josh Woodward (Google Labs, Gemini, AI Studio)"
       },
       {
         "id": "c14",
-        "reason": "认知类：研究者 Nathan Lambert 的判断：模型很快会成为超人级的工程和基础设施能手，但不会因此走向通用超级智能。有论证的一线研究者观点。"
+        "reason": "认知类：研究者 Nathan Lambert 的判断：模型很快会成为超人级的工程和基础设施能手，但不会因此走向通用超级智能。有论证的一线研究者观点。",
+        "source": "Interconnects",
+        "title": "I expect rapid progress but not towards general superintelligence"
       },
       {
         "id": "c70",
-        "reason": "认知类：Cisco 总裁 Jeetu Patel 讲怎么让 3.2 万工程师跑出创业公司的速度，为什么 AI 应该用来打开新想法而不只是降成本，以及为什么他预期需要更多而不是更少的工程师。附带 93 亿美元订单的数字，对大厂读者很有参考。"
+        "reason": "认知类：Cisco 总裁 Jeetu Patel 讲怎么让 3.2 万工程师跑出创业公司的速度，为什么 AI 应该用来打开新想法而不只是降成本，以及为什么他预期需要更多而不是更少的工程师。附带 93 亿美元订单的数字，对大厂读者很有参考。",
+        "source": "Y Combinator / Lightcone (YouTube)",
+        "title": "How Jeetu Patel Runs Cisco Like the World’s Largest Startup"
       },
       {
         "id": "c72",
-        "reason": "谁：Riley Brown；怎么用：连续 7 天把 ChatGPT Dots 当个人 agent，散步时用语音让它开 Codex 会话写功能，还设了每日简报自动化；结果：9 条具体用法。是本人实测，不是空泛的技巧清单。"
+        "reason": "谁：Riley Brown；怎么用：连续 7 天把 ChatGPT Dots 当个人 agent，散步时用语音让它开 Codex 会话写功能，还设了每日简报自动化；结果：9 条具体用法。是本人实测，不是空泛的技巧清单。",
+        "source": "Riley Brown",
+        "title": "ChatGPT Dots Is WAY More Powerful Than You Think"
       }
     ],
     "droppedForLength": [],
@@ -258,6 +282,40 @@
       "speed": "standard",
       "fallback_credit": null
     },
-    "costUsd": 0.354248
+    "costUsd": 0.354248,
+    "candidatesBySource": {
+      "Simon Willison": 8,
+      "How I AI (Claire Vo)": 1,
+      "Lenny's Newsletter": 3,
+      "The Every Podcast (AI & I)": 1,
+      "Interconnects": 2,
+      "Ali Abdaal": 2,
+      "Matt Wolfe": 1,
+      "Theoretically Media": 2,
+      "陈然 ranchen.org": 2,
+      "Creator Science (Jay Clouse)": 1,
+      "Starter Story Podcast": 2,
+      "Starter Story (YouTube)": 3,
+      "Niche Pursuits": 1,
+      "Liam Ottley / Morningside AI": 2,
+      "Every (YouTube)": 3,
+      "Rest of World": 3,
+      "Follow Builders (X)": 21,
+      "Lenny's Podcast": 1,
+      "Behind the Craft (Peter Yang)": 1,
+      "Unsupervised Learning (Redpoint)": 1,
+      "Training Data (Sequoia)": 1,
+      "Minus One (South Park Commons)": 1,
+      "No Priors": 1,
+      "Latent Space": 2,
+      "The AI Daily Brief": 3,
+      "Y Combinator / Lightcone (YouTube)": 1,
+      "Riley Brown": 3,
+      "Startup Ideas Podcast (Greg Isenberg)": 2,
+      "App Masters (Steve P. Young)": 2,
+      "The Superwall Podcast": 1,
+      "Consulting Success Podcast": 1,
+      "Supercompanies (Greg Shove / Section)": 1
+    }
   }
 }

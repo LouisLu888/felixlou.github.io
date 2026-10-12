@@ -100,9 +100,14 @@ jobs:
             echo "::warning::Neither ANTHROPIC_API_KEY nor CLAUDE_CODE_OAUTH_TOKEN is set; candidates fetched, no issue generated"
           fi
 
-      - name: Build indexes and publish to docs/
+      # Share cards render Chinese titles; the runner has Chrome but no CJK font.
+      - name: Install CJK font for share cards
         if: ${{ !inputs.check_only }}
-        run: cd ai-practice/scripts && node build-index.js
+        run: sudo apt-get install -y -qq fonts-noto-cjk > /dev/null
+
+      - name: Build indexes, pages and share cards; publish to docs/
+        if: ${{ !inputs.check_only }}
+        run: cd ai-practice/scripts && node build-index.js --og
 
       # No [skip ci] in the message: on a branch-deployed Pages site it would
       # also skip the Pages build, and the new issue would never go live.
@@ -122,6 +127,7 @@ jobs:
           name: rehearsal
           path: |
             public/ai-practice/data/issues/
+            public/ai-practice/og/
             ai-practice/state/email-preview.html
 
       - name: Commit
@@ -129,7 +135,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ai-practice/state/seen.json public/ai-practice/ docs/ai-practice/
+          git add ai-practice/state/seen.json ai-practice/state/source-stats.md public/ai-practice/ docs/ai-practice/ public/robots.txt docs/robots.txt
           if git diff --cached --quiet; then
             echo "Nothing new to publish"
             exit 0

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 002｜边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元</title>
+  <meta name="description" content="Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-10-11/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 002｜边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元">
+  <meta property="og:description" content="Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-10-11/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-11.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 002｜边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元">
+  <meta name="twitter:description" content="Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-11.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/perspective/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">1</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">2</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">1</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">2</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 002 · 2026 年 10 月 11 日 · 周日 · 约 8 分钟读完</div>
+        <h1>边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-11-01">Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。</a></li><li><span class="tag" data-cat="saas">Micro SaaS</span><a href="#2026-10-11-02">19 岁的 Vadim 今年 3 月辞去市场营销工作，产品 Vugola 完全靠 AI 开发，5 个月后月收入约 1 万美元、用户超过 2 万（Starter Story 介绍，本人口径）。</a></li><li><span class="tag" data-cat="consulting">AI 咨询</span><a href="#2026-10-11-03">差旅公司 Engine 创始人自述：工程小组从 7 人缩到 3 人、交付快 5–10 倍，超过一半客服工单无需人工；公司仍有 420 个空缺职位。</a></li><li><span class="tag" data-cat="content">内容创作</span><a href="#2026-10-11-04">Magnific 联创 Javi Lopez 独自用 AI 做出 17 分 41 秒的 Backrooms 短片第一集；节目由 Magnific 赞助，时间和成本的具体数字材料里没有给出。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-10-11-05">AI 研究者 Nathan Lambert（2026-10-09）认为，几年内模型会成为超人级的 GPU 工程师，智能成本近乎指数下降，但这不等于通向通用超级智能。</a></li></ul>
+      </section>
+      <section class="item" id="2026-10-11-01">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-09<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-11-01/">01｜晚饭做好了，博客新功能也有了初稿</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison 想给自己的 Django 博客加一个 newsletter 归档页。他熟悉这个代码库，功能范围也明确。</dd><dt>怎么用</dt><dd>他在 ChatGPT 桌面版的 Codex 里先打字让它启动本地开发服务器、打开预览，再开语音对话。笔记本放在厨房，他边做饭边口述需求，隔着厨房看预览，口头纠正。</dd><dt>结果</dt><dd>约半小时，语音阶段完成了数据模型、四个导入脚本、归档页面和站内搜索集成。接着用 PR 审查，把一个导入脚本从 Git 子进程改成 API 调用，又打字约半小时后上线。</dd><dt>你可以试</dt><dd>挑一个你熟悉、边界清楚的小功能或内部工具，先开好预览，再口述需求。记时间时把审查和修改也算进去。</dd><dt>注意</dt><dd>他本人说这不会成为日常主力方式：到了细节，粘贴报错和示例比口述更有效率。这种做法也不适合开放式办公室。</dd></dl>
+        <div class="body"><p>Simon Willison 在<a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/">本人博客</a>记录了这次开发：用 ChatGPT 桌面版 Codex 的语音模式，对着本地开发环境做出 Newsletters 页面。他公开的口述稿充满「嗯」和自我纠正，比如先说不想让 newsletter 出现在日期归档页，又改口说要出现。模型照样理解了需求。语音阶段约半小时，做出数据模型和迁移、四种导入（包括从 Substack 未公开的 API 翻页抓取）、公开归档页和搜索集成。</p><p>他的工作顺序可以借鉴：<strong>先打字启动预览 → 语音讲清目标和例外情况 → 让 Codex 开分支、提 PR → 坐回键盘审查。</strong>审查时他发现一个导入脚本用 Git 子进程拉私有仓库，就改成了 API 方式，并补上调整。这部分又用了约半小时。</p><p>他说的主要好处是能同时做两件事，原来做饭时听播客的时间，现在可以用来开发。前提是本人懂代码、能判断 PR 质量，任务也足够小。他也写明，细节阶段还是打字更快。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/" target="_blank" rel="noopener" title="A new feature for my blog, built using my voice">Simon Willison</a></div>
+      </section>
+      <section class="item" id="2026-10-11-02">
+        <div class="item-meta"><span class="tag" data-cat="saas">Micro SaaS</span><span>·</span>经营复盘<span>·</span>2026-10-11<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-11-02/">02｜辞职五个月，第一个 SaaS 做到月入一万美元</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Vadim 此前没上线过任何 app，原来做市场营销，今年 3 月辞职专职做产品。</dd><dt>怎么用</dt><dd>按节目介绍，产品 100% 用 AI 开发，获客主要靠在 Instagram 上持续发内容。</dd><dt>结果</dt><dd>节目说 5 个月做到月入 1 万美元、用户超过 2 万，视频标题写的是 1.1 万美元/月。这是本人口径的收入，不是利润；材料未披露定价、模型成本和留存。</dd><dt>你可以试</dt><dd>有内容或营销背景的人，可以先在一个平台连续发内容，测试有没有人对一个窄需求感兴趣，再用 AI 做最小可用版本。</dd><dt>注意</dt><dd>现有简介没有说明 Vugola 解决什么问题、怎么收费；成本、退款和流失数据也未披露。这是一个成功个案，样本有幸存者偏差。</dd></dl>
+        <div class="body"><p><a href="https://www.youtube.com/watch?v=QXxESN94Y6s">Starter Story 视频</a>讲的是 19 岁的 Vadim：今年 3 月辞掉市场营销工作开始做 app，此前从未上线过产品。他的产品 Vugola 在 5 个月后做到每月约 1 万美元收入、用户超过 2 万。按节目概括，他的方法只有两件事：<strong>全部用 AI 开发，以及「不怕难为情地」在 Instagram 发内容。</strong></p><p>材料里真正有用的是他的背景：他原本就做营销，分发能力是现成的，AI 补上了他不会写代码的短板。章节标题里「Know your customers」和「Time vs money with content」这两部分（2:10、9:02）值得优先看。</p><p>对副业读者来说，可以把顺序倒过来想：先确认自己能持续触达哪群人，再用 AI 低成本做产品。<strong>月收入是节目和本人口径，不能当作利润</strong>；视频简介里的「任何人都能做到」也是节目自己的说法，没有给出比例证据。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/watch?v=QXxESN94Y6s" target="_blank" rel="noopener" title="My First SaaS Project Just Hit $11K/Month">Starter Story (YouTube)</a></div>
+      </section>
+      <section class="item" id="2026-10-11-03">
+        <div class="item-meta"><span class="tag" data-cat="consulting">AI 咨询</span><span>·</span>机会观察<span>·</span>2026-10-07<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-11-03/">03｜千人老公司改造自己：工程小组从 7 人缩到 3 人</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Engine 是一家成立 11 年、约 1000 人的企业差旅公司，创始人 Elia Wallen 在 Supercompanies 播客谈 AI 改造。</dd><dt>怎么用</dt><dd>他们在市场、销售、财务部门内嵌「应用 AI 团队」，招聘时测试所有候选人（包括销售）的 AI 熟练度，并在公司层面统一管控推理开支。</dd><dt>结果</dt><dd>本人自述：工程小组 7 人变 3 人，交付速度提高 5–10 倍；过半客服工单无人工介入。公司估值 21 亿美元、3.3 万客户、已盈利。这些数字未经独立核实。</dd><dt>你可以试</dt><dd>做咨询的人可以用这套结构诊断客户：哪个部门先放 AI 团队、哪类工单能自动解决、推理费用由谁管。</dd><dt>注意</dt><dd>这是创始人访谈，属于本人证词。Engine 有工程团队和预算，小公司照搬不现实；AI 对盈利的贡献也没有拆开说。</dd></dl>
+        <div class="body"><p>在 <a href="https://supercompanies.captivate.fm/episode/from-corporate-housing-to-a-2-1b-travel-company-with-elia-wallen-founder-of-engine">Supercompanies 这期节目</a>中，Engine 创始人 Elia Wallen 讲了一家有历史包袱的老公司怎样当众改造自己：工程小组从 7 人缩到 3 人，交付速度提高 5–10 倍；超过一半的客服工单不需要人工处理；市场、销售、财务各自嵌入应用 AI 团队。他还说，公司把 AI 带来的利润空间拿去收购一家 30 年的差旅管理公司，没有直接留作利润。</p><p>对咨询从业者，这期提供了一张诊断清单：<strong>哪些部门要嵌入 AI 人员，客服里多大比例能自动解决，招聘怎样考 AI 能力，推理费用在哪一层管控。</strong>一家 1000 人的公司仍有 420 个空缺职位，也说明 AI 改造不一定意味着减员。</p><p>以上数字都出自创始人本人，材料没有给出客服自动解决的质量指标，也没有给出成本细节。拿去和客户谈时，应当说明这是单家公司的自述，不是行业基准。</p></div>
+        <div class="sources">原文：<a href="https://supercompanies.captivate.fm/episode/from-corporate-housing-to-a-2-1b-travel-company-with-elia-wallen-founder-of-engine" target="_blank" rel="noopener" title="From Corporate Housing to a $2.1B Travel Company With Elia Wallen, Founder of Engine">Supercompanies (Greg Shove / Section)</a></div>
+      </section>
+      <section class="item" id="2026-10-11-04">
+        <div class="item-meta"><span class="tag" data-cat="content">内容创作</span><span>·</span>本周演示<span>·</span>2026-10-09<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-11-04/">04｜一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Javi Lopez 是 AI 图像工具 Magnific 的联合创始人，接受 AI 影像频道 Theoretically Media 采访。</dd><dt>怎么用</dt><dd>他借用 Backrooms 这个网络公共神话做题材。先把邮轮故事拆成多段发布，用积累设定代替一次讲完；制作上的一条经验是「别做手持镜头效果」。</dd><dt>结果</dt><dd>做成 Backrooms Nemoris 第一集，长 17:41，计划拍成系列。耗时和成本在视频 11:04 讨论，简介没有给出数字。</dd><dt>你可以试</dt><dd>做 AI 影像内容，可以先拆成短片段连续发布，看哪段设定有人追问，再决定是否做长片。</dd><dt>注意</dt><dd>嘉宾就是赞助商的联创，节目本身是赞助内容。使用别人的 IP 有法律风险，嘉宾在节目里也提到了这一点。</dd></dl>
+        <div class="body"><p><a href="https://www.youtube.com/watch?v=OxxRcagqbHU">Theoretically Media 这期视频</a>采访了 Javi Lopez。他一个人用 AI 做出 17 分 41 秒的短片《Backrooms Nemoris》第一集。主持人自己做过最长约 8 分钟的 AI 短片，想弄清 17 分钟的长片是怎么撑下来的。需要说明的是，<strong>这期由 Magnific 赞助，而 Javi 就是 Magnific 的联合创始人。</strong></p><p>可借鉴的经验有三条。一是选题借用 Backrooms 这类人人可以参与的网络神话，容易获得关注；但他也提醒，玩别人的 IP，律师随时能把它收走。二是早期的邮轮故事拆成多段发布，用设定的积累吸引观众回来。三是拍摄上别模仿手持镜头。主持人最后的结论是：一个人做 17 分钟很难，<strong>和别人组队分工更现实</strong>。</p><p>这条属于「用 AI 创作」。材料没有披露播放量、收入和制作成本，想参考成本可以直接看视频 11:04 起的部分。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/watch?v=OxxRcagqbHU" target="_blank" rel="noopener" title="What No One Tells You About Making a 17-Minute AI Backrooms Film">Theoretically Media</a></div>
+      </section>
+      <section class="item" id="2026-10-11-05">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-09<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-11-05/">05｜工程会被 AI 大幅加速，研究判断力不会因此自动变强</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Nathan Lambert 是 AI 研究者，在 Interconnects 撰文回应业内「几年后 AI 会比我更会做研究」的说法。</dd><dt>核心观点</dt><dd>他认为模型会在工程、基础设施这类可验证的工作上快速变成超人水平，让实验更容易，但不会让模型的本质发生剧变。好想法会比好执行更值钱。</dd><dt>依据</dt><dd>依据：训练速度、单次回答成本这类指标可以直接优化；过去发布模型后，推理服务成本已能再省 10–30%。他预计 2–3 年内预训练的架构和数据选择研究会被自动化。</dd><dt>对你的意义</dt><dd>在可验证的任务上（代码、性能、成本）可以放心加大 AI 投入，把人的时间留给选题和判断。成本下降之后，懂得怎样把 agent 交付给具体人群也会产生价值。</dd><dt>争议·条件</dt><dd>这些都是他个人的预测，不是已经发生的事。他也写到，RL 训练数据行业普遍质量不高，但大实验室买了仍然看到回报，说明判断还依赖具体情境。</dd></dl>
+        <div class="body"><p>Nathan Lambert 在 <a href="https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards">Interconnects</a> 解释，自己为什么不认同一些顶尖研究者「几年后 AI 会比我强」的判断。<strong>他认为</strong>研究者看到的是工程能力的突飞猛进：训练速度、单次回答成本这些指标都可以验证，所以很适合交给 agent 优化。他预计智能的有效成本会近乎指数下降，2–3 年内预训练的架构和数据选择研究可能被自动化。但这只让实验更容易，不会让模型的本质发生剧变。</p><p>他的推论和读者相关：成本下降会通过 Jevons 悖论带来更多需求，<strong>行业的瓶颈会落在怎样把 agent 用到具体人群和场景上</strong>。他举了 Meta Muse 为例，认为它的价值来自理解 agent 怎样工作，而不是推进性能前沿。</p><p>这些是他 10 月 9 日的预测。对做产品和副业的人，可以把它当成一个分工假设：可验证的执行交给 AI，人把时间用在挑问题和做交付上。</p></div>
+        <div class="sources">原文：<a href="https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards" target="_blank" rel="noopener" title="I expect rapid progress but not towards general superintelligence">Interconnects</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>从这周的待办里挑一件边界清楚的小任务，比如一个内部报表或一个页面，学 Simon Willison 的做法：先把要什么、不要什么、有哪些例外口述或写成一段话交给 AI，再单独留出时间验收。做完记下三个数：AI 阶段用时、审查修改用时、你改了哪几处。两个时间加起来，才是这件事的真实耗时。如果你有内容平台，也可以把这次记录发出去，看看有没有同行追问。这是验证需求最便宜的办法。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-10/">← 2026 年 10 月 10 日 · 周六</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

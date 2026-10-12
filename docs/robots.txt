@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.jiabinlu.com/ai-practice/sitemap.xml

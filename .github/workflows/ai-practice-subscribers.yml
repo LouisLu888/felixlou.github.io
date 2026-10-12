@@ -1,0 +1,76 @@
+name: AI 实干派 subscribers
+
+# Emails subscribers through Buttondown (ai-practice/scripts/send-subscribers.js):
+# every day the day's issue to ai-practice-daily, and on Sundays (Pacific) the
+# week's digest to ai-practice-weekly. Runs two hours after the daily issue so
+# an editor's note written after reading the issue goes out with it.
+# BUTTONDOWN_API_KEY is an environment secret of github-pages, like the blog's
+# newsletter workflow.
+
+on:
+  schedule:
+    # 16:23 UTC = 9:23 PDT / 8:23 PST
+    - cron: '23 16 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'What to send'
+        type: choice
+        options: [auto, daily, weekly]
+        default: auto
+      date:
+        description: 'Issue date (daily) or week-ending date (weekly), YYYY-MM-DD; default today, Pacific'
+        type: string
+        required: false
+      dry_run:
+        description: 'Resolve tags and count subscribers, send nothing'
+        type: boolean
+        default: true
+
+concurrency:
+  group: ai-practice-subscribers
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: github-pages
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Send
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          MODE: ${{ inputs.mode || 'auto' }}
+          DATE_INPUT: ${{ inputs.date }}
+          # Scheduled runs send for real; manual runs default to a dry run.
+          DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '--dry-run' || '' }}
+        run: |
+          cd ai-practice/scripts
+          DATE="${DATE_INPUT:-$(TZ=America/Los_Angeles date +%F)}"
+          DOW=$(TZ=America/Los_Angeles date -d "$DATE" +%u)   # 7 = Sunday
+          if [ "$MODE" = "auto" ] || [ "$MODE" = "daily" ]; then
+            node send-subscribers.js --mode daily --date "$DATE" $DRY
+          fi
+          if [ "$MODE" = "weekly" ] || { [ "$MODE" = "auto" ] && [ "$DOW" = "7" ]; }; then
+            node send-subscribers.js --mode weekly --date "$DATE" $DRY
+          fi
+
+      - name: Record sends
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ai-practice/state/subscribers-sent.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "Nothing sent"; exit 0; fi
+          git commit -m "AI 实干派: record subscriber send $(TZ=America/Los_Angeles date +%F) [skip-newsletter]"
+          git pull --rebase origin master
+          git push origin HEAD:master

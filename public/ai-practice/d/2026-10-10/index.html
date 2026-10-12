@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 001｜一封邮件省 90 分钟，八周产品背后的十年积累</title>
+  <meta name="description" content="Simon Willison 做饭时用语音开发博客功能，主要工作约半小时，之后检查和修改又用了约半小时。 Ali Abdaal 自述写 newsletter 从两小时缩短到半小时；">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-10-10/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 001｜一封邮件省 90 分钟，八周产品背后的十年积累">
+  <meta property="og:description" content="Simon Willison 做饭时用语音开发博客功能，主要工作约半小时，之后检查和修改又用了约半小时。 Ali Abdaal 自述写 newsletter 从两小时缩短到半小时；">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-10-10/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-10.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 001｜一封邮件省 90 分钟，八周产品背后的十年积累">
+  <meta name="twitter:description" content="Simon Willison 做饭时用语音开发博客功能，主要工作约半小时，之后检查和修改又用了约半小时。 Ali Abdaal 自述写 newsletter 从两小时缩短到半小时；">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-10.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/perspective/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">1</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">2</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">1</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">2</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 001 · 2026 年 10 月 10 日 · 周六 · 约 6 分钟读完<span class="badge-sample">样刊</span></div>
+        <h1>一封邮件省 90 分钟，八周产品背后的十年积累</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-10-01">Simon Willison 做饭时用语音开发博客功能，主要工作约半小时，之后检查和修改又用了约半小时。</a></li><li><span class="tag" data-cat="content">内容创作</span><a href="#2026-10-10-02">Ali Abdaal 自述写 newsletter 从两小时缩短到半小时；分享 AI 工作方法的视频，也获得了 Anthropic 赞助。</a></li><li><span class="tag" data-cat="saas">Micro SaaS</span><a href="#2026-10-10-03">Magai 用八周做出第一版，创始人此前已经营个人品牌十年，积累超过十万邮件订阅者。</a></li><li><span class="tag" data-cat="app">AI App</span><a href="#2026-10-10-04">BoldVoice 更强的付费墙提高了试用开始率，随后增加的退款却抵消了收益。</a></li><li><span class="tag" data-cat="consulting">AI 咨询</span><a href="#2026-10-10-05">OpenAI 产品负责人演示用 Slack、Notion 和日历数据搭内部工具，可以推出一个待验证的咨询服务方向。</a></li></ul>
+      </section>
+      <section class="item" id="2026-10-10-01">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周动态<span>·</span>2026-10-09<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-10-01/">01｜晚饭做好了，博客新功能也有了初稿</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison，给自己熟悉的博客项目加一个范围明确的小功能。</dd><dt>怎么用</dt><dd>做饭时与 Codex 语音对话描述需求，之后用键盘补充要求、审查代码、调整导入脚本。</dd><dt>结果</dt><dd>语音完成主要工作约半小时，键盘审查和修改又约半小时，然后部署上线（本人记录）。</dd><dt>你可以试</dt><dd>挑一个内部报表或小工具维护任务，口述目标和背景，看预览纠正方向，最后集中验收。</dd><dt>注意</dt><dd>不是全程自动完成；评估省下的时间时，要把修改和检查一起算进去。</dd></dl>
+        <div class="body"><p>开发者 Simon Willison 做饭时与 Codex 语音对话，给博客增加 newsletter 归档功能。约半小时完成主要工作后，他又花了约半小时使用键盘补充要求、审查代码、调整导入脚本，才部署上线。他熟悉这个项目，处理的是一个范围明确的小功能。<a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/">本人记录</a></p><p>可借鉴的工作方式是：<strong>口述目标和背景，看预览纠正方向，最后集中验收。</strong> 对熟悉业务的人，口述还方便补充例外情况。内部报表、小工具维护可以借此试验；评估节省的时间时，把修改和检查一起算进去。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/" target="_blank" rel="noopener" title="A new feature for my blog, built using my voice">Simon Willison</a></div>
+      </section>
+      <section class="item" id="2026-10-10-02">
+        <div class="item-meta"><span class="tag" data-cat="content">内容创作</span><span>·</span>经营复盘<span>·</span>2025-10-16<span>·</span>UK</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-10-02/">02｜AI 帮他写 newsletter，AI 公司赞助他的工作流视频</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>创作者 Ali Abdaal，经营内容、教育和软件业务的成熟个人品牌。</dd><dt>怎么用</dt><dd>散步口述到 VoicePal → Claude 或 ChatGPT 整理和反馈 → 自己在 Notion 改写、补上个人经历。</dd><dt>结果</dt><dd>本人自述写一期 newsletter 从约两小时缩短到半小时；工作流视频明确注明 Anthropic 赞助。</dd><dt>你可以试</dt><dd>记录自己解决过的具体问题，让 AI 协助组织材料，再把过程和结果讲给同类人。</dd><dt>注意</dt><dd>材料未披露 AI 带来的涨粉幅度或该单赞助金额；省下的时间、涨粉和广告收入要分别观察。</dd></dl>
+        <div class="body"><p>Ali Abdaal 在<a href="https://www.linkedin.com/posts/ali-abdaal_ive-written-250-issues-of-my-newsletter-activity-7361713271030116352-2hwk">本人帖子</a>中说，写一期 newsletter 从约两小时缩短到半小时。他的顺序很具体：<strong>散步口述到 VoicePal → Claude 或 ChatGPT 整理和反馈 → 自己在 Notion 改写、补上个人经历。</strong></p><p>他的<a href="https://www.youtube.com/watch?v=FDEVzFsPrkU">完整 AI 工作流视频</a>还展示了另一层生意：视频明确注明 Anthropic 赞助，同时介绍自家产品 VoicePal。一次真实的使用经验，可以成为内容；围绕这类内容积累的受众，又能吸引相关品牌合作。</p><p>对想做自媒体的人，可以先记录自己解决过的具体问题，让 AI 协助组织材料，再把过程和结果讲给同类人。<strong>这是成熟创作者的实践；省下的时间、涨粉和广告收入要分别观察。</strong> 视频可从 <strong>18:11</strong> 的内容制作部分开始看。</p></div>
+        <div class="sources">原文：<a href="https://www.linkedin.com/posts/ali-abdaal_ive-written-250-issues-of-my-newsletter-activity-7361713271030116352-2hwk" target="_blank" rel="noopener" title="Ali Abdaal：写了 250 期 newsletter">LinkedIn</a><a href="https://www.youtube.com/watch?v=FDEVzFsPrkU" target="_blank" rel="noopener" title="Ali Abdaal 完整 AI 工作流">YouTube</a></div>
+      </section>
+      <section class="item" id="2026-10-10-03">
+        <div class="item-meta"><span class="tag" data-cat="saas">Micro SaaS</span><span>·</span>经营复盘<span>·</span>2025-10-11<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-10-03/">03｜八周做出产品，第一批用户从哪里来？</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Magai 创始人 Dustin Stout，经营个人品牌十年。</dd><dt>怎么用</dt><dd>用 Bubble 加少量代码八周做出第一版；靠已有的十万以上邮件订阅者和业内关系起步，配合持续推荐分成。</dd><dt>结果</dt><dd>受访时月营收接近十万美元（当时本人自述的营收，不能据此确认利润）。</dd><dt>你可以试</dt><dd>先看你能接触到谁，再找这些人反复遇到的问题；从已有的专业社群、客户和同事开始访谈。</dd><dt>注意</dt><dd>起步依赖十年个人品牌和既有受众，从零起步的人不能直接套用开发速度这个结论。</dd></dl>
+        <div class="body"><p>Magai 创始人 Dustin Stout 在 <a href="https://www.starterstory.com/mag">Starter Story 访谈</a>中说，他用 Bubble 加少量代码，八周做出第一版，受访时月营收接近十万美元。<strong>这是当时本人自述的营收，不能据此确认利润。</strong></p><p>比开发速度更能解释起步的，是他披露的三个条件：经营个人品牌十年、超过十万邮件订阅者，以及业内关系。他还采用持续推荐分成：客户续费，推荐者继续拿佣金。</p><p>这给副业选题提供了一个顺序：<strong>先看你能接触到谁，再找这些人反复遇到的问题。</strong> 产品验证后，再研究谁已经拥有目标受众，以及持续分成是否适合自己的毛利。访谈 <strong>04:24</strong> 起的获客部分，比单看收入标题更有用。</p></div>
+        <div class="sources">原文：<a href="https://www.starterstory.com/mag" target="_blank" rel="noopener" title="Dustin Stout / Magai 访谈">Starter Story</a></div>
+      </section>
+      <section class="item" id="2026-10-10-04">
+        <div class="item-meta"><span class="tag" data-cat="app">AI App</span><span>·</span>经营复盘<span>·</span>2026-09-16<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-10-04/">04｜试用人数上去了，退款却吃掉了增量收入</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>AI 口音与口语教练 BoldVoice 联创 Anada Lakra，产品面向有职业沟通需求的人。</dd><dt>怎么用</dt><dd>测试更强的付费墙和折扣；每位员工每周做两次用户访谈，工程师也参与。</dd><dt>结果</dt><dd>试用开始率提高，随后增加的退款抵消了收益（经营者访谈自述）。</dd><dt>你可以试</dt><dd>下一次改付费页面前，先约定观察周期和扣除退款后的收入指标，再判断实验成败。</dd><dt>注意</dt><dd>业绩按本人自述处理，材料未披露具体转化率和退款数字。</dd></dl>
+        <div class="body"><p>AI 口音与口语教练 BoldVoice 联创 Anada Lakra 在 <a href="https://subclub.com/episode/why-boldvoice-charged-from-day-1-and-ignored-the-duolingo-freemium-playbook-anada-lakra">Sub Club</a> 分享了一个增长实验：更强的付费墙和折扣提高了试用开始率，随后增加的退款却抵消了收益。因此，团队强调等同一批用户使用一段时间后，再看扣除退款的收入。</p><p>产品定位也有一个具体选择：面向有职业沟通需求的人。团队要求<strong>每位员工每周做两次用户访谈，工程师也参与</strong>，持续直接听用户怎么说。</p><p>做付费 App 可以学这两件事：找到用户愿意付钱解决的具体场景；把试用、付款、退款连起来看。</p></div>
+        <div class="sources">原文：<a href="https://subclub.com/episode/why-boldvoice-charged-from-day-1-and-ignored-the-duolingo-freemium-playbook-anada-lakra" target="_blank" rel="noopener" title="Why BoldVoice charged from day 1">Sub Club</a></div>
+      </section>
+      <section class="item" id="2026-10-10-05">
+        <div class="item-meta"><span class="tag" data-cat="consulting">AI 咨询</span><span>·</span>机会观察<span>·</span>2026-10-05<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-10-05/">05｜帮一个部门把散落的资料做成能用的工具</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>OpenAI 产品负责人 Kath Korevec，在 How I AI 节目中做使用演示。</dd><dt>怎么用</dt><dd>利用 Slack、Notion 和日历数据创建内部工具，例子包括团队事故协调网站。</dd><dt>结果</dt><dd>这是厂商员工的使用演示，材料没有证明客户已为相应咨询服务付费。</dd><dt>你可以试</dt><dd>拿自己熟悉的流程做小样，找实际使用者测试，记录是否重复使用、还要补哪些步骤。</dd><dt>注意</dt><dd>服务方向是编辑推出的待验证假设，不是已有的收费案例。</dd></dl>
+        <div class="body"><p><a href="https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live">How I AI 节目</a>中，OpenAI 产品负责人 Kath Korevec 演示利用 Slack、Notion 和日历数据创建内部工具，例子包括团队事故协调网站。这是厂商员工的使用演示，材料没有证明客户已为相应咨询服务付费。</p><p>由此可以提出一个待验证的服务方向：<strong>访谈部门流程 → 整理资料和访问权限 → 做一个团队能用的小工具 → 根据使用情况持续维护。</strong> 熟悉业务的人，可以帮助客户界定工具该做什么、数据由谁维护、哪些结果需要人工确认。</p><p>想尝试 AI consulting，可以先拿自己熟悉的流程做小样，找实际使用者测试，再讨论交付范围和收费。</p></div>
+        <div class="sources">原文：<a href="https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live" target="_blank" rel="noopener" title="How OpenAI uses ChatGPT Sites live">How I AI</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>从这周本来就要完成的任务中选一件，保留输入、AI 产物和人工修改记录。做完后，你至少能回答三个问题：省了多少总时间？结果由谁验收？谁还遇到同样的问题？这些材料可以成为下一篇内容，也可以成为产品或咨询服务的需求线索。</p></section>
+      <nav class="pager">
+        <span></span>
+        <span><a href="/ai-practice/d/2026-10-11/">2026 年 10 月 11 日 · 周日 →</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

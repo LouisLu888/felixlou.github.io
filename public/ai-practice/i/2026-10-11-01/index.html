@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>晚饭做好了，博客新功能也有了初稿｜AI 实干派</title>
+  <meta name="description" content="Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-11-01/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="晚饭做好了，博客新功能也有了初稿｜AI 实干派">
+  <meta property="og:description" content="Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-11-01/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-11.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="晚饭做好了，博客新功能也有了初稿｜AI 实干派">
+  <meta name="twitter:description" content="Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-11.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/perspective/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">1</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">2</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">1</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">2</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-11/">AI 实干派 002 · 2026 年 10 月 11 日 · 周日</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-09<span>·</span>US</div>
+        <h1>晚饭做好了，博客新功能也有了初稿</h1>
+        <p class="summary">Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison 想给自己的 Django 博客加一个 newsletter 归档页。他熟悉这个代码库，功能范围也明确。</dd><dt>怎么用</dt><dd>他在 ChatGPT 桌面版的 Codex 里先打字让它启动本地开发服务器、打开预览，再开语音对话。笔记本放在厨房，他边做饭边口述需求，隔着厨房看预览，口头纠正。</dd><dt>结果</dt><dd>约半小时，语音阶段完成了数据模型、四个导入脚本、归档页面和站内搜索集成。接着用 PR 审查，把一个导入脚本从 Git 子进程改成 API 调用，又打字约半小时后上线。</dd><dt>你可以试</dt><dd>挑一个你熟悉、边界清楚的小功能或内部工具，先开好预览，再口述需求。记时间时把审查和修改也算进去。</dd><dt>注意</dt><dd>他本人说这不会成为日常主力方式：到了细节，粘贴报错和示例比口述更有效率。这种做法也不适合开放式办公室。</dd></dl>
+        <div class="body"><p>Simon Willison 在<a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/">本人博客</a>记录了这次开发：用 ChatGPT 桌面版 Codex 的语音模式，对着本地开发环境做出 Newsletters 页面。他公开的口述稿充满「嗯」和自我纠正，比如先说不想让 newsletter 出现在日期归档页，又改口说要出现。模型照样理解了需求。语音阶段约半小时，做出数据模型和迁移、四种导入（包括从 Substack 未公开的 API 翻页抓取）、公开归档页和搜索集成。</p><p>他的工作顺序可以借鉴：<strong>先打字启动预览 → 语音讲清目标和例外情况 → 让 Codex 开分支、提 PR → 坐回键盘审查。</strong>审查时他发现一个导入脚本用 Git 子进程拉私有仓库，就改成了 API 方式，并补上调整。这部分又用了约半小时。</p><p>他说的主要好处是能同时做两件事，原来做饭时听播客的时间，现在可以用来开发。前提是本人懂代码、能判断 PR 质量，任务也足够小。他也写明，细节阶段还是打字更快。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/" target="_blank" rel="noopener" title="A new feature for my blog, built using my voice">Simon Willison</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-11/">← 当期全部 5 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

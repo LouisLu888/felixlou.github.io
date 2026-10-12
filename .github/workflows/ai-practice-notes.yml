@@ -1,0 +1,43 @@
+name: AI 实干派 notes
+
+# Publishes an editor's note: committing ai-practice/notes/<date>.md merges it
+# into that issue's page, static pages and RSS (build-index.js), within a
+# couple of minutes. Deleting the file removes the note again.
+
+on:
+  push:
+    branches: [master]
+    paths: ['ai-practice/notes/*.md']
+  workflow_dispatch:
+
+concurrency:
+  group: ai-practice-notes
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Rebuild pages with the note
+        run: cd ai-practice/scripts && node build-index.js
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/ai-practice/ docs/ai-practice/
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "AI 实干派: publish editor's note [skip-newsletter]"
+          git pull --rebase origin master
+          git push origin HEAD:master
