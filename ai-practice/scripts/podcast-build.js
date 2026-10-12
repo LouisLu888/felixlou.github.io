@@ -5,15 +5,19 @@
 // ============================================================================
 // Reads public/ai-practice/data/issues/<date>.json, asks an OpenAI model to
 // rewrite it as a spoken Chinese script (same items, same order, same facts),
-// synthesizes it with OpenAI TTS and encodes one MP3 (48kbps mono, about 3.5MB per 10 minutes).
+// synthesizes it with Inworld TTS-2 via Replicate (OpenAI TTS as whole-episode
+// fallback) and encodes one MP3 (48kbps mono, about 3.5MB per 10 minutes).
 //
 // Usage: node podcast-build.js --out <dir> [--date YYYY-MM-DD] [--script-only]
 //
 // Env:
-//   OPENAI_API_KEY        required
+//   OPENAI_API_KEY        required (script, and fallback TTS)
+//   REPLICATE_API_TOKEN   required for the default Inworld engine
 //   PODCAST_SCRIPT_MODEL  default gpt-5.5
-//   PODCAST_TTS_MODEL     default gpt-4o-mini-tts-2025-12-15
-//   PODCAST_VOICE         default marin
+//   PODCAST_TTS_ENGINE    inworld (default) or openai
+//   PODCAST_INWORLD_VOICE default Xiaoyin
+//   PODCAST_TTS_MODEL     OpenAI TTS model, default gpt-4o-mini-tts-2025-12-15
+//   PODCAST_VOICE         OpenAI voice, default marin
 //
 // Writes to <dir>: episode.mp3, episode.json (metadata), script.txt.
 // If the issue does not exist, writes episode.json with { "skip": true } only.
@@ -34,6 +38,15 @@ const ISSUE_PAGE = "https://www.jiabinlu.com/ai-practice/#/d/";
 const SCRIPT_MODEL = process.env.PODCAST_SCRIPT_MODEL || "gpt-5.5";
 const TTS_MODEL = process.env.PODCAST_TTS_MODEL || "gpt-4o-mini-tts-2025-12-15";
 const VOICE = process.env.PODCAST_VOICE || "marin";
+// Inworld TTS-2 won a blind listening test against MiniMax, Gemini, Qwen,
+// ElevenLabs and OpenAI on 2026-10-11, and leads Artificial Analysis'
+// Mandarin arena. $25 per million characters on Replicate.
+const ENGINE = process.env.PODCAST_TTS_ENGINE || "inworld";
+const INWORLD_MODEL = "inworld/realtime-tts-2";
+const INWORLD_VOICE = process.env.PODCAST_INWORLD_VOICE || "Xiaoyin";
+// Bracketed steering is read as an instruction, not spoken.
+const INWORLD_STEER = "[say in a relaxed, conversational podcast-host tone]";
+const INWORLD_RATE = 0.95;
 
 const CHARS_PER_MINUTE = 250;          // relaxed conversational Mandarin
 const MAX_SCRIPT_CHARS = 6000;         // about 24 minutes
@@ -48,7 +61,7 @@ const SEGMENT_GAP_SECONDS = 1.2;
 // gpt-4o-mini-tts ignores the API speed parameter and reads Mandarin at about
 // 280 chars/min, which sounds hurried. Slow the finished audio slightly
 // (pitch preserved); ellewiz landed on 0.93 for the same reason.
-const TEMPO = 0.94;
+const TEMPO = { openai: 0.94, inworld: 1 };   // Inworld slows down natively via INWORLD_RATE
 
 // Structured the way OpenAI's own TTS examples are (voice, tone, pacing, pauses,
 // pronunciation). No "speed up" wording: the old version sounded rushed.
@@ -195,16 +208,67 @@ function piecesOf(paragraphs) {
   return pieces;
 }
 
-async function synthesize(text) {
-  // gpt-4o-mini-tts occasionally pads output with long silence; retry once if the
+async function replicate(model, input) {
+  const headers = { Authorization: `Bearer ${process.env.REPLICATE_API_TOKEN}`, "Content-Type": "application/json", Prefer: "wait=60" };
+  const call = async (url, init) => {
+    // Low-balance Replicate accounts are rate limited to a few requests a minute.
+    for (let attempt = 1; ; attempt++) {
+      const res = await fetch(url, init);
+      if (res.ok) return res;
+      const text = await res.text();
+      if (attempt >= 8 || (res.status !== 429 && res.status < 500)) {
+        throw new Error(`Replicate HTTP ${res.status}: ${text.slice(0, 300)}`);
+      }
+      await new Promise((r) => setTimeout(r, 1000 * Number(res.headers.get("retry-after") || 10)));
+    }
+  };
+  let pred = await (await call(`https://api.replicate.com/v1/models/${model}/predictions`, {
+    method: "POST", headers, body: JSON.stringify({ input }),
+  })).json();
+  while (!["succeeded", "failed", "canceled"].includes(pred.status)) {
+    await new Promise((r) => setTimeout(r, 2000));
+    pred = await (await call(pred.urls.get, { headers })).json();
+  }
+  if (pred.status !== "succeeded") throw new Error(`Replicate ${model} ${pred.status}: ${String(pred.error).slice(0, 300)}`);
+  const url = typeof pred.output === "string" ? pred.output : pred.output[0];
+  return Buffer.from(await (await call(url, {})).arrayBuffer());
+}
+
+// Any audio container -> raw 24kHz 16-bit mono PCM, so pieces can be joined
+// with our own silences.
+function toPcm(audio) {
+  return execFileSync("ffmpeg", ["-loglevel", "error", "-i", "pipe:0", "-f", "s16le", "-ar", String(SAMPLE_RATE), "-ac", "1", "pipe:1"],
+    { input: audio, maxBuffer: 1 << 30 });
+}
+
+const ENGINES = {
+  openai: {
+    label: () => `${TTS_MODEL} / ${VOICE}`,
+    async speak(text) {
+      const res = await openai("audio/speech", {
+        model: TTS_MODEL, voice: VOICE, input: text, instructions: TTS_INSTRUCTIONS, response_format: "pcm",
+      });
+      return Buffer.from(await res.arrayBuffer());
+    },
+  },
+  inworld: {
+    label: () => `${INWORLD_MODEL} / ${INWORLD_VOICE}`,
+    async speak(text) {
+      return toPcm(await replicate(INWORLD_MODEL, {
+        text: `${INWORLD_STEER} ${text}`, voice_id: INWORLD_VOICE, language: "zh",
+        speaking_rate: INWORLD_RATE, audio_format: "wav", sample_rate: SAMPLE_RATE,
+      }));
+    },
+  },
+};
+
+async function synthesize(engine, text) {
+  // TTS models occasionally pad output with long silence; retry once if the
   // audio is far longer than the text could plausibly take to read.
   const expectedSeconds = text.length / (CHARS_PER_MINUTE / 60);
   let pcm;
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const res = await openai("audio/speech", {
-      model: TTS_MODEL, voice: VOICE, input: text, instructions: TTS_INSTRUCTIONS, response_format: "pcm",
-    });
-    pcm = Buffer.from(await res.arrayBuffer());
+    pcm = await ENGINES[engine].speak(text);
     const seconds = pcm.length / (SAMPLE_RATE * 2);
     if (seconds <= expectedSeconds * 2.5 + 5) break;
     console.error(`  chunk audio ${seconds.toFixed(0)}s vs ~${expectedSeconds.toFixed(0)}s expected, retrying`);
@@ -248,26 +312,41 @@ async function main() {
 
   const speak = await loadPronunciation();
   const silence = (seconds) => Buffer.alloc(Math.round(SAMPLE_RATE * seconds) * 2);
-  const parts = [];
-  let n = 0;
   const total = segments.reduce((sum, paras) => sum + piecesOf(paras).length, 0);
-  for (const paras of segments) {
-    const pieces = piecesOf(paras);
-    for (const [i, piece] of pieces.entries()) {
-      console.error(`TTS ${++n}/${total} (${piece.length} chars)`);
-      parts.push(await synthesize(speak(piece)));
-      parts.push(silence(i < pieces.length - 1 ? PARAGRAPH_GAP_SECONDS : SEGMENT_GAP_SECONDS));
+  const render = async (engine) => {
+    const parts = [];
+    let n = 0;
+    for (const paras of segments) {
+      const pieces = piecesOf(paras);
+      for (const [i, piece] of pieces.entries()) {
+        console.error(`TTS ${engine} ${++n}/${total} (${piece.length} chars)`);
+        parts.push(await synthesize(engine, speak(piece)));
+        parts.push(silence(i < pieces.length - 1 ? PARAGRAPH_GAP_SECONDS : SEGMENT_GAP_SECONDS));
+      }
     }
+    return Buffer.concat(parts);
+  };
+  // Fall back for the whole episode, never mid-episode: two voices in one
+  // show would be worse than the weaker voice throughout.
+  let engine = ENGINE;
+  let pcm;
+  try {
+    pcm = await render(engine);
+  } catch (err) {
+    if (engine === "openai") throw err;
+    console.error(`::warning::${engine} TTS failed (${err.message}); falling back to openai for this episode`);
+    engine = "openai";
+    pcm = await render(engine);
   }
   const pcmPath = join(args.out, "episode.pcm");
-  await writeFile(pcmPath, Buffer.concat(parts));
+  await writeFile(pcmPath, pcm);
 
   // Collapse any leftover long silences, then encode speech-friendly mono MP3.
   const mp3Path = join(args.out, "episode.mp3");
   execFileSync("ffmpeg", [
     "-y", "-loglevel", "error",
     "-f", "s16le", "-ar", String(SAMPLE_RATE), "-ac", "1", "-i", pcmPath,
-    "-af", `silenceremove=stop_periods=-1:stop_duration=1.5:stop_threshold=-50dB:stop_silence=0.6,atempo=${TEMPO}`,
+    "-af", `silenceremove=stop_periods=-1:stop_duration=1.5:stop_threshold=-50dB:stop_silence=0.6,atempo=${TEMPO[engine]}`,
     "-c:a", "libmp3lame", "-b:a", "48k", mp3Path,
   ]);
   const duration = Math.round(Number(execFileSync("ffprobe", [
@@ -284,8 +363,7 @@ async function main() {
     items: issue.items.map((it) => ({ headline: it.headline, sources: it.sources || [] })),
     duration,
     scriptModel: SCRIPT_MODEL,
-    ttsModel: TTS_MODEL,
-    voice: VOICE,
+    tts: ENGINES[engine].label(),
   };
   await writeFile(join(args.out, "episode.json"), JSON.stringify(meta, null, 2));
   console.error(`Done: ${mp3Path} (${Math.floor(duration / 60)}m${duration % 60}s)`);

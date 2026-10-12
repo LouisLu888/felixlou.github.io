@@ -65,6 +65,7 @@ jobs:
         if: ${{ !steps.day.outputs.skip }}
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
         run: node ai-practice/scripts/podcast-build.js --out out --date "${{ steps.day.outputs.date }}"
 
       - name: Update feed and commit
