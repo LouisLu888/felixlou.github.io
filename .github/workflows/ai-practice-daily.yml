@@ -10,6 +10,11 @@ on:
     # 14:23 UTC = 7:23 PDT / 6:23 PST. Off the top of the hour, where GitHub
     # Actions queues are busiest.
     - cron: '23 14 * * *'
+    # Backups: GitHub sometimes drops a scheduled run outright (2026-10-12
+    # never fired). A run that finds today's issue already published exits
+    # at the guard step, so these cost a few seconds when nothing is missing.
+    - cron: '47 15 * * *'
+    - cron: '13 18 * * *'
   workflow_dispatch:
     inputs:
       force:
@@ -38,6 +43,18 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+
+      # Stops backup and repeated runs before fetch-sources.js marks new
+      # candidates as seen, which would use up tomorrow's material.
+      - name: Skip if today's issue is already published
+        id: guard
+        if: ${{ !inputs.check_only && !inputs.rehearsal && !inputs.force }}
+        run: |
+          DATE=$(TZ=America/Los_Angeles date +%F)
+          if [ -f "public/ai-practice/data/issues/$DATE.json" ]; then
+            echo "Issue $DATE already published; nothing to do"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-node@v4
         with:
@@ -68,7 +85,7 @@ jobs:
           node -e "const r=require('./smoke.json'); console.log('is_error', r.is_error, 'structured_output', JSON.stringify(r.structured_output)); process.exit(r.structured_output?.ok === true ? 0 : 1)"
 
       - name: Fetch sources
-        if: ${{ !inputs.check_only }}
+        if: ${{ !inputs.check_only && steps.guard.outputs.skip != 'true' }}
         env:
           REHEARSAL: ${{ inputs.rehearsal }}
         run: |
@@ -82,7 +99,7 @@ jobs:
       # 2. CLAUDE_CODE_OAUTH_TOKEN: your Claude subscription via the Claude Code
       #    CLI (create it locally with `claude setup-token`)
       - name: Curate with Claude
-        if: ${{ !inputs.check_only }}
+        if: ${{ !inputs.check_only && steps.guard.outputs.skip != 'true' }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -102,11 +119,11 @@ jobs:
 
       # Share cards render Chinese titles; the runner has Chrome but no CJK font.
       - name: Install CJK font for share cards
-        if: ${{ !inputs.check_only }}
+        if: ${{ !inputs.check_only && steps.guard.outputs.skip != 'true' }}
         run: sudo apt-get install -y -qq fonts-noto-cjk > /dev/null
 
       - name: Build indexes, pages and share cards; publish to docs/
-        if: ${{ !inputs.check_only }}
+        if: ${{ !inputs.check_only && steps.guard.outputs.skip != 'true' }}
         run: cd ai-practice/scripts && node build-index.js --og
 
       # No [skip ci] in the message: on a branch-deployed Pages site it would
@@ -133,7 +150,7 @@ jobs:
             ai-practice/state/email-preview.html
 
       - name: Commit
-        if: ${{ !inputs.check_only && !inputs.rehearsal }}
+        if: ${{ !inputs.check_only && !inputs.rehearsal && steps.guard.outputs.skip != 'true' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -150,7 +167,7 @@ jobs:
       # Emails the day's issue once it is live. state/sent.json makes reruns
       # idempotent; the second commit only records that the email went out.
       - name: Email the issue
-        if: ${{ !inputs.check_only && !inputs.rehearsal }}
+        if: ${{ !inputs.check_only && !inputs.rehearsal && steps.guard.outputs.skip != 'true' }}
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NEWSLETTER_TO: ${{ secrets.NEWSLETTER_TO }}

@@ -11,6 +11,9 @@ on:
   schedule:
     # 16:23 UTC = 9:23 PDT / 8:23 PST
     - cron: '23 16 * * *'
+    # Backup in case GitHub drops the run above, or the daily issue ran late.
+    # state/subscribers-sent.json keeps it from sending twice.
+    - cron: '43 18 * * *'
   workflow_dispatch:
     inputs:
       mode:
