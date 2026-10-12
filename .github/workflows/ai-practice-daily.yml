@@ -116,6 +116,8 @@ jobs:
       - name: Rehearsal output
         if: ${{ inputs.rehearsal }}
         run: |
+          # Re-render every share card here so Linux font rendering gets checked.
+          (cd ai-practice/scripts && node og-images.js --force)
           cd ai-practice/scripts && node send-email.js --dry-run --force
           cd ../..
           DATE=$(TZ=America/Los_Angeles date +%F)
