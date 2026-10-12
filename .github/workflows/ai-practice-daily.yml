@@ -106,7 +106,30 @@ jobs:
             echo "Nothing new to publish"
             exit 0
           fi
-          git commit -m "AI 实干派: daily issue $(TZ=America/Los_Angeles date +%F)"
+          git commit -m "AI 实干派: daily issue $(TZ=America/Los_Angeles date +%F) [skip-newsletter]"
           # The blog is also edited by hand; rebase onto anything pushed meanwhile.
           git pull --rebase origin master
           git push origin HEAD:master
+
+      # Emails the day's issue once it is live. state/sent.json makes reruns
+      # idempotent; the second commit only records that the email went out.
+      - name: Email the issue
+        if: ${{ !inputs.check_only }}
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NEWSLETTER_TO: ${{ secrets.NEWSLETTER_TO }}
+        run: |
+          if [ -z "$RESEND_API_KEY" ] || [ -z "$NEWSLETTER_TO" ]; then
+            echo "::warning::RESEND_API_KEY or NEWSLETTER_TO not set; skipping email"
+            exit 0
+          fi
+          # Give Pages time to deploy so the email's web link resolves.
+          sleep 90
+          cd ai-practice/scripts && node send-email.js
+          cd ../..
+          git add ai-practice/state/sent.json
+          if ! git diff --cached --quiet; then
+            git commit -m "AI 实干派: record email sent $(TZ=America/Los_Angeles date +%F) [skip-newsletter]"
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi

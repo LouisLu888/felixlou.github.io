@@ -5,3 +5,5 @@ ai-practice/scripts/node_modules
 # Candidate pools hold article excerpts; keep them out of the public repo.
 ai-practice/state/candidates/
 ai-practice/state/*.log
+
+ai-practice/state/email-preview.html

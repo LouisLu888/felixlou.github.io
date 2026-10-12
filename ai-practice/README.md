@@ -33,6 +33,7 @@ GitHub Actions 每天 14:23 UTC（约太平洋时间 7:23）运行：
    2. 成稿：Claude 读这 12 条全文，按 `prompts/curate.md` 挑 3 到 6 条写成中文，输出 `public/ai-practice/data/issues/<date>.json`。
 3. `build-index.js`：生成按日期和按栏目的索引，再把 `public/ai-practice/` 镜像到 `docs/ai-practice/`。
 4. 提交到 master。jiabinlu.com 直接从 `docs/` 发布，提交即上线，不需要跑博客的 Vite 构建。
+5. `send-email.js`：等 Pages 部署约 90 秒后，通过 Resend 把当期发到 `NEWSLETTER_TO`。`state/sent.json` 记录已发日期，重跑不会重复发。本地预览：`node send-email.js --date <日期> --dry-run`，生成 `state/email-preview.html`。
 
 `public/` 是源，`docs/` 是副本。手动跑 `npm run build` 构建博客时，Vite 会清空 `docs/` 再从 `public/` 复制，所以 AI 实干派的页面会原样保留。
 
@@ -68,7 +69,9 @@ cd ../../docs && python3 -m http.server 8787   # http://localhost:8787/ai-practi
 1. `CLAUDE_CODE_OAUTH_TOKEN`（当前用的这种）：走你的 Claude 订阅，不另外按 API 用量计费。在本机运行 `claude setup-token` 生成，然后 `gh secret set CLAUDE_CODE_OAUTH_TOKEN -R LouisLu888/felixlou.github.io` 粘贴进去。workflow 会在运行时安装 Claude Code，用 `--engine cli` 成稿。
 2. `ANTHROPIC_API_KEY`：走 Claude API，按 token 计费。两个都设置时优先用它。
 
-都没有时，流水线照常抓取，但不出新一期。设置后在 Actions 页手动运行一次 **AI 实干派 daily issue** 验证。
+都没有时，流水线照常抓取，但不出新一期。
+
+每日邮件另需两个 secret：`RESEND_API_KEY`（Resend 的 key）和 `NEWSLETTER_TO`（收件邮箱，多个用逗号分隔；放在 secret 里是因为仓库公开）。发件人用 Resend 的共享域名 `resend.dev`，只能发给 Resend 账号本人的邮箱；要发给别人，需要先在 Resend 验证自己的域名并设置 `NEWSLETTER_FROM`。设置后在 Actions 页手动运行一次 **AI 实干派 daily issue** 验证。
 
 ## 成本
 
