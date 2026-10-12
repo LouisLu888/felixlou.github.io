@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI 实干派 · 卢佳斌</title>
-  <meta name="description" content="AI 实干派：每天几条一手材料，看真正用 AI 拿到结果的人怎么做。工作提效、内容创作、商业闭环、真实收入。">
-  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <title>AI 实干派 · 看真正用 AI 拿到结果的人怎么做</title>
+  <meta name="description" content="每天几条一手材料：真正用 AI 拿到结果的人怎么做。工作提效、内容创作、商业闭环、真实收入，每条都附原文和口径。">
   <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/">
   <meta property="og:site_name" content="AI 实干派">
   <meta property="og:type" content="website">
@@ -15,38 +14,60 @@
   <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/default.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 · 看真正用 AI 拿到结果的人怎么做">
+  <meta name="twitter:description" content="每天几条一手材料：真正用 AI 拿到结果的人怎么做。工作提效、内容创作、商业闭环、真实收入，每条都附原文和口径。">
   <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/default.png">
-  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="feed.xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+<script>
+(function () {
+  var h = location.hash, m;
+  if ((m = h.match(/^#\/d\/(\d{4}-\d{2}-\d{2})(?:\/([\w-]+))?/))) location.replace("/ai-practice/d/" + m[1] + "/" + (m[2] ? "#" + m[2] : ""));
+  else if ((m = h.match(/^#\/c\/([\w-]+)/))) location.replace("/ai-practice/c/" + m[1] + "/");
+  else if (h.indexOf("#/c") === 0) location.replace("/ai-practice/c/");
+})();
+</script>
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#/">
-        <img class="brand-mark" src="logo.svg" alt="" width="34" height="34">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
         <span>
           <span class="brand-name">AI 实干派</span>
           <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
         </span>
       </a>
-      <nav class="tabs" id="tabs" aria-label="视图">
-        <a href="#/" data-view="days">按日期</a>
-        <a href="#/c/" data-view="cats">按栏目</a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
       </nav>
     </div>
-    <div class="wrap">
-      <nav class="cat-bar" id="cat-bar" aria-label="栏目"></nav>
-    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">1</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">2</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">1</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">2</span></a></nav></div>
   </header>
-
-  <main class="wrap" id="app" aria-live="polite">
-    <p class="muted">加载中…</p>
+  <main class="wrap">
+    <div class="page-head">
+      <h1>每日精选</h1>
+      <p>用 AI 提效、做成商业闭环、拿到收入的人，每天几条一手材料。</p>
+    </div>
+    <div class="day-list">
+      <a class="day-card" href="/ai-practice/d/2026-10-11/">
+        <div class="eyebrow">002 · 2026 年 10 月 11 日 · 周日 · 约 8 分钟</div>
+        <h2>边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><span>晚饭做好了，博客新功能也有了初稿</span></li><li><span class="tag" data-cat="saas">Micro SaaS</span><span>辞职五个月，第一个 SaaS 做到月入一万美元</span></li><li><span class="tag" data-cat="consulting">AI 咨询</span><span>千人老公司改造自己：工程小组从 7 人缩到 3 人</span></li><li><span class="tag" data-cat="content">内容创作</span><span>一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」</span></li><li><span class="tag" data-cat="perspective">AI 认知</span><span>工程会被 AI 大幅加速，研究判断力不会因此自动变强</span></li></ul>
+      </a>
+      <a class="day-card" href="/ai-practice/d/2026-10-10/">
+        <div class="eyebrow">001 · 2026 年 10 月 10 日 · 周六 · 约 6 分钟<span class="badge-sample">样刊</span></div>
+        <h2>一封邮件省 90 分钟，八周产品背后的十年积累</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><span>晚饭做好了，博客新功能也有了初稿</span></li><li><span class="tag" data-cat="content">内容创作</span><span>AI 帮他写 newsletter，AI 公司赞助他的工作流视频</span></li><li><span class="tag" data-cat="saas">Micro SaaS</span><span>八周做出产品，第一批用户从哪里来？</span></li><li><span class="tag" data-cat="app">AI App</span><span>试用人数上去了，退款却吃掉了增量收入</span></li><li><span class="tag" data-cat="consulting">AI 咨询</span><span>帮一个部门把散落的资料做成能用的工具</span></li></ul>
+      </a>
+    </div>
   </main>
-
   <footer class="wrap site-footer">
-    <!-- subscribe:start (filled by ai-practice/scripts/build-index.js) -->
-<form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
   <div class="subscribe-title">订阅 AI 实干派</div>
   <input type="hidden" name="embed" value="1">
   <input type="hidden" name="tag" value="ai-practice">
@@ -60,10 +81,7 @@
   </div>
   <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
 </form>
-    <!-- subscribe:end -->
-    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="feed.xml">RSS</a></p>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
   </footer>
-
-  <script src="app.js" type="module"></script>
 </body>
 </html>

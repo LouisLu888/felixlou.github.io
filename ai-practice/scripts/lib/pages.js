@@ -41,7 +41,7 @@ function metaDescription(text, max = 120) {
   return stop > 40 ? cut.slice(0, stop + 1) : `${cut}…`;
 }
 
-function shell({ title, description: fullDescription, path, image = DEFAULT_OG_IMAGE, type = "article", body, categories, activeCat = null, footerForm = true }) {
+function shell({ title, description: fullDescription, path, image = DEFAULT_OG_IMAGE, type = "article", body, categories, activeCat = null, footerForm = true, activeTab = null, headExtra = "" }) {
   const url = absolute(path);
   const description = metaDescription(fullDescription);
   const catBar = categories
@@ -73,7 +73,7 @@ function shell({ title, description: fullDescription, path, image = DEFAULT_OG_I
   <link rel="icon" href="${BASE_PATH}logo.svg" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="${BRAND}" href="${BASE_PATH}feed.xml">
   <link rel="stylesheet" href="${BASE_PATH}styles.css">
-</head>
+${headExtra}</head>
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
@@ -85,8 +85,8 @@ function shell({ title, description: fullDescription, path, image = DEFAULT_OG_I
         </span>
       </a>
       <nav class="tabs" aria-label="视图">
-        <a href="${BASE_PATH}">按日期</a>
-        <a href="${BASE_PATH}c/${categories[0]?.id || ""}/">按栏目</a>
+        <a href="${BASE_PATH}"${activeTab === "days" ? ' class="active"' : ""}>按日期</a>
+        <a href="${BASE_PATH}c/"${activeTab === "cats" ? ' class="active"' : ""}>按栏目</a>
       </nav>
     </div>
     <div class="wrap"><nav class="cat-bar" aria-label="栏目">${catBar}</nav></div>
@@ -164,6 +164,7 @@ export function renderIssuePage({ issue, day, newer, older, catById, categories,
     image,
     body,
     categories,
+    activeTab: "days",
   });
 }
 
@@ -222,7 +223,65 @@ export function renderCategoryPage({ category, items, catById, categories }) {
     body,
     categories,
     activeCat: category.id,
+    activeTab: "cats",
   });
+}
+
+// Links from before 2026-10-12 used hash routes (#/d/<date>/<item>, #/c/<id>).
+// Send them to the static permalinks before anything renders.
+const LEGACY_HASH_REDIRECT = `<script>
+(function () {
+  var h = location.hash, m;
+  if ((m = h.match(/^#\\/d\\/(\\d{4}-\\d{2}-\\d{2})(?:\\/([\\w-]+))?/))) location.replace("${BASE_PATH}d/" + m[1] + "/" + (m[2] ? "#" + m[2] : ""));
+  else if ((m = h.match(/^#\\/c\\/([\\w-]+)/))) location.replace("${BASE_PATH}c/" + m[1] + "/");
+  else if (h.indexOf("#/c") === 0) location.replace("${BASE_PATH}c/");
+})();
+</script>
+`;
+
+export function renderHomePage({ days, categories, catById }) {
+  const cards = days
+    .map(
+      (d) => `<a class="day-card" href="${issuePath(d.date)}">
+        <div class="eyebrow">${pad3(d.number)} · ${fmtDateZh(d.date)} · 约 ${d.readingMinutes} 分钟${d.sample ? '<span class="badge-sample">样刊</span>' : ""}</div>
+        <h2>${esc(d.title)}</h2>
+        <ul>${d.headlines.map((h) => `<li>${tag(catById, h.category)}<span>${esc(h.headline)}</span></li>`).join("")}</ul>
+      </a>`,
+    )
+    .join("\n      ");
+  const body = `    <div class="page-head">
+      <h1>每日精选</h1>
+      <p>用 AI 提效、做成商业闭环、拿到收入的人，每天几条一手材料。</p>
+    </div>
+    ${days.length ? `<div class="day-list">\n      ${cards}\n    </div>` : `<p class="empty">还没有内容。第一期会在下一次定时任务运行后出现。</p>`}`;
+  return shell({
+    title: `${BRAND} · ${TAGLINE}`,
+    description: DESCRIPTION,
+    path: BASE_PATH,
+    type: "website",
+    body,
+    categories,
+    activeTab: "days",
+    headExtra: LEGACY_HASH_REDIRECT,
+  });
+}
+
+export function renderCategoriesIndex({ categories }) {
+  const body = `    <div class="page-head">
+      <h1>按栏目</h1>
+      <p>同一类做法放在一起看，更容易比较条件和结果。</p>
+    </div>
+    <div class="cat-grid">
+      ${categories
+        .map(
+          (c) => `<a class="cat-card" data-cat="${c.id}" href="${categoryPath(c.id)}">
+        <h2>${esc(c.name)}</h2><div class="en">${esc(c.en)}</div>
+        <p>${esc(c.desc)}</p><div class="n">${c.count} 条</div>
+      </a>`,
+        )
+        .join("\n      ")}
+    </div>`;
+  return shell({ title: `按栏目｜${BRAND}`, description: categories.map((c) => c.name).join("、"), path: `${BASE_PATH}c/`, type: "website", body, categories, activeTab: "cats" });
 }
 
 export function renderSubscribePage({ categories }) {

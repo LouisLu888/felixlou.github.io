@@ -33,7 +33,8 @@ import { todayPacific } from "./lib/dates.js";
 
 const ROOT = join(fileURLToPath(new URL(".", import.meta.url)), "..");
 const ISSUES_DIR = join(ROOT, "..", "public", "ai-practice", "data", "issues");
-const ISSUE_PAGE = "https://www.jiabinlu.com/ai-practice/#/d/";
+// Static issue permalink (the old #/d/ hash links still redirect).
+const ISSUE_PAGE = "https://www.jiabinlu.com/ai-practice/d/";
 
 const SCRIPT_MODEL = process.env.PODCAST_SCRIPT_MODEL || "gpt-5.5";
 const TTS_MODEL = process.env.PODCAST_TTS_MODEL || "gpt-4o-mini-tts-2025-12-15";
@@ -359,7 +360,7 @@ async function main() {
     date,
     title: issue.title,
     summary: issue.items.map((it) => it.headline).join("；"),
-    link: `${ISSUE_PAGE}${date}`,
+    link: `${ISSUE_PAGE}${date}/`,
     items: issue.items.map((it) => ({ headline: it.headline, sources: it.sources || [] })),
     duration,
     scriptModel: SCRIPT_MODEL,

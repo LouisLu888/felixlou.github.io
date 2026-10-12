@@ -9,7 +9,7 @@
 //    data/categories/<id>.json (every item in that category).
 // 3. Source hit rates: ai-practice/state/source-stats.md.
 // 4. Share cards (only with --og): og/<date>.png via og-images.js.
-// 5. Static pages: d/<date>/, i/<item-id>/, c/<category>/, subscribe/,
+// 5. Static pages: the home page, d/<date>/, i/<item-id>/, c/ and c/<category>/, subscribe/,
 //    plus sitemap.xml, feed.xml and the site-wide robots.txt.
 // 6. Mirror public/ai-practice/ into docs/ai-practice/. jiabinlu.com is
 //    served straight from docs/ on master, so the daily Action can publish
@@ -25,7 +25,7 @@ import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { issueReadingMinutes } from "./lib/reading.js";
 import { issuePath, itemPath, categoryPath, subscribePath, ogImagePath, DEFAULT_OG_IMAGE, BASE_PATH, SITE_ORIGIN } from "./lib/render.js";
-import { renderIssuePage, renderItemPage, renderCategoryPage, renderSubscribePage, renderSitemap, renderRss, subscribeForm } from "./lib/pages.js";
+import { renderHomePage, renderCategoriesIndex, renderIssuePage, renderItemPage, renderCategoryPage, renderSubscribePage, renderSitemap, renderRss } from "./lib/pages.js";
 import { writeSourceStats } from "./source-stats.js";
 
 const ROOT = join(fileURLToPath(new URL(".", import.meta.url)), "..");
@@ -140,11 +140,11 @@ async function main() {
     sitemap.push({ path: categoryPath(c.id), lastmod: byCategory[c.id][0]?.issueDate });
   }
   await writePage(subscribePath(), renderSubscribePage({ categories: catList }));
-  // The single-page app's footer carries the same form, kept in sync here.
-  const spaPath = join(SITE_DIR, "index.html");
-  const spa = await readFile(spaPath, "utf-8");
-  const filled = spa.replace(/(<!-- subscribe:start[^>]*-->)[\s\S]*?(<!-- subscribe:end -->)/, `$1\n${subscribeForm()}\n    $2`);
-  if (filled !== spa) await writeFile(spaPath, filled);
+  // Home and category overview are static too, so every URL a reader can
+  // copy from the address bar is a clean, indexable permalink.
+  await writePage(BASE_PATH, renderHomePage({ days, categories: catList, catById }));
+  await writePage(`${BASE_PATH}c/`, renderCategoriesIndex({ categories: catList }));
+  sitemap.push({ path: `${BASE_PATH}c/`, lastmod: days[0]?.date });
   await writeFile(join(SITE_DIR, "sitemap.xml"), renderSitemap(sitemap));
   await writeFile(join(SITE_DIR, "feed.xml"), renderRss({ issues: issues.slice(0, RSS_ISSUES), days, catById }));
   // robots.txt lives at the site root; public/ is the source, docs/ the live copy.
