@@ -41,7 +41,7 @@ function metaDescription(text, max = 120) {
   return stop > 40 ? cut.slice(0, stop + 1) : `${cut}…`;
 }
 
-function shell({ title, description: fullDescription, path, image = DEFAULT_OG_IMAGE, type = "article", body, categories, activeCat = null }) {
+function shell({ title, description: fullDescription, path, image = DEFAULT_OG_IMAGE, type = "article", body, categories, activeCat = null, footerForm = true }) {
   const url = absolute(path);
   const description = metaDescription(fullDescription);
   const catBar = categories
@@ -95,7 +95,7 @@ function shell({ title, description: fullDescription, path, image = DEFAULT_OG_I
 ${body}
   </main>
   <footer class="wrap site-footer">
-    ${subscribeForm()}
+    ${footerForm ? subscribeForm() : ""}
     <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="${BASE_PATH}feed.xml">RSS</a></p>
   </footer>
 </body>
@@ -230,8 +230,9 @@ export function renderSubscribePage({ categories }) {
       <h1>订阅 ${BRAND}</h1>
       <p>${DESCRIPTION}</p>
     </div>
+    ${subscribeForm()}
     <p>选「每天一期」，每天早上收到当期全文，约 15 分钟读完；选「每周精选」，每周日收到一周的要点和链接。</p>`;
-  return shell({ title: `订阅｜${BRAND}`, description: DESCRIPTION, path: subscribePath(), type: "website", body, categories });
+  return shell({ title: `订阅｜${BRAND}`, description: DESCRIPTION, path: subscribePath(), type: "website", body, categories, footerForm: false });
 }
 
 export function renderSitemap(entries) {
