@@ -1,9 +1,10 @@
 name: AI 实干派 podcast
 
 # Turns the day's AI 实干派 issue into an audio episode right after the daily
-# issue workflow finishes. Audio goes to a GitHub Release (keeps MP3s out of
-# git); the RSS feed is committed to public/ai-practice/podcast/ and mirrored
-# to docs/, so it is served at https://www.jiabinlu.com/ai-practice/podcast/feed.xml.
+# issue workflow finishes. The MP3 and RSS feed are committed to
+# public/ai-practice/podcast/ and mirrored to docs/, so they are served at
+# https://www.jiabinlu.com/ai-practice/podcast/feed.xml (Apple Podcasts will
+# not play GitHub Release assets). Only the newest 30 MP3s are kept.
 # Runs separately so a TTS failure never blocks the written issue.
 
 on:
@@ -66,37 +67,20 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node ai-practice/scripts/podcast-build.js --out out --date "${{ steps.day.outputs.date }}"
 
-      - name: Publish audio, update feed, commit
+      - name: Update feed and commit
         if: ${{ !steps.day.outputs.skip }}
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           if [ "$(jq -r .skip out/episode.json)" = "true" ]; then
             echo "No issue for this date — no episode."
             exit 0
           fi
-          DATE="${{ steps.day.outputs.date }}"
-          TAG="ai-practice-podcast-$DATE"
-          FILE="ai-practice-$DATE.mp3"
-          mv out/episode.mp3 "out/$FILE"
-
-          # Re-running a day replaces that day's audio.
-          gh release delete "$TAG" --cleanup-tag --yes 2>/dev/null || true
-          gh release create "$TAG" "out/$FILE" \
-            --title "AI 实干派 播客 $DATE" \
-            --notes "$(jq -r .title out/episode.json)" \
-            --latest=false
-
-          node ai-practice/scripts/podcast-feed.js \
-            --episode out/episode.json \
-            --audio-url "https://github.com/$GITHUB_REPOSITORY/releases/download/$TAG/$FILE" \
-            --audio-bytes "$(stat -c %s "out/$FILE")"
+          node ai-practice/scripts/podcast-feed.js --episode out/episode.json --audio out/episode.mp3
           node ai-practice/scripts/build-index.js
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/ai-practice/ docs/ai-practice/
-          git commit -m "AI 实干派: podcast episode $DATE [skip-newsletter]"
+          git commit -m "AI 实干派: podcast episode ${{ steps.day.outputs.date }} [skip-newsletter]"
           # The blog is also edited by hand; rebase onto anything pushed meanwhile.
           git pull --rebase --autostash origin master
           git push origin HEAD:master

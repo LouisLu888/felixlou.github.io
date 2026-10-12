@@ -5,7 +5,7 @@
 // ============================================================================
 // Reads public/ai-practice/data/issues/<date>.json, asks an OpenAI model to
 // rewrite it as a spoken Chinese script (same items, same order, same facts),
-// synthesizes it with OpenAI TTS and encodes one MP3.
+// synthesizes it with OpenAI TTS and encodes one MP3 (48kbps mono, about 3.5MB per 10 minutes).
 //
 // Usage: node podcast-build.js --out <dir> [--date YYYY-MM-DD]
 //
@@ -186,7 +186,7 @@ async function main() {
     "-y", "-loglevel", "error",
     "-f", "s16le", "-ar", String(SAMPLE_RATE), "-ac", "1", "-i", pcmPath,
     "-af", "silenceremove=stop_periods=-1:stop_duration=1.5:stop_threshold=-50dB:stop_silence=0.6",
-    "-c:a", "libmp3lame", "-b:a", "64k", mp3Path,
+    "-c:a", "libmp3lame", "-b:a", "48k", mp3Path,
   ]);
   const duration = Math.round(Number(execFileSync("ffprobe", [
     "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", mp3Path,

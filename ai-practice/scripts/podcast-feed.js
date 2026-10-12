@@ -5,14 +5,19 @@
 // ============================================================================
 // Site files live in public/ai-practice/podcast/ (build-index.js mirrors them
 // to docs/): episodes.json (episode list), cover.jpg (artwork), feed.xml
-// (generated). Feed URL: https://www.jiabinlu.com/ai-practice/podcast/feed.xml
+// (generated), audio/<file>.mp3. Feed URL:
+// https://www.jiabinlu.com/ai-practice/podcast/feed.xml
+//
+// Audio is served from jiabinlu.com itself: Apple Podcasts refuses GitHub
+// Release assets (octet-stream, download-only, expiring redirect). Only the
+// newest MAX_EPISODES MP3s are kept so the Pages site stays small.
 //
 // Usage:
-//   node podcast-feed.js --episode <episode.json> --audio-url <url> --audio-bytes <n>
+//   node podcast-feed.js --episode <episode.json> --audio <path/to/episode.mp3>
 //   node podcast-feed.js --rebuild     (re-render feed.xml from episodes.json)
 // ============================================================================
 
-import { readFile, writeFile } from "fs/promises";
+import { readFile, writeFile, readdir, copyFile, stat, rm, mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
@@ -28,7 +33,8 @@ const SHOW = {
   description: "看真正用 AI 拿到结果的人怎么做：用 AI 提效、做成商业闭环、拿到收入。jiabinlu.com/ai-practice 每日一期的语音版。",
   language: "zh-cn",
 };
-const MAX_EPISODES = 60;
+const AUDIO_DIR = join(PODCAST_DIR, "audio");
+const MAX_EPISODES = 30;
 
 function parseArgs(argv) {
   const args = {};
@@ -97,11 +103,15 @@ async function main() {
     return;
   }
 
-  for (const key of ["episode", "audio-url", "audio-bytes"]) {
+  for (const key of ["episode", "audio"]) {
     if (!args[key]) throw new Error(`--${key} is required`);
   }
   const meta = JSON.parse(await readFile(args.episode, "utf-8"));
   if (meta.skip) throw new Error("episode.json is a skip marker; nothing to publish");
+
+  const file = `ai-practice-${meta.date}.mp3`;
+  await mkdir(AUDIO_DIR, { recursive: true });
+  await copyFile(args.audio, join(AUDIO_DIR, file));
 
   const episode = {
     date: meta.date,
@@ -110,14 +120,20 @@ async function main() {
     link: meta.link,
     items: meta.items,
     duration: meta.duration,
-    audioUrl: args["audio-url"],
-    audioBytes: Number(args["audio-bytes"]),
+    audioUrl: `${BASE_URL}audio/${file}`,
+    audioBytes: (await stat(join(AUDIO_DIR, file))).size,
     publishedAt: new Date().toISOString(),
   };
   // Re-running a day replaces that day's episode.
   const next = [episode, ...episodes.filter((ep) => ep.date !== episode.date)]
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, MAX_EPISODES);
+
+  // Drop audio for episodes that fell out of the feed.
+  const keep = new Set(next.map((ep) => ep.audioUrl.split("/").pop()));
+  for (const f of await readdir(AUDIO_DIR)) {
+    if (!keep.has(f)) await rm(join(AUDIO_DIR, f));
+  }
 
   await writeFile(episodesPath, JSON.stringify(next, null, 2));
   await writeFile(join(PODCAST_DIR, "feed.xml"), renderFeed(next));
