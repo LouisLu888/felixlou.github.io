@@ -7,7 +7,7 @@
 // rewrite it as a spoken Chinese script (same items, same order, same facts),
 // synthesizes it with OpenAI TTS and encodes one MP3 (48kbps mono, about 3.5MB per 10 minutes).
 //
-// Usage: node podcast-build.js --out <dir> [--date YYYY-MM-DD]
+// Usage: node podcast-build.js --out <dir> [--date YYYY-MM-DD] [--script-only]
 //
 // Env:
 //   OPENAI_API_KEY        required
@@ -61,7 +61,7 @@ const TTS_INSTRUCTIONS = [
   "Pronunciation: 英文人名、公司名、产品名和技术词按美式英语原样读，不要读成中文腔。缩写按字母读。",
 ].join("\n");
 
-const WEEKDAYS = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+const WEEKDAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 
 function parseArgs(argv) {
   const args = {};
@@ -101,9 +101,10 @@ function targetChars(issue) {
 const SCRIPT_SCHEMA = {
   type: "object",
   additionalProperties: false,
-  required: ["preview", "segments"],
+  required: ["intro", "segments", "outro"],
   properties: {
-    preview: { type: "string" },
+    intro: { type: "string" },
+    outro: { type: "string" },
     segments: {
       type: "array",
       items: {
@@ -121,7 +122,7 @@ function sentencesOf(text) {
 }
 
 function longSentences(draft) {
-  const all = [draft.preview, ...draft.segments.flatMap((seg) => seg.paragraphs)];
+  const all = [draft.intro, draft.outro, ...draft.segments.flatMap((seg) => seg.paragraphs)];
   return all.flatMap(sentencesOf).filter((x) => x.length > MAX_SENTENCE_CHARS);
 }
 
@@ -131,7 +132,7 @@ async function writeScript(issue) {
   const { title, items, action } = issue;
   const messages = [
     { role: "system", content: prompt },
-    { role: "user", content: JSON.stringify({ title, items, action }) },
+    { role: "user", content: JSON.stringify({ spokenDate: spokenDate(issue.date), title, items, action }) },
   ];
   const ask = async () => {
     const res = await openai("chat/completions", {
@@ -159,14 +160,14 @@ async function writeScript(issue) {
   return draft;
 }
 
-// Greeting and sign-off are fixed text so the model never improvises them.
-function opening(date, preview) {
+// The model writes intro and outro too: fixed template lines read as a station
+// announcement. Code only supplies the date in spoken form.
+function spokenDate(date) {
   const d = new Date(`${date}T12:00:00Z`);
-  const spokenDate = `${d.getUTCMonth() + 1}月${d.getUTCDate()}号，${WEEKDAYS[d.getUTCDay()]}`;
-  return [`欢迎收听 AI 实干派。今天是${spokenDate}。`, preview];
+  const zh = (n) => n <= 10 ? "零一二三四五六七八九十"[n] : n < 20 ? `十${"零一二三四五六七八九"[n - 10]}` :
+    `${"零一二三四五六七八九"[Math.floor(n / 10)]}十${n % 10 ? "零一二三四五六七八九"[n % 10] : ""}`;
+  return `${zh(d.getUTCMonth() + 1)}月${zh(d.getUTCDate())}号，${WEEKDAYS[d.getUTCDay()]}`;
 }
-
-const CLOSING = ["今天的 AI 实干派就到这里。", "每个案例的原文链接，都在 jiabinlu.com 的 AI 实干派页面。我们明天见。"];
 
 // -- TTS ---------------------------------------------------------------------
 
@@ -227,9 +228,15 @@ async function main() {
   const issue = JSON.parse(await readFile(issuePath, "utf-8"));
 
   const draft = await writeScript(issue);
-  const segments = [opening(date, draft.preview), ...draft.segments.map((seg) => seg.paragraphs), CLOSING];
+  // Intro shares a TTS piece with the first story and outro with the last
+  // segment, so the voice carries through instead of reading isolated lines.
+  if (!draft.intro.includes("实干派")) draft.intro = `这里是 AI 实干派。${draft.intro}`;
+  const segments = draft.segments.map((seg) => [...seg.paragraphs]);
+  segments[0].unshift(draft.intro);
+  segments[segments.length - 1].push(draft.outro);
   const script = segments.map((paras) => paras.join("\n")).join("\n\n");
   await writeFile(join(args.out, "script.txt"), script);
+  if (process.argv.includes("--script-only")) return;
   const sentences = sentencesOf(script.replace(/\n/g, ""));
   const lengths = sentences.map((x) => x.length).sort((a, b) => a - b);
   console.error(`Script: ${script.length} chars (target ${targetChars(issue)}), ${sentences.length} sentences, ` +
