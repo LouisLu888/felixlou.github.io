@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-12 · Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-12/</link>
+      <description>同一时刻，有人觉得 AI 只是个笨聊天框，有人觉得曲线已经竖起来了；Every 的员工各自养的 agent 都停了，最后改成全公司共用一个；Meta 设计总监讲 Muse：同一件事按三个层级展示，主对话只开一个；不放心让 agent 上线代码，就让它先交「证据」再人工验收；给 agent 一份旧插件当样板，让它读完新文档就写出新插件（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-12/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p><b>同一时刻，有人觉得 AI 只是个笨聊天框，有人觉得曲线已经竖起来了</b><br><a href="https://x.com/karpathy/status/2109361546505966046">Follow Builders (X)</a></p><p><b>Every 的员工各自养的 agent 都停了，最后改成全公司共用一个</b><br><a href="https://www.youtube.com/watch?v=_pcy1_jU27k">Every (YouTube)</a></p><p><b>Meta 设计总监讲 Muse：同一件事按三个层级展示，主对话只开一个</b><br><a href="https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with">Lenny's Newsletter &amp; Podcast</a></p><p><b>不放心让 agent 上线代码，就让它先交「证据」再人工验收</b><br><a href="https://x.com/petergyang/status/2109433961223180517">Follow Builders (X)</a></p><p><b>给 agent 一份旧插件当样板，让它读完新文档就写出新插件</b><br><a href="https://simonwillison.net/2026/Oct/6/llm-openai-decisions/">Simon Willison</a></p>]]></content:encoded>
+      <enclosure url="https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-12.mp3" length="3499869" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-12</guid>
+      <pubDate>Mon, 12 Oct 2026 15:50:30 GMT</pubDate>
+      <itunes:duration>00:09:43</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-11 · 边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-11/</link>
       <description>晚饭做好了，博客新功能也有了初稿；辞职五个月，第一个 SaaS 做到月入一万美元；千人老公司改造自己：工程小组从 7 人缩到 3 人；一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」；工程会被 AI 大幅加速，研究判断力不会因此自动变强（本集语音由 AI 合成）</description>

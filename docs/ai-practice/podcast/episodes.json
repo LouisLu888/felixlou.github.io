@@ -1,5 +1,67 @@
 [
   {
+    "date": "2026-10-12",
+    "title": "Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个",
+    "summary": "同一时刻，有人觉得 AI 只是个笨聊天框，有人觉得曲线已经竖起来了；Every 的员工各自养的 agent 都停了，最后改成全公司共用一个；Meta 设计总监讲 Muse：同一件事按三个层级展示，主对话只开一个；不放心让 agent 上线代码，就让它先交「证据」再人工验收；给 agent 一份旧插件当样板，让它读完新文档就写出新插件",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-12/",
+    "items": [
+      {
+        "headline": "同一时刻，有人觉得 AI 只是个笨聊天框，有人觉得曲线已经竖起来了",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Andrej Karpathy: Dusting off this tweet from April because this gap in shared understanding of LL",
+            "url": "https://x.com/karpathy/status/2109361546505966046"
+          }
+        ]
+      },
+      {
+        "headline": "Every 的员工各自养的 agent 都停了，最后改成全公司共用一个",
+        "sources": [
+          {
+            "label": "Every (YouTube)",
+            "title": "OpenAI Dots Took Over Our Company",
+            "url": "https://www.youtube.com/watch?v=_pcy1_jU27k"
+          }
+        ]
+      },
+      {
+        "headline": "Meta 设计总监讲 Muse：同一件事按三个层级展示，主对话只开一个",
+        "sources": [
+          {
+            "label": "Lenny's Newsletter & Podcast",
+            "title": "🎙️ How I AI: How Meta designed Muse with Alex Cornell",
+            "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with"
+          }
+        ]
+      },
+      {
+        "headline": "不放心让 agent 上线代码，就让它先交「证据」再人工验收",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Peter Yang: \"I'm not at a point where I trust the agent, especially with stuff that people a",
+            "url": "https://x.com/petergyang/status/2109433961223180517"
+          }
+        ]
+      },
+      {
+        "headline": "给 agent 一份旧插件当样板，让它读完新文档就写出新插件",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "llm-openai-decisions 0.1a0",
+            "url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/"
+          }
+        ]
+      }
+    ],
+    "duration": 583,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-12.mp3",
+    "audioBytes": 3499869,
+    "publishedAt": "2026-10-12T15:50:30.111Z"
+  },
+  {
     "date": "2026-10-11",
     "title": "边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元",
     "summary": "晚饭做好了，博客新功能也有了初稿；辞职五个月，第一个 SaaS 做到月入一万美元；千人老公司改造自己：工程小组从 7 人缩到 3 人；一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」；工程会被 AI 大幅加速，研究判断力不会因此自动变强",
