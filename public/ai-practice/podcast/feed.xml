@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI 实干派</title>
+    <link>https://www.jiabinlu.com/ai-practice/</link>
+    <atom:link href="https://www.jiabinlu.com/ai-practice/podcast/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>看真正用 AI 拿到结果的人怎么做：用 AI 提效、做成商业闭环、拿到收入。jiabinlu.com/ai-practice 每日一期的语音版。</description>
+    <language>zh-cn</language>
+    <itunes:author>卢佳斌</itunes:author>
+    <itunes:image href="https://www.jiabinlu.com/ai-practice/podcast/cover.jpg"/>
+    <image><url>https://www.jiabinlu.com/ai-practice/podcast/cover.jpg</url><title>AI 实干派</title><link>https://www.jiabinlu.com/ai-practice/</link></image>
+    <itunes:category text="Technology"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <item>
+      <title>2026-10-11 · 边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元</title>
+      <link>https://www.jiabinlu.com/ai-practice/#/d/2026-10-11</link>
+      <description>晚饭做好了，博客新功能也有了初稿；辞职五个月，第一个 SaaS 做到月入一万美元；千人老公司改造自己：工程小组从 7 人缩到 3 人；一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」；工程会被 AI 大幅加速，研究判断力不会因此自动变强</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/#/d/2026-10-11">图文版</a></p><p><b>晚饭做好了，博客新功能也有了初稿</b><br><a href="https://simonwillison.net/2026/Oct/9/built-using-my-voice/">Simon Willison</a></p><p><b>辞职五个月，第一个 SaaS 做到月入一万美元</b><br><a href="https://www.youtube.com/watch?v=QXxESN94Y6s">Starter Story (YouTube)</a></p><p><b>千人老公司改造自己：工程小组从 7 人缩到 3 人</b><br><a href="https://supercompanies.captivate.fm/episode/from-corporate-housing-to-a-2-1b-travel-company-with-elia-wallen-founder-of-engine">Supercompanies (Greg Shove / Section)</a></p><p><b>一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」</b><br><a href="https://www.youtube.com/watch?v=OxxRcagqbHU">Theoretically Media</a></p><p><b>工程会被 AI 大幅加速，研究判断力不会因此自动变强</b><br><a href="https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards">Interconnects</a></p>]]></content:encoded>
+      <enclosure url="https://github.com/LouisLu888/felixlou.github.io/releases/download/ai-practice-podcast-2026-10-11/ai-practice-2026-10-11.mp3" length="4803885" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-11</guid>
+      <pubDate>Mon, 12 Oct 2026 04:12:00 GMT</pubDate>
+      <itunes:duration>00:10:00</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

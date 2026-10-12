@@ -1,0 +1,64 @@
+[
+  {
+    "date": "2026-10-11",
+    "title": "边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元",
+    "summary": "晚饭做好了，博客新功能也有了初稿；辞职五个月，第一个 SaaS 做到月入一万美元；千人老公司改造自己：工程小组从 7 人缩到 3 人；一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」；工程会被 AI 大幅加速，研究判断力不会因此自动变强",
+    "link": "https://www.jiabinlu.com/ai-practice/#/d/2026-10-11",
+    "items": [
+      {
+        "headline": "晚饭做好了，博客新功能也有了初稿",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "A new feature for my blog, built using my voice",
+            "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
+          }
+        ]
+      },
+      {
+        "headline": "辞职五个月，第一个 SaaS 做到月入一万美元",
+        "sources": [
+          {
+            "label": "Starter Story (YouTube)",
+            "title": "My First SaaS Project Just Hit $11K/Month",
+            "url": "https://www.youtube.com/watch?v=QXxESN94Y6s"
+          }
+        ]
+      },
+      {
+        "headline": "千人老公司改造自己：工程小组从 7 人缩到 3 人",
+        "sources": [
+          {
+            "label": "Supercompanies (Greg Shove / Section)",
+            "title": "From Corporate Housing to a $2.1B Travel Company With Elia Wallen, Founder of Engine",
+            "url": "https://supercompanies.captivate.fm/episode/from-corporate-housing-to-a-2-1b-travel-company-with-elia-wallen-founder-of-engine"
+          }
+        ]
+      },
+      {
+        "headline": "一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」",
+        "sources": [
+          {
+            "label": "Theoretically Media",
+            "title": "What No One Tells You About Making a 17-Minute AI Backrooms Film",
+            "url": "https://www.youtube.com/watch?v=OxxRcagqbHU"
+          }
+        ]
+      },
+      {
+        "headline": "工程会被 AI 大幅加速，研究判断力不会因此自动变强",
+        "sources": [
+          {
+            "label": "Interconnects",
+            "title": "I expect rapid progress but not towards general superintelligence",
+            "url": "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards"
+          }
+        ]
+      }
+    ],
+    "duration": 600,
+    "audioUrl": "https://github.com/LouisLu888/felixlou.github.io/releases/download/ai-practice-podcast-2026-10-11/ai-practice-2026-10-11.mp3",
+    "audioBytes": 4803885,
+    "publishedAt": "2026-10-12T04:12:00.194Z"
+  }
+]
