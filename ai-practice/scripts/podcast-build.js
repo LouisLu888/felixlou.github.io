@@ -3,7 +3,8 @@
 // ============================================================================
 // AI 实干派 — Podcast step 1: turn one issue into an MP3
 // ============================================================================
-// Reads public/ai-practice/data/issues/<date>.json, asks an OpenAI model to
+// Reads public/ai-practice/data/issues/<date>.json, asks Claude Opus (via the
+// Claude Code CLI on the Claude subscription; gpt-5.5 as fallback) to
 // rewrite it as a spoken Chinese script (same items, same order, same facts),
 // synthesizes it with Inworld TTS-2 via Replicate (OpenAI TTS as whole-episode
 // fallback) and encodes one MP3 (48kbps mono, about 3.5MB per 10 minutes).
@@ -11,7 +12,10 @@
 // Usage: node podcast-build.js --out <dir> [--date YYYY-MM-DD] [--script-only]
 //
 // Env:
-//   OPENAI_API_KEY        required (script, and fallback TTS)
+//   CLAUDE_CODE_OAUTH_TOKEN  Claude subscription token for the `claude` CLI
+//                         (not needed locally when already logged in)
+//   OPENAI_API_KEY        required (fallback script model and fallback TTS)
+//   PODCAST_SCRIPT_ENGINE claude (default) or openai
 //   REPLICATE_API_TOKEN   required for the default Inworld engine
 //   PODCAST_SCRIPT_MODEL  default gpt-5.5
 //   PODCAST_TTS_ENGINE    inworld (default) or openai
@@ -28,7 +32,7 @@ import { readFile, writeFile, mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
-import { execFileSync } from "child_process";
+import { execFileSync, spawn } from "child_process";
 import { todayPacific } from "./lib/dates.js";
 
 const ROOT = join(fileURLToPath(new URL(".", import.meta.url)), "..");
@@ -37,6 +41,10 @@ const ISSUES_DIR = join(ROOT, "..", "public", "ai-practice", "data", "issues");
 const ISSUE_PAGE = "https://www.jiabinlu.com/ai-practice/d/";
 
 const SCRIPT_MODEL = process.env.PODCAST_SCRIPT_MODEL || "gpt-5.5";
+// Claude Opus wrote the most natural, most faithful script in a 2026-10-11
+// comparison against gpt-5.5, Gemini 3.1 Pro, DeepSeek V3.1 and Qwen3-235B.
+const SCRIPT_ENGINE = process.env.PODCAST_SCRIPT_ENGINE || "claude";
+const CLAUDE_MODEL = "claude-opus-5-5";
 const TTS_MODEL = process.env.PODCAST_TTS_MODEL || "gpt-4o-mini-tts-2025-12-15";
 const VOICE = process.env.PODCAST_VOICE || "marin";
 // Inworld TTS-2 won a blind listening test against MiniMax, Gemini, Qwen,
@@ -142,38 +150,73 @@ function longSentences(draft) {
   return all.flatMap(sentencesOf).filter((x) => x.length > MAX_SENTENCE_CHARS);
 }
 
-async function writeScript(issue) {
-  const template = await readFile(join(ROOT, "prompts", "podcast.md"), "utf-8");
-  const prompt = template.replaceAll("{{TARGET_CHARS}}", String(targetChars(issue)));
-  const { title, items, action } = issue;
-  const messages = [
-    { role: "system", content: prompt },
-    { role: "user", content: JSON.stringify({ spokenDate: spokenDate(issue.date), title, items, action }) },
-  ];
-  const ask = async () => {
-    const res = await openai("chat/completions", {
-      model: SCRIPT_MODEL,
-      messages,
-      response_format: { type: "json_schema", json_schema: { name: "podcast_script", strict: true, schema: SCRIPT_SCHEMA } },
-    });
-    const content = (await res.json()).choices[0].message.content;
-    return { content, draft: JSON.parse(content) };
-  };
+// Each engine takes { system, user } and returns the parsed draft.
+const SCRIPT_ENGINES = {
+  openai: {
+    label: SCRIPT_MODEL,
+    async write({ system, user }) {
+      const res = await openai("chat/completions", {
+        model: SCRIPT_MODEL,
+        messages: [{ role: "system", content: system }, { role: "user", content: user }],
+        response_format: { type: "json_schema", json_schema: { name: "podcast_script", strict: true, schema: SCRIPT_SCHEMA } },
+      });
+      return JSON.parse((await res.json()).choices[0].message.content);
+    },
+  },
+  // Same CLI invocation as curate.js --engine cli. --setting-sources "" keeps
+  // CLAUDE.md and hooks out of the writer's context.
+  claude: {
+    label: CLAUDE_MODEL,
+    async write({ system, user }) {
+      const args = ["-p", "--model", CLAUDE_MODEL, "--setting-sources", "", "--system-prompt", system,
+        "--output-format", "json", "--json-schema", JSON.stringify(SCRIPT_SCHEMA), "--tools", "", "--no-session-persistence"];
+      const stdout = await new Promise((resolve, reject) => {
+        const child = spawn("claude", args, { stdio: ["pipe", "pipe", "inherit"] });
+        let out = "";
+        child.stdout.on("data", (d) => (out += d));
+        child.on("error", reject);
+        child.on("close", (code) => (code === 0 ? resolve(out) : reject(new Error(`claude exited ${code}`))));
+        child.stdin.end(user);
+      });
+      const result = JSON.parse(stdout);
+      if (result.is_error || !result.structured_output) {
+        throw new Error(`claude CLI returned no structured output: ${String(result.result).slice(0, 300)}`);
+      }
+      return result.structured_output;
+    },
+  },
+};
 
-  let { content, draft } = await ask();
+async function writeScriptWith(engine, issue) {
+  const template = await readFile(join(ROOT, "prompts", "podcast.md"), "utf-8");
+  const system = template.replaceAll("{{TARGET_CHARS}}", String(targetChars(issue)));
+  const { title, items, action } = issue;
+  const input = JSON.stringify({ spokenDate: spokenDate(issue.date), title, items, action });
+  const write = SCRIPT_ENGINES[engine].write;
+
+  let draft = await write({ system, user: input });
   // One revision pass if the model still wrote sentences too long to follow by ear.
   const tooLong = longSentences(draft);
   if (tooLong.length > 0) {
     console.error(`Revising ${tooLong.length} sentences over ${MAX_SENTENCE_CHARS} chars`);
-    messages.push({ role: "assistant", content });
-    messages.push({
-      role: "user",
-      content: `These sentences are over ${MAX_SENTENCE_CHARS} characters. Split each into shorter spoken sentences, ` +
+    draft = await write({
+      system,
+      user: `${input}\n\nYour previous draft:\n${JSON.stringify(draft)}\n\n` +
+        `These sentences are over ${MAX_SENTENCE_CHARS} characters. Split each into shorter spoken sentences, ` +
         `keep every fact, change nothing else, and return the full script again:\n${tooLong.join("\n")}`,
     });
-    ({ draft } = await ask());
   }
   return draft;
+}
+
+async function writeScript(issue) {
+  try {
+    return { draft: await writeScriptWith(SCRIPT_ENGINE, issue), scriptEngine: SCRIPT_ENGINE };
+  } catch (err) {
+    if (SCRIPT_ENGINE === "openai") throw err;
+    console.error(`::warning::${SCRIPT_ENGINE} script failed (${err.message}); falling back to openai`);
+    return { draft: await writeScriptWith("openai", issue), scriptEngine: "openai" };
+  }
 }
 
 // The model writes intro and outro too: fixed template lines read as a station
@@ -294,7 +337,7 @@ async function main() {
   }
   const issue = JSON.parse(await readFile(issuePath, "utf-8"));
 
-  const draft = await writeScript(issue);
+  const { draft, scriptEngine } = await writeScript(issue);
   // Intro shares a TTS piece with the first story and outro with the last
   // segment, so the voice carries through instead of reading isolated lines.
   if (!draft.intro.includes("实干派")) draft.intro = `这里是 AI 实干派。${draft.intro}`;
@@ -363,7 +406,7 @@ async function main() {
     link: `${ISSUE_PAGE}${date}/`,
     items: issue.items.map((it) => ({ headline: it.headline, sources: it.sources || [] })),
     duration,
-    scriptModel: SCRIPT_MODEL,
+    scriptModel: SCRIPT_ENGINES[scriptEngine].label,
     tts: ENGINES[engine].label(),
   };
   await writeFile(join(args.out, "episode.json"), JSON.stringify(meta, null, 2));
