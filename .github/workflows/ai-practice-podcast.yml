@@ -1,0 +1,102 @@
+name: AI 实干派 podcast
+
+# Turns the day's AI 实干派 issue into an audio episode right after the daily
+# issue workflow finishes. Audio goes to a GitHub Release (keeps MP3s out of
+# git); the RSS feed is committed to public/ai-practice/podcast/ and mirrored
+# to docs/, so it is served at https://www.jiabinlu.com/ai-practice/podcast/feed.xml.
+# Runs separately so a TTS failure never blocks the written issue.
+
+on:
+  workflow_run:
+    workflows: ['AI 实干派 daily issue']
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Issue date YYYY-MM-DD (default: today, Pacific)'
+        type: string
+        required: false
+      force:
+        description: 'Regenerate even if the episode exists'
+        type: boolean
+        default: false
+
+concurrency:
+  group: ai-practice-podcast
+  cancel-in-progress: false
+
+jobs:
+  episode:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      # Latest master, so the issue committed by the daily run is present.
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Decide date
+        id: day
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          DATE="${INPUT_DATE:-$(TZ=America/Los_Angeles date +%F)}"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          EPISODES=public/ai-practice/podcast/episodes.json
+          if [ "$FORCE" != "true" ] && [ -f "$EPISODES" ] && jq -e --arg d "$DATE" 'any(.[]; .date == $d)' "$EPISODES" > /dev/null; then
+            echo "Episode for $DATE already published"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Ensure ffmpeg
+        if: ${{ !steps.day.outputs.skip }}
+        run: command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+
+      - name: Build episode
+        if: ${{ !steps.day.outputs.skip }}
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node ai-practice/scripts/podcast-build.js --out out --date "${{ steps.day.outputs.date }}"
+
+      - name: Publish audio, update feed, commit
+        if: ${{ !steps.day.outputs.skip }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(jq -r .skip out/episode.json)" = "true" ]; then
+            echo "No issue for this date — no episode."
+            exit 0
+          fi
+          DATE="${{ steps.day.outputs.date }}"
+          TAG="ai-practice-podcast-$DATE"
+          FILE="ai-practice-$DATE.mp3"
+          mv out/episode.mp3 "out/$FILE"
+
+          # Re-running a day replaces that day's audio.
+          gh release delete "$TAG" --cleanup-tag --yes 2>/dev/null || true
+          gh release create "$TAG" "out/$FILE" \
+            --title "AI 实干派 播客 $DATE" \
+            --notes "$(jq -r .title out/episode.json)" \
+            --latest=false
+
+          node ai-practice/scripts/podcast-feed.js \
+            --episode out/episode.json \
+            --audio-url "https://github.com/$GITHUB_REPOSITORY/releases/download/$TAG/$FILE" \
+            --audio-bytes "$(stat -c %s "out/$FILE")"
+          node ai-practice/scripts/build-index.js
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/ai-practice/podcast/ docs/ai-practice/
+          git commit -m "AI 实干派: podcast episode $DATE [skip-newsletter]"
+          # The blog is also edited by hand; rebase onto anything pushed meanwhile.
+          git pull --rebase origin master
+          git push origin HEAD:master

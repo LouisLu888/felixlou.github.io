@@ -1,0 +1,130 @@
+#!/usr/bin/env node
+
+// ============================================================================
+// AI 实干派 — Podcast step 2: add an episode and rewrite the RSS feed
+// ============================================================================
+// Site files live in public/ai-practice/podcast/ (build-index.js mirrors them
+// to docs/): episodes.json (episode list), cover.jpg (artwork), feed.xml
+// (generated). Feed URL: https://www.jiabinlu.com/ai-practice/podcast/feed.xml
+//
+// Usage:
+//   node podcast-feed.js --episode <episode.json> --audio-url <url> --audio-bytes <n>
+//   node podcast-feed.js --rebuild     (re-render feed.xml from episodes.json)
+// ============================================================================
+
+import { readFile, writeFile } from "fs/promises";
+import { existsSync } from "fs";
+import { join } from "path";
+import { fileURLToPath } from "url";
+
+const ROOT = join(fileURLToPath(new URL(".", import.meta.url)), "..");
+const PODCAST_DIR = join(ROOT, "..", "public", "ai-practice", "podcast");
+const BASE_URL = "https://www.jiabinlu.com/ai-practice/podcast/";
+
+const SHOW = {
+  title: "AI 实干派",
+  author: "卢佳斌",
+  link: "https://www.jiabinlu.com/ai-practice/",
+  description: "看真正用 AI 拿到结果的人怎么做：用 AI 提效、做成商业闭环、拿到收入。jiabinlu.com/ai-practice 每日一期的语音版。",
+  language: "zh-cn",
+};
+const MAX_EPISODES = 60;
+
+function parseArgs(argv) {
+  const args = {};
+  for (let i = 0; i < argv.length; i++) {
+    if (argv[i].startsWith("--")) args[argv[i].slice(2)] = argv[i + 1];
+  }
+  return args;
+}
+
+function esc(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function hms(seconds) {
+  const h = Math.floor(seconds / 3600), m = Math.floor((seconds % 3600) / 60), s = seconds % 60;
+  return [h, m, s].map((n) => String(n).padStart(2, "0")).join(":");
+}
+
+function renderFeed(episodes) {
+  const items = episodes.map((ep) => {
+    const notes = `<p><a href="${esc(ep.link)}">图文版</a></p>` + ep.items.map((it) =>
+      `<p><b>${esc(it.headline)}</b><br>${it.sources.map((s) => `<a href="${esc(s.url)}">${esc(s.label || s.title)}</a>`).join(" · ")}</p>`
+    ).join("");
+    return `    <item>
+      <title>${esc(`${ep.date} · ${ep.title}`)}</title>
+      <link>${esc(ep.link)}</link>
+      <description>${esc(ep.summary)}</description>
+      <content:encoded><![CDATA[${notes.replace(/]]>/g, "]]&gt;")}]]></content:encoded>
+      <enclosure url="${esc(ep.audioUrl)}" length="${ep.audioBytes}" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-${ep.date}</guid>
+      <pubDate>${new Date(ep.publishedAt).toUTCString()}</pubDate>
+      <itunes:duration>${hms(ep.duration)}</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>`;
+  }).join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${esc(SHOW.title)}</title>
+    <link>${esc(SHOW.link)}</link>
+    <atom:link href="${BASE_URL}feed.xml" rel="self" type="application/rss+xml"/>
+    <description>${esc(SHOW.description)}</description>
+    <language>${SHOW.language}</language>
+    <itunes:author>${esc(SHOW.author)}</itunes:author>
+    <itunes:image href="${BASE_URL}cover.jpg"/>
+    <image><url>${BASE_URL}cover.jpg</url><title>${esc(SHOW.title)}</title><link>${esc(SHOW.link)}</link></image>
+    <itunes:category text="Technology"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+${items}
+  </channel>
+</rss>
+`;
+}
+
+async function main() {
+  const args = parseArgs(process.argv.slice(2));
+  const episodesPath = join(PODCAST_DIR, "episodes.json");
+  const episodes = existsSync(episodesPath) ? JSON.parse(await readFile(episodesPath, "utf-8")) : [];
+
+  if (process.argv.includes("--rebuild")) {
+    await writeFile(join(PODCAST_DIR, "feed.xml"), renderFeed(episodes));
+    console.error(`Feed rebuilt: ${episodes.length} episodes`);
+    return;
+  }
+
+  for (const key of ["episode", "audio-url", "audio-bytes"]) {
+    if (!args[key]) throw new Error(`--${key} is required`);
+  }
+  const meta = JSON.parse(await readFile(args.episode, "utf-8"));
+  if (meta.skip) throw new Error("episode.json is a skip marker; nothing to publish");
+
+  const episode = {
+    date: meta.date,
+    title: meta.title,
+    summary: meta.summary,
+    link: meta.link,
+    items: meta.items,
+    duration: meta.duration,
+    audioUrl: args["audio-url"],
+    audioBytes: Number(args["audio-bytes"]),
+    publishedAt: new Date().toISOString(),
+  };
+  // Re-running a day replaces that day's episode.
+  const next = [episode, ...episodes.filter((ep) => ep.date !== episode.date)]
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, MAX_EPISODES);
+
+  await writeFile(episodesPath, JSON.stringify(next, null, 2));
+  await writeFile(join(PODCAST_DIR, "feed.xml"), renderFeed(next));
+  console.error(`Feed updated: ${next.length} episodes`);
+}
+
+main().catch((err) => {
+  console.error(err.message);
+  process.exit(1);
+});

@@ -49,6 +49,18 @@ GitHub Actions 每天 14:23 UTC（约太平洋时间 7:23）运行：
 2. 原文链接从候选池重建，不用模型输出的链接。
 3. 正文里指向候选之外的链接会被去掉，只留文字。
 
+## 播客
+
+每期同时有语音版，订阅地址：`https://www.jiabinlu.com/ai-practice/podcast/feed.xml`（Apple Podcasts / Overcast / Pocket Casts 选「通过 URL 添加」）。
+
+`.github/workflows/ai-practice-podcast.yml` 在每日出刊的 workflow 成功后自动运行，与出刊流程分开，失败不影响图文版：
+
+1. `podcast-build.js`：用 OpenAI（`gpt-5.5`）把当天这期改写成口播稿，规则在 `prompts/podcast.md`：条目、顺序和事实与图文版一致，只改成口语。再用 `gpt-4o-mini-tts` 分段合成、拼接，编码成 64kbps 单声道 MP3。
+2. MP3 上传为 GitHub Release（tag `ai-practice-podcast-<date>`），不进 git。
+3. `podcast-feed.js`：更新 `public/ai-practice/podcast/episodes.json` 和 `feed.xml`，show notes 里的链接取自当期 JSON，不用模型输出。`build-index.js` 把它镜像到 `docs/`。
+
+需要仓库 secret `OPENAI_API_KEY`。可在 Actions 页手动运行 **AI 实干派 podcast**，填 `date` 补做某一天，勾 `force` 重做。换音色用环境变量 `PODCAST_VOICE`（默认 `marin`）。每集成本约 $0.3。
+
 ## 本地运行
 
 ```bash
