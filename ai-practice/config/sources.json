@@ -17,11 +17,13 @@
       "region": "US"
     },
     {
-      "name": "Lenny's Newsletter",
+      "name": "Lenny's Newsletter & Podcast",
       "type": "rss",
       "url": "https://www.lennysnewsletter.com/feed",
       "category": "productivity",
-      "region": "US"
+      "region": "US",
+      "maxItems": 5,
+      "_note": "Custom-domain feed includes podcast episodes; api.substack.com podcast feeds return 403 from GitHub Actions IPs"
     },
     {
       "name": "One Useful Thing (Ethan Mollick)",
@@ -178,13 +180,6 @@
       "region": "US"
     },
     {
-      "name": "Lenny's Podcast",
-      "type": "rss",
-      "url": "https://api.substack.com/feed/podcast/10845.rss",
-      "category": "productivity",
-      "region": "US"
-    },
-    {
       "name": "Behind the Craft (Peter Yang)",
       "type": "rss",
       "url": "https://anchor.fm/s/f38497cc/podcast/rss",
@@ -236,9 +231,10 @@
     {
       "name": "Latent Space",
       "type": "rss",
-      "url": "https://api.substack.com/feed/podcast/1084089.rss",
+      "url": "https://www.latent.space/feed",
       "category": "perspective",
-      "region": "US"
+      "region": "US",
+      "_note": "Custom-domain feed; api.substack.com returns 403 from GitHub Actions IPs"
     },
     {
       "name": "The AI Daily Brief",

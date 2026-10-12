@@ -88,6 +88,7 @@ cd ai-practice/scripts && node check-sources.js
 
 - YouTube 的 Atom feed 会对正常频道间歇返回 404/500（2026-10-11 曾 5 个频道里 4 个同时失败）。脚本先重试 3 次，再改抓频道的 /videos 页面；新视频的完整描述从观看页取。/videos 页面的数据结构 YouTube 随时可能改，届时 `check-sources.js` 会报出来。
 - Flightcast 托管的播客（Starter Story、Every）只给 mp3，没有单集网页。`episodeLinkTemplate` 会把链接改成该频道的 YouTube 搜索页。
+- Substack 的 `api.substack.com` 播客 feed 在 GitHub Actions 的服务器上返回 403（2026-10-11 实测）。Substack 系的来源一律用作者自己域名的 `/feed`（例如 `www.latent.space/feed`），这个 feed 也包含播客单集。
 - 付费墙内容只能拿到 RSS 里的公开部分。
 - Every Consulting、Morningside 案例页、PJ Ace、硬地骇客、Starter Story 网站本身没有可用的 RSS，暂未接入。
 - The Bootstrapped Founder 的博客和播客都在 2026-04-03 之后停更，来源保留，恢复更新会自动进入候选。
