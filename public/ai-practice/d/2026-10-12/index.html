@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 003｜Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个</title>
+  <meta name="description" content="Karpathy 估算（他本人的粗算）：约 75% 的人几乎没碰过 LLM，约 0.2% 的人在数学和代码领域亲身体验到前沿能力。他认为这道认知差距正在变大。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-10-12/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 003｜Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个">
+  <meta property="og:description" content="Karpathy 估算（他本人的粗算）：约 75% 的人几乎没碰过 LLM，约 0.2% 的人在数学和代码领域亲身体验到前沿能力。他认为这道认知差距正在变大。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-10-12/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-12.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 003｜Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个">
+  <meta name="twitter:description" content="Karpathy 估算（他本人的粗算）：约 75% 的人几乎没碰过 LLM，约 0.2% 的人在数学和代码领域亲身体验到前沿能力。他认为这道认知差距正在变大。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-12.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">2</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">2</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">4</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 003 · 2026 年 10 月 12 日 · 周一 · 约 9 分钟读完</div>
+        <h1>Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-10-12-01">Karpathy 估算（他本人的粗算）：约 75% 的人几乎没碰过 LLM，约 0.2% 的人在数学和代码领域亲身体验到前沿能力。他认为这道认知差距正在变大。</a></li><li><span class="tag" data-cat="consulting">AI 咨询</span><a href="#2026-10-12-02">据 Every 节目自述，公司从每人各跑一个 OpenClaw，改为依赖一个共用的公司 agent；平台负责人 Willie Williams 提到，此后他本人的 token 用量大幅下降。</a></li><li><span class="tag" data-cat="app">AI App</span><a href="#2026-10-12-03">Meta 设计总监 Alex Cornell 介绍 Muse 的设计取舍：用渐进披露分三层展示 agent 的动作，主对话只保留一个持续的线程，不展示思考过程。他还演示了把多年的 Instagram 收藏整理成购物目录。</a></li><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-12-04">教过 10 万多人用 AI 开发的 Micky 说，他还不信任 agent 处理用户在用的东西，所以让 agent 先提交改动前后的测试证据，人工审查只放在最后一步。</a></li><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-12-05">Simon Willison 让 GPT-6 Astra 读 OpenAI 新发布的 Decisions API 文档，参照他已有的 llm-typesafe 插件，写出了 llm-openai-decisions 插件（0.1a0 预览版）。</a></li></ul>
+      </section>
+      <section class="item" id="2026-10-12-01">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-11<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-12-01/">01｜同一时刻，有人觉得 AI 只是个笨聊天框，有人觉得曲线已经竖起来了</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Andrej Karpathy 在 X 上重提他 4 月的一条推文，并结合自己写代码方式的变化来讲。</dd><dt>核心观点</dt><dd>他把人们对 LLM 能力的认知分成四层：几乎没接触过的人，偶尔用免费版的人，在数学和代码领域用前沿模型的专业用户（约 2000 万人），以及能用内部系统的约 5000 人。他认为造成差距的有三个因素：问题的规模和周期、能力分布不均、使用权限。</dd><dt>依据</dt><dd>主要依据是他的亲身经历：他说不到一年前自己还在手写代码，现在过去要做几周到几个月的复杂项目，agent 凭一个 prompt 就能完成。各层人数是他的粗算，没有给出数据来源。</dd><dt>对你的意义</dt><dd>判断 AI 对自己有没有用之前，先挑一个够大、自己真正在乎的问题来测试，不要只用一段话就能答完的小问题下结论。</dd><dt>争议·条件</dt><dd>他认为能力集中在数字化、可验证、经济价值高的领域。在这些领域之外，大多数专业人士感受到的提升有限，这一点也是他的判断。</dd></dl>
+        <div class="body"><p>Andrej Karpathy 在<a href="https://x.com/karpathy/status/2109361546505966046">这条推文</a>里说，人们对 LLM 能力的认知正在分化，而且他认为这道差距在扩大。按他的粗算，约 60 亿人几乎没接触过 LLM；10 到 20 亿人偶尔用免费版，把它当成更好用的搜索或写作助手；约 2000 万人在数学和代码领域用前沿模型，亲眼看到几周到几个月的项目由 agent 完成；另有约 5000 人能用内部系统。他还说，不到一年前，自己还在一个字符一个字符地手写代码。</p><p>对读者更有用的是他列出的三个成因。<strong>第一，收益随问题的规模和周期增长</strong>，一段话就能答完的问题发挥不出系统的能力。第二，能力分布不均，在可验证、经济价值高的数字领域最强。第三，使用权限不同，分为免费版、付费版和内部版。他还提到，许多高管日常主要在和人沟通，对 AI 的理解大多是间接的。</p><p><strong>各层人数是估算，没有统计依据。</strong>如果你还停留在免费版加短问题的用法，可以先准备两三个真正难、自己也在乎的问题，用前沿模型做一次完整尝试，再判断它在你的岗位上值多少。</p></div>
+        <div class="sources">原文：<a href="https://x.com/karpathy/status/2109361546505966046" target="_blank" rel="noopener" title="Andrej Karpathy: Dusting off this tweet from April because this gap in shared understanding of LL">Follow Builders (X)</a></div>
+      </section>
+      <section class="item" id="2026-10-12-02">
+        <div class="item-meta"><span class="tag" data-cat="consulting">AI 咨询</span><span>·</span>机会观察<span>·</span>2026-10-07<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-12-02/">02｜Every 的员工各自养的 agent 都停了，最后改成全公司共用一个</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Every 的 CEO Dan Shipper 和平台负责人 Willie Williams 在自家播客复盘内部使用 agent 的经历。他们本周推出了对外产品 Every Agent。</dd><dt>怎么用</dt><dd>他们从每人各自运行 OpenClaw 个人 agent，转为全公司共用一个 agent。他们用 AI 驱动的信息流掌握一次产品发布的全部进展，并正在让 agent 主动推送信息，不必每次由人发问。</dd><dt>结果</dt><dd>按节目章节标题，个人 agent 后来「都停了」，Willie 的 token 用量「断崖式下降」。具体原因和数字，现有摘要未披露。</dd><dt>你可以试</dt><dd>如果你在帮一个团队落地 AI，可以先盘点大家各自试过的工具，看看哪些还在用。再从中挑一个流程，做成团队共用的 agent 来试。</dd><dt>注意</dt><dd>Every 在推广自家产品，这是有产品要卖的一方的自述。个人 agent 为什么停用，需要看完整节目才能知道。</dd></dl>
+        <div class="body"><p>在 <a href="https://www.youtube.com/watch?v=_pcy1_jU27k">The Every Podcast 这一期</a>，Dan Shipper 和 Every 平台负责人 Willie Williams 讲了公司内部的一次转变：起初每人各自运行 OpenClaw 个人 agent，后来这些 agent 陆续停用，公司转向一个共用的公司 agent。这个 agent 已作为 Every Agent 对外发布。节目还谈到为 builder 做产品和为 operator 做产品有什么不同，以及 AI 时代的工程管理。</p><p>他们的判断是：<strong>工作会跑在公司 agent 上，个人 agent 留给私人生活</strong>，比如为生活的不同方面分别设一个 AI 教练。这对 AI 咨询有参考价值。员工各自用个人工具，热情过去后容易停用；把一个流程做成团队共用的 agent，接上团队数据，再加上主动推送，才有可能持续用下去。</p><p><strong>这是厂商讲自家的路线，个人 agent 停用的原因和 token 用量数据，摘要都没有披露。</strong>节目从 11:13 开始讲个人 agent 为什么停用，23:53 讲 token 用量，可以直接从这两处看起。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/watch?v=_pcy1_jU27k" target="_blank" rel="noopener" title="OpenAI Dots Took Over Our Company">Every (YouTube)</a></div>
+      </section>
+      <section class="item" id="2026-10-12-03">
+        <div class="item-meta"><span class="tag" data-cat="app">AI App</span><span>·</span>本周演示<span>·</span>2026-10-12<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-12-03/">03｜Meta 设计总监讲 Muse：同一件事按三个层级展示，主对话只开一个</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Alex Cornell 在 Meta 负责 AI agent Muse 的设计，这期 How I AI 访谈讲的是自家产品。</dd><dt>怎么用</dt><dd>同一项活动分三层展示：普通用户看 emoji，想看细节的人看任务列表，工程师看原始日志。界面结构固定，内容动态变化；主对话是一个持续的线程，范围明确的任务放在侧边对话里处理。</dd><dt>结果</dt><dd>材料给出的是设计原则和他个人的用法：把 Instagram 收藏做成 SkyMall 风格的购物目录，分析自己的高尔夫和国际象棋对局，把一个 20 年的博客改成每日播客。材料未披露用户数和留存数据。</dd><dt>你可以试</dt><dd>做 AI App 的人，可以检查自己的产品是否把同一种透明度推给了所有用户，试着按用户类型分成「状态、任务、日志」三层。</dd><dt>注意</dt><dd>他认为可见的思考链常常只是在掩盖延迟。这个结论的前提是模型够快，慢模型的产品未必适用。</dd></dl>
+        <div class="body"><p>在 <a href="https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with">How I AI 这期节目</a>，Meta 设计总监 Alex Cornell 讲了 Muse 的设计。他的指导问题是：「如果你是在和另一个人说话，这件事该怎么进行？」所以 Muse 去掉了传统的消息气泡，把 agent 放在屏幕顶部。<strong>这是 Meta 员工介绍自家产品，没有给出用户或留存数据。</strong></p><p>对做消费级 AI App 的人，有三条可以直接对照。第一，<strong>渐进披露</strong>：同一项活动用 emoji、任务列表、原始日志三层呈现，不同用户各取所需。第二，生成式 UI 只让内容变，结构保持固定，变化的只是状态 emoji、个性化建议和小动画。第三，他认为可见的思考链往往是为了掩盖延迟，模型够快时，直接给结果就行。</p><p>他自己用 Muse 处理个人数据的例子也能借鉴：<strong>把多年攒下的 Instagram 收藏交给 agent 归类，做成购物推荐目录</strong>。用户手里这类闲置的个人数据，也许能成为 App 的切入点。节目附有三个工作流的分步拆解。</p></div>
+        <div class="sources">原文：<a href="https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with" target="_blank" rel="noopener" title="🎙️ How I AI: How Meta designed Muse with Alex Cornell">Lenny&#39;s Newsletter &amp; Podcast</a></div>
+      </section>
+      <section class="item" id="2026-10-12-04">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-12<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-12-04/">04｜不放心让 agent 上线代码，就让它先交「证据」再人工验收</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Micky（@Rasmic），按 Peter Yang 的介绍，他教过 10 万多人用 AI 开发。这是他在 Peter Yang 访谈里讲的开发流程。</dd><dt>怎么用</dt><dd>他做的是「证据驱动的测试」：agent 完成工作后，用改动前后的对比、greploop 等方式拿出证据，说明做了什么、为什么是对的。人工审查是最后一步。</dd><dt>结果</dt><dd>他本人说，这样能减少人工审查的摩擦。材料没有给出节省时间或缺陷率的数据。</dd><dt>你可以试</dt><dd>下次让 agent 改代码或改文档时，在提示词里要求它最后交一份证据清单：改了哪些地方、改动前后的结果、跑了哪些检查。拿到清单再开始审。</dd><dt>注意</dt><dd>他提到完整流程共四步，推文只讲了验收这一步，其余步骤材料未披露。</dd></dl>
+        <div class="body"><p>Peter Yang 发布了一段<a href="https://x.com/petergyang/status/2109433961223180517">与 Micky 的访谈摘录</a>。Micky 说：「我还没到信任 agent 的程度，尤其是对用户正在用的东西。」他的解决办法是把人工审查放到最后，并且在审查前，让 agent 尽可能多地拿出证据：改动前后的测试对比、greploop 等，用来说明「做了哪些工作，为什么这样是对的」。</p><p>这个思路<strong>不要求你更信任 agent，而是降低你核实它的成本</strong>。他说，人工审查大概是开发者工作里最难受的一环，先让 agent 自证，能减少这部分摩擦。这一点对工程以外的岗位也适用。让 AI 改报表、改需求文档时，可以要求它附上原始数据和修改后的对照，以及它自己核对过哪些项。</p><p><strong>限制：</strong>推文只讲了四步流程里的验收一步，也没有效率数据。具体做法要看他的完整视频。</p></div>
+        <div class="sources">原文：<a href="https://x.com/petergyang/status/2109433961223180517" target="_blank" rel="noopener" title="Peter Yang: &quot;I&#39;m not at a point where I trust the agent, especially with stuff that people a">Follow Builders (X)</a></div>
+      </section>
+      <section class="item" id="2026-10-12-05">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周动态<span>·</span>2026-10-06<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-12-05/">05｜给 agent 一份旧插件当样板，让它读完新文档就写出新插件</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison，维护命令行工具 llm 及其插件生态。</dd><dt>怎么用</dt><dd>他已有一个对接 Jev 的插件 llm-typesafe，新 API 在概念上和 Jev 相近。他让模型阅读新文档，以旧插件为样板写新插件。</dd><dt>结果</dt><dd>插件已发布为 alpha 版，支持图片输入。按他记录的价格，两个服务都只对输入收费：OpenAI 每百万输入 token 10 美分，Jev 4.2 美分。</dd><dt>你可以试</dt><dd>要对接一个新接口时，先找一个你已经写好、结构相似的实现，连同新文档一起交给 agent，然后对照样板审查它的产出。</dd><dt>注意</dt><dd>他熟悉自己的代码库，两个 API 的结构又很相似。版本号是 0.1a0，说明仍是早期版本。</dd></dl>
+        <div class="body"><p>OpenAI 发布 Decisions API 后，Simon Willison <a href="https://simonwillison.net/2026/Oct/6/llm-openai-decisions/">当天就发布了对应插件</a>。做法是让 GPT-6 Astra 阅读新 API 文档，参照他已有的 llm-typesafe 插件来写。两个 API 都支持三类问题：是否题、选择题和打分题。区别在于 gpt-6-luna 还能处理图片。他演示了一个例子：问一张鹈鹕的图片里有没有哺乳动物，返回的概率是 0.0。</p><p>可以借鉴的是<strong>「样板 + 新文档」</strong>的组合：已有的实现告诉 agent 代码风格和结构，新文档补上接口细节。内部工具对接新系统、按旧模板做新报表，都可以这样分工。前提是两者结构相近，而且你看得懂样板。他把版本标为 alpha，最终质量仍要靠作者自己审查。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/6/llm-openai-decisions/" target="_blank" rel="noopener" title="llm-openai-decisions 0.1a0">Simon Willison</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>选一件下周要交给 AI 做的事，最好是改代码、改文档或整理数据。在提示词末尾加一句：「完成后列出证据：改了哪些地方、改动前后的对比、你自己核对过哪些项。」手边如果有一份结构相似的旧产出，一并作为样板发给它。做完后记两个数字：从拿到证据到验收完成用了多少分钟，以及证据清单里有几处你还是要回到原文去查。这两个数字能告诉你，这类任务里人和 AI 各该承担多少。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-11/">← 2026 年 10 月 11 日 · 周日</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

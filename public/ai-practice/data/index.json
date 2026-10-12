@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-12T06:17:43.936Z",
+  "updatedAt": "2026-10-12T15:44:57.998Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 1
+      "count": 2
     },
     {
       "id": "consulting",
       "name": "AI 咨询",
       "en": "AI consulting",
       "desc": "找客户、诊断业务、界定交付、培训、实施与维护",
-      "count": 2
+      "count": 3
     },
     {
       "id": "content",
@@ -34,17 +34,54 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 1
+      "count": 2
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 2
+      "count": 4
     }
   ],
   "days": [
+    {
+      "date": "2026-10-12",
+      "number": 3,
+      "title": "Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 9,
+      "itemCount": 5,
+      "categoryCounts": {
+        "perspective": 1,
+        "consulting": 1,
+        "app": 1,
+        "productivity": 2
+      },
+      "headlines": [
+        {
+          "category": "perspective",
+          "headline": "同一时刻，有人觉得 AI 只是个笨聊天框，有人觉得曲线已经竖起来了"
+        },
+        {
+          "category": "consulting",
+          "headline": "Every 的员工各自养的 agent 都停了，最后改成全公司共用一个"
+        },
+        {
+          "category": "app",
+          "headline": "Meta 设计总监讲 Muse：同一件事按三个层级展示，主对话只开一个"
+        },
+        {
+          "category": "productivity",
+          "headline": "不放心让 agent 上线代码，就让它先交「证据」再人工验收"
+        },
+        {
+          "category": "productivity",
+          "headline": "给 agent 一份旧插件当样板，让它读完新文档就写出新插件"
+        }
+      ]
+    },
     {
       "date": "2026-10-11",
       "number": 2,

@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-12",
+  "title": "Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个",
+  "items": [
+    {
+      "candidateIds": [
+        "c38"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-11",
+      "headline": "同一时刻，有人觉得 AI 只是个笨聊天框，有人觉得曲线已经竖起来了",
+      "oneLiner": "Karpathy 估算（他本人的粗算）：约 75% 的人几乎没碰过 LLM，约 0.2% 的人在数学和代码领域亲身体验到前沿能力。他认为这道认知差距正在变大。",
+      "who": "Andrej Karpathy 在 X 上重提他 4 月的一条推文，并结合自己写代码方式的变化来讲。",
+      "how": "他把人们对 LLM 能力的认知分成四层：几乎没接触过的人，偶尔用免费版的人，在数学和代码领域用前沿模型的专业用户（约 2000 万人），以及能用内部系统的约 5000 人。他认为造成差距的有三个因素：问题的规模和周期、能力分布不均、使用权限。",
+      "result": "主要依据是他的亲身经历：他说不到一年前自己还在手写代码，现在过去要做几周到几个月的复杂项目，agent 凭一个 prompt 就能完成。各层人数是他的粗算，没有给出数据来源。",
+      "tryThis": "判断 AI 对自己有没有用之前，先挑一个够大、自己真正在乎的问题来测试，不要只用一段话就能答完的小问题下结论。",
+      "caveat": "他认为能力集中在数字化、可验证、经济价值高的领域。在这些领域之外，大多数专业人士感受到的提升有限，这一点也是他的判断。",
+      "body": "Andrej Karpathy 在[这条推文](https://x.com/karpathy/status/2109361546505966046)里说，人们对 LLM 能力的认知正在分化，而且他认为这道差距在扩大。按他的粗算，约 60 亿人几乎没接触过 LLM；10 到 20 亿人偶尔用免费版，把它当成更好用的搜索或写作助手；约 2000 万人在数学和代码领域用前沿模型，亲眼看到几周到几个月的项目由 agent 完成；另有约 5000 人能用内部系统。他还说，不到一年前，自己还在一个字符一个字符地手写代码。\n\n对读者更有用的是他列出的三个成因。**第一，收益随问题的规模和周期增长**，一段话就能答完的问题发挥不出系统的能力。第二，能力分布不均，在可验证、经济价值高的数字领域最强。第三，使用权限不同，分为免费版、付费版和内部版。他还提到，许多高管日常主要在和人沟通，对 AI 的理解大多是间接的。\n\n**各层人数是估算，没有统计依据。**如果你还停留在免费版加短问题的用法，可以先准备两三个真正难、自己也在乎的问题，用前沿模型做一次完整尝试，再判断它在你的岗位上值多少。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Andrej Karpathy: Dusting off this tweet from April because this gap in shared understanding of LL",
+          "url": "https://x.com/karpathy/status/2109361546505966046"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-12-01"
+    },
+    {
+      "candidateIds": [
+        "c21"
+      ],
+      "category": "consulting",
+      "kind": "机会观察",
+      "eventDate": "2026-10-07",
+      "headline": "Every 的员工各自养的 agent 都停了，最后改成全公司共用一个",
+      "oneLiner": "据 Every 节目自述，公司从每人各跑一个 OpenClaw，改为依赖一个共用的公司 agent；平台负责人 Willie Williams 提到，此后他本人的 token 用量大幅下降。",
+      "who": "Every 的 CEO Dan Shipper 和平台负责人 Willie Williams 在自家播客复盘内部使用 agent 的经历。他们本周推出了对外产品 Every Agent。",
+      "how": "他们从每人各自运行 OpenClaw 个人 agent，转为全公司共用一个 agent。他们用 AI 驱动的信息流掌握一次产品发布的全部进展，并正在让 agent 主动推送信息，不必每次由人发问。",
+      "result": "按节目章节标题，个人 agent 后来「都停了」，Willie 的 token 用量「断崖式下降」。具体原因和数字，现有摘要未披露。",
+      "tryThis": "如果你在帮一个团队落地 AI，可以先盘点大家各自试过的工具，看看哪些还在用。再从中挑一个流程，做成团队共用的 agent 来试。",
+      "caveat": "Every 在推广自家产品，这是有产品要卖的一方的自述。个人 agent 为什么停用，需要看完整节目才能知道。",
+      "body": "在 [The Every Podcast 这一期](https://www.youtube.com/watch?v=_pcy1_jU27k)，Dan Shipper 和 Every 平台负责人 Willie Williams 讲了公司内部的一次转变：起初每人各自运行 OpenClaw 个人 agent，后来这些 agent 陆续停用，公司转向一个共用的公司 agent。这个 agent 已作为 Every Agent 对外发布。节目还谈到为 builder 做产品和为 operator 做产品有什么不同，以及 AI 时代的工程管理。\n\n他们的判断是：**工作会跑在公司 agent 上，个人 agent 留给私人生活**，比如为生活的不同方面分别设一个 AI 教练。这对 AI 咨询有参考价值。员工各自用个人工具，热情过去后容易停用；把一个流程做成团队共用的 agent，接上团队数据，再加上主动推送，才有可能持续用下去。\n\n**这是厂商讲自家的路线，个人 agent 停用的原因和 token 用量数据，摘要都没有披露。**节目从 11:13 开始讲个人 agent 为什么停用，23:53 讲 token 用量，可以直接从这两处看起。",
+      "sources": [
+        {
+          "label": "Every (YouTube)",
+          "title": "OpenAI Dots Took Over Our Company",
+          "url": "https://www.youtube.com/watch?v=_pcy1_jU27k"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-12-02"
+    },
+    {
+      "candidateIds": [
+        "c10"
+      ],
+      "category": "app",
+      "kind": "本周演示",
+      "eventDate": "2026-10-12",
+      "headline": "Meta 设计总监讲 Muse：同一件事按三个层级展示，主对话只开一个",
+      "oneLiner": "Meta 设计总监 Alex Cornell 介绍 Muse 的设计取舍：用渐进披露分三层展示 agent 的动作，主对话只保留一个持续的线程，不展示思考过程。他还演示了把多年的 Instagram 收藏整理成购物目录。",
+      "who": "Alex Cornell 在 Meta 负责 AI agent Muse 的设计，这期 How I AI 访谈讲的是自家产品。",
+      "how": "同一项活动分三层展示：普通用户看 emoji，想看细节的人看任务列表，工程师看原始日志。界面结构固定，内容动态变化；主对话是一个持续的线程，范围明确的任务放在侧边对话里处理。",
+      "result": "材料给出的是设计原则和他个人的用法：把 Instagram 收藏做成 SkyMall 风格的购物目录，分析自己的高尔夫和国际象棋对局，把一个 20 年的博客改成每日播客。材料未披露用户数和留存数据。",
+      "tryThis": "做 AI App 的人，可以检查自己的产品是否把同一种透明度推给了所有用户，试着按用户类型分成「状态、任务、日志」三层。",
+      "caveat": "他认为可见的思考链常常只是在掩盖延迟。这个结论的前提是模型够快，慢模型的产品未必适用。",
+      "body": "在 [How I AI 这期节目](https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with)，Meta 设计总监 Alex Cornell 讲了 Muse 的设计。他的指导问题是：「如果你是在和另一个人说话，这件事该怎么进行？」所以 Muse 去掉了传统的消息气泡，把 agent 放在屏幕顶部。**这是 Meta 员工介绍自家产品，没有给出用户或留存数据。**\n\n对做消费级 AI App 的人，有三条可以直接对照。第一，**渐进披露**：同一项活动用 emoji、任务列表、原始日志三层呈现，不同用户各取所需。第二，生成式 UI 只让内容变，结构保持固定，变化的只是状态 emoji、个性化建议和小动画。第三，他认为可见的思考链往往是为了掩盖延迟，模型够快时，直接给结果就行。\n\n他自己用 Muse 处理个人数据的例子也能借鉴：**把多年攒下的 Instagram 收藏交给 agent 归类，做成购物推荐目录**。用户手里这类闲置的个人数据，也许能成为 App 的切入点。节目附有三个工作流的分步拆解。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: How Meta designed Muse with Alex Cornell",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-12-03"
+    },
+    {
+      "candidateIds": [
+        "c29"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-12",
+      "headline": "不放心让 agent 上线代码，就让它先交「证据」再人工验收",
+      "oneLiner": "教过 10 万多人用 AI 开发的 Micky 说，他还不信任 agent 处理用户在用的东西，所以让 agent 先提交改动前后的测试证据，人工审查只放在最后一步。",
+      "who": "Micky（@Rasmic），按 Peter Yang 的介绍，他教过 10 万多人用 AI 开发。这是他在 Peter Yang 访谈里讲的开发流程。",
+      "how": "他做的是「证据驱动的测试」：agent 完成工作后，用改动前后的对比、greploop 等方式拿出证据，说明做了什么、为什么是对的。人工审查是最后一步。",
+      "result": "他本人说，这样能减少人工审查的摩擦。材料没有给出节省时间或缺陷率的数据。",
+      "tryThis": "下次让 agent 改代码或改文档时，在提示词里要求它最后交一份证据清单：改了哪些地方、改动前后的结果、跑了哪些检查。拿到清单再开始审。",
+      "caveat": "他提到完整流程共四步，推文只讲了验收这一步，其余步骤材料未披露。",
+      "body": "Peter Yang 发布了一段[与 Micky 的访谈摘录](https://x.com/petergyang/status/2109433961223180517)。Micky 说：「我还没到信任 agent 的程度，尤其是对用户正在用的东西。」他的解决办法是把人工审查放到最后，并且在审查前，让 agent 尽可能多地拿出证据：改动前后的测试对比、greploop 等，用来说明「做了哪些工作，为什么这样是对的」。\n\n这个思路**不要求你更信任 agent，而是降低你核实它的成本**。他说，人工审查大概是开发者工作里最难受的一环，先让 agent 自证，能减少这部分摩擦。这一点对工程以外的岗位也适用。让 AI 改报表、改需求文档时，可以要求它附上原始数据和修改后的对照，以及它自己核对过哪些项。\n\n**限制：**推文只讲了四步流程里的验收一步，也没有效率数据。具体做法要看他的完整视频。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Peter Yang: \"I'm not at a point where I trust the agent, especially with stuff that people a",
+          "url": "https://x.com/petergyang/status/2109433961223180517"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-12-04"
+    },
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-06",
+      "headline": "给 agent 一份旧插件当样板，让它读完新文档就写出新插件",
+      "oneLiner": "Simon Willison 让 GPT-6 Astra 读 OpenAI 新发布的 Decisions API 文档，参照他已有的 llm-typesafe 插件，写出了 llm-openai-decisions 插件（0.1a0 预览版）。",
+      "who": "开发者 Simon Willison，维护命令行工具 llm 及其插件生态。",
+      "how": "他已有一个对接 Jev 的插件 llm-typesafe，新 API 在概念上和 Jev 相近。他让模型阅读新文档，以旧插件为样板写新插件。",
+      "result": "插件已发布为 alpha 版，支持图片输入。按他记录的价格，两个服务都只对输入收费：OpenAI 每百万输入 token 10 美分，Jev 4.2 美分。",
+      "tryThis": "要对接一个新接口时，先找一个你已经写好、结构相似的实现，连同新文档一起交给 agent，然后对照样板审查它的产出。",
+      "caveat": "他熟悉自己的代码库，两个 API 的结构又很相似。版本号是 0.1a0，说明仍是早期版本。",
+      "body": "OpenAI 发布 Decisions API 后，Simon Willison [当天就发布了对应插件](https://simonwillison.net/2026/Oct/6/llm-openai-decisions/)。做法是让 GPT-6 Astra 阅读新 API 文档，参照他已有的 llm-typesafe 插件来写。两个 API 都支持三类问题：是否题、选择题和打分题。区别在于 gpt-6-luna 还能处理图片。他演示了一个例子：问一张鹈鹕的图片里有没有哺乳动物，返回的概率是 0.0。\n\n可以借鉴的是**「样板 + 新文档」**的组合：已有的实现告诉 agent 代码风格和结构，新文档补上接口细节。内部工具对接新系统、按旧模板做新报表，都可以这样分工。前提是两者结构相近，而且你看得懂样板。他把版本标为 alpha，最终质量仍要靠作者自己审查。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "llm-openai-decisions 0.1a0",
+          "url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-12-05"
+    }
+  ],
+  "action": "选一件下周要交给 AI 做的事，最好是改代码、改文档或整理数据。在提示词末尾加一句：「完成后列出证据：改了哪些地方、改动前后的对比、你自己核对过哪些项。」手边如果有一份结构相似的旧产出，一并作为样板发给它。做完后记两个数字：从拿到证据到验收完成用了多少分钟，以及证据清单里有几处你还是要回到原文去查。这两个数字能告诉你，这类任务里人和 AI 各该承担多少。",
+  "readingMinutes": 9,
+  "meta": {
+    "generatedAt": "2026-10-12T15:44:48.005Z",
+    "engine": "cli",
+    "candidateCount": 49,
+    "candidatesBySource": {
+      "Simon Willison": 8,
+      "How I AI (Claire Vo)": 1,
+      "Lenny's Newsletter & Podcast": 2,
+      "Ali Abdaal": 3,
+      "Matt Wolfe": 1,
+      "Starter Story (YouTube)": 3,
+      "Liam Ottley / Morningside AI": 1,
+      "Every (YouTube)": 3,
+      "Follow Builders (X)": 20,
+      "Latent Space": 3,
+      "The AI Daily Brief": 3,
+      "Riley Brown": 1
+    },
+    "shortlist": [
+      {
+        "id": "c21",
+        "reason": "谁：Every 的 CEO Dan Shipper 和平台负责人 Willie Williams；怎么用：讲公司从每人各跑一个 OpenClaw，改成全员共用一个公司级 agent；结果：Every Agent 本周上线。这是亲历的团队落地复盘，小团队可以参考。",
+        "source": "Every (YouTube)",
+        "title": "OpenAI Dots Took Over Our Company"
+      },
+      {
+        "id": "c29",
+        "reason": "谁：Micky（@Rasmic），教过 10 万多人用 AI 做开发；怎么用：4 步工作流，让 agent 交出改动前后的测试证据，再加 greploop，人工审查放在最后一步；结果：减少人工审查的麻烦，同时建立对 agent 的信任。做法具体，可以照着试。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Yang: \"I'm not at a point where I trust the agent, especially with stuff that people a"
+      },
+      {
+        "id": "c8",
+        "reason": "谁：Simon Willison；怎么用：让 GPT-6 Astra 读 OpenAI 新 API 的文档，参照他已有的 llm-typesafe 插件生成新插件；结果：发布 llm-openai-decisions 0.1a0。这是亲历的开发过程，个人开发者可以照搬。",
+        "source": "Simon Willison",
+        "title": "llm-openai-decisions 0.1a0"
+      },
+      {
+        "id": "c10",
+        "reason": "谁：Meta 设计总监 Alex Cornell；怎么用：讲 Muse 的渐进式展示和生成式 UI 怎么设计，也讲他自己怎么用 Muse 把多年的 Instagram 收藏变成购物目录；结果：一线做 agent 产品的设计思路，加上本人的使用案例。同一期节目有三个版本（c9、c10、c11），这条摘录信息最全，只留这条。",
+        "source": "Lenny's Newsletter & Podcast",
+        "title": "🎙️ How I AI: How Meta designed Muse with Alex Cornell"
+      },
+      {
+        "id": "c36",
+        "reason": "谁：YC 的 Garry Tan；怎么用：把产品里的 LLM 调用换成确定性代码；结果：他认为代码质量更好，也更贴合用户需求。这是做 AI 产品的人能直接拿去用的工程判断。",
+        "source": "Follow Builders (X)",
+        "title": "Garry Tan: Replacing LLM calls with deterministic code is a no brainer and also results in "
+      },
+      {
+        "id": "c47",
+        "reason": "谁：NLW 和 Nufar Gaspar；怎么用：用自己的真实任务测试新模型，比较输出，同时权衡质量、速度和成本；结果：一套可重复的选模型方法，适合想提效的上班族。",
+        "source": "The AI Daily Brief",
+        "title": "A System for Testing New AI Models"
+      },
+      {
+        "id": "c40",
+        "reason": "谁：Dan Shipper；怎么用：做了一个自动记录阅读书单的 feed，一直追溯到 2012 年；结果：做出了能用的个人工具，还想推广给 Every 全员。个人小项目，可以照着做，但摘录细节不多。",
+        "source": "Follow Builders (X)",
+        "title": "Dan Shipper: made a feed that automatically tracks the books im reading (and have read going "
+      },
+      {
+        "id": "c28",
+        "reason": "谁：Peter Yang；怎么用：和女儿一起用 Codex 做 modretro 游戏；结果：一个家庭场景的亲历开发案例，门槛低，能激发读者自己试。不过摘录里信息很少，交给编辑核实。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Yang: Building a @modretro game with my daughter and Codex https://t.co/78Ev7iGuG1"
+      },
+      {
+        "id": "c38",
+        "reason": "AI 认知类，谁：Karpathy；判断：人们对大模型能力的认识差距在扩大，他估算约 75% 的人几乎没接触过大模型，约 20% 只是把免费版聊天机器人当搜索用。这能帮读者判断自己处在哪一层、机会在哪里。",
+        "source": "Follow Builders (X)",
+        "title": "Andrej Karpathy: Dusting off this tweet from April because this gap in shared understanding of LL"
+      },
+      {
+        "id": "c5",
+        "reason": "AI 认知类，谁：Jake Boggan，研究 Barnette 猜想 24 年的数学爱好者；这道题据称已被 AI 证明（Simon 在 AI 话题下转引，摘录没写明证明者），他写下了自己失落又复杂的心情。这是一线的人面对 AI 冲击的真实感受。",
+        "source": "Simon Willison",
+        "title": "Quoting Jake Boggan"
+      },
+      {
+        "id": "c41",
+        "reason": "AI 认知类，谁：Claude Code 团队的 Thariq；判断：他认同陶哲轩的方向，认为不应接受一个不透明的超级智能，产品应该帮人建立理解，而不是绕开人。这是一线做产品的人对产品方向的判断。",
+        "source": "Follow Builders (X)",
+        "title": "Thariq: I think Terrence Tao is directionally correct, we shouldn’t settle for a super i"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 20004,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2492,
+        "output_tokens_details": {
+          "thinking_tokens": 1116
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 20004,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2492,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 20004,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 20004
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.20988
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 4,
+      "cache_creation_input_tokens": 26277,
+      "cache_read_input_tokens": 18777,
+      "output_tokens": 11073,
+      "output_tokens_details": {
+        "thinking_tokens": 1146
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 26277,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 4969,
+          "cache_read_input_tokens": 18777,
+          "cache_creation_input_tokens": 7500,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 7500
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.4354474
+  }
+}

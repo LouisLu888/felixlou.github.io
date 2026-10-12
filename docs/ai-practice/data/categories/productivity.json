@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c29"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-12",
+      "headline": "不放心让 agent 上线代码，就让它先交「证据」再人工验收",
+      "oneLiner": "教过 10 万多人用 AI 开发的 Micky 说，他还不信任 agent 处理用户在用的东西，所以让 agent 先提交改动前后的测试证据，人工审查只放在最后一步。",
+      "who": "Micky（@Rasmic），按 Peter Yang 的介绍，他教过 10 万多人用 AI 开发。这是他在 Peter Yang 访谈里讲的开发流程。",
+      "how": "他做的是「证据驱动的测试」：agent 完成工作后，用改动前后的对比、greploop 等方式拿出证据，说明做了什么、为什么是对的。人工审查是最后一步。",
+      "result": "他本人说，这样能减少人工审查的摩擦。材料没有给出节省时间或缺陷率的数据。",
+      "tryThis": "下次让 agent 改代码或改文档时，在提示词里要求它最后交一份证据清单：改了哪些地方、改动前后的结果、跑了哪些检查。拿到清单再开始审。",
+      "caveat": "他提到完整流程共四步，推文只讲了验收这一步，其余步骤材料未披露。",
+      "body": "Peter Yang 发布了一段[与 Micky 的访谈摘录](https://x.com/petergyang/status/2109433961223180517)。Micky 说：「我还没到信任 agent 的程度，尤其是对用户正在用的东西。」他的解决办法是把人工审查放到最后，并且在审查前，让 agent 尽可能多地拿出证据：改动前后的测试对比、greploop 等，用来说明「做了哪些工作，为什么这样是对的」。\n\n这个思路**不要求你更信任 agent，而是降低你核实它的成本**。他说，人工审查大概是开发者工作里最难受的一环，先让 agent 自证，能减少这部分摩擦。这一点对工程以外的岗位也适用。让 AI 改报表、改需求文档时，可以要求它附上原始数据和修改后的对照，以及它自己核对过哪些项。\n\n**限制：**推文只讲了四步流程里的验收一步，也没有效率数据。具体做法要看他的完整视频。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Peter Yang: \"I'm not at a point where I trust the agent, especially with stuff that people a",
+          "url": "https://x.com/petergyang/status/2109433961223180517"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-12-04",
+      "issueDate": "2026-10-12",
+      "issueNumber": 3
+    },
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-06",
+      "headline": "给 agent 一份旧插件当样板，让它读完新文档就写出新插件",
+      "oneLiner": "Simon Willison 让 GPT-6 Astra 读 OpenAI 新发布的 Decisions API 文档，参照他已有的 llm-typesafe 插件，写出了 llm-openai-decisions 插件（0.1a0 预览版）。",
+      "who": "开发者 Simon Willison，维护命令行工具 llm 及其插件生态。",
+      "how": "他已有一个对接 Jev 的插件 llm-typesafe，新 API 在概念上和 Jev 相近。他让模型阅读新文档，以旧插件为样板写新插件。",
+      "result": "插件已发布为 alpha 版，支持图片输入。按他记录的价格，两个服务都只对输入收费：OpenAI 每百万输入 token 10 美分，Jev 4.2 美分。",
+      "tryThis": "要对接一个新接口时，先找一个你已经写好、结构相似的实现，连同新文档一起交给 agent，然后对照样板审查它的产出。",
+      "caveat": "他熟悉自己的代码库，两个 API 的结构又很相似。版本号是 0.1a0，说明仍是早期版本。",
+      "body": "OpenAI 发布 Decisions API 后，Simon Willison [当天就发布了对应插件](https://simonwillison.net/2026/Oct/6/llm-openai-decisions/)。做法是让 GPT-6 Astra 阅读新 API 文档，参照他已有的 llm-typesafe 插件来写。两个 API 都支持三类问题：是否题、选择题和打分题。区别在于 gpt-6-luna 还能处理图片。他演示了一个例子：问一张鹈鹕的图片里有没有哺乳动物，返回的概率是 0.0。\n\n可以借鉴的是**「样板 + 新文档」**的组合：已有的实现告诉 agent 代码风格和结构，新文档补上接口细节。内部工具对接新系统、按旧模板做新报表，都可以这样分工。前提是两者结构相近，而且你看得懂样板。他把版本标为 alpha，最终质量仍要靠作者自己审查。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "llm-openai-decisions 0.1a0",
+          "url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-12-05",
+      "issueDate": "2026-10-12",
+      "issueNumber": 3
+    },
+    {
+      "candidateIds": [
         "c6"
       ],
       "category": "productivity",

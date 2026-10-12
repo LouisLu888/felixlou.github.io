@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c21"
+      ],
+      "category": "consulting",
+      "kind": "机会观察",
+      "eventDate": "2026-10-07",
+      "headline": "Every 的员工各自养的 agent 都停了，最后改成全公司共用一个",
+      "oneLiner": "据 Every 节目自述，公司从每人各跑一个 OpenClaw，改为依赖一个共用的公司 agent；平台负责人 Willie Williams 提到，此后他本人的 token 用量大幅下降。",
+      "who": "Every 的 CEO Dan Shipper 和平台负责人 Willie Williams 在自家播客复盘内部使用 agent 的经历。他们本周推出了对外产品 Every Agent。",
+      "how": "他们从每人各自运行 OpenClaw 个人 agent，转为全公司共用一个 agent。他们用 AI 驱动的信息流掌握一次产品发布的全部进展，并正在让 agent 主动推送信息，不必每次由人发问。",
+      "result": "按节目章节标题，个人 agent 后来「都停了」，Willie 的 token 用量「断崖式下降」。具体原因和数字，现有摘要未披露。",
+      "tryThis": "如果你在帮一个团队落地 AI，可以先盘点大家各自试过的工具，看看哪些还在用。再从中挑一个流程，做成团队共用的 agent 来试。",
+      "caveat": "Every 在推广自家产品，这是有产品要卖的一方的自述。个人 agent 为什么停用，需要看完整节目才能知道。",
+      "body": "在 [The Every Podcast 这一期](https://www.youtube.com/watch?v=_pcy1_jU27k)，Dan Shipper 和 Every 平台负责人 Willie Williams 讲了公司内部的一次转变：起初每人各自运行 OpenClaw 个人 agent，后来这些 agent 陆续停用，公司转向一个共用的公司 agent。这个 agent 已作为 Every Agent 对外发布。节目还谈到为 builder 做产品和为 operator 做产品有什么不同，以及 AI 时代的工程管理。\n\n他们的判断是：**工作会跑在公司 agent 上，个人 agent 留给私人生活**，比如为生活的不同方面分别设一个 AI 教练。这对 AI 咨询有参考价值。员工各自用个人工具，热情过去后容易停用；把一个流程做成团队共用的 agent，接上团队数据，再加上主动推送，才有可能持续用下去。\n\n**这是厂商讲自家的路线，个人 agent 停用的原因和 token 用量数据，摘要都没有披露。**节目从 11:13 开始讲个人 agent 为什么停用，23:53 讲 token 用量，可以直接从这两处看起。",
+      "sources": [
+        {
+          "label": "Every (YouTube)",
+          "title": "OpenAI Dots Took Over Our Company",
+          "url": "https://www.youtube.com/watch?v=_pcy1_jU27k"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-12-02",
+      "issueDate": "2026-10-12",
+      "issueNumber": 3
+    },
+    {
+      "candidateIds": [
         "c80"
       ],
       "category": "consulting",

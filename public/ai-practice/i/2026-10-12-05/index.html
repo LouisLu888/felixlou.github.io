@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>给 agent 一份旧插件当样板，让它读完新文档就写出新插件｜AI 实干派</title>
+  <meta name="description" content="Simon Willison 让 GPT-6 Astra 读 OpenAI 新发布的 Decisions API 文档，参照他已有的 llm-typesafe 插件，写出了 llm-openai-decisions 插件（0.1a0 预览版…">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-12-05/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="给 agent 一份旧插件当样板，让它读完新文档就写出新插件｜AI 实干派">
+  <meta property="og:description" content="Simon Willison 让 GPT-6 Astra 读 OpenAI 新发布的 Decisions API 文档，参照他已有的 llm-typesafe 插件，写出了 llm-openai-decisions 插件（0.1a0 预览版…">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-12-05/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-12.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="给 agent 一份旧插件当样板，让它读完新文档就写出新插件｜AI 实干派">
+  <meta name="twitter:description" content="Simon Willison 让 GPT-6 Astra 读 OpenAI 新发布的 Decisions API 文档，参照他已有的 llm-typesafe 插件，写出了 llm-openai-decisions 插件（0.1a0 预览版…">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-12.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">2</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">2</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">4</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-12/">AI 实干派 003 · 2026 年 10 月 12 日 · 周一</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周动态<span>·</span>2026-10-06<span>·</span>US</div>
+        <h1>给 agent 一份旧插件当样板，让它读完新文档就写出新插件</h1>
+        <p class="summary">Simon Willison 让 GPT-6 Astra 读 OpenAI 新发布的 Decisions API 文档，参照他已有的 llm-typesafe 插件，写出了 llm-openai-decisions 插件（0.1a0 预览版）。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison，维护命令行工具 llm 及其插件生态。</dd><dt>怎么用</dt><dd>他已有一个对接 Jev 的插件 llm-typesafe，新 API 在概念上和 Jev 相近。他让模型阅读新文档，以旧插件为样板写新插件。</dd><dt>结果</dt><dd>插件已发布为 alpha 版，支持图片输入。按他记录的价格，两个服务都只对输入收费：OpenAI 每百万输入 token 10 美分，Jev 4.2 美分。</dd><dt>你可以试</dt><dd>要对接一个新接口时，先找一个你已经写好、结构相似的实现，连同新文档一起交给 agent，然后对照样板审查它的产出。</dd><dt>注意</dt><dd>他熟悉自己的代码库，两个 API 的结构又很相似。版本号是 0.1a0，说明仍是早期版本。</dd></dl>
+        <div class="body"><p>OpenAI 发布 Decisions API 后，Simon Willison <a href="https://simonwillison.net/2026/Oct/6/llm-openai-decisions/">当天就发布了对应插件</a>。做法是让 GPT-6 Astra 阅读新 API 文档，参照他已有的 llm-typesafe 插件来写。两个 API 都支持三类问题：是否题、选择题和打分题。区别在于 gpt-6-luna 还能处理图片。他演示了一个例子：问一张鹈鹕的图片里有没有哺乳动物，返回的概率是 0.0。</p><p>可以借鉴的是<strong>「样板 + 新文档」</strong>的组合：已有的实现告诉 agent 代码风格和结构，新文档补上接口细节。内部工具对接新系统、按旧模板做新报表，都可以这样分工。前提是两者结构相近，而且你看得懂样板。他把版本标为 alpha，最终质量仍要靠作者自己审查。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/6/llm-openai-decisions/" target="_blank" rel="noopener" title="llm-openai-decisions 0.1a0">Simon Willison</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-12/">← 当期全部 5 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>
