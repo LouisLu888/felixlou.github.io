@@ -71,7 +71,7 @@ Buttondown 账号和博客共用一个订阅列表，博客的新文章通知会
 `.github/workflows/ai-practice-podcast.yml` 在每日出刊的 workflow 成功后自动运行，与出刊流程分开，失败不影响图文版：
 
 1. `podcast-build.js`：用 OpenAI（`gpt-5.5`）把当天这期改写成口播稿，规则在 `prompts/podcast.md`：条目、顺序和事实与图文版一致，只改成口语。再用 Inworld TTS-2（经 Replicate，音色 Xiaoyin）按故事分段合成、拼接，编码成单声道 MP3。2026-10-11 用同一段文本盲听对比了 Inworld、MiniMax 2.8 HD、Gemini 3.1 Flash TTS、Qwen3-TTS、ElevenLabs v3 和 OpenAI，选了 Inworld（Replicate 上 $25 / 百万字符，每集约 $0.08）。Inworld 失败时整集改用 OpenAI `gpt-4o-mini-tts`，不会一集里混两种声音。
-2. `podcast-feed.js`：把 MP3 放进 `public/ai-practice/podcast/audio/`，更新 `episodes.json` 和 `feed.xml`，show notes 里的链接取自当期 JSON，不用模型输出。只保留最近 30 集的 MP3（48kbps，每集约 3.5MB），更早的自动删除。`build-index.js` 把它镜像到 `docs/`。
+2. `podcast-feed.js`：把 MP3 放进 `public/ai-practice/podcast/audio/`，更新 `episodes.json` 和 `feed.xml`，show notes 里的链接取自当期 JSON，不用模型输出。只保留最近 30 集的 MP3（48kbps，每集约 3.5MB），更早的自动删除。workflow 只把 `podcast/` 目录镜像到 `docs/`，也只提交这个目录，不跑 `build-index.js`，以免和改动 `data/index.json` 的其他提交冲突。
 3. 音频必须由 jiabinlu.com 自己提供。GitHub Release 附件返回 `application/octet-stream` 加会过期的跳转，Apple Podcasts 会报 “This episode cannot be played on this device”。
 
 需要仓库 secret `OPENAI_API_KEY`（写稿和备用 TTS）和 `REPLICATE_API_TOKEN`（Inworld）。可在 Actions 页手动运行 **AI 实干派 podcast**，填 `date` 补做某一天，勾 `force` 重做。换引擎用环境变量 `PODCAST_TTS_ENGINE`（`inworld` 或 `openai`），换 Inworld 音色用 `PODCAST_INWORLD_VOICE`（默认 `Xiaoyin`）。每集成本约 $0.2（写稿约 $0.1，语音约 $0.08）。

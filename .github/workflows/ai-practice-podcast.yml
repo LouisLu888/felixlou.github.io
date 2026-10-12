@@ -76,11 +76,15 @@ jobs:
             exit 0
           fi
           node ai-practice/scripts/podcast-feed.js --episode out/episode.json --audio out/episode.mp3
-          node ai-practice/scripts/build-index.js
+          # Mirror only the podcast folder. build-index.js would also rewrite
+          # data/index.json, which other workflows and hand edits touch too, and
+          # the rebase below would then conflict.
+          rm -rf docs/ai-practice/podcast
+          cp -R public/ai-practice/podcast docs/ai-practice/podcast
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/ai-practice/ docs/ai-practice/
+          git add -A public/ai-practice/podcast docs/ai-practice/podcast
           git commit -m "AI 实干派: podcast episode ${{ steps.day.outputs.date }} [skip-newsletter]"
           # The blog is also edited by hand; rebase onto anything pushed meanwhile.
           git pull --rebase --autostash origin master
