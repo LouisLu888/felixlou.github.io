@@ -1,0 +1,33 @@
+{
+  "category": {
+    "id": "app",
+    "name": "AI App",
+    "en": "AI app",
+    "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存"
+  },
+  "items": [
+    {
+      "id": "2026-10-10-04",
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-09-16",
+      "headline": "试用人数上去了，退款却吃掉了增量收入",
+      "who": "AI 口音与口语教练 BoldVoice 联创 Anada Lakra，产品面向有职业沟通需求的人。",
+      "how": "测试更强的付费墙和折扣；每位员工每周做两次用户访谈，工程师也参与。",
+      "result": "试用开始率提高，随后增加的退款抵消了收益（经营者访谈自述）。",
+      "tryThis": "下一次改付费页面前，先约定观察周期和扣除退款后的收入指标，再判断实验成败。",
+      "caveat": "业绩按本人自述处理，材料未披露具体转化率和退款数字。",
+      "body": "AI 口音与口语教练 BoldVoice 联创 Anada Lakra 在 [Sub Club](https://subclub.com/episode/why-boldvoice-charged-from-day-1-and-ignored-the-duolingo-freemium-playbook-anada-lakra) 分享了一个增长实验：更强的付费墙和折扣提高了试用开始率，随后增加的退款却抵消了收益。因此，团队强调等同一批用户使用一段时间后，再看扣除退款的收入。\n\n产品定位也有一个具体选择：面向有职业沟通需求的人。团队要求**每位员工每周做两次用户访谈，工程师也参与**，持续直接听用户怎么说。\n\n做付费 App 可以学这两件事：找到用户愿意付钱解决的具体场景；把试用、付款、退款连起来看。",
+      "sources": [
+        {
+          "label": "Sub Club",
+          "title": "Why BoldVoice charged from day 1",
+          "url": "https://subclub.com/episode/why-boldvoice-charged-from-day-1-and-ignored-the-duolingo-freemium-playbook-anada-lakra"
+        }
+      ],
+      "region": "US",
+      "issueDate": "2026-10-10",
+      "issueNumber": 1
+    }
+  ]
+}

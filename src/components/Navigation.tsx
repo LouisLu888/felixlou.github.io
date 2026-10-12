@@ -59,6 +59,10 @@ const Navigation: React.FC = () => {
                         <Link to="/blog" className={linkClass('/blog')}>
                           {t('nav.blog')}
                         </Link>
+                        {/* Static page outside the React router (public/ai-practice), so a plain link */}
+                        <a href="/ai-practice/" className={linkClass('/ai-practice')}>
+                          {t('nav.aiPractice')}
+                        </a>
                         <Link to="/services" className={linkClass('/services')}>
                           {t('nav.services')}
                         </Link>
@@ -119,6 +123,9 @@ const Navigation: React.FC = () => {
                   <Link to="/blog" className={`block py-2 ${linkClass('/blog')}`}>
                     {t('nav.blog')}
                   </Link>
+                  <a href="/ai-practice/" className={`block py-2 ${linkClass('/ai-practice')}`}>
+                    {t('nav.aiPractice')}
+                  </a>
                   <Link to="/services" className={`block py-2 ${linkClass('/services')}`}>
                     {t('nav.services')}
                   </Link>

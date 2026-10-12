@@ -1,0 +1,38 @@
+[
+  {
+    "id": "perspective",
+    "name": "AI 认知",
+    "en": "Perspectives on AI",
+    "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作"
+  },
+  {
+    "id": "consulting",
+    "name": "AI 咨询",
+    "en": "AI consulting",
+    "desc": "找客户、诊断业务、界定交付、培训、实施与维护"
+  },
+  {
+    "id": "content",
+    "name": "内容创作",
+    "en": "AI content creation",
+    "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入"
+  },
+  {
+    "id": "saas",
+    "name": "Micro SaaS",
+    "en": "AI micro SaaS",
+    "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护"
+  },
+  {
+    "id": "app",
+    "name": "AI App",
+    "en": "AI app",
+    "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存"
+  },
+  {
+    "id": "productivity",
+    "name": "工作提效",
+    "en": "AI at work",
+    "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败"
+  }
+]

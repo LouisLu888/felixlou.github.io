@@ -1,6 +1,7 @@
 export const en = {
   // Navigation
   nav: {
+    aiPractice: 'AI in Practice',
     blog: 'Blog',
     books: 'Books',
     services: 'Consulting',

@@ -1,6 +1,7 @@
 export const zh = {
   // Navigation
   nav: {
+    aiPractice: 'AI 实战派',
     blog: '博客',
     books: '书库',
     services: '咨询',

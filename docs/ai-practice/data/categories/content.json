@@ -1,0 +1,65 @@
+{
+  "category": {
+    "id": "content",
+    "name": "内容创作",
+    "en": "AI content creation",
+    "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入"
+  },
+  "items": [
+    {
+      "candidateIds": [
+        "c19"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-09",
+      "headline": "一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」",
+      "oneLiner": "Magnific 联创 Javi Lopez 独自用 AI 做出 17 分 41 秒的 Backrooms 短片第一集；节目由 Magnific 赞助，时间和成本的具体数字材料里没有给出。",
+      "who": "Javi Lopez 是 AI 图像工具 Magnific 的联合创始人，接受 AI 影像频道 Theoretically Media 采访。",
+      "how": "他借用 Backrooms 这个网络公共神话做题材。先把邮轮故事拆成多段发布，用积累设定代替一次讲完；制作上的一条经验是「别做手持镜头效果」。",
+      "result": "做成 Backrooms Nemoris 第一集，长 17:41，计划拍成系列。耗时和成本在视频 11:04 讨论，简介没有给出数字。",
+      "tryThis": "做 AI 影像内容，可以先拆成短片段连续发布，看哪段设定有人追问，再决定是否做长片。",
+      "caveat": "嘉宾就是赞助商的联创，节目本身是赞助内容。使用别人的 IP 有法律风险，嘉宾在节目里也提到了这一点。",
+      "body": "[Theoretically Media 这期视频](https://www.youtube.com/watch?v=OxxRcagqbHU)采访了 Javi Lopez。他一个人用 AI 做出 17 分 41 秒的短片《Backrooms Nemoris》第一集。主持人自己做过最长约 8 分钟的 AI 短片，想弄清 17 分钟的长片是怎么撑下来的。需要说明的是，**这期由 Magnific 赞助，而 Javi 就是 Magnific 的联合创始人。**\n\n可借鉴的经验有三条。一是选题借用 Backrooms 这类人人可以参与的网络神话，容易获得关注；但他也提醒，玩别人的 IP，律师随时能把它收走。二是早期的邮轮故事拆成多段发布，用设定的积累吸引观众回来。三是拍摄上别模仿手持镜头。主持人最后的结论是：一个人做 17 分钟很难，**和别人组队分工更现实**。\n\n这条属于「用 AI 创作」。材料没有披露播放量、收入和制作成本，想参考成本可以直接看视频 11:04 起的部分。",
+      "sources": [
+        {
+          "label": "Theoretically Media",
+          "title": "What No One Tells You About Making a 17-Minute AI Backrooms Film",
+          "url": "https://www.youtube.com/watch?v=OxxRcagqbHU"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-11-04",
+      "issueDate": "2026-10-11",
+      "issueNumber": 2
+    },
+    {
+      "id": "2026-10-10-02",
+      "category": "content",
+      "kind": "经营复盘",
+      "eventDate": "2025-10-16",
+      "headline": "AI 帮他写 newsletter，AI 公司赞助他的工作流视频",
+      "who": "创作者 Ali Abdaal，经营内容、教育和软件业务的成熟个人品牌。",
+      "how": "散步口述到 VoicePal → Claude 或 ChatGPT 整理和反馈 → 自己在 Notion 改写、补上个人经历。",
+      "result": "本人自述写一期 newsletter 从约两小时缩短到半小时；工作流视频明确注明 Anthropic 赞助。",
+      "tryThis": "记录自己解决过的具体问题，让 AI 协助组织材料，再把过程和结果讲给同类人。",
+      "caveat": "材料未披露 AI 带来的涨粉幅度或该单赞助金额；省下的时间、涨粉和广告收入要分别观察。",
+      "body": "Ali Abdaal 在[本人帖子](https://www.linkedin.com/posts/ali-abdaal_ive-written-250-issues-of-my-newsletter-activity-7361713271030116352-2hwk)中说，写一期 newsletter 从约两小时缩短到半小时。他的顺序很具体：**散步口述到 VoicePal → Claude 或 ChatGPT 整理和反馈 → 自己在 Notion 改写、补上个人经历。**\n\n他的[完整 AI 工作流视频](https://www.youtube.com/watch?v=FDEVzFsPrkU)还展示了另一层生意：视频明确注明 Anthropic 赞助，同时介绍自家产品 VoicePal。一次真实的使用经验，可以成为内容；围绕这类内容积累的受众，又能吸引相关品牌合作。\n\n对想做自媒体的人，可以先记录自己解决过的具体问题，让 AI 协助组织材料，再把过程和结果讲给同类人。**这是成熟创作者的实践；省下的时间、涨粉和广告收入要分别观察。** 视频可从 **18:11** 的内容制作部分开始看。",
+      "sources": [
+        {
+          "label": "LinkedIn",
+          "title": "Ali Abdaal：写了 250 期 newsletter",
+          "url": "https://www.linkedin.com/posts/ali-abdaal_ive-written-250-issues-of-my-newsletter-activity-7361713271030116352-2hwk"
+        },
+        {
+          "label": "YouTube",
+          "title": "Ali Abdaal 完整 AI 工作流",
+          "url": "https://www.youtube.com/watch?v=FDEVzFsPrkU"
+        }
+      ],
+      "region": "UK",
+      "issueDate": "2026-10-10",
+      "issueNumber": 1
+    }
+  ]
+}

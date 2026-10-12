@@ -1,0 +1,123 @@
+{
+  "updatedAt": "2026-10-12T03:49:43.418Z",
+  "categories": [
+    {
+      "id": "perspective",
+      "name": "AI 认知",
+      "en": "Perspectives on AI",
+      "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
+      "count": 1
+    },
+    {
+      "id": "consulting",
+      "name": "AI 咨询",
+      "en": "AI consulting",
+      "desc": "找客户、诊断业务、界定交付、培训、实施与维护",
+      "count": 2
+    },
+    {
+      "id": "content",
+      "name": "内容创作",
+      "en": "AI content creation",
+      "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入",
+      "count": 2
+    },
+    {
+      "id": "saas",
+      "name": "Micro SaaS",
+      "en": "AI micro SaaS",
+      "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
+      "count": 2
+    },
+    {
+      "id": "app",
+      "name": "AI App",
+      "en": "AI app",
+      "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
+      "count": 1
+    },
+    {
+      "id": "productivity",
+      "name": "工作提效",
+      "en": "AI at work",
+      "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
+      "count": 2
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-10-11",
+      "number": 2,
+      "title": "边做饭边用语音开发出博客功能；19 岁靠 AI 和 Instagram 做到月入一万美元",
+      "sample": false,
+      "readingMinutes": 8,
+      "itemCount": 5,
+      "categoryCounts": {
+        "productivity": 1,
+        "saas": 1,
+        "consulting": 1,
+        "content": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "晚饭做好了，博客新功能也有了初稿"
+        },
+        {
+          "category": "saas",
+          "headline": "辞职五个月，第一个 SaaS 做到月入一万美元"
+        },
+        {
+          "category": "consulting",
+          "headline": "千人老公司改造自己：工程小组从 7 人缩到 3 人"
+        },
+        {
+          "category": "content",
+          "headline": "一个人用 AI 做出 17 分钟短片，他的建议是「组个乐队」"
+        },
+        {
+          "category": "perspective",
+          "headline": "工程会被 AI 大幅加速，研究判断力不会因此自动变强"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "number": 1,
+      "title": "一封邮件省 90 分钟，八周产品背后的十年积累",
+      "sample": true,
+      "readingMinutes": 6,
+      "itemCount": 5,
+      "categoryCounts": {
+        "productivity": 1,
+        "content": 1,
+        "saas": 1,
+        "app": 1,
+        "consulting": 1
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "晚饭做好了，博客新功能也有了初稿"
+        },
+        {
+          "category": "content",
+          "headline": "AI 帮他写 newsletter，AI 公司赞助他的工作流视频"
+        },
+        {
+          "category": "saas",
+          "headline": "八周做出产品，第一批用户从哪里来？"
+        },
+        {
+          "category": "app",
+          "headline": "试用人数上去了，退款却吃掉了增量收入"
+        },
+        {
+          "category": "consulting",
+          "headline": "帮一个部门把散落的资料做成能用的工具"
+        }
+      ]
+    }
+  ]
+}

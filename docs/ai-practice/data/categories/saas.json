@@ -1,0 +1,60 @@
+{
+  "category": {
+    "id": "saas",
+    "name": "Micro SaaS",
+    "en": "AI micro SaaS",
+    "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护"
+  },
+  "items": [
+    {
+      "candidateIds": [
+        "c26"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-11",
+      "headline": "辞职五个月，第一个 SaaS 做到月入一万美元",
+      "oneLiner": "19 岁的 Vadim 今年 3 月辞去市场营销工作，产品 Vugola 完全靠 AI 开发，5 个月后月收入约 1 万美元、用户超过 2 万（Starter Story 介绍，本人口径）。",
+      "who": "Vadim 此前没上线过任何 app，原来做市场营销，今年 3 月辞职专职做产品。",
+      "how": "按节目介绍，产品 100% 用 AI 开发，获客主要靠在 Instagram 上持续发内容。",
+      "result": "节目说 5 个月做到月入 1 万美元、用户超过 2 万，视频标题写的是 1.1 万美元/月。这是本人口径的收入，不是利润；材料未披露定价、模型成本和留存。",
+      "tryThis": "有内容或营销背景的人，可以先在一个平台连续发内容，测试有没有人对一个窄需求感兴趣，再用 AI 做最小可用版本。",
+      "caveat": "现有简介没有说明 Vugola 解决什么问题、怎么收费；成本、退款和流失数据也未披露。这是一个成功个案，样本有幸存者偏差。",
+      "body": "[Starter Story 视频](https://www.youtube.com/watch?v=QXxESN94Y6s)讲的是 19 岁的 Vadim：今年 3 月辞掉市场营销工作开始做 app，此前从未上线过产品。他的产品 Vugola 在 5 个月后做到每月约 1 万美元收入、用户超过 2 万。按节目概括，他的方法只有两件事：**全部用 AI 开发，以及「不怕难为情地」在 Instagram 发内容。**\n\n材料里真正有用的是他的背景：他原本就做营销，分发能力是现成的，AI 补上了他不会写代码的短板。章节标题里「Know your customers」和「Time vs money with content」这两部分（2:10、9:02）值得优先看。\n\n对副业读者来说，可以把顺序倒过来想：先确认自己能持续触达哪群人，再用 AI 低成本做产品。**月收入是节目和本人口径，不能当作利润**；视频简介里的「任何人都能做到」也是节目自己的说法，没有给出比例证据。",
+      "sources": [
+        {
+          "label": "Starter Story (YouTube)",
+          "title": "My First SaaS Project Just Hit $11K/Month",
+          "url": "https://www.youtube.com/watch?v=QXxESN94Y6s"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-11-02",
+      "issueDate": "2026-10-11",
+      "issueNumber": 2
+    },
+    {
+      "id": "2026-10-10-03",
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2025-10-11",
+      "headline": "八周做出产品，第一批用户从哪里来？",
+      "who": "Magai 创始人 Dustin Stout，经营个人品牌十年。",
+      "how": "用 Bubble 加少量代码八周做出第一版；靠已有的十万以上邮件订阅者和业内关系起步，配合持续推荐分成。",
+      "result": "受访时月营收接近十万美元（当时本人自述的营收，不能据此确认利润）。",
+      "tryThis": "先看你能接触到谁，再找这些人反复遇到的问题；从已有的专业社群、客户和同事开始访谈。",
+      "caveat": "起步依赖十年个人品牌和既有受众，从零起步的人不能直接套用开发速度这个结论。",
+      "body": "Magai 创始人 Dustin Stout 在 [Starter Story 访谈](https://www.starterstory.com/mag)中说，他用 Bubble 加少量代码，八周做出第一版，受访时月营收接近十万美元。**这是当时本人自述的营收，不能据此确认利润。**\n\n比开发速度更能解释起步的，是他披露的三个条件：经营个人品牌十年、超过十万邮件订阅者，以及业内关系。他还采用持续推荐分成：客户续费，推荐者继续拿佣金。\n\n这给副业选题提供了一个顺序：**先看你能接触到谁，再找这些人反复遇到的问题。** 产品验证后，再研究谁已经拥有目标受众，以及持续分成是否适合自己的毛利。访谈 **04:24** 起的获客部分，比单看收入标题更有用。",
+      "sources": [
+        {
+          "label": "Starter Story",
+          "title": "Dustin Stout / Magai 访谈",
+          "url": "https://www.starterstory.com/mag"
+        }
+      ],
+      "region": "US",
+      "issueDate": "2026-10-10",
+      "issueNumber": 1
+    }
+  ]
+}

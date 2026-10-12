@@ -1,0 +1,60 @@
+{
+  "category": {
+    "id": "productivity",
+    "name": "工作提效",
+    "en": "AI at work",
+    "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败"
+  },
+  "items": [
+    {
+      "candidateIds": [
+        "c6"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-09",
+      "headline": "晚饭做好了，博客新功能也有了初稿",
+      "oneLiner": "Simon Willison 做饭时用语音指挥 Codex 开发博客 newsletter 归档功能，主要工作约半小时；之后打字审查和修改又用了约半小时（本人记录）。",
+      "who": "开发者 Simon Willison 想给自己的 Django 博客加一个 newsletter 归档页。他熟悉这个代码库，功能范围也明确。",
+      "how": "他在 ChatGPT 桌面版的 Codex 里先打字让它启动本地开发服务器、打开预览，再开语音对话。笔记本放在厨房，他边做饭边口述需求，隔着厨房看预览，口头纠正。",
+      "result": "约半小时，语音阶段完成了数据模型、四个导入脚本、归档页面和站内搜索集成。接着用 PR 审查，把一个导入脚本从 Git 子进程改成 API 调用，又打字约半小时后上线。",
+      "tryThis": "挑一个你熟悉、边界清楚的小功能或内部工具，先开好预览，再口述需求。记时间时把审查和修改也算进去。",
+      "caveat": "他本人说这不会成为日常主力方式：到了细节，粘贴报错和示例比口述更有效率。这种做法也不适合开放式办公室。",
+      "body": "Simon Willison 在[本人博客](https://simonwillison.net/2026/Oct/9/built-using-my-voice/)记录了这次开发：用 ChatGPT 桌面版 Codex 的语音模式，对着本地开发环境做出 Newsletters 页面。他公开的口述稿充满「嗯」和自我纠正，比如先说不想让 newsletter 出现在日期归档页，又改口说要出现。模型照样理解了需求。语音阶段约半小时，做出数据模型和迁移、四种导入（包括从 Substack 未公开的 API 翻页抓取）、公开归档页和搜索集成。\n\n他的工作顺序可以借鉴：**先打字启动预览 → 语音讲清目标和例外情况 → 让 Codex 开分支、提 PR → 坐回键盘审查。**审查时他发现一个导入脚本用 Git 子进程拉私有仓库，就改成了 API 方式，并补上调整。这部分又用了约半小时。\n\n他说的主要好处是能同时做两件事，原来做饭时听播客的时间，现在可以用来开发。前提是本人懂代码、能判断 PR 质量，任务也足够小。他也写明，细节阶段还是打字更快。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "A new feature for my blog, built using my voice",
+          "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-11-01",
+      "issueDate": "2026-10-11",
+      "issueNumber": 2
+    },
+    {
+      "id": "2026-10-10-01",
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-09",
+      "headline": "晚饭做好了，博客新功能也有了初稿",
+      "who": "开发者 Simon Willison，给自己熟悉的博客项目加一个范围明确的小功能。",
+      "how": "做饭时与 Codex 语音对话描述需求，之后用键盘补充要求、审查代码、调整导入脚本。",
+      "result": "语音完成主要工作约半小时，键盘审查和修改又约半小时，然后部署上线（本人记录）。",
+      "tryThis": "挑一个内部报表或小工具维护任务，口述目标和背景，看预览纠正方向，最后集中验收。",
+      "caveat": "不是全程自动完成；评估省下的时间时，要把修改和检查一起算进去。",
+      "body": "开发者 Simon Willison 做饭时与 Codex 语音对话，给博客增加 newsletter 归档功能。约半小时完成主要工作后，他又花了约半小时使用键盘补充要求、审查代码、调整导入脚本，才部署上线。他熟悉这个项目，处理的是一个范围明确的小功能。[本人记录](https://simonwillison.net/2026/Oct/9/built-using-my-voice/)\n\n可借鉴的工作方式是：**口述目标和背景，看预览纠正方向，最后集中验收。** 对熟悉业务的人，口述还方便补充例外情况。内部报表、小工具维护可以借此试验；评估节省的时间时，把修改和检查一起算进去。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "A new feature for my blog, built using my voice",
+          "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
+        }
+      ],
+      "region": "US",
+      "issueDate": "2026-10-10",
+      "issueNumber": 1
+    }
+  ]
+}

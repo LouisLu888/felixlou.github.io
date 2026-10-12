@@ -1,0 +1,349 @@
+{
+  "_comment": "type: rss (RSS/Atom/podcast feed) | youtube (channel_id) | follow-builders (upstream X feed). category is a hint for the editor model, not a hard label. Optional: fullText (fetch article page when the feed only has a summary), skipUrlPattern (regex of item URLs to ignore), episodeLinkTemplate (page URL for mp3-only podcast feeds), maxItems. All feeds were fetched and parsed on 2026-10-11.",
+  "sources": [
+    {
+      "name": "Simon Willison",
+      "type": "rss",
+      "url": "https://simonwillison.net/atom/everything/",
+      "category": "productivity",
+      "region": "US",
+      "maxItems": 8
+    },
+    {
+      "name": "How I AI (Claire Vo)",
+      "type": "rss",
+      "url": "https://anchor.fm/s/1035b1568/podcast/rss",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "Lenny's Newsletter",
+      "type": "rss",
+      "url": "https://www.lennysnewsletter.com/feed",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "One Useful Thing (Ethan Mollick)",
+      "type": "rss",
+      "url": "https://www.oneusefulthing.org/feed",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "The Every Podcast (AI & I)",
+      "type": "rss",
+      "url": "https://rss2.flightcast.com/vh1lt5f2oeh4a5hn5jglgpzg.xml",
+      "episodeLinkTemplate": "https://www.youtube.com/@EveryInc/search?query={title}",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "鸭哥 yage.ai",
+      "type": "rss",
+      "url": "https://yage.ai/feeds/rss.xml",
+      "fullText": true,
+      "skipUrlPattern": "-en\\.html$",
+      "category": "productivity",
+      "region": "US",
+      "lang": "zh"
+    },
+    {
+      "name": "Interconnects",
+      "type": "rss",
+      "url": "https://www.interconnects.ai/feed",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "Ali Abdaal",
+      "type": "youtube",
+      "channelId": "UCoOae5nYA7VqaXzerajD0lg",
+      "url": "https://www.youtube.com/@aliabdaal",
+      "category": "content",
+      "region": "UK"
+    },
+    {
+      "name": "Matt Wolfe",
+      "type": "youtube",
+      "channelId": "UChpleBmo18P08aKCIgti38g",
+      "url": "https://www.youtube.com/@mreflow",
+      "category": "content",
+      "region": "US"
+    },
+    {
+      "name": "Theoretically Media",
+      "type": "youtube",
+      "channelId": "UC9Ryt3XOGYBoAJVsBHNGDzA",
+      "url": "https://www.youtube.com/@TheoreticallyMedia",
+      "category": "content",
+      "region": "US"
+    },
+    {
+      "name": "陈然 ranchen.org",
+      "type": "rss",
+      "url": "https://ranchen.org/rss.xml",
+      "fullText": true,
+      "skipUrlPattern": "/content/music/",
+      "category": "content",
+      "region": "US",
+      "lang": "zh"
+    },
+    {
+      "name": "Creator Science (Jay Clouse)",
+      "type": "rss",
+      "url": "https://feeds.megaphone.fm/TPG4024225475",
+      "category": "content",
+      "region": "US"
+    },
+    {
+      "name": "Tony Dinh",
+      "type": "rss",
+      "url": "https://news.tonydinh.com/feed",
+      "category": "saas",
+      "region": "Vietnam"
+    },
+    {
+      "name": "The Bootstrapped Founder",
+      "type": "rss",
+      "url": "https://thebootstrappedfounder.com/feed/",
+      "category": "saas",
+      "region": "Germany"
+    },
+    {
+      "name": "Starter Story Podcast",
+      "type": "rss",
+      "url": "https://rss2.flightcast.com/lxa7w57rz7gkz3huwi6pr6et.xml",
+      "episodeLinkTemplate": "https://www.youtube.com/@starterstory/search?query={title}",
+      "category": "saas",
+      "region": "US"
+    },
+    {
+      "name": "Starter Story (YouTube)",
+      "type": "youtube",
+      "channelId": "UChhw6DlKKTQ9mYSpTfXUYqA",
+      "url": "https://www.youtube.com/@starterstory",
+      "category": "saas",
+      "region": "US"
+    },
+    {
+      "name": "Niche Pursuits",
+      "type": "rss",
+      "url": "https://www.nichepursuits.com/feed/",
+      "category": "saas",
+      "region": "US"
+    },
+    {
+      "name": "Smart Bear Live",
+      "type": "rss",
+      "url": "https://feeds.transistor.fm/smart-bear-live",
+      "category": "saas",
+      "region": "US"
+    },
+    {
+      "name": "Sub Club (RevenueCat)",
+      "type": "rss",
+      "url": "https://feeds.transistor.fm/sub-club",
+      "category": "app",
+      "region": "US"
+    },
+    {
+      "name": "Liam Ottley / Morningside AI",
+      "type": "youtube",
+      "channelId": "UCui4jxDaMb53Gdh-AZUTPAg",
+      "url": "https://www.youtube.com/@LiamOttley",
+      "category": "consulting",
+      "region": "Global"
+    },
+    {
+      "name": "Every (YouTube)",
+      "type": "youtube",
+      "channelId": "UCjIMtrzxYc0lblGhmOgC_CA",
+      "url": "https://www.youtube.com/@EveryInc",
+      "category": "consulting",
+      "region": "US"
+    },
+    {
+      "name": "Rest of World",
+      "type": "rss",
+      "url": "https://restofworld.org/feed/latest",
+      "category": null,
+      "region": "Global"
+    },
+    {
+      "name": "Follow Builders (X)",
+      "type": "follow-builders",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-x.json",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "Lenny's Podcast",
+      "type": "rss",
+      "url": "https://api.substack.com/feed/podcast/10845.rss",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "Behind the Craft (Peter Yang)",
+      "type": "rss",
+      "url": "https://anchor.fm/s/f38497cc/podcast/rss",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "Unsupervised Learning (Redpoint)",
+      "type": "rss",
+      "url": "https://feeds.simplecast.com/dOSE_bdP",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "Training Data (Sequoia)",
+      "type": "rss",
+      "url": "https://feeds.megaphone.fm/trainingdata",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "Minus One (South Park Commons)",
+      "type": "rss",
+      "url": "https://anchor.fm/s/f91eac68/podcast/rss",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "Google DeepMind: The Podcast",
+      "type": "rss",
+      "url": "https://feeds.simplecast.com/JT6pbPkg",
+      "category": "perspective",
+      "region": "UK"
+    },
+    {
+      "name": "No Priors",
+      "type": "rss",
+      "url": "https://feeds.megaphone.fm/nopriors",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "AI + a16z",
+      "type": "rss",
+      "url": "https://feeds.simplecast.com/Hb_IuXOo",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "Latent Space",
+      "type": "rss",
+      "url": "https://api.substack.com/feed/podcast/1084089.rss",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "The AI Daily Brief",
+      "type": "rss",
+      "url": "https://anchor.fm/s/f7cac464/podcast/rss",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "Y Combinator / Lightcone (YouTube)",
+      "type": "youtube",
+      "channelId": "UCcefcZRL2oaA_uBNeo5UOWg",
+      "url": "https://www.youtube.com/@ycombinator",
+      "category": "saas",
+      "region": "US"
+    },
+    {
+      "name": "Lex Fridman Podcast",
+      "type": "rss",
+      "url": "https://lexfridman.com/feed/podcast/",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "Dwarkesh Podcast",
+      "type": "rss",
+      "url": "https://apple.dwarkesh-podcast.workers.dev/feed.rss",
+      "category": "perspective",
+      "region": "US"
+    },
+    {
+      "name": "Riley Brown",
+      "type": "youtube",
+      "channelId": "UCMcoud_ZW7cfxeIugBflSBw",
+      "url": "https://www.youtube.com/@rileybrownai",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "Startup Ideas Podcast (Greg Isenberg)",
+      "type": "rss",
+      "url": "https://rss2.flightcast.com/ordbkg8yojpehffas7vr7qpc.xml",
+      "episodeLinkTemplate": "https://www.youtube.com/@GregIsenberg/search?query={title}",
+      "category": "app",
+      "region": "US"
+    },
+    {
+      "name": "Ras Mic",
+      "type": "youtube",
+      "channelId": "UCBX__dPYqDFqAN4QcWbnUbw",
+      "url": "https://www.youtube.com/@rasmic",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "McKay Wrigley",
+      "type": "youtube",
+      "channelId": "UCXZFVVCFahewxr3est7aT7Q",
+      "url": "https://www.youtube.com/@realmckaywrigley",
+      "category": "productivity",
+      "region": "US"
+    },
+    {
+      "name": "App Masters (Steve P. Young)",
+      "type": "rss",
+      "url": "https://anchor.fm/s/1df311ec/podcast/rss",
+      "category": "app",
+      "region": "US"
+    },
+    {
+      "name": "The Superwall Podcast",
+      "type": "rss",
+      "url": "https://rss.buzzsprout.com/2522779.rss",
+      "category": "app",
+      "region": "US"
+    },
+    {
+      "name": "Adam Lyttle",
+      "type": "youtube",
+      "channelId": "UCKJn8oR4qN_0lDw8dKZ6wlg",
+      "url": "https://www.youtube.com/@adamlyttleapps",
+      "category": "app",
+      "region": "Australia"
+    },
+    {
+      "name": "Consulting Success Podcast",
+      "type": "rss",
+      "url": "https://feeds.captivate.fm/consulting-success/",
+      "category": "consulting",
+      "region": "Canada"
+    },
+    {
+      "name": "Hamel Husain",
+      "type": "rss",
+      "url": "https://hamel.dev/index.xml",
+      "fullText": true,
+      "category": "consulting",
+      "region": "US"
+    },
+    {
+      "name": "Supercompanies (Greg Shove / Section)",
+      "type": "rss",
+      "url": "https://feeds.captivate.fm/supercompanies/",
+      "category": "consulting",
+      "region": "US"
+    }
+  ]
+}

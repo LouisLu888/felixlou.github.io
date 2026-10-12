@@ -1,0 +1,37 @@
+{
+  "category": {
+    "id": "perspective",
+    "name": "AI 认知",
+    "en": "Perspectives on AI",
+    "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作"
+  },
+  "items": [
+    {
+      "candidateIds": [
+        "c14"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-09",
+      "headline": "工程会被 AI 大幅加速，研究判断力不会因此自动变强",
+      "oneLiner": "AI 研究者 Nathan Lambert（2026-10-09）认为，几年内模型会成为超人级的 GPU 工程师，智能成本近乎指数下降，但这不等于通向通用超级智能。",
+      "who": "Nathan Lambert 是 AI 研究者，在 Interconnects 撰文回应业内「几年后 AI 会比我更会做研究」的说法。",
+      "how": "他认为模型会在工程、基础设施这类可验证的工作上快速变成超人水平，让实验更容易，但不会让模型的本质发生剧变。好想法会比好执行更值钱。",
+      "result": "依据：训练速度、单次回答成本这类指标可以直接优化；过去发布模型后，推理服务成本已能再省 10–30%。他预计 2–3 年内预训练的架构和数据选择研究会被自动化。",
+      "tryThis": "在可验证的任务上（代码、性能、成本）可以放心加大 AI 投入，把人的时间留给选题和判断。成本下降之后，懂得怎样把 agent 交付给具体人群也会产生价值。",
+      "caveat": "这些都是他个人的预测，不是已经发生的事。他也写到，RL 训练数据行业普遍质量不高，但大实验室买了仍然看到回报，说明判断还依赖具体情境。",
+      "body": "Nathan Lambert 在 [Interconnects](https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards) 解释，自己为什么不认同一些顶尖研究者「几年后 AI 会比我强」的判断。**他认为**研究者看到的是工程能力的突飞猛进：训练速度、单次回答成本这些指标都可以验证，所以很适合交给 agent 优化。他预计智能的有效成本会近乎指数下降，2–3 年内预训练的架构和数据选择研究可能被自动化。但这只让实验更容易，不会让模型的本质发生剧变。\n\n他的推论和读者相关：成本下降会通过 Jevons 悖论带来更多需求，**行业的瓶颈会落在怎样把 agent 用到具体人群和场景上**。他举了 Meta Muse 为例，认为它的价值来自理解 agent 怎样工作，而不是推进性能前沿。\n\n这些是他 10 月 9 日的预测。对做产品和副业的人，可以把它当成一个分工假设：可验证的执行交给 AI，人把时间用在挑问题和做交付上。",
+      "sources": [
+        {
+          "label": "Interconnects",
+          "title": "I expect rapid progress but not towards general superintelligence",
+          "url": "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-11-05",
+      "issueDate": "2026-10-11",
+      "issueNumber": 2
+    }
+  ]
+}

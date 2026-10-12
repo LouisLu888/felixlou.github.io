@@ -1,0 +1,17 @@
+{
+  "name": "silicon-valley-gap-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Daily pipeline for 硅谷信息差: fetch sources, curate with Claude, publish static JSON",
+  "scripts": {
+    "fetch": "node fetch-sources.js",
+    "curate": "node curate.js",
+    "index": "node build-index.js",
+    "daily": "node fetch-sources.js && node curate.js && node build-index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "zod": "^4.6.6"
+  }
+}
