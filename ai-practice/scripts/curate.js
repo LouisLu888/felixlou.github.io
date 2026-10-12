@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // ============================================================================
-// AI 实战派 — Step 2: screen and curate with Claude
+// AI 实干派 — Step 2: screen and curate with Claude
 // ============================================================================
 // Two stages, so the issue stays readable as the source list grows:
 //

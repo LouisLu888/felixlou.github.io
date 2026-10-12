@@ -1,4 +1,4 @@
-name: AI 实战派 daily issue
+name: AI 实干派 daily issue
 
 # Fetches sources, curates the day's issue with Claude, and commits the result
 # to public/ai-practice/ and docs/ai-practice/. jiabinlu.com is served from
@@ -106,7 +106,7 @@ jobs:
             echo "Nothing new to publish"
             exit 0
           fi
-          git commit -m "AI 实战派: daily issue $(TZ=America/Los_Angeles date +%F)"
+          git commit -m "AI 实干派: daily issue $(TZ=America/Los_Angeles date +%F)"
           # The blog is also edited by hand; rebase onto anything pushed meanwhile.
           git pull --rebase origin master
           git push origin HEAD:master

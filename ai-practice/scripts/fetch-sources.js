@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // ============================================================================
-// AI 实战派 — Step 1: fetch sources
+// AI 实干派 — Step 1: fetch sources
 // ============================================================================
 // Reads config/sources.json, pulls every feed, keeps items published inside
 // the lookback window that we have not seen before, and writes the day's

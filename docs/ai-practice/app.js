@@ -1,4 +1,4 @@
-// AI 实战派 — static frontend. Reads data/index.json, data/issues/<date>.json
+// AI 实干派 — static frontend. Reads data/index.json, data/issues/<date>.json
 // and data/categories/<id>.json. Routes (hash-based so any static host works):
 //   #/            all days, newest first
 //   #/d/<date>    one day's issue
@@ -137,7 +137,7 @@ async function viewDay(date) {
   app.innerHTML = `
     <article>
       <header class="issue-head">
-        <div class="eyebrow">AI 实战派 ${pad3(day.number)} · ${fmtDate(issue.date)} · 约 ${day.readingMinutes} 分钟读完${issue.sample ? '<span class="badge-sample">样刊</span>' : ""}</div>
+        <div class="eyebrow">AI 实干派 ${pad3(day.number)} · ${fmtDate(issue.date)} · 约 ${day.readingMinutes} 分钟读完${issue.sample ? '<span class="badge-sample">样刊</span>' : ""}</div>
         <h1>${esc(issue.title)}</h1>
       </header>
       <section class="tldr">

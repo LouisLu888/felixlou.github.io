@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // ============================================================================
-// AI 实战派 — source health check
+// AI 实干派 — source health check
 // ============================================================================
 // Fetches every source in config/sources.json and reports item count, newest
 // item date and errors. Read-only: does not touch state/seen.json.

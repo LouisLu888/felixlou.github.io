@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // ============================================================================
-// AI 实战派 — Step 3: build site indexes and publish
+// AI 实干派 — Step 3: build site indexes and publish
 // ============================================================================
 // Scans public/ai-practice/data/issues/*.json and writes:
 // - data/index.json: one row per day (newest first) + category counts
