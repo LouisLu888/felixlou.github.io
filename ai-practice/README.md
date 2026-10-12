@@ -61,6 +61,14 @@ GitHub Actions 每天 14:23 UTC（约太平洋时间 7:23）运行：
 
 需要仓库 secret `OPENAI_API_KEY`。可在 Actions 页手动运行 **AI 实干派 podcast**，填 `date` 补做某一天，勾 `force` 重做。换音色用环境变量 `PODCAST_VOICE`（默认 `marin`）。每集成本约 $0.3。
 
+让语音不生硬的几处设定（2026-10-11 调过一轮，参考了 ellewiz/personalized-news-podcast）：
+
+1. 口播稿句长：大多 12–30 字，上限 40 字；超长时 `podcast-build.js` 会打回模型改一次。也不许切成四字碎句。
+2. 开场白、日期和结尾由代码固定生成，模型只写预告和正文。
+3. 每个故事单独合成一段，故事之间停 1.2 秒，长故事内部按段落拆开时停 0.7 秒。
+4. 成品整体放慢到 0.94 倍（`TEMPO`），因为 gpt-4o-mini-tts 不支持语速参数，默认读得偏快。
+5. 英文术语读音表在 `config/pronunciation.json`，只作用于送给 TTS 的文本；听到读错的词就加一条。
+
 ## 本地运行
 
 ```bash

@@ -35,15 +35,33 @@ const SCRIPT_MODEL = process.env.PODCAST_SCRIPT_MODEL || "gpt-5.5";
 const TTS_MODEL = process.env.PODCAST_TTS_MODEL || "gpt-4o-mini-tts-2025-12-15";
 const VOICE = process.env.PODCAST_VOICE || "marin";
 
-const CHARS_PER_MINUTE = 270;          // typical spoken Mandarin pace
-const MAX_SCRIPT_CHARS = 6000;         // about 22 minutes
+const CHARS_PER_MINUTE = 250;          // relaxed conversational Mandarin
+const MAX_SCRIPT_CHARS = 6000;         // about 24 minutes
 const MAX_TTS_CHUNK_CHARS = 900;       // keeps each TTS request well under the input limit
+const MAX_SENTENCE_CHARS = 40;         // longer sentences are hard to follow by ear
 const SAMPLE_RATE = 24000;             // OpenAI "pcm" format: 24kHz, 16-bit LE, mono
-const GAP_SECONDS = 0.35;              // silence inserted between chunks
+// Pauses inserted between synthesized pieces. Listening research (and the
+// ellewiz personal-podcast project) puts paragraph breaks around 0.75s and
+// section breaks around 0.9s; a little longer reads as "new story" in Mandarin.
+const PARAGRAPH_GAP_SECONDS = 0.7;
+const SEGMENT_GAP_SECONDS = 1.2;
+// gpt-4o-mini-tts ignores the API speed parameter and reads Mandarin at about
+// 280 chars/min, which sounds hurried. Slow the finished audio slightly
+// (pitch preserved); ellewiz landed on 0.93 for the same reason.
+const TEMPO = 0.94;
 
-const TTS_INSTRUCTIONS =
-  "用标准普通话播报，语气自然、亲切、像在跟朋友聊天的科技播客主持人。" +
-  "语速适中偏快，句间停顿自然。英文人名、公司名、产品名和技术术语用地道的英文发音。";
+// Structured the way OpenAI's own TTS examples are (voice, tone, pacing, pauses,
+// pronunciation). No "speed up" wording: the old version sounded rushed.
+const TTS_INSTRUCTIONS = [
+  "Voice: 温和、清晰、有亲和力的普通话。",
+  "Tone: 像跟一位做产品的朋友聊今天看到的几个真实案例。放松、有好奇心。不要播音腔，不要朗读课文的腔调。",
+  "Pacing: 正常聊天的语速，不赶。说到关键数字和结论时稍微放慢一点。",
+  "Pauses: 句号处自然停顿；每段结束时停顿稍长，像在换一口气。",
+  "Emphasis: 句子重音落在有信息量的词上，比如数字、结果、人物做的事。句尾不要拖长，也不要每句都上扬。",
+  "Pronunciation: 英文人名、公司名、产品名和技术词按美式英语原样读，不要读成中文腔。缩写按字母读。",
+].join("\n");
+
+const WEEKDAYS = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
 
 function parseArgs(argv) {
   const args = {};
@@ -80,56 +98,98 @@ function targetChars(issue) {
   return Math.min(MAX_SCRIPT_CHARS, Math.round(written / 100) * 100);
 }
 
+const SCRIPT_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  required: ["preview", "segments"],
+  properties: {
+    preview: { type: "string" },
+    segments: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        required: ["paragraphs"],
+        properties: { paragraphs: { type: "array", items: { type: "string" } } },
+      },
+    },
+  },
+};
+
+function sentencesOf(text) {
+  return text.split(/(?<=[。！？!?])/).map((x) => x.trim()).filter(Boolean);
+}
+
+function longSentences(draft) {
+  const all = [draft.preview, ...draft.segments.flatMap((seg) => seg.paragraphs)];
+  return all.flatMap(sentencesOf).filter((x) => x.length > MAX_SENTENCE_CHARS);
+}
+
 async function writeScript(issue) {
   const template = await readFile(join(ROOT, "prompts", "podcast.md"), "utf-8");
   const prompt = template.replaceAll("{{TARGET_CHARS}}", String(targetChars(issue)));
   const { title, items, action } = issue;
-  const res = await openai("chat/completions", {
-    model: SCRIPT_MODEL,
-    messages: [
-      { role: "system", content: prompt },
-      { role: "user", content: `Today's date: ${issue.date}\n\n${JSON.stringify({ title, items, action })}` },
-    ],
-    response_format: {
-      type: "json_schema",
-      json_schema: {
-        name: "podcast_script",
-        strict: true,
-        schema: {
-          type: "object",
-          additionalProperties: false,
-          required: ["script"],
-          properties: { script: { type: "string" } },
-        },
-      },
-    },
-  });
-  const data = await res.json();
-  return JSON.parse(data.choices[0].message.content).script;
+  const messages = [
+    { role: "system", content: prompt },
+    { role: "user", content: JSON.stringify({ title, items, action }) },
+  ];
+  const ask = async () => {
+    const res = await openai("chat/completions", {
+      model: SCRIPT_MODEL,
+      messages,
+      response_format: { type: "json_schema", json_schema: { name: "podcast_script", strict: true, schema: SCRIPT_SCHEMA } },
+    });
+    const content = (await res.json()).choices[0].message.content;
+    return { content, draft: JSON.parse(content) };
+  };
+
+  let { content, draft } = await ask();
+  // One revision pass if the model still wrote sentences too long to follow by ear.
+  const tooLong = longSentences(draft);
+  if (tooLong.length > 0) {
+    console.error(`Revising ${tooLong.length} sentences over ${MAX_SENTENCE_CHARS} chars`);
+    messages.push({ role: "assistant", content });
+    messages.push({
+      role: "user",
+      content: `These sentences are over ${MAX_SENTENCE_CHARS} characters. Split each into shorter spoken sentences, ` +
+        `keep every fact, change nothing else, and return the full script again:\n${tooLong.join("\n")}`,
+    });
+    ({ draft } = await ask());
+  }
+  return draft;
 }
+
+// Greeting and sign-off are fixed text so the model never improvises them.
+function opening(date, preview) {
+  const d = new Date(`${date}T12:00:00Z`);
+  const spokenDate = `${d.getUTCMonth() + 1}月${d.getUTCDate()}号，${WEEKDAYS[d.getUTCDay()]}`;
+  return [`欢迎收听 AI 实干派。今天是${spokenDate}。`, preview];
+}
+
+const CLOSING = ["今天的 AI 实干派就到这里。", "每个案例的原文链接，都在 jiabinlu.com 的 AI 实干派页面。我们明天见。"];
 
 // -- TTS ---------------------------------------------------------------------
 
-function splitForTts(script) {
+// Spoken-form substitutions applied only to TTS input; the saved script keeps
+// the original spelling. Longest keys first so "Micro SaaS" wins over "SaaS".
+async function loadPronunciation() {
+  const path = join(ROOT, "config", "pronunciation.json");
+  if (!existsSync(path)) return (text) => text;
+  const table = Object.entries(JSON.parse(await readFile(path, "utf-8"))).sort((a, b) => b[0].length - a[0].length);
+  return (text) => table.reduce((t, [from, to]) => t.replace(new RegExp(`(?<![A-Za-z])${from.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![A-Za-z])`, "g"), to), text);
+}
+
+// Each segment is synthesized as one piece (split at paragraph boundaries only
+// when long), so the voice stays consistent within a story and the pause
+// between stories is ours, not the model's.
+function piecesOf(paragraphs) {
   const pieces = [];
-  for (const para of script.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)) {
-    if (para.length <= MAX_TTS_CHUNK_CHARS) { pieces.push(para); continue; }
-    // Oversized paragraph: break after sentence-ending punctuation.
-    let buf = "";
-    for (const sentence of para.match(/[^。！？!?]+[。！？!?]*/g) || [para]) {
-      if (buf && buf.length + sentence.length > MAX_TTS_CHUNK_CHARS) { pieces.push(buf); buf = ""; }
-      buf += sentence;
-    }
-    if (buf) pieces.push(buf);
+  for (const para of paragraphs.map((p) => p.trim()).filter(Boolean)) {
+    const last = pieces[pieces.length - 1];
+    if (last && last.length + para.length + 1 <= MAX_TTS_CHUNK_CHARS) pieces[pieces.length - 1] = `${last}\n${para}`;
+    else pieces.push(para);
   }
-  // Merge short neighbours so we make fewer requests.
-  const chunks = [];
-  for (const piece of pieces) {
-    const last = chunks[chunks.length - 1];
-    if (last && last.length + piece.length + 2 <= MAX_TTS_CHUNK_CHARS) chunks[chunks.length - 1] = `${last}\n\n${piece}`;
-    else chunks.push(piece);
-  }
-  return chunks;
+  return pieces;
 }
 
 async function synthesize(text) {
@@ -166,16 +226,27 @@ async function main() {
   }
   const issue = JSON.parse(await readFile(issuePath, "utf-8"));
 
-  const script = await writeScript(issue);
+  const draft = await writeScript(issue);
+  const segments = [opening(date, draft.preview), ...draft.segments.map((seg) => seg.paragraphs), CLOSING];
+  const script = segments.map((paras) => paras.join("\n")).join("\n\n");
   await writeFile(join(args.out, "script.txt"), script);
-  console.error(`Script: ${script.length} chars (target ${targetChars(issue)})`);
+  const sentences = sentencesOf(script.replace(/\n/g, ""));
+  const lengths = sentences.map((x) => x.length).sort((a, b) => a - b);
+  console.error(`Script: ${script.length} chars (target ${targetChars(issue)}), ${sentences.length} sentences, ` +
+    `median ${lengths[Math.floor(lengths.length / 2)]}, max ${lengths[lengths.length - 1]}`);
 
-  const chunks = splitForTts(script);
-  const gap = Buffer.alloc(Math.round(SAMPLE_RATE * GAP_SECONDS) * 2);
+  const speak = await loadPronunciation();
+  const silence = (seconds) => Buffer.alloc(Math.round(SAMPLE_RATE * seconds) * 2);
   const parts = [];
-  for (const [i, chunk] of chunks.entries()) {
-    console.error(`TTS ${i + 1}/${chunks.length} (${chunk.length} chars)`);
-    parts.push(await synthesize(chunk), gap);
+  let n = 0;
+  const total = segments.reduce((sum, paras) => sum + piecesOf(paras).length, 0);
+  for (const paras of segments) {
+    const pieces = piecesOf(paras);
+    for (const [i, piece] of pieces.entries()) {
+      console.error(`TTS ${++n}/${total} (${piece.length} chars)`);
+      parts.push(await synthesize(speak(piece)));
+      parts.push(silence(i < pieces.length - 1 ? PARAGRAPH_GAP_SECONDS : SEGMENT_GAP_SECONDS));
+    }
   }
   const pcmPath = join(args.out, "episode.pcm");
   await writeFile(pcmPath, Buffer.concat(parts));
@@ -185,7 +256,7 @@ async function main() {
   execFileSync("ffmpeg", [
     "-y", "-loglevel", "error",
     "-f", "s16le", "-ar", String(SAMPLE_RATE), "-ac", "1", "-i", pcmPath,
-    "-af", "silenceremove=stop_periods=-1:stop_duration=1.5:stop_threshold=-50dB:stop_silence=0.6",
+    "-af", `silenceremove=stop_periods=-1:stop_duration=1.5:stop_threshold=-50dB:stop_silence=0.6,atempo=${TEMPO}`,
     "-c:a", "libmp3lame", "-b:a", "48k", mp3Path,
   ]);
   const duration = Math.round(Number(execFileSync("ffprobe", [
