@@ -20,6 +20,10 @@ on:
         description: 'Only run the source health check (no fetch state, no commit)'
         type: boolean
         default: false
+      rehearsal:
+        description: 'Full run on the runner (fetch, screen, write, render email) without committing or sending'
+        type: boolean
+        default: false
 
 concurrency:
   group: ai-practice-daily
@@ -65,7 +69,13 @@ jobs:
 
       - name: Fetch sources
         if: ${{ !inputs.check_only }}
-        run: cd ai-practice/scripts && node fetch-sources.js
+        env:
+          REHEARSAL: ${{ inputs.rehearsal }}
+        run: |
+          # Rehearsal starts from an empty dedup state so the full candidate
+          # volume (and screening) is exercised; this copy is never committed.
+          if [ "$REHEARSAL" = "true" ]; then echo '{}' > ai-practice/state/seen.json; fi
+          cd ai-practice/scripts && node fetch-sources.js
 
       # Two ways to pay for Claude, checked in this order:
       # 1. ANTHROPIC_API_KEY: Claude API, billed per token
@@ -76,7 +86,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          FORCE_FLAG: ${{ inputs.force && '--force' || '' }}
+          FORCE_FLAG: ${{ (inputs.force || inputs.rehearsal) && '--force' || '' }}
         run: |
           cd ai-practice/scripts
           if [ -n "$ANTHROPIC_API_KEY" ]; then
@@ -96,8 +106,26 @@ jobs:
 
       # No [skip ci] in the message: on a branch-deployed Pages site it would
       # also skip the Pages build, and the new issue would never go live.
+      # Rehearsal stops here: keep what was generated for inspection, publish nothing.
+      # The runner's seen.json is discarded, so tomorrow's candidates stay unused.
+      - name: Rehearsal output
+        if: ${{ inputs.rehearsal }}
+        run: |
+          cd ai-practice/scripts && node send-email.js --dry-run --force
+          cd ../..
+          DATE=$(TZ=America/Los_Angeles date +%F)
+          node -e "const i=require('./public/ai-practice/data/issues/$DATE.json'); console.log('items', i.items.length, 'minutes', i.readingMinutes, 'shortlist', (i.meta.shortlist||[]).length, 'dropped', JSON.stringify(i.meta.droppedForLength)); i.items.forEach(x=>console.log(' -', x.category, x.headline))"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.rehearsal }}
+        with:
+          name: rehearsal
+          path: |
+            public/ai-practice/data/issues/
+            ai-practice/state/email-preview.html
+
       - name: Commit
-        if: ${{ !inputs.check_only }}
+        if: ${{ !inputs.check_only && !inputs.rehearsal }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -114,7 +142,7 @@ jobs:
       # Emails the day's issue once it is live. state/sent.json makes reruns
       # idempotent; the second commit only records that the email went out.
       - name: Email the issue
-        if: ${{ !inputs.check_only }}
+        if: ${{ !inputs.check_only && !inputs.rehearsal }}
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NEWSLETTER_TO: ${{ secrets.NEWSLETTER_TO }}
