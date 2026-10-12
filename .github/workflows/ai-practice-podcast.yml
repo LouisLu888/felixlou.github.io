@@ -95,8 +95,8 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/ai-practice/podcast/ docs/ai-practice/
+          git add public/ai-practice/ docs/ai-practice/
           git commit -m "AI 实干派: podcast episode $DATE [skip-newsletter]"
           # The blog is also edited by hand; rebase onto anything pushed meanwhile.
-          git pull --rebase origin master
+          git pull --rebase --autostash origin master
           git push origin HEAD:master
