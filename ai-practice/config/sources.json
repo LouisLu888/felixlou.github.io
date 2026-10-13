@@ -342,14 +342,6 @@
       "region": "US"
     },
     {
-      "name": "Wonder Tools (Jeremy Caplan)",
-      "type": "rss",
-      "url": "https://wondertools.substack.com/feed",
-      "category": "life",
-      "region": "US",
-      "maxItems": 2
-    },
-    {
       "name": "Lifehacker",
       "type": "rss",
       "url": "https://lifehacker.com/feed/rss",

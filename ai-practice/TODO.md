@@ -6,7 +6,7 @@
 
 - [ ] 补中文一手来源。小红书、即刻、公众号都没有 RSS，只能自建 RSSHub
 - [ ] Reddit 目前用 r/ChatGPT 的热门 RSS（2026-10-12 加入）。`/top/.rss` 返回 403；如果 runner 上也开始被拦，改走 Reddit API（OAuth）
-- [ ] 两周后（约 2026-10-26）看 `state/source-stats.md`：六个生活来源（Wonder Tools、Lifehacker、少数派、Tom's Guide、NYT Personal Tech、Reddit）的成稿数。为 0 的换掉或调 `titlePattern`
+- [ ] 两周后（约 2026-10-26）看 `state/source-stats.md`：五个生活来源（Lifehacker、少数派、Tom's Guide、NYT Personal Tech、Reddit）的成稿数。为 0 的换掉或调 `titlePattern`
 - [ ] 观察两周，再决定要不要每期保底一条生活类，以及 15 分钟预算下七个栏目是否太多
 
 ## 播客

@@ -6,7 +6,7 @@
 
 栏目：AI 认知（方法论与世界观）· AI 咨询 · 内容创作 · Micro SaaS · AI App · 工作提效 · AI 生活（`config/categories.json`）。
 
-AI 生活（2026-10-12 加）收普通人用 AI 办生活里的事：个人助手、清理忘了取消的订阅、找客服追回退款、账单、看病、出行。专门的来源有六个：Wonder Tools、Lifehacker、少数派、Tom's Guide 的 AI 栏目、NYT Personal Tech 和 Reddit r/ChatGPT，后五个都用 `titlePattern` 过滤（Tom's Guide 只留第一人称实测，Reddit 只留省钱、退款、取消订阅这类帖子）。NYT 有付费墙，只能拿到摘要。来源调研见 `~/projects/context-infrastructure/contexts/survey_sessions/ai_life_sources_20261012.md`（本机），待办见 `TODO.md`。
+AI 生活（2026-10-12 加）收普通人用 AI 办生活里的事：个人助手、清理忘了取消的订阅、找客服追回退款、账单、看病、出行。专门的来源有五个：Lifehacker、少数派、Tom's Guide 的 AI 栏目、NYT Personal Tech 和 Reddit r/ChatGPT，都用 `titlePattern` 过滤（Tom's Guide 只留第一人称实测，Reddit 只留省钱、退款、取消订阅这类帖子）。NYT 有付费墙，只能拿到摘要。Wonder Tools 只有 substack.com 子域名，在 runner 上返回 403（2026-10-12），已移除。来源调研见 `~/projects/context-infrastructure/contexts/survey_sessions/ai_life_sources_20261012.md`（本机），待办见 `TODO.md`。
 
 待办：`TODO.md`。
 
