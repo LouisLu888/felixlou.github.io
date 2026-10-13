@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-13T02:26:18.419Z",
+  "updatedAt": "2026-10-13T15:09:08.715Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 2
+      "count": 3
     },
     {
       "id": "consulting",
@@ -34,24 +34,57 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 2
+      "count": 3
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 4
+      "count": 5
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 0
+      "count": 1
     }
   ],
   "days": [
+    {
+      "date": "2026-10-13",
+      "number": 4,
+      "title": "每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 8,
+      "itemCount": 4,
+      "categoryCounts": {
+        "life": 1,
+        "productivity": 1,
+        "app": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "life",
+          "headline": "每天给自己写封邮件让 Gemini 回，她反而不再用它回别人"
+        },
+        {
+          "category": "productivity",
+          "headline": "让 agent 守规矩，与其改说明文档，不如让提交直接失败"
+        },
+        {
+          "category": "app",
+          "headline": "18 岁零基础做 App，花几千美元买网红视频差点做垮"
+        },
+        {
+          "category": "perspective",
+          "headline": "Anthropic 让 Claude 自己编排多 agent，代价是贵得多"
+        }
+      ]
+    },
     {
       "date": "2026-10-12",
       "number": 3,

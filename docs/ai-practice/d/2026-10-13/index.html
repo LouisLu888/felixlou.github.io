@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 004｜每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent</title>
+  <meta name="description" content="Tom&#39;s Guide 作者 Amanda Caswell 连续一个月每天给自己写一封随手邮件，让 Gemini 回复。据她自述，Gemini 能从杂乱文字里挑出遗漏的待办，但回信口吻空洞，她因此停止用 AI 回复认识的人。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-10-13/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 004｜每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent">
+  <meta property="og:description" content="Tom&#39;s Guide 作者 Amanda Caswell 连续一个月每天给自己写一封随手邮件，让 Gemini 回复。据她自述，Gemini 能从杂乱文字里挑出遗漏的待办，但回信口吻空洞，她因此停止用 AI 回复认识的人。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-10-13/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-13.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 004｜每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent">
+  <meta name="twitter:description" content="Tom&#39;s Guide 作者 Amanda Caswell 连续一个月每天给自己写一封随手邮件，让 Gemini 回复。据她自述，Gemini 能从杂乱文字里挑出遗漏的待办，但回信口吻空洞，她因此停止用 AI 回复认识的人。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-13.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">3</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">3</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">5</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">1</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 004 · 2026 年 10 月 13 日 · 周二 · 约 8 分钟读完</div>
+        <h1>每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="life">AI 生活</span><a href="#2026-10-13-01">Tom&#39;s Guide 作者 Amanda Caswell 连续一个月每天给自己写一封随手邮件，让 Gemini 回复。据她自述，Gemini 能从杂乱文字里挑出遗漏的待办，但回信口吻空洞，她因此停止用 AI 回复认识的人。</a></li><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-13-02">Geoffrey Huntley 用一个 pre-commit hook 拦下绕过诊断库的代码，并把纠正提示注入给 agent，自述遵守率变成「十次十中」；Simon Willison 则让 Codex 做了个小工具，好让密钥文件不经过模型。</a></li><li><span class="tag" data-cat="app">AI App</span><a href="#2026-10-13-03">据 Starter Story 短视频，18 岁的 Lino 在 Lovable 上做了两个月后推倒重来，改用 Rork 一个月做完，自述首月收入 7000 美元；早期投网红 UGC 时利润率只剩 5% 到 10%。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-10-13-04">两位 Anthropic 工程师在 AI Engineer NYC 演示新功能 dynamic workflows：由 Claude 自己规划并启动一组子 agent。他们承认在演示用例里，这种方式比单 agent 贵得多，模型运行时也不知道自己的预算。</a></li></ul>
+      </section>
+      <section class="item" id="2026-10-13-01">
+        <div class="item-meta"><span class="tag" data-cat="life">AI 生活</span><span>·</span>本周演示<span>·</span>2026-10-10<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-13-01/">01｜每天给自己写封邮件让 Gemini 回，她反而不再用它回别人</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Tom&#39;s Guide 作者 Amanda Caswell，每天收几百封邮件，平时常按 Tab 让 Gmail 里的 Gemini 代写回复。</dd><dt>怎么用</dt><dd>每天花 5 到 10 分钟，把工作、想法、抱怨和家务提醒不加整理地写成一封邮件发给自己，再在 Gmail 里调用 Gemini 或把邮件贴进 Gemini app，用固定提示词要它回复。</dd><dt>结果</dt><dd>本人自述：Gemini 能从邮件里挑出顺口提到的事，比如孩子学校活动周的着装和三个孩子的牙医预约；最初的回信像 HR 腔，事事都是机会，附三条行动建议。文章没有给出省下的时间。</dd><dt>你可以试</dt><dd>有 Gmail 加 Gemini，或任何能读长文本的聊天助手就能试。先连续写一周，周末把自己的原文和 AI 回复对照着重读一遍。</dd><dt>注意</dt><dd>这是一位科技媒体作者的单人体验。交给 AI 的是邮箱里的私人内容，她提醒不要写机密工作信息和敏感个人细节，动手前先查账户的隐私和数据使用设置。</dd></dl>
+        <div class="body"><p>Amanda Caswell 在 <a href="https://www.tomsguide.com/ai/google-gemini/i-emailed-myself-every-day-for-a-month-and-let-gemini-write-back-heres-what-happened">Tom&#39;s Guide</a> 记录了一个月的试验：每天给自己写一封不讲语法、想到哪写到哪的邮件，再让 Gemini 回信。起初的回复积极得过头，抱怨一个失败的项目，也会收到「这是学习机会」加三条行动建议。她说，自己清楚写下时是什么心情，读到这种回信，落差特别明显。这让她决定以后不再用 Gemini 回复认识的人。</p><p>后来她改了提问方式：<strong>不要一串建议，只要 AI 指出一件可能被忽略的事，再问一个问题。</strong> 她给出的提示词大意是：把邮件当作每日复盘，不要客套和打气，列出我完成了什么、可能忽略了什么，再问我一个能改变明天做法的问题，不要默认每个问题都需要解决方案。她还建议给这些邮件建一个 Gmail 标签，每周回看一次，找反复出现的问题。</p><p>这套做法门槛很低，适合脑子里事情多、家务和工作混在一起的人。她自己的结论是：AI 不会比她更懂她的生活，也不能替她决定下一步做什么。它的用处在于帮她整理已经写下的东西。</p></div>
+        <div class="sources">原文：<a href="https://www.tomsguide.com/ai/google-gemini/i-emailed-myself-every-day-for-a-month-and-let-gemini-write-back-heres-what-happened" target="_blank" rel="noopener" title="I emailed myself every day for a month and let Gemini write back — here&#39;s how it transformed my workflow">Tom&#39;s Guide · AI</a></div>
+      </section>
+      <section class="item" id="2026-10-13-02">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周动态<span>·</span>2026-10-13<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-13-02/">02｜让 agent 守规矩，与其改说明文档，不如让提交直接失败</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Geoffrey Huntley 在用 coding agent 写代码；Simon Willison 在手机上通过 Codex Remote 推进项目。</dd><dt>怎么用</dt><dd>Huntley 写了一个 pre-commit hook，检查 git diff 里有没有绕过他的诊断模块、直接调用可观测性模块的代码，有就让提交失败，并给 agent 注入一句「改用诊断库」。Willison 让 Codex 搭了一个 Python 网页应用 web-edit，通过 Tailscale 从手机直接查看和编辑文件夹里的文件。</dd><dt>结果</dt><dd>Huntley 自述加钩子后 agent 的遵守情况变成十次十中，他没有给出测试次数。web-edit 已发布 0.1a0 版本，编辑器用 CodeMirror 6，原因是 Monaco 的手机体验还不够好。</dd><dt>你可以试</dt><dd>挑一条 agent 老是违反的项目规则，看能否用 diff 检查自动判断；能判断的就写成 pre-commit hook，失败信息直接写成给 agent 的指令。</dd><dt>注意</dt><dd>钩子只能管得住机器能检查出来的规则。web-edit 是 alpha 版，作者设计时就假定它跑在 Tailscale 内网里，不要把它暴露到公网。</dd></dl>
+        <div class="body"><p>Simon Willison <a href="https://simonwillison.net/2026/Oct/13/geoffrey-huntley/">引用了 Geoffrey Huntley 的一段话</a>。agent 不按要求调用他的诊断库，他可以去改 AGENTS.md，但他认为写进文档的规则和实际行为之间总有差距，时间长了还会走样。他的做法是<strong>把规则写进 pre-commit hook</strong>：发现违规调用，提交就失败，同时把纠正提示塞给 agent。他说之后 agent 每次都照做。</p><p>同一周，Willison 发布了 <a href="https://simonwillison.net/2026/Oct/12/web-edit/">web-edit</a>。他用手机跑 Codex 时需要改一个凭据文件，又不想让凭据经过模型，于是让 Codex 现做了一个网页文件编辑器：agent 负责把服务启动起来，他再通过 Tailscale 在手机上直接改文件。</p><p>两件事思路相同：<strong>能交给机器检查的规则，用代码强制执行；不该交给模型的数据，留一条人工通道。</strong> 团队里已经在用 agent 写代码的人，可以从 lint 规则和提交钩子入手，把说明文档里反复强调的要求改成自动检查。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/13/geoffrey-huntley/" target="_blank" rel="noopener" title="Quoting Geoffrey Huntley">Simon Willison</a><a href="https://simonwillison.net/2026/Oct/12/web-edit/" target="_blank" rel="noopener" title="web-edit 0.1a0">Simon Willison</a></div>
+      </section>
+      <section class="item" id="2026-10-13-03">
+        <div class="item-meta"><span class="tag" data-cat="app">AI App</span><span>·</span>经营复盘<span>·</span>2026-10-12<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-13-03/">03｜18 岁零基础做 App，花几千美元买网红视频差点做垮</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Lino，18 岁，没有编程基础，今年 2 月还不知道 RevenueCat 和 onboarding 是什么，后来做出健身类 App AbMaxx。</dd><dt>怎么用</dt><dd>先用 Lovable 搭了两个月，不满意就整个放弃，改用 Rork 一个月重做。获客先找大号健身网红按条付费拍视频，后来改成给一位大号健身创作者股权、换取长期合作。</dd><dt>结果</dt><dd>本人自述：重做后前 30 天收入 7000 美元。早期每条视频要几千美元，利润率 5% 到 10%，收入只有三四千美元。改成股权合作后转投 Meta 广告，ROAS 2 到 2.5 倍；同样的素材放到 TikTok、投给更年轻的人群，ROAS 4 到 5 倍。</dd><dt>你可以试</dt><dd>做付费 App 的话，先用小预算测出哪种素材能带来转化，再去找大号合作；合作方可以考虑用分成或股权绑定。</dd><dt>注意</dt><dd>两段短视频的标题分别写月收入 6 万和 5 万美元，口径不一致，都是本人自述，看不到利润和留存数据。AI 编程工具缩短了开发时间，收入主要靠后来的分发打法。</dd></dl>
+        <div class="body"><p>Starter Story 发了两段 Lino 的短视频。<a href="https://www.youtube.com/shorts/61N_9yN2VIU">第一段</a>讲开发：他在 Lovable 上做了两个月，自己不满意，整个推掉，换成 Rork 用一个月重做，自述首月收入 7000 美元。<a href="https://www.youtube.com/shorts/MHnh1HDvF9g">第二段</a>讲获客，教训更具体。他在还不知道什么内容能转化时，就去找大号健身网红，每条视频花几千美元，利润率压到 5% 到 10%，差点把生意做垮。</p><p>后来的调整分三步：<strong>给一位大号健身创作者股权，换来免费、持续的内容；砍掉其他 UGC 合作；把验证过的素材先投 Meta，再搬到 TikTok 投给更年轻的人群。</strong> 他自述的 ROAS 从 2 到 2.5 倍提高到 4 到 5 倍。</p><p>这两段是一分钟左右的短视频，没有讲留存、退款和投放预算。它们最有用的地方是交代了顺序：找到能转化的内容形式之前，不要花大钱买曝光。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/shorts/61N_9yN2VIU" target="_blank" rel="noopener" title="This $60k/month app started as a lovable prototype he hated...">Starter Story (YouTube)</a><a href="https://www.youtube.com/shorts/MHnh1HDvF9g" target="_blank" rel="noopener" title="$50k/month founder nearly killed his app by spending thousands on UGC 😊">Starter Story (YouTube)</a></div>
+      </section>
+      <section class="item" id="2026-10-13-04">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-12<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-13-04/">04｜Anthropic 让 Claude 自己编排多 agent，代价是贵得多</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Anthropic 技术人员 CJ Avilla 和 Harrison Stall，2026 年 10 月 12 日在 AI Engineer New York 的工作坊上发言，Latent Space 做了报道。</dd><dt>核心观点</dt><dd>他们认为，人手动审批大量 PR 已经成了瓶颈。dynamic workflows（flows）的做法是：主 agent 先定计划，再写一段编排程序，由程序启动子 agent、收集结果、管理信息流转，开发者不再手动配置协调者和子 agent 名单。</dd><dt>依据</dt><dd>依据是一个股票观察清单扫描的演示：每只股票交给一个上下文隔离的 agent 扫描，再由一个复查阶段汇总出报告。Avilla 说，这比单 agent 方案贵得多，但能找全更多细节。这是厂商对自家产品的说法，没有独立测试。</dd><dt>对你的意义</dt><dd>打算让 agent 并行干活的人，先设好会话预算，把并行数调低，再用 eval 判断加 agent 值不值，不要默认 agent 越多越好。</dd><dt>争议·条件</dt><dd>现场有观众担心，一个简单的扫描任务会不会触发几百个子 agent。Stall 的回答是靠 eval 和更低的默认值来控制。flow 也不会自动改进自己，子 agent 之间只能通过共享文件系统交换信息。</dd></dl>
+        <div class="body"><p>据 <a href="https://www.latent.space/p/claude-dynamic-workflows">Latent Space 的现场报道</a>，Anthropic 在 AI Engineer NYC 讲解了 Claude Managed Agents 的新功能 dynamic workflows。Stall 称之为「下一代多 agent 编排」：由 Claude 决定要开几个 agent、怎么分工。Avilla 的出发点是，开发者同时管很多 agent 时，自己会成为审 PR 的瓶颈。</p><p>问答环节比演示本身更有参考价值。<strong>模型运行时不知道预算</strong>，开发者只能设置会话预算；Stall 半开玩笑地说，告诉模型预算可能让它「焦虑」。决定开几个 agent 靠 eval 和较低的默认值，任务大时还要明确要求它多并行。想看主 agent 给子 agent 传了什么，可以在 Claude Console 的图里逐步查看。</p><p>这些都是厂商在介绍自家新功能。Stall 说 flows 是在难题上投入更多推理算力。对普通团队来说，先算清多花的钱换来了多少多找到的东西，再决定把哪些任务交给多 agent。</p></div>
+        <div class="sources">原文：<a href="https://www.latent.space/p/claude-dynamic-workflows" target="_blank" rel="noopener" title="How Anthropic’s Dynamic Workflows Coordinate Claude Agents">Latent Space</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>今晚花 10 分钟，把今天的工作、没做完的事和家里要记的事不加整理地写下来，交给你常用的 AI 助手，并要求它：「不要客套和打气，告诉我完成了什么、可能忽略了什么，再问我一个关于明天的问题。」写之前删掉公司机密和他人隐私。连续做五天，周五把原文和回复对照着读一遍，记下它帮你找回了几件事、哪几次判断错了。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-12/">← 2026 年 10 月 12 日 · 周一</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

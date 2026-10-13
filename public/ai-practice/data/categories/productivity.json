@@ -8,6 +8,39 @@
   "items": [
     {
       "candidateIds": [
+        "c1",
+        "c3"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-13",
+      "headline": "让 agent 守规矩，与其改说明文档，不如让提交直接失败",
+      "oneLiner": "Geoffrey Huntley 用一个 pre-commit hook 拦下绕过诊断库的代码，并把纠正提示注入给 agent，自述遵守率变成「十次十中」；Simon Willison 则让 Codex 做了个小工具，好让密钥文件不经过模型。",
+      "who": "开发者 Geoffrey Huntley 在用 coding agent 写代码；Simon Willison 在手机上通过 Codex Remote 推进项目。",
+      "how": "Huntley 写了一个 pre-commit hook，检查 git diff 里有没有绕过他的诊断模块、直接调用可观测性模块的代码，有就让提交失败，并给 agent 注入一句「改用诊断库」。Willison 让 Codex 搭了一个 Python 网页应用 web-edit，通过 Tailscale 从手机直接查看和编辑文件夹里的文件。",
+      "result": "Huntley 自述加钩子后 agent 的遵守情况变成十次十中，他没有给出测试次数。web-edit 已发布 0.1a0 版本，编辑器用 CodeMirror 6，原因是 Monaco 的手机体验还不够好。",
+      "tryThis": "挑一条 agent 老是违反的项目规则，看能否用 diff 检查自动判断；能判断的就写成 pre-commit hook，失败信息直接写成给 agent 的指令。",
+      "caveat": "钩子只能管得住机器能检查出来的规则。web-edit 是 alpha 版，作者设计时就假定它跑在 Tailscale 内网里，不要把它暴露到公网。",
+      "body": "Simon Willison [引用了 Geoffrey Huntley 的一段话](https://simonwillison.net/2026/Oct/13/geoffrey-huntley/)。agent 不按要求调用他的诊断库，他可以去改 AGENTS.md，但他认为写进文档的规则和实际行为之间总有差距，时间长了还会走样。他的做法是**把规则写进 pre-commit hook**：发现违规调用，提交就失败，同时把纠正提示塞给 agent。他说之后 agent 每次都照做。\n\n同一周，Willison 发布了 [web-edit](https://simonwillison.net/2026/Oct/12/web-edit/)。他用手机跑 Codex 时需要改一个凭据文件，又不想让凭据经过模型，于是让 Codex 现做了一个网页文件编辑器：agent 负责把服务启动起来，他再通过 Tailscale 在手机上直接改文件。\n\n两件事思路相同：**能交给机器检查的规则，用代码强制执行；不该交给模型的数据，留一条人工通道。** 团队里已经在用 agent 写代码的人，可以从 lint 规则和提交钩子入手，把说明文档里反复强调的要求改成自动检查。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Quoting Geoffrey Huntley",
+          "url": "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/"
+        },
+        {
+          "label": "Simon Willison",
+          "title": "web-edit 0.1a0",
+          "url": "https://simonwillison.net/2026/Oct/12/web-edit/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-13-02",
+      "issueDate": "2026-10-13",
+      "issueNumber": 4
+    },
+    {
+      "candidateIds": [
         "c29"
       ],
       "category": "productivity",

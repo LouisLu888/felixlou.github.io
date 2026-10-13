@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthropic 让 Claude 自己编排多 agent，代价是贵得多｜AI 实干派</title>
+  <meta name="description" content="两位 Anthropic 工程师在 AI Engineer NYC 演示新功能 dynamic workflows：由 Claude 自己规划并启动一组子 agent。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-13-04/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Anthropic 让 Claude 自己编排多 agent，代价是贵得多｜AI 实干派">
+  <meta property="og:description" content="两位 Anthropic 工程师在 AI Engineer NYC 演示新功能 dynamic workflows：由 Claude 自己规划并启动一组子 agent。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-13-04/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-13.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anthropic 让 Claude 自己编排多 agent，代价是贵得多｜AI 实干派">
+  <meta name="twitter:description" content="两位 Anthropic 工程师在 AI Engineer NYC 演示新功能 dynamic workflows：由 Claude 自己规划并启动一组子 agent。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-13.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip active" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">3</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">3</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">5</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">1</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-13/">AI 实干派 004 · 2026 年 10 月 13 日 · 周二</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-12<span>·</span>US</div>
+        <h1>Anthropic 让 Claude 自己编排多 agent，代价是贵得多</h1>
+        <p class="summary">两位 Anthropic 工程师在 AI Engineer NYC 演示新功能 dynamic workflows：由 Claude 自己规划并启动一组子 agent。他们承认在演示用例里，这种方式比单 agent 贵得多，模型运行时也不知道自己的预算。</p>
+        <dl class="facts"><dt>谁说的</dt><dd>Anthropic 技术人员 CJ Avilla 和 Harrison Stall，2026 年 10 月 12 日在 AI Engineer New York 的工作坊上发言，Latent Space 做了报道。</dd><dt>核心观点</dt><dd>他们认为，人手动审批大量 PR 已经成了瓶颈。dynamic workflows（flows）的做法是：主 agent 先定计划，再写一段编排程序，由程序启动子 agent、收集结果、管理信息流转，开发者不再手动配置协调者和子 agent 名单。</dd><dt>依据</dt><dd>依据是一个股票观察清单扫描的演示：每只股票交给一个上下文隔离的 agent 扫描，再由一个复查阶段汇总出报告。Avilla 说，这比单 agent 方案贵得多，但能找全更多细节。这是厂商对自家产品的说法，没有独立测试。</dd><dt>对你的意义</dt><dd>打算让 agent 并行干活的人，先设好会话预算，把并行数调低，再用 eval 判断加 agent 值不值，不要默认 agent 越多越好。</dd><dt>争议·条件</dt><dd>现场有观众担心，一个简单的扫描任务会不会触发几百个子 agent。Stall 的回答是靠 eval 和更低的默认值来控制。flow 也不会自动改进自己，子 agent 之间只能通过共享文件系统交换信息。</dd></dl>
+        <div class="body"><p>据 <a href="https://www.latent.space/p/claude-dynamic-workflows">Latent Space 的现场报道</a>，Anthropic 在 AI Engineer NYC 讲解了 Claude Managed Agents 的新功能 dynamic workflows。Stall 称之为「下一代多 agent 编排」：由 Claude 决定要开几个 agent、怎么分工。Avilla 的出发点是，开发者同时管很多 agent 时，自己会成为审 PR 的瓶颈。</p><p>问答环节比演示本身更有参考价值。<strong>模型运行时不知道预算</strong>，开发者只能设置会话预算；Stall 半开玩笑地说，告诉模型预算可能让它「焦虑」。决定开几个 agent 靠 eval 和较低的默认值，任务大时还要明确要求它多并行。想看主 agent 给子 agent 传了什么，可以在 Claude Console 的图里逐步查看。</p><p>这些都是厂商在介绍自家新功能。Stall 说 flows 是在难题上投入更多推理算力。对普通团队来说，先算清多花的钱换来了多少多找到的东西，再决定把哪些任务交给多 agent。</p></div>
+        <div class="sources">原文：<a href="https://www.latent.space/p/claude-dynamic-workflows" target="_blank" rel="noopener" title="How Anthropic’s Dynamic Workflows Coordinate Claude Agents">Latent Space</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-13/">← 当期全部 4 条</a></span>
+        <span><a href="/ai-practice/c/perspective/">更多「AI 认知」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

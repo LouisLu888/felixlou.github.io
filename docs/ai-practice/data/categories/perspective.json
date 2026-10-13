@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c52"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-12",
+      "headline": "Anthropic 让 Claude 自己编排多 agent，代价是贵得多",
+      "oneLiner": "两位 Anthropic 工程师在 AI Engineer NYC 演示新功能 dynamic workflows：由 Claude 自己规划并启动一组子 agent。他们承认在演示用例里，这种方式比单 agent 贵得多，模型运行时也不知道自己的预算。",
+      "who": "Anthropic 技术人员 CJ Avilla 和 Harrison Stall，2026 年 10 月 12 日在 AI Engineer New York 的工作坊上发言，Latent Space 做了报道。",
+      "how": "他们认为，人手动审批大量 PR 已经成了瓶颈。dynamic workflows（flows）的做法是：主 agent 先定计划，再写一段编排程序，由程序启动子 agent、收集结果、管理信息流转，开发者不再手动配置协调者和子 agent 名单。",
+      "result": "依据是一个股票观察清单扫描的演示：每只股票交给一个上下文隔离的 agent 扫描，再由一个复查阶段汇总出报告。Avilla 说，这比单 agent 方案贵得多，但能找全更多细节。这是厂商对自家产品的说法，没有独立测试。",
+      "tryThis": "打算让 agent 并行干活的人，先设好会话预算，把并行数调低，再用 eval 判断加 agent 值不值，不要默认 agent 越多越好。",
+      "caveat": "现场有观众担心，一个简单的扫描任务会不会触发几百个子 agent。Stall 的回答是靠 eval 和更低的默认值来控制。flow 也不会自动改进自己，子 agent 之间只能通过共享文件系统交换信息。",
+      "body": "据 [Latent Space 的现场报道](https://www.latent.space/p/claude-dynamic-workflows)，Anthropic 在 AI Engineer NYC 讲解了 Claude Managed Agents 的新功能 dynamic workflows。Stall 称之为「下一代多 agent 编排」：由 Claude 决定要开几个 agent、怎么分工。Avilla 的出发点是，开发者同时管很多 agent 时，自己会成为审 PR 的瓶颈。\n\n问答环节比演示本身更有参考价值。**模型运行时不知道预算**，开发者只能设置会话预算；Stall 半开玩笑地说，告诉模型预算可能让它「焦虑」。决定开几个 agent 靠 eval 和较低的默认值，任务大时还要明确要求它多并行。想看主 agent 给子 agent 传了什么，可以在 Claude Console 的图里逐步查看。\n\n这些都是厂商在介绍自家新功能。Stall 说 flows 是在难题上投入更多推理算力。对普通团队来说，先算清多花的钱换来了多少多找到的东西，再决定把哪些任务交给多 agent。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+          "url": "https://www.latent.space/p/claude-dynamic-workflows"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-13-04",
+      "issueDate": "2026-10-13",
+      "issueNumber": 4
+    },
+    {
+      "candidateIds": [
         "c38"
       ],
       "category": "perspective",

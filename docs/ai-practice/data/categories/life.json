@@ -5,5 +5,33 @@
     "en": "AI in daily life",
     "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行"
   },
-  "items": []
+  "items": [
+    {
+      "candidateIds": [
+        "c60"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-10",
+      "headline": "每天给自己写封邮件让 Gemini 回，她反而不再用它回别人",
+      "oneLiner": "Tom's Guide 作者 Amanda Caswell 连续一个月每天给自己写一封随手邮件，让 Gemini 回复。据她自述，Gemini 能从杂乱文字里挑出遗漏的待办，但回信口吻空洞，她因此停止用 AI 回复认识的人。",
+      "who": "Tom's Guide 作者 Amanda Caswell，每天收几百封邮件，平时常按 Tab 让 Gmail 里的 Gemini 代写回复。",
+      "how": "每天花 5 到 10 分钟，把工作、想法、抱怨和家务提醒不加整理地写成一封邮件发给自己，再在 Gmail 里调用 Gemini 或把邮件贴进 Gemini app，用固定提示词要它回复。",
+      "result": "本人自述：Gemini 能从邮件里挑出顺口提到的事，比如孩子学校活动周的着装和三个孩子的牙医预约；最初的回信像 HR 腔，事事都是机会，附三条行动建议。文章没有给出省下的时间。",
+      "tryThis": "有 Gmail 加 Gemini，或任何能读长文本的聊天助手就能试。先连续写一周，周末把自己的原文和 AI 回复对照着重读一遍。",
+      "caveat": "这是一位科技媒体作者的单人体验。交给 AI 的是邮箱里的私人内容，她提醒不要写机密工作信息和敏感个人细节，动手前先查账户的隐私和数据使用设置。",
+      "body": "Amanda Caswell 在 [Tom's Guide](https://www.tomsguide.com/ai/google-gemini/i-emailed-myself-every-day-for-a-month-and-let-gemini-write-back-heres-what-happened) 记录了一个月的试验：每天给自己写一封不讲语法、想到哪写到哪的邮件，再让 Gemini 回信。起初的回复积极得过头，抱怨一个失败的项目，也会收到「这是学习机会」加三条行动建议。她说，自己清楚写下时是什么心情，读到这种回信，落差特别明显。这让她决定以后不再用 Gemini 回复认识的人。\n\n后来她改了提问方式：**不要一串建议，只要 AI 指出一件可能被忽略的事，再问一个问题。** 她给出的提示词大意是：把邮件当作每日复盘，不要客套和打气，列出我完成了什么、可能忽略了什么，再问我一个能改变明天做法的问题，不要默认每个问题都需要解决方案。她还建议给这些邮件建一个 Gmail 标签，每周回看一次，找反复出现的问题。\n\n这套做法门槛很低，适合脑子里事情多、家务和工作混在一起的人。她自己的结论是：AI 不会比她更懂她的生活，也不能替她决定下一步做什么。它的用处在于帮她整理已经写下的东西。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I emailed myself every day for a month and let Gemini write back — here's how it transformed my workflow",
+          "url": "https://www.tomsguide.com/ai/google-gemini/i-emailed-myself-every-day-for-a-month-and-let-gemini-write-back-heres-what-happened"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-13-01",
+      "issueDate": "2026-10-13",
+      "issueNumber": 4
+    }
+  ]
 }

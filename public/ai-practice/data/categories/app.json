@@ -8,6 +8,39 @@
   "items": [
     {
       "candidateIds": [
+        "c15",
+        "c14"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-12",
+      "headline": "18 岁零基础做 App，花几千美元买网红视频差点做垮",
+      "oneLiner": "据 Starter Story 短视频，18 岁的 Lino 在 Lovable 上做了两个月后推倒重来，改用 Rork 一个月做完，自述首月收入 7000 美元；早期投网红 UGC 时利润率只剩 5% 到 10%。",
+      "who": "Lino，18 岁，没有编程基础，今年 2 月还不知道 RevenueCat 和 onboarding 是什么，后来做出健身类 App AbMaxx。",
+      "how": "先用 Lovable 搭了两个月，不满意就整个放弃，改用 Rork 一个月重做。获客先找大号健身网红按条付费拍视频，后来改成给一位大号健身创作者股权、换取长期合作。",
+      "result": "本人自述：重做后前 30 天收入 7000 美元。早期每条视频要几千美元，利润率 5% 到 10%，收入只有三四千美元。改成股权合作后转投 Meta 广告，ROAS 2 到 2.5 倍；同样的素材放到 TikTok、投给更年轻的人群，ROAS 4 到 5 倍。",
+      "tryThis": "做付费 App 的话，先用小预算测出哪种素材能带来转化，再去找大号合作；合作方可以考虑用分成或股权绑定。",
+      "caveat": "两段短视频的标题分别写月收入 6 万和 5 万美元，口径不一致，都是本人自述，看不到利润和留存数据。AI 编程工具缩短了开发时间，收入主要靠后来的分发打法。",
+      "body": "Starter Story 发了两段 Lino 的短视频。[第一段](https://www.youtube.com/shorts/61N_9yN2VIU)讲开发：他在 Lovable 上做了两个月，自己不满意，整个推掉，换成 Rork 用一个月重做，自述首月收入 7000 美元。[第二段](https://www.youtube.com/shorts/MHnh1HDvF9g)讲获客，教训更具体。他在还不知道什么内容能转化时，就去找大号健身网红，每条视频花几千美元，利润率压到 5% 到 10%，差点把生意做垮。\n\n后来的调整分三步：**给一位大号健身创作者股权，换来免费、持续的内容；砍掉其他 UGC 合作；把验证过的素材先投 Meta，再搬到 TikTok 投给更年轻的人群。** 他自述的 ROAS 从 2 到 2.5 倍提高到 4 到 5 倍。\n\n这两段是一分钟左右的短视频，没有讲留存、退款和投放预算。它们最有用的地方是交代了顺序：找到能转化的内容形式之前，不要花大钱买曝光。",
+      "sources": [
+        {
+          "label": "Starter Story (YouTube)",
+          "title": "This $60k/month app started as a lovable prototype he hated...",
+          "url": "https://www.youtube.com/shorts/61N_9yN2VIU"
+        },
+        {
+          "label": "Starter Story (YouTube)",
+          "title": "$50k/month founder nearly killed his app by spending thousands on UGC 😊",
+          "url": "https://www.youtube.com/shorts/MHnh1HDvF9g"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-13-03",
+      "issueDate": "2026-10-13",
+      "issueNumber": 4
+    },
+    {
+      "candidateIds": [
         "c10"
       ],
       "category": "app",

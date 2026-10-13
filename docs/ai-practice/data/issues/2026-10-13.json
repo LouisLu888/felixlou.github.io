@@ -1,0 +1,290 @@
+{
+  "date": "2026-10-13",
+  "title": "每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent",
+  "items": [
+    {
+      "candidateIds": [
+        "c60"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-10",
+      "headline": "每天给自己写封邮件让 Gemini 回，她反而不再用它回别人",
+      "oneLiner": "Tom's Guide 作者 Amanda Caswell 连续一个月每天给自己写一封随手邮件，让 Gemini 回复。据她自述，Gemini 能从杂乱文字里挑出遗漏的待办，但回信口吻空洞，她因此停止用 AI 回复认识的人。",
+      "who": "Tom's Guide 作者 Amanda Caswell，每天收几百封邮件，平时常按 Tab 让 Gmail 里的 Gemini 代写回复。",
+      "how": "每天花 5 到 10 分钟，把工作、想法、抱怨和家务提醒不加整理地写成一封邮件发给自己，再在 Gmail 里调用 Gemini 或把邮件贴进 Gemini app，用固定提示词要它回复。",
+      "result": "本人自述：Gemini 能从邮件里挑出顺口提到的事，比如孩子学校活动周的着装和三个孩子的牙医预约；最初的回信像 HR 腔，事事都是机会，附三条行动建议。文章没有给出省下的时间。",
+      "tryThis": "有 Gmail 加 Gemini，或任何能读长文本的聊天助手就能试。先连续写一周，周末把自己的原文和 AI 回复对照着重读一遍。",
+      "caveat": "这是一位科技媒体作者的单人体验。交给 AI 的是邮箱里的私人内容，她提醒不要写机密工作信息和敏感个人细节，动手前先查账户的隐私和数据使用设置。",
+      "body": "Amanda Caswell 在 [Tom's Guide](https://www.tomsguide.com/ai/google-gemini/i-emailed-myself-every-day-for-a-month-and-let-gemini-write-back-heres-what-happened) 记录了一个月的试验：每天给自己写一封不讲语法、想到哪写到哪的邮件，再让 Gemini 回信。起初的回复积极得过头，抱怨一个失败的项目，也会收到「这是学习机会」加三条行动建议。她说，自己清楚写下时是什么心情，读到这种回信，落差特别明显。这让她决定以后不再用 Gemini 回复认识的人。\n\n后来她改了提问方式：**不要一串建议，只要 AI 指出一件可能被忽略的事，再问一个问题。** 她给出的提示词大意是：把邮件当作每日复盘，不要客套和打气，列出我完成了什么、可能忽略了什么，再问我一个能改变明天做法的问题，不要默认每个问题都需要解决方案。她还建议给这些邮件建一个 Gmail 标签，每周回看一次，找反复出现的问题。\n\n这套做法门槛很低，适合脑子里事情多、家务和工作混在一起的人。她自己的结论是：AI 不会比她更懂她的生活，也不能替她决定下一步做什么。它的用处在于帮她整理已经写下的东西。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I emailed myself every day for a month and let Gemini write back — here's how it transformed my workflow",
+          "url": "https://www.tomsguide.com/ai/google-gemini/i-emailed-myself-every-day-for-a-month-and-let-gemini-write-back-heres-what-happened"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-13-01"
+    },
+    {
+      "candidateIds": [
+        "c1",
+        "c3"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-13",
+      "headline": "让 agent 守规矩，与其改说明文档，不如让提交直接失败",
+      "oneLiner": "Geoffrey Huntley 用一个 pre-commit hook 拦下绕过诊断库的代码，并把纠正提示注入给 agent，自述遵守率变成「十次十中」；Simon Willison 则让 Codex 做了个小工具，好让密钥文件不经过模型。",
+      "who": "开发者 Geoffrey Huntley 在用 coding agent 写代码；Simon Willison 在手机上通过 Codex Remote 推进项目。",
+      "how": "Huntley 写了一个 pre-commit hook，检查 git diff 里有没有绕过他的诊断模块、直接调用可观测性模块的代码，有就让提交失败，并给 agent 注入一句「改用诊断库」。Willison 让 Codex 搭了一个 Python 网页应用 web-edit，通过 Tailscale 从手机直接查看和编辑文件夹里的文件。",
+      "result": "Huntley 自述加钩子后 agent 的遵守情况变成十次十中，他没有给出测试次数。web-edit 已发布 0.1a0 版本，编辑器用 CodeMirror 6，原因是 Monaco 的手机体验还不够好。",
+      "tryThis": "挑一条 agent 老是违反的项目规则，看能否用 diff 检查自动判断；能判断的就写成 pre-commit hook，失败信息直接写成给 agent 的指令。",
+      "caveat": "钩子只能管得住机器能检查出来的规则。web-edit 是 alpha 版，作者设计时就假定它跑在 Tailscale 内网里，不要把它暴露到公网。",
+      "body": "Simon Willison [引用了 Geoffrey Huntley 的一段话](https://simonwillison.net/2026/Oct/13/geoffrey-huntley/)。agent 不按要求调用他的诊断库，他可以去改 AGENTS.md，但他认为写进文档的规则和实际行为之间总有差距，时间长了还会走样。他的做法是**把规则写进 pre-commit hook**：发现违规调用，提交就失败，同时把纠正提示塞给 agent。他说之后 agent 每次都照做。\n\n同一周，Willison 发布了 [web-edit](https://simonwillison.net/2026/Oct/12/web-edit/)。他用手机跑 Codex 时需要改一个凭据文件，又不想让凭据经过模型，于是让 Codex 现做了一个网页文件编辑器：agent 负责把服务启动起来，他再通过 Tailscale 在手机上直接改文件。\n\n两件事思路相同：**能交给机器检查的规则，用代码强制执行；不该交给模型的数据，留一条人工通道。** 团队里已经在用 agent 写代码的人，可以从 lint 规则和提交钩子入手，把说明文档里反复强调的要求改成自动检查。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Quoting Geoffrey Huntley",
+          "url": "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/"
+        },
+        {
+          "label": "Simon Willison",
+          "title": "web-edit 0.1a0",
+          "url": "https://simonwillison.net/2026/Oct/12/web-edit/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-13-02"
+    },
+    {
+      "candidateIds": [
+        "c15",
+        "c14"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-12",
+      "headline": "18 岁零基础做 App，花几千美元买网红视频差点做垮",
+      "oneLiner": "据 Starter Story 短视频，18 岁的 Lino 在 Lovable 上做了两个月后推倒重来，改用 Rork 一个月做完，自述首月收入 7000 美元；早期投网红 UGC 时利润率只剩 5% 到 10%。",
+      "who": "Lino，18 岁，没有编程基础，今年 2 月还不知道 RevenueCat 和 onboarding 是什么，后来做出健身类 App AbMaxx。",
+      "how": "先用 Lovable 搭了两个月，不满意就整个放弃，改用 Rork 一个月重做。获客先找大号健身网红按条付费拍视频，后来改成给一位大号健身创作者股权、换取长期合作。",
+      "result": "本人自述：重做后前 30 天收入 7000 美元。早期每条视频要几千美元，利润率 5% 到 10%，收入只有三四千美元。改成股权合作后转投 Meta 广告，ROAS 2 到 2.5 倍；同样的素材放到 TikTok、投给更年轻的人群，ROAS 4 到 5 倍。",
+      "tryThis": "做付费 App 的话，先用小预算测出哪种素材能带来转化，再去找大号合作；合作方可以考虑用分成或股权绑定。",
+      "caveat": "两段短视频的标题分别写月收入 6 万和 5 万美元，口径不一致，都是本人自述，看不到利润和留存数据。AI 编程工具缩短了开发时间，收入主要靠后来的分发打法。",
+      "body": "Starter Story 发了两段 Lino 的短视频。[第一段](https://www.youtube.com/shorts/61N_9yN2VIU)讲开发：他在 Lovable 上做了两个月，自己不满意，整个推掉，换成 Rork 用一个月重做，自述首月收入 7000 美元。[第二段](https://www.youtube.com/shorts/MHnh1HDvF9g)讲获客，教训更具体。他在还不知道什么内容能转化时，就去找大号健身网红，每条视频花几千美元，利润率压到 5% 到 10%，差点把生意做垮。\n\n后来的调整分三步：**给一位大号健身创作者股权，换来免费、持续的内容；砍掉其他 UGC 合作；把验证过的素材先投 Meta，再搬到 TikTok 投给更年轻的人群。** 他自述的 ROAS 从 2 到 2.5 倍提高到 4 到 5 倍。\n\n这两段是一分钟左右的短视频，没有讲留存、退款和投放预算。它们最有用的地方是交代了顺序：找到能转化的内容形式之前，不要花大钱买曝光。",
+      "sources": [
+        {
+          "label": "Starter Story (YouTube)",
+          "title": "This $60k/month app started as a lovable prototype he hated...",
+          "url": "https://www.youtube.com/shorts/61N_9yN2VIU"
+        },
+        {
+          "label": "Starter Story (YouTube)",
+          "title": "$50k/month founder nearly killed his app by spending thousands on UGC 😊",
+          "url": "https://www.youtube.com/shorts/MHnh1HDvF9g"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-13-03"
+    },
+    {
+      "candidateIds": [
+        "c52"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-12",
+      "headline": "Anthropic 让 Claude 自己编排多 agent，代价是贵得多",
+      "oneLiner": "两位 Anthropic 工程师在 AI Engineer NYC 演示新功能 dynamic workflows：由 Claude 自己规划并启动一组子 agent。他们承认在演示用例里，这种方式比单 agent 贵得多，模型运行时也不知道自己的预算。",
+      "who": "Anthropic 技术人员 CJ Avilla 和 Harrison Stall，2026 年 10 月 12 日在 AI Engineer New York 的工作坊上发言，Latent Space 做了报道。",
+      "how": "他们认为，人手动审批大量 PR 已经成了瓶颈。dynamic workflows（flows）的做法是：主 agent 先定计划，再写一段编排程序，由程序启动子 agent、收集结果、管理信息流转，开发者不再手动配置协调者和子 agent 名单。",
+      "result": "依据是一个股票观察清单扫描的演示：每只股票交给一个上下文隔离的 agent 扫描，再由一个复查阶段汇总出报告。Avilla 说，这比单 agent 方案贵得多，但能找全更多细节。这是厂商对自家产品的说法，没有独立测试。",
+      "tryThis": "打算让 agent 并行干活的人，先设好会话预算，把并行数调低，再用 eval 判断加 agent 值不值，不要默认 agent 越多越好。",
+      "caveat": "现场有观众担心，一个简单的扫描任务会不会触发几百个子 agent。Stall 的回答是靠 eval 和更低的默认值来控制。flow 也不会自动改进自己，子 agent 之间只能通过共享文件系统交换信息。",
+      "body": "据 [Latent Space 的现场报道](https://www.latent.space/p/claude-dynamic-workflows)，Anthropic 在 AI Engineer NYC 讲解了 Claude Managed Agents 的新功能 dynamic workflows。Stall 称之为「下一代多 agent 编排」：由 Claude 决定要开几个 agent、怎么分工。Avilla 的出发点是，开发者同时管很多 agent 时，自己会成为审 PR 的瓶颈。\n\n问答环节比演示本身更有参考价值。**模型运行时不知道预算**，开发者只能设置会话预算；Stall 半开玩笑地说，告诉模型预算可能让它「焦虑」。决定开几个 agent 靠 eval 和较低的默认值，任务大时还要明确要求它多并行。想看主 agent 给子 agent 传了什么，可以在 Claude Console 的图里逐步查看。\n\n这些都是厂商在介绍自家新功能。Stall 说 flows 是在难题上投入更多推理算力。对普通团队来说，先算清多花的钱换来了多少多找到的东西，再决定把哪些任务交给多 agent。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+          "url": "https://www.latent.space/p/claude-dynamic-workflows"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-13-04"
+    }
+  ],
+  "action": "今晚花 10 分钟，把今天的工作、没做完的事和家里要记的事不加整理地写下来，交给你常用的 AI 助手，并要求它：「不要客套和打气，告诉我完成了什么、可能忽略了什么，再问我一个关于明天的问题。」写之前删掉公司机密和他人隐私。连续做五天，周五把原文和回复对照着读一遍，记下它帮你找回了几件事、哪几次判断错了。",
+  "readingMinutes": 8,
+  "meta": {
+    "generatedAt": "2026-10-13T15:09:02.887Z",
+    "engine": "cli",
+    "candidateCount": 61,
+    "candidatesBySource": {
+      "Simon Willison": 8,
+      "Lenny's Newsletter & Podcast": 1,
+      "Ali Abdaal": 3,
+      "Creator Science (Jay Clouse)": 1,
+      "Starter Story (YouTube)": 3,
+      "Every (YouTube)": 1,
+      "Rest of World": 1,
+      "Follow Builders (X)": 31,
+      "Training Data (Sequoia)": 1,
+      "Latent Space": 3,
+      "App Masters (Steve P. Young)": 1,
+      "Lifehacker": 3,
+      "Tom's Guide · AI": 3,
+      "NYT Personal Tech": 1
+    },
+    "shortlist": [
+      {
+        "id": "c13",
+        "reason": "谁：给 Ali Abdaal 写过脚本的 George Blackman。怎么用：从语音备忘录到成稿，完整讲他用 AI 写 YouTube 脚本的流程，同时在做 AI 写稿应用 PlayWriteAI。结果：等候名单已超 700 人，还总结出一条教训：AI 会很笃定地说自己做完了其实没做的事。只有节目简介，但简介已写清做法和结果。",
+        "source": "Creator Science (Jay Clouse)",
+        "title": "#321: His EXACT System For Writing Scripts With AI — Former Ali Abdaal Scriptwriter, George Blackman"
+      },
+      {
+        "id": "c1",
+        "reason": "谁：一线工程师 Geoffrey Huntley。怎么用：不靠更新 AGENTS.md 来约束编码 agent，而是写一个 pre-commit hook，检查 diff 里有没有绕过诊断库的调用，发现就拒绝提交，并注入提示让 agent 改用诊断库。结果：遵守率达到『十次十次』。小团队可以直接照搬。",
+        "source": "Simon Willison",
+        "title": "Quoting Geoffrey Huntley"
+      },
+      {
+        "id": "c3",
+        "reason": "谁：Simon Willison。怎么用：他在手机上用 Codex Remote 干活时，想改一个凭据文件，又不想让凭据经过 LLM，于是让 Codex 现场做了一个 Python 网页文件编辑器，通过 Tailscale 访问。结果：发布了 web-edit 0.1a0，是一个从具体痛点出发、当场做出小工具的完整例子。",
+        "source": "Simon Willison",
+        "title": "web-edit 0.1a0"
+      },
+      {
+        "id": "c27",
+        "reason": "谁：Peter Yang。怎么用：在 Grok bot 上按『岗位』建分身，而不是开一堆对话：分别负责客服、YouTube 选题和准备、家庭杂事、健身督促。结果：用起来像雇了几个员工，工作和生活都覆盖到，个人可以照着做。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Yang: Here's a clip of me explaining why Grok @bot is my favorite agent right now.\n\ntl"
+      },
+      {
+        "id": "c15",
+        "reason": "谁：18 岁、零编程基础的 Lino。怎么用：先在 Lovable 上做了 2 个月然后推翻，改用 Rork 一个月重做。结果：上线头 30 天收入 7000 美元，现在月收入 6 万美元。有数字，但只有简介。",
+        "source": "Starter Story (YouTube)",
+        "title": "This $60k/month app started as a lovable prototype he hated..."
+      },
+      {
+        "id": "c60",
+        "reason": "谁：Tom's Guide 作者 Amanda Caswell，每天要处理几百封邮件。怎么用：连续一个月每天给自己发邮件，让 Gemini 代写回复。结果：文章讲这件事怎么改变了她的工作流，是一份全文个人实验。",
+        "source": "Tom's Guide · AI",
+        "title": "I emailed myself every day for a month and let Gemini write back — here's how it transformed my workflow"
+      },
+      {
+        "id": "c8",
+        "reason": "谁：Simon Willison。怎么用：让 Codex 摸索怎么跑起 Parseable，并把 Datasette 的 OpenTelemetry 追踪数据接进去，跑通后自己写成 TIL 笔记。结果：在本地看到了追踪界面，可复现的做法已整理成文。",
+        "source": "Simon Willison",
+        "title": "Using Parseable with Datasette for OpenTelemetry traces"
+      },
+      {
+        "id": "c14",
+        "reason": "谁：月收入 5 万美元的 AI 健身应用 AbMaxx 的创始人 Lino（与 c15 同一人，讲的是另一件事：营销）。怎么做：起初花几千美元一条请大网红拍 UGC，利润率只有 5–10%；后来改成用股权换一位大网红合作，再把同一批素材从 Meta 投放搬到 TikTok。结果：Meta 广告 ROAS 2–2.5 倍，TikTok 4–5 倍。是带数字的经营复盘。",
+        "source": "Starter Story (YouTube)",
+        "title": "$50k/month founder nearly killed his app by spending thousands on UGC 😊"
+      },
+      {
+        "id": "c59",
+        "reason": "谁：没有编程基础的游戏爱好者、Tom's Guide 作者。怎么用：用 Google Playground 做自己的第一个游戏。结果：全文讲了成品怎么样，适合想试一试的普通读者参考。",
+        "source": "Tom's Guide · AI",
+        "title": "Google Playground lets you create games with no coding experience — here's how my first game turned out"
+      },
+      {
+        "id": "c9",
+        "reason": "AI 认知类。Lenny 和 Dan Hockenmaier 讨论：AI 让什么都容易做出来以后，怎么判断一家初创公司有没有护城河。对想选工作或创业的读者有直接参考价值。摘录只到开头，论据还要看全文。",
+        "source": "Lenny's Newsletter & Podcast",
+        "title": "How to tell if a startup has a moat"
+      },
+      {
+        "id": "c52",
+        "reason": "AI 认知/实操类。Anthropic 的两位技术人员 CJ Avilla 和 Harrison Stall 在 AI Engineer NYC 工作坊上，讲怎么用新功能『动态工作流』编排多个 Claude agent。这是现场一手记录，做 agent 产品的人可以参考。",
+        "source": "Latent Space",
+        "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents"
+      },
+      {
+        "id": "c55",
+        "reason": "AI 生活类。介绍一个办法，让非 Pixel 的 Android 手机也能用上类似 Pixel AI 听写（Rambler）的功能：自动去掉口头禅、理顺语法、听懂口误更正。全文有具体步骤，普通人照着就能做。",
+        "source": "Lifehacker",
+        "title": "Use This Hack to Get the Pixel's AI Dictation on Any Android Phone"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 24352,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2406,
+        "output_tokens_details": {
+          "thinking_tokens": 765
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 24352,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2406,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 24352,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 24352
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.242944
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 23019,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 5844,
+      "output_tokens_details": {
+        "thinking_tokens": 1335
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 23019,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 5844,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 23019,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 23019
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.30104000000000003
+  }
+}

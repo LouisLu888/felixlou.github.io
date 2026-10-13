@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>让 agent 守规矩，与其改说明文档，不如让提交直接失败｜AI 实干派</title>
+  <meta name="description" content="Geoffrey Huntley 用一个 pre-commit hook 拦下绕过诊断库的代码，并把纠正提示注入给 agent，自述遵守率变成「十次十中」；">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-13-02/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="让 agent 守规矩，与其改说明文档，不如让提交直接失败｜AI 实干派">
+  <meta property="og:description" content="Geoffrey Huntley 用一个 pre-commit hook 拦下绕过诊断库的代码，并把纠正提示注入给 agent，自述遵守率变成「十次十中」；">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-13-02/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-13.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="让 agent 守规矩，与其改说明文档，不如让提交直接失败｜AI 实干派">
+  <meta name="twitter:description" content="Geoffrey Huntley 用一个 pre-commit hook 拦下绕过诊断库的代码，并把纠正提示注入给 agent，自述遵守率变成「十次十中」；">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-13.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">3</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">2</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">2</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">3</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">5</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">1</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-13/">AI 实干派 004 · 2026 年 10 月 13 日 · 周二</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周动态<span>·</span>2026-10-13<span>·</span>US</div>
+        <h1>让 agent 守规矩，与其改说明文档，不如让提交直接失败</h1>
+        <p class="summary">Geoffrey Huntley 用一个 pre-commit hook 拦下绕过诊断库的代码，并把纠正提示注入给 agent，自述遵守率变成「十次十中」；Simon Willison 则让 Codex 做了个小工具，好让密钥文件不经过模型。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Geoffrey Huntley 在用 coding agent 写代码；Simon Willison 在手机上通过 Codex Remote 推进项目。</dd><dt>怎么用</dt><dd>Huntley 写了一个 pre-commit hook，检查 git diff 里有没有绕过他的诊断模块、直接调用可观测性模块的代码，有就让提交失败，并给 agent 注入一句「改用诊断库」。Willison 让 Codex 搭了一个 Python 网页应用 web-edit，通过 Tailscale 从手机直接查看和编辑文件夹里的文件。</dd><dt>结果</dt><dd>Huntley 自述加钩子后 agent 的遵守情况变成十次十中，他没有给出测试次数。web-edit 已发布 0.1a0 版本，编辑器用 CodeMirror 6，原因是 Monaco 的手机体验还不够好。</dd><dt>你可以试</dt><dd>挑一条 agent 老是违反的项目规则，看能否用 diff 检查自动判断；能判断的就写成 pre-commit hook，失败信息直接写成给 agent 的指令。</dd><dt>注意</dt><dd>钩子只能管得住机器能检查出来的规则。web-edit 是 alpha 版，作者设计时就假定它跑在 Tailscale 内网里，不要把它暴露到公网。</dd></dl>
+        <div class="body"><p>Simon Willison <a href="https://simonwillison.net/2026/Oct/13/geoffrey-huntley/">引用了 Geoffrey Huntley 的一段话</a>。agent 不按要求调用他的诊断库，他可以去改 AGENTS.md，但他认为写进文档的规则和实际行为之间总有差距，时间长了还会走样。他的做法是<strong>把规则写进 pre-commit hook</strong>：发现违规调用，提交就失败，同时把纠正提示塞给 agent。他说之后 agent 每次都照做。</p><p>同一周，Willison 发布了 <a href="https://simonwillison.net/2026/Oct/12/web-edit/">web-edit</a>。他用手机跑 Codex 时需要改一个凭据文件，又不想让凭据经过模型，于是让 Codex 现做了一个网页文件编辑器：agent 负责把服务启动起来，他再通过 Tailscale 在手机上直接改文件。</p><p>两件事思路相同：<strong>能交给机器检查的规则，用代码强制执行；不该交给模型的数据，留一条人工通道。</strong> 团队里已经在用 agent 写代码的人，可以从 lint 规则和提交钩子入手，把说明文档里反复强调的要求改成自动检查。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/13/geoffrey-huntley/" target="_blank" rel="noopener" title="Quoting Geoffrey Huntley">Simon Willison</a><a href="https://simonwillison.net/2026/Oct/12/web-edit/" target="_blank" rel="noopener" title="web-edit 0.1a0">Simon Willison</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-13/">← 当期全部 4 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>
