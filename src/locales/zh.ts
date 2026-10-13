@@ -4,6 +4,7 @@ export const zh = {
     aiPractice: 'AI 实干派',
     blog: '博客',
     books: '书库',
+    talks: '演讲',
     services: '咨询',
     products: '产品',
   },

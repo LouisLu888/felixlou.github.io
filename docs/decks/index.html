@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>演讲资料 · Jiabin Lu</title>
+<meta name="description" content="卢佳斌（沐风）的企业内训、私董会分享和公开演讲材料。每套写明受众和要解决的问题，可以直接打开幻灯片。">
+<link rel="canonical" href="https://www.jiabinlu.com/decks/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="演讲资料 · Jiabin Lu">
+<meta property="og:description" content="企业内训、私董会分享和公开演讲材料，可以直接打开幻灯片。">
+<meta property="og:url" content="https://www.jiabinlu.com/decks/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/decks/decks.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">Jiabin Lu</a>
+    <nav class="site-nav" aria-label="站点">
+      <a href="/blog">博客</a>
+      <a href="/ai-practice/">AI 实干派</a>
+      <a href="/decks/" class="active">演讲</a>
+      <a href="/services">咨询</a>
+      <a href="/products">产品</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">沐风 · 演讲与内训 · 2026</p>
+    <h1>把 AI 从「会用」带到「能交付」。</h1>
+    <p class="lead">企业内训、私董会分享和公开演讲的材料。每套写明受众和要解决的问题，可以直接打开幻灯片。</p>
+    <div class="stats">
+      <div class="stat"><b id="stat-total">1</b><span>套材料</span></div>
+      <div class="stat"><b id="stat-inhouse">1</b><span>场内训与私董会</span></div>
+      <div class="stat"><b id="stat-public">0</b><span>场公开演讲</span></div>
+    </div>
+  </section>
+
+  <section class="library" id="library">
+    <h2>全部材料</h2>
+    <p class="sub">按主题分组，组内从新到旧。</p>
+    <div class="filters" id="type-filters" aria-label="按类型筛选"></div>
+
+    <!-- Adding a deck: copy an <article class="card">, fill data-type (内训 / 公开) and the
+         right group; counts and filters are computed from the markup. New topic = new .group. -->
+    <div class="group" data-topic="AI 落地：产品、工程、组织">
+      <div class="group-head">
+        <span class="num">01</span>
+        <div>
+          <h3>AI 落地：产品、工程、组织</h3>
+          <p>AI 让做出来变便宜了，判断、交付和组织协同还是贵的。</p>
+        </div>
+      </div>
+      <div class="cards">
+        <article class="card" data-type="内训">
+          <div class="meta"><span class="org">女商私董</span><span>2026-08 · ZH</span></div>
+          <h4><a href="/decks/ai-three-mindsets/">用硅谷思维打造 AI 系统</a></h4>
+          <div class="crumbs">AI 落地 / 内训 / 中文</div>
+          <p>从一个真实的 AI 写作系统讲起，一起诊断出六个坑，对应产品、工程、组织三类思维里的九条主张：用户思维、MVP、衡量标准、快速迭代、交付鸿沟、管理 AI、系统性思维、流程、激励。</p>
+          <div class="audience">企业主与团队负责人 · 私董会内训 · 约 1 小时</div>
+          <div class="actions">
+            <a class="btn primary" href="/decks/ai-three-mindsets/slides/">播放幻灯片</a>
+            <a class="btn" href="/decks/ai-three-mindsets/">查看详情</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">想请我做内训或分享？<a href="/services">聊聊合作</a> · <a href="/">回到 jiabinlu.com</a></div>
+</footer>
+
+<script>
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var count = function (t) { return cards.filter(function (c) { return c.dataset.type === t; }).length; };
+  document.getElementById('stat-total').textContent = cards.length;
+  document.getElementById('stat-inhouse').textContent = count('内训');
+  document.getElementById('stat-public').textContent = count('公开');
+
+  var types = [['全部', cards.length], ['内训', count('内训')], ['公开', count('公开')]];
+  var box = document.getElementById('type-filters');
+  types.forEach(function (t, i) {
+    if (i > 0 && !t[1]) return;
+    var b = document.createElement('button');
+    b.className = 'chip';
+    b.type = 'button';
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.innerHTML = t[0] + '<span class="n">' + t[1] + '</span>';
+    b.onclick = function () {
+      box.querySelectorAll('.chip').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      cards.forEach(function (c) { c.hidden = i > 0 && c.dataset.type !== t[0]; });
+      document.querySelectorAll('.group').forEach(function (g) {
+        g.hidden = !g.querySelector('.card:not([hidden])');
+      });
+    };
+    box.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

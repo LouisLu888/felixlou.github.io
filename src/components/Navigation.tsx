@@ -63,6 +63,9 @@ const Navigation: React.FC = () => {
                         <a href="/ai-practice/" className={linkClass('/ai-practice')}>
                           {t('nav.aiPractice')}
                         </a>
+                        <a href="/decks/" className={linkClass('/decks')}>
+                          {t('nav.talks')}
+                        </a>
                         <Link to="/services" className={linkClass('/services')}>
                           {t('nav.services')}
                         </Link>
@@ -125,6 +128,9 @@ const Navigation: React.FC = () => {
                   </Link>
                   <a href="/ai-practice/" className={`block py-2 ${linkClass('/ai-practice')}`}>
                     {t('nav.aiPractice')}
+                  </a>
+                  <a href="/decks/" className={`block py-2 ${linkClass('/decks')}`}>
+                    {t('nav.talks')}
                   </a>
                   <Link to="/services" className={`block py-2 ${linkClass('/services')}`}>
                     {t('nav.services')}

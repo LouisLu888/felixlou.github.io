@@ -4,6 +4,7 @@ export const en = {
     aiPractice: 'AI in Practice',
     blog: 'Blog',
     books: 'Books',
+    talks: 'Talks',
     services: 'Consulting',
     products: 'Products',
   },
