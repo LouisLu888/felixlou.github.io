@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-13 · 每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-13/</link>
+      <description>每天给自己写封邮件让 Gemini 回，她反而不再用它回别人；让 agent 守规矩，与其改说明文档，不如让提交直接失败；18 岁零基础做 App，花几千美元买网红视频差点做垮；Anthropic 让 Claude 自己编排多 agent，代价是贵得多（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-13/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 每天给自己写封邮件让 Gemini 回，她反而不再用它回别人<br>02:49 让 agent 守规矩，与其改说明文档，不如让提交直接失败<br>03:44 18 岁零基础做 App，花几千美元买网红视频差点做垮<br>04:38 Anthropic 让 Claude 自己编排多 agent，代价是贵得多<br>05:30 今天可以做的一件事</p><p><b>每天给自己写封邮件让 Gemini 回，她反而不再用它回别人</b><br><a href="https://www.tomsguide.com/ai/google-gemini/i-emailed-myself-every-day-for-a-month-and-let-gemini-write-back-heres-what-happened">Tom's Guide · AI</a></p><p><b>让 agent 守规矩，与其改说明文档，不如让提交直接失败</b><br><a href="https://simonwillison.net/2026/Oct/13/geoffrey-huntley/">Simon Willison</a> · <a href="https://simonwillison.net/2026/Oct/12/web-edit/">Simon Willison</a></p><p><b>18 岁零基础做 App，花几千美元买网红视频差点做垮</b><br><a href="https://www.youtube.com/shorts/61N_9yN2VIU">Starter Story (YouTube)</a> · <a href="https://www.youtube.com/shorts/MHnh1HDvF9g">Starter Story (YouTube)</a></p><p><b>Anthropic 让 Claude 自己编排多 agent，代价是贵得多</b><br><a href="https://www.latent.space/p/claude-dynamic-workflows">Latent Space</a></p>]]></content:encoded>
+      <enclosure url="https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-13.mp3" length="2285661" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-13</guid>
+      <pubDate>Tue, 13 Oct 2026 15:41:47 GMT</pubDate>
+      <itunes:duration>00:06:21</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-12 · Karpathy 的能力漏斗：多数人还没真正用上 AI；Every 从人人各用一个 agent 改为全公司共用一个</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-12/</link>
       <description>同一时刻，有人觉得 AI 只是个笨聊天框，有人觉得曲线已经竖起来了；Every 的员工各自养的 agent 都停了，最后改成全公司共用一个；Meta 设计总监讲 Muse：同一件事按三个层级展示，主对话只开一个；不放心让 agent 上线代码，就让它先交「证据」再人工验收；给 agent 一份旧插件当样板，让它读完新文档就写出新插件（本集语音由 AI 合成）</description>
