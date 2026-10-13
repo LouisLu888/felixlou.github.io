@@ -1,4 +1,4 @@
-// Renders one short passage in several Inworld TTS-2 voices and steering
+// Renders one short passage in the Mandarin Inworld TTS-2 voices and steering
 // styles so a new podcast voice can be chosen by ear. Run from the podcast
 // workflow with audition=true; the MP3s come back as a workflow artifact.
 //
@@ -6,7 +6,7 @@
 //   node voice-audition.js --out <dir>
 
 import { execFileSync } from "child_process";
-import { mkdir, writeFile } from "fs/promises";
+import { mkdir } from "fs/promises";
 import { join } from "path";
 
 const MODEL = "inworld/realtime-tts-2";
@@ -20,8 +20,9 @@ const RELAXED = "[say in a relaxed, conversational podcast-host tone]";
 const UPBEAT = "[say in a warm, upbeat, energetic podcast-host tone]";
 const EXCITED = "[say with energy and enthusiasm, like a lively podcast host excited to share today's stories]";
 
-// Mandarin voice names are pinyin; the list itself is read from the model schema.
-const PINYIN = /^(xiao|yi|jing|xin|wei|hao|ming|mei|lin|yu|zh|ch|sh|qi|jia|hui|lei|fang|ying|yun|tian|kai|bo|jun|ya|ruo|zi|hong|feng|long|wen|xue|na|lan)/i;
+// Inworld's built-in Mandarin voices. The model schema does not enumerate
+// voice ids, so this list comes from Inworld's voice library.
+const MANDARIN = ["Xinyi", "Jing", "Yichen"];
 
 const headers = { Authorization: `Bearer ${process.env.REPLICATE_API_TOKEN}`, "Content-Type": "application/json", Prefer: "wait=60" };
 
@@ -33,17 +34,6 @@ async function call(url, init = {}) {
     if (attempt >= 8 || (res.status !== 429 && res.status < 500)) throw new Error(`HTTP ${res.status}: ${text.slice(0, 300)}`);
     await new Promise((r) => setTimeout(r, 1000 * Number(res.headers.get("retry-after") || 10)));
   }
-}
-
-// Finds the enum that lists voice ids anywhere in the model's OpenAPI schema.
-function findVoiceEnum(node) {
-  if (!node || typeof node !== "object") return null;
-  if (Array.isArray(node.enum) && node.enum.includes("Xiaoyin")) return node.enum;
-  for (const v of Object.values(node)) {
-    const hit = findVoiceEnum(v);
-    if (hit) return hit;
-  }
-  return null;
 }
 
 async function speak(voice, steer, rate) {
@@ -66,17 +56,11 @@ async function main() {
   if (!process.env.REPLICATE_API_TOKEN) throw new Error("REPLICATE_API_TOKEN is not set");
   await mkdir(out, { recursive: true });
 
-  const model = await (await call(`https://api.replicate.com/v1/models/${MODEL}`, { headers })).json();
-  const voices = findVoiceEnum(model.latest_version?.openapi_schema) || ["Xiaoyin"];
-  console.log(`All voices (${voices.length}): ${voices.join(", ")}`);
-  const mandarin = voices.filter((v) => PINYIN.test(v) && v !== "Xiaoyin");
-  console.log(`Mandarin-looking voices: ${mandarin.join(", ") || "(none)"}`);
-
   const takes = [
     ["01-Xiaoyin-current", "Xiaoyin", RELAXED, 0.95],
     ["02-Xiaoyin-upbeat", "Xiaoyin", UPBEAT, 1.0],
     ["03-Xiaoyin-excited", "Xiaoyin", EXCITED, 1.05],
-    ...mandarin.flatMap((v) => [[`${v}-upbeat`, v, UPBEAT, 1.0], [`${v}-excited`, v, EXCITED, 1.05]]),
+    ...MANDARIN.flatMap((v) => [[`${v}-upbeat`, v, UPBEAT, 1.0], [`${v}-excited`, v, EXCITED, 1.05]]),
   ];
   for (const [name, voice, steer, rate] of takes) {
     try {
@@ -87,7 +71,6 @@ async function main() {
       console.log(`fail ${name}: ${err.message}`);
     }
   }
-  await writeFile(join(out, "voices.txt"), voices.join("\n") + "\n");
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });

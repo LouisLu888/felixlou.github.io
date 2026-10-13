@@ -24,7 +24,7 @@ on:
         type: boolean
         default: false
       audition:
-        description: 'Only render voice samples (artifact), publish nothing'
+        description: 'Only render voice samples to the voice-audition branch, publish nothing'
         type: boolean
         default: false
 
@@ -57,11 +57,17 @@ jobs:
           command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
           node ai-practice/scripts/voice-audition.js --out audition
 
-      - uses: actions/upload-artifact@v4
+      # Pushed to a throwaway branch (never master) so the samples can be
+      # fetched with plain git; artifact downloads need a browser session.
+      - name: Publish samples to the voice-audition branch
         if: ${{ inputs.audition }}
-        with:
-          name: voice-audition
-          path: audition/
+        run: |
+          cd audition
+          git init -q -b voice-audition
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add . && git commit -q -m "Voice audition $(date -u +%FT%TZ)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" voice-audition
 
       - name: Decide date
         id: day
