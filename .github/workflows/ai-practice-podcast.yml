@@ -23,6 +23,10 @@ on:
         description: 'Regenerate even if the episode exists'
         type: boolean
         default: false
+      audition:
+        description: 'Only render voice samples (artifact), publish nothing'
+        type: boolean
+        default: false
 
 concurrency:
   group: ai-practice-podcast
@@ -44,8 +48,24 @@ jobs:
         with:
           node-version: '22'
 
+      # Voice samples for choosing a new podcast voice by ear; nothing is committed.
+      - name: Voice audition
+        if: ${{ inputs.audition }}
+        env:
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+        run: |
+          command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+          node ai-practice/scripts/voice-audition.js --out audition
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.audition }}
+        with:
+          name: voice-audition
+          path: audition/
+
       - name: Decide date
         id: day
+        if: ${{ !inputs.audition }}
         env:
           INPUT_DATE: ${{ inputs.date }}
           FORCE: ${{ inputs.force }}
@@ -59,18 +79,18 @@ jobs:
           fi
 
       - name: Ensure ffmpeg
-        if: ${{ !steps.day.outputs.skip }}
+        if: ${{ !inputs.audition && !steps.day.outputs.skip }}
         run: command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
 
       # The script is written by Claude Opus through the Claude Code CLI on the
       # Claude subscription (same token the daily issue uses); gpt-5.5 is the
       # fallback if Claude fails.
       - name: Install Claude Code
-        if: ${{ !steps.day.outputs.skip }}
+        if: ${{ !inputs.audition && !steps.day.outputs.skip }}
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Build episode
-        if: ${{ !steps.day.outputs.skip }}
+        if: ${{ !inputs.audition && !steps.day.outputs.skip }}
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -78,7 +98,7 @@ jobs:
         run: node ai-practice/scripts/podcast-build.js --out out --date "${{ steps.day.outputs.date }}"
 
       - name: Update feed and commit
-        if: ${{ !steps.day.outputs.skip }}
+        if: ${{ !inputs.audition && !steps.day.outputs.skip }}
         run: |
           if [ "$(jq -r .skip out/episode.json)" = "true" ]; then
             echo "No issue for this date — no episode."
