@@ -60,7 +60,8 @@ async function resolveTagId(name) {
   return null;
 }
 
-// Buttondown wraps emails in its own template, so send only the content table.
+// Buttondown wraps emails in its own template; the embedded render is only the
+// content rows (no document or frame), so it sits directly in that template.
 function bodyFragment(html) {
   const inner = html.match(/<body[^>]*>([\s\S]*)<\/body>/i)?.[1] || html;
   return `<!-- buttondown-editor-mode: fancy -->${inner}`;
@@ -75,7 +76,7 @@ function addDays(iso, n) {
 async function buildDaily(date) {
   const ctx = await loadIssueContext(date);
   if (!ctx || !ctx.issue.items.length) return null;
-  return { key: date, ...renderDailyEmail(ctx.issue, ctx.number, ctx.catName) };
+  return { key: date, ...renderDailyEmail(ctx.issue, ctx.number, ctx.catName, { embedded: true }) };
 }
 
 async function buildWeekly(endDate) {
@@ -91,7 +92,7 @@ async function buildWeekly(endDate) {
   if (!issues.length) return null;
   const ctx = await loadIssueContext(issues[0].date);
   const numberOf = (d) => ctx.index.days.find((x) => x.date === d)?.number ?? 0;
-  return { key: endDate, ...renderWeeklyEmail({ weekLabel: `${start} 至 ${endDate}`, issues, numberOf, catName: ctx.catName }) };
+  return { key: endDate, ...renderWeeklyEmail({ weekLabel: `${start} 至 ${endDate}`, issues, numberOf, catName: ctx.catName, embedded: true }) };
 }
 
 async function main() {
