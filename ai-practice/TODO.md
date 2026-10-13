@@ -4,11 +4,9 @@
 
 ## AI 生活栏目（2026-10-12 新开）
 
-- [ ] 找一手来源。这一栏想要的是普通人亲历的用法，例如用 Meta Muse 这类个人助手、清理忘了取消的订阅、让 AI 打客服电话追回退款。这类故事多在 Reddit、X 和小红书，目前都接不进来：
-  - Reddit 的 RSS 对脚本返回 403（2026-10-12 实测），要走 Reddit API 申请 OAuth
-  - X 上只有 follow-builders 的 builder 列表，需要另建一份生活向账号列表
-  - 代打客服电话、代砍账单的厂商（如 Pine AI）博客没有 RSS，内容也偏营销
-- [ ] 两周后（约 2026-10-26）看 `state/source-stats.md`：Wonder Tools、Lifehacker、少数派的成稿数。为 0 的换掉或调 `titlePattern`
+- [ ] 补中文一手来源。小红书、即刻、公众号都没有 RSS，只能自建 RSSHub
+- [ ] Reddit 目前用 r/ChatGPT 的热门 RSS（2026-10-12 加入）。`/top/.rss` 返回 403；如果 runner 上也开始被拦，改走 Reddit API（OAuth）
+- [ ] 两周后（约 2026-10-26）看 `state/source-stats.md`：六个生活来源（Wonder Tools、Lifehacker、少数派、Tom's Guide、NYT Personal Tech、Reddit）的成稿数。为 0 的换掉或调 `titlePattern`
 - [ ] 观察两周，再决定要不要每期保底一条生活类，以及 15 分钟预算下七个栏目是否太多
 
 ## 播客

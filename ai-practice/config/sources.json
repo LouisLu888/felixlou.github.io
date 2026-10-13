@@ -367,6 +367,36 @@
       "maxItems": 2,
       "fullText": true,
       "titlePattern": "AI|ChatGPT|Claude|Gemini|智能体|大模型|Agent"
+    },
+    {
+      "name": "Tom's Guide · AI",
+      "type": "rss",
+      "url": "https://www.tomsguide.com/feeds/tag/ai",
+      "category": "life",
+      "region": "US",
+      "maxItems": 3,
+      "titlePattern": "\\bI\\b|\\bmy\\b|\\bwe\\b|\\bour\\b",
+      "_note": "Editors' first-person tests; numbers are self-reported"
+    },
+    {
+      "name": "NYT Personal Tech",
+      "type": "rss",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/PersonalTech.xml",
+      "category": "life",
+      "region": "US",
+      "maxItems": 2,
+      "titlePattern": "A\\.I\\.|\\bAI\\b|ChatGPT|Gemini|Claude|Muse|chatbot|agent",
+      "_note": "Paywalled: only the feed summary is available"
+    },
+    {
+      "name": "Reddit r/ChatGPT",
+      "type": "rss",
+      "url": "https://www.reddit.com/r/ChatGPT/.rss",
+      "category": "life",
+      "region": "US",
+      "maxItems": 3,
+      "titlePattern": "saved|refund|bill|cancel|negotiat|insurance|doctor|landlord|dispute|subscription|helped me|got me",
+      "_note": "Hot feed; /top/.rss returned 403 on 2026-10-12"
     }
   ]
 }
