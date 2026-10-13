@@ -22,7 +22,7 @@
 ## 内容来源
 
 - [ ] 没有逐字稿的播客（No Priors、a16z、Training Data 等 Megaphone / Simplecast 的 feed，以及 How I AI 等 anchor.fm 的 feed）仍然只有 show notes。可以只对初筛入选的这几条，用 OpenAI 转写音频（约 $0.2 一集）。2026-10-12 加入
-- [ ] 确认 YouTube 字幕在 GitHub runner 上也能抓到（innertube Android 客户端，本机 2026-10-12 可用）。被拦截时 fetch 日志会有 `transcript failed`
+- [ ] YouTube 字幕在 GitHub runner 上被拦截（2026-10-12 排练：12 个视频全部返回 `LOGIN_REQUIRED: Sign in to confirm you're not a bot`，本机正常）。视频候选目前仍只有简介。可选方案：对初筛入选的视频改用 OpenAI 转写音频，或换一台非数据中心 IP 的机器抓字幕。播客 feed 自带的逐字稿在 runner 上正常（同一次排练 6 条）
 
 ## 其他
 
