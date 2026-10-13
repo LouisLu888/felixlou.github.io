@@ -71,9 +71,12 @@ async function main() {
       }
 
       const skip = source.skipUrlPattern ? new RegExp(source.skipUrlPattern) : null;
+      // Broad feeds (Lifehacker, 少数派) only contribute their AI pieces.
+      const keep = source.titlePattern ? new RegExp(source.titlePattern, "i") : null;
       const fresh = raw
         .filter((it) => it.url && !seen[it.url])
         .filter((it) => !skip || !skip.test(it.url))
+        .filter((it) => !keep || keep.test(it.title || ""))
         .filter((it) => !it.publishedAt || new Date(it.publishedAt).getTime() >= cutoff)
         .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""))
         // follow-builders bundles many builders; let it contribute more items.

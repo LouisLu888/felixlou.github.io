@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T15:44:57.998Z",
+  "updatedAt": "2026-10-13T01:12:15.502Z",
   "categories": [
     {
       "id": "perspective",
@@ -42,6 +42,13 @@
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
       "count": 4
+    },
+    {
+      "id": "life",
+      "name": "AI 生活",
+      "en": "AI in daily life",
+      "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
+      "count": 0
     }
   ],
   "days": [

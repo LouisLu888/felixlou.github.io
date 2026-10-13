@@ -8,7 +8,7 @@ export const BASE_PATH = "/ai-practice/";
 export const SITE_URL = `${SITE_ORIGIN}${BASE_PATH}`;
 export const BRAND = "AI 实干派";
 export const TAGLINE = "看真正用 AI 拿到结果的人怎么做";
-export const DESCRIPTION = "每天几条一手材料：真正用 AI 拿到结果的人怎么做。工作提效、内容创作、商业闭环、真实收入，每条都附原文和口径。";
+export const DESCRIPTION = "每天几条一手材料：真正用 AI 拿到结果的人怎么做。工作提效、内容创作、商业闭环、真实收入，也有用 AI 办生活里的事。每条都附原文和口径。";
 
 // Static permalinks. The single-page app keeps its #/ routes; these pages are
 // what gets shared, indexed and linked from emails.

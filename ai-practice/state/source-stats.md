@@ -51,5 +51,8 @@
 | McKay Wrigley | productivity | 0 | 0 | 0 | - | - |
 | Adam Lyttle | app | 0 | 0 | 0 | - | - |
 | Hamel Husain | consulting | 0 | 0 | 0 | - | - |
+| Wonder Tools (Jeremy Caplan) | life | 0 | 0 | 0 | - | - |
+| Lifehacker | life | 0 | 0 | 0 | - | - |
+| 少数派 | life | 0 | 0 | 0 | - | - |
 
-从未成稿的来源：37 个。第 6 周复盘时，候选多而成稿为 0 的来源优先降权或移除。
+从未成稿的来源：40 个。第 6 周复盘时，候选多而成稿为 0 的来源优先降权或移除。

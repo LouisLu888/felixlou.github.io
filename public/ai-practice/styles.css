@@ -17,6 +17,7 @@
   --c-app: #7A5BA6;
   --c-productivity: #A07A1E;
   --c-perspective: #4B5E8C;
+  --c-life: #B0476E;
 
   --font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif;
   --font-serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
@@ -41,6 +42,7 @@
     --c-app: #B39AD8;
     --c-productivity: #D9B356;
     --c-perspective: #93A6D6;
+    --c-life: #E08AAB;
   }
 }
 
@@ -96,6 +98,7 @@ a:hover { text-decoration: underline; }
 [data-cat="app"] { --c: var(--c-app); }
 [data-cat="productivity"] { --c: var(--c-productivity); }
 [data-cat="perspective"] { --c: var(--c-perspective); }
+[data-cat="life"] { --c: var(--c-life); }
 
 main { padding-top: 32px; padding-bottom: 40px; min-height: 60vh; }
 h1, h2, h3 { font-family: var(--font-serif); line-height: 1.35; margin: 0; }

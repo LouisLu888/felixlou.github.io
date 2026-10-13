@@ -4,14 +4,18 @@
 
 线上地址：https://www.jiabinlu.com/ai-practice/
 
-栏目：AI 认知（方法论与世界观）· AI 咨询 · 内容创作 · Micro SaaS · AI App · 工作提效（`config/categories.json`）。
+栏目：AI 认知（方法论与世界观）· AI 咨询 · 内容创作 · Micro SaaS · AI App · 工作提效 · AI 生活（`config/categories.json`）。
+
+AI 生活（2026-10-12 加）收普通人用 AI 办生活里的事：个人助手、清理忘了取消的订阅、找客服追回退款、账单、看病、出行。专门的来源目前只有 Wonder Tools、Lifehacker 和少数派（后两个用 `titlePattern` 只取标题带 AI 的文章），其余靠现有来源里偶尔出现的个人用法。来源还不够，见 `TODO.md`。
+
+待办：`TODO.md`。
 
 ## 目录
 
 ```
 ai-practice/                 流水线（本目录）
   config/sources.json        信息源，2026-10-11 实测可解析
-  config/categories.json     五个栏目
+  config/categories.json     七个栏目
   prompts/screen.md          初筛规则
   prompts/curate.md          成稿规则
   prompts/example-issue.md   样刊，文风参考
@@ -122,7 +126,7 @@ cd ai-practice/scripts && node check-sources.js
 
 逐个抓取所有来源，报告条目数和最新一条的日期，不改动去重记录。加新来源后先跑一次。
 
-`config/sources.json` 每个来源的可选字段：`fullText`（feed 只有摘要时，抓文章页正文）、`skipUrlPattern`（跳过匹配的条目，例如双语站的英文副本）、`episodeLinkTemplate`（只有 mp3 的播客，改用的单集页面链接）、`maxItems`。
+`config/sources.json` 每个来源的可选字段：`fullText`（feed 只有摘要时，抓文章页正文）、`skipUrlPattern`（跳过匹配的条目，例如双语站的英文副本）、`titlePattern`（只保留标题匹配的条目，不分大小写，用于综合类站点）、`episodeLinkTemplate`（只有 mp3 的播客，改用的单集页面链接）、`maxItems`。
 
 ## 已知问题
 

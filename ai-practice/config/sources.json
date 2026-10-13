@@ -1,5 +1,5 @@
 {
-  "_comment": "type: rss (RSS/Atom/podcast feed) | youtube (channel_id) | follow-builders (upstream X feed). category is a hint for the editor model, not a hard label. Optional: fullText (fetch article page when the feed only has a summary), skipUrlPattern (regex of item URLs to ignore), episodeLinkTemplate (page URL for mp3-only podcast feeds), maxItems. All feeds were fetched and parsed on 2026-10-11.",
+  "_comment": "type: rss (RSS/Atom/podcast feed) | youtube (channel_id) | follow-builders (upstream X feed). category is a hint for the editor model, not a hard label. Optional: fullText (fetch article page when the feed only has a summary), skipUrlPattern (regex of item URLs to ignore), titlePattern (case-insensitive regex; keep only items whose title matches, for broad feeds), episodeLinkTemplate (page URL for mp3-only podcast feeds), maxItems. All feeds were fetched and parsed on 2026-10-11.",
   "sources": [
     {
       "name": "Simon Willison",
@@ -340,6 +340,33 @@
       "url": "https://feeds.captivate.fm/supercompanies/",
       "category": "consulting",
       "region": "US"
+    },
+    {
+      "name": "Wonder Tools (Jeremy Caplan)",
+      "type": "rss",
+      "url": "https://wondertools.substack.com/feed",
+      "category": "life",
+      "region": "US",
+      "maxItems": 2
+    },
+    {
+      "name": "Lifehacker",
+      "type": "rss",
+      "url": "https://lifehacker.com/feed/rss",
+      "category": "life",
+      "region": "US",
+      "maxItems": 3,
+      "titlePattern": "\\bAI\\b|ChatGPT|Gemini|Claude|Copilot|agent"
+    },
+    {
+      "name": "少数派",
+      "type": "rss",
+      "url": "https://sspai.com/feed",
+      "category": "life",
+      "region": "CN",
+      "maxItems": 2,
+      "fullText": true,
+      "titlePattern": "AI|ChatGPT|Claude|Gemini|智能体|大模型|Agent"
     }
   ]
 }
