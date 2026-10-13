@@ -290,7 +290,7 @@ export function renderSubscribePage({ categories }) {
       <p>${DESCRIPTION}</p>
     </div>
     ${subscribeForm()}
-    <p>选「每天一期」，每天早上收到当期全文，约 15 分钟读完；选「每周精选」，每周日收到一周的要点和链接。</p>`;
+    <p>选「每天一期」，每天北京时间早上 6 点收到当期要点，几分钟看完，全文在网站上；选「每周精选」，每周日收到一周的要点和链接。</p>`;
   return shell({ title: `订阅｜${BRAND}`, description: DESCRIPTION, path: subscribePath(), type: "website", body, categories, footerForm: false });
 }
 

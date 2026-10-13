@@ -55,9 +55,18 @@ function hms(seconds) {
   return [h, m, s].map((n) => String(n).padStart(2, "0")).join(":");
 }
 
+function mmss(seconds) {
+  return `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
+}
+
 function renderFeed(episodes) {
   const items = episodes.map((ep) => {
-    const notes = `<p><a href="${esc(ep.link)}">图文版</a> · 本集口播稿与语音由 AI 生成合成</p>` + ep.items.map((it) =>
+    // Timestamps first (players turn "mm:ss" in show notes into jump links),
+    // then each story with its original sources.
+    const timeline = ep.chapters?.length
+      ? `<p>${ep.chapters.map((c) => `${mmss(c.start)} ${esc(c.title)}`).join("<br>")}</p>`
+      : "";
+    const notes = `<p><a href="${esc(ep.link)}">图文版</a> · 本集口播稿与语音由 AI 生成合成</p>` + timeline + ep.items.map((it) =>
       `<p><b>${esc(it.headline)}</b><br>${it.sources.map((s) => `<a href="${esc(s.url)}">${esc(s.label || s.title)}</a>`).join(" · ")}</p>`
     ).join("");
     return `    <item>
@@ -122,6 +131,7 @@ async function main() {
     summary: meta.summary,
     link: meta.link,
     items: meta.items,
+    ...(meta.chapters ? { chapters: meta.chapters } : {}),
     duration: meta.duration,
     audioUrl: `${BASE_URL}audio/${file}`,
     audioBytes: (await stat(join(AUDIO_DIR, file))).size,

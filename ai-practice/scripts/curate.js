@@ -103,6 +103,8 @@ function compactCandidate(c, textChars) {
     url: c.url,
     publishedAt: c.publishedAt,
     author: c.author,
+    // transcript / article / post / summary (description or show notes only)
+    textKind: c.textKind || "article",
     text: textChars ? c.text.slice(0, textChars) : c.text,
     ...(c.engagement ? { engagement: c.engagement } : {}),
   };

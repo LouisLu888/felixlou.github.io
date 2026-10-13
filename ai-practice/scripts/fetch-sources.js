@@ -20,6 +20,7 @@ import { join } from "path";
 import { fileURLToPath } from "url";
 import { fetchArticleText } from "./lib/feeds.js";
 import { fetchSourceItems, fetchYouTubeDescription } from "./lib/sources.js";
+import { fetchFeedTranscript, fetchYouTubeTranscript } from "./lib/transcripts.js";
 import { todayPacific } from "./lib/dates.js";
 
 const ROOT = join(fileURLToPath(new URL(".", import.meta.url)), "..");
@@ -34,6 +35,11 @@ const DEFAULT_MAX_ITEMS = 3;
 const SEEN_TTL_DAYS = 30;
 // Keeps the curate prompt bounded; the editor model only needs enough to judge.
 const MAX_TEXT_CHARS = 10000;
+// Interviews and videos need more room: the useful part is often past minute 20.
+// The episode description goes first so the screener's short excerpt sees it.
+const MAX_TRANSCRIPT_TEXT_CHARS = 30000;
+const MAX_DESCRIPTION_CHARS = 3000;
+const AUDIO_URL = /\.(mp3|m4a|aac|ogg|wav)(\?|$)/i;
 
 function argDate() {
   const i = process.argv.indexOf("--date");
@@ -97,6 +103,26 @@ async function main() {
         }
       }
 
+      // Audio and video: the description alone leaves the editor guessing, so
+      // add the transcript when the feed or YouTube has one. textKind tells
+      // the screener how much material each candidate really carries.
+      for (const it of fresh) {
+        const isVideo = source.type === "youtube";
+        const isAudio = !isVideo && (AUDIO_URL.test(it.audioUrl || "") || Boolean(source.episodeLinkTemplate));
+        it.textKind = source.type === "follow-builders" ? "post" : isVideo || isAudio ? "summary" : "article";
+        if (!isVideo && !it.transcriptUrl) continue;
+        try {
+          const transcript = isVideo ? await fetchYouTubeTranscript(it.url) : await fetchFeedTranscript(it.transcriptUrl);
+          if (transcript.length > 1000) {
+            it.text = `${(it.text || "").slice(0, MAX_DESCRIPTION_CHARS)}\n\n[逐字稿]\n${transcript}`;
+            it.textKind = "transcript";
+          }
+        } catch (err) {
+          console.error(`    transcript failed for ${it.url}: ${err.message}`);
+        }
+        await new Promise((r) => setTimeout(r, 500));
+      }
+
       for (const it of fresh) {
         candidates.push({
           id: `c${candidates.length + 1}`,
@@ -108,11 +134,13 @@ async function main() {
           url: it.url,
           publishedAt: it.publishedAt,
           author: it.author || "",
-          text: (it.text || "").slice(0, MAX_TEXT_CHARS),
+          textKind: it.textKind,
+          text: (it.text || "").slice(0, it.textKind === "transcript" ? MAX_TRANSCRIPT_TEXT_CHARS : MAX_TEXT_CHARS),
           ...(it.engagement ? { engagement: it.engagement } : {}),
         });
       }
-      console.error(`  ${source.name}: ${raw.length} items, ${fresh.length} new`);
+      const withTranscript = fresh.filter((it) => it.textKind === "transcript").length;
+      console.error(`  ${source.name}: ${raw.length} items, ${fresh.length} new${withTranscript ? `, ${withTranscript} with transcript` : ""}`);
     } catch (err) {
       errors.push(`${source.name}: ${err.message}`);
       console.error(`  ${source.name}: FAILED ${err.message}`);

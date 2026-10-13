@@ -7,8 +7,9 @@
 
 import {
   SITE_URL, BRAND, TAGLINE, issuePath, itemPath, subscribePath, absolute,
-  esc, pad3, mdToHtml, mdToText, factsRows, oneLiners,
+  esc, pad3, mdToHtml, mdToText, oneLiners, FACT_LABELS,
 } from "./render.js";
+import { ZH_CHARS_PER_MIN } from "./reading.js";
 
 const C = {
   bg: "#F7F3EC", card: "#FFFDF8", text: "#2A2420", text2: "#5E544B", muted: "#8C8177",
@@ -27,10 +28,18 @@ const md = (text) =>
 const tag = (name) =>
   `<span style="display:inline-block;font-size:12px;font-weight:600;color:${C.accent};background:${C.soft};border-radius:4px;padding:0 6px;line-height:20px">${esc(name)}</span>`;
 
-function frame(inner, { footerExtra = "" } = {}) {
+// Hidden preview text: the line inbox lists show under the subject. The
+// trailing zero-width padding stops clients from appending body text to it.
+function preheaderHtml(text) {
+  if (!text) return "";
+  return `<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all">${esc(text)}${"&#847;&zwnj;&nbsp;".repeat(60)}</div>`;
+}
+
+function frame(inner, { preheader = "" } = {}) {
   return `<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="margin:0;padding:0;background:${C.bg}">
+${preheaderHtml(preheader)}
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.bg}"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;background:${C.card};border:1px solid ${C.border};border-radius:12px;font-family:${FONT}">
   <tr><td style="padding:24px 24px 0">
@@ -43,9 +52,12 @@ function frame(inner, { footerExtra = "" } = {}) {
     </tr></table>
   </td></tr>
 ${inner}
-  <tr><td style="padding:20px 24px 24px;font-size:12px;line-height:1.7;color:${C.muted}">
+  <tr><td style="padding:20px 24px 0;font-size:14px;line-height:1.7;color:${C.text2}">
+    哪条对你有用、哪条没用，直接回复这封邮件告诉我，每封我都会看。
+  </td></tr>
+  <tr><td style="padding:12px 24px 24px;font-size:12px;line-height:1.7;color:${C.muted}">
     收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<br>
-    <a href="${SITE_URL}" style="color:${C.accent}">在网站上按栏目查看往期</a> · <a href="${absolute(subscribePath())}" style="color:${C.accent}">订阅页</a>${footerExtra}
+    朋友转发给你的？<a href="${absolute(subscribePath())}" style="color:${C.accent}">在这里订阅</a> · <a href="${SITE_URL}" style="color:${C.accent}">按栏目查看往期</a>
   </td></tr>
 </table>
 </td></tr></table>
@@ -58,48 +70,63 @@ function editorNoteHtml(issue) {
       <div style="font-size:14px;font-weight:600;color:${C.text};margin-bottom:6px">编辑按</div>${md(issue.editorNote)}</div></td></tr>`;
 }
 
+// Fact rows shown in the email. The lead item keeps its 可以试试 line; the
+// rest are a quick scan, and the full write-up lives on the item page.
+// Field order: who, how, result, tryThis, caveat.
+function emailFacts(it, isLead) {
+  const labels = FACT_LABELS[it.category] || FACT_LABELS.default;
+  const keep = isLead ? [1, 2, 3, 4] : [1, 2, 4];
+  const values = [it.who, it.how, it.result, it.tryThis, it.caveat];
+  return keep.filter((i) => values[i]).map((i) => [labels[i], values[i]]);
+}
+
+// Subject: the lead item's headline, which curate.md keeps short and specific.
+// The brand goes last so a truncated inbox line still shows the story.
+export function dailySubject(issue) {
+  const lead = issue.items[0]?.headline || issue.title;
+  return `${lead}｜${BRAND}`;
+}
+
+function dailyPreheader(issue) {
+  const rest = issue.items.slice(1).map((it) => it.headline);
+  return rest.length ? `另有：${rest.join("；")}` : issue.title;
+}
+
 export function renderDailyEmail(issue, number, catName) {
   const issueUrl = absolute(issuePath(issue.date));
   const lines = oneLiners(issue);
-  const subject = `${BRAND} ${pad3(number)}｜${issue.title}`;
+  const subject = dailySubject(issue);
 
   const items = issue.items
-    .map(
-      (it, i) => `
-    <tr><td style="padding:24px 0 8px;border-top:1px solid ${C.border}">
-      <div style="font-size:13px;color:${C.muted}">${tag(catName(it.category))} &nbsp;${esc(it.kind)} · ${esc(it.eventDate)}${it.region ? ` · ${esc(it.region)}` : ""}</div>
-      <h2 style="margin:8px 0 12px;font-size:20px;line-height:1.4;font-family:${SERIF}"><a href="${absolute(itemPath(it.id))}" style="color:${C.text};text-decoration:none">${String(i + 1).padStart(2, "0")}｜${esc(it.headline)}</a></h2>
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.fact};border-radius:8px;margin:0 0 14px">
-        ${factsRows(it)
-          .map(
-            ([k, v]) =>
-              `<tr><td style="padding:6px 10px 6px 12px;font-size:13px;color:${C.muted};white-space:nowrap;vertical-align:top">${k}</td><td style="padding:6px 12px 6px 0;font-size:14px;line-height:1.6;color:${C.text2}">${esc(v)}</td></tr>`,
-          )
-          .join("")}
-      </table>
-      ${md(it.body)}
-      <div style="font-size:13px;color:${C.muted}">原文：${(it.sources || [])
+    .map((it, i) => {
+      const facts = emailFacts(it, i === 0);
+      return `
+    <tr><td style="padding:22px 0 6px;border-top:1px solid ${C.border}">
+      <div style="font-size:13px;color:${C.muted}">${tag(catName(it.category))} &nbsp;${i === 0 ? "头条 · " : ""}${esc(it.kind)} · ${esc(it.eventDate)}${it.region ? ` · ${esc(it.region)}` : ""}</div>
+      <h2 style="margin:8px 0 8px;font-size:${i === 0 ? 21 : 18}px;line-height:1.4;font-family:${SERIF}"><a href="${absolute(itemPath(it.id))}" style="color:${C.text};text-decoration:none">${esc(it.headline)}</a></h2>
+      <p style="margin:0 0 10px;font-size:16px;line-height:1.7;color:${C.text2}">${esc(lines[i])}</p>
+      ${facts
+        .map(
+          ([k, v]) =>
+            `<p style="margin:0 0 6px;font-size:14px;line-height:1.65;color:${C.text2}"><span style="color:${C.muted};font-weight:600">${k}</span>&nbsp; ${esc(v)}</p>`,
+        )
+        .join("")}
+      <div style="font-size:13px;color:${C.muted};margin-top:8px"><a href="${absolute(itemPath(it.id))}" style="color:${C.accent};font-weight:600;margin-right:12px">读全文 →</a>原文：${(it.sources || [])
         .map((s) => `<a href="${esc(s.url)}" style="color:${C.accent};margin-right:10px">${esc(s.label)}</a>`)
         .join("")}</div>
-    </td></tr>`,
-    )
+    </td></tr>`;
+    })
     .join("");
 
+  // Scan time for what the email itself shows (one-liners and fact lines).
+  const shown = issue.items.reduce((n, it, i) => n + lines[i].length + emailFacts(it, i === 0).reduce((m, [, v]) => m + v.length, 0), 0);
+  const minutes = Math.max(1, Math.round(shown / ZH_CHARS_PER_MIN));
   const inner = `
   <tr><td style="padding:20px 24px 0">
-    <div style="font-size:13px;color:${C.muted}">${pad3(number)} · ${esc(issue.date)} · 约 ${issue.readingMinutes ?? "?"} 分钟读完 · <a href="${issueUrl}" style="color:${C.accent}">网页版</a></div>
-    <h1 style="margin:6px 0 4px;font-size:24px;line-height:1.4;color:${C.text};font-family:${SERIF}">${esc(issue.title)}</h1>
+    <div style="font-size:13px;color:${C.muted}">${pad3(number)} · ${esc(issue.date)} · ${issue.items.length} 条，约 ${minutes} 分钟看完 · <a href="${issueUrl}" style="color:${C.accent}">网页版全文</a></div>
+    <h1 style="margin:6px 0 4px;font-size:22px;line-height:1.45;color:${C.text};font-family:${SERIF}">${esc(issue.title)}</h1>
   </td></tr>
   ${editorNoteHtml(issue)}
-  <tr><td style="padding:16px 24px 0">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid ${C.border};border-radius:10px">
-      <tr><td style="padding:12px 16px 4px;font-size:14px;font-weight:600;color:${C.text}">30 秒速读</td></tr>
-      ${issue.items
-        .map((it, i) => `<tr><td style="padding:4px 16px 8px;font-size:15px;line-height:1.6;color:${C.text2}">${tag(catName(it.category))} &nbsp;${esc(lines[i])}</td></tr>`)
-        .join("")}
-      <tr><td style="padding:0 0 6px"></td></tr>
-    </table>
-  </td></tr>
   <tr><td style="padding:8px 24px 0"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${items}</table></td></tr>
   ${
     issue.action
@@ -110,22 +137,20 @@ export function renderDailyEmail(issue, number, catName) {
   }`;
 
   const text = [
-    `${BRAND} ${pad3(number)} · ${issue.date} · 约 ${issue.readingMinutes ?? "?"} 分钟读完`,
+    `${BRAND} ${pad3(number)} · ${issue.date}`,
     issue.title,
-    `网页版：${issueUrl}`,
+    `网页版全文：${issueUrl}`,
     ...(issue.editorNote ? ["", "编辑按", mdToText(issue.editorNote)] : []),
-    "",
-    "30 秒速读",
-    ...issue.items.map((it, i) => `- [${catName(it.category)}] ${lines[i]}`),
   ];
   issue.items.forEach((it, i) => {
-    text.push("", "=====", `${String(i + 1).padStart(2, "0")}｜${it.headline}`, `${catName(it.category)} · ${it.kind} · ${it.eventDate}`, "");
-    for (const [k, v] of factsRows(it)) text.push(`${k}：${v}`);
-    text.push("", mdToText(it.body), "", `原文：${(it.sources || []).map((s) => s.url).join("  ")}`);
+    text.push("", "=====", `${i === 0 ? "【头条】" : ""}${it.headline}`, `${catName(it.category)} · ${it.kind} · ${it.eventDate}`, "", lines[i]);
+    for (const [k, v] of emailFacts(it, i === 0)) text.push(`${k}：${v}`);
+    text.push(`读全文：${absolute(itemPath(it.id))}`, `原文：${(it.sources || []).map((s) => s.url).join("  ")}`);
   });
   if (issue.action) text.push("", "=====", "今天可以做的一件事", issue.action);
+  text.push("", "哪条对你有用、哪条没用，直接回复这封邮件告诉我。", `订阅：${absolute(subscribePath())}`);
 
-  return { subject, html: frame(inner), text: text.join("\n") };
+  return { subject, html: frame(inner, { preheader: dailyPreheader(issue) }), text: text.join("\n") };
 }
 
 // Weekly digest: headline + one-liner per item, grouped by day, linking to the
@@ -167,5 +192,5 @@ export function renderWeeklyEmail({ weekLabel, issues, numberOf, catName }) {
       ];
     }),
   ].join("\n");
-  return { subject, html: frame(inner), text };
+  return { subject, html: frame(inner, { preheader: issues.map((i) => i.title).join("；") }), text };
 }

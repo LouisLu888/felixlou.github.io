@@ -31,7 +31,7 @@ docs/ai-practice/            发布副本，由 build-index.js 从 public/ 镜�
 
 GitHub Actions 每天 14:23 UTC（约太平洋时间 7:23）运行：
 
-1. `fetch-sources.js`：抓 RSS、播客、YouTube 和 follow-builders 的 X feed，写入当天候选池。
+1. `fetch-sources.js`：抓 RSS、播客、YouTube 和 follow-builders 的 X feed，写入当天候选池。播客和视频只有简介写不出细节，所以 feed 里有 `<podcast:transcript>` 的播客（Flightcast、Transistor 等）和有字幕的 YouTube 视频会附上逐字稿（`lib/transcripts.js`，YouTube 走 innertube Android 客户端）。每条候选带 `textKind`（`transcript` / `article` / `post` / `summary`），初筛优先有逐字稿的访谈。
 2. `curate.js`：分两步调用 Claude（`claude-opus-5-5`）。
    1. 初筛：候选超过 20 条时，Claude 只看标题和开头摘录，按 `prompts/screen.md` 选出最多 12 条并排序。
    2. 成稿：Claude 读这 12 条全文，按 `prompts/curate.md` 挑 3 到 6 条写成中文，输出 `public/ai-practice/data/issues/<date>.json`。
@@ -44,7 +44,7 @@ GitHub Actions 每天 14:23 UTC（约太平洋时间 7:23）运行：
 
 ### 订阅（Buttondown）
 
-网页和静态页底部有订阅表单，提交到博客已有的 Buttondown 账号（`325louis`），打上 `ai-practice` 和 `ai-practice-daily` 或 `ai-practice-weekly` 标签。`AI 实干派 subscribers` workflow 每天太平洋时间 9:23 运行 `send-subscribers.js`：给每日订阅者发当期，周日另给每周订阅者发一周精选。
+网页和静态页底部有订阅表单，提交到博客已有的 Buttondown 账号（`325louis`），打上 `ai-practice` 和 `ai-practice-daily` 或 `ai-practice-weekly` 标签。`AI 实干派 subscribers` workflow 每天 22:07 UTC（北京时间早上 6:07，读者主要在国内）运行 `send-subscribers.js`：给每日订阅者发当期，周日（太平洋时间）另给每周订阅者发一周精选。邮件是扫读版：标题用头条的 headline，带预览文本，每条只有导语和两三行要点，全文在网页上。
 
 Buttondown 账号和博客共用一个订阅列表，博客的新文章通知会发给所有人，所以 AI 实干派的订阅者也会收到博客通知（表单上写明了）。反过来，每封 AI 实干派邮件都带标签过滤，标签 ID 在发送时解析；解析不到就不发，绝不无过滤地发送。邮件不进博客的公开归档。手动运行默认 dry run。
 
@@ -72,7 +72,7 @@ Buttondown 账号和博客共用一个订阅列表，博客的新文章通知会
 
 每期同时有语音版，订阅地址：`https://www.jiabinlu.com/ai-practice/podcast/feed.xml`（Apple Podcasts / Overcast / Pocket Casts 选「通过 URL 添加」）。
 
-`.github/workflows/ai-practice-podcast.yml` 在每日出刊的 workflow 成功后自动运行，与出刊流程分开，失败不影响图文版：
+`.github/workflows/ai-practice-podcast.yml` 每天 21:37 UTC（北京时间早上 5:37）运行，赶在国内早高峰前上线，与出刊流程分开，失败不影响图文版：
 
 1. `podcast-build.js`：用 Claude Opus（`claude-opus-5-5`，经 Claude Code CLI 走订阅，失败时退回 `gpt-5.5`）把当天这期改写成口播稿。2026-10-11 用同一期对比了 gpt-5.5、Claude Opus 5.5、Gemini 3.1 Pro、DeepSeek V3.1、Qwen3-235B，Claude 最自然、最忠实；Gemini 加了原文没有的评论，DeepSeek 和 Qwen 漏了条目，规则在 `prompts/podcast.md`：条目、顺序和事实与图文版一致，只改成口语。再用 Inworld TTS-2（经 Replicate，音色 Xiaoyin）按故事分段合成、拼接，编码成单声道 MP3。2026-10-11 用同一段文本盲听对比了 Inworld、MiniMax 2.8 HD、Gemini 3.1 Flash TTS、Qwen3-TTS、ElevenLabs v3 和 OpenAI，选了 Inworld（Replicate 上 $25 / 百万字符，每集约 $0.08）。Inworld 失败时整集改用 OpenAI `gpt-4o-mini-tts`，不会一集里混两种声音。
 2. `podcast-feed.js`：把 MP3 放进 `public/ai-practice/podcast/audio/`，更新 `episodes.json` 和 `feed.xml`，show notes 里的链接取自当期 JSON，不用模型输出。只保留最近 30 集的 MP3（48kbps，每集约 3.5MB），更早的自动删除。workflow 只把 `podcast/` 目录镜像到 `docs/`，也只提交这个目录，不跑 `build-index.js`，以免和改动 `data/index.json` 的其他提交冲突。
@@ -82,11 +82,13 @@ Buttondown 账号和博客共用一个订阅列表，博客的新文章通知会
 
 让语音不生硬的几处设定（2026-10-11 调过一轮，参考了 ellewiz/personalized-news-podcast）：
 
-1. 口播稿句长：大多 12–30 字，上限 40 字；超长时 `podcast-build.js` 会打回模型改一次。也不许切成四字碎句。
-2. 开场白、日期和结尾由代码固定生成，模型只写预告和正文。
-3. 每个故事单独合成一段，故事之间停 1.2 秒，长故事内部按段落拆开时停 0.7 秒。
-4. 语速：Inworld 用自带的 `speaking_rate` 0.95；备用的 OpenAI 不支持语速参数，成品放慢到 0.94 倍（`TEMPO`）。
-5. 英文术语读音表在 `config/pronunciation.json`，只作用于送给 TTS 的文本；听到读错的词就加一条。
+1. 口播稿句长：大多 12–30 字，上限 40 字（英文单词按一个字算）。也不许切成四字碎句。
+2. 结构参考声动早咖啡：头条（当期第一条）展开讲，其余几条是简讯，只有头条讲「可以试试」「要注意」。
+3. 固定开场（「早上好，这里是 AI 实干派……今天X月X号」，日期按北京时间，即出刊日加一天）和固定结尾（「……我们明天早上见」）由代码加上，模型只写当天的钩子和一句回扣。
+4. 每个故事单独合成一段，故事之间是一个约 0.7 秒的两音提示音（ffmpeg 现场生成，不进仓库），长故事内部按段落拆开时停 0.7 秒。每段的起始时间写进 `episodes.json` 的 `chapters`，show notes 里列成时间轴。
+5. 写完后代码检查超长句和禁用说法（「现有摘要」这类生产过程用语、「值得」「不是……而是」「说白了」），命中就打回模型改一次。
+6. 语速：Inworld 用自带的 `speaking_rate` 0.95；备用的 OpenAI 不支持语速参数，成品放慢到 0.94 倍（`TEMPO`）。
+7. 英文术语读音表在 `config/pronunciation.json`，只作用于送给 TTS 的文本；听到读错的词就加一条。
 
 上架小宇宙需要两样东西，都已写进 feed：`itunes:owner` 邮箱（325louis@gmail.com，认领节目时收验证码，公开可见），以及 AI 生成标识。中国大陆 2025 年 9 月起施行 AI 生成内容标识规定，所以每集开头固定一句「本节目语音由 AI 合成」，节目简介和每集简介也注明（`AI_DISCLOSURE`）。
 

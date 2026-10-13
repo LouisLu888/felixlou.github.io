@@ -84,6 +84,9 @@ const TTS_INSTRUCTIONS = [
 ].join("\n");
 
 const AI_DISCLOSURE = "本节目语音由 AI 合成。";
+// Fixed ritual lines, the same every day (see prompts/podcast.md).
+const OPENING = (date) => `早上好，这里是 AI 实干派，看真正用 AI 拿到结果的人怎么做。今天${spokenDate(date)}。`;
+const CLOSING = "文字版和原文链接，都在我网站的 AI 实干派页面。我们明天早上见。";
 
 const WEEKDAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 
@@ -113,11 +116,13 @@ async function openai(path, body) {
 
 // -- Script ------------------------------------------------------------------
 
-// Spoken length tracks the written issue: the parts a listener needs, minus
-// the summary fields that repeat the body.
+// Spoken length tracks the written issue: the lead story in full, each brief
+// at roughly its one-liner plus how it was done, then the action.
 function targetChars(issue) {
   const strip = (s) => (s || "").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/[*_`#>]/g, "");
-  const written = issue.items.reduce((n, it) => n + strip(it.body).length + strip(it.tryThis).length + strip(it.caveat).length, 0)
+  const [lead, ...briefs] = issue.items;
+  const written = (lead ? strip(lead.body).length + strip(lead.tryThis).length + strip(lead.caveat).length : 0)
+    + briefs.reduce((n, it) => n + Math.min(220, strip(it.oneLiner).length + strip(it.how).length), 0)
     + strip(issue.action).length;
   return Math.min(MAX_SCRIPT_CHARS, Math.round(written / 100) * 100);
 }
@@ -145,9 +150,38 @@ function sentencesOf(text) {
   return text.split(/(?<=[。！？!?])/).map((x) => x.trim()).filter(Boolean);
 }
 
-function longSentences(draft) {
-  const all = [draft.intro, draft.outro, ...draft.segments.flatMap((seg) => seg.paragraphs)];
-  return all.flatMap(sentencesOf).filter((x) => x.length > MAX_SENTENCE_CHARS);
+// Spoken length: an English word or number takes about as long as one
+// Chinese character, so count it once instead of letter by letter.
+function spokenLength(sentence) {
+  return sentence.replace(/[A-Za-z0-9][A-Za-z0-9.+\-']*/g, "W").replace(/\s+/g, "").length;
+}
+
+function allSentences(draft) {
+  return [draft.intro, draft.outro, ...draft.segments.flatMap((seg) => seg.paragraphs)].flatMap(sentencesOf);
+}
+
+// Phrases prompts/podcast.md forbids. Models still slip them in now and then
+// (2026-10-12: 值得记住 and an invented 不是……而是), so check in code.
+const BANNED = [
+  { re: /现有摘要|摘要里|材料里|材料显示|候选材料|章节标题|摘录/, why: "mentions our production process; say where the fact comes from instead" },
+  { re: /值得/, why: "uses 值得; state the point directly" },
+  { re: /不是[^。！？]{1,30}而是/, why: "uses a 不是……而是 contrast; state what it is directly" },
+  { re: /说白了/, why: "uses 说白了" },
+  { re: /实干派|明天见|下期再见|感谢收听/, why: "show name and sign-off are added by code; remove them" },
+];
+
+function scriptProblems(draft, issue) {
+  const source = JSON.stringify(issue);
+  const problems = [];
+  for (const sentence of allSentences(draft)) {
+    if (spokenLength(sentence) > MAX_SENTENCE_CHARS) problems.push(`${sentence}\n  -> over ${MAX_SENTENCE_CHARS} characters; split it`);
+    for (const { re, why } of BANNED) {
+      const hit = sentence.match(re)?.[0];
+      // A phrase the written issue itself uses (e.g. a quoted title) is allowed.
+      if (hit && !(why.startsWith("uses") && source.includes(hit))) problems.push(`${sentence}\n  -> ${why}`);
+    }
+  }
+  return problems;
 }
 
 // Each engine takes { system, user } and returns the parsed draft.
@@ -191,20 +225,23 @@ async function writeScriptWith(engine, issue) {
   const template = await readFile(join(ROOT, "prompts", "podcast.md"), "utf-8");
   const system = template.replaceAll("{{TARGET_CHARS}}", String(targetChars(issue)));
   const { title, items, action } = issue;
-  const input = JSON.stringify({ spokenDate: spokenDate(issue.date), title, items, action });
+  const input = JSON.stringify({ title, items, action });
   const write = SCRIPT_ENGINES[engine].write;
 
   let draft = await write({ system, user: input });
-  // One revision pass if the model still wrote sentences too long to follow by ear.
-  const tooLong = longSentences(draft);
-  if (tooLong.length > 0) {
-    console.error(`Revising ${tooLong.length} sentences over ${MAX_SENTENCE_CHARS} chars`);
+  // One revision pass for sentences too long to follow by ear or phrases the
+  // rules forbid. Whatever survives it is logged, not fatal.
+  const problems = scriptProblems(draft, issue);
+  if (problems.length > 0) {
+    console.error(`Revising ${problems.length} sentences:\n${problems.join("\n")}`);
     draft = await write({
       system,
       user: `${input}\n\nYour previous draft:\n${JSON.stringify(draft)}\n\n` +
-        `These sentences are over ${MAX_SENTENCE_CHARS} characters. Split each into shorter spoken sentences, ` +
-        `keep every fact, change nothing else, and return the full script again:\n${tooLong.join("\n")}`,
+        `Fix each of these sentences as noted. Keep every fact, change nothing else, and return the full script again:\n` +
+        problems.join("\n"),
     });
+    const left = scriptProblems(draft, issue);
+    if (left.length) console.error(`::warning::${left.length} script problems left after revision:\n${left.join("\n")}`);
   }
   return draft;
 }
@@ -219,10 +256,13 @@ async function writeScript(issue) {
   }
 }
 
-// The model writes intro and outro too: fixed template lines read as a station
-// announcement. Code only supplies the date in spoken form.
+// The model writes the hook and the tie-back; code adds the fixed opening and
+// closing lines, which daily shows keep the same every day. Listeners are in
+// China and hear the episode the next morning (it publishes about 5:40 Beijing
+// time), so the spoken date is the day after the issue date.
 function spokenDate(date) {
   const d = new Date(`${date}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + 1);
   const zh = (n) => n <= 10 ? "零一二三四五六七八九十"[n] : n < 20 ? `十${"零一二三四五六七八九"[n - 10]}` :
     `${"零一二三四五六七八九"[Math.floor(n / 10)]}十${n % 10 ? "零一二三四五六七八九"[n % 10] : ""}`;
   return `${zh(d.getUTCMonth() + 1)}月${zh(d.getUTCDate())}号，${WEEKDAYS[d.getUTCDay()]}`;
@@ -320,6 +360,21 @@ async function synthesize(engine, text) {
   return pcm;
 }
 
+// A soft two-note chime (about 0.7s) used between stories, generated with
+// ffmpeg so the repo carries no audio asset: C6 then G6, each with a fast
+// attack and exponential decay, peaking about 8 dB below speech.
+function transitionChime() {
+  const note = (freq, delay) =>
+    `sine=f=${freq}:d=0.7:r=${SAMPLE_RATE},afade=t=in:d=0.01,afade=t=out:st=0.05:d=0.65:curve=exp,adelay=${delay}`;
+  return execFileSync("ffmpeg", [
+    "-loglevel", "error",
+    "-f", "lavfi", "-i", note(1046.5, 0),
+    "-f", "lavfi", "-i", note(1568, 120),
+    "-filter_complex", "[0][1]amix=inputs=2:duration=longest,volume=2.4,atrim=0:0.8",
+    "-f", "s16le", "-ar", String(SAMPLE_RATE), "-ac", "1", "pipe:1",
+  ], { maxBuffer: 1 << 24 });
+}
+
 // -- Main --------------------------------------------------------------------
 
 async function main() {
@@ -340,12 +395,11 @@ async function main() {
   const { draft, scriptEngine } = await writeScript(issue);
   // Intro shares a TTS piece with the first story and outro with the last
   // segment, so the voice carries through instead of reading isolated lines.
-  if (!draft.intro.includes("实干派")) draft.intro = `这里是 AI 实干派。${draft.intro}`;
   const segments = draft.segments.map((seg) => [...seg.paragraphs]);
   // Explicit AI label at the start: mainland China's AI-generated content
   // labeling rules (in force since 2025-09) apply once the show is on 小宇宙.
-  segments[0].unshift(AI_DISCLOSURE, draft.intro);
-  segments[segments.length - 1].push(draft.outro);
+  segments[0].unshift(`${AI_DISCLOSURE}${OPENING(date)}`, draft.intro);
+  segments[segments.length - 1].push(draft.outro, CLOSING);
   const script = segments.map((paras) => paras.join("\n")).join("\n\n");
   await writeFile(join(args.out, "script.txt"), script);
   if (process.argv.includes("--script-only")) return;
@@ -356,31 +410,41 @@ async function main() {
 
   const speak = await loadPronunciation();
   const silence = (seconds) => Buffer.alloc(Math.round(SAMPLE_RATE * seconds) * 2);
+  const chime = transitionChime();
   const total = segments.reduce((sum, paras) => sum + piecesOf(paras).length, 0);
+  // Returns the episode PCM and the byte offset where each segment starts.
   const render = async (engine) => {
     const parts = [];
+    const starts = [];
+    let bytes = 0;
+    const push = (buf) => { parts.push(buf); bytes += buf.length; };
     let n = 0;
-    for (const paras of segments) {
+    for (const [s, paras] of segments.entries()) {
+      // Story boundaries get a short chime between two pauses, the way news
+      // shows mark a new item; the listener hears "next story" without words.
+      if (s > 0) { push(silence(0.5)); push(chime); push(silence(0.4)); }
+      starts.push(bytes);
       const pieces = piecesOf(paras);
       for (const [i, piece] of pieces.entries()) {
         console.error(`TTS ${engine} ${++n}/${total} (${piece.length} chars)`);
-        parts.push(await synthesize(engine, speak(piece)));
-        parts.push(silence(i < pieces.length - 1 ? PARAGRAPH_GAP_SECONDS : SEGMENT_GAP_SECONDS));
+        push(await synthesize(engine, speak(piece)));
+        if (i < pieces.length - 1) push(silence(PARAGRAPH_GAP_SECONDS));
       }
     }
-    return Buffer.concat(parts);
+    push(silence(SEGMENT_GAP_SECONDS));
+    return { pcm: Buffer.concat(parts), starts };
   };
   // Fall back for the whole episode, never mid-episode: two voices in one
   // show would be worse than the weaker voice throughout.
   let engine = ENGINE;
-  let pcm;
+  let pcm, starts;
   try {
-    pcm = await render(engine);
+    ({ pcm, starts } = await render(engine));
   } catch (err) {
     if (engine === "openai") throw err;
     console.error(`::warning::${engine} TTS failed (${err.message}); falling back to openai for this episode`);
     engine = "openai";
-    pcm = await render(engine);
+    ({ pcm, starts } = await render(engine));
   }
   const pcmPath = join(args.out, "episode.pcm");
   await writeFile(pcmPath, pcm);
@@ -405,6 +469,14 @@ async function main() {
     summary: issue.items.map((it) => it.headline).join("；"),
     link: `${ISSUE_PAGE}${date}/`,
     items: issue.items.map((it) => ({ headline: it.headline, sources: it.sources || [] })),
+    // Chapter start times in the finished MP3. Offsets come from the PCM before
+    // silenceremove, so they can run a second or two late; fine for show notes.
+    chapters: [
+      ...issue.items.map((it, i) => ({ start: Math.round(starts[i] / (SAMPLE_RATE * 2) / TEMPO[engine]), title: it.headline })),
+      ...(starts.length > issue.items.length
+        ? [{ start: Math.round(starts[issue.items.length] / (SAMPLE_RATE * 2) / TEMPO[engine]), title: "今天可以做的一件事" }]
+        : []),
+    ],
     duration,
     scriptModel: SCRIPT_ENGINES[scriptEngine].label,
     tts: ENGINES[engine].label(),

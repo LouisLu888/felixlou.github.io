@@ -76,6 +76,8 @@ export function parseFeed(xml) {
       title: toPlainText(tag(b, "title")),
       url: decodeEntities(tag(b, "link")),
       audioUrl: attr(b, "enclosure", "url"),
+      // Podcasting 2.0 transcript (Flightcast, Transistor, Captivate publish one).
+      transcriptUrl: decodeEntities(attr(b, "podcast:transcript", "url")),
       guid: toPlainText(tag(b, "guid")),
       publishedAt: toIso(tag(b, "pubDate") || tag(b, "dc:date")),
       author: toPlainText(tag(b, "dc:creator") || tag(b, "itunes:author") || tag(b, "author")),
