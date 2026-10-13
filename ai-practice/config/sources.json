@@ -379,16 +379,6 @@
       "maxItems": 2,
       "titlePattern": "A\\.I\\.|\\bAI\\b|ChatGPT|Gemini|Claude|Muse|chatbot|agent",
       "_note": "Paywalled: only the feed summary is available"
-    },
-    {
-      "name": "Reddit r/ChatGPT",
-      "type": "rss",
-      "url": "https://www.reddit.com/r/ChatGPT/.rss",
-      "category": "life",
-      "region": "US",
-      "maxItems": 3,
-      "titlePattern": "saved|refund|bill|cancel|negotiat|insurance|doctor|landlord|dispute|subscription|helped me|got me",
-      "_note": "Hot feed; /top/.rss returned 403 on 2026-10-12"
     }
   ]
 }
