@@ -164,6 +164,7 @@ function allSentences(draft) {
 // (2026-10-12: 值得记住 and an invented 不是……而是), so check in code.
 const BANNED = [
   { re: /现有摘要|摘要里|材料里|材料显示|候选材料|章节标题|摘录/, why: "mentions our production process; say where the fact comes from instead" },
+  { re: /厂商|厂家|独立测试|独立验证|无法核实|未经核实|未披露|没有披露|没有给出|没有公开|口径|自述|本人说法|自己的说法/, why: "hedges the source; the listener knows a company or a person is speaking for themselves. Drop the hedge, keep the fact attributed by its subject (Anthropic 说, 他说)" },
   { re: /值得/, why: "uses 值得; state the point directly" },
   { re: /不是[^。！？]{1,30}而是/, why: "uses a 不是……而是 contrast; state what it is directly" },
   { re: /说白了/, why: "uses 说白了" },
@@ -360,17 +361,19 @@ async function synthesize(engine, text) {
   return pcm;
 }
 
-// A soft two-note chime (about 0.7s) used between stories, generated with
-// ffmpeg so the repo carries no audio asset: C6 then G6, each with a fast
-// attack and exponential decay, peaking about 8 dB below speech.
-function transitionChime() {
-  const note = (freq, delay) =>
-    `sine=f=${freq}:d=0.7:r=${SAMPLE_RATE},afade=t=in:d=0.01,afade=t=out:st=0.05:d=0.65:curve=exp,adelay=${delay}`;
+// A page-turn sound (about 0.5s) used between stories, generated with ffmpeg
+// so the repo carries no audio asset: a band-passed pink-noise swish with a
+// paper flutter, then a soft low thump as the page lands.
+function transitionSound() {
+  const swish = "highpass=f=1200,lowpass=f=7000," +
+    "volume='if(lt(t,0.14),pow(t/0.14,2),exp(-(t-0.14)*14))*(0.65+0.35*sin(2*PI*(26-30*t)*t))':eval=frame";
+  const thump = "lowpass=f=900,highpass=f=120," +
+    "volume='if(lt(t,0.30),0,exp(-(t-0.30)*40))':eval=frame,volume=1.6";
   return execFileSync("ffmpeg", [
     "-loglevel", "error",
-    "-f", "lavfi", "-i", note(1046.5, 0),
-    "-f", "lavfi", "-i", note(1568, 120),
-    "-filter_complex", "[0][1]amix=inputs=2:duration=longest,volume=2.4,atrim=0:0.8",
+    "-f", "lavfi", "-i", `anoisesrc=color=pink:r=${SAMPLE_RATE}:d=0.5:a=0.6:seed=7`,
+    "-f", "lavfi", "-i", `anoisesrc=color=brown:r=${SAMPLE_RATE}:d=0.5:a=0.8:seed=11`,
+    "-filter_complex", `[0]${swish}[sw];[1]${thump}[th];[sw][th]amix=inputs=2:duration=longest:normalize=0,afade=t=out:st=0.42:d=0.08,volume=1.8`,
     "-f", "s16le", "-ar", String(SAMPLE_RATE), "-ac", "1", "pipe:1",
   ], { maxBuffer: 1 << 24 });
 }
@@ -410,7 +413,7 @@ async function main() {
 
   const speak = await loadPronunciation();
   const silence = (seconds) => Buffer.alloc(Math.round(SAMPLE_RATE * seconds) * 2);
-  const chime = transitionChime();
+  const pageTurn = transitionSound();
   const total = segments.reduce((sum, paras) => sum + piecesOf(paras).length, 0);
   // Returns the episode PCM and the byte offset where each segment starts.
   const render = async (engine) => {
@@ -420,9 +423,9 @@ async function main() {
     const push = (buf) => { parts.push(buf); bytes += buf.length; };
     let n = 0;
     for (const [s, paras] of segments.entries()) {
-      // Story boundaries get a short chime between two pauses, the way news
-      // shows mark a new item; the listener hears "next story" without words.
-      if (s > 0) { push(silence(0.5)); push(chime); push(silence(0.4)); }
+      // Story boundaries get a page-turn sound between two pauses; the
+      // listener hears "next story" without words.
+      if (s > 0) { push(silence(0.5)); push(pageTurn); push(silence(0.4)); }
       starts.push(bytes);
       const pieces = piecesOf(paras);
       for (const [i, piece] of pieces.entries()) {

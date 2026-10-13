@@ -2,12 +2,12 @@
 
 2026 年 10 月 11 日 · 样刊 · 本周动态＋经营复盘
 
-给想把 AI 用进工作、内容和生意的人。历史案例保留原始时间，收入按本人披露的口径呈现。
+给想把 AI 用进工作、内容和生意的人。历史案例保留原始时间。
 
 **30 秒速读**
 
 - **工作提效：** Simon Willison 做饭时用语音开发博客功能，主要工作约半小时，之后检查和修改又用了约半小时。
-- **自媒体：** Ali Abdaal 自述写 newsletter 从两小时缩短到半小时；分享 AI 工作方法的视频，也获得了 Anthropic 赞助。
+- **自媒体：** Ali Abdaal 写 newsletter 从两小时缩短到半小时；分享 AI 工作方法的视频，也获得了 Anthropic 赞助。
 - **小型 SaaS：** Magai 用八周做出第一版，创始人此前已经营个人品牌十年，积累超过十万邮件订阅者。
 
 **01｜工作提效：晚饭做好了，博客新功能也有了初稿**
@@ -26,13 +26,13 @@ Ali Abdaal 在[本人帖子](https://www.linkedin.com/posts/ali-abdaal_ive-writt
 
 他的[完整 AI 工作流视频](https://www.youtube.com/watch?v=FDEVzFsPrkU)还展示了另一层生意：视频明确注明 Anthropic 赞助，同时介绍自家产品 VoicePal。一次真实的使用经验，可以成为内容；围绕这类内容积累的受众，又能吸引相关品牌合作。
 
-对想做自媒体的人，可以先记录自己解决过的具体问题，让 AI 协助组织材料，再把过程和结果讲给同类人。持续观察读者追问什么，能同时帮助选题和判断哪些品牌适合合作。**这是成熟创作者的实践；省下的时间、涨粉和广告收入要分别观察。** 现有材料未披露 AI 带来的涨粉幅度或该单赞助金额。视频可从 **18:11** 的内容制作部分开始看。
+对想做自媒体的人，可以先记录自己解决过的具体问题，让 AI 协助组织材料，再把过程和结果讲给同类人。持续观察读者追问什么，能同时帮助选题和判断哪些品牌适合合作。视频可从 **18:11** 的内容制作部分开始看。
 
 **03｜小型 SaaS：八周做出产品，第一批用户从哪里来？**
 
 *历史精选 · 2025-10-11*
 
-Magai 创始人 Dustin Stout 在 [Starter Story 访谈](https://www.starterstory.com/mag)中说，他用 Bubble 加少量代码，八周做出第一版，受访时月营收接近十万美元。**这是当时本人自述的营收，不能据此确认利润。**
+Magai 创始人 Dustin Stout 在 [Starter Story 访谈](https://www.starterstory.com/mag)中说，他用 Bubble 加少量代码，八周做出第一版，受访时月营收接近十万美元。
 
 比开发速度更能解释起步的，是他披露的三个条件：经营个人品牌十年、超过十万邮件订阅者，以及业内关系。他还采用持续推荐分成：客户续费，推荐者继续拿佣金。
 
@@ -52,7 +52,7 @@ AI 口音与口语教练 BoldVoice 联创 Anada Lakra 在 [Sub Club](https://sub
 
 *本周演示 · 2026-10-05 · 机会观察*
 
-[How I AI 节目](https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live)中，OpenAI 产品负责人 Kath Korevec 演示利用 Slack、Notion 和日历数据创建内部工具，例子包括团队事故协调网站。这是厂商员工的使用演示，材料没有证明客户已为相应咨询服务付费。
+[How I AI 节目](https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live)中，OpenAI 产品负责人 Kath Korevec 演示利用 Slack、Notion 和日历数据创建内部工具，例子包括团队事故协调网站。
 
 由此可以提出一个待验证的服务方向：**访谈部门流程 → 整理资料和访问权限 → 做一个团队能用的小工具 → 根据使用情况持续维护。** 熟悉业务的人，可以帮助客户界定工具该做什么、数据由谁维护、哪些结果需要人工确认。
 
