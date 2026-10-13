@@ -1,4 +1,5 @@
 export const BLOG_POST_FILES = [
+  'job-search-is-sales.md',
   'keep-asking-for-an-opportunity.md',
   'learn-management-from-ai.md',
   'mjaa-leadership.md',
