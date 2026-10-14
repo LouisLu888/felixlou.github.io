@@ -21,7 +21,7 @@
 //   PODCAST_TTS_ENGINE    inworld (default) or openai
 //   PODCAST_INWORLD_VOICE default Xiaoyin
 //   PODCAST_INWORLD_STEER bracketed style instruction, default upbeat podcast host
-//   PODCAST_INWORLD_RATE  speaking rate, default 1.0
+//   PODCAST_INWORLD_RATE  speaking rate, default 0.95
 //   PODCAST_TTS_MODEL     OpenAI TTS model, default gpt-4o-mini-tts-2025-12-15
 //   PODCAST_VOICE         OpenAI voice, default marin
 //
@@ -59,10 +59,10 @@ const INWORLD_VOICE = process.env.PODCAST_INWORLD_VOICE || "Xiaoyin";
 // used until 2026-10-13 sounded flat; "upbeat" won the voice audition
 // (voice-audition.js) against relaxed and excited.
 const INWORLD_STEER = process.env.PODCAST_INWORLD_STEER || "[say in a warm, upbeat, energetic podcast-host tone]";
-const INWORLD_RATE = Number(process.env.PODCAST_INWORLD_RATE || 1.0);
+const INWORLD_RATE = Number(process.env.PODCAST_INWORLD_RATE || 0.95);
 
 const CHARS_PER_MINUTE = 250;          // relaxed conversational Mandarin
-const MIN_SCRIPT_CHARS = 2800;         // about ten minutes with pauses at the upbeat pace
+const MIN_SCRIPT_CHARS = 3400;         // about ten minutes: the upbeat voice reads ~340 chars/min at rate 0.95
 const MAX_SCRIPT_CHARS = 6000;         // about 20 minutes
 const MAX_TTS_CHUNK_CHARS = 900;       // keeps each TTS request well under the input limit
 const MAX_SENTENCE_CHARS = 40;         // longer sentences are hard to follow by ear
