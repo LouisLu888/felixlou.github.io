@@ -48,21 +48,22 @@ You receive today's issue as JSON: `title`,
 
 ## Segments
 
-The first item is the lead story. The show is one lead told properly plus a few quick
-news briefs, the way daily news shows like 声动早咖啡 run: listeners remember one story
-well rather than five evenly.
+The first item is the lead story. Every story is told properly, with the lead given the
+most room: the listener should come away knowing what each person actually did, step by
+step, not just a headline. The episode runs about ten minutes.
 
 Return one segment per item, then one final segment for `action`.
 
-- Lead segment (item 1): about 45% of the episode. It continues straight from the
+- Lead segment (item 1): about 30% of the episode. It continues straight from the
   intro (see below). Who, what they did step by step, the result.
   Then 可以试试 (`tryThis`) and 要注意 (`caveat`). This is the only segment that uses
   the words 可以试试 and 要注意. 要注意 is a practical limit (cost, prerequisites, where it
   breaks); if `caveat` is only a source disclaimer, leave 要注意 out.
-- Brief segments (items 2 onward): 3 to 6 sentences each, about 120 to 220 characters.
-  Open with a short spoken transition, then who did what and the result. No caveats,
-  no 可以试试, no 要注意.
-  Before the first brief, mark the shift once, e.g. 再快速看几条。
+- Other segments (items 2 onward): about 350 to 550 characters each, drawn from `body`
+  as well as `who`, `how` and `result`. Open with a short spoken transition, then who
+  they are, what they did step by step, and what came of it. End with what the
+  listener could take from it (`tryThis`), told in a sentence or two of plain speech
+  rather than under a 可以试试 label. No source disclaimers, no 要注意.
 - Vary the transitions. Never open two segments the same way.
 - Final segment: start with 今天可以做的一件事, then `action` in short sentences.
 - Split each segment into short paragraphs, 2–4 sentences each.

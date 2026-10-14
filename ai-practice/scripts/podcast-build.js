@@ -62,7 +62,8 @@ const INWORLD_STEER = process.env.PODCAST_INWORLD_STEER || "[say in a warm, upbe
 const INWORLD_RATE = Number(process.env.PODCAST_INWORLD_RATE || 1.0);
 
 const CHARS_PER_MINUTE = 250;          // relaxed conversational Mandarin
-const MAX_SCRIPT_CHARS = 6000;         // about 24 minutes
+const MIN_SCRIPT_CHARS = 2800;         // about ten minutes with pauses at the upbeat pace
+const MAX_SCRIPT_CHARS = 6000;         // about 20 minutes
 const MAX_TTS_CHUNK_CHARS = 900;       // keeps each TTS request well under the input limit
 const MAX_SENTENCE_CHARS = 40;         // longer sentences are hard to follow by ear
 const SAMPLE_RATE = 24000;             // OpenAI "pcm" format: 24kHz, 16-bit LE, mono
@@ -120,15 +121,17 @@ async function openai(path, body) {
 
 // -- Script ------------------------------------------------------------------
 
-// Spoken length tracks the written issue: the lead story in full, each brief
-// at roughly its one-liner plus how it was done, then the action.
+// Spoken length tracks the written issue: every story in full (body plus
+// takeaway), the lead also with its caveat, then the action. Readers asked
+// for about ten minutes; the lead-plus-briefs format of 2026-10-13 came out
+// at five, too short.
 function targetChars(issue) {
   const strip = (s) => (s || "").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/[*_`#>]/g, "");
   const [lead, ...briefs] = issue.items;
   const written = (lead ? strip(lead.body).length + strip(lead.tryThis).length + strip(lead.caveat).length : 0)
-    + briefs.reduce((n, it) => n + Math.min(220, strip(it.oneLiner).length + strip(it.how).length), 0)
+    + briefs.reduce((n, it) => n + Math.min(550, strip(it.body).length + strip(it.tryThis).length), 0)
     + strip(issue.action).length;
-  return Math.min(MAX_SCRIPT_CHARS, Math.round(written / 100) * 100);
+  return Math.min(MAX_SCRIPT_CHARS, Math.max(MIN_SCRIPT_CHARS, Math.round(written / 100) * 100));
 }
 
 const SCRIPT_SCHEMA = {
