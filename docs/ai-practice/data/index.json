@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-13T15:09:08.715Z",
+  "updatedAt": "2026-10-14T14:45:25.827Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 3
+      "count": 4
     },
     {
       "id": "consulting",
@@ -20,7 +20,7 @@
       "name": "内容创作",
       "en": "AI content creation",
       "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入",
-      "count": 2
+      "count": 3
     },
     {
       "id": "saas",
@@ -34,24 +34,62 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 3
+      "count": 4
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 5
+      "count": 6
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 1
+      "count": 2
     }
   ],
   "days": [
+    {
+      "date": "2026-10-14",
+      "number": 5,
+      "title": "Cal AI 挑博主先看评论区，Anthropic 每天合并的代码变更涨了 12 倍",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 8,
+      "itemCount": 5,
+      "categoryCounts": {
+        "app": 1,
+        "productivity": 1,
+        "perspective": 1,
+        "content": 1,
+        "life": 1
+      },
+      "headlines": [
+        {
+          "category": "app",
+          "headline": "Cal AI 找博主推广，先看评论区再看粉丝数"
+        },
+        {
+          "category": "productivity",
+          "headline": "代码变更涨了 12 倍，Anthropic 七个人换掉了 Git"
+        },
+        {
+          "category": "perspective",
+          "headline": "200 人的公司强制全员用 AI，高管还要管 token 预算"
+        },
+        {
+          "category": "content",
+          "headline": "两条指令，把 90 分钟访谈剪成 10 分钟"
+        },
+        {
+          "category": "life",
+          "headline": "给 ChatGPT 100 美元，排出纽约三天长周末"
+        }
+      ]
+    },
     {
       "date": "2026-10-13",
       "number": 4,

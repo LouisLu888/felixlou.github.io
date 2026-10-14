@@ -1,0 +1,307 @@
+{
+  "date": "2026-10-14",
+  "title": "Cal AI 挑博主先看评论区，Anthropic 每天合并的代码变更涨了 12 倍",
+  "items": [
+    {
+      "candidateIds": [
+        "c14"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-14",
+      "headline": "Cal AI 找博主推广，先看评论区再看粉丝数",
+      "oneLiner": "Cal AI 联创 Jake Castillo 说，他们给博主付固定费用，付费按 CPM 折算后不能超过每千次播放带来的收入；签 UFC 博主花了数千美元，下载量没有任何起色。",
+      "who": "Jake Castillo 是 AI 卡路里记录 App Cal AI 的四位联创之一，负责营销。他在 RevenueCat 的 Sub Club 播客上受访。主持人介绍，Cal AI 下载量超过 1500 万，现已并入 MyFitnessPal。",
+      "how": "他们找本来就在拍「一天吃什么」的健身博主，请博主展示食物时顺手用 Cal AI 扫一下。镜头只保留「扫描→分析→出结果」三步。他们还给博主做了带 logo 的专用版本，并避开每天首次扫描时会弹出的连续打卡提示。",
+      "result": "他说，第一批签下的博主 Dawson Gibbs 跑通了视频格式，之后团队把它复制到大量健身博主。UFC 博主和吃播博主都花了数千美元，没有带来下载增长。App 年费定在 30 美元，是品类里最便宜的一档，目的是让人最容易下单。",
+      "tryThis": "找出你的产品几秒内就能看懂的那个画面；再去目标领域头部博主的评论区，看观众是不是在找你能解决的问题。",
+      "caveat": "这套打法的前提是这个品类博主多、能合作的品牌少。他举例，星座 App 能找的博主少，而且可能已经被竞品签了独家。产品没有一眼就让人惊讶的画面，他建议改投付费广告，直接讲卖点。",
+      "body": "Jake Castillo 在 [Sub Club 访谈](https://subclub.com/episode/how-cal-ai-turned-creators-into-a-growth-machine-jake-castillo-cal-ai)里讲了 Cal AI 靠博主增长的打法。起点是一个判断：健身博主数量极多，能合作的品牌却只有蛋白粉、运动服这几类，很多博主从没接过商单，而且每周本来就在拍饮食视频，把 App 放进去几乎不用改内容。他把扫描、分析、出结果这三步叫作 **magic moment**：观众会忍不住多看一眼。要是需要解释才看得懂，视频就像广告，传不开。\n\n失败的尝试同样有参考价值。UFC 选手确实需要精确算热量，但他说，看比赛的人大多是在沙发上吃着披萨，不想算卡路里。他的结论是**按观众想要什么来选博主，而不是按博主自己做什么**。判断方法是看评论区：如果满屏都是火焰表情，大概率不会转化；如果评论在感谢博主教会自己怎么练，这个博主更值得签。\n\n合作费用他算得很直接：**按博主的平均播放量算保本，付费不超过每千次播放带来的收入，并且付固定费用**。偶尔有一条视频爆了，多出来的收益全归自己。做付费 App 的人可以先拿三五个博主试，记下每条视频的播放量和对应几天的下载量，再决定要不要放量。",
+      "sources": [
+        {
+          "label": "Sub Club (RevenueCat)",
+          "title": "How Cal AI turned creators into a growth machine — Jake Castillo, Cal AI",
+          "url": "https://subclub.com/episode/how-cal-ai-turned-creators-into-a-growth-machine-jake-castillo-cal-ai"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-14-01"
+    },
+    {
+      "candidateIds": [
+        "c1"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-13",
+      "headline": "代码变更涨了 12 倍，Anthropic 七个人换掉了 Git",
+      "oneLiner": "Anthropic 称，每天合并的代码变更从 5 月的约 2,500 次增加到 9 月的 30,000 多次。一个 7 人团队自建了版本控制系统，用五个月完成了从 Git 的迁移。",
+      "who": "Simon Willison 在博客里转述并点评了 Anthropic 自建版本控制系统的文章，还加上了自己做 adversarial review 的经验。",
+      "how": "新系统 Scion 采用中心化设计，配套的代码审查系统叫 Antique。开发中大量用到 adversarial review，也就是让模型专门挑方案的毛病；工程师要负责把 Claude 从过度设计里拉回来。",
+      "result": "Anthropic 给出的规模是：主分支历史接近 100 GB，压缩后的工作副本超过 25 GB，CI 每天约 2500 万次检出代码，按 Git 的方式直接拉取，每天流量会超过 600 PB。",
+      "tryThis": "下次写技术方案，先让一个模型出方案，再让另一个模型挑毛病，最后由你决定哪些问题值得处理。",
+      "caveat": "挑毛病的模型容易短视，会为了假想中的风险加复杂度。Scion 解决的是超大规模的问题，小团队照搬没有意义。",
+      "body": "Simon Willison 的[这篇点评](https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/)提到，Anthropic 自建版本控制系统，是因为过去半年代码变更速度急剧上升。他让 Claude 在官方图表上标出了 2026 年各次模型公开发布的时间，并推测新一代模型是速度提升的重要原因。有人在 Hacker News 上问 Scion 为什么不支持离线，Scion 工程师回答：Scion 最大的用户是 Claude，而 Claude 必然在线。\n\n对普通工程团队，更有用的是 **adversarial review** 这一段。Willison 自己常让 Claude 和 GPT 互相挑错。Anthropic 的经验和他一致：这个办法在很多方面非常有效，但模型会对假想的风险过度反应，需要熟练的工程师判断哪些顾虑可以放下。可以这样分工：模型负责把问题都列出来，人负责取舍，并记下自己否决了哪几条、为什么。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Redesigning source control at Anthropic",
+          "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-14-02"
+    },
+    {
+      "candidateIds": [
+        "c52"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-14",
+      "headline": "200 人的公司强制全员用 AI，高管还要管 token 预算",
+      "oneLiner": "MinIO 联创兼联席 CEO Garima Kapoor 说，复杂后端基础设施从开发到上线的周期由约 12 个月缩短到约 1 个月，公司已经让高管对 token 预算负责。",
+      "who": "Garima Kapoor 是 MinIO 的联创兼联席 CEO。MinIO 做企业级对象存储，成立约十年，员工超过 200 人，现金流为正。她在 Greg Shove 主持的 Supercompanies 播客上受访。",
+      "how": "她主张全公司各个职能都必须用 AI，原话大意是「要么用 AI，要么这里不适合你」。公司不设主力模型，按任务在 Claude 和 Codex 之间选。内部用 MCP server 打通销售、日历和 CRM 数据，帮助新人上手和日常管理。",
+      "result": "她说，有些工程师用 AI 后效率提高了 100 倍，但团队里差别很大；公司每年的推理支出达到数百万美元。管理上，高管除了人员编制预算，还要为 token 预算负责。",
+      "tryThis": "带团队的人可以把 AI 工具费和人力成本放在同一张表里，按产出评估投入。招人时，好奇心和思路是否清晰比会不会用 AI 更重要。",
+      "caveat": "100 倍只是部分工程师的情况，不能推到整个团队。每年数百万美元的推理支出，要靠一家盈利公司撑得住。",
+      "body": "在 [Supercompanies 这期节目](https://supercompanies.captivate.fm/episode/100x-engineering-productivity-with-garima-kapoor-minio)开头，Kapoor 把模型称为「推理引擎」，认为结果好坏取决于你给 agent 的上下文够不够准确。她预计，以后连同一个任务都会同时用到好几家前沿模型，因为一个任务里包含不同类型的工作。\n\n她的做法里有两点可以直接借鉴。第一，**把 token 当作和人力一样的预算项来管理**，让负责人对这笔钱的回报负责，而不只看人用得多不多。第二，**不绑定单一模型**，按任务类型分配。对大厂员工来说，可以先在自己的项目里统计每月 AI 花费和交付变化，用数字争取资源。",
+      "sources": [
+        {
+          "label": "Supercompanies (Greg Shove / Section)",
+          "title": "100x Engineering Productivity with Garima Kapoor (MinIO)",
+          "url": "https://supercompanies.captivate.fm/episode/100x-engineering-productivity-with-garima-kapoor-minio"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-14-03"
+    },
+    {
+      "candidateIds": [
+        "c11"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-13",
+      "headline": "两条指令，把 90 分钟访谈剪成 10 分钟",
+      "oneLiner": "AI 视频博主 Theoretically Media 说，他用 MCP 把 Gemini 4 Argon 接入 DaVinci Resolve，两条指令就把一段 90 分钟的对谈剪成了 10 分钟访谈，B-roll 素材也一起找好了。",
+      "who": "Theoretically Media 是测评 AI 工具的 YouTube 创作者。他拿到了 Gemini 4 Argon 的提前试用资格，把它当作主力工具用了一周。",
+      "how": "他用 MCP 把模型连接到剪辑软件 DaVinci Resolve，让模型直接操作剪辑工程；还把剧集项目 Planet Hell 的编剧笔记交给它整理，让它找出隐藏的故事线。",
+      "result": "他说，和 Javi Lopez 的 90 分钟对谈，两条指令就剪成了 10 分钟版本。此前 Opus 4.8 把他的编剧室笔记变成一张层层叠叠的规则图，没法再用；这次 Argon 重新整理了原始笔记，项目恢复了制作。这个模型在每月 20 美元的 Pro 套餐里就能用。",
+      "tryThis": "做访谈类内容的人可以拿一期旧素材试一下，让 AI 先出一版粗剪，自己再检查节奏和上下文有没有被剪断。",
+      "caveat": "他提到，这个模型在 UI 设计和 3D 细节打磨上落后于其他模型。",
+      "body": "Theoretically Media 在[这期视频](https://www.youtube.com/watch?v=DD4oHSH5SEI)里展示了几个实际项目，和内容制作关系最近的是 **07:37 开始的 DaVinci Resolve 剪辑**：模型通过 MCP 直接操作剪辑软件，把长对谈压缩成访谈并补上 B-roll。08:48 开始讲的是用它整理编剧笔记、让停工的项目重新开工。\n\n对做播客、访谈的人，这说明粗剪这类重复劳动可以先交给 AI。成片的取舍仍要自己定：哪句话不能删，哪里的上下文需要保留，AI 无法替你判断。",
+      "sources": [
+        {
+          "label": "Theoretically Media",
+          "title": "Google Cooked! Testing Gemini 4 Argon & Blasting 800 Million Tokens!",
+          "url": "https://www.youtube.com/watch?v=DD4oHSH5SEI"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-14-04"
+    },
+    {
+      "candidateIds": [
+        "c57"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-08",
+      "headline": "给 ChatGPT 100 美元，排出纽约三天长周末",
+      "oneLiner": "Tom's Guide 作者 Elton Jones 让 ChatGPT 用 100 美元规划纽约秋季三天长周末，三天预算分别为 18、35、30 美元，另留 17 美元备用。",
+      "who": "Elton Jones 住在纽约，今年一直用 ChatGPT 帮自己找周末去处。这次给了它一个总预算上限。",
+      "how": "他的提示词是：「我只有 100 美元，在纽约安排一个完美的秋季周末，挑最有趣又便宜的活动。」ChatGPT 按天给出行程和每项花费的估算。整个过程只用了预算和城市这两项信息，没有接入任何账户。",
+      "result": "推荐里有：纽约州居民周五晚上可预约免费参观 MoMA（他估算门票价值约 30 美元）、Brooklyn 的几场免费节庆、周日在 The Battery 举办的免费 NYC Fungus Festival。他从中挑了三项放进日程，总花费没有超出 100 美元。",
+      "tryThis": "下一个假期前，把城市、天数、总预算和兴趣告诉 AI，要求按天列出花费，再逐项打开官网核对时间和预约方式。",
+      "caveat": "活动日期、门票和预约要求必须自己去官网确认；预约门票、RSVP 都得本人操作。",
+      "body": "Elton Jones 在 [Tom's Guide](https://www.tomsguide.com/ai/i-gave-chatgpt-usd100-and-72-hours-to-get-me-out-of-the-house-and-it-found-something-i-realized-ive-been-missing-for-years) 记录了这次规划。他觉得最有用的，是 AI 列出了很多本地免费资源：限定居民的免费博物馆夜场、需要 RSVP 的户外节庆，以及他从没听说过的蘑菇节。ChatGPT 最后的建议是，城市免费提供的东西就别花钱买，并提到纽约市文化事务局有一份免费和随意付费的文化场馆清单。\n\n可以照搬的是**先给预算上限，再让 AI 按天列出花费**，花钱的去向一目了然。拿到推荐后，他自己查了蘑菇节的详细信息才决定去。这一步不能省，AI 给的活动时间可能不准。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I gave ChatGPT $100 and 72 hours to get me out of the house — and it found something I realized I've been missing for years",
+          "url": "https://www.tomsguide.com/ai/i-gave-chatgpt-usd100-and-72-hours-to-get-me-out-of-the-house-and-it-found-something-i-realized-ive-been-missing-for-years"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-14-05"
+    }
+  ],
+  "action": "找一位你目标领域的头部博主，打开他最近一条视频，读前 50 条评论，把观众提的问题和抱怨抄进一张表，再标出哪些是你的产品、服务或下一篇内容能回答的。这是 Jake Castillo 判断一个领域能不能做的办法，半小时就能做完。如果大部分评论只是表情和夸赞，就换一位博主或换一个领域再看。",
+  "readingMinutes": 8,
+  "meta": {
+    "generatedAt": "2026-10-14T14:45:00.265Z",
+    "engine": "cli",
+    "candidateCount": 57,
+    "candidatesBySource": {
+      "Simon Willison": 5,
+      "How I AI (Claire Vo)": 1,
+      "Lenny's Newsletter & Podcast": 1,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 2,
+      "Theoretically Media": 1,
+      "Starter Story (YouTube)": 1,
+      "Niche Pursuits": 1,
+      "Sub Club (RevenueCat)": 1,
+      "Every (YouTube)": 3,
+      "Rest of World": 1,
+      "Follow Builders (X)": 28,
+      "Latent Space": 3,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 1,
+      "Supercompanies (Greg Shove / Section)": 1,
+      "Lifehacker": 2,
+      "Tom's Guide · AI": 3
+    },
+    "shortlist": [
+      {
+        "id": "c14",
+        "reason": "有逐字稿。谁：Cal AI 的 Jake Castillo。怎么做：用达人内容给 AI 应用拉增长，比如按观众需求选达人领域、靠「扫描-分析-出结果」这个惊艳时刻带动传播。结果：给出了 CPM 不能超过每千次播放收入的定价上限，还有 UFC 达人投放没带来下载的失败案例，能照着复用。",
+        "source": "Sub Club (RevenueCat)",
+        "title": "How Cal AI turned creators into a growth machine — Jake Castillo, Cal AI"
+      },
+      {
+        "id": "c52",
+        "reason": "有逐字稿。谁：MinIO 联合 CEO Garima Kapoor，公司 200 人、已现金流为正。怎么做：全公司各部门强制使用 AI，并讲了怎么衡量回报。结果：一线经营者的组织落地复盘，适合大厂读者参考。",
+        "source": "Supercompanies (Greg Shove / Section)",
+        "title": "100x Engineering Productivity with Garima Kapoor (MinIO)"
+      },
+      {
+        "id": "c35",
+        "reason": "谁：Swyx 和 Latent Space。怎么做：拿自己在用的一款年费 4.3 万美元的 SaaS，办黑客松让大家用 AI 在一个周末内复刻。结果：72 份提交、约 1000 亿 token，有 AI 评测加人工评测，结论是中等复杂度的 SaaS 还有哪些难点替代不了。真实实验，数据完整。",
+        "source": "Follow Builders (X)",
+        "title": "Swyx: 🆕 How to Kill Your SaaS \n\nhttps://t.co/A0F60h1DcQ\n\nA lot of people talk about t"
+      },
+      {
+        "id": "c1",
+        "reason": "谁：Anthropic，经 Simon Willison 转述。怎么做：代码合并量猛增后，自研了 Git 的替代方案。结果：日均合并从 5 月约 2500 次涨到 9 月 3 万多次。一手数据，说明 AI 编程怎么改变了工程基础设施，归为认知类。",
+        "source": "Simon Willison",
+        "title": "Redesigning source control at Anthropic"
+      },
+      {
+        "id": "c11",
+        "reason": "作者把 Gemini 4 Argon 当日常主力用了一周。简介只列了实际做出的东西：通过 MCP 让 DaVinci Resolve 把 90 分钟访谈剪成 10 分钟、用 /goal 模式无人值守通宵做 Skyrim 模组、一次生成一个复音合成器。简介虽短，但已写出具体做法和结果，偏内容创作者的工作流。",
+        "source": "Theoretically Media",
+        "title": "Google Cooked! Testing Gemini 4 Argon & Blasting 800 Million Tokens!"
+      },
+      {
+        "id": "c57",
+        "reason": "AI 生活类。一位普通用户给 ChatGPT 100 美元和 72 小时，让它在纽约安排周末出门活动，有真实的结果和感受，属于个人助手的实际用法。",
+        "source": "Tom's Guide · AI",
+        "title": "I gave ChatGPT $100 and 72 hours to get me out of the house — and it found something I realized I've been missing for years"
+      },
+      {
+        "id": "c5",
+        "reason": "谁：Simon Willison。怎么做：用一句话提示让 Codex 里的 GPT-6 Astra 先调研，再用 Python 3.15 新的性能分析器给自己的 web-edit 应用生成火焰图和热力图；随后（见 c3）把报告交给 Claude 写出性能优化。结果：两个模型分工的开发流程可以照着试。",
+        "source": "Simon Willison",
+        "title": "Profiling web-edit with Python 3.15: flame graphs and source heatmaps"
+      },
+      {
+        "id": "c56",
+        "reason": "AI 生活类。作者把 ChatGPT 接上每天用的出行、购物、娱乐类应用插件，说省了不少时间。有一定可操作性，但有清单体的嫌疑，下一步写时要找出具体步骤。",
+        "source": "Tom's Guide · AI",
+        "title": "I connected ChatGPT to the apps I use daily with these 5 plugins — and it was a huge time-saver"
+      },
+      {
+        "id": "c12",
+        "reason": "谁：Max，半年前从没做过移动应用。怎么做：在已有约 100 个竞品的情况下，做了 AI 健身记录应用 Maxed.ai。结果：月收入约 1.4 万美元。小团队的商业闭环案例，不过只有简介，细节有限。",
+        "source": "Starter Story (YouTube)",
+        "title": "Bro saw 100 competitor apps so he build his to $13k MRR anyways 👍"
+      },
+      {
+        "id": "c41",
+        "reason": "谁：Box CEO Aaron Levie（创始人判断）。怎么做：用自家处理复杂企业文档任务的评测，测了 Gemini 4 Argon 一周。结果：比 Gemini 3.1 Pro 高 14 个百分点。有一手评测数据，但它测的是 Box 自家 Agent，不是这里读者能直接照着用的做法。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: At Box, we've been testing Gemini 4 Argon on our Box AI Complex Work eval for th"
+      },
+      {
+        "id": "c42",
+        "reason": "谁：Vercel CEO Guillermo Rauch（创始人判断）。观点：编程 Agent 是 AI 的杀手级应用；两个新模型前后脚发布，说明个人和公司都应该不绑定单一模型。对读者选工具有现实意义，算认知类。",
+        "source": "Follow Builders (X)",
+        "title": "Guillermo Rauch: Congrats Gemini team. Never bet against Google, the company that brought us Tran"
+      },
+      {
+        "id": "c7",
+        "reason": "谁：Claire Vo。怎么做：用约 20 项任务的自建评测集测 Meta Muse Wonder，结合 LLM 打分和自己的语音笔记。结果：Agent 类任务有 3 项排第一，设计输出不行。跟 c6 是同一内容，留 Lenny 这一版；只有简介，放最后备选。",
+        "source": "Lenny's Newsletter & Podcast",
+        "title": "Meta’s new ‘Muse Wonder’ model: good for AI agents, bad for design"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 22743,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2158,
+        "output_tokens_details": {
+          "thinking_tokens": 558
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 22743,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2158,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 22743,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 22743
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.225112
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 47377,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 7550,
+      "output_tokens_details": {
+        "thinking_tokens": 2645
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 47377,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 7550,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 47377,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 47377
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.530024
+  }
+}

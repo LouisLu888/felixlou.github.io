@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c11"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-13",
+      "headline": "两条指令，把 90 分钟访谈剪成 10 分钟",
+      "oneLiner": "AI 视频博主 Theoretically Media 说，他用 MCP 把 Gemini 4 Argon 接入 DaVinci Resolve，两条指令就把一段 90 分钟的对谈剪成了 10 分钟访谈，B-roll 素材也一起找好了。",
+      "who": "Theoretically Media 是测评 AI 工具的 YouTube 创作者。他拿到了 Gemini 4 Argon 的提前试用资格，把它当作主力工具用了一周。",
+      "how": "他用 MCP 把模型连接到剪辑软件 DaVinci Resolve，让模型直接操作剪辑工程；还把剧集项目 Planet Hell 的编剧笔记交给它整理，让它找出隐藏的故事线。",
+      "result": "他说，和 Javi Lopez 的 90 分钟对谈，两条指令就剪成了 10 分钟版本。此前 Opus 4.8 把他的编剧室笔记变成一张层层叠叠的规则图，没法再用；这次 Argon 重新整理了原始笔记，项目恢复了制作。这个模型在每月 20 美元的 Pro 套餐里就能用。",
+      "tryThis": "做访谈类内容的人可以拿一期旧素材试一下，让 AI 先出一版粗剪，自己再检查节奏和上下文有没有被剪断。",
+      "caveat": "他提到，这个模型在 UI 设计和 3D 细节打磨上落后于其他模型。",
+      "body": "Theoretically Media 在[这期视频](https://www.youtube.com/watch?v=DD4oHSH5SEI)里展示了几个实际项目，和内容制作关系最近的是 **07:37 开始的 DaVinci Resolve 剪辑**：模型通过 MCP 直接操作剪辑软件，把长对谈压缩成访谈并补上 B-roll。08:48 开始讲的是用它整理编剧笔记、让停工的项目重新开工。\n\n对做播客、访谈的人，这说明粗剪这类重复劳动可以先交给 AI。成片的取舍仍要自己定：哪句话不能删，哪里的上下文需要保留，AI 无法替你判断。",
+      "sources": [
+        {
+          "label": "Theoretically Media",
+          "title": "Google Cooked! Testing Gemini 4 Argon & Blasting 800 Million Tokens!",
+          "url": "https://www.youtube.com/watch?v=DD4oHSH5SEI"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-14-04",
+      "issueDate": "2026-10-14",
+      "issueNumber": 5
+    },
+    {
+      "candidateIds": [
         "c19"
       ],
       "category": "content",

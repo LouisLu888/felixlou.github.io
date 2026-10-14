@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c57"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-08",
+      "headline": "给 ChatGPT 100 美元，排出纽约三天长周末",
+      "oneLiner": "Tom's Guide 作者 Elton Jones 让 ChatGPT 用 100 美元规划纽约秋季三天长周末，三天预算分别为 18、35、30 美元，另留 17 美元备用。",
+      "who": "Elton Jones 住在纽约，今年一直用 ChatGPT 帮自己找周末去处。这次给了它一个总预算上限。",
+      "how": "他的提示词是：「我只有 100 美元，在纽约安排一个完美的秋季周末，挑最有趣又便宜的活动。」ChatGPT 按天给出行程和每项花费的估算。整个过程只用了预算和城市这两项信息，没有接入任何账户。",
+      "result": "推荐里有：纽约州居民周五晚上可预约免费参观 MoMA（他估算门票价值约 30 美元）、Brooklyn 的几场免费节庆、周日在 The Battery 举办的免费 NYC Fungus Festival。他从中挑了三项放进日程，总花费没有超出 100 美元。",
+      "tryThis": "下一个假期前，把城市、天数、总预算和兴趣告诉 AI，要求按天列出花费，再逐项打开官网核对时间和预约方式。",
+      "caveat": "活动日期、门票和预约要求必须自己去官网确认；预约门票、RSVP 都得本人操作。",
+      "body": "Elton Jones 在 [Tom's Guide](https://www.tomsguide.com/ai/i-gave-chatgpt-usd100-and-72-hours-to-get-me-out-of-the-house-and-it-found-something-i-realized-ive-been-missing-for-years) 记录了这次规划。他觉得最有用的，是 AI 列出了很多本地免费资源：限定居民的免费博物馆夜场、需要 RSVP 的户外节庆，以及他从没听说过的蘑菇节。ChatGPT 最后的建议是，城市免费提供的东西就别花钱买，并提到纽约市文化事务局有一份免费和随意付费的文化场馆清单。\n\n可以照搬的是**先给预算上限，再让 AI 按天列出花费**，花钱的去向一目了然。拿到推荐后，他自己查了蘑菇节的详细信息才决定去。这一步不能省，AI 给的活动时间可能不准。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I gave ChatGPT $100 and 72 hours to get me out of the house — and it found something I realized I've been missing for years",
+          "url": "https://www.tomsguide.com/ai/i-gave-chatgpt-usd100-and-72-hours-to-get-me-out-of-the-house-and-it-found-something-i-realized-ive-been-missing-for-years"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-14-05",
+      "issueDate": "2026-10-14",
+      "issueNumber": 5
+    },
+    {
+      "candidateIds": [
         "c60"
       ],
       "category": "life",

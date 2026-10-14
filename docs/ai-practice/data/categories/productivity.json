@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c1"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-13",
+      "headline": "代码变更涨了 12 倍，Anthropic 七个人换掉了 Git",
+      "oneLiner": "Anthropic 称，每天合并的代码变更从 5 月的约 2,500 次增加到 9 月的 30,000 多次。一个 7 人团队自建了版本控制系统，用五个月完成了从 Git 的迁移。",
+      "who": "Simon Willison 在博客里转述并点评了 Anthropic 自建版本控制系统的文章，还加上了自己做 adversarial review 的经验。",
+      "how": "新系统 Scion 采用中心化设计，配套的代码审查系统叫 Antique。开发中大量用到 adversarial review，也就是让模型专门挑方案的毛病；工程师要负责把 Claude 从过度设计里拉回来。",
+      "result": "Anthropic 给出的规模是：主分支历史接近 100 GB，压缩后的工作副本超过 25 GB，CI 每天约 2500 万次检出代码，按 Git 的方式直接拉取，每天流量会超过 600 PB。",
+      "tryThis": "下次写技术方案，先让一个模型出方案，再让另一个模型挑毛病，最后由你决定哪些问题值得处理。",
+      "caveat": "挑毛病的模型容易短视，会为了假想中的风险加复杂度。Scion 解决的是超大规模的问题，小团队照搬没有意义。",
+      "body": "Simon Willison 的[这篇点评](https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/)提到，Anthropic 自建版本控制系统，是因为过去半年代码变更速度急剧上升。他让 Claude 在官方图表上标出了 2026 年各次模型公开发布的时间，并推测新一代模型是速度提升的重要原因。有人在 Hacker News 上问 Scion 为什么不支持离线，Scion 工程师回答：Scion 最大的用户是 Claude，而 Claude 必然在线。\n\n对普通工程团队，更有用的是 **adversarial review** 这一段。Willison 自己常让 Claude 和 GPT 互相挑错。Anthropic 的经验和他一致：这个办法在很多方面非常有效，但模型会对假想的风险过度反应，需要熟练的工程师判断哪些顾虑可以放下。可以这样分工：模型负责把问题都列出来，人负责取舍，并记下自己否决了哪几条、为什么。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Redesigning source control at Anthropic",
+          "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-14-02",
+      "issueDate": "2026-10-14",
+      "issueNumber": 5
+    },
+    {
+      "candidateIds": [
         "c1",
         "c3"
       ],
