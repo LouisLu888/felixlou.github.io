@@ -87,7 +87,7 @@ Buttondown 账号和博客共用一个订阅列表，博客的新文章通知会
 3. 固定开场（「早上好，这里是 AI 实干派……今天X月X号」，日期按北京时间，即出刊日加一天）和固定结尾（「……我们明天早上见」）由代码加上，模型只写当天的钩子和一句回扣。
 4. 每个故事单独合成一段，故事之间是一个约 0.5 秒的翻书声（ffmpeg 用噪声现场生成，不进仓库），长故事内部按段落拆开时停 0.7 秒。每段的起始时间写进 `episodes.json` 的 `chapters`，show notes 里列成时间轴。
 5. 写完后代码检查超长句和禁用说法（「现有摘要」这类生产过程用语、「值得」「不是……而是」「说白了」），命中就打回模型改一次。
-6. 语速：Inworld 用自带的 `speaking_rate` 0.95；备用的 OpenAI 不支持语速参数，成品放慢到 0.94 倍（`TEMPO`）。
+6. 语气和语速：Inworld 用风格指令「warm, upbeat, energetic podcast-host tone」和自带的 `speaking_rate` 1.0（2026-10-13 试音后从放松语气、0.95 改来，原来的太平）；可用 `PODCAST_INWORLD_STEER`、`PODCAST_INWORLD_RATE` 覆盖，`audition` 选项会把几种音色和语气渲染到 `voice-audition` 分支供试听；备用的 OpenAI 不支持语速参数，成品放慢到 0.94 倍（`TEMPO`）。
 7. 英文术语读音表在 `config/pronunciation.json`，只作用于送给 TTS 的文本；听到读错的词就加一条。
 
 上架小宇宙需要两样东西，都已写进 feed：`itunes:owner` 邮箱（325louis@gmail.com，认领节目时收验证码，公开可见），以及 AI 生成标识。中国大陆 2025 年 9 月起施行 AI 生成内容标识规定，所以每集开头固定一句「本节目语音由 AI 合成」，节目简介和每集简介也注明（`AI_DISCLOSURE`）。

@@ -20,6 +20,8 @@
 //   PODCAST_SCRIPT_MODEL  default gpt-5.5
 //   PODCAST_TTS_ENGINE    inworld (default) or openai
 //   PODCAST_INWORLD_VOICE default Xiaoyin
+//   PODCAST_INWORLD_STEER bracketed style instruction, default upbeat podcast host
+//   PODCAST_INWORLD_RATE  speaking rate, default 1.0
 //   PODCAST_TTS_MODEL     OpenAI TTS model, default gpt-4o-mini-tts-2025-12-15
 //   PODCAST_VOICE         OpenAI voice, default marin
 //
@@ -53,9 +55,11 @@ const VOICE = process.env.PODCAST_VOICE || "marin";
 const ENGINE = process.env.PODCAST_TTS_ENGINE || "inworld";
 const INWORLD_MODEL = "inworld/realtime-tts-2";
 const INWORLD_VOICE = process.env.PODCAST_INWORLD_VOICE || "Xiaoyin";
-// Bracketed steering is read as an instruction, not spoken.
-const INWORLD_STEER = "[say in a relaxed, conversational podcast-host tone]";
-const INWORLD_RATE = 0.95;
+// Bracketed steering is read as an instruction, not spoken. The relaxed tone
+// used until 2026-10-13 sounded flat; "upbeat" won the voice audition
+// (voice-audition.js) against relaxed and excited.
+const INWORLD_STEER = process.env.PODCAST_INWORLD_STEER || "[say in a warm, upbeat, energetic podcast-host tone]";
+const INWORLD_RATE = Number(process.env.PODCAST_INWORLD_RATE || 1.0);
 
 const CHARS_PER_MINUTE = 250;          // relaxed conversational Mandarin
 const MAX_SCRIPT_CHARS = 6000;         // about 24 minutes
@@ -76,7 +80,7 @@ const TEMPO = { openai: 0.94, inworld: 1 };   // Inworld slows down natively via
 // pronunciation). No "speed up" wording: the old version sounded rushed.
 const TTS_INSTRUCTIONS = [
   "Voice: 温和、清晰、有亲和力的普通话。",
-  "Tone: 像跟一位做产品的朋友聊今天看到的几个真实案例。放松、有好奇心。不要播音腔，不要朗读课文的腔调。",
+  "Tone: 像跟一位做产品的朋友兴致勃勃地分享今天看到的几个真实案例。热情、明快、有感染力，说到结果时听得出兴奋。不要播音腔，不要朗读课文的腔调。",
   "Pacing: 正常聊天的语速，不赶。说到关键数字和结论时稍微放慢一点。",
   "Pauses: 句号处自然停顿；每段结束时停顿稍长，像在换一口气。",
   "Emphasis: 句子重音落在有信息量的词上，比如数字、结果、人物做的事。句尾不要拖长，也不要每句都上扬。",
