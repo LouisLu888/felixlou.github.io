@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-10-14",
+    "title": "Cal AI 挑博主先看评论区，Anthropic 每天合并的代码变更涨了 12 倍",
+    "summary": "Cal AI 找博主推广，先看评论区再看粉丝数；代码变更涨了 12 倍，Anthropic 七个人换掉了 Git；200 人的公司强制全员用 AI，高管还要管 token 预算；两条指令，把 90 分钟访谈剪成 10 分钟；给 ChatGPT 100 美元，排出纽约三天长周末",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-14/",
+    "items": [
+      {
+        "headline": "Cal AI 找博主推广，先看评论区再看粉丝数",
+        "sources": [
+          {
+            "label": "Sub Club (RevenueCat)",
+            "title": "How Cal AI turned creators into a growth machine — Jake Castillo, Cal AI",
+            "url": "https://subclub.com/episode/how-cal-ai-turned-creators-into-a-growth-machine-jake-castillo-cal-ai"
+          }
+        ]
+      },
+      {
+        "headline": "代码变更涨了 12 倍，Anthropic 七个人换掉了 Git",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "Redesigning source control at Anthropic",
+            "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/"
+          }
+        ]
+      },
+      {
+        "headline": "200 人的公司强制全员用 AI，高管还要管 token 预算",
+        "sources": [
+          {
+            "label": "Supercompanies (Greg Shove / Section)",
+            "title": "100x Engineering Productivity with Garima Kapoor (MinIO)",
+            "url": "https://supercompanies.captivate.fm/episode/100x-engineering-productivity-with-garima-kapoor-minio"
+          }
+        ]
+      },
+      {
+        "headline": "两条指令，把 90 分钟访谈剪成 10 分钟",
+        "sources": [
+          {
+            "label": "Theoretically Media",
+            "title": "Google Cooked! Testing Gemini 4 Argon & Blasting 800 Million Tokens!",
+            "url": "https://www.youtube.com/watch?v=DD4oHSH5SEI"
+          }
+        ]
+      },
+      {
+        "headline": "给 ChatGPT 100 美元，排出纽约三天长周末",
+        "sources": [
+          {
+            "label": "Tom's Guide · AI",
+            "title": "I gave ChatGPT $100 and 72 hours to get me out of the house — and it found something I realized I've been missing for years",
+            "url": "https://www.tomsguide.com/ai/i-gave-chatgpt-usd100-and-72-hours-to-get-me-out-of-the-house-and-it-found-something-i-realized-ive-been-missing-for-years"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Cal AI 找博主推广，先看评论区再看粉丝数"
+      },
+      {
+        "start": 198,
+        "title": "代码变更涨了 12 倍，Anthropic 七个人换掉了 Git"
+      },
+      {
+        "start": 300,
+        "title": "200 人的公司强制全员用 AI，高管还要管 token 预算"
+      },
+      {
+        "start": 390,
+        "title": "两条指令，把 90 分钟访谈剪成 10 分钟"
+      },
+      {
+        "start": 462,
+        "title": "给 ChatGPT 100 美元，排出纽约三天长周末"
+      },
+      {
+        "start": 551,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 597,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-14.mp3",
+    "audioBytes": 3580653,
+    "publishedAt": "2026-10-14T22:45:40.648Z"
+  },
+  {
     "date": "2026-10-13",
     "title": "每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent",
     "summary": "每天给自己写封邮件让 Gemini 回，她反而不再用它回别人；让 agent 守规矩，与其改说明文档，不如让提交直接失败；18 岁零基础做 App，花几千美元买网红视频差点做垮；Anthropic 让 Claude 自己编排多 agent，代价是贵得多",

@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-14 · Cal AI 挑博主先看评论区，Anthropic 每天合并的代码变更涨了 12 倍</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-14/</link>
+      <description>Cal AI 找博主推广，先看评论区再看粉丝数；代码变更涨了 12 倍，Anthropic 七个人换掉了 Git；200 人的公司强制全员用 AI，高管还要管 token 预算；两条指令，把 90 分钟访谈剪成 10 分钟；给 ChatGPT 100 美元，排出纽约三天长周末（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-14/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 Cal AI 找博主推广，先看评论区再看粉丝数<br>03:18 代码变更涨了 12 倍，Anthropic 七个人换掉了 Git<br>05:00 200 人的公司强制全员用 AI，高管还要管 token 预算<br>06:30 两条指令，把 90 分钟访谈剪成 10 分钟<br>07:42 给 ChatGPT 100 美元，排出纽约三天长周末<br>09:11 今天可以做的一件事</p><p><b>Cal AI 找博主推广，先看评论区再看粉丝数</b><br><a href="https://subclub.com/episode/how-cal-ai-turned-creators-into-a-growth-machine-jake-castillo-cal-ai">Sub Club (RevenueCat)</a></p><p><b>代码变更涨了 12 倍，Anthropic 七个人换掉了 Git</b><br><a href="https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/">Simon Willison</a></p><p><b>200 人的公司强制全员用 AI，高管还要管 token 预算</b><br><a href="https://supercompanies.captivate.fm/episode/100x-engineering-productivity-with-garima-kapoor-minio">Supercompanies (Greg Shove / Section)</a></p><p><b>两条指令，把 90 分钟访谈剪成 10 分钟</b><br><a href="https://www.youtube.com/watch?v=DD4oHSH5SEI">Theoretically Media</a></p><p><b>给 ChatGPT 100 美元，排出纽约三天长周末</b><br><a href="https://www.tomsguide.com/ai/i-gave-chatgpt-usd100-and-72-hours-to-get-me-out-of-the-house-and-it-found-something-i-realized-ive-been-missing-for-years">Tom's Guide · AI</a></p>]]></content:encoded>
+      <enclosure url="https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-14.mp3" length="3580653" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 22:45:40 GMT</pubDate>
+      <itunes:duration>00:09:57</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-13 · 每天给自己写封邮件让 Gemini 回，用一个 Git 钩子管住 coding agent</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-13/</link>
       <description>每天给自己写封邮件让 Gemini 回，她反而不再用它回别人；让 agent 守规矩，与其改说明文档，不如让提交直接失败；18 岁零基础做 App，花几千美元买网红视频差点做垮；Anthropic 让 Claude 自己编排多 agent，代价是贵得多（本集语音由 AI 合成）</description>
