@@ -127,13 +127,14 @@ export function renderDailyEmail(issue, number, catName, { embedded = false } = 
     })
     .join("");
 
+  // No issue-title heading: the subject already carries the lead headline and
+  // the lead item opens with it, so a third headline-like line just repeats.
   // Scan time for what the email itself shows (one-liners and fact lines).
   const shown = issue.items.reduce((n, it, i) => n + lines[i].length + emailFacts(it, i === 0).reduce((m, [, v]) => m + v.length, 0), 0);
   const minutes = Math.max(1, Math.round(shown / ZH_CHARS_PER_MIN));
   const inner = `
   <tr><td style="padding:20px 0 0">
     <div style="font-size:14px;line-height:1.7;color:${C.muted}">${pad3(number)} · ${esc(issue.date)} · ${issue.items.length} 条，约 ${minutes} 分钟看完 · <a href="${issueUrl}" style="color:${C.accent}">网页版全文</a></div>
-    <h1 style="margin:6px 0 4px;font-size:21px;line-height:1.5;color:${C.text};font-family:${SERIF}">${esc(issue.title)}</h1>
   </td></tr>
   ${editorNoteHtml(issue)}
   <tr><td style="padding:8px 0 0"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${items}</table></td></tr>
@@ -147,7 +148,6 @@ export function renderDailyEmail(issue, number, catName, { embedded = false } = 
 
   const text = [
     `${BRAND} ${pad3(number)} · ${issue.date}`,
-    issue.title,
     `网页版全文：${issueUrl}`,
     ...(issue.editorNote ? ["", "编辑按", mdToText(issue.editorNote)] : []),
   ];
