@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c49"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-15",
+      "headline": "让 ChatGPT 把家务做成打怪升级，配五个插件",
+      "oneLiner": "Elton Jones 让 ChatGPT 把打扫、叠衣服、备餐、断舍离和锻炼都做成游戏，并接上 Todoist、Spotify、TickTick 等插件，每件家务都有现成的提示词。",
+      "who": "Tom's Guide 作者 Elton Jones 住在纽约。他每周都会试 ChatGPT 的插件，这次想让日常家务变得不那么无聊。",
+      "how": "他给 ChatGPT 接上自己的 Todoist 清单、TickTick 日历、Spotify 和 AllTrails，用提示词把家务拆成 10 分钟一个的任务，每完成一个记一次经验值。",
+      "result": "打扫被做成一小时的速通，分成几个 10 分钟任务，比如清理厨房台面 +10 XP、打扫浴室 +25 XP。断舍离设成每周六一次、每次 10 分钟的重复任务。他的感受是家务更好玩了，没有给出省下的时间或钱。",
+      "tryThis": "如果你的家务已经写在待办应用里，可以试他的提示词：用我的清扫任务做一个一小时速通，拆成 10 分钟的任务，每个给经验值。",
+      "caveat": "需要把待办应用账户授权给 ChatGPT。游戏化对喜欢游戏的人更管用。",
+      "body": "Elton Jones 在 [Tom's Guide](https://www.tomsguide.com/ai/i-told-chatgpt-to-make-my-chores-more-fun-these-5-plugins-made-everyday-activities-even-more-rewarding-and-productive) 分享了五个用法。打扫时，ChatGPT 读取他在 Todoist 里标成清扫的任务，排成一小时速通；叠衣服时，Spotify 插件给了 15 个歌单，ChatGPT 还设计了「三首歌挑战」：歌放完之前叠得越多越好。\n\n最实用的是断舍离的提示词：**每次只给一个 10 分钟任务，从最容易的区域开始，每样东西决定留下、挪位置、捐掉、卖掉还是扔掉；拿不准的单独放一个待定箱，不逼我扔。**然后让 TickTick 设成每周六的重复任务。他还用 Pantry Persona 插件把菜谱排进餐单、生成购物清单。\n\n交出去的个人数据只有待办清单和音乐偏好，风险较低；真正动手干活的仍然是自己。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I told ChatGPT to make my chores more fun — these 5 plugins made everyday activities even more rewarding and productive",
+          "url": "https://www.tomsguide.com/ai/i-told-chatgpt-to-make-my-chores-more-fun-these-5-plugins-made-everyday-activities-even-more-rewarding-and-productive"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-04",
+      "issueDate": "2026-10-15",
+      "issueNumber": 6
+    },
+    {
+      "candidateIds": [
         "c57"
       ],
       "category": "life",

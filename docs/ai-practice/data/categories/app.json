@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c8"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-14",
+      "headline": "给爸爸做的听写插件，副业做到月入近两万美元",
+      "oneLiner": "Kourosh 在上班之余做听写应用 Voicy，主要面向老年人和残障用户。他说每月收入 1.6 万到 2 万美元，MRR 约 1.1 万美元。",
+      "who": "Kourosh 是金融科技公司的产品经理，没有技术科班背景。两年前他做了 Voicy，最初只是给打字很慢的父亲用，现在仍是他朝九晚五之外的副业。",
+      "how": "Voicy 调用 OpenAI 的 Whisper API，让用户在电脑和手机的任意位置用语音输入。代码先是让 ChatGPT 写好再复制粘贴，后来改用 Cursor 和 Codex。他说 Android 版是 Claude Opus 4.8 一次生成的。",
+      "result": "他说 MRR 约 1.1 万美元，加上 260 美元的终身版，每月收入 1.6 万到 2 万美元。目前有 1,400 个有效订阅、约 1 万月活跃用户，20% 的用户在用残障折扣。",
+      "tryThis": "做过的工具可以重新看一遍用户访谈：有没有一群人把它当成「止痛药」，而大公司没在服务他们。",
+      "caveat": "这个市场里已有拿了大笔融资的对手，Voicy 的增长靠的是长期做 SEO：200 篇博客、30 个落地页、三十多种语言。只想偶尔发几篇内容的人很难照搬。",
+      "body": "Kourosh 在 [Starter Story 节目](https://www.youtube.com/@starterstory/search?query=I%20built%20this%20app%20for%20my%20dad.%20Now%20it%20makes%20%2418K%2Fmonth)里讲了 Voicy 的来历。他住院两周，看着父亲在旁边一下一下敲键盘，一封邮件要写好几天，于是想把 ChatGPT 的听写功能带到电脑上的任何地方。第一版是 Chrome 扩展，从想法到上线用了两周。之后陆续做了 Windows 版（Electron，用了三个月）、Mac 版（一个月）和 Linux 版（两周），最后才是 iOS 和 Android。主要固定开支是 Framer 建站每月约 200 美元、VPS 每月约 40 美元，另加 API 费用。\n\n最值得学的是**他怎么找到了自己的用户**。他常和用户通话，发现 60% 到 70% 是本来就打字快的职场人，只想快 10%。另外 20% 到 30% 是老年人和残障人士，他们对最简单的版本就很满意。他的说法是，听写工具对职场人是「维生素」，对这群人是「止痛药」。所以他放弃和 Wispr Flow 这类公司正面竞争，专门服务这群人：设了发邮件就能领的残障八折，在 YouTube 开了「AI for Seniors」系列，他说一个月内订阅从 1,000 涨到 1.2 万。\n\n早期获客的顺序也很具体：先上 Chrome 应用商店，请五个朋友写评价，拿到前 100 个用户；再在 Reddit 天天发帖，直到被封，用户涨到两三百人；之后主要靠 SEO。他给新手的建议是：觉得写一篇博客有用，就写十篇。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "I built this app for my dad. Now it makes $18K/month",
+          "url": "https://www.youtube.com/@starterstory/search?query=I%20built%20this%20app%20for%20my%20dad.%20Now%20it%20makes%20%2418K%2Fmonth"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-01",
+      "issueDate": "2026-10-15",
+      "issueNumber": 6
+    },
+    {
+      "candidateIds": [
         "c14"
       ],
       "category": "app",

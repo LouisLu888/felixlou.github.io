@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c7"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-15",
+      "headline": "做广告内容站的人说：AI 是放大器，0 乘 10 还是 0",
+      "oneLiner": "陈然靠 AI 一个人运营免费内容站，靠广告赚钱。他说试过开通付费，半年总共没收到 100 美元。",
+      "who": "陈然有十多年硅谷 AI 从业经验，持 CFP 执照，业余做免费内容站赚广告钱。这番话是他 2026-10-15 在一篇知乎回答里写的。",
+      "how": "他认为 AI 只是放大器：本来会赚钱的人用了 AI 赚得更多，本来不会赚钱的人不会因为会用 AI 就开始赚钱。独立创始人变多，只说明一个人开公司的人变多了。",
+      "result": "他的依据是自己的经历。AI 让他一个人做完了过去一个团队的活，但选什么方向，靠的是自己考过一二十个考试攒下的直觉；只做免费加广告，是在 Tubi 那几年学到的。他开过门槛很低的付费，半年收入不到 100 美元。",
+      "tryThis": "打算靠 AI 做副业，先回答钱从哪里来：谁付钱、按什么模式付，再考虑用 AI 提效。",
+      "caveat": "这是从内容站这种生意总结出来的。对已经有客户和收入的人，AI 带来的放大作用可能更直接。",
+      "body": "陈然在[这篇回答](https://ranchen.org/content/20261014-zhihu-answer-2094036866819436701)里说了一个不太讨喜的看法：普通人未必抓得住一人公司这波红利。他说的红利，是真的用 AI 赚到了钱，而不是会用 AI，也不是注册了一家公司。\n\n他认为，用 AI 的熟练度差距放到三年里只是很薄的一层，迟早人人都会用，所以它不会是决定赚不赚钱的那个变量。**真正该学的，是钱从哪里来。**他还说，中文讨论大多围着怎么赚快钱，而一门需要不停追风口的生意，本质上还是拿时间换钱。\n\n这对读者的影响是：评估一个 AI 副业时，先把商业模式和自己的经验优势放在前面。他自己选的是做老关键词、不追风口、只做免费加广告。",
+      "sources": [
+        {
+          "label": "陈然 ranchen.org",
+          "title": "2026 年，为什么 OPC（一人公司）不再是口号，普通人又该如何抓住这波红利？",
+          "url": "https://ranchen.org/content/20261014-zhihu-answer-2094036866819436701"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-02",
+      "issueDate": "2026-10-15",
+      "issueNumber": 6
+    },
+    {
+      "candidateIds": [
+        "c4"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-14",
+      "headline": "Hugging Face 首轮投资人：先假设公司会转型",
+      "oneLiner": "Matt Hartman 参与了 Hugging Face 的第一张支票。他说 Hugging Face 最早是给青少年用的聊天机器人，团队如实看待糟糕的留存，转向开源模型平台。他因此更看重懂技术的创始人。",
+      "who": "Matt Hartman 是 Factorial Capital 创始合伙人，此前在 Betaworks 做合伙人，参与投了 Hugging Face。他在 Every 播客里接受了 Natalia Quintero 的访谈。",
+      "how": "他认为最早期的公司大概率会转型，所以要看创始人转型时「不动的那只脚」踩在哪里。踩在技术理解上的团队，转身的空间比只懂某个行业的团队大。",
+      "result": "他说 Hugging Face 的消费级应用用的人不少，但留存不好，团队没有回避这些数字。把 Transformers 移植到 PyTorch 开源后，这个项目在 GitHub 上走红，研究者主动找上门，团队才转向模型平台。Anchor 也类似：只看发布者这一侧数据很好，于是砍掉了收听端。",
+      "tryThis": "给自己的项目分开看：总用户里，哪一群人的留存真正好。转向时，保留自己最懂的那项能力。",
+      "caveat": "他自己也说，不写代码同样可以是很好的投资人，按行业押注创始人也是成立的打法。这里说的是他个人的方法。",
+      "body": "Matt Hartman 在 [Every 播客](https://www.youtube.com/@EveryInc/search?query=How%20Hugging%20Face%E2%80%99s%20Investor%20Spots%20Winners)里回顾了 Hugging Face 的几个关键决定：开源 Transformers，把模型权重从 GitHub 搬到自建的 Hub，以及不只做语言模型。他认为起点是团队对自己的留存数据很诚实，不拿最好看的指标去融资。\n\n他用篮球打比方：转型时要有一只脚不动，两只脚都动就是走步。**最早期他默认公司会转型**，所以更想知道团队会往哪里转。懂技术的团队可能发现某类数据的特点在另一个行业更有用，于是换个市场接着做。\n\n对做副业的人，这和上面 Voicy 的故事说的是一回事：把用户拆开看，找到真正离不开你的那群人，再围着自己最扎实的能力调整方向。",
+      "sources": [
+        {
+          "label": "The Every Podcast (AI & I)",
+          "title": "How Hugging Face’s Investor Spots Winners",
+          "url": "https://www.youtube.com/@EveryInc/search?query=How%20Hugging%20Face%E2%80%99s%20Investor%20Spots%20Winners"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-05",
+      "issueDate": "2026-10-15",
+      "issueNumber": 6
+    },
+    {
+      "candidateIds": [
         "c52"
       ],
       "category": "perspective",

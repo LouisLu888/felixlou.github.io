@@ -1,0 +1,288 @@
+{
+  "date": "2026-10-15",
+  "title": "给爸爸做的听写工具月入近两万美元，一句「要好玩」让 Claude 跑了三小时",
+  "items": [
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-14",
+      "headline": "给爸爸做的听写插件，副业做到月入近两万美元",
+      "oneLiner": "Kourosh 在上班之余做听写应用 Voicy，主要面向老年人和残障用户。他说每月收入 1.6 万到 2 万美元，MRR 约 1.1 万美元。",
+      "who": "Kourosh 是金融科技公司的产品经理，没有技术科班背景。两年前他做了 Voicy，最初只是给打字很慢的父亲用，现在仍是他朝九晚五之外的副业。",
+      "how": "Voicy 调用 OpenAI 的 Whisper API，让用户在电脑和手机的任意位置用语音输入。代码先是让 ChatGPT 写好再复制粘贴，后来改用 Cursor 和 Codex。他说 Android 版是 Claude Opus 4.8 一次生成的。",
+      "result": "他说 MRR 约 1.1 万美元，加上 260 美元的终身版，每月收入 1.6 万到 2 万美元。目前有 1,400 个有效订阅、约 1 万月活跃用户，20% 的用户在用残障折扣。",
+      "tryThis": "做过的工具可以重新看一遍用户访谈：有没有一群人把它当成「止痛药」，而大公司没在服务他们。",
+      "caveat": "这个市场里已有拿了大笔融资的对手，Voicy 的增长靠的是长期做 SEO：200 篇博客、30 个落地页、三十多种语言。只想偶尔发几篇内容的人很难照搬。",
+      "body": "Kourosh 在 [Starter Story 节目](https://www.youtube.com/@starterstory/search?query=I%20built%20this%20app%20for%20my%20dad.%20Now%20it%20makes%20%2418K%2Fmonth)里讲了 Voicy 的来历。他住院两周，看着父亲在旁边一下一下敲键盘，一封邮件要写好几天，于是想把 ChatGPT 的听写功能带到电脑上的任何地方。第一版是 Chrome 扩展，从想法到上线用了两周。之后陆续做了 Windows 版（Electron，用了三个月）、Mac 版（一个月）和 Linux 版（两周），最后才是 iOS 和 Android。主要固定开支是 Framer 建站每月约 200 美元、VPS 每月约 40 美元，另加 API 费用。\n\n最值得学的是**他怎么找到了自己的用户**。他常和用户通话，发现 60% 到 70% 是本来就打字快的职场人，只想快 10%。另外 20% 到 30% 是老年人和残障人士，他们对最简单的版本就很满意。他的说法是，听写工具对职场人是「维生素」，对这群人是「止痛药」。所以他放弃和 Wispr Flow 这类公司正面竞争，专门服务这群人：设了发邮件就能领的残障八折，在 YouTube 开了「AI for Seniors」系列，他说一个月内订阅从 1,000 涨到 1.2 万。\n\n早期获客的顺序也很具体：先上 Chrome 应用商店，请五个朋友写评价，拿到前 100 个用户；再在 Reddit 天天发帖，直到被封，用户涨到两三百人；之后主要靠 SEO。他给新手的建议是：觉得写一篇博客有用，就写十篇。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "I built this app for my dad. Now it makes $18K/month",
+          "url": "https://www.youtube.com/@starterstory/search?query=I%20built%20this%20app%20for%20my%20dad.%20Now%20it%20makes%20%2418K%2Fmonth"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-01"
+    },
+    {
+      "candidateIds": [
+        "c7"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-15",
+      "headline": "做广告内容站的人说：AI 是放大器，0 乘 10 还是 0",
+      "oneLiner": "陈然靠 AI 一个人运营免费内容站，靠广告赚钱。他说试过开通付费，半年总共没收到 100 美元。",
+      "who": "陈然有十多年硅谷 AI 从业经验，持 CFP 执照，业余做免费内容站赚广告钱。这番话是他 2026-10-15 在一篇知乎回答里写的。",
+      "how": "他认为 AI 只是放大器：本来会赚钱的人用了 AI 赚得更多，本来不会赚钱的人不会因为会用 AI 就开始赚钱。独立创始人变多，只说明一个人开公司的人变多了。",
+      "result": "他的依据是自己的经历。AI 让他一个人做完了过去一个团队的活，但选什么方向，靠的是自己考过一二十个考试攒下的直觉；只做免费加广告，是在 Tubi 那几年学到的。他开过门槛很低的付费，半年收入不到 100 美元。",
+      "tryThis": "打算靠 AI 做副业，先回答钱从哪里来：谁付钱、按什么模式付，再考虑用 AI 提效。",
+      "caveat": "这是从内容站这种生意总结出来的。对已经有客户和收入的人，AI 带来的放大作用可能更直接。",
+      "body": "陈然在[这篇回答](https://ranchen.org/content/20261014-zhihu-answer-2094036866819436701)里说了一个不太讨喜的看法：普通人未必抓得住一人公司这波红利。他说的红利，是真的用 AI 赚到了钱，而不是会用 AI，也不是注册了一家公司。\n\n他认为，用 AI 的熟练度差距放到三年里只是很薄的一层，迟早人人都会用，所以它不会是决定赚不赚钱的那个变量。**真正该学的，是钱从哪里来。**他还说，中文讨论大多围着怎么赚快钱，而一门需要不停追风口的生意，本质上还是拿时间换钱。\n\n这对读者的影响是：评估一个 AI 副业时，先把商业模式和自己的经验优势放在前面。他自己选的是做老关键词、不追风口、只做免费加广告。",
+      "sources": [
+        {
+          "label": "陈然 ranchen.org",
+          "title": "2026 年，为什么 OPC（一人公司）不再是口号，普通人又该如何抓住这波红利？",
+          "url": "https://ranchen.org/content/20261014-zhihu-answer-2094036866819436701"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-02"
+    },
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-14",
+      "headline": "只写了一段提示词，Claude 自己做了 3 小时游戏",
+      "oneLiner": "Simon Willison 在 Claude iPhone 应用的对话模式里只发了一段提示词，Opus 5.5 Max 运行了 3 小时 7 分钟，交出一个带音乐、动画和成就系统的找不同小游戏。",
+      "who": "开发者 Simon Willison 在用 Claude 做小游戏实验。这次没用 Claude Code，只在手机上的普通对话模式里完成。",
+      "how": "提示词要求用 three.js 做一个「Tree appreciator」游戏：画面显示两棵算法生成的树，玩法是欣赏它们的差别，并请 Claude 好好想想怎么让游戏既好玩又好看。",
+      "result": "Claude 运行了 3 小时 7 分钟，做出一个找不同游戏，有音乐、动画和成就系统。他觉得挺耐玩，也说「确保它好玩」这句话管用得让他有点不自在。",
+      "tryThis": "做原型时，在提示词里写清楚体验目标，比如好玩、好看、好上手，而不只列功能，然后比较产出有没有不同。",
+      "caveat": "3 小时的长时间运行要用到高档位模型。这只是一个范围很小、写在单个网页里的玩具，放到有真实需求和约束的项目上未必同样管用。",
+      "body": "Simon Willison 在[博客](https://simonwillison.net/2026/Oct/14/tree-appreciator/)里记录了这次实验。他用手机上的 Claude 应用，在普通对话模式里调用 Opus 5.5 Max，只发了一段提示词。Claude 运行了 3 小时 7 分钟，交出一个温馨的找不同游戏，有音乐、动画和成就系统。\n\n可以借鉴的是**提示词里写明体验目标**。他让模型「think hard」，想办法让游戏既有趣又好看。他说发现「make sure it is fun」这句话效果好得让他有点尴尬，因为他最近刚做过相关演讲。\n\n做产品原型、内部演示页或培训小游戏时，可以把要达到的体验写进提示词，交给模型多跑一会儿，再自己试玩、挑问题。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Tree Appreciator",
+          "url": "https://simonwillison.net/2026/Oct/14/tree-appreciator/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-03"
+    },
+    {
+      "candidateIds": [
+        "c49"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-15",
+      "headline": "让 ChatGPT 把家务做成打怪升级，配五个插件",
+      "oneLiner": "Elton Jones 让 ChatGPT 把打扫、叠衣服、备餐、断舍离和锻炼都做成游戏，并接上 Todoist、Spotify、TickTick 等插件，每件家务都有现成的提示词。",
+      "who": "Tom's Guide 作者 Elton Jones 住在纽约。他每周都会试 ChatGPT 的插件，这次想让日常家务变得不那么无聊。",
+      "how": "他给 ChatGPT 接上自己的 Todoist 清单、TickTick 日历、Spotify 和 AllTrails，用提示词把家务拆成 10 分钟一个的任务，每完成一个记一次经验值。",
+      "result": "打扫被做成一小时的速通，分成几个 10 分钟任务，比如清理厨房台面 +10 XP、打扫浴室 +25 XP。断舍离设成每周六一次、每次 10 分钟的重复任务。他的感受是家务更好玩了，没有给出省下的时间或钱。",
+      "tryThis": "如果你的家务已经写在待办应用里，可以试他的提示词：用我的清扫任务做一个一小时速通，拆成 10 分钟的任务，每个给经验值。",
+      "caveat": "需要把待办应用账户授权给 ChatGPT。游戏化对喜欢游戏的人更管用。",
+      "body": "Elton Jones 在 [Tom's Guide](https://www.tomsguide.com/ai/i-told-chatgpt-to-make-my-chores-more-fun-these-5-plugins-made-everyday-activities-even-more-rewarding-and-productive) 分享了五个用法。打扫时，ChatGPT 读取他在 Todoist 里标成清扫的任务，排成一小时速通；叠衣服时，Spotify 插件给了 15 个歌单，ChatGPT 还设计了「三首歌挑战」：歌放完之前叠得越多越好。\n\n最实用的是断舍离的提示词：**每次只给一个 10 分钟任务，从最容易的区域开始，每样东西决定留下、挪位置、捐掉、卖掉还是扔掉；拿不准的单独放一个待定箱，不逼我扔。**然后让 TickTick 设成每周六的重复任务。他还用 Pantry Persona 插件把菜谱排进餐单、生成购物清单。\n\n交出去的个人数据只有待办清单和音乐偏好，风险较低；真正动手干活的仍然是自己。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I told ChatGPT to make my chores more fun — these 5 plugins made everyday activities even more rewarding and productive",
+          "url": "https://www.tomsguide.com/ai/i-told-chatgpt-to-make-my-chores-more-fun-these-5-plugins-made-everyday-activities-even-more-rewarding-and-productive"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-04"
+    },
+    {
+      "candidateIds": [
+        "c4"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-14",
+      "headline": "Hugging Face 首轮投资人：先假设公司会转型",
+      "oneLiner": "Matt Hartman 参与了 Hugging Face 的第一张支票。他说 Hugging Face 最早是给青少年用的聊天机器人，团队如实看待糟糕的留存，转向开源模型平台。他因此更看重懂技术的创始人。",
+      "who": "Matt Hartman 是 Factorial Capital 创始合伙人，此前在 Betaworks 做合伙人，参与投了 Hugging Face。他在 Every 播客里接受了 Natalia Quintero 的访谈。",
+      "how": "他认为最早期的公司大概率会转型，所以要看创始人转型时「不动的那只脚」踩在哪里。踩在技术理解上的团队，转身的空间比只懂某个行业的团队大。",
+      "result": "他说 Hugging Face 的消费级应用用的人不少，但留存不好，团队没有回避这些数字。把 Transformers 移植到 PyTorch 开源后，这个项目在 GitHub 上走红，研究者主动找上门，团队才转向模型平台。Anchor 也类似：只看发布者这一侧数据很好，于是砍掉了收听端。",
+      "tryThis": "给自己的项目分开看：总用户里，哪一群人的留存真正好。转向时，保留自己最懂的那项能力。",
+      "caveat": "他自己也说，不写代码同样可以是很好的投资人，按行业押注创始人也是成立的打法。这里说的是他个人的方法。",
+      "body": "Matt Hartman 在 [Every 播客](https://www.youtube.com/@EveryInc/search?query=How%20Hugging%20Face%E2%80%99s%20Investor%20Spots%20Winners)里回顾了 Hugging Face 的几个关键决定：开源 Transformers，把模型权重从 GitHub 搬到自建的 Hub，以及不只做语言模型。他认为起点是团队对自己的留存数据很诚实，不拿最好看的指标去融资。\n\n他用篮球打比方：转型时要有一只脚不动，两只脚都动就是走步。**最早期他默认公司会转型**，所以更想知道团队会往哪里转。懂技术的团队可能发现某类数据的特点在另一个行业更有用，于是换个市场接着做。\n\n对做副业的人，这和上面 Voicy 的故事说的是一回事：把用户拆开看，找到真正离不开你的那群人，再围着自己最扎实的能力调整方向。",
+      "sources": [
+        {
+          "label": "The Every Podcast (AI & I)",
+          "title": "How Hugging Face’s Investor Spots Winners",
+          "url": "https://www.youtube.com/@EveryInc/search?query=How%20Hugging%20Face%E2%80%99s%20Investor%20Spots%20Winners"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-05"
+    }
+  ],
+  "action": "打开你做过的工具、内容或服务的用户记录，比如评论、邮件、访谈笔记，按「需要多强烈」把用户分成两三群：谁觉得有了更好，谁觉得没有不行。再给后一类里的三个人发消息，约十五分钟聊聊。问他们之前用什么方法解决、为此花过多少钱、在哪里发现了你。Voicy 就是这样从用户通话里找到了老年和残障用户。",
+  "readingMinutes": 8,
+  "meta": {
+    "generatedAt": "2026-10-15T14:44:54.037Z",
+    "engine": "cli",
+    "candidateCount": 51,
+    "candidatesBySource": {
+      "Simon Willison": 3,
+      "The Every Podcast (AI & I)": 1,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 1,
+      "陈然 ranchen.org": 1,
+      "Starter Story Podcast": 1,
+      "Starter Story (YouTube)": 2,
+      "Every (YouTube)": 2,
+      "Rest of World": 1,
+      "Follow Builders (X)": 28,
+      "No Priors": 1,
+      "Latent Space": 3,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 1,
+      "Lifehacker": 1,
+      "Tom's Guide · AI": 2,
+      "NYT Personal Tech": 1
+    },
+    "shortlist": [
+      {
+        "id": "c8",
+        "reason": "谁：开发者 Kourosh；怎么做：在拥挤赛道里专做他父亲这类被忽视的非技术用户；结果：月收入 1.8 万美元。有逐字稿，和 c10 是同一期，只留这条。",
+        "source": "Starter Story Podcast",
+        "title": "I built this app for my dad. Now it makes $18K/month"
+      },
+      {
+        "id": "c2",
+        "reason": "谁：Simon Willison 本人；怎么做：在 Claude 手机 App 的聊天模式里用一句提示（附原文）让模型做 three.js 小游戏，并要求「要好玩」；结果：模型跑了 3 小时 7 分钟，做出带音乐和动画的找不同游戏。个人可以照着试。",
+        "source": "Simon Willison",
+        "title": "Tree Appreciator"
+      },
+      {
+        "id": "c7",
+        "reason": "谁：一个人做免费内容站、靠广告赚钱的作者；怎么用 AI：一个人干完以前一个团队的活；结果：带亲身数字的复盘——试过付费，半年收入不到 100 美元，并由此判断 AI 只是放大器。认知类第 1 条。",
+        "source": "陈然 ranchen.org",
+        "title": "2026 年，为什么 OPC（一人公司）不再是口号，普通人又该如何抓住这波红利？"
+      },
+      {
+        "id": "c9",
+        "reason": "谁：24 岁的 Jake；怎么用 AI：做了一个闹钟 App，要做俯卧撑才能关，由 AI 核验是否真做了；结果：上线 4 个月月收入 5 万美元，下载超 20 万。只有简介，但简介已写清做法和数字。",
+        "source": "Starter Story (YouTube)",
+        "title": "Bro built an app that won't let you fake your workouts..."
+      },
+      {
+        "id": "c51",
+        "reason": "AI 生活类：NYT 报道疲惫的父母用 AI 应用和代理处理育儿中的行政杂事，同时讲风险。摘录较短，但全文是一手采访，能写出普通家庭的具体用法。",
+        "source": "NYT Personal Tech",
+        "title": "Exhausted Parents Are Turning to A.I. Apps Despite the Risks"
+      },
+      {
+        "id": "c49",
+        "reason": "AI 生活类：作者本人用 ChatGPT 的 Spotify、Etsy、AccuWeather 等插件安排家务、挑礼物、按天气规划出门办事，是亲历的生活用法，有具体场景，不是纯测评。",
+        "source": "Tom's Guide · AI",
+        "title": "I told ChatGPT to make my chores more fun — these 5 plugins made everyday activities even more rewarding and productive"
+      },
+      {
+        "id": "c4",
+        "reason": "认知类第 2 条：Hugging Face 最早的投资人 Matt Hartman（今天它将以约 130 亿美元卖给 Nvidia）讲为什么押懂技术的创始人、为什么第一个想法往往会换掉。有逐字稿，和 c11 是同一期，只留这条。",
+        "source": "The Every Podcast (AI & I)",
+        "title": "How Hugging Face’s Investor Spots Winners"
+      },
+      {
+        "id": "c3",
+        "reason": "认知类第 3 条：独立游戏开发者 Popcar 从一线看 AI 大规模反编译游戏，带来游戏保存和魔改，也让软件更容易被拿走随意使用。对做产品的人有参考价值。",
+        "source": "Simon Willison",
+        "title": "AI is mass decompiling games. That's both awesome and scary."
+      },
+      {
+        "id": "c41",
+        "reason": "谁：Zara Zhang 本人；怎么做：给自己的心愿单做了一个好玩的网站，可以当婚礼、宝宝、生日的礼物清单用；结果：网站已上线可以玩。个人可以模仿的小项目，但帖子信息较少，放在后面。",
+        "source": "Follow Builders (X)",
+        "title": "Zara Zhang: Made a playful website for the things on my wishlist! \n\nYour next wedding/baby/b"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 20764,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1723,
+        "output_tokens_details": {
+          "thinking_tokens": 687
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 20764,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1723,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 20764,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 20764
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.20058
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 29639,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 6385,
+      "output_tokens_details": {
+        "thinking_tokens": 1391
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 29639,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 6385,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 29639,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 29639
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.36482000000000003
+  }
+}

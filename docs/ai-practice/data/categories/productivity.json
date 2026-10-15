@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-14",
+      "headline": "只写了一段提示词，Claude 自己做了 3 小时游戏",
+      "oneLiner": "Simon Willison 在 Claude iPhone 应用的对话模式里只发了一段提示词，Opus 5.5 Max 运行了 3 小时 7 分钟，交出一个带音乐、动画和成就系统的找不同小游戏。",
+      "who": "开发者 Simon Willison 在用 Claude 做小游戏实验。这次没用 Claude Code，只在手机上的普通对话模式里完成。",
+      "how": "提示词要求用 three.js 做一个「Tree appreciator」游戏：画面显示两棵算法生成的树，玩法是欣赏它们的差别，并请 Claude 好好想想怎么让游戏既好玩又好看。",
+      "result": "Claude 运行了 3 小时 7 分钟，做出一个找不同游戏，有音乐、动画和成就系统。他觉得挺耐玩，也说「确保它好玩」这句话管用得让他有点不自在。",
+      "tryThis": "做原型时，在提示词里写清楚体验目标，比如好玩、好看、好上手，而不只列功能，然后比较产出有没有不同。",
+      "caveat": "3 小时的长时间运行要用到高档位模型。这只是一个范围很小、写在单个网页里的玩具，放到有真实需求和约束的项目上未必同样管用。",
+      "body": "Simon Willison 在[博客](https://simonwillison.net/2026/Oct/14/tree-appreciator/)里记录了这次实验。他用手机上的 Claude 应用，在普通对话模式里调用 Opus 5.5 Max，只发了一段提示词。Claude 运行了 3 小时 7 分钟，交出一个温馨的找不同游戏，有音乐、动画和成就系统。\n\n可以借鉴的是**提示词里写明体验目标**。他让模型「think hard」，想办法让游戏既有趣又好看。他说发现「make sure it is fun」这句话效果好得让他有点尴尬，因为他最近刚做过相关演讲。\n\n做产品原型、内部演示页或培训小游戏时，可以把要达到的体验写进提示词，交给模型多跑一会儿，再自己试玩、挑问题。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Tree Appreciator",
+          "url": "https://simonwillison.net/2026/Oct/14/tree-appreciator/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-15-03",
+      "issueDate": "2026-10-15",
+      "issueNumber": 6
+    },
+    {
+      "candidateIds": [
         "c1"
       ],
       "category": "productivity",
