@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-10-15",
+    "title": "给爸爸做的听写工具月入近两万美元，一句「要好玩」让 Claude 跑了三小时",
+    "summary": "给爸爸做的听写插件，副业做到月入近两万美元；做广告内容站的人说：AI 是放大器，0 乘 10 还是 0；只写了一段提示词，Claude 自己做了 3 小时游戏；让 ChatGPT 把家务做成打怪升级，配五个插件；Hugging Face 首轮投资人：先假设公司会转型",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-15/",
+    "items": [
+      {
+        "headline": "给爸爸做的听写插件，副业做到月入近两万美元",
+        "sources": [
+          {
+            "label": "Starter Story Podcast",
+            "title": "I built this app for my dad. Now it makes $18K/month",
+            "url": "https://www.youtube.com/@starterstory/search?query=I%20built%20this%20app%20for%20my%20dad.%20Now%20it%20makes%20%2418K%2Fmonth"
+          }
+        ]
+      },
+      {
+        "headline": "做广告内容站的人说：AI 是放大器，0 乘 10 还是 0",
+        "sources": [
+          {
+            "label": "陈然 ranchen.org",
+            "title": "2026 年，为什么 OPC（一人公司）不再是口号，普通人又该如何抓住这波红利？",
+            "url": "https://ranchen.org/content/20261014-zhihu-answer-2094036866819436701"
+          }
+        ]
+      },
+      {
+        "headline": "只写了一段提示词，Claude 自己做了 3 小时游戏",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "Tree Appreciator",
+            "url": "https://simonwillison.net/2026/Oct/14/tree-appreciator/"
+          }
+        ]
+      },
+      {
+        "headline": "让 ChatGPT 把家务做成打怪升级，配五个插件",
+        "sources": [
+          {
+            "label": "Tom's Guide · AI",
+            "title": "I told ChatGPT to make my chores more fun — these 5 plugins made everyday activities even more rewarding and productive",
+            "url": "https://www.tomsguide.com/ai/i-told-chatgpt-to-make-my-chores-more-fun-these-5-plugins-made-everyday-activities-even-more-rewarding-and-productive"
+          }
+        ]
+      },
+      {
+        "headline": "Hugging Face 首轮投资人：先假设公司会转型",
+        "sources": [
+          {
+            "label": "The Every Podcast (AI & I)",
+            "title": "How Hugging Face’s Investor Spots Winners",
+            "url": "https://www.youtube.com/@EveryInc/search?query=How%20Hugging%20Face%E2%80%99s%20Investor%20Spots%20Winners"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "给爸爸做的听写插件，副业做到月入近两万美元"
+      },
+      {
+        "start": 203,
+        "title": "做广告内容站的人说：AI 是放大器，0 乘 10 还是 0"
+      },
+      {
+        "start": 282,
+        "title": "只写了一段提示词，Claude 自己做了 3 小时游戏"
+      },
+      {
+        "start": 356,
+        "title": "让 ChatGPT 把家务做成打怪升级，配五个插件"
+      },
+      {
+        "start": 445,
+        "title": "Hugging Face 首轮投资人：先假设公司会转型"
+      },
+      {
+        "start": 526,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 574,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-15.mp3",
+    "audioBytes": 3442845,
+    "publishedAt": "2026-10-15T22:45:06.509Z"
+  },
+  {
     "date": "2026-10-14",
     "title": "Cal AI 挑博主先看评论区，Anthropic 每天合并的代码变更涨了 12 倍",
     "summary": "Cal AI 找博主推广，先看评论区再看粉丝数；代码变更涨了 12 倍，Anthropic 七个人换掉了 Git；200 人的公司强制全员用 AI，高管还要管 token 预算；两条指令，把 90 分钟访谈剪成 10 分钟；给 ChatGPT 100 美元，排出纽约三天长周末",
