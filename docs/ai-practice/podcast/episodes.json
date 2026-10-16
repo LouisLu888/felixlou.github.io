@@ -1,5 +1,112 @@
 [
   {
+    "date": "2026-10-16",
+    "title": "一张报价表换来潜在客户，六个 AI 代理去追退款各显神通",
+    "summary": "把保洁公司的报价表格做成免费工具，再卖后续产品；不懂技术的前摔跤手，三个 AI App 月订阅收入近 4.1 万美元；让 AI 代理「不惜一切」追退款，有的编造了家人生病；Box CEO：后台代理群的用量会是聊天的百倍以上；一段提示词，两部手机靠声音传数据对打乒乓；先测 20 条视频钩子，再写第一行代码",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-16/",
+    "items": [
+      {
+        "headline": "把保洁公司的报价表格做成免费工具，再卖后续产品",
+        "sources": [
+          {
+            "label": "Startup Ideas Podcast (Greg Isenberg)",
+            "title": "Gemini 4 Argon: AI Marketing, 3D Printing and SaaS",
+            "url": "https://www.youtube.com/@GregIsenberg/search?query=Gemini%204%20Argon%3A%20AI%20Marketing%2C%203D%20Printing%20and%20SaaS"
+          }
+        ]
+      },
+      {
+        "headline": "不懂技术的前摔跤手，三个 AI App 月订阅收入近 4.1 万美元",
+        "sources": [
+          {
+            "label": "The Superwall Podcast",
+            "title": "George Lampropoulos - Meet the ex-wrestler making $41k/mo with AI apps",
+            "url": "https://www.buzzsprout.com/2522779/episodes/19969889-george-lampropoulos-meet-the-ex-wrestler-making-41k-mo-with-ai-apps.mp3"
+          }
+        ]
+      },
+      {
+        "headline": "让 AI 代理「不惜一切」追退款，有的编造了家人生病",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "[AINews] Agents disprove Polysemanticity; greatly improve Interpretability & Alignment",
+            "url": "https://www.latent.space/p/ainews-agents-disprove-polysemanticity"
+          }
+        ]
+      },
+      {
+        "headline": "Box CEO：后台代理群的用量会是聊天的百倍以上",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: Moving from chatting back and forth with agents, to having agents that you spin ",
+            "url": "https://x.com/levie/status/2110622982762803449"
+          }
+        ]
+      },
+      {
+        "headline": "一段提示词，两部手机靠声音传数据对打乒乓",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "Chirp Pong",
+            "url": "https://simonwillison.net/2026/Oct/15/chirp-pong/"
+          }
+        ]
+      },
+      {
+        "headline": "先测 20 条视频钩子，再写第一行代码",
+        "sources": [
+          {
+            "label": "The Superwall Podcast",
+            "title": "Joseph Choi - If I Had to Start a $1M App From Scratch, I'd Do This",
+            "url": "https://www.buzzsprout.com/2522779/episodes/19969776-joseph-choi-if-i-had-to-start-a-1m-app-from-scratch-i-d-do-this.mp3"
+          },
+          {
+            "label": "The Superwall Podcast",
+            "title": "Joseph Choi - What 500M App Downloads Taught Me About Human Psychology",
+            "url": "https://www.buzzsprout.com/2522779/episodes/19969754-joseph-choi-what-500m-app-downloads-taught-me-about-human-psychology.mp3"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "把保洁公司的报价表格做成免费工具，再卖后续产品"
+      },
+      {
+        "start": 153,
+        "title": "不懂技术的前摔跤手，三个 AI App 月订阅收入近 4.1 万美元"
+      },
+      {
+        "start": 238,
+        "title": "让 AI 代理「不惜一切」追退款，有的编造了家人生病"
+      },
+      {
+        "start": 308,
+        "title": "Box CEO：后台代理群的用量会是聊天的百倍以上"
+      },
+      {
+        "start": 398,
+        "title": "一段提示词，两部手机靠声音传数据对打乒乓"
+      },
+      {
+        "start": 468,
+        "title": "先测 20 条视频钩子，再写第一行代码"
+      },
+      {
+        "start": 560,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 607,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-16.mp3",
+    "audioBytes": 3641997,
+    "publishedAt": "2026-10-16T22:46:04.347Z"
+  },
+  {
     "date": "2026-10-15",
     "title": "给爸爸做的听写工具月入近两万美元，一句「要好玩」让 Claude 跑了三小时",
     "summary": "给爸爸做的听写插件，副业做到月入近两万美元；做广告内容站的人说：AI 是放大器，0 乘 10 还是 0；只写了一段提示词，Claude 自己做了 3 小时游戏；让 ChatGPT 把家务做成打怪升级，配五个插件；Hugging Face 首轮投资人：先假设公司会转型",
