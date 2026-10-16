@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c36"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-15",
+      "headline": "Box CEO：后台代理群的用量会是聊天的百倍以上",
+      "oneLiner": "Aaron Levie 认为，从和 AI 聊天转向在后台派代理干活，token 消耗大约会多 100 到 1000 倍，而且多出来的大多是以前没人做的新工作。",
+      "who": "Box CEO Aaron Levie，2026-10-15 在 X 上发帖。",
+      "how": "他认为知识工作的瓶颈是人处理信息的带宽：在系统间搬数据、审文档、查代码安全、看日志、调研客户。聊天机器人只能加速人在场的环节，下一步是同时派多个代理，「做完再回来」。",
+      "result": "他举的场景是：每次代码改动都做 QA，每份文档都查风险，用多得多的数据做审计。他认为这些大多是新增工作，不是替代现有工作。",
+      "tryThis": "列出你岗位上「数据量太大所以只抽查」的事，比如合同审查、日志排查，这些最先适合交给后台代理全量去做。",
+      "caveat": "这是他的判断，不是已经发生的事；他自己也说前提是模型持续变强、成本足够低，下一个瓶颈是算力。",
+      "body": "Aaron Levie 在[这条帖子](https://x.com/levie/status/2110622982762803449)里描述了三步：先让代理独自处理更难的问题，再把一个任务拆给几个代理，最后对一个问题投入任意数量的代理，只给目标。他估计这会带来 100 到 1000 倍于当前的 token 消耗。\n\n他的核心论点是，**大部分代理工作是新增的**：以前因为人手不够只抽查的事，现在可以全量做。这会影响工作分配：人更多负责定目标、设触发条件和验收，过程交给代理。\n\n对团队负责人，可以先挑一个现在只做抽样的流程试全量检查，同时记下 token 成本和人工复核时间，看账算不算得过来。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: Moving from chatting back and forth with agents, to having agents that you spin ",
+          "url": "https://x.com/levie/status/2110622982762803449"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-16-04",
+      "issueDate": "2026-10-16",
+      "issueNumber": 7
+    },
+    {
+      "candidateIds": [
         "c7"
       ],
       "category": "perspective",

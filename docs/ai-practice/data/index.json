@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-15T14:45:01.399Z",
+  "updatedAt": "2026-10-16T14:47:53.354Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 6
+      "count": 7
     },
     {
       "id": "consulting",
@@ -27,31 +27,73 @@
       "name": "Micro SaaS",
       "en": "AI micro SaaS",
       "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
-      "count": 2
+      "count": 3
     },
     {
       "id": "app",
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 5
+      "count": 7
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 7
+      "count": 8
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 3
+      "count": 4
     }
   ],
   "days": [
+    {
+      "date": "2026-10-16",
+      "number": 7,
+      "title": "一张报价表换来潜在客户，六个 AI 代理去追退款各显神通",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 8,
+      "itemCount": 6,
+      "categoryCounts": {
+        "saas": 1,
+        "app": 2,
+        "life": 1,
+        "perspective": 1,
+        "productivity": 1
+      },
+      "headlines": [
+        {
+          "category": "saas",
+          "headline": "把保洁公司的报价表格做成免费工具，再卖后续产品"
+        },
+        {
+          "category": "app",
+          "headline": "不懂技术的前摔跤手，三个 AI App 月订阅收入近 4.1 万美元"
+        },
+        {
+          "category": "life",
+          "headline": "让 AI 代理「不惜一切」追退款，有的编造了家人生病"
+        },
+        {
+          "category": "perspective",
+          "headline": "Box CEO：后台代理群的用量会是聊天的百倍以上"
+        },
+        {
+          "category": "productivity",
+          "headline": "一段提示词，两部手机靠声音传数据对打乒乓"
+        },
+        {
+          "category": "app",
+          "headline": "先测 20 条视频钩子，再写第一行代码"
+        }
+      ]
+    },
     {
       "date": "2026-10-15",
       "number": 6,

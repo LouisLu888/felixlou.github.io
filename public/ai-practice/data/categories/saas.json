@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c40"
+      ],
+      "category": "saas",
+      "kind": "本周演示",
+      "eventDate": "2026-10-15",
+      "headline": "把保洁公司的报价表格做成免费工具，再卖后续产品",
+      "oneLiner": "Greg Isenberg 用 Gemini 4 Argon 一次提示做出保洁公司报价工具，他说工程部分第一轮就对，设计还要多改几轮；他的打法是先免费送，靠第二、第三个工具收费。",
+      "who": "Startup Ideas Podcast 主持人 Greg Isenberg，本期由 Google 赞助并提前给了 Argon 使用权限，他连续用了七天。",
+      "how": "在 Antigravity 里写一段结构化提示：要做什么、替换哪张表格、附上客户抱怨和匿名流程，先讲实施计划再动手，不许部署或发送，最后列出没完成的部分。",
+      "result": "他说做出的报价和利润计算器工程细节到位，但界面不好看；想要好的设计，必须给参考图并多轮修改。",
+      "tryThis": "去 G2、Capterra 或 Reddit 找一个你熟悉行业的人反复抱怨的老软件，按他的提示格式做一个免费的单功能替代品。",
+      "caveat": "他用的是每月 100 美元的 Google AI Ultra；免费工具只解决获客，后面拿什么收费需要另外验证。",
+      "body": "Greg Isenberg 在[本期节目](https://www.youtube.com/@GregIsenberg/search?query=Gemini%204%20Argon%3A%20AI%20Marketing%2C%203D%20Printing%20and%20SaaS)里演示了一个「无聊 SaaS」打法。提示词要求：做一个网页应用，把商业保洁公司上门勘察的笔记变成**经过人工审核的报价单**，专门替代报价用的电子表格；附上客户抱怨、来源链接和匿名化的工作流程；先简要说明实施计划，再尽量沿用现有技术栈来做；不要部署、不要发送报价单，最后**诚实列出还没完成的部分**。\n\n他的获客思路是：很多老软件多年没更新，用户还在付费，那就做一个更窄、更好用的版本**免费给出去**，让潜在买家先用上，信任建立后再卖第二、第三个付费工具，围绕同一类客户做一个产品工作室。\n\n同一期里他还让 Argon 读遍自己的推文、newsletter 和视频，整理成一套写作 skill 文件（句子节奏规则、常用词、范文模板），再给题目测试，他给成稿打了 9.2 分。他总结效果最明显的三个指令是 /plan、/subagents 和 /goal：先对齐计划再改文件，把调研拆给并行的子代理，中途用 goal 加参考图拉高标准。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "Gemini 4 Argon: AI Marketing, 3D Printing and SaaS",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=Gemini%204%20Argon%3A%20AI%20Marketing%2C%203D%20Printing%20and%20SaaS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-16-01",
+      "issueDate": "2026-10-16",
+      "issueNumber": 7
+    },
+    {
+      "candidateIds": [
         "c26"
       ],
       "category": "saas",

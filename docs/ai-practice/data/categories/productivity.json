@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c1"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-15",
+      "headline": "一段提示词，两部手机靠声音传数据对打乒乓",
+      "oneLiner": "Simon Willison 用 Claude Code 写了一个双人对战游戏，两部手机之间不联网，只靠麦克风听的「啁啾」声同步游戏状态，他说看起来能用。",
+      "who": "开发者 Simon Willison，在做一系列小游戏实验。",
+      "how": "他用 Claude Code 跑 Claude Opus 5.5 Extra，提示要求：静态 HTML、双人对战、通过网页麦克风 API 识别声音来传游戏状态，并加入画面和玩法上的变化。",
+      "result": "做出了 Chirp Pong，他的评价是「看起来能用」。",
+      "tryThis": "有一个不确定能不能实现的技术点时，先用一段提示词让 AI 做个一次性的小原型，验证可行性后再决定要不要投入。",
+      "caveat": "这是可行性实验，声音传输在嘈杂环境、不同手机上是否稳定还要另测。",
+      "body": "Simon Willison 在[博客](https://simonwillison.net/2026/Oct/15/chirp-pong/)里公开了完整提示词：做一个类似 Pong 的双人对战游戏，两人把手机靠近，游戏状态通过网页麦克风 API 能识别的声音来传递，再加一些画面和玩法上的变化，让它比原版 Pong 更有意思。整个程序是静态 HTML，不需要服务器。\n\n可以借鉴的是他的用法：**把 AI 当作快速验证想法的工具**，一个要求写清技术约束的提示，就能回答「这件事能不能做」。PM 和工程师评估冷门方案时，可以先这样花几十分钟做个原型，再进排期讨论。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Chirp Pong",
+          "url": "https://simonwillison.net/2026/Oct/15/chirp-pong/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-16-05",
+      "issueDate": "2026-10-16",
+      "issueNumber": 7
+    },
+    {
+      "candidateIds": [
         "c2"
       ],
       "category": "productivity",

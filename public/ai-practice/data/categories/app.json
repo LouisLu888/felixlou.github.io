@@ -8,6 +8,66 @@
   "items": [
     {
       "candidateIds": [
+        "c41"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-15",
+      "headline": "不懂技术的前摔跤手，三个 AI App 月订阅收入近 4.1 万美元",
+      "oneLiner": "George Lampropoulos 说三个 App 合计 MRR 接近 4.1 万美元，28 天收入 8.4 万美元；一段原始录屏广告的单次获客成本是 10 美元，精修广告反而失败。",
+      "who": "George Lampropoulos，非技术背景，一年前还认为 AI App 生成工具是噱头，现在做 Wrestle AI、Brawler 和一个健身 App。",
+      "how": "他用 AI App 生成工具做产品，增长主要靠创作者：和摔跤领域创作者 Cayden Henschel 五五分成合作，再把 stitch 合拍和排名类短视频直接投成付费广告。",
+      "result": "他说 Wrestle AI 仅靠创作者推广就超过 10 万次下载；一笔 4500 美元的创作者合作收回了 75% 成本。",
+      "tryThis": "给自己的 App 录一段不加修饰的真实操作录屏，和一条精修广告用同样预算测单次获客成本。",
+      "caveat": "五五分成意味着把一半收益让给有受众的人，前提是你能找到愿意长期合作的垂直领域创作者。",
+      "body": "在 [The Superwall Podcast](https://www.buzzsprout.com/2522779/episodes/19969889-george-lampropoulos-meet-the-ex-wrestler-making-41k-mo-with-ai-apps.mp3) 里，George Lampropoulos 拆解了三个 App 的增长。数字由他本人给出：MRR 接近 4.1 万美元，过去 28 天收入 8.4 万美元。\n\n最有用的是几条投放结论：**原始录屏的单次获客成本 10 美元，精修广告效果差**；一笔 4500 美元的创作者合作收回 75%，说明单次合作不一定马上回本；创作者的合拍和排名视频可以直接拿去投付费广告。节目的总结是「清晰胜过精致」。\n\n留存上，他用内容信息流加 Duolingo 式推送通知，还加了一个弹窗，**让用户直接预约和创始人通话**。小团队做消费级 App，可以先找一个自带受众的垂直圈子，用合作分成换分发。",
+      "sources": [
+        {
+          "label": "The Superwall Podcast",
+          "title": "George Lampropoulos - Meet the ex-wrestler making $41k/mo with AI apps",
+          "url": "https://www.buzzsprout.com/2522779/episodes/19969889-george-lampropoulos-meet-the-ex-wrestler-making-41k-mo-with-ai-apps.mp3"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-16-02",
+      "issueDate": "2026-10-16",
+      "issueNumber": 7
+    },
+    {
+      "candidateIds": [
+        "c42",
+        "c43"
+      ],
+      "category": "app",
+      "kind": "机会观察",
+      "eventDate": "2026-10-15",
+      "headline": "先测 20 条视频钩子，再写第一行代码",
+      "oneLiner": "Joseph Choi 说他和 1000 多位 App 开发者聊过，他的顺序是先在商店榜单和 TikTok 评论里找需求和话术，有付费用户之后才投广告。",
+      "who": "Joseph Choi，他说帮 700 多位 App 开发者调整过定位，搭建的自然增长体系带来了超过 600 万美元收入。",
+      "how": "看 App Store 榜单和 Sensor Tower 找需求，读用户差评找缺口，从 TikTok 评论里摘用户原话做文案，收藏 20 条视频测试开头钩子，再动手开发。",
+      "result": "他举的反例：一次每下载 8 美元、流失 70% 的投放；还有播放数百万、只带来约 500 美元收入的活动。CocoPicks 3000 万播放的恶搞视频，带来的下载不如前后对比类视频。",
+      "tryThis": "做 App 之前，先从目标用户的 TikTok 评论里摘 20 条原话，写成视频开头测反应。",
+      "caveat": "播放量不等于下载和付费，判断内容效果要看下载和付款数据。",
+      "body": "在 Superwall Podcast 的[第一期](https://www.buzzsprout.com/2522779/episodes/19969776-joseph-choi-if-i-had-to-start-a-1m-app-from-scratch-i-d-do-this.mp3)里，Joseph Choi 讲了他从零做 App 的顺序：**写代码之前先验证**。第一版不做社交信息流，也不做 AI 教练；先确认话术和语气，再请更多创作者；有人付费之后才上付费广告。\n\n[另一期](https://www.buzzsprout.com/2522779/episodes/19969754-joseph-choi-what-500m-app-downloads-taught-me-about-human-psychology.mp3)讲的是他的发现：**播放最多的视频很少带来最多的下载。**他提出「内容市场匹配」：要让 App 成为视频的主角，比如 Pingo 的 AI 吐槽片段。他还提到 Welltory 的付费墙不列功能清单。对有一点内容能力的独立开发者，这套顺序前期花钱很少。",
+      "sources": [
+        {
+          "label": "The Superwall Podcast",
+          "title": "Joseph Choi - If I Had to Start a $1M App From Scratch, I'd Do This",
+          "url": "https://www.buzzsprout.com/2522779/episodes/19969776-joseph-choi-if-i-had-to-start-a-1m-app-from-scratch-i-d-do-this.mp3"
+        },
+        {
+          "label": "The Superwall Podcast",
+          "title": "Joseph Choi - What 500M App Downloads Taught Me About Human Psychology",
+          "url": "https://www.buzzsprout.com/2522779/episodes/19969754-joseph-choi-what-500m-app-downloads-taught-me-about-human-psychology.mp3"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-16-06",
+      "issueDate": "2026-10-16",
+      "issueNumber": 7
+    },
+    {
+      "candidateIds": [
         "c8"
       ],
       "category": "app",
