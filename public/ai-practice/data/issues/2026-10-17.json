@@ -1,0 +1,267 @@
+{
+  "date": "2026-10-17",
+  "title": "三条提示词做出一个 LaTeX 工具，Claude Code 团队让审查像拼写检查一样随写随查",
+  "items": [
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-15",
+      "headline": "三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器",
+      "oneLiner": "Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。",
+      "who": "开发者 Simon Willison，看到 Paul Ford 团队的 Tiny Little Office 后，想给自己的 tools 仓库加一个 LaTeX 工具。",
+      "how": "用 Claude Code（Opus 5.5 Extra）。第一条提示词写清功能规格，后两条让它照搬仓库里已有工具的 iframe 沙箱和 Gist/URL 加载功能。",
+      "result": "做成的工具能把 LaTeX 放在网址 # 后面直接渲染，可以收藏、分享，也能切回源码编辑。依赖 Pako、MathJax、faster-latex 和 DOMPurify 这几个库。",
+      "tryThis": "让 agent 写新工具时，点名仓库里哪个旧工具可以参考，让它复用已经验证过的写法。前提是你手上有一批自己维护的小工具或代码。",
+      "caveat": "安全问题是他主动提出的，第一条提示词没提，agent 也没有自己去做。手上没有可参考的旧代码时，这类约束要自己写进规格。",
+      "body": "Simon Willison 在[本人博客](https://simonwillison.net/2026/Oct/15/latex/)记录了一个小工具的做法。灵感来自 Tiny Little Office：这套网页版办公工具把文档数据全部存在 URL 的 #fragment 里，每份文档都是一个能收藏、能分享的链接。它还提供 llms.txt，告诉 agent 怎样拼出能渲染成文档的网址。Claude 就靠这个文件生成了一份讲 URL 格式的幻灯片。\n\n他给 Claude Code 的提示词一共三条。**第一条是完整规格**：读取 # 后面的内容按 LaTeX 渲染；支持一个前缀，表示内容用专为 LaTeX 优化的自定义字典压缩过；从 CDN 选最好的渲染库，WebAssembly 也可以考虑；没有 # 时显示编辑器，可以切到渲染视图，渲染视图要能收藏。**第二条问安全**：能不能防 XSS？可以像 SVG in Markdown 工具那样用 iframe sandbox。**第三条要复用**：照那个工具的做法，支持从 URL 或 Gist 加载。\n\n可以借鉴的是后两步。agent 在你自己的仓库里工作，**“参考某某工具的做法”比从头描述需求更短，也更可靠**。适合已经积累了一些内部小工具的工程师、分析师。把数据放进网址也省掉了后端和存储，做团队内部分享用的小页面可以先试这个结构。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "LaTeX renderer",
+          "url": "https://simonwillison.net/2026/Oct/15/latex/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-17-01"
+    },
+    {
+      "candidateIds": [
+        "c1",
+        "c31"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-16",
+      "headline": "Claude Code 团队：别再问“有没有人看过代码”",
+      "oneLiner": "Claude Code 团队说，大多数改动在请人审查之前，已经被 Claude 审过、改过至少一次，常规错误大多在这一步被拦下。",
+      "who": "Anthropic Claude Code 团队的 Addy Osmani、Morgan Westlee Lunt 和 Qing Wang，在文章《How the Claude Code team does code review》中介绍团队做法，Simon Willison 于 10 月 16 日摘录。",
+      "how": "他们认为“有没有人读过代码”只是一个粗糙的替代指标。该问的是：这次改动可能出什么问题？由哪一道检查来拦，自动的还是人工的？",
+      "result": "审查从提 PR 之后的关卡，变成写代码时持续进行，他们比作拼写检查。他们说常规错误大多被 Claude 先拦下，团队的注意力留给更高层的问题。",
+      "tryThis": "把审查清单按风险重新分一遍：哪些交给 AI 或自动检查，哪些必须由人判断。这能用在代码上，也能用在文档、数据报表上。",
+      "caveat": "他们只说 AI 能拦下“大多数常规错误”，高层判断仍然靠人。这套做法建立在团队对 Claude Code 很熟、自动检查齐全的基础上。",
+      "body": "Simon Willison [摘录了 Claude Code 团队的一段话](https://simonwillison.net/2026/Oct/16/code-review/)。他们说，以前的审查是流程末尾的关卡：写代码、开 PR、等同事看。现在换了一个问题来问：**这个改动可能出什么错，哪一道检查最适合拦住它？** 问题换了，审查的时机也跟着变了，变成写代码时持续在跑，像拼写检查。大多数改动在请人看之前，已经被 Claude 审过、修过至少一次。\n\n同一天，Every CEO Dan Shipper 在 X 上写道：生成内容现在便宜，质量也高，接下来最需要提升的能力是编辑和监督。两边说的是同一件事：**瓶颈从“写出来”移到了“查得对”**。\n\n对带团队或自己写代码的人，可以先列出常见错误，把能由机器发现的那部分前移到写作过程中，人工审查只留给设计取舍、需求理解这类问题。这套分工依赖可靠的自动检查。测试薄弱的项目照搬，等于少了一道人工关卡，却没有补上别的检查。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+          "url": "https://simonwillison.net/2026/Oct/16/code-review/"
+        },
+        {
+          "label": "Follow Builders (X)",
+          "title": "Dan Shipper: generation is now cheap and high quality \n\nthe big capabilities bump we need is ",
+          "url": "https://x.com/danshipper/status/2111174407637139668"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-17-02"
+    },
+    {
+      "candidateIds": [
+        "c7"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-17",
+      "headline": "零代码基础做健身 App，三分之一收入来自 X",
+      "oneLiner": "Maxed.ai 创始人 Max 没有编程经验，做出月经常性收入 1.3 万美元的举重 App。他说开推特三个月后，约三分之一的收入来自 X 上的用户。",
+      "who": "Max，没有编程经验，做了举重训练 App Maxed.ai，在 Starter Story 的短视频中分享获客经验。",
+      "how": "他的做法是：早期先不请 UGC 创作者，等摸清哪些切入角度能带来下载再说；投放选 Meta 而不是 TikTok；利用切片短视频（clipping）拿到海外曝光和自然下载。",
+      "result": "标题称他的月经常性收入为 1.3 万美元。他说三个月前开始发推，现在约三分之一收入来自 X 上的用户。",
+      "tryThis": "花钱请创作者之前，先自己发几种不同角度的短内容，看哪种带来下载。同时在 X 上公开记录做产品的过程。",
+      "caveat": "Meta 和 TikTok 的对比，依据是他自己对用户付费意愿的判断，适合他这类付费订阅的健身工具。他没有给出投放花费和转化数字。",
+      "body": "Starter Story 的[短视频](https://www.youtube.com/shorts/Rx9R5-Z8ZZU)里，Maxed.ai 创始人 Max 讲了现阶段该把力气花在哪。他没有编程经验，做出了这个举重 App。他的判断是 Meta 的流量比 TikTok 更值钱：“用户购买意向更高……付费意愿也更高。”他还说切片短视频“真的爆发了”，现在入场仍然能赚到钱，也是拿到海外曝光和自然下载的好办法。\n\n顺序值得记下：**先找到能带来下载的切入角度，再花钱请 UGC 创作者放大。**角度没验证就付费，等于花钱试错。另一个点是 X：他三个月前才开始发推，现在约三分之一收入来自那里。对独立开发者来说，公开记录做产品的过程本身就是一个获客渠道，成本几乎只有时间。",
+      "sources": [
+        {
+          "label": "Starter Story (YouTube)",
+          "title": "$13k MRR founder reveals why Meta crushes TikTok for app marketing...",
+          "url": "https://www.youtube.com/shorts/Rx9R5-Z8ZZU"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-17-03"
+    },
+    {
+      "candidateIds": [
+        "c53"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-17",
+      "headline": "七个 ChatGPT 插件，帮他找歌、挑电影、学下棋",
+      "oneLiner": "Tom's Guide 作者 Elton Jones 每天用七个 ChatGPT 娱乐插件找音乐、电影、游戏和漫画，每个插件都配了一条固定的提示词模板。",
+      "who": "Tom's Guide 作者 Elton Jones，通勤要听音乐，周末想找冷门电影，也玩游戏、看漫画。",
+      "how": "在 ChatGPT 里用 Spotify、Apple Music、Tubi、Flixor、GameFinder、Emaqi、Chessy 插件。交给 AI 的只有他喜欢的艺人、作品和类型，提示词要求解释推荐理由、排序，并标出冷门选项。",
+      "result": "他说因此发现了 Gareth Donkin、Smino 等歌手，用 Tubi 找免费电影安排周末，用 Chessy 一边下棋一边学。",
+      "tryThis": "套用他的模板：列出三到五个最喜欢的作品，要求 AI 按氛围、叙事等维度分析，给出排序，并至少包含几个冷门选项。",
+      "caveat": "推荐结果他会先查评价再采用，这一步仍然要自己做。实体碟片、其他平台的漫画，还要自己去找购买或阅读渠道。",
+      "body": "Elton Jones 在 [Tom's Guide](https://www.tomsguide.com/ai/i-use-these-7-chatgpt-entertainment-plugins-every-day-and-these-prompts-help-them-deliver-the-best-music-and-movie-recommendations) 列出了他每天用的七个 ChatGPT 插件，以及每个插件最好用的提示词。他的模板有共同点：**给出具体喜好，要求说明理由，要求排序，并指定冷门推荐的数量。**比如找电影时，他让 AI 按氛围、叙事、人物塑造和反转来匹配，不只看类型。用 Tubi 时，他让 AI 安排一个免费电影之夜，并分出适合轻松看和认真看的片子。\n\n下棋插件 Chessy 的提示词也能用在别处：说明自己是新手，让 AI 每步之后指出一个做得好的地方、一个要注意的错误。拿来学任何新技能都可以试试。他的习惯是先查评价再采用推荐，然后转给朋友。这里交出去的只是兴趣偏好，不涉及账户和财务数据，风险很低。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I use 7 ChatGPT entertainment plugins every day — and these prompts help them deliver the best music and movie recommendations",
+          "url": "https://www.tomsguide.com/ai/i-use-these-7-chatgpt-entertainment-plugins-every-day-and-these-prompts-help-them-deliver-the-best-music-and-movie-recommendations"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-17-04"
+    }
+  ],
+  "action": "从这周要交的一件工作里挑一份产物，可以是代码、方案文档或数据报表。交给别人看之前，先让 AI 按“这份东西可能在哪里出错”审一遍，并要求它把问题分成两类：自己能确认的，和需要人来判断的。改完后记下 AI 拦住了几处错误、哪些问题只有你或同事能发现。攒上三五次，你就有一份按风险分工的审查清单，知道哪些检查可以交出去，哪些必须留给人。",
+  "readingMinutes": 7,
+  "meta": {
+    "generatedAt": "2026-10-17T14:44:21.704Z",
+    "engine": "cli",
+    "candidateCount": 53,
+    "candidatesBySource": {
+      "Simon Willison": 2,
+      "Lenny's Newsletter & Podcast": 1,
+      "Interconnects": 1,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 1,
+      "Starter Story (YouTube)": 1,
+      "Every (YouTube)": 1,
+      "Follow Builders (X)": 37,
+      "Latent Space": 1,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 2,
+      "Riley Brown": 1,
+      "Ras Mic": 1,
+      "App Masters (Steve P. Young)": 1,
+      "Tom's Guide · AI": 1
+    },
+    "shortlist": [
+      {
+        "id": "c1",
+        "reason": "谁：Claude Code 团队（Addy Osmani 等）；怎么用：让 Claude 在写代码过程中持续审查，人工审查只看更高层的问题；结果：大部分常规错误在人看之前就被修掉。这是一手团队流程，有全文。Boris Cherny 的同主题推文 c36 是重复内容，不再单独选。",
+        "source": "Simon Willison",
+        "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang"
+      },
+      {
+        "id": "c7",
+        "reason": "谁：零编程基础的 Max，做健身 App Maxed.ai，月收入 1.3 万美元；怎么用：靠 AI 开发产品，推广上优先投 Meta 而不是 TikTok，先别雇 UGC 创作者，做切片视频，经营 X；结果：约三分之一收入来自 X。虽然只有简介，但做法和数字都写清了。",
+        "source": "Starter Story (YouTube)",
+        "title": "$13k MRR founder reveals why Meta crushes TikTok for app marketing..."
+      },
+      {
+        "id": "c2",
+        "reason": "谁：Simon Willison；怎么用：受 Tiny Little Office 启发，用 Claude 做了一个 LaTeX 渲染小工具，Claude 还读了网站的 llms.txt 自动生成可分享的文档链接；结果：做出可用的工具和链接。个人可以照着试。",
+        "source": "Simon Willison",
+        "title": "LaTeX renderer"
+      },
+      {
+        "id": "c53",
+        "reason": "AI 生活类。谁：Tom's Guide 作者；怎么用：每天用 7 个 ChatGPT 娱乐插件，配合具体提示词找音乐和电影；结果：发现了很多原本找不到的作品，并推荐给别人。有全文，可以写出具体提示词。",
+        "source": "Tom's Guide · AI",
+        "title": "I use 7 ChatGPT entertainment plugins every day — and these prompts help them deliver the best music and movie recommendations"
+      },
+      {
+        "id": "c13",
+        "reason": "AI 认知类。谁：Box CEO Aaron Levie；判断：模型能力、长时间运行的 agent 基础设施和并行化正在形成飞轮，AI 训练模型可能很快超过人类。有一定论据。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: It’s incredible to have reached a threshold where it’s practical that AI will be"
+      },
+      {
+        "id": "c31",
+        "reason": "AI 认知类。谁：Every CEO Dan Shipper；判断：生成已经又便宜又好，下一步需要的能力是编辑和把关。与 c1 的代码审查话题能互相印证，但只有一句话，篇幅短。",
+        "source": "Follow Builders (X)",
+        "title": "Dan Shipper: generation is now cheap and high quality \n\nthe big capabilities bump we need is "
+      },
+      {
+        "id": "c30",
+        "reason": "真实案例。谁：一位心脏科专科培训医生；怎么用：用 Claude 做了一个 3D 工具，教学员看冠状动脉造影；结果：工具已做出来。说明非程序员能用 AI 做出专业工具，但摘录很短，细节要看链接。",
+        "source": "Follow Builders (X)",
+        "title": "Claude: A cardiology fellow built a 3D tool to help trainees learn to read coronary angi"
+      },
+      {
+        "id": "c35",
+        "reason": "谁：Claude Code 负责人 Boris Cherny；怎么用：现在用 Claude Slides 做幻灯片，不用再自己搜素材；结果：做 deck 更省事。工作提效的亲身做法，但细节有限。",
+        "source": "Follow Builders (X)",
+        "title": "Boris Cherny: Don't sleep on Claude Slides. This is how I make slide decks now -- no more goog"
+      },
+      {
+        "id": "c25",
+        "reason": "谁：YC CEO Garry Tan；怎么用：开新项目时让 agent 写出第一版代码，并一次性配好 DevOps；结果：项目启动更快。信息较少，可作补充。",
+        "source": "Follow Builders (X)",
+        "title": "Garry Tan: Starting a new project today, and my absolute favorite thing is @capydotai with "
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 20658,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1684,
+        "output_tokens_details": {
+          "thinking_tokens": 624
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 20658,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1684,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 20658,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 20658
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.198952
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 13777,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 5749,
+      "output_tokens_details": {
+        "thinking_tokens": 1744
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 13777,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 5749,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 13777,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 13777
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.225204
+  }
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器｜AI 实干派</title>
+  <meta name="description" content="Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-17-01/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器｜AI 实干派">
+  <meta property="og:description" content="Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-17-01/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-17.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器｜AI 实干派">
+  <meta name="twitter:description" content="Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-17.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">8</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">3</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">3</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">8</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">9</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">5</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-17/">AI 实干派 008 · 2026 年 10 月 17 日 · 周六</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-15<span>·</span>US</div>
+        <h1>三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器</h1>
+        <p class="summary">Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison，看到 Paul Ford 团队的 Tiny Little Office 后，想给自己的 tools 仓库加一个 LaTeX 工具。</dd><dt>怎么用</dt><dd>用 Claude Code（Opus 5.5 Extra）。第一条提示词写清功能规格，后两条让它照搬仓库里已有工具的 iframe 沙箱和 Gist/URL 加载功能。</dd><dt>结果</dt><dd>做成的工具能把 LaTeX 放在网址 # 后面直接渲染，可以收藏、分享，也能切回源码编辑。依赖 Pako、MathJax、faster-latex 和 DOMPurify 这几个库。</dd><dt>你可以试</dt><dd>让 agent 写新工具时，点名仓库里哪个旧工具可以参考，让它复用已经验证过的写法。前提是你手上有一批自己维护的小工具或代码。</dd><dt>注意</dt><dd>安全问题是他主动提出的，第一条提示词没提，agent 也没有自己去做。手上没有可参考的旧代码时，这类约束要自己写进规格。</dd></dl>
+        <div class="body"><p>Simon Willison 在<a href="https://simonwillison.net/2026/Oct/15/latex/">本人博客</a>记录了一个小工具的做法。灵感来自 Tiny Little Office：这套网页版办公工具把文档数据全部存在 URL 的 #fragment 里，每份文档都是一个能收藏、能分享的链接。它还提供 llms.txt，告诉 agent 怎样拼出能渲染成文档的网址。Claude 就靠这个文件生成了一份讲 URL 格式的幻灯片。</p><p>他给 Claude Code 的提示词一共三条。<strong>第一条是完整规格</strong>：读取 # 后面的内容按 LaTeX 渲染；支持一个前缀，表示内容用专为 LaTeX 优化的自定义字典压缩过；从 CDN 选最好的渲染库，WebAssembly 也可以考虑；没有 # 时显示编辑器，可以切到渲染视图，渲染视图要能收藏。<strong>第二条问安全</strong>：能不能防 XSS？可以像 SVG in Markdown 工具那样用 iframe sandbox。<strong>第三条要复用</strong>：照那个工具的做法，支持从 URL 或 Gist 加载。</p><p>可以借鉴的是后两步。agent 在你自己的仓库里工作，<strong>“参考某某工具的做法”比从头描述需求更短，也更可靠</strong>。适合已经积累了一些内部小工具的工程师、分析师。把数据放进网址也省掉了后端和存储，做团队内部分享用的小页面可以先试这个结构。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/15/latex/" target="_blank" rel="noopener" title="LaTeX renderer">Simon Willison</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-17/">← 当期全部 4 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

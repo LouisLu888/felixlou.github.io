@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 008｜三条提示词做出一个 LaTeX 工具，Claude Code 团队让审查像拼写检查一样随写随查</title>
+  <meta name="description" content="Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-10-17/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 008｜三条提示词做出一个 LaTeX 工具，Claude Code 团队让审查像拼写检查一样随写随查">
+  <meta property="og:description" content="Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-10-17/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-17.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 008｜三条提示词做出一个 LaTeX 工具，Claude Code 团队让审查像拼写检查一样随写随查">
+  <meta name="twitter:description" content="Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-17.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">8</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">3</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">3</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">8</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">9</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">5</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 008 · 2026 年 10 月 17 日 · 周六 · 约 7 分钟读完</div>
+        <h1>三条提示词做出一个 LaTeX 工具，Claude Code 团队让审查像拼写检查一样随写随查</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-17-01">Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-10-17-02">Claude Code 团队说，大多数改动在请人审查之前，已经被 Claude 审过、改过至少一次，常规错误大多在这一步被拦下。</a></li><li><span class="tag" data-cat="app">AI App</span><a href="#2026-10-17-03">Maxed.ai 创始人 Max 没有编程经验，做出月经常性收入 1.3 万美元的举重 App。他说开推特三个月后，约三分之一的收入来自 X 上的用户。</a></li><li><span class="tag" data-cat="life">AI 生活</span><a href="#2026-10-17-04">Tom&#39;s Guide 作者 Elton Jones 每天用七个 ChatGPT 娱乐插件找音乐、电影、游戏和漫画，每个插件都配了一条固定的提示词模板。</a></li></ul>
+      </section>
+      <section class="item" id="2026-10-17-01">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-15<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-17-01/">01｜三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison，看到 Paul Ford 团队的 Tiny Little Office 后，想给自己的 tools 仓库加一个 LaTeX 工具。</dd><dt>怎么用</dt><dd>用 Claude Code（Opus 5.5 Extra）。第一条提示词写清功能规格，后两条让它照搬仓库里已有工具的 iframe 沙箱和 Gist/URL 加载功能。</dd><dt>结果</dt><dd>做成的工具能把 LaTeX 放在网址 # 后面直接渲染，可以收藏、分享，也能切回源码编辑。依赖 Pako、MathJax、faster-latex 和 DOMPurify 这几个库。</dd><dt>你可以试</dt><dd>让 agent 写新工具时，点名仓库里哪个旧工具可以参考，让它复用已经验证过的写法。前提是你手上有一批自己维护的小工具或代码。</dd><dt>注意</dt><dd>安全问题是他主动提出的，第一条提示词没提，agent 也没有自己去做。手上没有可参考的旧代码时，这类约束要自己写进规格。</dd></dl>
+        <div class="body"><p>Simon Willison 在<a href="https://simonwillison.net/2026/Oct/15/latex/">本人博客</a>记录了一个小工具的做法。灵感来自 Tiny Little Office：这套网页版办公工具把文档数据全部存在 URL 的 #fragment 里，每份文档都是一个能收藏、能分享的链接。它还提供 llms.txt，告诉 agent 怎样拼出能渲染成文档的网址。Claude 就靠这个文件生成了一份讲 URL 格式的幻灯片。</p><p>他给 Claude Code 的提示词一共三条。<strong>第一条是完整规格</strong>：读取 # 后面的内容按 LaTeX 渲染；支持一个前缀，表示内容用专为 LaTeX 优化的自定义字典压缩过；从 CDN 选最好的渲染库，WebAssembly 也可以考虑；没有 # 时显示编辑器，可以切到渲染视图，渲染视图要能收藏。<strong>第二条问安全</strong>：能不能防 XSS？可以像 SVG in Markdown 工具那样用 iframe sandbox。<strong>第三条要复用</strong>：照那个工具的做法，支持从 URL 或 Gist 加载。</p><p>可以借鉴的是后两步。agent 在你自己的仓库里工作，<strong>“参考某某工具的做法”比从头描述需求更短，也更可靠</strong>。适合已经积累了一些内部小工具的工程师、分析师。把数据放进网址也省掉了后端和存储，做团队内部分享用的小页面可以先试这个结构。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/15/latex/" target="_blank" rel="noopener" title="LaTeX renderer">Simon Willison</a></div>
+      </section>
+      <section class="item" id="2026-10-17-02">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-16<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-17-02/">02｜Claude Code 团队：别再问“有没有人看过代码”</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Anthropic Claude Code 团队的 Addy Osmani、Morgan Westlee Lunt 和 Qing Wang，在文章《How the Claude Code team does code review》中介绍团队做法，Simon Willison 于 10 月 16 日摘录。</dd><dt>核心观点</dt><dd>他们认为“有没有人读过代码”只是一个粗糙的替代指标。该问的是：这次改动可能出什么问题？由哪一道检查来拦，自动的还是人工的？</dd><dt>依据</dt><dd>审查从提 PR 之后的关卡，变成写代码时持续进行，他们比作拼写检查。他们说常规错误大多被 Claude 先拦下，团队的注意力留给更高层的问题。</dd><dt>对你的意义</dt><dd>把审查清单按风险重新分一遍：哪些交给 AI 或自动检查，哪些必须由人判断。这能用在代码上，也能用在文档、数据报表上。</dd><dt>争议·条件</dt><dd>他们只说 AI 能拦下“大多数常规错误”，高层判断仍然靠人。这套做法建立在团队对 Claude Code 很熟、自动检查齐全的基础上。</dd></dl>
+        <div class="body"><p>Simon Willison <a href="https://simonwillison.net/2026/Oct/16/code-review/">摘录了 Claude Code 团队的一段话</a>。他们说，以前的审查是流程末尾的关卡：写代码、开 PR、等同事看。现在换了一个问题来问：<strong>这个改动可能出什么错，哪一道检查最适合拦住它？</strong> 问题换了，审查的时机也跟着变了，变成写代码时持续在跑，像拼写检查。大多数改动在请人看之前，已经被 Claude 审过、修过至少一次。</p><p>同一天，Every CEO Dan Shipper 在 X 上写道：生成内容现在便宜，质量也高，接下来最需要提升的能力是编辑和监督。两边说的是同一件事：<strong>瓶颈从“写出来”移到了“查得对”</strong>。</p><p>对带团队或自己写代码的人，可以先列出常见错误，把能由机器发现的那部分前移到写作过程中，人工审查只留给设计取舍、需求理解这类问题。这套分工依赖可靠的自动检查。测试薄弱的项目照搬，等于少了一道人工关卡，却没有补上别的检查。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/16/code-review/" target="_blank" rel="noopener" title="Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang">Simon Willison</a><a href="https://x.com/danshipper/status/2111174407637139668" target="_blank" rel="noopener" title="Dan Shipper: generation is now cheap and high quality 
+
+the big capabilities bump we need is ">Follow Builders (X)</a></div>
+      </section>
+      <section class="item" id="2026-10-17-03">
+        <div class="item-meta"><span class="tag" data-cat="app">AI App</span><span>·</span>经营复盘<span>·</span>2026-10-17<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-17-03/">03｜零代码基础做健身 App，三分之一收入来自 X</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Max，没有编程经验，做了举重训练 App Maxed.ai，在 Starter Story 的短视频中分享获客经验。</dd><dt>怎么用</dt><dd>他的做法是：早期先不请 UGC 创作者，等摸清哪些切入角度能带来下载再说；投放选 Meta 而不是 TikTok；利用切片短视频（clipping）拿到海外曝光和自然下载。</dd><dt>结果</dt><dd>标题称他的月经常性收入为 1.3 万美元。他说三个月前开始发推，现在约三分之一收入来自 X 上的用户。</dd><dt>你可以试</dt><dd>花钱请创作者之前，先自己发几种不同角度的短内容，看哪种带来下载。同时在 X 上公开记录做产品的过程。</dd><dt>注意</dt><dd>Meta 和 TikTok 的对比，依据是他自己对用户付费意愿的判断，适合他这类付费订阅的健身工具。他没有给出投放花费和转化数字。</dd></dl>
+        <div class="body"><p>Starter Story 的<a href="https://www.youtube.com/shorts/Rx9R5-Z8ZZU">短视频</a>里，Maxed.ai 创始人 Max 讲了现阶段该把力气花在哪。他没有编程经验，做出了这个举重 App。他的判断是 Meta 的流量比 TikTok 更值钱：“用户购买意向更高……付费意愿也更高。”他还说切片短视频“真的爆发了”，现在入场仍然能赚到钱，也是拿到海外曝光和自然下载的好办法。</p><p>顺序值得记下：<strong>先找到能带来下载的切入角度，再花钱请 UGC 创作者放大。</strong>角度没验证就付费，等于花钱试错。另一个点是 X：他三个月前才开始发推，现在约三分之一收入来自那里。对独立开发者来说，公开记录做产品的过程本身就是一个获客渠道，成本几乎只有时间。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/shorts/Rx9R5-Z8ZZU" target="_blank" rel="noopener" title="$13k MRR founder reveals why Meta crushes TikTok for app marketing...">Starter Story (YouTube)</a></div>
+      </section>
+      <section class="item" id="2026-10-17-04">
+        <div class="item-meta"><span class="tag" data-cat="life">AI 生活</span><span>·</span>本周演示<span>·</span>2026-10-17<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-17-04/">04｜七个 ChatGPT 插件，帮他找歌、挑电影、学下棋</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Tom&#39;s Guide 作者 Elton Jones，通勤要听音乐，周末想找冷门电影，也玩游戏、看漫画。</dd><dt>怎么用</dt><dd>在 ChatGPT 里用 Spotify、Apple Music、Tubi、Flixor、GameFinder、Emaqi、Chessy 插件。交给 AI 的只有他喜欢的艺人、作品和类型，提示词要求解释推荐理由、排序，并标出冷门选项。</dd><dt>结果</dt><dd>他说因此发现了 Gareth Donkin、Smino 等歌手，用 Tubi 找免费电影安排周末，用 Chessy 一边下棋一边学。</dd><dt>你可以试</dt><dd>套用他的模板：列出三到五个最喜欢的作品，要求 AI 按氛围、叙事等维度分析，给出排序，并至少包含几个冷门选项。</dd><dt>注意</dt><dd>推荐结果他会先查评价再采用，这一步仍然要自己做。实体碟片、其他平台的漫画，还要自己去找购买或阅读渠道。</dd></dl>
+        <div class="body"><p>Elton Jones 在 <a href="https://www.tomsguide.com/ai/i-use-these-7-chatgpt-entertainment-plugins-every-day-and-these-prompts-help-them-deliver-the-best-music-and-movie-recommendations">Tom&#39;s Guide</a> 列出了他每天用的七个 ChatGPT 插件，以及每个插件最好用的提示词。他的模板有共同点：<strong>给出具体喜好，要求说明理由，要求排序，并指定冷门推荐的数量。</strong>比如找电影时，他让 AI 按氛围、叙事、人物塑造和反转来匹配，不只看类型。用 Tubi 时，他让 AI 安排一个免费电影之夜，并分出适合轻松看和认真看的片子。</p><p>下棋插件 Chessy 的提示词也能用在别处：说明自己是新手，让 AI 每步之后指出一个做得好的地方、一个要注意的错误。拿来学任何新技能都可以试试。他的习惯是先查评价再采用推荐，然后转给朋友。这里交出去的只是兴趣偏好，不涉及账户和财务数据，风险很低。</p></div>
+        <div class="sources">原文：<a href="https://www.tomsguide.com/ai/i-use-these-7-chatgpt-entertainment-plugins-every-day-and-these-prompts-help-them-deliver-the-best-music-and-movie-recommendations" target="_blank" rel="noopener" title="I use 7 ChatGPT entertainment plugins every day — and these prompts help them deliver the best music and movie recommendations">Tom&#39;s Guide · AI</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>从这周要交的一件工作里挑一份产物，可以是代码、方案文档或数据报表。交给别人看之前，先让 AI 按“这份东西可能在哪里出错”审一遍，并要求它把问题分成两类：自己能确认的，和需要人来判断的。改完后记下 AI 拦住了几处错误、哪些问题只有你或同事能发现。攒上三五次，你就有一份按风险分工的审查清单，知道哪些检查可以交出去，哪些必须留给人。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-16/">← 2026 年 10 月 16 日 · 周五</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

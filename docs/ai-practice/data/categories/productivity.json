@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-15",
+      "headline": "三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器",
+      "oneLiner": "Simon Willison 借 Tiny Little Office“把文档存进网址”的思路，用三轮提示词让 Claude Code 做出 LaTeX 渲染工具，还沿用了自己旧工具里的防 XSS 做法。",
+      "who": "开发者 Simon Willison，看到 Paul Ford 团队的 Tiny Little Office 后，想给自己的 tools 仓库加一个 LaTeX 工具。",
+      "how": "用 Claude Code（Opus 5.5 Extra）。第一条提示词写清功能规格，后两条让它照搬仓库里已有工具的 iframe 沙箱和 Gist/URL 加载功能。",
+      "result": "做成的工具能把 LaTeX 放在网址 # 后面直接渲染，可以收藏、分享，也能切回源码编辑。依赖 Pako、MathJax、faster-latex 和 DOMPurify 这几个库。",
+      "tryThis": "让 agent 写新工具时，点名仓库里哪个旧工具可以参考，让它复用已经验证过的写法。前提是你手上有一批自己维护的小工具或代码。",
+      "caveat": "安全问题是他主动提出的，第一条提示词没提，agent 也没有自己去做。手上没有可参考的旧代码时，这类约束要自己写进规格。",
+      "body": "Simon Willison 在[本人博客](https://simonwillison.net/2026/Oct/15/latex/)记录了一个小工具的做法。灵感来自 Tiny Little Office：这套网页版办公工具把文档数据全部存在 URL 的 #fragment 里，每份文档都是一个能收藏、能分享的链接。它还提供 llms.txt，告诉 agent 怎样拼出能渲染成文档的网址。Claude 就靠这个文件生成了一份讲 URL 格式的幻灯片。\n\n他给 Claude Code 的提示词一共三条。**第一条是完整规格**：读取 # 后面的内容按 LaTeX 渲染；支持一个前缀，表示内容用专为 LaTeX 优化的自定义字典压缩过；从 CDN 选最好的渲染库，WebAssembly 也可以考虑；没有 # 时显示编辑器，可以切到渲染视图，渲染视图要能收藏。**第二条问安全**：能不能防 XSS？可以像 SVG in Markdown 工具那样用 iframe sandbox。**第三条要复用**：照那个工具的做法，支持从 URL 或 Gist 加载。\n\n可以借鉴的是后两步。agent 在你自己的仓库里工作，**“参考某某工具的做法”比从头描述需求更短，也更可靠**。适合已经积累了一些内部小工具的工程师、分析师。把数据放进网址也省掉了后端和存储，做团队内部分享用的小页面可以先试这个结构。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "LaTeX renderer",
+          "url": "https://simonwillison.net/2026/Oct/15/latex/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-17-01",
+      "issueDate": "2026-10-17",
+      "issueNumber": 8
+    },
+    {
+      "candidateIds": [
         "c1"
       ],
       "category": "productivity",

@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c53"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-17",
+      "headline": "七个 ChatGPT 插件，帮他找歌、挑电影、学下棋",
+      "oneLiner": "Tom's Guide 作者 Elton Jones 每天用七个 ChatGPT 娱乐插件找音乐、电影、游戏和漫画，每个插件都配了一条固定的提示词模板。",
+      "who": "Tom's Guide 作者 Elton Jones，通勤要听音乐，周末想找冷门电影，也玩游戏、看漫画。",
+      "how": "在 ChatGPT 里用 Spotify、Apple Music、Tubi、Flixor、GameFinder、Emaqi、Chessy 插件。交给 AI 的只有他喜欢的艺人、作品和类型，提示词要求解释推荐理由、排序，并标出冷门选项。",
+      "result": "他说因此发现了 Gareth Donkin、Smino 等歌手，用 Tubi 找免费电影安排周末，用 Chessy 一边下棋一边学。",
+      "tryThis": "套用他的模板：列出三到五个最喜欢的作品，要求 AI 按氛围、叙事等维度分析，给出排序，并至少包含几个冷门选项。",
+      "caveat": "推荐结果他会先查评价再采用，这一步仍然要自己做。实体碟片、其他平台的漫画，还要自己去找购买或阅读渠道。",
+      "body": "Elton Jones 在 [Tom's Guide](https://www.tomsguide.com/ai/i-use-these-7-chatgpt-entertainment-plugins-every-day-and-these-prompts-help-them-deliver-the-best-music-and-movie-recommendations) 列出了他每天用的七个 ChatGPT 插件，以及每个插件最好用的提示词。他的模板有共同点：**给出具体喜好，要求说明理由，要求排序，并指定冷门推荐的数量。**比如找电影时，他让 AI 按氛围、叙事、人物塑造和反转来匹配，不只看类型。用 Tubi 时，他让 AI 安排一个免费电影之夜，并分出适合轻松看和认真看的片子。\n\n下棋插件 Chessy 的提示词也能用在别处：说明自己是新手，让 AI 每步之后指出一个做得好的地方、一个要注意的错误。拿来学任何新技能都可以试试。他的习惯是先查评价再采用推荐，然后转给朋友。这里交出去的只是兴趣偏好，不涉及账户和财务数据，风险很低。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I use 7 ChatGPT entertainment plugins every day — and these prompts help them deliver the best music and movie recommendations",
+          "url": "https://www.tomsguide.com/ai/i-use-these-7-chatgpt-entertainment-plugins-every-day-and-these-prompts-help-them-deliver-the-best-music-and-movie-recommendations"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-17-04",
+      "issueDate": "2026-10-17",
+      "issueNumber": 8
+    },
+    {
+      "candidateIds": [
         "c37"
       ],
       "category": "life",

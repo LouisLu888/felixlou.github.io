@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Code 团队：别再问“有没有人看过代码”｜AI 实干派</title>
+  <meta name="description" content="Claude Code 团队说，大多数改动在请人审查之前，已经被 Claude 审过、改过至少一次，常规错误大多在这一步被拦下。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-17-02/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code 团队：别再问“有没有人看过代码”｜AI 实干派">
+  <meta property="og:description" content="Claude Code 团队说，大多数改动在请人审查之前，已经被 Claude 审过、改过至少一次，常规错误大多在这一步被拦下。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-17-02/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-17.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code 团队：别再问“有没有人看过代码”｜AI 实干派">
+  <meta name="twitter:description" content="Claude Code 团队说，大多数改动在请人审查之前，已经被 Claude 审过、改过至少一次，常规错误大多在这一步被拦下。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-17.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip active" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">8</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">3</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">3</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">8</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">9</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">5</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-17/">AI 实干派 008 · 2026 年 10 月 17 日 · 周六</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-16<span>·</span>US</div>
+        <h1>Claude Code 团队：别再问“有没有人看过代码”</h1>
+        <p class="summary">Claude Code 团队说，大多数改动在请人审查之前，已经被 Claude 审过、改过至少一次，常规错误大多在这一步被拦下。</p>
+        <dl class="facts"><dt>谁说的</dt><dd>Anthropic Claude Code 团队的 Addy Osmani、Morgan Westlee Lunt 和 Qing Wang，在文章《How the Claude Code team does code review》中介绍团队做法，Simon Willison 于 10 月 16 日摘录。</dd><dt>核心观点</dt><dd>他们认为“有没有人读过代码”只是一个粗糙的替代指标。该问的是：这次改动可能出什么问题？由哪一道检查来拦，自动的还是人工的？</dd><dt>依据</dt><dd>审查从提 PR 之后的关卡，变成写代码时持续进行，他们比作拼写检查。他们说常规错误大多被 Claude 先拦下，团队的注意力留给更高层的问题。</dd><dt>对你的意义</dt><dd>把审查清单按风险重新分一遍：哪些交给 AI 或自动检查，哪些必须由人判断。这能用在代码上，也能用在文档、数据报表上。</dd><dt>争议·条件</dt><dd>他们只说 AI 能拦下“大多数常规错误”，高层判断仍然靠人。这套做法建立在团队对 Claude Code 很熟、自动检查齐全的基础上。</dd></dl>
+        <div class="body"><p>Simon Willison <a href="https://simonwillison.net/2026/Oct/16/code-review/">摘录了 Claude Code 团队的一段话</a>。他们说，以前的审查是流程末尾的关卡：写代码、开 PR、等同事看。现在换了一个问题来问：<strong>这个改动可能出什么错，哪一道检查最适合拦住它？</strong> 问题换了，审查的时机也跟着变了，变成写代码时持续在跑，像拼写检查。大多数改动在请人看之前，已经被 Claude 审过、修过至少一次。</p><p>同一天，Every CEO Dan Shipper 在 X 上写道：生成内容现在便宜，质量也高，接下来最需要提升的能力是编辑和监督。两边说的是同一件事：<strong>瓶颈从“写出来”移到了“查得对”</strong>。</p><p>对带团队或自己写代码的人，可以先列出常见错误，把能由机器发现的那部分前移到写作过程中，人工审查只留给设计取舍、需求理解这类问题。这套分工依赖可靠的自动检查。测试薄弱的项目照搬，等于少了一道人工关卡，却没有补上别的检查。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/16/code-review/" target="_blank" rel="noopener" title="Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang">Simon Willison</a><a href="https://x.com/danshipper/status/2111174407637139668" target="_blank" rel="noopener" title="Dan Shipper: generation is now cheap and high quality 
+
+the big capabilities bump we need is ">Follow Builders (X)</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-17/">← 当期全部 4 条</a></span>
+        <span><a href="/ai-practice/c/perspective/">更多「AI 认知」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

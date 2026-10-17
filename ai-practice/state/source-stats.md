@@ -1,45 +1,46 @@
 # AI 实干派 · 来源命中率
 
-统计范围：6 期（不含样刊）。候选数和初筛数从有记录的 6 期开始累计。
+统计范围：7 期（不含样刊）。候选数和初筛数从有记录的 7 期开始累计。
 
 | 来源 | 栏目 | 候选 | 初筛入选 | 成稿 | 成稿率 | 最近成稿 |
 |---|---|---|---|---|---|---|
-| Simon Willison | productivity | 33 | 11 | 6 | 18% | 2026-10-16 |
-| Follow Builders (X) | productivity | 158 | 12 | 3 | 2% | 2026-10-16 |
-| Tom's Guide · AI | life | 9 | 5 | 3 | 33% | 2026-10-15 |
-| Starter Story (YouTube) | saas | 12 | 5 | 2 | 17% | 2026-10-13 |
+| Simon Willison | productivity | 35 | 13 | 8 | 23% | 2026-10-17 |
+| Follow Builders (X) | productivity | 195 | 17 | 4 | 2% | 2026-10-17 |
+| Tom's Guide · AI | life | 10 | 6 | 4 | 40% | 2026-10-17 |
+| Starter Story (YouTube) | saas | 13 | 6 | 3 | 23% | 2026-10-17 |
 | The Superwall Podcast | app | 4 | 3 | 2 | 50% | 2026-10-16 |
-| Latent Space | perspective | 15 | 2 | 2 | 13% | 2026-10-16 |
+| Latent Space | perspective | 16 | 2 | 2 | 13% | 2026-10-16 |
 | Theoretically Media | content | 4 | 2 | 2 | 50% | 2026-10-14 |
 | Supercompanies (Greg Shove / Section) | consulting | 2 | 2 | 2 | 100% | 2026-10-14 |
-| Lenny's Newsletter & Podcast | productivity | 4 | 3 | 1 | 25% | 2026-10-12 |
+| Lenny's Newsletter & Podcast | productivity | 5 | 3 | 1 | 20% | 2026-10-12 |
 | 陈然 ranchen.org | content | 3 | 2 | 1 | 33% | 2026-10-15 |
 | The Every Podcast (AI & I) | productivity | 2 | 2 | 1 | 50% | 2026-10-15 |
-| Every (YouTube) | consulting | 12 | 1 | 1 | 8% | 2026-10-12 |
+| Every (YouTube) | consulting | 13 | 1 | 1 | 8% | 2026-10-12 |
+| Interconnects | productivity | 3 | 1 | 1 | 33% | 2026-10-11 |
 | Starter Story Podcast | saas | 3 | 1 | 1 | 33% | 2026-10-15 |
 | Startup Ideas Podcast (Greg Isenberg) | app | 3 | 1 | 1 | 33% | 2026-10-16 |
-| Interconnects | productivity | 2 | 1 | 1 | 50% | 2026-10-11 |
 | Sub Club (RevenueCat) | app | 1 | 1 | 1 | 100% | 2026-10-14 |
-| The AI Daily Brief | perspective | 9 | 1 | 0 | 0% | - |
+| The AI Daily Brief | perspective | 10 | 1 | 0 | 0% | - |
 | Lifehacker | life | 7 | 1 | 0 | 0% | - |
-| Riley Brown | productivity | 5 | 1 | 0 | 0% | - |
+| Riley Brown | productivity | 6 | 1 | 0 | 0% | - |
+| Y Combinator / Lightcone (YouTube) | saas | 5 | 1 | 0 | 0% | - |
 | How I AI (Claire Vo) | productivity | 3 | 1 | 0 | 0% | - |
-| Y Combinator / Lightcone (YouTube) | saas | 3 | 1 | 0 | 0% | - |
 | Lenny's Newsletter | （已移除） | 3 | 1 | 0 | 0% | - |
 | Creator Science (Jay Clouse) | content | 2 | 1 | 0 | 0% | - |
 | NYT Personal Tech | life | 2 | 1 | 0 | 0% | - |
 | Behind the Craft (Peter Yang) | productivity | 1 | 1 | 0 | 0% | - |
 | Adam Lyttle | app | 1 | 1 | 0 | 0% | - |
-| Ali Abdaal | content | 12 | 0 | 0 | 0% | - |
+| Ali Abdaal | content | 13 | 0 | 0 | 0% | - |
+| Matt Wolfe | content | 7 | 0 | 0 | 0% | - |
 | Rest of World | - | 7 | 0 | 0 | 0% | - |
-| Matt Wolfe | content | 6 | 0 | 0 | 0% | - |
+| App Masters (Steve P. Young) | app | 4 | 0 | 0 | 0% | - |
 | Liam Ottley / Morningside AI | consulting | 3 | 0 | 0 | 0% | - |
-| App Masters (Steve P. Young) | app | 3 | 0 | 0 | 0% | - |
 | Niche Pursuits | saas | 2 | 0 | 0 | 0% | - |
 | Training Data (Sequoia) | perspective | 2 | 0 | 0 | 0% | - |
 | No Priors | perspective | 2 | 0 | 0 | 0% | - |
 | Unsupervised Learning (Redpoint) | perspective | 1 | 0 | 0 | 0% | - |
 | Minus One (South Park Commons) | perspective | 1 | 0 | 0 | 0% | - |
+| Ras Mic | productivity | 1 | 0 | 0 | 0% | - |
 | Consulting Success Podcast | consulting | 1 | 0 | 0 | 0% | - |
 | Lenny's Podcast | （已移除） | 1 | 0 | 0 | 0% | - |
 | One Useful Thing (Ethan Mollick) | perspective | 0 | 0 | 0 | - | - |
@@ -51,7 +52,6 @@
 | AI + a16z | perspective | 0 | 0 | 0 | - | - |
 | Lex Fridman Podcast | perspective | 0 | 0 | 0 | - | - |
 | Dwarkesh Podcast | perspective | 0 | 0 | 0 | - | - |
-| Ras Mic | productivity | 0 | 0 | 0 | - | - |
 | McKay Wrigley | productivity | 0 | 0 | 0 | - | - |
 | Hamel Husain | consulting | 0 | 0 | 0 | - | - |
 | 少数派 | life | 0 | 0 | 0 | - | - |
