@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-17 · 三条提示词做出一个 LaTeX 工具，Claude Code 团队让审查像拼写检查一样随写随查</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-17/</link>
+      <description>三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器；Claude Code 团队：别再问“有没有人看过代码”；零代码基础做健身 App，三分之一收入来自 X；七个 ChatGPT 插件，帮他找歌、挑电影、学下棋（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-17/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器<br>02:52 Claude Code 团队：别再问“有没有人看过代码”<br>04:31 零代码基础做健身 App，三分之一收入来自 X<br>05:46 七个 ChatGPT 插件，帮他找歌、挑电影、学下棋<br>07:16 今天可以做的一件事</p><p><b>三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器</b><br><a href="https://simonwillison.net/2026/Oct/15/latex/">Simon Willison</a></p><p><b>Claude Code 团队：别再问“有没有人看过代码”</b><br><a href="https://simonwillison.net/2026/Oct/16/code-review/">Simon Willison</a> · <a href="https://x.com/danshipper/status/2111174407637139668">Follow Builders (X)</a></p><p><b>零代码基础做健身 App，三分之一收入来自 X</b><br><a href="https://www.youtube.com/shorts/Rx9R5-Z8ZZU">Starter Story (YouTube)</a></p><p><b>七个 ChatGPT 插件，帮他找歌、挑电影、学下棋</b><br><a href="https://www.tomsguide.com/ai/i-use-these-7-chatgpt-entertainment-plugins-every-day-and-these-prompts-help-them-deliver-the-best-music-and-movie-recommendations">Tom's Guide · AI</a></p>]]></content:encoded>
+      <enclosure url="https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-17.mp3" length="2926893" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 22:45:19 GMT</pubDate>
+      <itunes:duration>00:08:08</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-16 · 一张报价表换来潜在客户，六个 AI 代理去追退款各显神通</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-16/</link>
       <description>把保洁公司的报价表格做成免费工具，再卖后续产品；不懂技术的前摔跤手，三个 AI App 月订阅收入近 4.1 万美元；让 AI 代理「不惜一切」追退款，有的编造了家人生病；Box CEO：后台代理群的用量会是聊天的百倍以上；一段提示词，两部手机靠声音传数据对打乒乓；先测 20 条视频钩子，再写第一行代码（本集语音由 AI 合成）</description>

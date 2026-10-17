@@ -1,5 +1,84 @@
 [
   {
+    "date": "2026-10-17",
+    "title": "三条提示词做出一个 LaTeX 工具，Claude Code 团队让审查像拼写检查一样随写随查",
+    "summary": "三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器；Claude Code 团队：别再问“有没有人看过代码”；零代码基础做健身 App，三分之一收入来自 X；七个 ChatGPT 插件，帮他找歌、挑电影、学下棋",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-17/",
+    "items": [
+      {
+        "headline": "三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "LaTeX renderer",
+            "url": "https://simonwillison.net/2026/Oct/15/latex/"
+          }
+        ]
+      },
+      {
+        "headline": "Claude Code 团队：别再问“有没有人看过代码”",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+            "url": "https://simonwillison.net/2026/Oct/16/code-review/"
+          },
+          {
+            "label": "Follow Builders (X)",
+            "title": "Dan Shipper: generation is now cheap and high quality \n\nthe big capabilities bump we need is ",
+            "url": "https://x.com/danshipper/status/2111174407637139668"
+          }
+        ]
+      },
+      {
+        "headline": "零代码基础做健身 App，三分之一收入来自 X",
+        "sources": [
+          {
+            "label": "Starter Story (YouTube)",
+            "title": "$13k MRR founder reveals why Meta crushes TikTok for app marketing...",
+            "url": "https://www.youtube.com/shorts/Rx9R5-Z8ZZU"
+          }
+        ]
+      },
+      {
+        "headline": "七个 ChatGPT 插件，帮他找歌、挑电影、学下棋",
+        "sources": [
+          {
+            "label": "Tom's Guide · AI",
+            "title": "I use 7 ChatGPT entertainment plugins every day — and these prompts help them deliver the best music and movie recommendations",
+            "url": "https://www.tomsguide.com/ai/i-use-these-7-chatgpt-entertainment-plugins-every-day-and-these-prompts-help-them-deliver-the-best-music-and-movie-recommendations"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器"
+      },
+      {
+        "start": 172,
+        "title": "Claude Code 团队：别再问“有没有人看过代码”"
+      },
+      {
+        "start": 271,
+        "title": "零代码基础做健身 App，三分之一收入来自 X"
+      },
+      {
+        "start": 346,
+        "title": "七个 ChatGPT 插件，帮他找歌、挑电影、学下棋"
+      },
+      {
+        "start": 436,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 488,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-17.mp3",
+    "audioBytes": 2926893,
+    "publishedAt": "2026-10-17T22:45:19.835Z"
+  },
+  {
     "date": "2026-10-16",
     "title": "一张报价表换来潜在客户，六个 AI 代理去追退款各显神通",
     "summary": "把保洁公司的报价表格做成免费工具，再卖后续产品；不懂技术的前摔跤手，三个 AI App 月订阅收入近 4.1 万美元；让 AI 代理「不惜一切」追退款，有的编造了家人生病；Box CEO：后台代理群的用量会是聊天的百倍以上；一段提示词，两部手机靠声音传数据对打乒乓；先测 20 条视频钩子，再写第一行代码",
