@@ -1,26 +1,28 @@
 # AI 实干派 · 来源命中率
 
-统计范围：7 期（不含样刊）。候选数和初筛数从有记录的 7 期开始累计。
+统计范围：8 期（不含样刊）。候选数和初筛数从有记录的 8 期开始累计。
 
 | 来源 | 栏目 | 候选 | 初筛入选 | 成稿 | 成稿率 | 最近成稿 |
 |---|---|---|---|---|---|---|
-| Simon Willison | productivity | 35 | 13 | 8 | 23% | 2026-10-17 |
-| Follow Builders (X) | productivity | 195 | 17 | 4 | 2% | 2026-10-17 |
-| Tom's Guide · AI | life | 10 | 6 | 4 | 40% | 2026-10-17 |
-| Starter Story (YouTube) | saas | 13 | 6 | 3 | 23% | 2026-10-17 |
+| Simon Willison | productivity | 37 | 14 | 8 | 22% | 2026-10-17 |
+| Follow Builders (X) | productivity | 210 | 21 | 6 | 3% | 2026-10-18 |
+| Tom's Guide · AI | life | 13 | 7 | 5 | 38% | 2026-10-18 |
+| Starter Story (YouTube) | saas | 14 | 7 | 3 | 21% | 2026-10-17 |
 | The Superwall Podcast | app | 4 | 3 | 2 | 50% | 2026-10-16 |
 | Latent Space | perspective | 16 | 2 | 2 | 13% | 2026-10-16 |
-| Theoretically Media | content | 4 | 2 | 2 | 50% | 2026-10-14 |
+| Theoretically Media | content | 5 | 2 | 2 | 40% | 2026-10-14 |
 | Supercompanies (Greg Shove / Section) | consulting | 2 | 2 | 2 | 100% | 2026-10-14 |
-| Lenny's Newsletter & Podcast | productivity | 5 | 3 | 1 | 20% | 2026-10-12 |
+| Lenny's Newsletter & Podcast | productivity | 6 | 4 | 1 | 17% | 2026-10-12 |
 | 陈然 ranchen.org | content | 3 | 2 | 1 | 33% | 2026-10-15 |
 | The Every Podcast (AI & I) | productivity | 2 | 2 | 1 | 50% | 2026-10-15 |
-| Every (YouTube) | consulting | 13 | 1 | 1 | 8% | 2026-10-12 |
+| Every (YouTube) | consulting | 16 | 1 | 1 | 6% | 2026-10-12 |
 | Interconnects | productivity | 3 | 1 | 1 | 33% | 2026-10-11 |
 | Starter Story Podcast | saas | 3 | 1 | 1 | 33% | 2026-10-15 |
 | Startup Ideas Podcast (Greg Isenberg) | app | 3 | 1 | 1 | 33% | 2026-10-16 |
+| Smart Bear Live | saas | 1 | 1 | 1 | 100% | 2026-10-18 |
 | Sub Club (RevenueCat) | app | 1 | 1 | 1 | 100% | 2026-10-14 |
-| The AI Daily Brief | perspective | 10 | 1 | 0 | 0% | - |
+| Behind the Craft (Peter Yang) | productivity | 2 | 2 | 0 | 0% | - |
+| The AI Daily Brief | perspective | 11 | 1 | 0 | 0% | - |
 | Lifehacker | life | 7 | 1 | 0 | 0% | - |
 | Riley Brown | productivity | 6 | 1 | 0 | 0% | - |
 | Y Combinator / Lightcone (YouTube) | saas | 5 | 1 | 0 | 0% | - |
@@ -28,9 +30,8 @@
 | Lenny's Newsletter | （已移除） | 3 | 1 | 0 | 0% | - |
 | Creator Science (Jay Clouse) | content | 2 | 1 | 0 | 0% | - |
 | NYT Personal Tech | life | 2 | 1 | 0 | 0% | - |
-| Behind the Craft (Peter Yang) | productivity | 1 | 1 | 0 | 0% | - |
 | Adam Lyttle | app | 1 | 1 | 0 | 0% | - |
-| Ali Abdaal | content | 13 | 0 | 0 | 0% | - |
+| Ali Abdaal | content | 14 | 0 | 0 | 0% | - |
 | Matt Wolfe | content | 7 | 0 | 0 | 0% | - |
 | Rest of World | - | 7 | 0 | 0 | 0% | - |
 | App Masters (Steve P. Young) | app | 4 | 0 | 0 | 0% | - |
@@ -47,7 +48,6 @@
 | 鸭哥 yage.ai | productivity | 0 | 0 | 0 | - | - |
 | Tony Dinh | saas | 0 | 0 | 0 | - | - |
 | The Bootstrapped Founder | saas | 0 | 0 | 0 | - | - |
-| Smart Bear Live | saas | 0 | 0 | 0 | - | - |
 | Google DeepMind: The Podcast | perspective | 0 | 0 | 0 | - | - |
 | AI + a16z | perspective | 0 | 0 | 0 | - | - |
 | Lex Fridman Podcast | perspective | 0 | 0 | 0 | - | - |
@@ -56,4 +56,4 @@
 | Hamel Husain | consulting | 0 | 0 | 0 | - | - |
 | 少数派 | life | 0 | 0 | 0 | - | - |
 
-从未成稿的来源：33 个。第 6 周复盘时，候选多而成稿为 0 的来源优先降权或移除。
+从未成稿的来源：32 个。第 6 周复盘时，候选多而成稿为 0 的来源优先降权或移除。

@@ -8,6 +8,66 @@
   "items": [
     {
       "candidateIds": [
+        "c19",
+        "c17"
+      ],
+      "category": "life",
+      "kind": "本周动态",
+      "eventDate": "2026-10-17",
+      "headline": "AI 助手 20 分钟交齐报税材料，先查它连了哪些账户",
+      "oneLiner": "OpenAI 的 Thibault Sottiaux 说，他的两个 AI 助手通过邮件协作，20 分钟把报税材料交给了会计师；Peter Yang 发现自己的 Google 账户连着 45 个应用和 agent，于是写了一段提示词，让 AI 帮他逐个审计。",
+      "who": "Thibault Sottiaux 在 OpenAI 负责 Codex 和 ChatGPT，用的是工作、生活各一个 AI 助手；Peter Yang 做 AI 教程和访谈，自己的 Google 账户连着 45 个第三方应用和 agent。",
+      "how": "Sottiaux 的私人助手发邮件，请工作助手调出所需文件，再和他的会计师（CPA）对接报税事项。Peter Yang 让 AI 打开 Google 账户的应用连接页，按四步提示词审计，改动之前先拿给他确认。",
+      "result": "Sottiaux 说整个过程用了 20 分钟。Peter Yang 公开了完整提示词，用来清理他那 45 个连接。",
+      "tryThis": "在能操作浏览器的 AI 助手里运行 Peter Yang 的提示词，先清理一遍 Google 账户授权，再考虑把邮箱、文件交给新的 agent。",
+      "caveat": "审计需要 AI 能打开网页、读取授权详情。断开连接后，有些服务可能登录不了。Sottiaux 没讲哪些步骤仍要本人确认，照做时把身份验证和提交报税文件这两步留给自己。",
+      "body": "Sottiaux 在 [X 上](https://x.com/thsottiaux/status/2111495392559067199)说：他的私人助手「Dorito」发邮件给工作助手「Burger」，拿到需要的文件，又去和他的会计师对接报税事项，前后 20 分钟。他的评价是「我们还处在很早期」。这条帖子有 4000 多个赞、700 多条回复。\n\n这种协作的前提，是 agent 能进入你的邮箱和文件。同一天 Peter Yang [发帖](https://x.com/petergyang/status/2111508293818671449)说，他的 Google 账户已经连着 45 个应用和 agent。他给出的审计提示词分四步：**逐个检查所有类别的连接，拿不准就问本人，不要猜；区分「只是用 Google 登录」和「能读 Gmail、Drive、Calendar」这两种权限；给出保留、断开或待确认的建议，说明理由和断开后会受影响的功能，标出权限过大、来源不明和重复的条目；先展示建议，只断开本人明确同意的，再核实已经移除，不删账户，也不取消订阅。**\n\n这两条放在一起看，就是把生活琐事交给 AI 的基本顺序：先弄清楚哪些 agent 拿到了哪些数据，再交给它跨账户办事。提示词里的「先展示再操作」和「不删账户、不取消订阅」可以直接照抄，用在其他授权检查上。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Thibault Sottiaux: My work dot \"Burger\" coordinated with my personal dot \"Dorito\" over email at my ",
+          "url": "https://x.com/thsottiaux/status/2111495392559067199"
+        },
+        {
+          "label": "Follow Builders (X)",
+          "title": "Peter Yang: If you have way too many apps and agents (45!) connected to your Google account ",
+          "url": "https://x.com/petergyang/status/2111508293818671449"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-18-01",
+      "issueDate": "2026-10-18",
+      "issueNumber": 9
+    },
+    {
+      "candidateIds": [
+        "c29"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-18",
+      "headline": "让 ChatGPT-6 当游戏教练，三款游戏的配装都更顺手了",
+      "oneLiner": "Tom's Guide 作者 Elton Jones 让 ChatGPT-6 给三款在玩的游戏出角色配装方案，照着调整后，他说打难度更高的关卡顺利多了。",
+      "who": "Elton Jones，Tom's Guide 作者、资深玩家，正在玩 Splatoon Raiders、CONTROL Resonant 和 Aliens: Fireteam Elite 2。",
+      "how": "他说明自己的职业和卡关的地方，让 ChatGPT-6 推荐主武器、升级优先级和备选打法。ChatGPT-6 会引用 Nintendo Life 等网站，并配上游戏截图。",
+      "result": "他说在 Splatoon Raiders 里单人打高难度副本「不再是拦路虎」；在 Aliens 中按炮塔流配装后，叠加挑战卡的关卡也更容易撑下来。",
+      "tryThis": "下次卡关，把职业、当前装备和卡关的具体原因告诉 AI，要它按优先级给配装，并附上来源，然后自己核对。",
+      "caveat": "效果是他本人的游戏体感。CONTROL 那部分建议他大多早就知道；对刚出的新游戏，AI 能引用的资料有限。",
+      "body": "Jones 在 [Tom's Guide](https://www.tomsguide.com/ai/i-made-chatgpt-6-find-the-best-character-build-in-3-of-my-favorite-games-heres-how-it-became-my-personal-gaming-coach) 写道，他本来对 AI 抱有戒心，但想试试它能不能当战术顾问。在 Splatoon Raiders 里，ChatGPT-6 给他的 Mechanic 推荐了 Tactical Tank 和 Shichirin Pow Slosher，升级顺序为武器伤害、道具伤害、HP；如果生存是主要问题，就把早期点数先投到 HP。携带哪些道具是他自己决定的，和推荐的配装配合得不错。\n\n这类用法的关键是**问题要具体**：说清职业、卡关原因和偏好的打法，让 AI 给出优先级和备选方案，并标出引用来源。Jones 觉得最有用的是分区块的清晰拆解和可靠出处。\n\n同样的提问方式也可以用在其他需要查攻略、比较方案的爱好上，比如健身计划和摄影器材设置。不过资料越少的新东西，越要自己验证。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I made ChatGPT-6 find the best character build in 3 of my favorite games — here’s how it became my personal gaming coach",
+          "url": "https://www.tomsguide.com/ai/i-made-chatgpt-6-find-the-best-character-build-in-3-of-my-favorite-games-heres-how-it-became-my-personal-gaming-coach"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-18-04",
+      "issueDate": "2026-10-18",
+      "issueNumber": 9
+    },
+    {
+      "candidateIds": [
         "c53"
       ],
       "category": "life",

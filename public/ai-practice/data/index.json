@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-17T14:44:28.832Z",
+  "updatedAt": "2026-10-18T14:45:14.753Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 8
+      "count": 9
     },
     {
       "id": "consulting",
@@ -27,7 +27,7 @@
       "name": "Micro SaaS",
       "en": "AI micro SaaS",
       "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
-      "count": 3
+      "count": 4
     },
     {
       "id": "app",
@@ -48,10 +48,42 @@
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 5
+      "count": 7
     }
   ],
   "days": [
+    {
+      "date": "2026-10-18",
+      "number": 9,
+      "title": "两个 AI 助手 20 分钟交齐报税材料，一款年赚六位数的 SaaS 为何增长停滞",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 7,
+      "itemCount": 4,
+      "categoryCounts": {
+        "life": 2,
+        "saas": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "life",
+          "headline": "AI 助手 20 分钟交齐报税材料，先查它连了哪些账户"
+        },
+        {
+          "category": "saas",
+          "headline": "做了九年的视频 SaaS 卡在平台期，便宜套餐反而拉低客户质量"
+        },
+        {
+          "category": "perspective",
+          "headline": "Box CEO：越来越多的工作会变成软件问题"
+        },
+        {
+          "category": "life",
+          "headline": "让 ChatGPT-6 当游戏教练，三款游戏的配装都更顺手了"
+        }
+      ]
+    },
     {
       "date": "2026-10-17",
       "number": 8,

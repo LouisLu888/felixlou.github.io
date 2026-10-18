@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c7"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-18",
+      "headline": "做了九年的视频 SaaS 卡在平台期，便宜套餐反而拉低客户质量",
+      "oneLiner": "Mindstamp 创始人 Brett Lindenberg 说，产品每年给他带来六位数利润，但近两年增长放缓。演示成交率 20% 到 30%。他刚加了一档约 50 美元的便宜套餐，被 Jason Cohen 评为「在差的水域钓鱼」。",
+      "who": "Brett Lindenberg 基本一个人经营互动视频平台 Mindstamp，靠外包补人手，做了九年。他在 Smart Bear Live 节目里请 Jason Cohen 和定位顾问 Jessica Malnik 帮他诊断。",
+      "how": "Mindstamp 能把测验、点击插进视频里，让培训视频有交互，主要用于培训。线索几乎全来自 SEO 和口碑，冷邮件和付费广告都没跑通。他每周做 2 到 5 场演示，套餐原为每月 99、299、499 美元。",
+      "result": "他说六到七成客户做培训，医疗继续教育客户最稳定。两位黏性最强的客户都用到了定制功能：一家在移动 App 里调用 JavaScript SDK，另一家接 HubSpot 和 webhook 做个性化交付。被问到流失的好客户去了哪里，他说不知道。",
+      "tryThis": "挑出合作最久、付费最高的几个客户，问两个问题：如果没有你的产品，他们会用什么；当初为什么选你。也给流失客户做离职访谈。",
+      "caveat": "他的客户总量不大，判断哪个行业最稳定样本太小，他自己也说走掉两家结论就可能变。便宜套餐是否划算取决于数据：Cohen 说，月流失低于 2% 且有人升级才值得做。",
+      "body": "在 [Smart Bear Live 第 10 期](https://smartbearlive.transistor.fm/10)里，Lindenberg 讲了 Mindstamp 的处境：疫情期间培训全面转到线上，SEO 积累的流量至今还在带来线索，但近两年增长慢下来。他已经涨过价，不再追低端客户，可 99 到 299 美元的跨度劝退了不少人。上周，他又加了一档约 50 美元、功能受限的套餐。\n\nJason Cohen 指出了其中的矛盾：Lindenberg 嘴上说想做细分，实际动作却是向更广、更不看重产品的人群扩张。**便宜套餐只有在流失低、过一两年会有相当比例客户升级时才说得通。**如果月流失在 6% 左右，只是零星升级，就是在差的水域钓鱼。Cohen 还区分了「太泛」和「可定制」：Mindstamp 赢单靠的是可定制，下一步该找最需要可定制的那群人。\n\n节目最后给出的 90 天计划，第一步是访谈现有客户。对做小型 SaaS 的人，这期的方法很直接：**找出留得最久的客户，弄清楚他们的替代方案，再决定往哪个方向收窄。**每周的演示本来就在和客户对话，可以顺便问这些问题。",
+      "sources": [
+        {
+          "label": "Smart Bear Live",
+          "title": "E10 w/ Jessica Malnik: Plateaued at six figures, but still hungry",
+          "url": "https://smartbearlive.transistor.fm/10"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-18-02",
+      "issueDate": "2026-10-18",
+      "issueNumber": 9
+    },
+    {
+      "candidateIds": [
         "c40"
       ],
       "category": "saas",
