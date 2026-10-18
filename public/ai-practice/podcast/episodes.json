@@ -1,5 +1,84 @@
 [
   {
+    "date": "2026-10-18",
+    "title": "两个 AI 助手 20 分钟交齐报税材料，一款年赚六位数的 SaaS 为何增长停滞",
+    "summary": "AI 助手 20 分钟交齐报税材料，先查它连了哪些账户；做了九年的视频 SaaS 卡在平台期，便宜套餐反而拉低客户质量；Box CEO：越来越多的工作会变成软件问题；让 ChatGPT-6 当游戏教练，三款游戏的配装都更顺手了",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-18/",
+    "items": [
+      {
+        "headline": "AI 助手 20 分钟交齐报税材料，先查它连了哪些账户",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Thibault Sottiaux: My work dot \"Burger\" coordinated with my personal dot \"Dorito\" over email at my ",
+            "url": "https://x.com/thsottiaux/status/2111495392559067199"
+          },
+          {
+            "label": "Follow Builders (X)",
+            "title": "Peter Yang: If you have way too many apps and agents (45!) connected to your Google account ",
+            "url": "https://x.com/petergyang/status/2111508293818671449"
+          }
+        ]
+      },
+      {
+        "headline": "做了九年的视频 SaaS 卡在平台期，便宜套餐反而拉低客户质量",
+        "sources": [
+          {
+            "label": "Smart Bear Live",
+            "title": "E10 w/ Jessica Malnik: Plateaued at six figures, but still hungry",
+            "url": "https://smartbearlive.transistor.fm/10"
+          }
+        ]
+      },
+      {
+        "headline": "Box CEO：越来越多的工作会变成软件问题",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: The biggest misread of anyone predicting the end of software engineering was ima",
+            "url": "https://x.com/levie/status/2111525362446520466"
+          }
+        ]
+      },
+      {
+        "headline": "让 ChatGPT-6 当游戏教练，三款游戏的配装都更顺手了",
+        "sources": [
+          {
+            "label": "Tom's Guide · AI",
+            "title": "I made ChatGPT-6 find the best character build in 3 of my favorite games — here’s how it became my personal gaming coach",
+            "url": "https://www.tomsguide.com/ai/i-made-chatgpt-6-find-the-best-character-build-in-3-of-my-favorite-games-heres-how-it-became-my-personal-gaming-coach"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "AI 助手 20 分钟交齐报税材料，先查它连了哪些账户"
+      },
+      {
+        "start": 172,
+        "title": "做了九年的视频 SaaS 卡在平台期，便宜套餐反而拉低客户质量"
+      },
+      {
+        "start": 293,
+        "title": "Box CEO：越来越多的工作会变成软件问题"
+      },
+      {
+        "start": 370,
+        "title": "让 ChatGPT-6 当游戏教练，三款游戏的配装都更顺手了"
+      },
+      {
+        "start": 462,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 513,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-18.mp3",
+    "audioBytes": 3076797,
+    "publishedAt": "2026-10-18T22:45:38.342Z"
+  },
+  {
     "date": "2026-10-17",
     "title": "三条提示词做出一个 LaTeX 工具，Claude Code 团队让审查像拼写检查一样随写随查",
     "summary": "三条提示词，Simon Willison 做出可分享的 LaTeX 渲染器；Claude Code 团队：别再问“有没有人看过代码”；零代码基础做健身 App，三分之一收入来自 X；七个 ChatGPT 插件，帮他找歌、挑电影、学下棋",
