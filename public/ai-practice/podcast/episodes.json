@@ -1,5 +1,79 @@
 [
   {
+    "date": "2026-10-19",
+    "title": "每天一篇 AI 写的指南，加密 App 月收入 4.1 万美元；手机素材 15 秒剪成 TikTok",
+    "summary": "每天让 AI 写一篇指南，第一个 iOS App 月收入 4.1 万美元；不请剪辑师，Claude 15 秒剪完一条 TikTok；一条提示词，Opus 剪出带 3D 动画的成片；Aaron Levie：agent 集群让算力成为干活的变量",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-19/",
+    "items": [
+      {
+        "headline": "每天让 AI 写一篇指南，第一个 iOS App 月收入 4.1 万美元",
+        "sources": [
+          {
+            "label": "Starter Story Podcast",
+            "title": "This app is making $2,000 PER DAY",
+            "url": "https://www.youtube.com/@starterstory/search?query=This%20app%20is%20making%20%242%2C000%20PER%20DAY"
+          }
+        ]
+      },
+      {
+        "headline": "不请剪辑师，Claude 15 秒剪完一条 TikTok",
+        "sources": [
+          {
+            "label": "How I AI (Claire Vo)",
+            "title": "“Claude cuts my TikTok”: How this creator is scaling video with AI | Brooke Lacey",
+            "url": "https://podcasters.spotify.com/pod/show/pen-name/episodes/Claude-cuts-my-TikTok-How-this-creator-is-scaling-video-with-AI--Brooke-Lacey-e3qgmsh"
+          }
+        ]
+      },
+      {
+        "headline": "一条提示词，Opus 剪出带 3D 动画的成片",
+        "sources": [
+          {
+            "label": "Riley Brown",
+            "title": "This video was edited by Opus in a single prompt",
+            "url": "https://www.youtube.com/shorts/ODBdb9oyrVs"
+          }
+        ]
+      },
+      {
+        "headline": "Aaron Levie：agent 集群让算力成为干活的变量",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: Here’s why agent swarms are going to be a very big deal. We can finally make com",
+            "url": "https://x.com/levie/status/2112051081014649303"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "每天让 AI 写一篇指南，第一个 iOS App 月收入 4.1 万美元"
+      },
+      {
+        "start": 204,
+        "title": "不请剪辑师，Claude 15 秒剪完一条 TikTok"
+      },
+      {
+        "start": 283,
+        "title": "一条提示词，Opus 剪出带 3D 动画的成片"
+      },
+      {
+        "start": 374,
+        "title": "Aaron Levie：agent 集群让算力成为干活的变量"
+      },
+      {
+        "start": 450,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 497,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-19.mp3",
+    "audioBytes": 2983773,
+    "publishedAt": "2026-10-19T22:45:34.650Z"
+  },
+  {
     "date": "2026-10-18",
     "title": "两个 AI 助手 20 分钟交齐报税材料，一款年赚六位数的 SaaS 为何增长停滞",
     "summary": "AI 助手 20 分钟交齐报税材料，先查它连了哪些账户；做了九年的视频 SaaS 卡在平台期，便宜套餐反而拉低客户质量；Box CEO：越来越多的工作会变成软件问题；让 ChatGPT-6 当游戏教练，三款游戏的配装都更顺手了",
