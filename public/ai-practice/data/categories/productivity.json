@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c36"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-18",
+      "headline": "一条提示词，Opus 剪出带 3D 动画的成片",
+      "oneLiner": "Riley Brown 上传一段有很多口误的自拍视频，只给了一条提示词，Opus 5.5 就完成了剪辑、B-roll、Blender 动画、字幕和配乐。他说 3487 帧在云 GPU 上不到 20 分钟渲染完，花费不到 1 美元。",
+      "who": "内容创作者 Riley Brown 拍完一段口播，16 分钟后发出了这条 Short。",
+      "how": "Opus 先分析转写，按口误和停顿剪切，再到 Twitter 搜索并抓取 B-roll。它用模板搭 Blender 场景，给每个镜头截图自查，把镜头、缩放和动画对齐到他说的每个词，最后加逐词字幕、音效和音乐，传到 Google Drive。",
+      "result": "他说成片 100% 由 Opus 5.5 剪辑。渲染在 RunPod 上完成，不到 20 分钟，费用不到 1 美元。",
+      "tryThis": "先别急着复制全套。可以从「按转写剪掉口误」加上「让 agent 截图检查每一段」开始，后者是让 agent 自己发现画面问题的关键一步。",
+      "caveat": "他事先准备了包含四个镜头的 Blender 模板，还会用 RunPod 云渲染。他说下周的长视频重在讲原理，不会做成拿来就能用的 skill。",
+      "body": "Riley Brown 在 [这条 Short](https://www.youtube.com/shorts/ODBdb9oyrVs) 的说明里列出了 15 个步骤。几处细节值得注意：Claude Code 会调用 GrokBot 在 Twitter 上找相关素材；提到某个品牌时，机械臂动画会把真实 logo 放到桌上；结尾的白板用 logo 和图形代替文字；他本人只在说话时出现在画面下三分之一，其余时间 B-roll 全屏。\n\n可借鉴的结构是：**模板定好画面空间，转写当时间轴，截图检查当质检**。最后一步让 agent 自己看渲染结果，再修改，这比一次生成更可靠。\n\n门槛不低，Blender 模板、云渲染账号和素材抓取都要先搭好。他说下周会出完整视频，讲清这套「小世界」底层怎么运作，让人能搭出自己的版本。",
+      "sources": [
+        {
+          "label": "Riley Brown",
+          "title": "This video was edited by Opus in a single prompt",
+          "url": "https://www.youtube.com/shorts/ODBdb9oyrVs"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-19-03",
+      "issueDate": "2026-10-19",
+      "issueNumber": 10
+    },
+    {
+      "candidateIds": [
         "c2"
       ],
       "category": "productivity",

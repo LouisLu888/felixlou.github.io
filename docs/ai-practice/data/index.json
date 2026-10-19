@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-18T14:45:14.753Z",
+  "updatedAt": "2026-10-19T14:44:40.416Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 9
+      "count": 10
     },
     {
       "id": "consulting",
@@ -20,7 +20,7 @@
       "name": "内容创作",
       "en": "AI content creation",
       "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入",
-      "count": 3
+      "count": 4
     },
     {
       "id": "saas",
@@ -34,14 +34,14 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 8
+      "count": 9
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 9
+      "count": 10
     },
     {
       "id": "life",
@@ -52,6 +52,39 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-10-19",
+      "number": 10,
+      "title": "每天一篇 AI 写的指南，加密 App 月收入 4.1 万美元；手机素材 15 秒剪成 TikTok",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 7,
+      "itemCount": 4,
+      "categoryCounts": {
+        "app": 1,
+        "content": 1,
+        "productivity": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "app",
+          "headline": "每天让 AI 写一篇指南，第一个 iOS App 月收入 4.1 万美元"
+        },
+        {
+          "category": "content",
+          "headline": "不请剪辑师，Claude 15 秒剪完一条 TikTok"
+        },
+        {
+          "category": "productivity",
+          "headline": "一条提示词，Opus 剪出带 3D 动画的成片"
+        },
+        {
+          "category": "perspective",
+          "headline": "Aaron Levie：agent 集群让算力成为干活的变量"
+        }
+      ]
+    },
     {
       "date": "2026-10-18",
       "number": 9,

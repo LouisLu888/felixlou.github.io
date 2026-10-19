@@ -12,6 +12,33 @@
       ],
       "category": "perspective",
       "kind": "观点访谈",
+      "eventDate": "2026-10-19",
+      "headline": "Aaron Levie：agent 集群让算力成为干活的变量",
+      "oneLiner": "Box CEO Aaron Levie 在 2026-10-19 发帖说，agent 集群第一次让研究、测试、数据处理这类工作可以靠多投算力来并行推进。",
+      "who": "Box CEO Aaron Levie，在 X 上发帖。",
+      "how": "他认为很多工作只受投入时间的限制，卡在计划、执行、审查和协调上，所以今天做得远少于它们的经济价值。agent 集群能把这些工作并行化，理论上结果只取决于投入多少算力。",
+      "result": "他的依据是一个推理：只要 agent 能用工具、写代码、处理数据、有领域深度、能互相协调，设定好目标再投入足够的 token，就能解决复杂问题。他举了网络安全、生命科学和材料研究、交易、QA 测试、数据处理等领域。",
+      "tryThis": "盘点自己工作里「有价值但因为没人手而少做」的事，比如测试用例、竞品调研、数据清洗。挑一件小规模试试多个 agent 并行，看审查是否成为新瓶颈。",
+      "caveat": "他自己说的是「理论上」，前提是模型在这些任务上已经足够好。并行之后，审查和协调的工作量能否同步下降，还要看具体领域。",
+      "body": "Aaron Levie 在 [这条帖子](https://x.com/levie/status/2112051081014649303) 里说，agent 集群会是「very big deal」。他的判断是：大量研究、发现、测试类工作并不缺需求，**缺的是人去计划、执行、审查和协调**。如果 agent 能接手这些环节，算力就成了决定产出的关键变量，相关行业的竞争格局也会变。\n\n这是一个判断，还不是已经发生的事。对读者有用的是他给出的分类方法：找出那些多投时间就有更多结果的工作，它们最先能从并行 agent 中受益。上限取决于模型在这件事上够不够好，以及最终审查能不能跟上。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: Here’s why agent swarms are going to be a very big deal. We can finally make com",
+          "url": "https://x.com/levie/status/2112051081014649303"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-19-04",
+      "issueDate": "2026-10-19",
+      "issueNumber": 10
+    },
+    {
+      "candidateIds": [
+        "c16"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
       "eventDate": "2026-10-17",
       "headline": "Box CEO：越来越多的工作会变成软件问题",
       "oneLiner": "Aaron Levie 2026 年 10 月 17 日发帖说，预测「软件工程终结」的人误以为世界需要的软件总量有限；agent 让过去没法数字化的问题也能用软件解决，工程的重要性反而在上升。",

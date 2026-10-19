@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c3"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-19",
+      "headline": "不请剪辑师，Claude 15 秒剪完一条 TikTok",
+      "oneLiner": "有 29 万 TikTok 粉丝的 Brooke Lacey 用 Claude Code、FFmpeg 和 Whisper 剪手机拍的原始素材，她说一条约 15 秒完成。",
+      "who": "Brooke Lacey 在科技行业工作超过 25 年，自己学剪短视频，TikTok 粉丝超过 29 万，还做了免费学 AI 的 App Zosha。",
+      "how": "在自己电脑上，让 Claude Code 调用 Whisper 转写、用 FFmpeg 剪切。她把自己的跳剪节奏、开头钩子和什么算好笑都教给了 Claude，还从评论区挖新脚本的选题。",
+      "result": "她说一条原始视频约 15 秒剪完，节目里有现场演示。她现在每周只发一条，不请剪辑师，粉丝仍在增长。",
+      "tryThis": "如果你本来就用口播拍短视频，可以先装好 FFmpeg 和 Whisper，让 Claude Code 只做一件事：按转写删掉停顿和口误。再把自己满意的成片当范例，写进规则文件。",
+      "caveat": "前提是她多年自己剪片，清楚自己的节奏，能告诉 AI 怎么才算对。Claude 出错时，她要靠状态文件和重新提示把它拉回来。",
+      "body": "在 [How I AI](https://podcasters.spotify.com/pod/show/pen-name/episodes/Claude-cuts-my-TikTok-How-this-creator-is-scaling-video-with-AI--Brooke-Lacey-e3qgmsh) 里，Brooke Lacey 现场让 Claude 剪了一条视频（08:51 起），然后逐步讲解剪辑链路（11:05 起）。这套工具都是现成的：Whisper 负责转写，FFmpeg 负责剪切，Claude Code 负责把两者串起来。\n\n更值得学的是 15:58 起那一段：**她怎么把自己的跳剪节奏、开头钩子和幽默感教给 Claude**。剪辑速度靠工具，剪得像不像她本人，要靠这些规则。另一个做法是**把评论区当选题简报**，观众追问什么就拍什么，选题和后期都不再依赖别人。\n\n32:43 起她谈到 Claude 让她失望的时候，以及怎样用状态文件把它拉回正轨。想照做，先从去停顿和口误开始，再逐步加入风格规则。",
+      "sources": [
+        {
+          "label": "How I AI (Claire Vo)",
+          "title": "“Claude cuts my TikTok”: How this creator is scaling video with AI | Brooke Lacey",
+          "url": "https://podcasters.spotify.com/pod/show/pen-name/episodes/Claude-cuts-my-TikTok-How-this-creator-is-scaling-video-with-AI--Brooke-Lacey-e3qgmsh"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-19-02",
+      "issueDate": "2026-10-19",
+      "issueNumber": 10
+    },
+    {
+      "candidateIds": [
         "c11"
       ],
       "category": "content",

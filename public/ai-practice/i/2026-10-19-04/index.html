@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aaron Levie：agent 集群让算力成为干活的变量｜AI 实干派</title>
+  <meta name="description" content="Box CEO Aaron Levie 在 2026-10-19 发帖说，agent 集群第一次让研究、测试、数据处理这类工作可以靠多投算力来并行推进。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-19-04/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Aaron Levie：agent 集群让算力成为干活的变量｜AI 实干派">
+  <meta property="og:description" content="Box CEO Aaron Levie 在 2026-10-19 发帖说，agent 集群第一次让研究、测试、数据处理这类工作可以靠多投算力来并行推进。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-19-04/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-19.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aaron Levie：agent 集群让算力成为干活的变量｜AI 实干派">
+  <meta name="twitter:description" content="Box CEO Aaron Levie 在 2026-10-19 发帖说，agent 集群第一次让研究、测试、数据处理这类工作可以靠多投算力来并行推进。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-19.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip active" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">10</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">4</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">4</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">9</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">10</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">7</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-19/">AI 实干派 010 · 2026 年 10 月 19 日 · 周一</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-19<span>·</span>US</div>
+        <h1>Aaron Levie：agent 集群让算力成为干活的变量</h1>
+        <p class="summary">Box CEO Aaron Levie 在 2026-10-19 发帖说，agent 集群第一次让研究、测试、数据处理这类工作可以靠多投算力来并行推进。</p>
+        <dl class="facts"><dt>谁说的</dt><dd>Box CEO Aaron Levie，在 X 上发帖。</dd><dt>核心观点</dt><dd>他认为很多工作只受投入时间的限制，卡在计划、执行、审查和协调上，所以今天做得远少于它们的经济价值。agent 集群能把这些工作并行化，理论上结果只取决于投入多少算力。</dd><dt>依据</dt><dd>他的依据是一个推理：只要 agent 能用工具、写代码、处理数据、有领域深度、能互相协调，设定好目标再投入足够的 token，就能解决复杂问题。他举了网络安全、生命科学和材料研究、交易、QA 测试、数据处理等领域。</dd><dt>对你的意义</dt><dd>盘点自己工作里「有价值但因为没人手而少做」的事，比如测试用例、竞品调研、数据清洗。挑一件小规模试试多个 agent 并行，看审查是否成为新瓶颈。</dd><dt>争议·条件</dt><dd>他自己说的是「理论上」，前提是模型在这些任务上已经足够好。并行之后，审查和协调的工作量能否同步下降，还要看具体领域。</dd></dl>
+        <div class="body"><p>Aaron Levie 在 <a href="https://x.com/levie/status/2112051081014649303">这条帖子</a> 里说，agent 集群会是「very big deal」。他的判断是：大量研究、发现、测试类工作并不缺需求，<strong>缺的是人去计划、执行、审查和协调</strong>。如果 agent 能接手这些环节，算力就成了决定产出的关键变量，相关行业的竞争格局也会变。</p><p>这是一个判断，还不是已经发生的事。对读者有用的是他给出的分类方法：找出那些多投时间就有更多结果的工作，它们最先能从并行 agent 中受益。上限取决于模型在这件事上够不够好，以及最终审查能不能跟上。</p></div>
+        <div class="sources">原文：<a href="https://x.com/levie/status/2112051081014649303" target="_blank" rel="noopener" title="Aaron Levie: Here’s why agent swarms are going to be a very big deal. We can finally make com">Follow Builders (X)</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-19/">← 当期全部 4 条</a></span>
+        <span><a href="/ai-practice/c/perspective/">更多「AI 认知」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

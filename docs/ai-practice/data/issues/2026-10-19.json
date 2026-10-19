@@ -1,0 +1,252 @@
+{
+  "date": "2026-10-19",
+  "title": "每天一篇 AI 写的指南，加密 App 月收入 4.1 万美元；手机素材 15 秒剪成 TikTok",
+  "items": [
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-18",
+      "headline": "每天让 AI 写一篇指南，第一个 iOS App 月收入 4.1 万美元",
+      "oneLiner": "Rasty Turek 用编程 agent 三周做出加密存储 App Vaultaire，不投广告也不做短视频，靠每天一篇 AI 写的 SEO 指南获客。他说上个月收入 4.1 万美元，目前日均约 2000 美元。",
+      "who": "Rasty Turek 做过 Google Gmail 团队，创业公司被 Amazon 收购过，Vaultaire 是他的第一个 iOS App：一个只在设备本地加密、没有服务器的文件和照片保险箱。",
+      "how": "代码和网站文字都由 Claude、Codex 等编程 agent 完成。他写了开源工具 Gum，把 Google Search 和 Keyword Planner 接进 MCP。agent 每天早上找出有曝光、没点击的关键词，写一篇指南，再加好内链。",
+      "result": "他说第一个月收入 66 美元，六个月后单月 4.1 万美元，累计下载超过 6 万。网站访问已占流量大头，从网站到下载的转化约 10%。60% 的购买是 39.99 美元终身版，贡献 80% 以上的收入。",
+      "tryThis": "如果你的产品所在品类里，老牌对手只在应用商店竞争，可以先在 Search Console 或 Keyword Planner 里导出「曝光高、点击为零」的词，每天让 AI 针对其中一个写一篇真正解答问题的指南。",
+      "caveat": "这是一个需求早已被验证的成熟品类，他本人有多年安全行业背景。联合主持人 Gus 认为 SEO 在这里管用，是因为需求够窄，换成大众品类未必行得通。",
+      "body": "Rasty Turek 在 [Starter Story](https://www.youtube.com/@starterstory/search?query=This%20app%20is%20making%20%242%2C000%20PER%20DAY) 里展示了 App Store 后台：周订阅 1.99 美元，年订阅 19.99 美元，终身版 39.99 美元。首日付费转化只有 5.47%，到第 35 天还在往上走。他说这类工具「首日转化最低，第 60 天最高」，和那些必须当场转化用户的热门 App 正好相反。\n\n他的增长判断是：这个品类的对手大多有 15 年以上历史，App Store 排名追不上，但**它们都不重视网页**。于是他先做了一个列出功能的官网，再写「怎么在 iPhone 上保存照片」这类指南。现在的流程是 **Keyword Planner 找词 → agent 写指南 → 用内链从已有流量页指向新页 → 等 Google 三四天收录**。他还要求 agent 把下载按钮放在读者常读到的位置。他刻意每天只发一篇，不追求数量。\n\n运营几乎零成本：App 用 Swift 和 UIKit 写，依赖 iCloud，统计用免费的 PostHog。他说现在剩下 99% 的工作就是 Claude 每天早上醒来写这篇指南。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "This app is making $2,000 PER DAY",
+          "url": "https://www.youtube.com/@starterstory/search?query=This%20app%20is%20making%20%242%2C000%20PER%20DAY"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-19-01"
+    },
+    {
+      "candidateIds": [
+        "c3"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-19",
+      "headline": "不请剪辑师，Claude 15 秒剪完一条 TikTok",
+      "oneLiner": "有 29 万 TikTok 粉丝的 Brooke Lacey 用 Claude Code、FFmpeg 和 Whisper 剪手机拍的原始素材，她说一条约 15 秒完成。",
+      "who": "Brooke Lacey 在科技行业工作超过 25 年，自己学剪短视频，TikTok 粉丝超过 29 万，还做了免费学 AI 的 App Zosha。",
+      "how": "在自己电脑上，让 Claude Code 调用 Whisper 转写、用 FFmpeg 剪切。她把自己的跳剪节奏、开头钩子和什么算好笑都教给了 Claude，还从评论区挖新脚本的选题。",
+      "result": "她说一条原始视频约 15 秒剪完，节目里有现场演示。她现在每周只发一条，不请剪辑师，粉丝仍在增长。",
+      "tryThis": "如果你本来就用口播拍短视频，可以先装好 FFmpeg 和 Whisper，让 Claude Code 只做一件事：按转写删掉停顿和口误。再把自己满意的成片当范例，写进规则文件。",
+      "caveat": "前提是她多年自己剪片，清楚自己的节奏，能告诉 AI 怎么才算对。Claude 出错时，她要靠状态文件和重新提示把它拉回来。",
+      "body": "在 [How I AI](https://podcasters.spotify.com/pod/show/pen-name/episodes/Claude-cuts-my-TikTok-How-this-creator-is-scaling-video-with-AI--Brooke-Lacey-e3qgmsh) 里，Brooke Lacey 现场让 Claude 剪了一条视频（08:51 起），然后逐步讲解剪辑链路（11:05 起）。这套工具都是现成的：Whisper 负责转写，FFmpeg 负责剪切，Claude Code 负责把两者串起来。\n\n更值得学的是 15:58 起那一段：**她怎么把自己的跳剪节奏、开头钩子和幽默感教给 Claude**。剪辑速度靠工具，剪得像不像她本人，要靠这些规则。另一个做法是**把评论区当选题简报**，观众追问什么就拍什么，选题和后期都不再依赖别人。\n\n32:43 起她谈到 Claude 让她失望的时候，以及怎样用状态文件把它拉回正轨。想照做，先从去停顿和口误开始，再逐步加入风格规则。",
+      "sources": [
+        {
+          "label": "How I AI (Claire Vo)",
+          "title": "“Claude cuts my TikTok”: How this creator is scaling video with AI | Brooke Lacey",
+          "url": "https://podcasters.spotify.com/pod/show/pen-name/episodes/Claude-cuts-my-TikTok-How-this-creator-is-scaling-video-with-AI--Brooke-Lacey-e3qgmsh"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-19-02"
+    },
+    {
+      "candidateIds": [
+        "c36"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-18",
+      "headline": "一条提示词，Opus 剪出带 3D 动画的成片",
+      "oneLiner": "Riley Brown 上传一段有很多口误的自拍视频，只给了一条提示词，Opus 5.5 就完成了剪辑、B-roll、Blender 动画、字幕和配乐。他说 3487 帧在云 GPU 上不到 20 分钟渲染完，花费不到 1 美元。",
+      "who": "内容创作者 Riley Brown 拍完一段口播，16 分钟后发出了这条 Short。",
+      "how": "Opus 先分析转写，按口误和停顿剪切，再到 Twitter 搜索并抓取 B-roll。它用模板搭 Blender 场景，给每个镜头截图自查，把镜头、缩放和动画对齐到他说的每个词，最后加逐词字幕、音效和音乐，传到 Google Drive。",
+      "result": "他说成片 100% 由 Opus 5.5 剪辑。渲染在 RunPod 上完成，不到 20 分钟，费用不到 1 美元。",
+      "tryThis": "先别急着复制全套。可以从「按转写剪掉口误」加上「让 agent 截图检查每一段」开始，后者是让 agent 自己发现画面问题的关键一步。",
+      "caveat": "他事先准备了包含四个镜头的 Blender 模板，还会用 RunPod 云渲染。他说下周的长视频重在讲原理，不会做成拿来就能用的 skill。",
+      "body": "Riley Brown 在 [这条 Short](https://www.youtube.com/shorts/ODBdb9oyrVs) 的说明里列出了 15 个步骤。几处细节值得注意：Claude Code 会调用 GrokBot 在 Twitter 上找相关素材；提到某个品牌时，机械臂动画会把真实 logo 放到桌上；结尾的白板用 logo 和图形代替文字；他本人只在说话时出现在画面下三分之一，其余时间 B-roll 全屏。\n\n可借鉴的结构是：**模板定好画面空间，转写当时间轴，截图检查当质检**。最后一步让 agent 自己看渲染结果，再修改，这比一次生成更可靠。\n\n门槛不低，Blender 模板、云渲染账号和素材抓取都要先搭好。他说下周会出完整视频，讲清这套「小世界」底层怎么运作，让人能搭出自己的版本。",
+      "sources": [
+        {
+          "label": "Riley Brown",
+          "title": "This video was edited by Opus in a single prompt",
+          "url": "https://www.youtube.com/shorts/ODBdb9oyrVs"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-19-03"
+    },
+    {
+      "candidateIds": [
+        "c16"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-19",
+      "headline": "Aaron Levie：agent 集群让算力成为干活的变量",
+      "oneLiner": "Box CEO Aaron Levie 在 2026-10-19 发帖说，agent 集群第一次让研究、测试、数据处理这类工作可以靠多投算力来并行推进。",
+      "who": "Box CEO Aaron Levie，在 X 上发帖。",
+      "how": "他认为很多工作只受投入时间的限制，卡在计划、执行、审查和协调上，所以今天做得远少于它们的经济价值。agent 集群能把这些工作并行化，理论上结果只取决于投入多少算力。",
+      "result": "他的依据是一个推理：只要 agent 能用工具、写代码、处理数据、有领域深度、能互相协调，设定好目标再投入足够的 token，就能解决复杂问题。他举了网络安全、生命科学和材料研究、交易、QA 测试、数据处理等领域。",
+      "tryThis": "盘点自己工作里「有价值但因为没人手而少做」的事，比如测试用例、竞品调研、数据清洗。挑一件小规模试试多个 agent 并行，看审查是否成为新瓶颈。",
+      "caveat": "他自己说的是「理论上」，前提是模型在这些任务上已经足够好。并行之后，审查和协调的工作量能否同步下降，还要看具体领域。",
+      "body": "Aaron Levie 在 [这条帖子](https://x.com/levie/status/2112051081014649303) 里说，agent 集群会是「very big deal」。他的判断是：大量研究、发现、测试类工作并不缺需求，**缺的是人去计划、执行、审查和协调**。如果 agent 能接手这些环节，算力就成了决定产出的关键变量，相关行业的竞争格局也会变。\n\n这是一个判断，还不是已经发生的事。对读者有用的是他给出的分类方法：找出那些多投时间就有更多结果的工作，它们最先能从并行 agent 中受益。上限取决于模型在这件事上够不够好，以及最终审查能不能跟上。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: Here’s why agent swarms are going to be a very big deal. We can finally make com",
+          "url": "https://x.com/levie/status/2112051081014649303"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-19-04"
+    }
+  ],
+  "action": "打开你自己网站或博客的 Google Search Console，导出过去 28 天「曝光多、点击接近零」的前 10 个搜索词。挑一个你最懂的，让 AI 起草一篇真正回答这个问题的指南，你补上自己的经验和截图，在文中合适的位置放上产品或联系方式，再从流量最高的旧页面加一条内链指向它。一周后回来对比这个词的点击量，判断这套做法值不值得每天做。",
+  "readingMinutes": 7,
+  "meta": {
+    "generatedAt": "2026-10-19T14:44:32.842Z",
+    "engine": "cli",
+    "candidateCount": 36,
+    "candidatesBySource": {
+      "Simon Willison": 2,
+      "How I AI (Claire Vo)": 1,
+      "Lenny's Newsletter & Podcast": 1,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 1,
+      "Theoretically Media": 1,
+      "Starter Story Podcast": 1,
+      "Starter Story (YouTube)": 2,
+      "Every (YouTube)": 3,
+      "Rest of World": 1,
+      "Follow Builders (X)": 21,
+      "Riley Brown": 1
+    },
+    "shortlist": [
+      {
+        "id": "c3",
+        "reason": "谁：有 29 万粉丝的 TikTok 创作者 Brooke Lacey；怎么用：用 Claude Code + FFmpeg + Whisper 剪口播视频，还从评论区挖新脚本；结果：一条约 15 秒剪完，每周的短视频不用请剪辑师。虽然只有简介，但流程和结果写得很清楚。c4 是同一期节目，只留这条原始出处。",
+        "source": "How I AI (Claire Vo)",
+        "title": "“Claude cuts my TikTok”: How this creator is scaling video with AI | Brooke Lacey"
+      },
+      {
+        "id": "c36",
+        "reason": "谁：Riley Brown；怎么用：只给 Opus 一个提示词，它分析逐字稿、上 Twitter 搜 B-roll、剪掉口误和停顿、在 Blender 里搭场景、截图自查再修、把镜头对上口播；结果：拍完 16 分钟就成片。步骤列得很细，个人创作者可以照着试。",
+        "source": "Riley Brown",
+        "title": "This video was edited by Opus in a single prompt"
+      },
+      {
+        "id": "c8",
+        "reason": "谁：独立开发者 Rasty；怎么做：3 周做出并上线第一个 iOS 应用 Vaultaire，靠传统打法赢过大玩家，没拍 TikTok 也没刷 Instagram；结果：月收入 4.1 万美元。有逐字稿，经营数字具体，适合想做副业的人。摘录没提到用 AI，算独立产品赚钱案例。c10 是同一期，只留有逐字稿的这条。",
+        "source": "Starter Story Podcast",
+        "title": "This app is making $2,000 PER DAY"
+      },
+      {
+        "id": "c28",
+        "reason": "谁：Vercel CEO Guillermo Rauch；怎么用：通过 AI Gateway 用新的 DeepSeek 快速模型改一个小游戏，加了音效、碰撞检测和跟车镜头；结果：大约花了 30 美分。小而具体的亲历，能说明成本有多低。",
+        "source": "Follow Builders (X)",
+        "title": "Guillermo Rauch: Tried out the new 𝚍𝚎𝚎𝚙𝚜𝚎𝚎𝚔-𝚟𝟺.𝟷-𝚏𝚕𝚊𝚜𝚑-𝟷𝟶𝟷𝟽-𝚏𝚊𝚜𝚝 on AI Ga"
+      },
+      {
+        "id": "c16",
+        "reason": "AI 认知：Box CEO Aaron Levie 认为 agent 集群能把研究、数据处理、跑测试这类以前被人力卡住的工作并行化，让算力成为关键变量。创始人有论证的判断。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: Here’s why agent swarms are going to be a very big deal. We can finally make com"
+      },
+      {
+        "id": "c27",
+        "reason": "AI 认知：Claude Code 团队的 Thariq 说，现在他更愿意 vibe coding 做小游戏，而不是玩游戏。结合 c35，他打算开源游戏，让玩家自己 vibe coding 做角色、由游戏来平衡数值。这是一线从业者对 AI 改变娱乐和创作的亲身观察。",
+        "source": "Follow Builders (X)",
+        "title": "Thariq: I've realized I often would prefer to vibe code little parts of games than actua"
+      },
+      {
+        "id": "c15",
+        "reason": "AI 认知：swyx 说「数据工程师比 AI 工程师更吃香」，懂数据密集型应用的人比只会做 RAG 的人需求更旺，他还在为此招人。对大厂员工规划职业方向有直接参考。",
+        "source": "Follow Builders (X)",
+        "title": "Swyx: Data engineers > AI engineers\n\nthere's a big difference between a \"RAG guy\" and "
+      },
+      {
+        "id": "c9",
+        "reason": "谁：有 400 万粉丝的体育创作者 Frank；做了什么：做了 GeoSports；结果：不到一个月 100 万玩家，98% 流量来自口碑，只有 2% 来自他自己的帖子。数字具体，但只有简介，信息偏少，放在最后备选。",
+        "source": "Starter Story (YouTube)",
+        "title": "Bro hit 1 million players in under a month with zero email campaigns 😃"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 14376,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1717,
+        "output_tokens_details": {
+          "thinking_tokens": 620
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 14376,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1717,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 14376,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 14376
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.149356
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 16930,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 5492,
+      "output_tokens_details": {
+        "thinking_tokens": 1500
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 16930,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 5492,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 16930,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 16930
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.245288
+  }
+}

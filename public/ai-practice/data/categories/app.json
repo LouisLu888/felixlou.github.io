@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c8"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-18",
+      "headline": "每天让 AI 写一篇指南，第一个 iOS App 月收入 4.1 万美元",
+      "oneLiner": "Rasty Turek 用编程 agent 三周做出加密存储 App Vaultaire，不投广告也不做短视频，靠每天一篇 AI 写的 SEO 指南获客。他说上个月收入 4.1 万美元，目前日均约 2000 美元。",
+      "who": "Rasty Turek 做过 Google Gmail 团队，创业公司被 Amazon 收购过，Vaultaire 是他的第一个 iOS App：一个只在设备本地加密、没有服务器的文件和照片保险箱。",
+      "how": "代码和网站文字都由 Claude、Codex 等编程 agent 完成。他写了开源工具 Gum，把 Google Search 和 Keyword Planner 接进 MCP。agent 每天早上找出有曝光、没点击的关键词，写一篇指南，再加好内链。",
+      "result": "他说第一个月收入 66 美元，六个月后单月 4.1 万美元，累计下载超过 6 万。网站访问已占流量大头，从网站到下载的转化约 10%。60% 的购买是 39.99 美元终身版，贡献 80% 以上的收入。",
+      "tryThis": "如果你的产品所在品类里，老牌对手只在应用商店竞争，可以先在 Search Console 或 Keyword Planner 里导出「曝光高、点击为零」的词，每天让 AI 针对其中一个写一篇真正解答问题的指南。",
+      "caveat": "这是一个需求早已被验证的成熟品类，他本人有多年安全行业背景。联合主持人 Gus 认为 SEO 在这里管用，是因为需求够窄，换成大众品类未必行得通。",
+      "body": "Rasty Turek 在 [Starter Story](https://www.youtube.com/@starterstory/search?query=This%20app%20is%20making%20%242%2C000%20PER%20DAY) 里展示了 App Store 后台：周订阅 1.99 美元，年订阅 19.99 美元，终身版 39.99 美元。首日付费转化只有 5.47%，到第 35 天还在往上走。他说这类工具「首日转化最低，第 60 天最高」，和那些必须当场转化用户的热门 App 正好相反。\n\n他的增长判断是：这个品类的对手大多有 15 年以上历史，App Store 排名追不上，但**它们都不重视网页**。于是他先做了一个列出功能的官网，再写「怎么在 iPhone 上保存照片」这类指南。现在的流程是 **Keyword Planner 找词 → agent 写指南 → 用内链从已有流量页指向新页 → 等 Google 三四天收录**。他还要求 agent 把下载按钮放在读者常读到的位置。他刻意每天只发一篇，不追求数量。\n\n运营几乎零成本：App 用 Swift 和 UIKit 写，依赖 iCloud，统计用免费的 PostHog。他说现在剩下 99% 的工作就是 Claude 每天早上醒来写这篇指南。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "This app is making $2,000 PER DAY",
+          "url": "https://www.youtube.com/@starterstory/search?query=This%20app%20is%20making%20%242%2C000%20PER%20DAY"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-19-01",
+      "issueDate": "2026-10-19",
+      "issueNumber": 10
+    },
+    {
+      "candidateIds": [
         "c7"
       ],
       "category": "app",
