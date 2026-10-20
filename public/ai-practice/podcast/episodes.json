@@ -1,5 +1,107 @@
 [
   {
+    "date": "2026-10-20",
+    "title": "15 秒剪好一条 TikTok，翻 Facebook 群组做本地撮合生意",
+    "summary": "手机原片进，15 秒后出一条剪好的 TikTok；找夜间育婴护士时，他发现中介也在翻 Facebook 群组；AI 自动评测别用默认 0.5 阈值，调一下差很多；Meta Muse Wonder 实测：处理工单很强，别让它碰前端；一次纽约行、一份报税，各开一个用完就归档的 AI 对话；Box CEO：模型越强，垂直 AI 越有差异化空间",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-20/",
+    "items": [
+      {
+        "headline": "手机原片进，15 秒后出一条剪好的 TikTok",
+        "sources": [
+          {
+            "label": "Lenny's Newsletter & Podcast",
+            "title": "🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI",
+            "url": "https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke"
+          }
+        ]
+      },
+      {
+        "headline": "找夜间育婴护士时，他发现中介也在翻 Facebook 群组",
+        "sources": [
+          {
+            "label": "Startup Ideas Podcast (Greg Isenberg)",
+            "title": "Making $$$ with Meta Muse AI",
+            "url": "https://www.youtube.com/@GregIsenberg/search?query=Making%20%24%24%24%20with%20Meta%20Muse%20AI"
+          }
+        ]
+      },
+      {
+        "headline": "AI 自动评测别用默认 0.5 阈值，调一下差很多",
+        "sources": [
+          {
+            "label": "Hamel Husain",
+            "title": "How To Use Decision Models for Evals",
+            "url": "https://hamel.dev/blog/posts/decision-model-evals/"
+          }
+        ]
+      },
+      {
+        "headline": "Meta Muse Wonder 实测：处理工单很强，别让它碰前端",
+        "sources": [
+          {
+            "label": "Lenny's Newsletter & Podcast",
+            "title": "🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI",
+            "url": "https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke"
+          }
+        ]
+      },
+      {
+        "headline": "一次纽约行、一份报税，各开一个用完就归档的 AI 对话",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Nikunj Kothari: A few weeks ago, I was ranting about multiplayer AI experiences and that's when ",
+            "url": "https://x.com/nikunj/status/2112219327881761008"
+          }
+        ]
+      },
+      {
+        "headline": "Box CEO：模型越强，垂直 AI 越有差异化空间",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: The big bitter lesson question in the applied AI layer is that as models get bet",
+            "url": "https://x.com/levie/status/2112404676436222170"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "手机原片进，15 秒后出一条剪好的 TikTok"
+      },
+      {
+        "start": 145,
+        "title": "找夜间育婴护士时，他发现中介也在翻 Facebook 群组"
+      },
+      {
+        "start": 234,
+        "title": "AI 自动评测别用默认 0.5 阈值，调一下差很多"
+      },
+      {
+        "start": 332,
+        "title": "Meta Muse Wonder 实测：处理工单很强，别让它碰前端"
+      },
+      {
+        "start": 417,
+        "title": "一次纽约行、一份报税，各开一个用完就归档的 AI 对话"
+      },
+      {
+        "start": 492,
+        "title": "Box CEO：模型越强，垂直 AI 越有差异化空间"
+      },
+      {
+        "start": 569,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 617,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-20.mp3",
+    "audioBytes": 3700749,
+    "publishedAt": "2026-10-20T22:46:11.306Z"
+  },
+  {
     "date": "2026-10-19",
     "title": "每天一篇 AI 写的指南，加密 App 月收入 4.1 万美元；手机素材 15 秒剪成 TikTok",
     "summary": "每天让 AI 写一篇指南，第一个 iOS App 月收入 4.1 万美元；不请剪辑师，Claude 15 秒剪完一条 TikTok；一条提示词，Opus 剪出带 3D 动画的成片；Aaron Levie：agent 集群让算力成为干活的变量",
