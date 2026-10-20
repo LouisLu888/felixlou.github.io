@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c2"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-19",
+      "headline": "手机原片进，15 秒后出一条剪好的 TikTok",
+      "oneLiner": "TikTok 创作者 Brooke Lacey（29 万粉丝）用 Claude Code 调用 FFmpeg 和 Whisper，她说手机原片进去约 15 秒，就能出一条带字幕、跳剪和推镜的竖版短视频。",
+      "who": "资深技术人、TikTok 创作者 Brooke Lacey，在 How I AI 节目演示自己的剪辑流程。她大约每周发一条视频。",
+      "how": "Claude Code 编排 Whisper 转写、Python 和 FFmpeg。整套剪辑写在一个 TSV 文件里，每行是一个镜头的起止时间、景别和标签；她花了多轮指令，教 Claude 认出自己说笑话的节奏。",
+      "result": "她说成片约 15 秒生成，同一条素材能输出 15、30、60 秒和横版，不用上传素材，也不用打开剪辑软件。这套流程没让她发得更多，省下的是剪辑时间，一条视频不再占掉一整天。",
+      "tryThis": "会用命令行的创作者，可以先让 Claude Code 用 Whisper 转写一条原片，生成一份剪辑点 TSV，自己核对一遍再交给 FFmpeg 输出。",
+      "caveat": "前提是你自己知道好的剪辑是什么样。风格要靠反复修正指令，一条提示词做不出来。",
+      "body": "Brooke Lacey 在 TikTok 上有超过 29 万粉丝。她在 [How I AI 节目](https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke)里演示：手机录的原片交给 Claude Code，由它调用 Whisper 转写、Python 和 FFmpeg 处理，她说大约 15 秒后就得到带字幕、跳剪和推镜的竖版成片。\n\n关键设计是**把剪辑变成一份文本文件**。TSV 每一行写一个镜头的起止时间、景别和标签，Claude 生成这份文件后，同一条命令就能输出 15、30、60 秒和横版几个版本。难的不在剪掉静音。她得教 Claude 认出自己的节奏：包袱前的停顿，一个词说完后在哪里切，重复录的几条里哪条最顺。这些是多轮修正出来的。\n\n她还把每条视频和评论放在一起，让 Claude Code 找出观众在追问、争论什么，整理成下一批选题。她的提醒很直接：**先懂这门手艺，才能交给 AI**。她能教会 Claude，是因为自己清楚推镜该落在哪。更新频率她没有改，大约还是每周一条，省下的是每条的剪辑时间。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-01",
+      "issueDate": "2026-10-20",
+      "issueNumber": 11
+    },
+    {
+      "candidateIds": [
         "c3"
       ],
       "category": "content",

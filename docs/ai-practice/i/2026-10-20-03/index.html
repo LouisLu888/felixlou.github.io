@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 自动评测别用默认 0.5 阈值，调一下差很多｜AI 实干派</title>
+  <meta name="description" content="Hamel Husain 用 100 条租房客服 agent 日志测了 6 个决策模型。调好阈值后，Perplexity 每 100 次评测成本 0.82 美分、F1 0.79；">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-20-03/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 自动评测别用默认 0.5 阈值，调一下差很多｜AI 实干派">
+  <meta property="og:description" content="Hamel Husain 用 100 条租房客服 agent 日志测了 6 个决策模型。调好阈值后，Perplexity 每 100 次评测成本 0.82 美分、F1 0.79；">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-20-03/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-20.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 自动评测别用默认 0.5 阈值，调一下差很多｜AI 实干派">
+  <meta name="twitter:description" content="Hamel Husain 用 100 条租房客服 agent 日志测了 6 个决策模型。调好阈值后，Perplexity 每 100 次评测成本 0.82 美分、F1 0.79；">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-20.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">11</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">3</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">5</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">5</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">9</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">12</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">8</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-20/">AI 实干派 011 · 2026 年 10 月 20 日 · 周二</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-20<span>·</span>US</div>
+        <h1>AI 自动评测别用默认 0.5 阈值，调一下差很多</h1>
+        <p class="summary">Hamel Husain 用 100 条租房客服 agent 日志测了 6 个决策模型。调好阈值后，Perplexity 每 100 次评测成本 0.82 美分、F1 0.79；OpenAI Decisions 是 3.72 美分、F1 0.87。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>AI 评测顾问 Hamel Husain 给一个公寓租赁 agent 做自动评测，目标是找出预订失败、漏转人工这类错误。</dd><dt>怎么用</dt><dd>决策模型给每条日志打一个 0 到 1 的失败概率。他拿人工标注做对照，用五折交叉验证调阈值，要求精确率和召回率都不低于 80%，再用 Platt scaling 校准概率。两步都写成了能直接交给 coding agent 的提示词。</dd><dt>结果</dt><dd>3 个模型满足 80/80 的要求。Liquid d1 和 Clef Flash 调阈值后提升最大，但仍未达标。Clef Flash 有一组日志平均预测失败率约 8%，实际有 60% 出错。</dd><dt>你可以试</dt><dd>手里已有几十条人工标注 pass/fail 日志的团队，保存好模型分数，把他的调阈值提示词交给 coding agent，不需要重新调用模型。</dd><dt>注意</dt><dd>样本只有 100 条，任务故意定得很宽。F1 默认精确率和召回率同样重要，实际业务很少如此。</dd></dl>
+        <div class="body"><p>Hamel Husain 在<a href="https://hamel.dev/blog/posts/decision-model-evals/">博客</a>里测试了几款新出的决策模型，看它们能不能替代 LLM judge 做便宜的自动评测。常见的问题是直接用默认阈值 0.50：如果一个模型给所有出错日志打 0.40、正常日志打 0.10，阈值设在 0.30 就能完美区分，用 0.50 却一个都抓不到。</p><p>他的流程是：<strong>先定最低线，再调阈值，最后看成本</strong>。用作自动告警时，他要求精确率和召回率都至少 80%，在满足这个条件的阈值里选 F1 最高的。达标的三个模型中，Perplexity 最便宜，OpenAI Decisions 效果最好，成本约为前者的 4.5 倍。想把分数当置信度用，还要先校准；校准对 OpenAI 反而略有反效果。</p><p>他建议实际使用时<strong>每种失败模式单独建一个判断器</strong>，预计那时模型之间的差距会缩小。他的习惯是先用效果够好的大模型，再试小模型能否以更低成本追平。</p></div>
+        <div class="sources">原文：<a href="https://hamel.dev/blog/posts/decision-model-evals/" target="_blank" rel="noopener" title="How To Use Decision Models for Evals">Hamel Husain</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-20/">← 当期全部 6 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

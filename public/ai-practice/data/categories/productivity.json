@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c38"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-20",
+      "headline": "AI 自动评测别用默认 0.5 阈值，调一下差很多",
+      "oneLiner": "Hamel Husain 用 100 条租房客服 agent 日志测了 6 个决策模型。调好阈值后，Perplexity 每 100 次评测成本 0.82 美分、F1 0.79；OpenAI Decisions 是 3.72 美分、F1 0.87。",
+      "who": "AI 评测顾问 Hamel Husain 给一个公寓租赁 agent 做自动评测，目标是找出预订失败、漏转人工这类错误。",
+      "how": "决策模型给每条日志打一个 0 到 1 的失败概率。他拿人工标注做对照，用五折交叉验证调阈值，要求精确率和召回率都不低于 80%，再用 Platt scaling 校准概率。两步都写成了能直接交给 coding agent 的提示词。",
+      "result": "3 个模型满足 80/80 的要求。Liquid d1 和 Clef Flash 调阈值后提升最大，但仍未达标。Clef Flash 有一组日志平均预测失败率约 8%，实际有 60% 出错。",
+      "tryThis": "手里已有几十条人工标注 pass/fail 日志的团队，保存好模型分数，把他的调阈值提示词交给 coding agent，不需要重新调用模型。",
+      "caveat": "样本只有 100 条，任务故意定得很宽。F1 默认精确率和召回率同样重要，实际业务很少如此。",
+      "body": "Hamel Husain 在[博客](https://hamel.dev/blog/posts/decision-model-evals/)里测试了几款新出的决策模型，看它们能不能替代 LLM judge 做便宜的自动评测。常见的问题是直接用默认阈值 0.50：如果一个模型给所有出错日志打 0.40、正常日志打 0.10，阈值设在 0.30 就能完美区分，用 0.50 却一个都抓不到。\n\n他的流程是：**先定最低线，再调阈值，最后看成本**。用作自动告警时，他要求精确率和召回率都至少 80%，在满足这个条件的阈值里选 F1 最高的。达标的三个模型中，Perplexity 最便宜，OpenAI Decisions 效果最好，成本约为前者的 4.5 倍。想把分数当置信度用，还要先校准；校准对 OpenAI 反而略有反效果。\n\n他建议实际使用时**每种失败模式单独建一个判断器**，预计那时模型之间的差距会缩小。他的习惯是先用效果够好的大模型，再试小模型能否以更低成本追平。",
+      "sources": [
+        {
+          "label": "Hamel Husain",
+          "title": "How To Use Decision Models for Evals",
+          "url": "https://hamel.dev/blog/posts/decision-model-evals/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-03",
+      "issueDate": "2026-10-20",
+      "issueNumber": 11
+    },
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-19",
+      "headline": "Meta Muse Wonder 实测：处理工单很强，别让它碰前端",
+      "oneLiner": "How I AI 主持人 Claire 用近 20 个真实任务测 Meta Muse Wonder：账单工单、收件箱分拣、电脑操作和写邮件排第一，设计和原型反复出错。",
+      "who": "How I AI 主持人 Claire，用近 20 个工作任务对比 Muse Wonder 与 Opus 5.5、Astra、Fable。",
+      "how": "她搭了一个账单工单基准：模拟的 SaaS 环境里埋了账户关联错误、重复退款、改套餐和提示词注入，看 agent 能否一路处理到关单。",
+      "result": "Muse 修正了关联错误，处理了重复退款逻辑，改了套餐，起草回复并关单，所有埋点都解决了，也没被注入带偏。写邮件能贴合她两句话的简洁风格。前端设计忽略品牌规范、乱加 emoji，原型交互测试时按钮失效。",
+      "tryThis": "把你岗位上一个真实工单或流程做成带坑的小测试，新模型出来先跑一遍再决定用在哪。",
+      "caveat": "复杂任务明显变慢。原型常常能做到八成，后面的视觉打磨和交互完整度做不好。",
+      "body": "Claire 在 [How I AI](https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke) 里实测 Meta 新模型 Muse Wonder。它最强的是长链条 agent 任务：一个办法不行就换一个，直到达成目标。复杂任务上它花的时间更长，结果也更好，她认为时间和质量的对应关系比竞品更清楚。\n\n可借鉴的是她的**账单工单基准**：模拟真实 SaaS 后台，故意埋入账户关联错误、重复退款和提示词注入，要求 agent 从修正、改套餐、写回复一直做到关单。这种测法比聊天对比更接近你会交给 agent 的真实工作。\n\n短板也很具体：前端默认粗衬线字体、蓝紫配色和千篇一律的 SaaS 布局，ChatPRD 改版时还弄坏了图片显示。剪视频时它能挑对 40 秒片段，但字幕位置和音频处理不到位。她的结论是把它放进几个 agent 工作流里试，但不做日常主力，也不用在前端上。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-04",
+      "issueDate": "2026-10-20",
+      "issueNumber": 11
+    },
+    {
+      "candidateIds": [
         "c36"
       ],
       "category": "productivity",

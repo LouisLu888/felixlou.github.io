@@ -1,0 +1,312 @@
+{
+  "date": "2026-10-20",
+  "title": "15 秒剪好一条 TikTok，翻 Facebook 群组做本地撮合生意",
+  "items": [
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-19",
+      "headline": "手机原片进，15 秒后出一条剪好的 TikTok",
+      "oneLiner": "TikTok 创作者 Brooke Lacey（29 万粉丝）用 Claude Code 调用 FFmpeg 和 Whisper，她说手机原片进去约 15 秒，就能出一条带字幕、跳剪和推镜的竖版短视频。",
+      "who": "资深技术人、TikTok 创作者 Brooke Lacey，在 How I AI 节目演示自己的剪辑流程。她大约每周发一条视频。",
+      "how": "Claude Code 编排 Whisper 转写、Python 和 FFmpeg。整套剪辑写在一个 TSV 文件里，每行是一个镜头的起止时间、景别和标签；她花了多轮指令，教 Claude 认出自己说笑话的节奏。",
+      "result": "她说成片约 15 秒生成，同一条素材能输出 15、30、60 秒和横版，不用上传素材，也不用打开剪辑软件。这套流程没让她发得更多，省下的是剪辑时间，一条视频不再占掉一整天。",
+      "tryThis": "会用命令行的创作者，可以先让 Claude Code 用 Whisper 转写一条原片，生成一份剪辑点 TSV，自己核对一遍再交给 FFmpeg 输出。",
+      "caveat": "前提是你自己知道好的剪辑是什么样。风格要靠反复修正指令，一条提示词做不出来。",
+      "body": "Brooke Lacey 在 TikTok 上有超过 29 万粉丝。她在 [How I AI 节目](https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke)里演示：手机录的原片交给 Claude Code，由它调用 Whisper 转写、Python 和 FFmpeg 处理，她说大约 15 秒后就得到带字幕、跳剪和推镜的竖版成片。\n\n关键设计是**把剪辑变成一份文本文件**。TSV 每一行写一个镜头的起止时间、景别和标签，Claude 生成这份文件后，同一条命令就能输出 15、30、60 秒和横版几个版本。难的不在剪掉静音。她得教 Claude 认出自己的节奏：包袱前的停顿，一个词说完后在哪里切，重复录的几条里哪条最顺。这些是多轮修正出来的。\n\n她还把每条视频和评论放在一起，让 Claude Code 找出观众在追问、争论什么，整理成下一批选题。她的提醒很直接：**先懂这门手艺，才能交给 AI**。她能教会 Claude，是因为自己清楚推镜该落在哪。更新频率她没有改，大约还是每周一条，省下的是每条的剪辑时间。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-01"
+    },
+    {
+      "candidateIds": [
+        "c36"
+      ],
+      "category": "saas",
+      "kind": "机会观察",
+      "eventDate": "2026-10-19",
+      "headline": "找夜间育婴护士时，他发现中介也在翻 Facebook 群组",
+      "oneLiner": "Greg Isenberg 演示用 Meta Muse 在蒙特利尔找时薪 30 加元的夜间育婴护士，设想做本地撮合生意，成功一单收几百美元。",
+      "who": "Startup Ideas Podcast 主持人 Greg Isenberg。孩子出生后他请夜间护士，中介承认人选是从 Facebook 群组里找的。",
+      "how": "先定细分、城市和筛选规则，再提示 Muse 搜公开 Facebook 群组、Marketplace 和 Instagram，把姓名、需求、价格、口碑整理进 Airtable 或 Google Sheets；用 Bland AI 的 AgentLine 给 agent 配电话号码，用来打电话、发短信。",
+      "result": "演示里 Muse 默认先去 CanadianNanny.ca 这类公开列表找人；他明确要求搜 Facebook 群组后，拿到了本地妈妈群、保姆招聘群里的帖子，他认为这些质量最高。这一期是演示加设想，他没有报告实际收入。",
+      "tryThis": "选一个你熟悉的城市和服务，手动让 agent 找 20 条公开帖子，建一张表记下价格和口碑，试着撮合成第一单。",
+      "caveat": "Muse 不会自己想到去哪找，要你指定；私密群组需要本人加入。他用的是每月 100 美元的套餐，建议从免费版起步。",
+      "body": "Greg Isenberg 在[这期单人节目](https://www.youtube.com/@GregIsenberg/search?query=Making%20%24%24%24%20with%20Meta%20Muse%20AI)里讲了一个起因：孩子出生后找夜间护士，中介承认人选来自各城市的 Facebook 群组。他当场让 Meta Muse 找蒙特利尔时薪 30 加元的夜护。Muse 默认先翻公开招聘网站，他补一句「从 Facebook 群组给我找 20 个」，结果才转向本地妈妈群和保姆招聘帖。\n\n他的做法分几步：**定细分和城市 → 指定去哪找 → 清洗成自己的名单 → 由 agent 起草私信、打电话**。电话号码用 Bland AI 的 AgentLine，他说约 15 美元。他的设想是成功撮合一单收几百美元；因为不用一组人去翻群，他认为毛利会很高。\n\n他把这类生意分成四级：在别人的群里挖数据，拥有名单，拥有自己的群组或主页，最后做垂直软件把流程自动化。有两点限制：Muse 不会主动想到最好的数据源；买卖 Facebook 群组的做法，他自己也提醒先查平台条款。服务类撮合靠信任，名单里的人靠不靠谱，仍要你自己核实。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "Making $$$ with Meta Muse AI",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=Making%20%24%24%24%20with%20Meta%20Muse%20AI"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-02"
+    },
+    {
+      "candidateIds": [
+        "c38"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-20",
+      "headline": "AI 自动评测别用默认 0.5 阈值，调一下差很多",
+      "oneLiner": "Hamel Husain 用 100 条租房客服 agent 日志测了 6 个决策模型。调好阈值后，Perplexity 每 100 次评测成本 0.82 美分、F1 0.79；OpenAI Decisions 是 3.72 美分、F1 0.87。",
+      "who": "AI 评测顾问 Hamel Husain 给一个公寓租赁 agent 做自动评测，目标是找出预订失败、漏转人工这类错误。",
+      "how": "决策模型给每条日志打一个 0 到 1 的失败概率。他拿人工标注做对照，用五折交叉验证调阈值，要求精确率和召回率都不低于 80%，再用 Platt scaling 校准概率。两步都写成了能直接交给 coding agent 的提示词。",
+      "result": "3 个模型满足 80/80 的要求。Liquid d1 和 Clef Flash 调阈值后提升最大，但仍未达标。Clef Flash 有一组日志平均预测失败率约 8%，实际有 60% 出错。",
+      "tryThis": "手里已有几十条人工标注 pass/fail 日志的团队，保存好模型分数，把他的调阈值提示词交给 coding agent，不需要重新调用模型。",
+      "caveat": "样本只有 100 条，任务故意定得很宽。F1 默认精确率和召回率同样重要，实际业务很少如此。",
+      "body": "Hamel Husain 在[博客](https://hamel.dev/blog/posts/decision-model-evals/)里测试了几款新出的决策模型，看它们能不能替代 LLM judge 做便宜的自动评测。常见的问题是直接用默认阈值 0.50：如果一个模型给所有出错日志打 0.40、正常日志打 0.10，阈值设在 0.30 就能完美区分，用 0.50 却一个都抓不到。\n\n他的流程是：**先定最低线，再调阈值，最后看成本**。用作自动告警时，他要求精确率和召回率都至少 80%，在满足这个条件的阈值里选 F1 最高的。达标的三个模型中，Perplexity 最便宜，OpenAI Decisions 效果最好，成本约为前者的 4.5 倍。想把分数当置信度用，还要先校准；校准对 OpenAI 反而略有反效果。\n\n他建议实际使用时**每种失败模式单独建一个判断器**，预计那时模型之间的差距会缩小。他的习惯是先用效果够好的大模型，再试小模型能否以更低成本追平。",
+      "sources": [
+        {
+          "label": "Hamel Husain",
+          "title": "How To Use Decision Models for Evals",
+          "url": "https://hamel.dev/blog/posts/decision-model-evals/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-03"
+    },
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-19",
+      "headline": "Meta Muse Wonder 实测：处理工单很强，别让它碰前端",
+      "oneLiner": "How I AI 主持人 Claire 用近 20 个真实任务测 Meta Muse Wonder：账单工单、收件箱分拣、电脑操作和写邮件排第一，设计和原型反复出错。",
+      "who": "How I AI 主持人 Claire，用近 20 个工作任务对比 Muse Wonder 与 Opus 5.5、Astra、Fable。",
+      "how": "她搭了一个账单工单基准：模拟的 SaaS 环境里埋了账户关联错误、重复退款、改套餐和提示词注入，看 agent 能否一路处理到关单。",
+      "result": "Muse 修正了关联错误，处理了重复退款逻辑，改了套餐，起草回复并关单，所有埋点都解决了，也没被注入带偏。写邮件能贴合她两句话的简洁风格。前端设计忽略品牌规范、乱加 emoji，原型交互测试时按钮失效。",
+      "tryThis": "把你岗位上一个真实工单或流程做成带坑的小测试，新模型出来先跑一遍再决定用在哪。",
+      "caveat": "复杂任务明显变慢。原型常常能做到八成，后面的视觉打磨和交互完整度做不好。",
+      "body": "Claire 在 [How I AI](https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke) 里实测 Meta 新模型 Muse Wonder。它最强的是长链条 agent 任务：一个办法不行就换一个，直到达成目标。复杂任务上它花的时间更长，结果也更好，她认为时间和质量的对应关系比竞品更清楚。\n\n可借鉴的是她的**账单工单基准**：模拟真实 SaaS 后台，故意埋入账户关联错误、重复退款和提示词注入，要求 agent 从修正、改套餐、写回复一直做到关单。这种测法比聊天对比更接近你会交给 agent 的真实工作。\n\n短板也很具体：前端默认粗衬线字体、蓝紫配色和千篇一律的 SaaS 布局，ChatPRD 改版时还弄坏了图片显示。剪视频时它能挑对 40 秒片段，但字幕位置和音频处理不到位。她的结论是把它放进几个 agent 工作流里试，但不做日常主力，也不用在前端上。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-meta-muse-wonder-how-brooke"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-04"
+    },
+    {
+      "candidateIds": [
+        "c28"
+      ],
+      "category": "life",
+      "kind": "本周动态",
+      "eventDate": "2026-10-19",
+      "headline": "一次纽约行、一份报税，各开一个用完就归档的 AI 对话",
+      "oneLiner": "投资人 Nikunj Kothari 用 Wabi 2.0 管家务：主 agent 看到航班信息就自动开一个旅行对话，行程结束后归档；孩子学校的事单开一个对话，和妻子共享。",
+      "who": "风投合伙人、两个孩子的父亲 Nikunj Kothari。他用过 Wabi 1.0 但没坚持下来，这次试用 2.0 版。",
+      "how": "一个总调度 agent，按事务自动生成单一用途的对话：纽约出差、2025 年报税、孩子学校。单个对话可以分享给家人。",
+      "result": "他说纽约行程的对话是 agent 看到航班后自己建的，需要时提供帮助，回来后自动归档，报税也是这样。按他的说法，下载后马上就用上了。",
+      "tryThis": "用你手上的个人助手，试着按事务分开对话（一次旅行、一次报税），事情办完就归档，家庭事务的对话和伴侣共享。",
+      "caveat": "要让它主动开对话，就得给它看行程等个人信息的权限。他的批评是它太主动，配套应用也还需要打磨。",
+      "body": "Nikunj Kothari 在 [X 上](https://x.com/nikunj/status/2112219327881761008)写了自己用 Wabi 2.0 的体验，并说明没收钱也没投资。他把个人 agent 分成两类：Muse 这种单线程助手，事情一多就混在一起；自己搭的多会话 agent 能共享上下文，但对话一直留着。\n\nWabi 的做法是**一个总调度加按事务开的临时对话**。他去纽约前，agent 根据看到的航班自动建了行程对话，回来后归档；2025 年报税也单开一个。孩子学校的对话分享给了妻子，两人看的是同一份上下文。\n\n对普通家庭，可以借鉴的是组织方式：**一件事一个对话，办完就收起**，需要配合的那件事拉上伴侣。代价是要让 agent 主动建对话，就得开放航班、日程这类信息。他自己的批评是它太主动了。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Nikunj Kothari: A few weeks ago, I was ranting about multiplayer AI experiences and that's when ",
+          "url": "https://x.com/nikunj/status/2112219327881761008"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-05"
+    },
+    {
+      "candidateIds": [
+        "c13"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-20",
+      "headline": "Box CEO：模型越强，垂直 AI 越有差异化空间",
+      "oneLiner": "Aaron Levie 认为，agent 能跑几小时甚至几天的任务后，按行业做专门化的空间是变大了，而不是被基础模型吃掉。",
+      "who": "Box CEO Aaron Levie，2026 年 10 月 20 日在 X 上发帖。",
+      "how": "他认为模型能力有限时，应用层只能做套壳；现在 agent 要调用工具、长时间运行、多个 agent 协同，还要接行业数据、按领域路由模型、改造客户流程，专门化的价值反而上升。",
+      "result": "他的依据是一组变化：任务从一问一答变成长时间运行，从聊天框变成要接入真实工作流、需要变更管理的系统。他预计安全、生命科学、医疗、金融、制造会出现各岗位的自主系统。",
+      "tryThis": "做垂直工具或咨询的人，可以把差异化放在行业数据、工作流编排和落地实施上，单靠提示词撑不住。",
+      "caveat": "他自己也说，离大模型公司的核心用途越近，这条路越难走。这是预测，不是已经发生的事。",
+      "body": "Aaron Levie 在 [X 上](https://x.com/levie/status/2112404676436222170)谈应用层的「苦涩教训」：模型越来越强，怎样把这些能力真正用进企业？他的判断（2026-10-20）是专门化的空间会变大。\n\n他的理由是：模型能力有限时，应用层能做的只是加一段提示词、做一点检索，然后把输出交还给用户。现在 agent 要用工具，任务能跑几小时甚至几天，多个 agent 要围绕一个目标协同，还要接行业数据、按领域选模型，**实施也成了真正的流程变革**，不再是让人往聊天框里打字。这些环节都需要行业知识。\n\n对做 Micro SaaS 或 AI 咨询的人，这意味着价值更多在熟悉某个行业的流程和数据上。他也划了边界：做的事离大模型公司的核心用途越近，越难守住。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: The big bitter lesson question in the applied AI layer is that as models get bet",
+          "url": "https://x.com/levie/status/2112404676436222170"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-06"
+    }
+  ],
+  "action": "找一件你每周都要重复做的事，比如剪视频、写周报或处理工单，把你的修改规则写成一份文件：哪里要删，什么算合格，常见错误是什么。今天就用它让 AI 做一遍，在文件里补上你改动的地方。Brooke 教会 Claude 剪出自己的节奏，Hamel 把评测阈值调到可用，靠的都是把自己的判断写清楚，再拿真实结果去对照。",
+  "readingMinutes": 10,
+  "meta": {
+    "generatedAt": "2026-10-20T14:45:44.461Z",
+    "engine": "cli",
+    "candidateCount": 38,
+    "candidatesBySource": {
+      "Simon Willison": 1,
+      "Lenny's Newsletter & Podcast": 1,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 1,
+      "Creator Science (Jay Clouse)": 1,
+      "Starter Story (YouTube)": 1,
+      "Liam Ottley / Morningside AI": 1,
+      "Every (YouTube)": 3,
+      "Follow Builders (X)": 21,
+      "Training Data (Sequoia)": 1,
+      "Latent Space": 1,
+      "The AI Daily Brief": 1,
+      "Riley Brown": 1,
+      "Startup Ideas Podcast (Greg Isenberg)": 1,
+      "App Masters (Steve P. Young)": 1,
+      "Hamel Husain": 1
+    },
+    "shortlist": [
+      {
+        "id": "c36",
+        "reason": "有逐字稿。Greg Isenberg 本人演示：起因是请夜间护工的中介承认人是从 Facebook 群组里找的。他用 Meta Muse 翻 Facebook 群组、Marketplace 和 Instagram 撮合买卖双方，现场找到蒙特利尔时薪 30 美元的夜间护工，再接 Bland AI 给它配电话号码。最后讲怎样从撮合副业一步步做到垂直软件公司，谁、怎么用、结果都有，个人能照着试。",
+        "source": "Startup Ideas Podcast (Greg Isenberg)",
+        "title": "Making $$$ with Meta Muse AI"
+      },
+      {
+        "id": "c2",
+        "reason": "How I AI 全文。Claire 用近 20 个真实任务实测 Meta Muse：账单客服、收件箱分拣、电脑操作、写邮件表现强，原型和视觉设计不行，还和 Opus 5.5 等模型做了对比。另有 Brooke Lacey 用 AI 扩大视频产量的案例，能回答怎么用、效果如何。",
+        "source": "Lenny's Newsletter & Podcast",
+        "title": "🎙️ How I AI: Meta Muse Wonder + How Brooke Lacey is scaling video with AI"
+      },
+      {
+        "id": "c38",
+        "reason": "Hamel Husain 一手方法文。讲用低成本的决策模型代替 LLM 评判做自动评测，并说明不要直接用默认的 0.5 阈值、该怎么调。做 AI 产品的个人或小团队可以照着做。",
+        "source": "Hamel Husain",
+        "title": "How To Use Decision Models for Evals"
+      },
+      {
+        "id": "c5",
+        "reason": "简介本身数字很具体：Dorie Clark 从 2.2 万粉丝起步，前 4.5 个月每周投入 10–20 小时、发了 99 条 Reels，只净增约 350 粉，后来 5 个月涨到 50 万以上。是内容创作的一手复盘。和 AI 的关系摘录里没体现，下一步编辑需要核实。",
+        "source": "Creator Science (Jay Clouse)",
+        "title": "#322: How Dorie Clark gained 500K+ Instagram followers in 5 months"
+      },
+      {
+        "id": "c28",
+        "reason": "投资人 Nikunj Kothari 亲身用过 Wabi 1.0 和 2.0，对比单人助手和自建多 agent 两种个人 agent 用法，说明 2.0 的编排者模式为什么让他留了下来。属于个人 AI 助手的一线使用感受。Garry Tan 那条（c20）说的是同一件事，只留这条更接近一手的。",
+        "source": "Follow Builders (X)",
+        "title": "Nikunj Kothari: A few weeks ago, I was ranting about multiplayer AI experiences and that's when "
+      },
+      {
+        "id": "c26",
+        "reason": "Vercel CEO 讲开发过程：做 v0 时，要扛住服务器崩溃、LLM 不稳定、函数限制，底层保障写得很痛苦，于是把这套能力做成开源的 HTML artifact 构建器，他自己几分钟就用它做出一个浮动容器。独立开发者可以直接拿来用。",
+        "source": "Follow Builders (X)",
+        "title": "Guillermo Rauch: We open sourced a *really fast* HTML artifact builder. It's powered by libfx, ma"
+      },
+      {
+        "id": "c1",
+        "reason": "AI 认知类。Simon Willison 引用 Jeremy Scheff 的文章，谈编程 agent 让享受解谜的职业程序员失去了什么，回应大厂工程师对职业变化的切身担忧。",
+        "source": "Simon Willison",
+        "title": "My obituary for programming"
+      },
+      {
+        "id": "c13",
+        "reason": "AI 认知类。Box CEO Aaron Levie 的判断：模型越强、能长时间跑任务、用工具越熟练，应用层在各个行业做出差异化的空间反而越大，不再只是「套壳」。对做 AI 产品和创业的人有参考价值。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: The big bitter lesson question in the applied AI layer is that as models get bet"
+      },
+      {
+        "id": "c32",
+        "reason": "AI 认知类。简介信息比较足：Mecka 创始人讲怎样生产机器人训练数据，包括定制采集帽和触觉手套、数百 PB 数据，以及行业正在形成的数据配比（约百万小时人类第一视角数据、数万小时机器人数据、几小时目标场景遥操作）。是一线创始人有依据的判断。",
+        "source": "Training Data (Sequoia)",
+        "title": "Inside the Robot Data Factory: Mecka's Josh Gao on Sensorizing Humans to Train Robots"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 15795,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1904,
+        "output_tokens_details": {
+          "thinking_tokens": 645
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 15795,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1904,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 15795,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 15795
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.164448
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 25643,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 9178,
+      "output_tokens_details": {
+        "thinking_tokens": 3401
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 25643,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 9178,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 25643,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 25643
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.388712
+  }
+}

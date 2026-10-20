@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c13"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-20",
+      "headline": "Box CEO：模型越强，垂直 AI 越有差异化空间",
+      "oneLiner": "Aaron Levie 认为，agent 能跑几小时甚至几天的任务后，按行业做专门化的空间是变大了，而不是被基础模型吃掉。",
+      "who": "Box CEO Aaron Levie，2026 年 10 月 20 日在 X 上发帖。",
+      "how": "他认为模型能力有限时，应用层只能做套壳；现在 agent 要调用工具、长时间运行、多个 agent 协同，还要接行业数据、按领域路由模型、改造客户流程，专门化的价值反而上升。",
+      "result": "他的依据是一组变化：任务从一问一答变成长时间运行，从聊天框变成要接入真实工作流、需要变更管理的系统。他预计安全、生命科学、医疗、金融、制造会出现各岗位的自主系统。",
+      "tryThis": "做垂直工具或咨询的人，可以把差异化放在行业数据、工作流编排和落地实施上，单靠提示词撑不住。",
+      "caveat": "他自己也说，离大模型公司的核心用途越近，这条路越难走。这是预测，不是已经发生的事。",
+      "body": "Aaron Levie 在 [X 上](https://x.com/levie/status/2112404676436222170)谈应用层的「苦涩教训」：模型越来越强，怎样把这些能力真正用进企业？他的判断（2026-10-20）是专门化的空间会变大。\n\n他的理由是：模型能力有限时，应用层能做的只是加一段提示词、做一点检索，然后把输出交还给用户。现在 agent 要用工具，任务能跑几小时甚至几天，多个 agent 要围绕一个目标协同，还要接行业数据、按领域选模型，**实施也成了真正的流程变革**，不再是让人往聊天框里打字。这些环节都需要行业知识。\n\n对做 Micro SaaS 或 AI 咨询的人，这意味着价值更多在熟悉某个行业的流程和数据上。他也划了边界：做的事离大模型公司的核心用途越近，越难守住。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: The big bitter lesson question in the applied AI layer is that as models get bet",
+          "url": "https://x.com/levie/status/2112404676436222170"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-06",
+      "issueDate": "2026-10-20",
+      "issueNumber": 11
+    },
+    {
+      "candidateIds": [
         "c16"
       ],
       "category": "perspective",

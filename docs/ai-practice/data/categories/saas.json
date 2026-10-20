@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c36"
+      ],
+      "category": "saas",
+      "kind": "机会观察",
+      "eventDate": "2026-10-19",
+      "headline": "找夜间育婴护士时，他发现中介也在翻 Facebook 群组",
+      "oneLiner": "Greg Isenberg 演示用 Meta Muse 在蒙特利尔找时薪 30 加元的夜间育婴护士，设想做本地撮合生意，成功一单收几百美元。",
+      "who": "Startup Ideas Podcast 主持人 Greg Isenberg。孩子出生后他请夜间护士，中介承认人选是从 Facebook 群组里找的。",
+      "how": "先定细分、城市和筛选规则，再提示 Muse 搜公开 Facebook 群组、Marketplace 和 Instagram，把姓名、需求、价格、口碑整理进 Airtable 或 Google Sheets；用 Bland AI 的 AgentLine 给 agent 配电话号码，用来打电话、发短信。",
+      "result": "演示里 Muse 默认先去 CanadianNanny.ca 这类公开列表找人；他明确要求搜 Facebook 群组后，拿到了本地妈妈群、保姆招聘群里的帖子，他认为这些质量最高。这一期是演示加设想，他没有报告实际收入。",
+      "tryThis": "选一个你熟悉的城市和服务，手动让 agent 找 20 条公开帖子，建一张表记下价格和口碑，试着撮合成第一单。",
+      "caveat": "Muse 不会自己想到去哪找，要你指定；私密群组需要本人加入。他用的是每月 100 美元的套餐，建议从免费版起步。",
+      "body": "Greg Isenberg 在[这期单人节目](https://www.youtube.com/@GregIsenberg/search?query=Making%20%24%24%24%20with%20Meta%20Muse%20AI)里讲了一个起因：孩子出生后找夜间护士，中介承认人选来自各城市的 Facebook 群组。他当场让 Meta Muse 找蒙特利尔时薪 30 加元的夜护。Muse 默认先翻公开招聘网站，他补一句「从 Facebook 群组给我找 20 个」，结果才转向本地妈妈群和保姆招聘帖。\n\n他的做法分几步：**定细分和城市 → 指定去哪找 → 清洗成自己的名单 → 由 agent 起草私信、打电话**。电话号码用 Bland AI 的 AgentLine，他说约 15 美元。他的设想是成功撮合一单收几百美元；因为不用一组人去翻群，他认为毛利会很高。\n\n他把这类生意分成四级：在别人的群里挖数据，拥有名单，拥有自己的群组或主页，最后做垂直软件把流程自动化。有两点限制：Muse 不会主动想到最好的数据源；买卖 Facebook 群组的做法，他自己也提醒先查平台条款。服务类撮合靠信任，名单里的人靠不靠谱，仍要你自己核实。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "Making $$$ with Meta Muse AI",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=Making%20%24%24%24%20with%20Meta%20Muse%20AI"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-20-02",
+      "issueDate": "2026-10-20",
+      "issueNumber": 11
+    },
+    {
+      "candidateIds": [
         "c7"
       ],
       "category": "saas",
