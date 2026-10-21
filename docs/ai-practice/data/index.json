@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-20T14:45:50.713Z",
+  "updatedAt": "2026-10-21T14:44:22.624Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 11
+      "count": 12
     },
     {
       "id": "consulting",
       "name": "AI 咨询",
       "en": "AI consulting",
       "desc": "找客户、诊断业务、界定交付、培训、实施与维护",
-      "count": 3
+      "count": 4
     },
     {
       "id": "content",
@@ -27,7 +27,7 @@
       "name": "Micro SaaS",
       "en": "AI micro SaaS",
       "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
-      "count": 5
+      "count": 6
     },
     {
       "id": "app",
@@ -41,7 +41,7 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 12
+      "count": 14
     },
     {
       "id": "life",
@@ -52,6 +52,43 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-10-21",
+      "number": 12,
+      "title": "一句“更好玩”换来千场模拟对局，流量减半而试用反增",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 8,
+      "itemCount": 5,
+      "categoryCounts": {
+        "productivity": 2,
+        "saas": 1,
+        "consulting": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "一句“让它好玩得多”，AI 通宵跑了上千场模拟对局"
+        },
+        {
+          "category": "saas",
+          "headline": "网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具"
+        },
+        {
+          "category": "productivity",
+          "headline": "给 Claude Code 装个“旁观者”，它拦下了 45 个文件的误删"
+        },
+        {
+          "category": "consulting",
+          "headline": "按故事点付工程师工资，AI 咨询公司 Tenex 做到 75 人"
+        },
+        {
+          "category": "perspective",
+          "headline": "Mollick：从带着 AI 一步步做，到召唤一群 agent 再验收"
+        }
+      ]
+    },
     {
       "date": "2026-10-20",
       "number": 11,

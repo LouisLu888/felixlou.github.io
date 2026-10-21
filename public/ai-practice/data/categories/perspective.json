@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c3"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-20",
+      "headline": "Mollick：从带着 AI 一步步做，到召唤一群 agent 再验收",
+      "oneLiner": "Ethan Mollick 写道，METR 测得 AI 能完成的任务长度从 2024 年的约 4 分钟涨到 2026 年 4 月的 17 小时，之后这个基准已经测不准了。",
+      "who": "沃顿商学院教授 Ethan Mollick，在新书 Co-Existence 出版当天，于 One Useful Thing 回顾了 30 个月的 AI 进展。",
+      "how": "他在“半人马”（人和 AI 分工）、“赛博格”（人和 AI 交融）之外，提出第三种协作方式“召唤师”：按需召唤 agent、分派任务、评估结果。他认为人的优势在于深度知识、广度知识、品味和主动性。",
+      "result": "他引用的数据：GPT-4 发布以来，AI 能完成的任务长度翻了八番；研究生级题库每答对一题的成本从 30 美分降到 0.04 美分；已有 180 个模型超过当年的 GPT-4，其中 19 个能在手机上运行。",
+      "tryThis": "把一件需要几小时的研究加制图任务交给一个编排型 agent，只给两句方向，让它出多个版本，你负责挑和评。",
+      "caveat": "他强调能力边界仍然参差不齐：AI 写长文依然很差。召唤师模式让人越来越难看清 AI 是怎样得出结果的。",
+      "body": "Mollick 在[本人文章](https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts)里说，文中图表全部由 Opus 5.5 在 Claude Projects 里完成：一个编排 agent 分派子 agent 做调研、制图、排版和引用，原本要几小时的工作几分钟完成。他反复只说“做得更好”，AI 还指出他算错了月数，文章原本要叫“28 个月”。\n\n这些属于他的判断和归纳，不是定论。对读者的影响在于**分配精力**：执行可以大量委托，人要留住的是判断结果好坏的能力。委托越多，越需要能检查结果的专业知识。",
+      "sources": [
+        {
+          "label": "One Useful Thing (Ethan Mollick)",
+          "title": "30 Months on the Exponential (in Charts)",
+          "url": "https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-21-05",
+      "issueDate": "2026-10-21",
+      "issueNumber": 12
+    },
+    {
+      "candidateIds": [
         "c13"
       ],
       "category": "perspective",

@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c8"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-21",
+      "headline": "网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具",
+      "oneLiner": "播客托管 SaaS Castos 创始人 Craig Hewitt 说，网站流量只剩以前一半左右，免费试用却增加了，约 25% 的新客户可能来自用 AI 做的新内容。",
+      "who": "Craig Hewitt，播客托管 SaaS Castos 的创始人，在 Niche Pursuits 播客讲 AI 搜索时代的获客变化。",
+      "how": "让 Claude 按播客主要完成的具体任务提出免费工具点子，团队筛出跟购买意图有关的，再按现成的页面模板让 AI 生成大部分页面，人工审核后上线。",
+      "result": "他说流量约为过去的一半，试用量上升，约 25% 的新客户可能来自这些新内容。WordPress 插件仍是另一大来源。",
+      "tryThis": "列出你的目标客户付费前要做的 5 件小事，挑一件做成浏览器里能直接用的工具页，测一下注册转化。",
+      "caveat": "他说归因很难，一个客户可能多次接触才注册。这套做法建立在已有品牌、插件渠道和邮件列表的基础上。",
+      "body": "Craig Hewitt 在 [Niche Pursuits 访谈](https://www.nichepursuits.com/craig-hewitt/)里说，Castos 过去靠“什么是播客”“最佳麦克风”这类大词文章获客。现在 AI 直接回答了这些问题，流量少了一半，团队转向两类内容：**产品对比页和免费工具**。比如上传视频文件、直接导出 MP3 的小工具。\n\n工具页的流程是固定的：Claude 提点子，人评估购买意图和用途（获客还是拿外链），模板规定工具放在页面顶部、搜索内容放在下面，人工审核，然后通过邮件推送。他们给客户每月发一封，给非客户每周发一封。工具大多在用户浏览器里运行，几乎不增加服务器负担。\n\n这套做法的前提是渠道。Castos 早年花几千美元买下装在约两万个 WordPress 站点上的免费插件，上线第一天就有付费客户。他的建议是先问未来的客户聚集在哪里。",
+      "sources": [
+        {
+          "label": "Niche Pursuits",
+          "title": "How Craig Hewitt Grew Castos to $1M+ in Revenue",
+          "url": "https://www.nichepursuits.com/craig-hewitt/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-21-02",
+      "issueDate": "2026-10-21",
+      "issueNumber": 12
+    },
+    {
+      "candidateIds": [
         "c36"
       ],
       "category": "saas",

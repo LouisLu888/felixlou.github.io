@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c45"
+      ],
+      "category": "consulting",
+      "kind": "机会观察",
+      "eventDate": "2026-10-21",
+      "headline": "按故事点付工程师工资，AI 咨询公司 Tenex 做到 75 人",
+      "oneLiner": "Tenex 联创 Alex Lieberman 说，公司按交付的故事点而非工时付工程师报酬，已有 75 人，客户一半是 Fortune 2000，计划和决策都和代码一起存进 Git。",
+      "who": "Tenex 联创 Alex Lieberman 和特别项目负责人 CJ Hess，在 Latent Space 讲如何帮大企业落地 AI。",
+      "how": "CJ 介绍 MetaHarness：一套共享的 skills、项目文档和 CLI，计划、验收标准、决策都提交进 Git，agent 回到任务时能读到“为什么这么做”。",
+      "result": "Alex 说担心的刷点数问题不是主要问题，因为 AI strategist 要对客户留存负责，会拒绝对客户没用的工作。客户需求正从外包开发扩展到全公司的 AI 转型。",
+      "tryThis": "做 AI 咨询或外包的人，可以试一个按交付物报价的小项目，并把计划和验收标准写成 agent 能读的文档。",
+      "caveat": "Tenex 自己承认，这么多结构对单个项目的小团队可能太重。理解客户、设计架构这类工作很难拆成故事点计价。",
+      "body": "在 [Latent Space 访谈](https://www.latent.space/p/tenex)里，CJ 讲了他加入 Tenex 的原因：以前自己做咨询按小时收费，用 AI 后产出更快更好，收入反而少了。Tenex 按故事点付酬，于是产出越多拿得越多。随着模型变强，他直接写代码的时间变少，更多时间花在把客户背景整理成模型能用的形式。\n\n主持人带来一个反例实验 Kill My SaaS：征集替代一款报价每年 4.3 万美元的讲者管理工具，收到 72 份作品。人类评委选出的冠军，在 AI 评委榜上只排第 19。**“满足测试场景”和“人愿意用”是两回事**。Alex 的反驳是：越往大客户走，替换成熟系统越贵、风险越大，小工具也得有人长期维护。\n\n对咨询从业者，这场讨论给出了一个报价思路：卖结果，同时把维护责任算进交付范围。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess",
+          "url": "https://www.latent.space/p/tenex"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-21-04",
+      "issueDate": "2026-10-21",
+      "issueNumber": 12
+    },
+    {
+      "candidateIds": [
         "c21"
       ],
       "category": "consulting",

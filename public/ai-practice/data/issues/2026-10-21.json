@@ -1,0 +1,290 @@
+{
+  "date": "2026-10-21",
+  "title": "一句“更好玩”换来千场模拟对局，流量减半而试用反增",
+  "items": [
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-20",
+      "headline": "一句“让它好玩得多”，AI 通宵跑了上千场模拟对局",
+      "oneLiner": "Simon Willison 用 Claude Code 做手机即时战略游戏，12 个大版本、321 次提交，代码他几乎没看；一句“让它好玩得多”让 AI 自己跑了上千场模拟试玩，再据此调平衡。",
+      "who": "开发者 Simon Willison 的业余项目：做一款能在手机上玩的 Command & Conquer 式即时战略游戏，用的是他自己很少写的 TypeScript。",
+      "how": "7 月用 Claude Fable 5 起步，先让 AI 提问再定 MVP。10 月换 Opus 5.5，在 Ultracode 模式（一个脚本同时调度许多 subagent）下只给了一句“让它好玩得多”。",
+      "result": "按 Claude 写的发布说明，它跑了一千多场模拟试玩：1200 场 AI 对 AI 比赛里，25 分钟还没分出胜负的比例从 14% 降到 0.9%；落后 800 以上资源后翻盘的比例从 24% 升到 46%。",
+      "tryThis": "给 agent 布置复杂设计任务时，加一句“先调研并批评这个设计，我们商定修改后再动手”。",
+      "caveat": "一次通宵任务要跑很多小时；他几乎没审代码，只靠大量试玩验收，适合个人项目，不适合要对代码负责的生产系统。",
+      "body": "Simon Willison 在[本人博客](https://simonwillison.net/2026/Oct/20/battledrones/)复盘了 Battle Drones 的开发过程：12 个大版本，321 次提交，主要由 Claude Code 完成。前三版能看不能玩，他原本认为 coding agent 只能做出“像游戏的东西”。直到用 Ultracode 模式发出一句“让它好玩得多”，傍晚开始跑，第二天上午才拿到结果。之后一句“移植到 three.js”又跑了一夜，所有 3D 模型都是 Claude 用代码画出来的。\n\n可借鉴的有两点。第一，**让 agent 自己造评测**：游戏好不好玩没法直接测，它就模拟大量对局，用“僵局比例”“翻盘率”这类指标代替。第二，他后来觉得自己出的设计太少，于是写了一段很长的地图设计提示，结尾要求**先调研、批评，商定后再动手**，结果做出了他认为最好玩的地图。\n\n他的投入主要在试玩和提方向上。在线多人版本是后来补的，因为靠声音同步的近场多人模式“很让人头疼”。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
+          "url": "https://simonwillison.net/2026/Oct/20/battledrones/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-21-01"
+    },
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-21",
+      "headline": "网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具",
+      "oneLiner": "播客托管 SaaS Castos 创始人 Craig Hewitt 说，网站流量只剩以前一半左右，免费试用却增加了，约 25% 的新客户可能来自用 AI 做的新内容。",
+      "who": "Craig Hewitt，播客托管 SaaS Castos 的创始人，在 Niche Pursuits 播客讲 AI 搜索时代的获客变化。",
+      "how": "让 Claude 按播客主要完成的具体任务提出免费工具点子，团队筛出跟购买意图有关的，再按现成的页面模板让 AI 生成大部分页面，人工审核后上线。",
+      "result": "他说流量约为过去的一半，试用量上升，约 25% 的新客户可能来自这些新内容。WordPress 插件仍是另一大来源。",
+      "tryThis": "列出你的目标客户付费前要做的 5 件小事，挑一件做成浏览器里能直接用的工具页，测一下注册转化。",
+      "caveat": "他说归因很难，一个客户可能多次接触才注册。这套做法建立在已有品牌、插件渠道和邮件列表的基础上。",
+      "body": "Craig Hewitt 在 [Niche Pursuits 访谈](https://www.nichepursuits.com/craig-hewitt/)里说，Castos 过去靠“什么是播客”“最佳麦克风”这类大词文章获客。现在 AI 直接回答了这些问题，流量少了一半，团队转向两类内容：**产品对比页和免费工具**。比如上传视频文件、直接导出 MP3 的小工具。\n\n工具页的流程是固定的：Claude 提点子，人评估购买意图和用途（获客还是拿外链），模板规定工具放在页面顶部、搜索内容放在下面，人工审核，然后通过邮件推送。他们给客户每月发一封，给非客户每周发一封。工具大多在用户浏览器里运行，几乎不增加服务器负担。\n\n这套做法的前提是渠道。Castos 早年花几千美元买下装在约两万个 WordPress 站点上的免费插件，上线第一天就有付费客户。他的建议是先问未来的客户聚集在哪里。",
+      "sources": [
+        {
+          "label": "Niche Pursuits",
+          "title": "How Craig Hewitt Grew Castos to $1M+ in Revenue",
+          "url": "https://www.nichepursuits.com/craig-hewitt/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-21-02"
+    },
+    {
+      "candidateIds": [
+        "c43"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-21",
+      "headline": "给 Claude Code 装个“旁观者”，它拦下了 45 个文件的误删",
+      "oneLiner": "Dan McAteer 用 Claude Mods 定制 Claude Code：内置的 You Should Know 发现他约 45 个文件里有未提交的改动；他自写的监督 mod 在 111 轮对话里触发了 99 次。",
+      "who": "AI 工程师 Dan McAteer，在 Latent Space 撰文，分享几周来用 Claude Mods 定制 Claude Code 的体验。",
+      "how": "Mod 是在 Claude Code 里运行的 TypeScript/JavaScript 函数，可以拦截提示、工具调用、界面渲染等事件。可以用自然语言让 Claude 写 mod。",
+      "result": "You Should Know 提醒他：正在改的文件和另外约 45 个文件都有未提交的改动，丢弃演示修改会连带丢掉这些工作。他的 Next Steps Supervisor 在 10 月 15 日后的 111 轮对话里触发了 99 轮。",
+      "tryThis": "在 Claude Code 里运行 /plugin，打开 Installed，启用默认关闭的 You Should Know，试用一周。",
+      "caveat": "触发太频繁就成了噪音。他说每次检查在 50k token 的会话上约消耗 5–6k 输入当量 token。mod 以你的权限运行，装别人写的要先看代码。",
+      "body": "Dan McAteer 在 [Latent Space](https://www.latent.space/p/claude-mods) 介绍了 Claude Mods。Anthropic 内置了 6 个，其中 You Should Know 默认关闭，它用一个旁路 agent 观察主 agent，把埋在执行记录里的关键信息挑出来。他自己写的 Next Steps Supervisor 在改了文件、跑了命令或调用 8 次以上工具后，列出需要注意的事项，并把下一步做成一键发送的按钮，已经收进他开源的 ModSmith。\n\n他的判断是，**agent 外壳中面向人的那一层，会决定什么时候打断你、给你看什么**。ChatGPT 的 Intelligent UI 由模型决定界面，Cursor 的 PR 路由由团队写规则。Mods 让你和 Claude 一起设计这一层，但做得有没有用要自己负责。\n\n他自己也遇到了问题：111 轮里有 99 轮被打断，他开始跳着看提示，这就失去了意义。设计这类提醒，触发条件要收紧。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "Claude Mods: Flipping the Harness Inside Out",
+          "url": "https://www.latent.space/p/claude-mods"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-21-03"
+    },
+    {
+      "candidateIds": [
+        "c45"
+      ],
+      "category": "consulting",
+      "kind": "机会观察",
+      "eventDate": "2026-10-21",
+      "headline": "按故事点付工程师工资，AI 咨询公司 Tenex 做到 75 人",
+      "oneLiner": "Tenex 联创 Alex Lieberman 说，公司按交付的故事点而非工时付工程师报酬，已有 75 人，客户一半是 Fortune 2000，计划和决策都和代码一起存进 Git。",
+      "who": "Tenex 联创 Alex Lieberman 和特别项目负责人 CJ Hess，在 Latent Space 讲如何帮大企业落地 AI。",
+      "how": "CJ 介绍 MetaHarness：一套共享的 skills、项目文档和 CLI，计划、验收标准、决策都提交进 Git，agent 回到任务时能读到“为什么这么做”。",
+      "result": "Alex 说担心的刷点数问题不是主要问题，因为 AI strategist 要对客户留存负责，会拒绝对客户没用的工作。客户需求正从外包开发扩展到全公司的 AI 转型。",
+      "tryThis": "做 AI 咨询或外包的人，可以试一个按交付物报价的小项目，并把计划和验收标准写成 agent 能读的文档。",
+      "caveat": "Tenex 自己承认，这么多结构对单个项目的小团队可能太重。理解客户、设计架构这类工作很难拆成故事点计价。",
+      "body": "在 [Latent Space 访谈](https://www.latent.space/p/tenex)里，CJ 讲了他加入 Tenex 的原因：以前自己做咨询按小时收费，用 AI 后产出更快更好，收入反而少了。Tenex 按故事点付酬，于是产出越多拿得越多。随着模型变强，他直接写代码的时间变少，更多时间花在把客户背景整理成模型能用的形式。\n\n主持人带来一个反例实验 Kill My SaaS：征集替代一款报价每年 4.3 万美元的讲者管理工具，收到 72 份作品。人类评委选出的冠军，在 AI 评委榜上只排第 19。**“满足测试场景”和“人愿意用”是两回事**。Alex 的反驳是：越往大客户走，替换成熟系统越贵、风险越大，小工具也得有人长期维护。\n\n对咨询从业者，这场讨论给出了一个报价思路：卖结果，同时把维护责任算进交付范围。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess",
+          "url": "https://www.latent.space/p/tenex"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-21-04"
+    },
+    {
+      "candidateIds": [
+        "c3"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-20",
+      "headline": "Mollick：从带着 AI 一步步做，到召唤一群 agent 再验收",
+      "oneLiner": "Ethan Mollick 写道，METR 测得 AI 能完成的任务长度从 2024 年的约 4 分钟涨到 2026 年 4 月的 17 小时，之后这个基准已经测不准了。",
+      "who": "沃顿商学院教授 Ethan Mollick，在新书 Co-Existence 出版当天，于 One Useful Thing 回顾了 30 个月的 AI 进展。",
+      "how": "他在“半人马”（人和 AI 分工）、“赛博格”（人和 AI 交融）之外，提出第三种协作方式“召唤师”：按需召唤 agent、分派任务、评估结果。他认为人的优势在于深度知识、广度知识、品味和主动性。",
+      "result": "他引用的数据：GPT-4 发布以来，AI 能完成的任务长度翻了八番；研究生级题库每答对一题的成本从 30 美分降到 0.04 美分；已有 180 个模型超过当年的 GPT-4，其中 19 个能在手机上运行。",
+      "tryThis": "把一件需要几小时的研究加制图任务交给一个编排型 agent，只给两句方向，让它出多个版本，你负责挑和评。",
+      "caveat": "他强调能力边界仍然参差不齐：AI 写长文依然很差。召唤师模式让人越来越难看清 AI 是怎样得出结果的。",
+      "body": "Mollick 在[本人文章](https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts)里说，文中图表全部由 Opus 5.5 在 Claude Projects 里完成：一个编排 agent 分派子 agent 做调研、制图、排版和引用，原本要几小时的工作几分钟完成。他反复只说“做得更好”，AI 还指出他算错了月数，文章原本要叫“28 个月”。\n\n这些属于他的判断和归纳，不是定论。对读者的影响在于**分配精力**：执行可以大量委托，人要留住的是判断结果好坏的能力。委托越多，越需要能检查结果的专业知识。",
+      "sources": [
+        {
+          "label": "One Useful Thing (Ethan Mollick)",
+          "title": "30 Months on the Exponential (in Charts)",
+          "url": "https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-21-05"
+    }
+  ],
+  "action": "从你的客户、同事或用户每周都要做的小事里挑一件（转格式、算一笔账、整理一份清单），交给 Claude Code 或类似工具，做成一个在浏览器里直接用的单页工具。动手前加一句“先批评这个设计，我们商定后再做”。做完发给三个真正有这个需求的人用，记下他们是否会再用、卡在哪一步。",
+  "readingMinutes": 8,
+  "meta": {
+    "generatedAt": "2026-10-21T14:44:15.099Z",
+    "engine": "cli",
+    "candidateCount": 48,
+    "candidatesBySource": {
+      "Simon Willison": 2,
+      "One Useful Thing (Ethan Mollick)": 1,
+      "Interconnects": 1,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 1,
+      "Starter Story (YouTube)": 1,
+      "Niche Pursuits": 1,
+      "Every (YouTube)": 3,
+      "Follow Builders (X)": 31,
+      "Latent Space": 3,
+      "The AI Daily Brief": 1,
+      "Supercompanies (Greg Shove / Section)": 1,
+      "Lifehacker": 1
+    },
+    "shortlist": [
+      {
+        "id": "c2",
+        "reason": "谁：Simon Willison；怎么用：用 Claude 迭代十几个版本开发即时战略游戏 Battle Drones，加了用声音同步的多人对战；结果：做出好玩可玩的成品，文章有完整开发过程和心得。",
+        "source": "Simon Willison",
+        "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer"
+      },
+      {
+        "id": "c43",
+        "reason": "谁：Dan McAteer；怎么用：用了几周 Claude Mods，把 Claude Code 改造成适合自己的 AI 工程工作流；结果：有亲测做法，可以照着试。",
+        "source": "Latent Space",
+        "title": "Claude Mods: Flipping the Harness Inside Out"
+      },
+      {
+        "id": "c35",
+        "reason": "谁：Peter Steinberger；怎么用：一个 agent 规划、在 worktree 里调用 codex cli 写代码，另一个 agent 盯进度，还写了插件；结果：他说比依赖子 agent 好得多，可照着试。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Steinberger: Astra did the planning, Sol 6.1 did the coding.\n\nI found that the workflow of pr"
+      },
+      {
+        "id": "c7",
+        "reason": "谁：零 iOS 经验的 Rasty；怎么用：靠编程 agent 三周做出加密相册 app Vaultaire；结果：首月 66 美元，半年后单月 4.1 万美元，现在日均约 2000 美元（只有简介，增长细节可能不足）。",
+        "source": "Starter Story (YouTube)",
+        "title": "Dude built an app with zero experience...it went from $66 to $41,000 in 1 month 🤯"
+      },
+      {
+        "id": "c45",
+        "reason": "谁：Tenex 的 Alex Lieberman 和 CJ Hess；怎么用：按交付结果给 AI 工程师付钱，搭 AI 原生的开发流程，还有让开发者替掉年费 4.3 万美元工具的 Kill My SaaS 实验；结果：有真实商业模式和案例（只有简介）。",
+        "source": "Latent Space",
+        "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess"
+      },
+      {
+        "id": "c8",
+        "reason": "谁：Castos 创始人 Craig Hewitt；怎么用：在营销、客服、开发和内部运营里用 AI，搜索流量下滑时改做对比页和免费工具；结果：年收入过百万美元，流量降了试用反而涨（只有简介，具体 AI 用法未展开）。",
+        "source": "Niche Pursuits",
+        "title": "How Craig Hewitt Grew Castos to $1M+ in Revenue"
+      },
+      {
+        "id": "c3",
+        "reason": "AI 认知：Ethan Mollick 用 30 个月的数据图回顾 AI 进展，图表本身是交给 agent 做的，说明从聊天机器人到 agent 的变化；有依据的判断，附一手做法。",
+        "source": "One Useful Thing (Ethan Mollick)",
+        "title": "30 Months on the Exponential (in Charts)"
+      },
+      {
+        "id": "c47",
+        "reason": "AI 认知/案例：Abridge 产品负责人 Janie Lee 讲医疗 AI（已在 300 多家医疗系统上线）怎么兼顾质量和速度，以及在强监管场景里怎么做出可信的 AI；有逐字稿。",
+        "source": "Supercompanies (Greg Shove / Section)",
+        "title": "Why Headcount No Longer Equals Growth with Janie Lee (Abridge)"
+      },
+      {
+        "id": "c13",
+        "reason": "AI 认知：Box CEO Aaron Levie 判断 AI 正在变成专做某类任务的自主 agent，依据是工具调用和电脑操作能力提升，复杂工作可以交给 agent；短帖，偏宏观。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: Pretty cool that we clearly have an emerging form factor for what AI might look "
+      },
+      {
+        "id": "c48",
+        "reason": "AI 生活：ChatGPT 新增锁定对话功能，可用四位 PIN 或生物识别隐藏私密对话，有具体设置步骤；功能介绍，没有用户自己的结果。",
+        "source": "Lifehacker",
+        "title": "You Can Now Lock Your Private ChatGPT Conversations With a PIN"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 19621,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2408,
+        "output_tokens_details": {
+          "thinking_tokens": 374
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 19621,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2408,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 19621,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 19621
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.20513599999999999
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 44226,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 5987,
+      "output_tokens_details": {
+        "thinking_tokens": 1354
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 44226,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 5987,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 44226,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 44226
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.473556
+  }
+}

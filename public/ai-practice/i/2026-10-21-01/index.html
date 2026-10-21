@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一句“让它好玩得多”，AI 通宵跑了上千场模拟对局｜AI 实干派</title>
+  <meta name="description" content="Simon Willison 用 Claude Code 做手机即时战略游戏，12 个大版本、321 次提交，代码他几乎没看；一句“让它好玩得多”让 AI 自己跑了上千场模拟试玩，再据此调平衡。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-21-01/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="一句“让它好玩得多”，AI 通宵跑了上千场模拟对局｜AI 实干派">
+  <meta property="og:description" content="Simon Willison 用 Claude Code 做手机即时战略游戏，12 个大版本、321 次提交，代码他几乎没看；一句“让它好玩得多”让 AI 自己跑了上千场模拟试玩，再据此调平衡。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-21-01/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-21.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="一句“让它好玩得多”，AI 通宵跑了上千场模拟对局｜AI 实干派">
+  <meta name="twitter:description" content="Simon Willison 用 Claude Code 做手机即时战略游戏，12 个大版本、321 次提交，代码他几乎没看；一句“让它好玩得多”让 AI 自己跑了上千场模拟试玩，再据此调平衡。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-21.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">12</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">4</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">5</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">6</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">9</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">14</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">8</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-21/">AI 实干派 012 · 2026 年 10 月 21 日 · 周三</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-20<span>·</span>US</div>
+        <h1>一句“让它好玩得多”，AI 通宵跑了上千场模拟对局</h1>
+        <p class="summary">Simon Willison 用 Claude Code 做手机即时战略游戏，12 个大版本、321 次提交，代码他几乎没看；一句“让它好玩得多”让 AI 自己跑了上千场模拟试玩，再据此调平衡。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison 的业余项目：做一款能在手机上玩的 Command &amp; Conquer 式即时战略游戏，用的是他自己很少写的 TypeScript。</dd><dt>怎么用</dt><dd>7 月用 Claude Fable 5 起步，先让 AI 提问再定 MVP。10 月换 Opus 5.5，在 Ultracode 模式（一个脚本同时调度许多 subagent）下只给了一句“让它好玩得多”。</dd><dt>结果</dt><dd>按 Claude 写的发布说明，它跑了一千多场模拟试玩：1200 场 AI 对 AI 比赛里，25 分钟还没分出胜负的比例从 14% 降到 0.9%；落后 800 以上资源后翻盘的比例从 24% 升到 46%。</dd><dt>你可以试</dt><dd>给 agent 布置复杂设计任务时，加一句“先调研并批评这个设计，我们商定修改后再动手”。</dd><dt>注意</dt><dd>一次通宵任务要跑很多小时；他几乎没审代码，只靠大量试玩验收，适合个人项目，不适合要对代码负责的生产系统。</dd></dl>
+        <div class="body"><p>Simon Willison 在<a href="https://simonwillison.net/2026/Oct/20/battledrones/">本人博客</a>复盘了 Battle Drones 的开发过程：12 个大版本，321 次提交，主要由 Claude Code 完成。前三版能看不能玩，他原本认为 coding agent 只能做出“像游戏的东西”。直到用 Ultracode 模式发出一句“让它好玩得多”，傍晚开始跑，第二天上午才拿到结果。之后一句“移植到 three.js”又跑了一夜，所有 3D 模型都是 Claude 用代码画出来的。</p><p>可借鉴的有两点。第一，<strong>让 agent 自己造评测</strong>：游戏好不好玩没法直接测，它就模拟大量对局，用“僵局比例”“翻盘率”这类指标代替。第二，他后来觉得自己出的设计太少，于是写了一段很长的地图设计提示，结尾要求<strong>先调研、批评，商定后再动手</strong>，结果做出了他认为最好玩的地图。</p><p>他的投入主要在试玩和提方向上。在线多人版本是后来补的，因为靠声音同步的近场多人模式“很让人头疼”。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Oct/20/battledrones/" target="_blank" rel="noopener" title="Battle Drones - a vibe coded RTS with audio-based multiplayer">Simon Willison</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-21/">← 当期全部 5 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>
