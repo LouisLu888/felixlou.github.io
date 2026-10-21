@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { WECHAT } from '../config/siteProfile';
+import { WECHAT, XIAOHONGSHU } from '../config/siteProfile';
 
 type WeChatCTAProps = {
   className?: string;
@@ -26,11 +26,19 @@ const WeChatCTA: React.FC<WeChatCTAProps> = ({ className = '' }) => {
       description: t('wechat.mpDescription'),
       note: '',
     },
+    {
+      key: 'xhs',
+      src: XIAOHONGSHU.qrImage,
+      alt: t('wechat.xhsAlt'),
+      headline: t('wechat.xhsHeadline'),
+      description: t('wechat.xhsDescription').replace('{name}', XIAOHONGSHU.displayName),
+      note: t('wechat.xhsHandle').replace('{id}', XIAOHONGSHU.id),
+    },
   ];
 
   return (
     <div className={className}>
-      <div className="grid sm:grid-cols-2 gap-5 p-5 sm:p-6 bg-emerald-50 border border-emerald-100 rounded-xl">
+      <div className="grid sm:grid-cols-3 gap-5 p-5 sm:p-6 bg-emerald-50 border border-emerald-100 rounded-xl">
         {panels.map((panel) => (
           <div key={panel.key} className="flex flex-col items-center text-center gap-3">
             <div className="p-2 bg-white border border-emerald-100 rounded-lg shadow-sm">

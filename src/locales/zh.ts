@@ -56,6 +56,10 @@ export const zh = {
     mpHeadline: '关注公众号',
     mpDescription: '这类分析和实操方法，新文章都会第一时间发在公众号上。',
     mpAlt: '公众号二维码',
+    xhsHeadline: '小红书找我',
+    xhsDescription: 'AI 落地和商业化的真实经历和思考，也会同步发在小红书「{name}」。',
+    xhsHandle: '小红书号：{id}',
+    xhsAlt: '小红书二维码',
   },
 
   // Services

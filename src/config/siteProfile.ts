@@ -101,6 +101,12 @@ export const WECHAT = {
   mpQrImage: '/images/contact/wechat-mp-qr.jpg',
 };
 
+export const XIAOHONGSHU = {
+  displayName: '硅谷风哥',
+  id: '238790826',
+  qrImage: '/images/contact/xiaohongshu-qr.jpg',
+};
+
 export const PRODUCTS = {
   fixclip: {
     pageUrl: '/products/fix-clipboard/',

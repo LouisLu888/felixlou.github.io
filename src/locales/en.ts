@@ -56,6 +56,10 @@ export const en = {
     mpHeadline: 'Follow on WeChat Official Account',
     mpDescription: 'Every new piece like this one goes out there first.',
     mpAlt: 'WeChat Official Account QR code',
+    xhsHeadline: 'Find me on Xiaohongshu',
+    xhsDescription: 'Real-world notes on shipping and monetizing AI, also posted on Xiaohongshu as "{name}".',
+    xhsHandle: 'Xiaohongshu ID: {id}',
+    xhsAlt: 'Xiaohongshu QR code',
   },
 
   // Services
