@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-10-22",
+    "title": "一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备",
+    "summary": "没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-22/",
+    "items": [
+      {
+        "headline": "没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备",
+        "sources": [
+          {
+            "label": "少数派",
+            "title": "把 Muse 装进 ESP-Mosaico：做一个没用的东西，证明 Vibe Coding 也在硬件领域快速成长",
+            "url": "https://sspai.com/post/115437"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备"
+      },
+      {
+        "start": 230,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 283,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-22.mp3",
+    "audioBytes": 1697421,
+    "publishedAt": "2026-10-22T22:44:01.599Z"
+  },
+  {
     "date": "2026-10-21",
     "title": "一句“更好玩”换来千场模拟对局，流量减半而试用反增",
     "summary": "一句“让它好玩得多”，AI 通宵跑了上千场模拟对局；网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具；给 Claude Code 装个“旁观者”，它拦下了 45 个文件的误删；按故事点付工程师工资，AI 咨询公司 Tenex 做到 75 人；Mollick：从带着 AI 一步步做，到召唤一群 agent 再验收",

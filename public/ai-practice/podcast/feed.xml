@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-22 · 一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-22/</link>
+      <description>没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-22/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备<br>03:50 今天可以做的一件事</p><p><b>没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备</b><br><a href="https://sspai.com/post/115437">少数派</a></p>]]></content:encoded>
+      <enclosure url="https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-22.mp3" length="1697421" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-22</guid>
+      <pubDate>Thu, 22 Oct 2026 22:44:01 GMT</pubDate>
+      <itunes:duration>00:04:43</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-21 · 一句“更好玩”换来千场模拟对局，流量减半而试用反增</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-21/</link>
       <description>一句“让它好玩得多”，AI 通宵跑了上千场模拟对局；网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具；给 Claude Code 装个“旁观者”，它拦下了 45 个文件的误删；按故事点付工程师工资，AI 咨询公司 Tenex 做到 75 人；Mollick：从带着 AI 一步步做，到召唤一群 agent 再验收（本集语音由 AI 合成）</description>
