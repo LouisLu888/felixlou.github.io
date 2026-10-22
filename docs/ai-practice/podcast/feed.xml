@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-21 · 一句“更好玩”换来千场模拟对局，流量减半而试用反增</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-21/</link>
+      <description>一句“让它好玩得多”，AI 通宵跑了上千场模拟对局；网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具；给 Claude Code 装个“旁观者”，它拦下了 45 个文件的误删；按故事点付工程师工资，AI 咨询公司 Tenex 做到 75 人；Mollick：从带着 AI 一步步做，到召唤一群 agent 再验收（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-21/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 一句“让它好玩得多”，AI 通宵跑了上千场模拟对局<br>02:32 网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具<br>04:13 给 Claude Code 装个“旁观者”，它拦下了 45 个文件的误删<br>05:56 按故事点付工程师工资，AI 咨询公司 Tenex 做到 75 人<br>07:49 Mollick：从带着 AI 一步步做，到召唤一群 agent 再验收<br>09:40 今天可以做的一件事</p><p><b>一句“让它好玩得多”，AI 通宵跑了上千场模拟对局</b><br><a href="https://simonwillison.net/2026/Oct/20/battledrones/">Simon Willison</a></p><p><b>网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具</b><br><a href="https://www.nichepursuits.com/craig-hewitt/">Niche Pursuits</a></p><p><b>给 Claude Code 装个“旁观者”，它拦下了 45 个文件的误删</b><br><a href="https://www.latent.space/p/claude-mods">Latent Space</a></p><p><b>按故事点付工程师工资，AI 咨询公司 Tenex 做到 75 人</b><br><a href="https://www.latent.space/p/tenex">Latent Space</a></p><p><b>Mollick：从带着 AI 一步步做，到召唤一群 agent 再验收</b><br><a href="https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts">One Useful Thing (Ethan Mollick)</a></p>]]></content:encoded>
+      <enclosure url="https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-21.mp3" length="3734445" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 22:46:07 GMT</pubDate>
+      <itunes:duration>00:10:22</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-20 · 15 秒剪好一条 TikTok，翻 Facebook 群组做本地撮合生意</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-20/</link>
       <description>手机原片进，15 秒后出一条剪好的 TikTok；找夜间育婴护士时，他发现中介也在翻 Facebook 群组；AI 自动评测别用默认 0.5 阈值，调一下差很多；Meta Muse Wonder 实测：处理工单很强，别让它碰前端；一次纽约行、一份报税，各开一个用完就归档的 AI 对话；Box CEO：模型越强，垂直 AI 越有差异化空间（本集语音由 AI 合成）</description>
