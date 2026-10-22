@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T14:44:22.624Z",
+  "updatedAt": "2026-10-22T14:44:29.745Z",
   "categories": [
     {
       "id": "perspective",
@@ -41,7 +41,7 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 14
+      "count": 15
     },
     {
       "id": "life",
@@ -52,6 +52,24 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-10-22",
+      "number": 13,
+      "title": "一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 3,
+      "itemCount": 1,
+      "categoryCounts": {
+        "productivity": 1
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备"
+        }
+      ]
+    },
     {
       "date": "2026-10-21",
       "number": 12,

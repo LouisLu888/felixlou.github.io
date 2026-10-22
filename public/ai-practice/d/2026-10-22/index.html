@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 013｜一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备</title>
+  <meta name="description" content="少数派作者 log 用 Claude Code 给乐鑫 ESP-Mosaico 写固件：一句提示词做出贪吃蛇，之后前后开了四个会话，把板子改成能说中文、能拍照、走近会亮灯的 Meta Muse 小设备。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-10-22/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 013｜一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备">
+  <meta property="og:description" content="少数派作者 log 用 Claude Code 给乐鑫 ESP-Mosaico 写固件：一句提示词做出贪吃蛇，之后前后开了四个会话，把板子改成能说中文、能拍照、走近会亮灯的 Meta Muse 小设备。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-10-22/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-22.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 013｜一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备">
+  <meta name="twitter:description" content="少数派作者 log 用 Claude Code 给乐鑫 ESP-Mosaico 写固件：一句提示词做出贪吃蛇，之后前后开了四个会话，把板子改成能说中文、能拍照、走近会亮灯的 Meta Muse 小设备。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-22.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">12</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">4</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">5</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">6</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">9</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">15</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">8</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 013 · 2026 年 10 月 22 日 · 周四 · 约 3 分钟读完</div>
+        <h1>一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-22-01">少数派作者 log 用 Claude Code 给乐鑫 ESP-Mosaico 写固件：一句提示词做出贪吃蛇，之后前后开了四个会话，把板子改成能说中文、能拍照、走近会亮灯的 Meta Muse 小设备。</a></li></ul>
+      </section>
+      <section class="item" id="2026-10-22-01">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-08<span>·</span>CN</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-22-01/">01｜没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>少数派作者 log 自称做 AI 方向，没有嵌入式背景。他手上有一块乐鑫 8 月发布的 ESP-Mosaico 开发板，Meta 10 月 2 日开源 Muse Gadgets 设备 SDK 后，他决定把这块板接进 Muse。</dd><dt>怎么用</dt><dd>固件代码都由 Claude Code 编写，他负责提需求、装到板上验证、做决定。前后四个会话，有两个在同一块板上并行；做法是先在模拟器里看界面，再上板实测，遇到故障就单独写一个诊断固件来排查。</dd><dt>结果</dt><dd>他记录的板上数据：贪吃蛇跑到 33.3 fps；拍一张 720×1280 的照片，JPEG 93 KB，编码 326 ms；板上离线合成一条 11.1 秒的中文语音用 2.3 秒。代码放在两个公开仓库，给 Meta SDK 提交了 9 处改动，默认都关闭。</dd><dt>你可以试</dt><dd>手边有 ESP32 板子和 Claude Code 这类编程 Agent，可以先照厂商给的那句提示词跑通一个小程序，把环境问题踩完，再在上面加自己的功能。每次会话结束让 Agent 写一份交接记录。</dd><dt>注意</dt><dd>硬件上的真实情况只能上板才知道，比如摄像头型号和文档写的不一样；在国内连 Muse 服务器还要自己搭旁路由。Muse 开发者模式会让未经验证的社区设备拿到助手的完整权限。</dd></dl>
+        <div class="body"><p>log 在<a href="https://sspai.com/post/115437">少数派</a>记录了整个过程。第一步照乐鑫的剧本，把一句提示词交给 Claude Code：下载仓库、搭环境、做贪吃蛇。<strong>花了一个晚上的是环境，不是游戏</strong>。ESP-IDF 要固定到某个提交；国内镜像缺 esp-gsp 1.5.1，Agent 就从官方 API 下载、核对哈希，搭了个本地组件库。他说这些都是 Claude Code 自己做完的。接 Muse 时有三处过不去：工具链版本不兼容、官方刷机会覆盖板子的 Vibe Mode 底层固件、Meta 服务器在国内直连超时。他说没有 Claude 的话，这三个问题他都看不出来。最后的方案是 Vibe Mode 不动，把 Muse 打包成一个普通应用装进去；配对信息放在单独的分区，之后十几次重装都没重新配对。</p><p>几种排障方法值得记下来。配对卡住时，他让 Agent 写了一个只收发蓝牙的诊断固件，确认板子没问题，最后查出是 Muse App 那边的问题。拍照第一版失败，日志显示传感器其实是 SC101IOT，不支持 JPEG，第二版改成在板上编码。对话时板子复位，Agent 读 core dump 找到原因：在栈放在 PSRAM 的任务里映射了 flash。这条规则后来写进了代码注释。</p><p>他自己也说这是个没用的东西，价值在于摸清这套工具链。人的分工主要是<strong>提目标、上板验证、判断取舍</strong>。适合想用 Agent 进入陌生技术领域的工程师和 PM，前提是愿意按日志一轮轮调试。</p></div>
+        <div class="sources">原文：<a href="https://sspai.com/post/115437" target="_blank" rel="noopener" title="把 Muse 装进 ESP-Mosaico：做一个没用的东西，证明 Vibe Coding 也在硬件领域快速成长">少数派</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>今天只有一条材料合格，所以就写了这一条。挑一个你不熟、平时会绕开的技术任务，比如一个小脚本、一个内部工具或一块开发板，交给 Claude Code 这类 Agent 去做。开始前先约好两件事。第一，每次会话结束让它写一份交接记录：做了什么、踩了什么坑、下一步做什么。第二，出问题时先让它写一个最小的诊断程序，把故障范围缩小。做完回头看交接记录，算一下你自己实际花了多少时间，哪些判断必须由你来做。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-21/">← 2026 年 10 月 21 日 · 周三</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

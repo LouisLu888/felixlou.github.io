@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c61"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-08",
+      "headline": "没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备",
+      "oneLiner": "少数派作者 log 用 Claude Code 给乐鑫 ESP-Mosaico 写固件：一句提示词做出贪吃蛇，之后前后开了四个会话，把板子改成能说中文、能拍照、走近会亮灯的 Meta Muse 小设备。",
+      "who": "少数派作者 log 自称做 AI 方向，没有嵌入式背景。他手上有一块乐鑫 8 月发布的 ESP-Mosaico 开发板，Meta 10 月 2 日开源 Muse Gadgets 设备 SDK 后，他决定把这块板接进 Muse。",
+      "how": "固件代码都由 Claude Code 编写，他负责提需求、装到板上验证、做决定。前后四个会话，有两个在同一块板上并行；做法是先在模拟器里看界面，再上板实测，遇到故障就单独写一个诊断固件来排查。",
+      "result": "他记录的板上数据：贪吃蛇跑到 33.3 fps；拍一张 720×1280 的照片，JPEG 93 KB，编码 326 ms；板上离线合成一条 11.1 秒的中文语音用 2.3 秒。代码放在两个公开仓库，给 Meta SDK 提交了 9 处改动，默认都关闭。",
+      "tryThis": "手边有 ESP32 板子和 Claude Code 这类编程 Agent，可以先照厂商给的那句提示词跑通一个小程序，把环境问题踩完，再在上面加自己的功能。每次会话结束让 Agent 写一份交接记录。",
+      "caveat": "硬件上的真实情况只能上板才知道，比如摄像头型号和文档写的不一样；在国内连 Muse 服务器还要自己搭旁路由。Muse 开发者模式会让未经验证的社区设备拿到助手的完整权限。",
+      "body": "log 在[少数派](https://sspai.com/post/115437)记录了整个过程。第一步照乐鑫的剧本，把一句提示词交给 Claude Code：下载仓库、搭环境、做贪吃蛇。**花了一个晚上的是环境，不是游戏**。ESP-IDF 要固定到某个提交；国内镜像缺 esp-gsp 1.5.1，Agent 就从官方 API 下载、核对哈希，搭了个本地组件库。他说这些都是 Claude Code 自己做完的。接 Muse 时有三处过不去：工具链版本不兼容、官方刷机会覆盖板子的 Vibe Mode 底层固件、Meta 服务器在国内直连超时。他说没有 Claude 的话，这三个问题他都看不出来。最后的方案是 Vibe Mode 不动，把 Muse 打包成一个普通应用装进去；配对信息放在单独的分区，之后十几次重装都没重新配对。\n\n几种排障方法值得记下来。配对卡住时，他让 Agent 写了一个只收发蓝牙的诊断固件，确认板子没问题，最后查出是 Muse App 那边的问题。拍照第一版失败，日志显示传感器其实是 SC101IOT，不支持 JPEG，第二版改成在板上编码。对话时板子复位，Agent 读 core dump 找到原因：在栈放在 PSRAM 的任务里映射了 flash。这条规则后来写进了代码注释。\n\n他自己也说这是个没用的东西，价值在于摸清这套工具链。人的分工主要是**提目标、上板验证、判断取舍**。适合想用 Agent 进入陌生技术领域的工程师和 PM，前提是愿意按日志一轮轮调试。",
+      "sources": [
+        {
+          "label": "少数派",
+          "title": "把 Muse 装进 ESP-Mosaico：做一个没用的东西，证明 Vibe Coding 也在硬件领域快速成长",
+          "url": "https://sspai.com/post/115437"
+        }
+      ],
+      "region": "CN",
+      "id": "2026-10-22-01",
+      "issueDate": "2026-10-22",
+      "issueNumber": 13
+    },
+    {
+      "candidateIds": [
         "c2"
       ],
       "category": "productivity",

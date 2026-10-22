@@ -7,6 +7,14 @@
     <description>每天几条一手材料：真正用 AI 拿到结果的人怎么做。工作提效、内容创作、商业闭环、真实收入，也有用 AI 办生活里的事。每条都附原文和口径。</description>
     <language>zh-cn</language>
     <item>
+      <title>AI 实干派 013｜一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-22/</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/ai-practice/d/2026-10-22/</guid>
+      <pubDate>Thu, 22 Oct 2026 14:44:21 GMT</pubDate>
+      <description>少数派作者 log 用 Claude Code 给乐鑫 ESP-Mosaico 写固件：一句提示词做出贪吃蛇，之后前后开了四个会话，把板子改成能说中文、能拍照、走近会亮灯的 Meta Muse 小设备。</description>
+      <content:encoded><![CDATA[<h3><a href="https://www.jiabinlu.com/ai-practice/i/2026-10-22-01/">没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备</a></h3><p><em>工作提效 · 本周演示</em></p><p>少数派作者 log 用 Claude Code 给乐鑫 ESP-Mosaico 写固件：一句提示词做出贪吃蛇，之后前后开了四个会话，把板子改成能说中文、能拍照、走近会亮灯的 Meta Muse 小设备。</p><p>log 在<a href="https://sspai.com/post/115437">少数派</a>记录了整个过程。第一步照乐鑫的剧本，把一句提示词交给 Claude Code：下载仓库、搭环境、做贪吃蛇。<strong>花了一个晚上的是环境，不是游戏</strong>。ESP-IDF 要固定到某个提交；国内镜像缺 esp-gsp 1.5.1，Agent 就从官方 API 下载、核对哈希，搭了个本地组件库。他说这些都是 Claude Code 自己做完的。接 Muse 时有三处过不去：工具链版本不兼容、官方刷机会覆盖板子的 Vibe Mode 底层固件、Meta 服务器在国内直连超时。他说没有 Claude 的话，这三个问题他都看不出来。最后的方案是 Vibe Mode 不动，把 Muse 打包成一个普通应用装进去；配对信息放在单独的分区，之后十几次重装都没重新配对。</p><p>几种排障方法值得记下来。配对卡住时，他让 Agent 写了一个只收发蓝牙的诊断固件，确认板子没问题，最后查出是 Muse App 那边的问题。拍照第一版失败，日志显示传感器其实是 SC101IOT，不支持 JPEG，第二版改成在板上编码。对话时板子复位，Agent 读 core dump 找到原因：在栈放在 PSRAM 的任务里映射了 flash。这条规则后来写进了代码注释。</p><p>他自己也说这是个没用的东西，价值在于摸清这套工具链。人的分工主要是<strong>提目标、上板验证、判断取舍</strong>。适合想用 Agent 进入陌生技术领域的工程师和 PM，前提是愿意按日志一轮轮调试。</p><h3>今天可以做的一件事</h3><p>今天只有一条材料合格，所以就写了这一条。挑一个你不熟、平时会绕开的技术任务，比如一个小脚本、一个内部工具或一块开发板，交给 Claude Code 这类 Agent 去做。开始前先约好两件事。第一，每次会话结束让它写一份交接记录：做了什么、踩了什么坑、下一步做什么。第二，出问题时先让它写一个最小的诊断程序，把故障范围缩小。做完回头看交接记录，算一下你自己实际花了多少时间，哪些判断必须由你来做。</p>]]></content:encoded>
+    </item>
+    <item>
       <title>AI 实干派 012｜一句“更好玩”换来千场模拟对局，流量减半而试用反增</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-21/</link>
       <guid isPermaLink="true">https://www.jiabinlu.com/ai-practice/d/2026-10-21/</guid>
