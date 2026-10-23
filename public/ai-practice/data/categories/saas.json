@@ -13,6 +13,33 @@
       "category": "saas",
       "kind": "经营复盘",
       "eventDate": "2026-10-21",
+      "headline": "挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR",
+      "oneLiner": "软件工程师 Charlie Clark 下班时间做的 link-in-bio 工具 Liinks，他说现在 MRR 约 31,500 美元；月费从 4 美元涨到 5 美元，MRR 多了近 5000 美元。",
+      "who": "Charlie Clark 做过广告公司网页开发，后来在 Squarespace 当工程师。Liinks 一开始是他的副业，2024 年 8 月他辞职全职做。",
+      "how": "他给自己两周时间做出一个 Linktree 替代品，先发给认识的艺术家朋友试用，再上 Product Hunt。现在产品里接了 OpenAI API，注册时可以抓取用户的 Instagram 公开资料自动生成页面。他每月另外花 100 到 200 美元用 coding agent。",
+      "result": "他在 Stripe 后台展示的 MRR 约 31,500 美元。获客主要靠 Google 搜索广告，每天约 100 美元，靠了四年左右。MRR 追平工资之后他才辞职。",
+      "tryThis": "选一个已经有大玩家、验证过需求的品类，挑出一个具体不满意的地方（他挑的是“页面不好看”），做出最小版本，先亲手发给 10 个认识的目标用户。",
+      "caveat": "这是低价、靠用户数量撑起来的生意，前提是付费买量能回本。他早期靠 Instagram 广告增长，平台算法一改，这个渠道就不行了。",
+      "body": "Charlie Clark 在 [Starter Story 节目](https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%2430K%2FMonth%20Micro-SaaS)里讲了 Liinks 的经过。2019 年他第一次辞职，做的是一个按需印刷市场，一直没做出起色。和艺术家打交道时，他发现他们都在用 Linktree，但页面不好看，就给自己两周做了个替代品。他把产品发给朋友，说“我为你做的，要不要用”；后来上 Product Hunt，推出月费约 3 美元的付费版，几个月做到 100 美元 MRR。COVID 期间他回到 Squarespace 上班，并主动告诉公司自己在做这个项目。上班期间产品还在增长，到 2024 年夏天收入差不多追平工资，他再次辞职。\n\n定价有两个思路可以借鉴。**基础版刻意定得比 Linktree 便宜**，他宁可要很多付少钱的客户；**Pro 版 12 美元起**，提供自定义域名和多页面管理，按页面数往上加价，有几位客户每月付 100 多美元。用户量大时，小幅涨价效果很明显：从 4 美元涨到 5 美元，MRR 多了近 5000 美元。\n\n他给 AI 时代的建议是：做东西太便宜了，人很容易一看不灵就换下一个点子。他认为应该**选一个已经验证过的领域，迭代到有感觉了就坚持做下去**，联系客户、做推广这些难事仍然要做。技术栈很轻：DigitalOcean VPS、AWS 存图片、Resend 发邮件、Tinybird 做分析。最大的开销是广告。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "How I Built It: $30K/Month Micro-SaaS",
+          "url": "https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%2430K%2FMonth%20Micro-SaaS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-23-01",
+      "issueDate": "2026-10-23",
+      "issueNumber": 14
+    },
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-21",
       "headline": "网站流量掉一半，试用反而涨了：Castos 用 Claude 批量做免费工具",
       "oneLiner": "播客托管 SaaS Castos 创始人 Craig Hewitt 说，网站流量只剩以前一半左右，免费试用却增加了，约 25% 的新客户可能来自用 AI 做的新内容。",
       "who": "Craig Hewitt，播客托管 SaaS Castos 的创始人，在 Niche Pursuits 播客讲 AI 搜索时代的获客变化。",

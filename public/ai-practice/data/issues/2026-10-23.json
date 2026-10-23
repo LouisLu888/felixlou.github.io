@@ -1,0 +1,213 @@
+{
+  "date": "2026-10-23",
+  "title": "月费涨 1 美元，MRR 多了近 5000；AI 一晚写完代码，测试却卡了几个月",
+  "items": [
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-21",
+      "headline": "挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR",
+      "oneLiner": "软件工程师 Charlie Clark 下班时间做的 link-in-bio 工具 Liinks，他说现在 MRR 约 31,500 美元；月费从 4 美元涨到 5 美元，MRR 多了近 5000 美元。",
+      "who": "Charlie Clark 做过广告公司网页开发，后来在 Squarespace 当工程师。Liinks 一开始是他的副业，2024 年 8 月他辞职全职做。",
+      "how": "他给自己两周时间做出一个 Linktree 替代品，先发给认识的艺术家朋友试用，再上 Product Hunt。现在产品里接了 OpenAI API，注册时可以抓取用户的 Instagram 公开资料自动生成页面。他每月另外花 100 到 200 美元用 coding agent。",
+      "result": "他在 Stripe 后台展示的 MRR 约 31,500 美元。获客主要靠 Google 搜索广告，每天约 100 美元，靠了四年左右。MRR 追平工资之后他才辞职。",
+      "tryThis": "选一个已经有大玩家、验证过需求的品类，挑出一个具体不满意的地方（他挑的是“页面不好看”），做出最小版本，先亲手发给 10 个认识的目标用户。",
+      "caveat": "这是低价、靠用户数量撑起来的生意，前提是付费买量能回本。他早期靠 Instagram 广告增长，平台算法一改，这个渠道就不行了。",
+      "body": "Charlie Clark 在 [Starter Story 节目](https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%2430K%2FMonth%20Micro-SaaS)里讲了 Liinks 的经过。2019 年他第一次辞职，做的是一个按需印刷市场，一直没做出起色。和艺术家打交道时，他发现他们都在用 Linktree，但页面不好看，就给自己两周做了个替代品。他把产品发给朋友，说“我为你做的，要不要用”；后来上 Product Hunt，推出月费约 3 美元的付费版，几个月做到 100 美元 MRR。COVID 期间他回到 Squarespace 上班，并主动告诉公司自己在做这个项目。上班期间产品还在增长，到 2024 年夏天收入差不多追平工资，他再次辞职。\n\n定价有两个思路可以借鉴。**基础版刻意定得比 Linktree 便宜**，他宁可要很多付少钱的客户；**Pro 版 12 美元起**，提供自定义域名和多页面管理，按页面数往上加价，有几位客户每月付 100 多美元。用户量大时，小幅涨价效果很明显：从 4 美元涨到 5 美元，MRR 多了近 5000 美元。\n\n他给 AI 时代的建议是：做东西太便宜了，人很容易一看不灵就换下一个点子。他认为应该**选一个已经验证过的领域，迭代到有感觉了就坚持做下去**，联系客户、做推广这些难事仍然要做。技术栈很轻：DigitalOcean VPS、AWS 存图片、Resend 发邮件、Tinybird 做分析。最大的开销是广告。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "How I Built It: $30K/Month Micro-SaaS",
+          "url": "https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%2430K%2FMonth%20Micro-SaaS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-23-01"
+    },
+    {
+      "candidateIds": [
+        "c7"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-23",
+      "headline": "AI 重写 CRM 几个月没上线，卡在“谁说了算”",
+      "oneLiner": "陈然和一家公司团队聊了两小时 AI coding 落地。他的判断是：开发一晚写完、测试要测三天，问题出在没人能拍板正确答案，换测试工具解决不了。",
+      "who": "陈然在 Pure Global 做产品和开发。他的搭档 DJ 说，公司高峰期国内有二十来个开发，现在基本只剩他们两人。文章来自他给一家公司做的 AI coding 落地讨论。",
+      "how": "他认为 AI 时代难的不再是实现，而是业务没想清楚。AI 碰到模糊的地方不会停下来问，会挑一个看似合理的解释写下去，于是所有没想清楚的地方都会以 bug 的形式堆到测试那里。他的解法是让懂业务、说了算的人端到端负责，也就是“更少的人，更大的权限”。",
+      "result": "依据有三个。第一，那家公司的报价模块折扣反算、服务费联动，每次修完一处又冒出新问题。第二，他自己做的 BI demo 给每个口径都编号，写明理由、配上测试，便宜的弱模型也能写对 SQL。第三，DJ 在泰国子公司和团队坐了两天，第二天写出进出口流程程序，又自己测了一周才交出去。",
+      "tryThis": "下一次让 AI 做报表或业务逻辑之前，先把关键指标的分母、边界情况写成带编号、写明理由、配有测试的定义，放进代码库；再指定一个人对结果负责，并给他改规则的权力。",
+      "caveat": "团队里有反对意见：PM、开发、测试各有所长，应该靠协作流程来对齐。陈然自己也承认，监管、多国业务、历史合同带来的复杂是真实存在的，重写也有成本，需要 owner 判断值不值得。",
+      "body": "陈然在[这篇文章](https://ranchen.org/content/20261022-rancheng-article-ai-coding-what-matters)里复盘了一次讨论。一家公司几个人用 AI 重写内部 CRM，做了几个月没上线。团队问的都是 spec 写到多细、用什么端到端测试工具、硅谷有什么最佳实践。他只反复问一句：报价到底谁说了算？测试同事想“先假设大家都知道规则”，他说问题就在于没人知道。测试慢，是因为没人知道正确答案长什么样。\n\n他自己的做法是**把口径写清楚**：每个口径都有编号、理由和测试，全放在同一个代码库，每张表、每个字段的注释都不能有歧义。比如待审批的工时算不算饱和度，一周跨两个月时工时归哪个月，这些都要写死。写清楚以后，便宜的模型也不用猜。他还提醒，**集中的是决定权，知识不能集中**。规则必须落在代码库里，人和 AI 都能读，外人拿到也能看懂。\n\n他也说老板只对了一半。光要求员工都成为业务专家没用，专家得有权改价格体系、砍掉定制、决定重写，否则只会变成“非常懂业务、也非常痛苦的测试”。他的建议是挑一个系统，指定一个人全权负责。工具选型交给 AI 评估就行，下个月有更好的再换。",
+      "sources": [
+        {
+          "label": "陈然 ranchen.org",
+          "title": "什么重要，什么不重要：AI Coding 落地里的 Intellectual Honesty",
+          "url": "https://ranchen.org/content/20261022-rancheng-article-ai-coding-what-matters"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-23-02"
+    }
+  ],
+  "action": "从手头工作里挑一个经常扯皮的数字，比如某张报表的转化率、人效或达成率。花 30 分钟写下它的完整定义：分子分母各是什么，3 个边界情况怎么算（跨月、退回、待审批之类），每条写一句理由，再配一个“输入是什么、应该输出什么”的例子。写完发给相关同事，问一句“这个由谁拍板”。没人能马上回答的地方，就是 AI 会替你乱猜的地方。",
+  "readingMinutes": 5,
+  "meta": {
+    "generatedAt": "2026-10-23T14:43:52.416Z",
+    "engine": "cli",
+    "candidateCount": 59,
+    "candidatesBySource": {
+      "Simon Willison": 3,
+      "Ali Abdaal": 2,
+      "Theoretically Media": 1,
+      "陈然 ranchen.org": 1,
+      "Starter Story Podcast": 1,
+      "Starter Story (YouTube)": 1,
+      "Every (YouTube)": 1,
+      "Follow Builders (X)": 38,
+      "No Priors": 1,
+      "Latent Space": 3,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 1,
+      "Dwarkesh Podcast": 1,
+      "Riley Brown": 1,
+      "Adam Lyttle": 1,
+      "少数派": 1,
+      "Tom's Guide · AI": 1
+    },
+    "shortlist": [
+      {
+        "id": "c8",
+        "reason": "谁：独立开发者 Charlie。结果：Liinks 做到月入 3 万美元，两次辞职。有逐字稿，讲了在饱和市场里怎么用业余项目起步、怎么增长，读者可以照着试。",
+        "source": "Starter Story Podcast",
+        "title": "How I Built It: $30K/Month Micro-SaaS"
+      },
+      {
+        "id": "c7",
+        "reason": "本人亲历的客户案例：一家公司用 AI 重写内部 CRM，做了几个月没能上线。作者复盘了老板、开发、顾问几方说法对不上的地方，结论是落地失败先出在没人诚实认问题、没人负责，工具和方法排在后面。全文完整，对大厂读者很有用。",
+        "source": "陈然 ranchen.org",
+        "title": "什么重要，什么不重要：AI Coding 落地里的 Intellectual Honesty"
+      },
+      {
+        "id": "c9",
+        "reason": "谁：Kourosh，业余做语音转文字 App Voicy。做法：在 Reddit 拿到头 300 个用户，同一个内容角度反复发，再写 200 篇 SEO 博客。结果：月入 1.8 万美元。只有简介，但获客步骤和数字已经写清。",
+        "source": "Starter Story (YouTube)",
+        "title": "Bro wrote 200 SEO blog posts to grow his app to $18k/month 🥶"
+      },
+      {
+        "id": "c45",
+        "reason": "一线从业者 swyx 自己用 Opus 5.5 估算工作量的体会：它估出的时长按 AI 的速度算，不按人的速度算，委派任务时更好用。能直接借鉴到用 agent 排期的工作流里。",
+        "source": "Follow Builders (X)",
+        "title": "Swyx: Opus 5.5 is the best work estimator model i've ever used. This is calibration th"
+      },
+      {
+        "id": "c25",
+        "reason": "AI 生活类：Peter Yang 给了一段提示词，让 AI 带你走完 6 步账户安全加固，最后生成一份个人安全报告。普通人可以照做。完整提示词在视频简介里，帖子本身较短。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Yang: 6 steps you should take to secure your accounts right now given all the incident"
+      },
+      {
+        "id": "c13",
+        "reason": "认知类：Box CEO 判断，自主 agent 会试遍所有攻击路径，「靠隐蔽保安全」行不通了，企业老系统都得升级，这也是 AI 普及会比预期慢的原因之一。依据是一线企业经验。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: Any form of security through obscurity is fully over. This barely worked as a me"
+      },
+      {
+        "id": "c49",
+        "reason": "认知类：Cloudflare CTO 谈 agent 时代的安全，比如已经转向零信任架构的企业处境更好、70 年积累的软件怎么打补丁、他们怎么分配工程资源。只有简介，但判断写得具体。",
+        "source": "No Priors",
+        "title": "Democratizing Security for the Agentic Web with CloudFlare CTO Dane Knecht"
+      },
+      {
+        "id": "c54",
+        "reason": "创始人亲历：Magic Patterns 的两位创始人都是前端工程师，为解决自己的问题做了 prompt 生成可交互原型的工具，节目里有产品演示和网站点评。简介提到「增长最快之一」，但没有具体数字。",
+        "source": "Y Combinator / Lightcone (YouTube)",
+        "title": "How To Stand Out In A World Of AI Designs"
+      },
+      {
+        "id": "c22",
+        "reason": "Peter Yang 离开产品岗位后的生活，包括和 8 岁孩子一起跟 ChatGPT 对话做游戏，属于 AI 生活和亲子用法。帖子信息偏少，排在后面。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Yang: I had a wonderful conversation with my friend and fellow dad @fishmanaf on what "
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 24282,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1726,
+        "output_tokens_details": {
+          "thinking_tokens": 734
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 24282,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1726,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 24282,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 24282
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.22878400000000002
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 27451,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 3915,
+      "output_tokens_details": {
+        "thinking_tokens": 1203
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 27451,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 3915,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 27451,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 27451
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.297916
+  }
+}

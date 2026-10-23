@@ -7,6 +7,14 @@
     <description>每天几条一手材料：真正用 AI 拿到结果的人怎么做。工作提效、内容创作、商业闭环、真实收入，也有用 AI 办生活里的事。每条都附原文和口径。</description>
     <language>zh-cn</language>
     <item>
+      <title>AI 实干派 014｜月费涨 1 美元，MRR 多了近 5000；AI 一晚写完代码，测试却卡了几个月</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-23/</link>
+      <guid isPermaLink="true">https://www.jiabinlu.com/ai-practice/d/2026-10-23/</guid>
+      <pubDate>Fri, 23 Oct 2026 14:43:52 GMT</pubDate>
+      <description>软件工程师 Charlie Clark 下班时间做的 link-in-bio 工具 Liinks，他说现在 MRR 约 31,500 美元；月费从 4 美元涨到 5 美元，MRR 多了近 5000 美元。 陈然和一家公司团队聊了两小时 AI coding 落地。他的判断是：开发一晚写完、测试要测三天，问题出在没人能拍板正确答案，换测试工具解决不了。</description>
+      <content:encoded><![CDATA[<h3><a href="https://www.jiabinlu.com/ai-practice/i/2026-10-23-01/">挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR</a></h3><p><em>Micro SaaS · 经营复盘</em></p><p>软件工程师 Charlie Clark 下班时间做的 link-in-bio 工具 Liinks，他说现在 MRR 约 31,500 美元；月费从 4 美元涨到 5 美元，MRR 多了近 5000 美元。</p><p>Charlie Clark 在 <a href="https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%2430K%2FMonth%20Micro-SaaS">Starter Story 节目</a>里讲了 Liinks 的经过。2019 年他第一次辞职，做的是一个按需印刷市场，一直没做出起色。和艺术家打交道时，他发现他们都在用 Linktree，但页面不好看，就给自己两周做了个替代品。他把产品发给朋友，说“我为你做的，要不要用”；后来上 Product Hunt，推出月费约 3 美元的付费版，几个月做到 100 美元 MRR。COVID 期间他回到 Squarespace 上班，并主动告诉公司自己在做这个项目。上班期间产品还在增长，到 2024 年夏天收入差不多追平工资，他再次辞职。</p><p>定价有两个思路可以借鉴。<strong>基础版刻意定得比 Linktree 便宜</strong>，他宁可要很多付少钱的客户；<strong>Pro 版 12 美元起</strong>，提供自定义域名和多页面管理，按页面数往上加价，有几位客户每月付 100 多美元。用户量大时，小幅涨价效果很明显：从 4 美元涨到 5 美元，MRR 多了近 5000 美元。</p><p>他给 AI 时代的建议是：做东西太便宜了，人很容易一看不灵就换下一个点子。他认为应该<strong>选一个已经验证过的领域，迭代到有感觉了就坚持做下去</strong>，联系客户、做推广这些难事仍然要做。技术栈很轻：DigitalOcean VPS、AWS 存图片、Resend 发邮件、Tinybird 做分析。最大的开销是广告。</p><h3><a href="https://www.jiabinlu.com/ai-practice/i/2026-10-23-02/">AI 重写 CRM 几个月没上线，卡在“谁说了算”</a></h3><p><em>AI 认知 · 观点访谈</em></p><p>陈然和一家公司团队聊了两小时 AI coding 落地。他的判断是：开发一晚写完、测试要测三天，问题出在没人能拍板正确答案，换测试工具解决不了。</p><p>陈然在<a href="https://ranchen.org/content/20261022-rancheng-article-ai-coding-what-matters">这篇文章</a>里复盘了一次讨论。一家公司几个人用 AI 重写内部 CRM，做了几个月没上线。团队问的都是 spec 写到多细、用什么端到端测试工具、硅谷有什么最佳实践。他只反复问一句：报价到底谁说了算？测试同事想“先假设大家都知道规则”，他说问题就在于没人知道。测试慢，是因为没人知道正确答案长什么样。</p><p>他自己的做法是<strong>把口径写清楚</strong>：每个口径都有编号、理由和测试，全放在同一个代码库，每张表、每个字段的注释都不能有歧义。比如待审批的工时算不算饱和度，一周跨两个月时工时归哪个月，这些都要写死。写清楚以后，便宜的模型也不用猜。他还提醒，<strong>集中的是决定权，知识不能集中</strong>。规则必须落在代码库里，人和 AI 都能读，外人拿到也能看懂。</p><p>他也说老板只对了一半。光要求员工都成为业务专家没用，专家得有权改价格体系、砍掉定制、决定重写，否则只会变成“非常懂业务、也非常痛苦的测试”。他的建议是挑一个系统，指定一个人全权负责。工具选型交给 AI 评估就行，下个月有更好的再换。</p><h3>今天可以做的一件事</h3><p>从手头工作里挑一个经常扯皮的数字，比如某张报表的转化率、人效或达成率。花 30 分钟写下它的完整定义：分子分母各是什么，3 个边界情况怎么算（跨月、退回、待审批之类），每条写一句理由，再配一个“输入是什么、应该输出什么”的例子。写完发给相关同事，问一句“这个由谁拍板”。没人能马上回答的地方，就是 AI 会替你乱猜的地方。</p>]]></content:encoded>
+    </item>
+    <item>
       <title>AI 实干派 013｜一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-22/</link>
       <guid isPermaLink="true">https://www.jiabinlu.com/ai-practice/d/2026-10-22/</guid>

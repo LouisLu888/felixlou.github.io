@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-22T14:44:29.745Z",
+  "updatedAt": "2026-10-23T14:43:59.395Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 12
+      "count": 13
     },
     {
       "id": "consulting",
@@ -27,7 +27,7 @@
       "name": "Micro SaaS",
       "en": "AI micro SaaS",
       "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
-      "count": 6
+      "count": 7
     },
     {
       "id": "app",
@@ -52,6 +52,29 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-10-23",
+      "number": 14,
+      "title": "月费涨 1 美元，MRR 多了近 5000；AI 一晚写完代码，测试却卡了几个月",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 5,
+      "itemCount": 2,
+      "categoryCounts": {
+        "saas": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "saas",
+          "headline": "挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR"
+        },
+        {
+          "category": "perspective",
+          "headline": "AI 重写 CRM 几个月没上线，卡在“谁说了算”"
+        }
+      ]
+    },
     {
       "date": "2026-10-22",
       "number": 13,
