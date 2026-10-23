@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-23",
+    "title": "月费涨 1 美元，MRR 多了近 5000；AI 一晚写完代码，测试却卡了几个月",
+    "summary": "挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR；AI 重写 CRM 几个月没上线，卡在“谁说了算”",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-23/",
+    "items": [
+      {
+        "headline": "挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR",
+        "sources": [
+          {
+            "label": "Starter Story Podcast",
+            "title": "How I Built It: $30K/Month Micro-SaaS",
+            "url": "https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%2430K%2FMonth%20Micro-SaaS"
+          }
+        ]
+      },
+      {
+        "headline": "AI 重写 CRM 几个月没上线，卡在“谁说了算”",
+        "sources": [
+          {
+            "label": "陈然 ranchen.org",
+            "title": "什么重要，什么不重要：AI Coding 落地里的 Intellectual Honesty",
+            "url": "https://ranchen.org/content/20261022-rancheng-article-ai-coding-what-matters"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR"
+      },
+      {
+        "start": 195,
+        "title": "AI 重写 CRM 几个月没上线，卡在“谁说了算”"
+      },
+      {
+        "start": 279,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 331,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-23.mp3",
+    "audioBytes": 1987437,
+    "publishedAt": "2026-10-23T22:44:39.311Z"
+  },
+  {
     "date": "2026-10-22",
     "title": "一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备",
     "summary": "没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备",

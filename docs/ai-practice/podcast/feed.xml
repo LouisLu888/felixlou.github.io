@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-23 · 月费涨 1 美元，MRR 多了近 5000；AI 一晚写完代码，测试却卡了几个月</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-23/</link>
+      <description>挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR；AI 重写 CRM 几个月没上线，卡在“谁说了算”（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-23/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR<br>03:15 AI 重写 CRM 几个月没上线，卡在“谁说了算”<br>04:39 今天可以做的一件事</p><p><b>挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR</b><br><a href="https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%2430K%2FMonth%20Micro-SaaS">Starter Story Podcast</a></p><p><b>AI 重写 CRM 几个月没上线，卡在“谁说了算”</b><br><a href="https://ranchen.org/content/20261022-rancheng-article-ai-coding-what-matters">陈然 ranchen.org</a></p>]]></content:encoded>
+      <enclosure url="https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-23.mp3" length="1987437" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 22:44:39 GMT</pubDate>
+      <itunes:duration>00:05:31</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-22 · 一句提示词跑通贪吃蛇，四个会话把开发板改成 Muse 小设备</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-22/</link>
       <description>没碰过嵌入式，他和 Claude Code 把开发板改成了 Muse 设备（本集语音由 AI 合成）</description>
