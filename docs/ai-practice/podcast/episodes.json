@@ -1,5 +1,98 @@
 [
   {
+    "date": "2026-10-24",
+    "title": "产品周一就能上线，客户从哪来；SaaS 付费用户里一半没真正用起来",
+    "summary": "AI 把产品成本打下来了，钱都花在了获客上；Userlist 一半付费客户没配完功能，顾问说：上手费要收到肉疼；一句 prompt，个人游戏从双人对战变成四人联网；人类先广撒网再深挖，AI 是一条路走到底再交给检验器；替爸妈测 ChatGPT 和 Grok：辨诈骗、讲医保、65 美元吃五天",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-24/",
+    "items": [
+      {
+        "headline": "AI 把产品成本打下来了，钱都花在了获客上",
+        "sources": [
+          {
+            "label": "陈然 ranchen.org",
+            "title": "AI 时代创业，既要做产品公司，也要做媒体公司",
+            "url": "https://ranchen.org/content/20261023-rancheng-article-product-and-media-company"
+          }
+        ]
+      },
+      {
+        "headline": "Userlist 一半付费客户没配完功能，顾问说：上手费要收到肉疼",
+        "sources": [
+          {
+            "label": "Smart Bear Live",
+            "title": "E11 w/ Mariya Delano: How to Fix a SaaS Trial-to-Paid Conversion Problem",
+            "url": "https://smartbearlive.transistor.fm/11"
+          }
+        ]
+      },
+      {
+        "headline": "一句 prompt，个人游戏从双人对战变成四人联网",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "battledrones v14: Compass Rose, a four player map",
+            "url": "https://simonwillison.net/2026/Oct/24/battledrones/"
+          },
+          {
+            "label": "Simon Willison",
+            "title": "Quick Study",
+            "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/"
+          }
+        ]
+      },
+      {
+        "headline": "人类先广撒网再深挖，AI 是一条路走到底再交给检验器",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "AI Is Getting Good at Math. Here’s Why.",
+            "url": "https://latent.space/p/ai-is-getting-good-at-math/"
+          }
+        ]
+      },
+      {
+        "headline": "替爸妈测 ChatGPT 和 Grok：辨诈骗、讲医保、65 美元吃五天",
+        "sources": [
+          {
+            "label": "Tom's Guide · AI",
+            "title": "I tested ChatGPT vs. Grok with 5 questions boomers actually ask — and the winner surprised me",
+            "url": "https://www.tomsguide.com/ai/i-tested-chatgpt-vs-grok-with-5-questions-boomers-actually-ask-and-the-winner-surprised-me"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "AI 把产品成本打下来了，钱都花在了获客上"
+      },
+      {
+        "start": 154,
+        "title": "Userlist 一半付费客户没配完功能，顾问说：上手费要收到肉疼"
+      },
+      {
+        "start": 272,
+        "title": "一句 prompt，个人游戏从双人对战变成四人联网"
+      },
+      {
+        "start": 351,
+        "title": "人类先广撒网再深挖，AI 是一条路走到底再交给检验器"
+      },
+      {
+        "start": 446,
+        "title": "替爸妈测 ChatGPT 和 Grok：辨诈骗、讲医保、65 美元吃五天"
+      },
+      {
+        "start": 535,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 578,
+    "audioUrl": "https://www.jiabinlu.com/ai-practice/podcast/audio/ai-practice-2026-10-24.mp3",
+    "audioBytes": 3470925,
+    "publishedAt": "2026-10-24T22:46:15.707Z"
+  },
+  {
     "date": "2026-10-23",
     "title": "月费涨 1 美元，MRR 多了近 5000；AI 一晚写完代码，测试却卡了几个月",
     "summary": "挤进 Linktree 的市场，月费 5 美元做到 3.15 万 MRR；AI 重写 CRM 几个月没上线，卡在“谁说了算”",
