@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>人类先广撒网再深挖，AI 是一条路走到底再交给检验器｜AI 实干派</title>
+  <meta name="description" content="Ankit Maloo 分析了 AI 近期解出的数学难题后认为，有了自动检验器，“不靠谱的思路”也值得花算力去试。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-24-04/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="人类先广撒网再深挖，AI 是一条路走到底再交给检验器｜AI 实干派">
+  <meta property="og:description" content="Ankit Maloo 分析了 AI 近期解出的数学难题后认为，有了自动检验器，“不靠谱的思路”也值得花算力去试。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-24-04/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-24.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="人类先广撒网再深挖，AI 是一条路走到底再交给检验器｜AI 实干派">
+  <meta name="twitter:description" content="Ankit Maloo 分析了 AI 近期解出的数学难题后认为，有了自动检验器，“不靠谱的思路”也值得花算力去试。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-24.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip active" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">14</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">4</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">6</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">8</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">9</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">16</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">9</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-24/">AI 实干派 015 · 2026 年 10 月 24 日 · 周六</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-23<span>·</span>US</div>
+        <h1>人类先广撒网再深挖，AI 是一条路走到底再交给检验器</h1>
+        <p class="summary">Ankit Maloo 分析了 AI 近期解出的数学难题后认为，有了自动检验器，“不靠谱的思路”也值得花算力去试。</p>
+        <dl class="facts"><dt>谁说的</dt><dd>Ankit Maloo 在 Latent Space 撰文，分析 OpenAI 关于 Erdős 单位距离猜想反例、Cycle Double Cover 证明等公开成果。</dd><dt>核心观点</dt><dd>他认为人类研究者按广度优先找方向，因为验证一个思路要几个月，门槛很高；LLM 按深度优先一路推到结论，配上检验器后几分钟就知道行不行，于是对思路质量的要求几乎消失。</dd><dt>依据</dt><dd>依据是 Gowers 对单位距离问题的“三条提示”分析，以及 CDC 的公开 prompt：里面把已知失败路径逐条写成禁止项和对抗性检查，还有一句“不要因为当前方法失败就返回”。</dd><dt>对你的意义</dt><dd>在自己的工作里，先搭一个能判断结果对错的检查环节，比如测试、对账、规则校验，再让 AI 多路并行去试；把失败原因写回下一轮 prompt，当作“负提示”。</dd><dt>争议·条件</dt><dd>他指出，检验器只能判断完成的论证，判断不了半成品方向有没有前途。没有可靠检验器的领域，这套方法只会产出“漂亮的错误证明”。</dd></dl>
+        <div class="body"><p>Ankit Maloo 在 <a href="https://latent.space/p/ai-is-getting-good-at-math/">Latent Space</a> 上给出一个框架：解题等于“洞见、功夫、再洞见”的序列，难度随所需洞见的数量指数增长。人类必须先挑方向，因为每试一条都要花几个月。他认为模型把时间换成了算力，<strong>有了检验器，就能理性地把大量算力花在不确定的思路上</strong>。</p><p>他据此还原了一套 harness：Drafter 根据先验和历次失败写 prompt，Solver 并行生成候选答案，Verifier 剪掉错误的。他推测单位距离问题的“找反例”转向，正是因为反复证明失败而逐步浮现。人类专家 Jacob Tsimerman 曾沿反例方向走过，后来停下了。</p><p>对读者的启发是先问一句：我的任务有没有可以自动核对的标准？有的话，让 AI 多试、把失败记下来写回 prompt；没有的话，先把标准建起来。</p></div>
+        <div class="sources">原文：<a href="https://latent.space/p/ai-is-getting-good-at-math/" target="_blank" rel="noopener" title="AI Is Getting Good at Math. Here’s Why.">Latent Space</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-24/">← 当期全部 5 条</a></span>
+        <span><a href="/ai-practice/c/perspective/">更多「AI 认知」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

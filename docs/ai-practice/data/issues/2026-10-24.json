@@ -1,0 +1,310 @@
+{
+  "date": "2026-10-24",
+  "title": "产品周一就能上线，客户从哪来；SaaS 付费用户里一半没真正用起来",
+  "items": [
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "content",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-23",
+      "headline": "AI 把产品成本打下来了，钱都花在了获客上",
+      "oneLiner": "陈然说，他的公司用 AI 改造后，原来积压的五六十个项目都做完了，没活可干，瓶颈变成了客户不够。他建议做实业的朋友先养自己的账号，再去开店。",
+      "who": "陈然，在硅谷做 AI 的创业者，主业 Pure Global 帮医疗器械公司做注册，副业做内容站赚广告。这篇写的是他和一位湾区地产开发商朋友的一次咖啡聊天。",
+      "how": "建店交给 AI：用 Shopify 搭站，让 ChatGPT 通过 Chrome use 自己点击完成配置，卡在注册账号、填银行卡时再由人接手；广告用 Facebook、Instagram 的 Pixel 和 API 接上。省下的精力用来长期做同一类高质量内容。",
+      "result": "他说 Pure Global 改造后交付不再是瓶颈，又孵化了 VayoMed 专做增长，还把按年收费的 SaaS 源码送给了客户，当获客渠道用。朋友的小红书账号停更过，但常有人来问，一家德国水龙头品牌还主动找上门。",
+      "tryThis": "如果你懂某个行业，就从审美或专业角度开一个账号，每张图打同一个 logo，同时发到多个平台，看看哪些内容会引来咨询。",
+      "caveat": "手里已经有渠道的人不需要这样做，比如已有大 builder 来采购。他还提醒，内容也在被 AI 变便宜，先占位置的人优势更大。",
+      "body": "陈然在[这篇文章](https://ranchen.org/content/20261023-rancheng-article-product-and-media-company)里记下了一次咖啡聊天。朋友想做建材潮牌，已经在小量卖室内门。他的回答是：不用“试一试”，回家把想法原样讲给 ChatGPT，让它借 Chrome use 把 Shopify 配好，周一就能上线。真正的难题是 **margin 能不能撑住获客成本**：东西卖 100 刀、成本 10 刀，也不可能只花 10 刀就从网上拉来一个陌生买家。\n\n他的判断来自自己的公司。Pure Global 用 AI 改造后，以前积压的五六十个项目都做完了，“生产的能力已经远远超出了获客的能力”。于是他把收费软件开源、把数据库免费放到网上，用来给自己引流。他说品牌只看一个指标：**大家花在你身上的时间有多长**。\n\n可以照做的部分很具体：做同一类内容，统一设计风格和 logo，一次制作、多平台分发；出镜能更快建立信任，但不是必须。他特别区分了先后顺序：先开店、再指望小红书带客流，是在用流量救产品；先有流量、看清需求再做产品，产品才是长在流量上的。",
+      "sources": [
+        {
+          "label": "陈然 ranchen.org",
+          "title": "AI 时代创业，既要做产品公司，也要做媒体公司",
+          "url": "https://ranchen.org/content/20261023-rancheng-article-product-and-media-company"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-01"
+    },
+    {
+      "candidateIds": [
+        "c10"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-24",
+      "headline": "Userlist 一半付费客户没配完功能，顾问说：上手费要收到肉疼",
+      "oneLiner": "做了九年的 SaaS 邮件工具 Userlist 试用转化率掉了一半；创始人自己估算，付费客户里大约只有 50% 把产品用全了。",
+      "who": "Userlist 联合创始人 Jane Portman 和 Benedikt Deicke，在 Smart Bear Live 节目上接受 Jason Cohen 和 Mariya Delano 的现场诊断。",
+      "how": "诊断从定位开始：首页写的是“面向成熟营销人”，流失的却大多是不会衡量效果的客户。对策有三条：强制带教上手，并收高价上手费；让周报主动发到客户公司里更多人的邮箱；在图表角落放 logo，方便客户截图汇报时带上品牌。",
+      "result": "Jane 估计，剔除垃圾注册后激活率约 40%。Cohen 举例说，HubSpot 发现做过一小时一对一培训的客户留存高出约四到五倍，于是把培训改成了强制。",
+      "tryThis": "查一下你的产品在每个客户公司里是不是只有一个人在看价值报告。如果是，先给自己的客户做一份发给多人的周报。",
+      "caveat": "强制收费上手会吓走一部分客户。Jane 原本想收 1000 美元，Delano 认为“得让人肉疼”才有效果；收多少合适要看客单价。",
+      "body": "在 [Smart Bear Live 第 11 期](https://smartbearlive.transistor.fm/11)里，Userlist 的两位创始人把公司数据摊开来讲：试用转化率减半，老客户开始取消。Benedikt 说，流失的一大块原因是客户“从没真正用起来”，因为接入自己的应用是额外的工作。还有一家取消，是因为公司里唯一在用它的人离职了。\n\nCohen 不断追问首页上的那句定位，最后两人承认，流失的大多不是目标客户。顾问给出的建议都能马上落地。**一是防止只剩一个使用者**：参考 New Relic，把报告发给 CTO 等多个人。Jane 说自己过去一年的客户跟进都在讲“怎么多用”，从没带客户回顾结果。**二是灰显未解锁功能**：数据源没接上时，先展示一份示例报告，让客户在想用的那一刻看到接入的价值。**三是收取实施费**：Cohen 建议收 1 万美元，用价格筛掉不认真的客户。\n\n这期节目里没有 AI，适合用来对照：用 AI 做 SaaS 的人，迟早也会碰到激活和“只有一个使用者”的问题。",
+      "sources": [
+        {
+          "label": "Smart Bear Live",
+          "title": "E11 w/ Mariya Delano: How to Fix a SaaS Trial-to-Paid Conversion Problem",
+          "url": "https://smartbearlive.transistor.fm/11"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-02"
+    },
+    {
+      "candidateIds": [
+        "c1",
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-24",
+      "headline": "一句 prompt，个人游戏从双人对战变成四人联网",
+      "oneLiner": "Simon Willison 用一段话让 Claude Opus 4.5 给自己的游戏 Battledrones 加了四人地图，联网代码也一起改好了。",
+      "who": "开发者 Simon Willison，在维护自己的浏览器游戏 Battledrones 和一些小工具。",
+      "how": "他的 prompt 写清了四个约束：四向旋转对称、最多四个 AI 玩家、走 WebSocket 非语音多人模式、空位由 AI 补上。另一个小工具 Quick Study 也是一句话需求：打开照片，几秒内用 canvas 模拟画笔画出来。",
+      "result": "按他的记录，Claude 新增了“Compass Rose”地图，改写了 WebSocket 网络代码，支持通过分享链接或二维码加入，还加了紫色和绿色两支新队伍。Quick Study 用 Sobel 边缘检测实现，没有引入外部库。",
+      "tryThis": "给自己维护的小项目提一个需求，写清对称性、人数上限、复用哪个现有模块这类硬约束，再对照结果检查改动。",
+      "caveat": "这是他熟悉的个人项目，原来已经有双人联网模式可以扩展。从零开始的项目，或者多人维护的代码库，要多留出审查时间。",
+      "body": "Simon Willison 在[发布记录](https://simonwillison.net/2026/Oct/24/battledrones/)里贴出了原始 prompt，只有一句话，但条件给得很全：地图要四向旋转对称，最多四个 AI，兼容现有的 WebSocket 多人模式，真人不满四个时由 AI 补位。Claude Opus 4.5 交付了新地图，同时改了联网代码，加入方式支持分享链接和二维码。他还附上了一段四方 AI 对战的回放。\n\n前一天他做了 [Quick Study](https://simonwillison.net/2026/Oct/23/quick-study-painter/)，需求同样一句话：用 canvas 和模拟画笔，几秒内把照片“画”一遍。\n\n可借鉴的是 prompt 的写法：**说清楚要复用什么、边界在哪、缺人或出错时怎么兜底**，而不是描述一个模糊的愿景。已有代码越清晰，一句话能推动的改动越大。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "battledrones v14: Compass Rose, a four player map",
+          "url": "https://simonwillison.net/2026/Oct/24/battledrones/"
+        },
+        {
+          "label": "Simon Willison",
+          "title": "Quick Study",
+          "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-03"
+    },
+    {
+      "candidateIds": [
+        "c43"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-23",
+      "headline": "人类先广撒网再深挖，AI 是一条路走到底再交给检验器",
+      "oneLiner": "Ankit Maloo 分析了 AI 近期解出的数学难题后认为，有了自动检验器，“不靠谱的思路”也值得花算力去试。",
+      "who": "Ankit Maloo 在 Latent Space 撰文，分析 OpenAI 关于 Erdős 单位距离猜想反例、Cycle Double Cover 证明等公开成果。",
+      "how": "他认为人类研究者按广度优先找方向，因为验证一个思路要几个月，门槛很高；LLM 按深度优先一路推到结论，配上检验器后几分钟就知道行不行，于是对思路质量的要求几乎消失。",
+      "result": "依据是 Gowers 对单位距离问题的“三条提示”分析，以及 CDC 的公开 prompt：里面把已知失败路径逐条写成禁止项和对抗性检查，还有一句“不要因为当前方法失败就返回”。",
+      "tryThis": "在自己的工作里，先搭一个能判断结果对错的检查环节，比如测试、对账、规则校验，再让 AI 多路并行去试；把失败原因写回下一轮 prompt，当作“负提示”。",
+      "caveat": "他指出，检验器只能判断完成的论证，判断不了半成品方向有没有前途。没有可靠检验器的领域，这套方法只会产出“漂亮的错误证明”。",
+      "body": "Ankit Maloo 在 [Latent Space](https://latent.space/p/ai-is-getting-good-at-math/) 上给出一个框架：解题等于“洞见、功夫、再洞见”的序列，难度随所需洞见的数量指数增长。人类必须先挑方向，因为每试一条都要花几个月。他认为模型把时间换成了算力，**有了检验器，就能理性地把大量算力花在不确定的思路上**。\n\n他据此还原了一套 harness：Drafter 根据先验和历次失败写 prompt，Solver 并行生成候选答案，Verifier 剪掉错误的。他推测单位距离问题的“找反例”转向，正是因为反复证明失败而逐步浮现。人类专家 Jacob Tsimerman 曾沿反例方向走过，后来停下了。\n\n对读者的启发是先问一句：我的任务有没有可以自动核对的标准？有的话，让 AI 多试、把失败记下来写回 prompt；没有的话，先把标准建起来。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "AI Is Getting Good at Math. Here’s Why.",
+          "url": "https://latent.space/p/ai-is-getting-good-at-math/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-04"
+    },
+    {
+      "candidateIds": [
+        "c51"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-24",
+      "headline": "替爸妈测 ChatGPT 和 Grok：辨诈骗、讲医保、65 美元吃五天",
+      "oneLiner": "Tom's Guide 作者 Amanda Caswell 用五个长辈常问的问题测试两款聊天机器人，ChatGPT 赢了两项，Grok 赢了三项。",
+      "who": "Tom's Guide 作者 Amanda Caswell，按父母和长辈亲戚真实会问的问题设计了测试。",
+      "how": "每条 prompt 都写了约束：可疑 USPS 短信要求不用术语，Medicare 解释限 400 字，两人五晚晚餐预算 65 美元、每顿不超过 30 分钟，家庭短信不超过 100 词，换手机预算 500 美元以内。",
+      "result": "她的评判是：辨认诈骗短信 ChatGPT 更好，给出了转发到 7726 举报等具体做法；买菜清单 ChatGPT 更贴合约束。Medicare 解释、给女儿的短信、手机推荐 Grok 更好，因为更守字数、更懂分寸。",
+      "tryThis": "把她的五条 prompt 改成家里的真实情况，帮父母存进常用 AI 的对话里，尤其是“这条短信是不是诈骗”那一条。",
+      "caveat": "价格、保费、手机型号会变，涉及报名医保和付款的事仍要本人去官方渠道核对。AI 的回答也常超出字数，或者在没说明的情况下默认你手上已有某些食材。",
+      "body": "Amanda Caswell 在 [Tom's Guide](https://www.tomsguide.com/ai/i-tested-chatgpt-vs-grok-with-5-questions-boomers-actually-ask-and-the-winner-surprised-me) 上把同样五条 prompt 分别发给 ChatGPT 和 Grok。最实用的是诈骗短信那一题：ChatGPT 直接判断“几乎肯定是诈骗”，用表格分别说明点了链接、填了支付信息、下载了恶意软件的后果，还指出 USPS 不收“重新投递费”，并给出转发到 7726、发邮件到 spam@uspis.gov 两种举报方式。\n\n她的结论是 Grok 总分胜出，原因是**它知道什么时候该少说**：医保说明守住了 400 字，给女儿的短信听起来像真父母写的。ChatGPT 适合需要分步骤指导的场合。\n\n普通家庭可以学的是 prompt 的写法：**写明身份、预算、字数和“不要术语”**，答案才用得上。这些 prompt 不涉及账户权限，只要把短信原文贴进去就行。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I tested ChatGPT vs. Grok with 5 questions boomers actually ask — and the winner surprised me",
+          "url": "https://www.tomsguide.com/ai/i-tested-chatgpt-vs-grok-with-5-questions-boomers-actually-ask-and-the-winner-surprised-me"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-05"
+    }
+  ],
+  "action": "挑一件你手上已经能交付的东西，可以是一项专业技能、一个小工具或一种服务，写下三行：做一份要多少成本，找到一个陌生客户大概要花多少钱，现在有没有人主动来问。如果第三行是空的，今天就围绕这件事发第一条内容，统一用一个名字和 logo，一周后看有没有人来咨询。",
+  "readingMinutes": 9,
+  "meta": {
+    "generatedAt": "2026-10-24T14:45:01.858Z",
+    "engine": "cli",
+    "candidateCount": 52,
+    "candidatesBySource": {
+      "Simon Willison": 3,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 3,
+      "陈然 ranchen.org": 1,
+      "Starter Story (YouTube)": 1,
+      "Smart Bear Live": 1,
+      "Every (YouTube)": 3,
+      "Follow Builders (X)": 28,
+      "Latent Space": 3,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 2,
+      "Riley Brown": 1,
+      "App Masters (Steve P. Young)": 1,
+      "Lifehacker": 1,
+      "Tom's Guide · AI": 2
+    },
+    "shortlist": [
+      {
+        "id": "c8",
+        "reason": "谁：陈然和一位湾区地产开发朋友；怎么用：拿真实的建材潮牌想法，说明怎么借 AI 很快上线产品，同时自己做流量；结果：给出“既做产品公司也做媒体公司”的判断。全文，适合副业和创业读者。",
+        "source": "陈然 ranchen.org",
+        "title": "AI 时代创业，既要做产品公司，也要做媒体公司"
+      },
+      {
+        "id": "c1",
+        "reason": "谁：Simon Willison 本人开发；怎么用：附上原始提示词，让 Claude 新增四人地图并改 WebSocket 多人联机代码；结果：v14 已发布，可扫码或用分享链接加入。是能照着做的一手开发记录。",
+        "source": "Simon Willison",
+        "title": "battledrones v14: Compass Rose, a four player map"
+      },
+      {
+        "id": "c10",
+        "reason": "谁：Userlist 两位创始人，九年的小团队 SaaS；怎么做：现场讨论试用转付费和上手引导，包括收引导费、定价显得“可疑”等具体决策；结果：有真实数字（约一半客户没完成设置、花 2 万美元请咨询）。有逐字稿。",
+        "source": "Smart Bear Live",
+        "title": "E11 w/ Mariya Delano: How to Fix a SaaS Trial-to-Paid Conversion Problem"
+      },
+      {
+        "id": "c49",
+        "reason": "谁：一位全职教师；怎么做：业余做高尔夫 GPS App Shot Pattern，靠“丑广告”和付费墙实验增长；结果：业务接近 100 万美元。只有简介，但做法和结果已写清。",
+        "source": "App Masters (Steve P. Young)",
+        "title": "How a Full-Time Teacher Built a Nearly $1M App Business"
+      },
+      {
+        "id": "c2",
+        "reason": "谁：Simon Willison；怎么用：一句提示词让 Claude 写出把照片快速画成画的小工具（用 Sobel 边缘检测，不依赖外部库）；结果：工具已上线。小而可复现。",
+        "source": "Simon Willison",
+        "title": "Quick Study"
+      },
+      {
+        "id": "c47",
+        "reason": "谁：Farza（Hey Clicky、Buildspace 创始人）；怎么做：把每次演示都当成发布，低成本写脚本、拍发布视频；结果：他的帖子常有数百万播放。只有简介，但已说明这是一套具体打法。",
+        "source": "Y Combinator / Lightcone (YouTube)",
+        "title": "This Is How You Should Actually Make Launch Videos"
+      },
+      {
+        "id": "c9",
+        "reason": "谁：Kourosh；怎么做：给父亲做的语音转文字 Chrome 插件 Voicy，没做营销就有人下载，后来当副业经营；结果：每月 1.6 万到 2 万美元。只有简介，信息偏少，作为副业案例备选。",
+        "source": "Starter Story (YouTube)",
+        "title": "Bro built a fun saas for his dad, now it makes $16K-$20K per month 🤯"
+      },
+      {
+        "id": "c43",
+        "reason": "AI 认知类：Ankit Maloo 梳理 OpenAI、Anthropic 近期解出的数学难题，分析哪类问题适合大模型去解，判断有依据。全文。",
+        "source": "Latent Space",
+        "title": "AI Is Getting Good at Math. Here’s Why."
+      },
+      {
+        "id": "c25",
+        "reason": "AI 认知类：Vercel CEO Guillermo Rauch 解释同一台宿主机上 agent 之间的“吵邻居”计时攻击，以及专用硬件这一解法的成本代价。一线创始人的具体判断。",
+        "source": "Follow Builders (X)",
+        "title": "Guillermo Rauch: Agents can play \"Ouija\" in the cloud.\n\nThis class of timing attacks on shared-ho"
+      },
+      {
+        "id": "c51",
+        "reason": "AI 生活类：作者用识别可疑 USPS 短信、弄懂 Medicare、规划省钱晚餐、挑手机等父母辈的真实问题测试 ChatGPT 和 Grok，并对比结果。有具体场景，可借鉴给长辈用 AI。",
+        "source": "Tom's Guide · AI",
+        "title": "I tested ChatGPT vs. Grok with 5 questions boomers actually ask — and the winner surprised me"
+      },
+      {
+        "id": "c44",
+        "reason": "AI 认知类：安全研究员用 GPT-5.6 Sol 发现影响约七成网站的 PHP 核心漏洞，随后协调两个月修复。是 AI 用于网络防御的真实案例；偏新闻，排在后面。",
+        "source": "Latent Space",
+        "title": "[AINews] OpenAI’s Patch the Planet program is 1 of 2 parties to discover PHP2Shell vulnerabilities in core PHP affecting 70% of the web, using GPT-5.6 Sol; coordinated response over 2 months"
+      },
+      {
+        "id": "c48",
+        "reason": "谁：Riley Brown；怎么用：花约 10 小时把 Claude Duet 用在自己的业务、内容、App 和演示文稿上，还用语音改幻灯片；结果：列出 9 条体会和不足。只有简介且有赞助，作为备选。",
+        "source": "Riley Brown",
+        "title": "How I’m Actually Using Claude Duet (After 10 Hours of Testing)"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 22057,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1980,
+        "output_tokens_details": {
+          "thinking_tokens": 680
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 22057,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1980,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 22057,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 22057
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.216064
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 39145,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 6183,
+      "output_tokens_details": {
+        "thinking_tokens": 1138
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 39145,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 6183,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 39145,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 39145
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.436828
+  }
+}

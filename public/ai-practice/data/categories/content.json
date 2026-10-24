@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c8"
+      ],
+      "category": "content",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-23",
+      "headline": "AI 把产品成本打下来了，钱都花在了获客上",
+      "oneLiner": "陈然说，他的公司用 AI 改造后，原来积压的五六十个项目都做完了，没活可干，瓶颈变成了客户不够。他建议做实业的朋友先养自己的账号，再去开店。",
+      "who": "陈然，在硅谷做 AI 的创业者，主业 Pure Global 帮医疗器械公司做注册，副业做内容站赚广告。这篇写的是他和一位湾区地产开发商朋友的一次咖啡聊天。",
+      "how": "建店交给 AI：用 Shopify 搭站，让 ChatGPT 通过 Chrome use 自己点击完成配置，卡在注册账号、填银行卡时再由人接手；广告用 Facebook、Instagram 的 Pixel 和 API 接上。省下的精力用来长期做同一类高质量内容。",
+      "result": "他说 Pure Global 改造后交付不再是瓶颈，又孵化了 VayoMed 专做增长，还把按年收费的 SaaS 源码送给了客户，当获客渠道用。朋友的小红书账号停更过，但常有人来问，一家德国水龙头品牌还主动找上门。",
+      "tryThis": "如果你懂某个行业，就从审美或专业角度开一个账号，每张图打同一个 logo，同时发到多个平台，看看哪些内容会引来咨询。",
+      "caveat": "手里已经有渠道的人不需要这样做，比如已有大 builder 来采购。他还提醒，内容也在被 AI 变便宜，先占位置的人优势更大。",
+      "body": "陈然在[这篇文章](https://ranchen.org/content/20261023-rancheng-article-product-and-media-company)里记下了一次咖啡聊天。朋友想做建材潮牌，已经在小量卖室内门。他的回答是：不用“试一试”，回家把想法原样讲给 ChatGPT，让它借 Chrome use 把 Shopify 配好，周一就能上线。真正的难题是 **margin 能不能撑住获客成本**：东西卖 100 刀、成本 10 刀，也不可能只花 10 刀就从网上拉来一个陌生买家。\n\n他的判断来自自己的公司。Pure Global 用 AI 改造后，以前积压的五六十个项目都做完了，“生产的能力已经远远超出了获客的能力”。于是他把收费软件开源、把数据库免费放到网上，用来给自己引流。他说品牌只看一个指标：**大家花在你身上的时间有多长**。\n\n可以照做的部分很具体：做同一类内容，统一设计风格和 logo，一次制作、多平台分发；出镜能更快建立信任，但不是必须。他特别区分了先后顺序：先开店、再指望小红书带客流，是在用流量救产品；先有流量、看清需求再做产品，产品才是长在流量上的。",
+      "sources": [
+        {
+          "label": "陈然 ranchen.org",
+          "title": "AI 时代创业，既要做产品公司，也要做媒体公司",
+          "url": "https://ranchen.org/content/20261023-rancheng-article-product-and-media-company"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-01",
+      "issueDate": "2026-10-24",
+      "issueNumber": 15
+    },
+    {
+      "candidateIds": [
         "c2"
       ],
       "category": "content",

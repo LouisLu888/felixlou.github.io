@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c51"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-24",
+      "headline": "替爸妈测 ChatGPT 和 Grok：辨诈骗、讲医保、65 美元吃五天",
+      "oneLiner": "Tom's Guide 作者 Amanda Caswell 用五个长辈常问的问题测试两款聊天机器人，ChatGPT 赢了两项，Grok 赢了三项。",
+      "who": "Tom's Guide 作者 Amanda Caswell，按父母和长辈亲戚真实会问的问题设计了测试。",
+      "how": "每条 prompt 都写了约束：可疑 USPS 短信要求不用术语，Medicare 解释限 400 字，两人五晚晚餐预算 65 美元、每顿不超过 30 分钟，家庭短信不超过 100 词，换手机预算 500 美元以内。",
+      "result": "她的评判是：辨认诈骗短信 ChatGPT 更好，给出了转发到 7726 举报等具体做法；买菜清单 ChatGPT 更贴合约束。Medicare 解释、给女儿的短信、手机推荐 Grok 更好，因为更守字数、更懂分寸。",
+      "tryThis": "把她的五条 prompt 改成家里的真实情况，帮父母存进常用 AI 的对话里，尤其是“这条短信是不是诈骗”那一条。",
+      "caveat": "价格、保费、手机型号会变，涉及报名医保和付款的事仍要本人去官方渠道核对。AI 的回答也常超出字数，或者在没说明的情况下默认你手上已有某些食材。",
+      "body": "Amanda Caswell 在 [Tom's Guide](https://www.tomsguide.com/ai/i-tested-chatgpt-vs-grok-with-5-questions-boomers-actually-ask-and-the-winner-surprised-me) 上把同样五条 prompt 分别发给 ChatGPT 和 Grok。最实用的是诈骗短信那一题：ChatGPT 直接判断“几乎肯定是诈骗”，用表格分别说明点了链接、填了支付信息、下载了恶意软件的后果，还指出 USPS 不收“重新投递费”，并给出转发到 7726、发邮件到 spam@uspis.gov 两种举报方式。\n\n她的结论是 Grok 总分胜出，原因是**它知道什么时候该少说**：医保说明守住了 400 字，给女儿的短信听起来像真父母写的。ChatGPT 适合需要分步骤指导的场合。\n\n普通家庭可以学的是 prompt 的写法：**写明身份、预算、字数和“不要术语”**，答案才用得上。这些 prompt 不涉及账户权限，只要把短信原文贴进去就行。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I tested ChatGPT vs. Grok with 5 questions boomers actually ask — and the winner surprised me",
+          "url": "https://www.tomsguide.com/ai/i-tested-chatgpt-vs-grok-with-5-questions-boomers-actually-ask-and-the-winner-surprised-me"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-05",
+      "issueDate": "2026-10-24",
+      "issueNumber": 15
+    },
+    {
+      "candidateIds": [
         "c28"
       ],
       "category": "life",

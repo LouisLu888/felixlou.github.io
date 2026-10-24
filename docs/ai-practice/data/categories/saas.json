@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c10"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-24",
+      "headline": "Userlist 一半付费客户没配完功能，顾问说：上手费要收到肉疼",
+      "oneLiner": "做了九年的 SaaS 邮件工具 Userlist 试用转化率掉了一半；创始人自己估算，付费客户里大约只有 50% 把产品用全了。",
+      "who": "Userlist 联合创始人 Jane Portman 和 Benedikt Deicke，在 Smart Bear Live 节目上接受 Jason Cohen 和 Mariya Delano 的现场诊断。",
+      "how": "诊断从定位开始：首页写的是“面向成熟营销人”，流失的却大多是不会衡量效果的客户。对策有三条：强制带教上手，并收高价上手费；让周报主动发到客户公司里更多人的邮箱；在图表角落放 logo，方便客户截图汇报时带上品牌。",
+      "result": "Jane 估计，剔除垃圾注册后激活率约 40%。Cohen 举例说，HubSpot 发现做过一小时一对一培训的客户留存高出约四到五倍，于是把培训改成了强制。",
+      "tryThis": "查一下你的产品在每个客户公司里是不是只有一个人在看价值报告。如果是，先给自己的客户做一份发给多人的周报。",
+      "caveat": "强制收费上手会吓走一部分客户。Jane 原本想收 1000 美元，Delano 认为“得让人肉疼”才有效果；收多少合适要看客单价。",
+      "body": "在 [Smart Bear Live 第 11 期](https://smartbearlive.transistor.fm/11)里，Userlist 的两位创始人把公司数据摊开来讲：试用转化率减半，老客户开始取消。Benedikt 说，流失的一大块原因是客户“从没真正用起来”，因为接入自己的应用是额外的工作。还有一家取消，是因为公司里唯一在用它的人离职了。\n\nCohen 不断追问首页上的那句定位，最后两人承认，流失的大多不是目标客户。顾问给出的建议都能马上落地。**一是防止只剩一个使用者**：参考 New Relic，把报告发给 CTO 等多个人。Jane 说自己过去一年的客户跟进都在讲“怎么多用”，从没带客户回顾结果。**二是灰显未解锁功能**：数据源没接上时，先展示一份示例报告，让客户在想用的那一刻看到接入的价值。**三是收取实施费**：Cohen 建议收 1 万美元，用价格筛掉不认真的客户。\n\n这期节目里没有 AI，适合用来对照：用 AI 做 SaaS 的人，迟早也会碰到激活和“只有一个使用者”的问题。",
+      "sources": [
+        {
+          "label": "Smart Bear Live",
+          "title": "E11 w/ Mariya Delano: How to Fix a SaaS Trial-to-Paid Conversion Problem",
+          "url": "https://smartbearlive.transistor.fm/11"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-02",
+      "issueDate": "2026-10-24",
+      "issueNumber": 15
+    },
+    {
+      "candidateIds": [
         "c8"
       ],
       "category": "saas",

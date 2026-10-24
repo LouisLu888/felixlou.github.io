@@ -8,6 +8,39 @@
   "items": [
     {
       "candidateIds": [
+        "c1",
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-24",
+      "headline": "一句 prompt，个人游戏从双人对战变成四人联网",
+      "oneLiner": "Simon Willison 用一段话让 Claude Opus 4.5 给自己的游戏 Battledrones 加了四人地图，联网代码也一起改好了。",
+      "who": "开发者 Simon Willison，在维护自己的浏览器游戏 Battledrones 和一些小工具。",
+      "how": "他的 prompt 写清了四个约束：四向旋转对称、最多四个 AI 玩家、走 WebSocket 非语音多人模式、空位由 AI 补上。另一个小工具 Quick Study 也是一句话需求：打开照片，几秒内用 canvas 模拟画笔画出来。",
+      "result": "按他的记录，Claude 新增了“Compass Rose”地图，改写了 WebSocket 网络代码，支持通过分享链接或二维码加入，还加了紫色和绿色两支新队伍。Quick Study 用 Sobel 边缘检测实现，没有引入外部库。",
+      "tryThis": "给自己维护的小项目提一个需求，写清对称性、人数上限、复用哪个现有模块这类硬约束，再对照结果检查改动。",
+      "caveat": "这是他熟悉的个人项目，原来已经有双人联网模式可以扩展。从零开始的项目，或者多人维护的代码库，要多留出审查时间。",
+      "body": "Simon Willison 在[发布记录](https://simonwillison.net/2026/Oct/24/battledrones/)里贴出了原始 prompt，只有一句话，但条件给得很全：地图要四向旋转对称，最多四个 AI，兼容现有的 WebSocket 多人模式，真人不满四个时由 AI 补位。Claude Opus 4.5 交付了新地图，同时改了联网代码，加入方式支持分享链接和二维码。他还附上了一段四方 AI 对战的回放。\n\n前一天他做了 [Quick Study](https://simonwillison.net/2026/Oct/23/quick-study-painter/)，需求同样一句话：用 canvas 和模拟画笔，几秒内把照片“画”一遍。\n\n可借鉴的是 prompt 的写法：**说清楚要复用什么、边界在哪、缺人或出错时怎么兜底**，而不是描述一个模糊的愿景。已有代码越清晰，一句话能推动的改动越大。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "battledrones v14: Compass Rose, a four player map",
+          "url": "https://simonwillison.net/2026/Oct/24/battledrones/"
+        },
+        {
+          "label": "Simon Willison",
+          "title": "Quick Study",
+          "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-24-03",
+      "issueDate": "2026-10-24",
+      "issueNumber": 15
+    },
+    {
+      "candidateIds": [
         "c61"
       ],
       "category": "productivity",

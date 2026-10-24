@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-23T14:43:59.395Z",
+  "updatedAt": "2026-10-24T14:45:08.585Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 13
+      "count": 14
     },
     {
       "id": "consulting",
@@ -20,14 +20,14 @@
       "name": "内容创作",
       "en": "AI content creation",
       "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入",
-      "count": 5
+      "count": 6
     },
     {
       "id": "saas",
       "name": "Micro SaaS",
       "en": "AI micro SaaS",
       "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
-      "count": 7
+      "count": 8
     },
     {
       "id": "app",
@@ -41,17 +41,55 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 15
+      "count": 16
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 8
+      "count": 9
     }
   ],
   "days": [
+    {
+      "date": "2026-10-24",
+      "number": 15,
+      "title": "产品周一就能上线，客户从哪来；SaaS 付费用户里一半没真正用起来",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 9,
+      "itemCount": 5,
+      "categoryCounts": {
+        "content": 1,
+        "saas": 1,
+        "productivity": 1,
+        "perspective": 1,
+        "life": 1
+      },
+      "headlines": [
+        {
+          "category": "content",
+          "headline": "AI 把产品成本打下来了，钱都花在了获客上"
+        },
+        {
+          "category": "saas",
+          "headline": "Userlist 一半付费客户没配完功能，顾问说：上手费要收到肉疼"
+        },
+        {
+          "category": "productivity",
+          "headline": "一句 prompt，个人游戏从双人对战变成四人联网"
+        },
+        {
+          "category": "perspective",
+          "headline": "人类先广撒网再深挖，AI 是一条路走到底再交给检验器"
+        },
+        {
+          "category": "life",
+          "headline": "替爸妈测 ChatGPT 和 Grok：辨诈骗、讲医保、65 美元吃五天"
+        }
+      ]
+    },
     {
       "date": "2026-10-23",
       "number": 14,
