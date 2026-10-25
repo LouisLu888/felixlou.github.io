@@ -40,12 +40,26 @@ const Services: React.FC = () => {
   }, []);
 
   const copyWechatId = async () => {
+    let ok = false;
     try {
       await navigator.clipboard.writeText(WECHAT.id);
+      ok = true;
+    } catch {
+      // In-app browsers (WeChat included) often block the Clipboard API; fall back to execCommand.
+      const input = document.createElement('textarea');
+      input.value = WECHAT.id;
+      input.setAttribute('readonly', '');
+      input.style.position = 'fixed';
+      input.style.opacity = '0';
+      document.body.appendChild(input);
+      input.select();
+      ok = document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    // If both fail, the ID stays visible on the button to copy by hand.
+    if (ok) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
-    } catch {
-      // Clipboard can be blocked in some in-app browsers; the ID stays visible to copy by hand.
     }
   };
 
