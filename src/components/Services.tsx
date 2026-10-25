@@ -177,9 +177,15 @@ const Services: React.FC = () => {
             </figcaption>
             <p className="mt-6 text-slate-600 leading-relaxed">{t('services.bibiContext')}</p>
             <div className="mt-6 pt-5 border-t border-slate-100 text-sm">
-              <span className="text-slate-500">{t('services.bibiIntroLabel')}</span>
-              <span className="font-semibold text-slate-900">{t('services.bibiIntroName')}</span>
-              <span className="block mt-1 text-slate-500">{t('services.bibiIntroMeta')}</span>
+              <p className="text-slate-500">{t('services.bibiIntroLabel')}</p>
+              <ul className="mt-2 space-y-3">
+                {['bibiIntro', 'bibiIntro2'].map((key) => (
+                  <li key={key}>
+                    <span className="font-semibold text-slate-900">{t(`services.${key}Name`)}</span>
+                    <span className="block mt-1 text-slate-500 leading-relaxed">{t(`services.${key}Meta`)}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </figure>
