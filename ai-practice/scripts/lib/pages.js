@@ -76,6 +76,18 @@ function shell({ title, description: fullDescription, path, image = DEFAULT_OG_I
 ${headExtra}</head>
 <body>
   <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="${BASE_PATH}" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
     <div class="wrap header-inner">
       <a class="brand" href="${BASE_PATH}">
         <img class="brand-mark" src="${BASE_PATH}logo.svg" alt="" width="34" height="34">
@@ -90,7 +102,7 @@ ${headExtra}</head>
       </nav>
     </div>
     <div class="wrap"><nav class="cat-bar" aria-label="栏目">${catBar}</nav></div>
-  </header>
+  </div>
   <main class="wrap">
 ${body}
   </main>
