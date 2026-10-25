@@ -1,5 +1,65 @@
 [
   {
+    "date": "2026-10-25",
+    "title": "一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人",
+    "summary": "旁路 Agent 提醒他：还有 45 个文件的改动没提交；按故事点付工程师工资，这家 AI 交付公司做到 75 人；Cursor 设计师 Ryo Lu：别让 Agent 替你跳过难的那段",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-25/",
+    "items": [
+      {
+        "headline": "旁路 Agent 提醒他：还有 45 个文件的改动没提交",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "Claude Mods: Flipping the Harness Inside Out",
+            "url": "https://latent.space/p/claude-mods/"
+          }
+        ]
+      },
+      {
+        "headline": "按故事点付工程师工资，这家 AI 交付公司做到 75 人",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess",
+            "url": "https://latent.space/p/tenex/"
+          }
+        ]
+      },
+      {
+        "headline": "Cursor 设计师 Ryo Lu：别让 Agent 替你跳过难的那段",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Ryo Lu: struggle together\n\ni learned programming and design by trying, failing, and tryi",
+            "url": "https://x.com/ryolu_/status/2114187405251219954"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "旁路 Agent 提醒他：还有 45 个文件的改动没提交"
+      },
+      {
+        "start": 172,
+        "title": "按故事点付工程师工资，这家 AI 交付公司做到 75 人"
+      },
+      {
+        "start": 274,
+        "title": "Cursor 设计师 Ryo Lu：别让 Agent 替你跳过难的那段"
+      },
+      {
+        "start": 354,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 404,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-10-25.mp3",
+    "audioBytes": 2424333,
+    "publishedAt": "2026-10-25T22:46:03.875Z"
+  },
+  {
     "date": "2026-10-24",
     "title": "产品周一就能上线，客户从哪来；SaaS 付费用户里一半没真正用起来",
     "summary": "AI 把产品成本打下来了，钱都花在了获客上；Userlist 一半付费客户没配完功能，顾问说：上手费要收到肉疼；一句 prompt，个人游戏从双人对战变成四人联网；人类先广撒网再深挖，AI 是一条路走到底再交给检验器；替爸妈测 ChatGPT 和 Grok：辨诈骗、讲医保、65 美元吃五天",
