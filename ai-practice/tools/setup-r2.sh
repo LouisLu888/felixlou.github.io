@@ -72,7 +72,7 @@ if [ -z "$ZONE_ID" ]; then
   cat <<MSG
 
   $ZONE 还不在 Cloudflare 上。先做这一步（只能在网页上做）：
-    1. 打开 https://dash.cloudflare.com/$ACCOUNT_ID/add-site ，添加 $ZONE，选 Free 免费版
+    1. 打开 https://dash.cloudflare.com/$ACCOUNT_ID/add-site ，添加 ${ZONE}，选 Free 免费版
     2. 核对导入的 DNS 记录：www 指向 GitHub Pages 的那条必须在
        （通常是 CNAME www → louislu888.github.io，以及根域名的 A 记录）
     3. 到 Namecheap → Domain List → $ZONE 右边的 Manage → NAMESERVERS
@@ -83,9 +83,9 @@ MSG
   exit 0
 fi
 if [ "$ZONE_STATUS" != "active" ]; then
-  die "$ZONE 已加到 Cloudflare，但状态是 $ZONE_STATUS。确认 Namecheap 的 nameserver 已改成 Cloudflare 的，等它变成 active 再运行"
+  die "$ZONE 已加到 Cloudflare，但状态是 ${ZONE_STATUS}。确认 Namecheap 的 nameserver 已改成 Cloudflare 的，等它变成 active 再运行"
 fi
-ok "站点 $ZONE 已在 Cloudflare（$ZONE_ID）"
+ok "站点 $ZONE 已在 Cloudflare（${ZONE_ID}）"
 
 # ---------------------------------------------------------------------------
 say "2/5 存储桶和域名"
@@ -124,14 +124,14 @@ MSG
   read -r -s -p "  粘贴 Secret Access Key（输入不显示）：" KEY_SECRET; echo
   [ -n "$KEY_ID" ] && [ -n "$KEY_SECRET" ] || die "两个值都要填"
 
-  say "4/5 写入 GitHub（$REPO）"
+  say "4/5 写入 GitHub（${REPO}）"
   printf '%s' "$ACCOUNT_ID" | gh secret set R2_ACCOUNT_ID -R "$REPO"
   printf '%s' "$KEY_ID"     | gh secret set R2_ACCESS_KEY_ID -R "$REPO"
   printf '%s' "$KEY_SECRET" | gh secret set R2_SECRET_ACCESS_KEY -R "$REPO"
   unset KEY_SECRET
   ok "secrets：R2_ACCOUNT_ID、R2_ACCESS_KEY_ID、R2_SECRET_ACCESS_KEY"
 else
-  say "4/5 写入 GitHub（$REPO）"
+  say "4/5 写入 GitHub（${REPO}）"
   printf '%s' "$ACCOUNT_ID" | gh secret set R2_ACCOUNT_ID -R "$REPO"
   ok "沿用已有密钥"
 fi
@@ -156,7 +156,7 @@ ok "$BASE 可以访问"
 # so only set them once the bucket is reachable.
 gh variable set R2_BUCKET -R "$REPO" --body "$BUCKET"
 gh variable set PODCAST_AUDIO_BASE -R "$REPO" --body "$BASE"
-ok "variables：R2_BUCKET=$BUCKET，PODCAST_AUDIO_BASE=$BASE"
+ok "variables：R2_BUCKET=${BUCKET}，PODCAST_AUDIO_BASE=$BASE"
 
 cat <<MSG
 
