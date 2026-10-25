@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, ChevronDown, Copy, Quote, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { WECHAT } from '../config/siteProfile';
+import { track } from '../utils/analytics';
 
 const CASE_URL = '/blog/ai-consulting-say-no';
 const DECK_URL = '/decks/ai-three-mindsets/';
@@ -23,6 +24,28 @@ const Services: React.FC = () => {
   const { t } = useLanguage();
   const [showSticky, setShowSticky] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [quoteOpen, setQuoteOpen] = useState(false);
+  const qrPressStart = useRef(0);
+
+  // Funnel depth: one event the first time each key section scrolls into view.
+  useEffect(() => {
+    const seen = new Set<string>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const section = (entry.target as HTMLElement).dataset.track;
+          if (entry.isIntersecting && section && !seen.has(section)) {
+            seen.add(section);
+            track('services_section_view', { section });
+          }
+        });
+      },
+      // Counts once the section reaches the middle of the screen; a ratio threshold can't fire on sections taller than the viewport.
+      { rootMargin: '0px 0px -50% 0px' },
+    );
+    document.querySelectorAll('[data-track]').forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const previous = document.title;
@@ -62,6 +85,7 @@ const Services: React.FC = () => {
       document.body.removeChild(input);
     }
     // If both fail, the ID stays visible on the button to copy by hand.
+    track('services_wechat_copy', { result: ok ? 'copied' : 'failed' });
     if (ok) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
@@ -75,7 +99,7 @@ const Services: React.FC = () => {
   const creds = ['cred1', 'cred2', 'cred3', 'cred4'];
   // Add a testimonial: t2Quote / t2Author / t2Meta / t2Note in both locales, then list it here.
   const testimonials = ['t1'];
-  const steps = ['step1', 'step2', 'step3'];
+  const steps = ['step1', 'step2', 'step3', 'step4'];
   const tiers = ['tier1', 'tier2'];
   const faqs = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6'];
 
@@ -92,6 +116,7 @@ const Services: React.FC = () => {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#book"
+              onClick={() => track('services_book_click', { location: 'hero' })}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-amber-700 text-white font-semibold hover:bg-amber-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700"
             >
               {t('services.ctaBook')}
@@ -99,6 +124,7 @@ const Services: React.FC = () => {
             </a>
             <Link
               to={CASE_URL}
+              onClick={() => track('services_case_click', { location: 'hero' })}
               className="inline-flex items-center px-6 py-3 rounded-lg border border-stone-300 text-stone-800 font-semibold hover:border-stone-900 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700"
             >
               {t('services.ctaCase')}
@@ -144,13 +170,26 @@ const Services: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className={`${WRAP} ${BAND}`}>
+      <section data-track="testimonials" className={`${WRAP} ${BAND}`}>
         <SectionTitle>{t('services.testimonialsTitle')}</SectionTitle>
         <div className="mt-8 grid lg:grid-cols-3 gap-5">
           {testimonials.map((key) => (
             <figure key={key} className="lg:col-span-2 p-7 sm:p-8 rounded-2xl bg-amber-50 ring-1 ring-amber-100">
               <Quote className="w-7 h-7 text-amber-500" />
-              <blockquote className="mt-4 text-[1.0625rem] text-stone-800 leading-relaxed">{t(`services.${key}Quote`)}</blockquote>
+              <blockquote
+                className={`mt-4 text-[1.0625rem] text-stone-800 leading-relaxed ${quoteOpen ? '' : 'line-clamp-4 sm:line-clamp-none'}`}
+              >
+                {t(`services.${key}Quote`)}
+              </blockquote>
+              {!quoteOpen && (
+                <button
+                  type="button"
+                  onClick={() => setQuoteOpen(true)}
+                  className="sm:hidden mt-2 text-sm font-medium text-amber-700"
+                >
+                  {t('services.readMore')}
+                </button>
+              )}
               <figcaption className="mt-6 text-sm">
                 <span className="font-semibold text-stone-900">{t(`services.${key}Author`)}</span>
                 <span className="block mt-1 text-stone-500">{t(`services.${key}Meta`)}</span>
@@ -162,6 +201,7 @@ const Services: React.FC = () => {
           ))}
           <Link
             to={CASE_URL}
+            onClick={() => track('services_case_click', { location: 'testimonials' })}
             className="group p-7 sm:p-8 rounded-2xl ring-1 ring-stone-200 hover:ring-stone-400 transition-shadow flex flex-col"
           >
             <p className="text-sm font-semibold text-amber-700">{t('services.caseCardTitle')}</p>
@@ -175,16 +215,21 @@ const Services: React.FC = () => {
 
         {/* Featured testimonial: original screenshot beside who wrote it */}
         <figure className="mt-5 p-6 sm:p-10 rounded-2xl ring-1 ring-stone-200 grid md:grid-cols-5 gap-8 md:gap-10 items-start">
-          <div className="md:col-span-2">
-            <img
-              src={BIBI_SCREENSHOT}
-              alt={t('services.bibiImageAlt')}
-              width={923}
-              height={1593}
-              loading="lazy"
-              className="w-full max-w-[18rem] mx-auto rounded-xl shadow-xl ring-1 ring-stone-900/10"
-            />
-            <p className="mt-3 text-center text-xs text-stone-400">{t('services.bibiImageNote')}</p>
+          <div className="md:col-span-2 order-last md:order-none flex md:block items-center gap-4">
+            <a href={BIBI_SCREENSHOT} target="_blank" rel="noopener" className="shrink-0 md:block">
+              <img
+                src={BIBI_SCREENSHOT}
+                alt={t('services.bibiImageAlt')}
+                width={923}
+                height={1593}
+                loading="lazy"
+                className="w-24 md:w-full md:max-w-[18rem] mx-auto rounded-lg md:rounded-xl shadow-xl ring-1 ring-stone-900/10"
+              />
+            </a>
+            <p className="md:mt-3 md:text-center text-xs text-stone-400 leading-relaxed">
+              {t('services.bibiImageNote')}
+              <span className="md:hidden block">{t('services.bibiImageTap')}</span>
+            </p>
           </div>
           <div className="md:col-span-3">
             <p className="text-sm font-semibold text-amber-700">{t('services.bibiLabel')}</p>
@@ -212,13 +257,14 @@ const Services: React.FC = () => {
       </section>
 
       {/* Four layers */}
-      <section className="bg-stone-100">
+      <section data-track="layers" className="bg-stone-100">
         <div className={`${WRAP} ${BAND}`}>
           <SectionTitle>{t('services.layersTitle')}</SectionTitle>
           <p className="mt-4 text-lg text-stone-600 leading-relaxed max-w-2xl">{t('services.layersIntro')}</p>
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <p className="sm:hidden mt-3 text-sm text-stone-400">{t('services.swipeHint')}</p>
+          <div className="mt-8 -mx-6 px-6 sm:mx-0 sm:px-0 flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scroll-px-6 [scrollbar-width:none]">
             {layers.map((key) => (
-              <div key={key} className="p-6 rounded-xl bg-white ring-1 ring-stone-200 flex flex-col">
+              <div key={key} className="w-[82%] sm:w-auto shrink-0 snap-start p-6 rounded-xl bg-white ring-1 ring-stone-200 flex flex-col">
                 <p className="font-display text-2xl font-bold text-stone-900">{t(`services.${key}Name`)}</p>
                 <p className="mt-5 text-xs font-semibold text-stone-400">{t('services.issueLabel')}</p>
                 <p className="mt-1 text-sm text-stone-600 leading-relaxed">{t(`services.${key}Issue`)}</p>
@@ -244,7 +290,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* Why me */}
-      <section className="bg-stone-900 text-stone-200">
+      <section data-track="why_me" className="bg-stone-900 text-stone-200">
         <div className={`${WRAP} ${BAND} grid lg:grid-cols-5 gap-10 lg:gap-12`}>
           <div className="lg:col-span-2 space-y-5">
             <h2 className="font-display text-[1.75rem] sm:text-[2rem] font-bold leading-snug text-white">{t('services.whyTitle')}</h2>
@@ -259,6 +305,7 @@ const Services: React.FC = () => {
                 {key === 'cred4' && (
                   <a
                     href={DECK_URL}
+                    onClick={() => track('services_deck_click')}
                     className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-amber-300 hover:text-amber-200"
                   >
                     {t('services.cred4Link')}
@@ -272,7 +319,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* Process + pricing */}
-      <section className={`${WRAP} ${BAND} grid lg:grid-cols-2 gap-14 items-start`}>
+      <section data-track="pricing" className={`${WRAP} ${BAND} grid lg:grid-cols-2 gap-14 items-start`}>
         <div className="lg:sticky lg:top-24">
           <SectionTitle>{t('services.processTitle')}</SectionTitle>
           <ol className="mt-8 space-y-7">
@@ -338,12 +385,16 @@ const Services: React.FC = () => {
       </section>
 
       {/* FAQ */}
-      <section className="bg-stone-100">
+      <section data-track="faq" className="bg-stone-100">
         <div className={`max-w-3xl mx-auto px-6 ${BAND}`}>
           <SectionTitle>{t('services.faqTitle')}</SectionTitle>
           <div className="mt-8 divide-y divide-stone-300 border-y border-stone-300">
             {faqs.map((key) => (
-              <details key={key} className="group py-5">
+              <details
+                key={key}
+                className="group py-5"
+                onToggle={(e) => e.currentTarget.open && track('services_faq_open', { question: key })}
+              >
                 <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-stone-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700 rounded">
                   {t(`services.${key}Q`)}
                   <ChevronDown className="shrink-0 w-5 h-5 text-stone-400 transition-transform group-open:rotate-180 motion-reduce:transition-none" />
@@ -356,7 +407,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* Final CTA */}
-      <section id="book" className={`${WRAP} ${BAND} scroll-mt-16`}>
+      <section id="book" data-track="book" className={`${WRAP} ${BAND} scroll-mt-16`}>
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 sm:p-12 rounded-2xl bg-stone-900 text-white">
           <div className="flex-1 text-center md:text-left">
             <h2 className="font-display text-[1.75rem] sm:text-[2rem] font-bold leading-snug">{t('services.finalTitle')}</h2>
@@ -376,6 +427,12 @@ const Services: React.FC = () => {
           </div>
           <div className="p-3 bg-white rounded-xl shrink-0">
             <img
+              onTouchStart={() => {
+                qrPressStart.current = Date.now();
+              }}
+              onTouchEnd={() => {
+                if (Date.now() - qrPressStart.current > 450) track('services_qr_longpress');
+              }}
               src={WECHAT.qrImage}
               alt={t('wechat.alt')}
               width={160}
@@ -396,6 +453,7 @@ const Services: React.FC = () => {
       >
         <a
           href="#book"
+          onClick={() => track('services_book_click', { location: 'sticky_bar' })}
           className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-amber-700 text-white font-semibold"
         >
           {t('services.stickyCta')}
