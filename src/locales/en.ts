@@ -150,13 +150,17 @@ export const en = {
     step3: 'We map the workflow, run the numbers and settle on a plan; you leave with a first step.',
 
     pricingTitle: 'Pricing',
+    pricingNote: 'Early stage: these are friends-and-family prices for now.',
+    discountLabel: '{pct}% off',
     tier1Name: 'Intro session',
     tier1Duration: '45 min',
     tier1Price: '¥888',
+    tier1OriginalPrice: '¥1268',
     tier1Desc: 'One focused question, plus advice on learning and using AI.',
     tier2Name: 'Deep-dive session',
     tier2Duration: '1.5 hours',
     tier2Price: '¥1588',
+    tier2OriginalPrice: '¥2268',
     tier2Desc: 'Concrete work and business problems where we map the workflow, run the numbers, and settle on a plan together.',
 
     finalTitle: 'Bring one real problem',

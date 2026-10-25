@@ -8,7 +8,9 @@ const CASE_URL = '/blog/ai-consulting-say-no';
 const DECK_URL = '/decks/ai-three-mindsets/';
 const BIBI_SCREENSHOT = '/images/testimonials/bibi.webp';
 
-const SectionTitle: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
+const toNumber = (price: string) => Number(price.replace(/[^\d.]/g, ''));
+
+const SectionTitle:React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
   <h2 className={`text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 ${className}`}>{children}</h2>
 );
 
@@ -219,17 +221,29 @@ const Services: React.FC = () => {
           </div>
           <div>
             <SectionTitle>{t('services.pricingTitle')}</SectionTitle>
-            <div className="mt-8 space-y-4">
-              {tiers.map((key) => (
-                <div key={key} className="p-6 rounded-xl bg-white border border-slate-200">
-                  <div className="flex items-baseline justify-between gap-3">
-                    <p className="font-semibold text-slate-900">{t(`services.${key}Name`)}</p>
-                    <p className="text-sm text-slate-500">{t(`services.${key}Duration`)}</p>
+            <p className="mt-3 text-sm text-amber-700">{t('services.pricingNote')}</p>
+            <div className="mt-6 space-y-4">
+              {tiers.map((key) => {
+                const price = t(`services.${key}Price`);
+                const original = t(`services.${key}OriginalPrice`);
+                const pct = Math.round((1 - toNumber(price) / toNumber(original)) * 100);
+                return (
+                  <div key={key} className="p-6 rounded-xl bg-white border border-slate-200">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <p className="font-semibold text-slate-900">{t(`services.${key}Name`)}</p>
+                      <p className="text-sm text-slate-500">{t(`services.${key}Duration`)}</p>
+                    </div>
+                    <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <p className="text-3xl font-bold text-amber-600">{price}</p>
+                      <p className="text-lg text-slate-400 line-through">{original}</p>
+                      <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold">
+                        {t('services.discountLabel').replace('{pct}', String(pct))}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">{t(`services.${key}Desc`)}</p>
                   </div>
-                  <p className="mt-2 text-3xl font-bold text-amber-600">{t(`services.${key}Price`)}</p>
-                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{t(`services.${key}Desc`)}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

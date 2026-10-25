@@ -150,13 +150,17 @@ export const zh = {
     step3: '我们一起梳理流程、算账、定方案，你带走一个能马上做的第一步。',
 
     pricingTitle: '价格',
+    pricingNote: '现在是早期阶段，价格是亲情价。',
+    discountLabel: '优惠 {pct}%',
     tier1Name: '初步咨询',
     tier1Duration: '45 分钟',
     tier1Price: '¥888',
+    tier1OriginalPrice: '¥1268',
     tier1Desc: '处理一个具体的小问题，也给一些学习和使用 AI 的建议。',
     tier2Name: '深入咨询',
     tier2Duration: '1.5 小时',
     tier2Price: '¥1588',
+    tier2OriginalPrice: '¥2268',
     tier2Desc: '处理工作和商业里的具体问题，适合需要一起梳理流程、算账、定方案的情况。',
 
     finalTitle: '带着一个真实问题来',
