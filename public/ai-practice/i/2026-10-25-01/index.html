@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旁路 Agent 提醒他：还有 45 个文件的改动没提交｜AI 实干派</title>
+  <meta name="description" content="Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-25-01/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="旁路 Agent 提醒他：还有 45 个文件的改动没提交｜AI 实干派">
+  <meta property="og:description" content="Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-25-01/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-25.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="旁路 Agent 提醒他：还有 45 个文件的改动没提交｜AI 实干派">
+  <meta name="twitter:description" content="Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-25.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">15</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">5</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">6</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">8</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">9</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">17</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">9</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-25/">AI 实干派 016 · 2026 年 10 月 25 日 · 周日</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-21<span>·</span>US</div>
+        <h1>旁路 Agent 提醒他：还有 45 个文件的改动没提交</h1>
+        <p class="summary">Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>AI 工程师 Dan McAteer，过去几周在个人项目里用 Claude Mods 改造自己的 Claude Code 工作流。</dd><dt>怎么用</dt><dd>Mod 是一段 TypeScript/JavaScript 插件，挂在提交 prompt、调用工具、界面渲染这些事件上，可以改动展示内容，也可以接管默认行为。他开启了内置的 You Should Know，又自己做了一个 Next Steps Supervisor。</dd><dt>结果</dt><dd>有一次主 Agent 改完界面文案、截了前后对比图，看上去已经完工。You Should Know 这时提醒他：被改的文件和另外约 45 个文件里都有没提交的旧改动，丢弃这次修改会把它们一起丢掉，建议先 commit 或 stash。</dd><dt>你可以试</dt><dd>用 Claude Code 的人可以运行 /plugin，在 Installed 的 Built-in 里打开默认关闭的 You Should Know。也可以直接用大白话让 Claude 写一个 mod，它内置了写 mod 的技能。</dd><dt>注意</dt><dd>提醒太多会被忽略。按 README 的估算，每次检查在 5 万 token 的会话上约消耗 5 到 6 千输入 token，缓存过期后更多。Mod 是在 Claude Code 里运行的代码，装别人写的之前要先审查。</dd></dl>
+        <div class="body"><p>Dan McAteer 在 <a href="https://latent.space/p/claude-mods/">Latent Space 的文章</a>里介绍了他这几周怎么用 Claude Mods。Anthropic 在 Claude Code 里内置了 6 个 mod，大多在后台运行。他开启了 You Should Know：一个旁路 Agent 观察主 Agent 干活，把埋在执行记录里、又会影响结果的决定挑出来告诉你。前面那次没提交的 45 个文件，就是它发现的。</p><p>他自己写的 <strong>Next Steps Supervisor</strong> 放在开源插件 ModSmith 里。只要某一轮改了文件、执行了命令或调用工具达到 8 次，它就复查一遍，列出值得注意的点，再给出一个可以直接点的下一步按钮。他拿另外两种做法对比：ChatGPT 的 Intelligent UI 由模型决定界面，Cursor 的 PR Routing 由团队写规则来分配审查。Mods 则是<strong>用户和 Claude 一起决定人的注意力该花在哪</strong>。</p><p>问题出在触发条件。他从 10 月 15 日装上，111 轮里有 99 轮都触发了，不少提醒只是噪音，他开始跳着看。自己写 mod 时，<strong>触发条件要收窄</strong>：只在删除文件、改动范围大这类高风险时刻提醒。</p></div>
+        <div class="sources">原文：<a href="https://latent.space/p/claude-mods/" target="_blank" rel="noopener" title="Claude Mods: Flipping the Harness Inside Out">Latent Space</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-25/">← 当期全部 3 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

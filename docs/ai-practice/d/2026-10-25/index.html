@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 016｜一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人</title>
+  <meta name="description" content="Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-10-25/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 016｜一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人">
+  <meta property="og:description" content="Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-10-25/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-25.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 016｜一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人">
+  <meta name="twitter:description" content="Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-25.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">15</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">5</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">6</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">8</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">9</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">17</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">9</span></a></nav></div>
+  </header>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 016 · 2026 年 10 月 25 日 · 周日 · 约 6 分钟读完</div>
+        <h1>一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-25-01">Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。</a></li><li><span class="tag" data-cat="consulting">AI 咨询</span><a href="#2026-10-25-02">Tenex 联创 Alex Lieberman 说，公司按交付的故事点给工程师付钱，没有按小时计费，现在有 75 人，客户一半是 Fortune 2000 企业，一半是中型企业。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-10-25-03">Ryo Lu 说，自己的编程和设计能力是一次次碰壁磨出来的。他担心，难点在我们弄懂它教了什么之前就被 AI 拿掉了，和人一起磕磕碰碰做事的机会也在变少。</a></li></ul>
+      </section>
+      <section class="item" id="2026-10-25-01">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-21<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-25-01/">01｜旁路 Agent 提醒他：还有 45 个文件的改动没提交</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>AI 工程师 Dan McAteer，过去几周在个人项目里用 Claude Mods 改造自己的 Claude Code 工作流。</dd><dt>怎么用</dt><dd>Mod 是一段 TypeScript/JavaScript 插件，挂在提交 prompt、调用工具、界面渲染这些事件上，可以改动展示内容，也可以接管默认行为。他开启了内置的 You Should Know，又自己做了一个 Next Steps Supervisor。</dd><dt>结果</dt><dd>有一次主 Agent 改完界面文案、截了前后对比图，看上去已经完工。You Should Know 这时提醒他：被改的文件和另外约 45 个文件里都有没提交的旧改动，丢弃这次修改会把它们一起丢掉，建议先 commit 或 stash。</dd><dt>你可以试</dt><dd>用 Claude Code 的人可以运行 /plugin，在 Installed 的 Built-in 里打开默认关闭的 You Should Know。也可以直接用大白话让 Claude 写一个 mod，它内置了写 mod 的技能。</dd><dt>注意</dt><dd>提醒太多会被忽略。按 README 的估算，每次检查在 5 万 token 的会话上约消耗 5 到 6 千输入 token，缓存过期后更多。Mod 是在 Claude Code 里运行的代码，装别人写的之前要先审查。</dd></dl>
+        <div class="body"><p>Dan McAteer 在 <a href="https://latent.space/p/claude-mods/">Latent Space 的文章</a>里介绍了他这几周怎么用 Claude Mods。Anthropic 在 Claude Code 里内置了 6 个 mod，大多在后台运行。他开启了 You Should Know：一个旁路 Agent 观察主 Agent 干活，把埋在执行记录里、又会影响结果的决定挑出来告诉你。前面那次没提交的 45 个文件，就是它发现的。</p><p>他自己写的 <strong>Next Steps Supervisor</strong> 放在开源插件 ModSmith 里。只要某一轮改了文件、执行了命令或调用工具达到 8 次，它就复查一遍，列出值得注意的点，再给出一个可以直接点的下一步按钮。他拿另外两种做法对比：ChatGPT 的 Intelligent UI 由模型决定界面，Cursor 的 PR Routing 由团队写规则来分配审查。Mods 则是<strong>用户和 Claude 一起决定人的注意力该花在哪</strong>。</p><p>问题出在触发条件。他从 10 月 15 日装上，111 轮里有 99 轮都触发了，不少提醒只是噪音，他开始跳着看。自己写 mod 时，<strong>触发条件要收窄</strong>：只在删除文件、改动范围大这类高风险时刻提醒。</p></div>
+        <div class="sources">原文：<a href="https://latent.space/p/claude-mods/" target="_blank" rel="noopener" title="Claude Mods: Flipping the Harness Inside Out">Latent Space</a></div>
+      </section>
+      <section class="item" id="2026-10-25-02">
+        <div class="item-meta"><span class="tag" data-cat="consulting">AI 咨询</span><span>·</span>经营复盘<span>·</span>2026-10-21<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-25-02/">02｜按故事点付工程师工资，这家 AI 交付公司做到 75 人</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>应用 AI 服务公司 Tenex 的联创 Alex Lieberman 和特别项目负责人 CJ Hess，在 AI Engineer 纽约大会上接受 Latent Space 访谈。</dd><dt>怎么用</dt><dd>工程师按故事点拿报酬。负责客户的 AI strategist 要为续约和增长负责，所以会拒掉对客户没用的需求。交付时用 MetaHarness：把技能、项目文档和计划决策跟代码一起提交到 Git。</dd><dt>结果</dt><dd>Alex 说公司有 75 人。最初是 AI 开发外包，现在越来越多客户请他们帮整个公司做 AI 转型。他说，大家担心的虚报估点、交烂代码刷点数，至今都不是最大的问题。</dd><dt>你可以试</dt><dd>如果你接 AI 开发的活，可以试试按交付物报价，并把计划、验收标准和决策记录放进代码仓库，让 Agent 回来接手时知道当初为什么这么做。</dd><dt>注意</dt><dd>Tenex 自己承认，这么多结构对一个人做一个项目来说太重。理解需求、设计架构这类工作没法写成一张工单，按点付费的制度还得另外给它们留出位置。</dd></dl>
+        <div class="body"><p>CJ Hess 在<a href="https://latent.space/p/tenex/">这期节目</a>里讲了他加入 Tenex 的原因：以前他按小时给客户计费，用上 AI 以后产出更快更好，挣的钱反而少了。Tenex 按故事点付钱，双方事先约定每项工作值多少点。Alex 说，这样一来工程师之间的收入差距会比以往任何时候都大。CJ 说，模型越强，他直接写代码的时间越少，更多时间花在把客户的背景整理成模型能用的形式。</p><p><strong>MetaHarness</strong> 的思路是让写代码以外的工作也有据可查。计划、验收标准、决策和证据都留在仓库里，再接到 Linear、GitHub 和给客户的进度更新上。Alex 对团队的说法是：&quot;一个不存在的流程，没法自动化。&quot;</p><p>节目还谈到 Latent Space 自己的 Kill My SaaS 实验：为了替换一个报价每年 4.3 万美元的讲者管理工具，他们收到 72 份方案。人类评委选出的冠军，在 AI 评委的榜上只排第 19。Alex 提醒，自己做的工具也得有人一直维护。做咨询的人可以借这个问题判断交付范围：<strong>客户省下的费用，够不够付后续维护的钱？</strong></p></div>
+        <div class="sources">原文：<a href="https://latent.space/p/tenex/" target="_blank" rel="noopener" title="AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman &amp; CJ Hess">Latent Space</a></div>
+      </section>
+      <section class="item" id="2026-10-25-03">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-25<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-25-03/">03｜Cursor 设计师 Ryo Lu：别让 Agent 替你跳过难的那段</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Ryo Lu 曾在 Cursor、Notion、Stripe 做设计，也自己创过业。他在 X 上发了一篇长文。</dd><dt>核心观点</dt><dd>他认为 AI 让人不必弄懂原理就能拿到结果。结果看着完整，人就容易漏掉那些从没学会去问的问题。Agent 总在、总有耐心，跟它说话比找一个可能误解你、反对你的人更轻松。</dd><dt>依据</dt><dd>依据是他的亲身经历：修不好的 bug、看着对但用户一用就出问题的设计，让他慢慢练出了没法说清却能察觉不对劲的直觉。他最亲近的一些朋友，也是一起熬过难关的合作者。他也说，用这些工具做出了一些原本可能永远做不出来的东西。</dd><dt>对你的意义</dt><dd>学一项新技能时，可以留一部分问题先自己啃，再去问 AI。遇到卡住的设计或方案，先拿给同事看半成品，别第一时间只找 Agent。</dd><dt>争议·条件</dt><dd>这是一篇个人反思，没有数据。他自己也说，吃苦本身不会让东西变好，有些苦本来就没人该受。</dd></dl>
+        <div class="body"><p>Ryo Lu 在<a href="https://x.com/ryolu_/status/2114187405251219954">这篇长文</a>里讲了自己的学习方式：读半懂的资料，把东西拆开看，向人求助，推倒重来。很多作品做得并不好，但做过足够多轮以后，有些东西就留了下来，变成他思考方式的一部分。他担心的是，人还没弄明白难点教会了自己什么，它就已经被 AI 拿掉了。</p><p>另一层担心在协作。和人一起工作不舒服：每个人想要的不一样，有人在你觉得无关紧要的细节上较真。可磨合下来，团队会像乐队一样，知道谁能发现你漏掉的东西。他还提醒，每个人和自己的 Agent 待在各自的小世界里，而这些世界跑在公司的服务器上，受到我们看不见的利益影响。</p><p>这对带新人的管理者和正在转型的人都有用。<strong>用 AI 把繁琐的活干完，把能锻炼判断力的难题留给自己</strong>，并且有意识地保留和同事一起讨论半成品的时间。</p></div>
+        <div class="sources">原文：<a href="https://x.com/ryolu_/status/2114187405251219954" target="_blank" rel="noopener" title="Ryo Lu: struggle together
+
+i learned programming and design by trying, failing, and tryi">Follow Builders (X)</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>打开你最近一个用 AI 写代码或写文档的项目，在根目录建一个 decisions.md，补三条最近做过的关键决定：做了什么、为什么这样做、怎么验收。下次让 AI 接手这个项目时，先让它读这个文件。用 Claude Code 的人还可以运行 /plugin，打开 You Should Know，用一周，记下它提醒了几次、其中有几次真的有用，再决定留不留。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-24/">← 2026 年 10 月 24 日 · 周六</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml">RSS</a></p>
+  </footer>
+</body>
+</html>

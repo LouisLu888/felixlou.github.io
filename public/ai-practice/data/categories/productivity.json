@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c33"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-21",
+      "headline": "旁路 Agent 提醒他：还有 45 个文件的改动没提交",
+      "oneLiner": "Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。",
+      "who": "AI 工程师 Dan McAteer，过去几周在个人项目里用 Claude Mods 改造自己的 Claude Code 工作流。",
+      "how": "Mod 是一段 TypeScript/JavaScript 插件，挂在提交 prompt、调用工具、界面渲染这些事件上，可以改动展示内容，也可以接管默认行为。他开启了内置的 You Should Know，又自己做了一个 Next Steps Supervisor。",
+      "result": "有一次主 Agent 改完界面文案、截了前后对比图，看上去已经完工。You Should Know 这时提醒他：被改的文件和另外约 45 个文件里都有没提交的旧改动，丢弃这次修改会把它们一起丢掉，建议先 commit 或 stash。",
+      "tryThis": "用 Claude Code 的人可以运行 /plugin，在 Installed 的 Built-in 里打开默认关闭的 You Should Know。也可以直接用大白话让 Claude 写一个 mod，它内置了写 mod 的技能。",
+      "caveat": "提醒太多会被忽略。按 README 的估算，每次检查在 5 万 token 的会话上约消耗 5 到 6 千输入 token，缓存过期后更多。Mod 是在 Claude Code 里运行的代码，装别人写的之前要先审查。",
+      "body": "Dan McAteer 在 [Latent Space 的文章](https://latent.space/p/claude-mods/)里介绍了他这几周怎么用 Claude Mods。Anthropic 在 Claude Code 里内置了 6 个 mod，大多在后台运行。他开启了 You Should Know：一个旁路 Agent 观察主 Agent 干活，把埋在执行记录里、又会影响结果的决定挑出来告诉你。前面那次没提交的 45 个文件，就是它发现的。\n\n他自己写的 **Next Steps Supervisor** 放在开源插件 ModSmith 里。只要某一轮改了文件、执行了命令或调用工具达到 8 次，它就复查一遍，列出值得注意的点，再给出一个可以直接点的下一步按钮。他拿另外两种做法对比：ChatGPT 的 Intelligent UI 由模型决定界面，Cursor 的 PR Routing 由团队写规则来分配审查。Mods 则是**用户和 Claude 一起决定人的注意力该花在哪**。\n\n问题出在触发条件。他从 10 月 15 日装上，111 轮里有 99 轮都触发了，不少提醒只是噪音，他开始跳着看。自己写 mod 时，**触发条件要收窄**：只在删除文件、改动范围大这类高风险时刻提醒。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "Claude Mods: Flipping the Harness Inside Out",
+          "url": "https://latent.space/p/claude-mods/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-25-01",
+      "issueDate": "2026-10-25",
+      "issueNumber": 16
+    },
+    {
+      "candidateIds": [
         "c1",
         "c2"
       ],

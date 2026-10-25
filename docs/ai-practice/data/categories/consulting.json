@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c35"
+      ],
+      "category": "consulting",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-21",
+      "headline": "按故事点付工程师工资，这家 AI 交付公司做到 75 人",
+      "oneLiner": "Tenex 联创 Alex Lieberman 说，公司按交付的故事点给工程师付钱，没有按小时计费，现在有 75 人，客户一半是 Fortune 2000 企业，一半是中型企业。",
+      "who": "应用 AI 服务公司 Tenex 的联创 Alex Lieberman 和特别项目负责人 CJ Hess，在 AI Engineer 纽约大会上接受 Latent Space 访谈。",
+      "how": "工程师按故事点拿报酬。负责客户的 AI strategist 要为续约和增长负责，所以会拒掉对客户没用的需求。交付时用 MetaHarness：把技能、项目文档和计划决策跟代码一起提交到 Git。",
+      "result": "Alex 说公司有 75 人。最初是 AI 开发外包，现在越来越多客户请他们帮整个公司做 AI 转型。他说，大家担心的虚报估点、交烂代码刷点数，至今都不是最大的问题。",
+      "tryThis": "如果你接 AI 开发的活，可以试试按交付物报价，并把计划、验收标准和决策记录放进代码仓库，让 Agent 回来接手时知道当初为什么这么做。",
+      "caveat": "Tenex 自己承认，这么多结构对一个人做一个项目来说太重。理解需求、设计架构这类工作没法写成一张工单，按点付费的制度还得另外给它们留出位置。",
+      "body": "CJ Hess 在[这期节目](https://latent.space/p/tenex/)里讲了他加入 Tenex 的原因：以前他按小时给客户计费，用上 AI 以后产出更快更好，挣的钱反而少了。Tenex 按故事点付钱，双方事先约定每项工作值多少点。Alex 说，这样一来工程师之间的收入差距会比以往任何时候都大。CJ 说，模型越强，他直接写代码的时间越少，更多时间花在把客户的背景整理成模型能用的形式。\n\n**MetaHarness** 的思路是让写代码以外的工作也有据可查。计划、验收标准、决策和证据都留在仓库里，再接到 Linear、GitHub 和给客户的进度更新上。Alex 对团队的说法是：\"一个不存在的流程，没法自动化。\"\n\n节目还谈到 Latent Space 自己的 Kill My SaaS 实验：为了替换一个报价每年 4.3 万美元的讲者管理工具，他们收到 72 份方案。人类评委选出的冠军，在 AI 评委的榜上只排第 19。Alex 提醒，自己做的工具也得有人一直维护。做咨询的人可以借这个问题判断交付范围：**客户省下的费用，够不够付后续维护的钱？**",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess",
+          "url": "https://latent.space/p/tenex/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-25-02",
+      "issueDate": "2026-10-25",
+      "issueNumber": 16
+    },
+    {
+      "candidateIds": [
         "c45"
       ],
       "category": "consulting",

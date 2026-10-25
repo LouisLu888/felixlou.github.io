@@ -1,0 +1,227 @@
+{
+  "date": "2026-10-25",
+  "title": "一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人",
+  "items": [
+    {
+      "candidateIds": [
+        "c33"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-21",
+      "headline": "旁路 Agent 提醒他：还有 45 个文件的改动没提交",
+      "oneLiner": "Dan McAteer 用 Claude Mods 给 Claude Code 加了一个监督 Agent。它拦下了一次可能误删 45 个文件未提交改动的操作；他也算过，自己 111 轮对话里有 99 轮触发了这个提醒。",
+      "who": "AI 工程师 Dan McAteer，过去几周在个人项目里用 Claude Mods 改造自己的 Claude Code 工作流。",
+      "how": "Mod 是一段 TypeScript/JavaScript 插件，挂在提交 prompt、调用工具、界面渲染这些事件上，可以改动展示内容，也可以接管默认行为。他开启了内置的 You Should Know，又自己做了一个 Next Steps Supervisor。",
+      "result": "有一次主 Agent 改完界面文案、截了前后对比图，看上去已经完工。You Should Know 这时提醒他：被改的文件和另外约 45 个文件里都有没提交的旧改动，丢弃这次修改会把它们一起丢掉，建议先 commit 或 stash。",
+      "tryThis": "用 Claude Code 的人可以运行 /plugin，在 Installed 的 Built-in 里打开默认关闭的 You Should Know。也可以直接用大白话让 Claude 写一个 mod，它内置了写 mod 的技能。",
+      "caveat": "提醒太多会被忽略。按 README 的估算，每次检查在 5 万 token 的会话上约消耗 5 到 6 千输入 token，缓存过期后更多。Mod 是在 Claude Code 里运行的代码，装别人写的之前要先审查。",
+      "body": "Dan McAteer 在 [Latent Space 的文章](https://latent.space/p/claude-mods/)里介绍了他这几周怎么用 Claude Mods。Anthropic 在 Claude Code 里内置了 6 个 mod，大多在后台运行。他开启了 You Should Know：一个旁路 Agent 观察主 Agent 干活，把埋在执行记录里、又会影响结果的决定挑出来告诉你。前面那次没提交的 45 个文件，就是它发现的。\n\n他自己写的 **Next Steps Supervisor** 放在开源插件 ModSmith 里。只要某一轮改了文件、执行了命令或调用工具达到 8 次，它就复查一遍，列出值得注意的点，再给出一个可以直接点的下一步按钮。他拿另外两种做法对比：ChatGPT 的 Intelligent UI 由模型决定界面，Cursor 的 PR Routing 由团队写规则来分配审查。Mods 则是**用户和 Claude 一起决定人的注意力该花在哪**。\n\n问题出在触发条件。他从 10 月 15 日装上，111 轮里有 99 轮都触发了，不少提醒只是噪音，他开始跳着看。自己写 mod 时，**触发条件要收窄**：只在删除文件、改动范围大这类高风险时刻提醒。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "Claude Mods: Flipping the Harness Inside Out",
+          "url": "https://latent.space/p/claude-mods/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-25-01"
+    },
+    {
+      "candidateIds": [
+        "c35"
+      ],
+      "category": "consulting",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-21",
+      "headline": "按故事点付工程师工资，这家 AI 交付公司做到 75 人",
+      "oneLiner": "Tenex 联创 Alex Lieberman 说，公司按交付的故事点给工程师付钱，没有按小时计费，现在有 75 人，客户一半是 Fortune 2000 企业，一半是中型企业。",
+      "who": "应用 AI 服务公司 Tenex 的联创 Alex Lieberman 和特别项目负责人 CJ Hess，在 AI Engineer 纽约大会上接受 Latent Space 访谈。",
+      "how": "工程师按故事点拿报酬。负责客户的 AI strategist 要为续约和增长负责，所以会拒掉对客户没用的需求。交付时用 MetaHarness：把技能、项目文档和计划决策跟代码一起提交到 Git。",
+      "result": "Alex 说公司有 75 人。最初是 AI 开发外包，现在越来越多客户请他们帮整个公司做 AI 转型。他说，大家担心的虚报估点、交烂代码刷点数，至今都不是最大的问题。",
+      "tryThis": "如果你接 AI 开发的活，可以试试按交付物报价，并把计划、验收标准和决策记录放进代码仓库，让 Agent 回来接手时知道当初为什么这么做。",
+      "caveat": "Tenex 自己承认，这么多结构对一个人做一个项目来说太重。理解需求、设计架构这类工作没法写成一张工单，按点付费的制度还得另外给它们留出位置。",
+      "body": "CJ Hess 在[这期节目](https://latent.space/p/tenex/)里讲了他加入 Tenex 的原因：以前他按小时给客户计费，用上 AI 以后产出更快更好，挣的钱反而少了。Tenex 按故事点付钱，双方事先约定每项工作值多少点。Alex 说，这样一来工程师之间的收入差距会比以往任何时候都大。CJ 说，模型越强，他直接写代码的时间越少，更多时间花在把客户的背景整理成模型能用的形式。\n\n**MetaHarness** 的思路是让写代码以外的工作也有据可查。计划、验收标准、决策和证据都留在仓库里，再接到 Linear、GitHub 和给客户的进度更新上。Alex 对团队的说法是：\"一个不存在的流程，没法自动化。\"\n\n节目还谈到 Latent Space 自己的 Kill My SaaS 实验：为了替换一个报价每年 4.3 万美元的讲者管理工具，他们收到 72 份方案。人类评委选出的冠军，在 AI 评委的榜上只排第 19。Alex 提醒，自己做的工具也得有人一直维护。做咨询的人可以借这个问题判断交付范围：**客户省下的费用，够不够付后续维护的钱？**",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess",
+          "url": "https://latent.space/p/tenex/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-25-02"
+    },
+    {
+      "candidateIds": [
+        "c15"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-25",
+      "headline": "Cursor 设计师 Ryo Lu：别让 Agent 替你跳过难的那段",
+      "oneLiner": "Ryo Lu 说，自己的编程和设计能力是一次次碰壁磨出来的。他担心，难点在我们弄懂它教了什么之前就被 AI 拿掉了，和人一起磕磕碰碰做事的机会也在变少。",
+      "who": "Ryo Lu 曾在 Cursor、Notion、Stripe 做设计，也自己创过业。他在 X 上发了一篇长文。",
+      "how": "他认为 AI 让人不必弄懂原理就能拿到结果。结果看着完整，人就容易漏掉那些从没学会去问的问题。Agent 总在、总有耐心，跟它说话比找一个可能误解你、反对你的人更轻松。",
+      "result": "依据是他的亲身经历：修不好的 bug、看着对但用户一用就出问题的设计，让他慢慢练出了没法说清却能察觉不对劲的直觉。他最亲近的一些朋友，也是一起熬过难关的合作者。他也说，用这些工具做出了一些原本可能永远做不出来的东西。",
+      "tryThis": "学一项新技能时，可以留一部分问题先自己啃，再去问 AI。遇到卡住的设计或方案，先拿给同事看半成品，别第一时间只找 Agent。",
+      "caveat": "这是一篇个人反思，没有数据。他自己也说，吃苦本身不会让东西变好，有些苦本来就没人该受。",
+      "body": "Ryo Lu 在[这篇长文](https://x.com/ryolu_/status/2114187405251219954)里讲了自己的学习方式：读半懂的资料，把东西拆开看，向人求助，推倒重来。很多作品做得并不好，但做过足够多轮以后，有些东西就留了下来，变成他思考方式的一部分。他担心的是，人还没弄明白难点教会了自己什么，它就已经被 AI 拿掉了。\n\n另一层担心在协作。和人一起工作不舒服：每个人想要的不一样，有人在你觉得无关紧要的细节上较真。可磨合下来，团队会像乐队一样，知道谁能发现你漏掉的东西。他还提醒，每个人和自己的 Agent 待在各自的小世界里，而这些世界跑在公司的服务器上，受到我们看不见的利益影响。\n\n这对带新人的管理者和正在转型的人都有用。**用 AI 把繁琐的活干完，把能锻炼判断力的难题留给自己**，并且有意识地保留和同事一起讨论半成品的时间。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Ryo Lu: struggle together\n\ni learned programming and design by trying, failing, and tryi",
+          "url": "https://x.com/ryolu_/status/2114187405251219954"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-25-03"
+    }
+  ],
+  "action": "打开你最近一个用 AI 写代码或写文档的项目，在根目录建一个 decisions.md，补三条最近做过的关键决定：做了什么、为什么这样做、怎么验收。下次让 AI 接手这个项目时，先让它读这个文件。用 Claude Code 的人还可以运行 /plugin，打开 You Should Know，用一周，记下它提醒了几次、其中有几次真的有用，再决定留不留。",
+  "readingMinutes": 6,
+  "meta": {
+    "generatedAt": "2026-10-25T14:44:18.401Z",
+    "engine": "cli",
+    "candidateCount": 38,
+    "candidatesBySource": {
+      "Lenny's Newsletter & Podcast": 2,
+      "Interconnects": 1,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 1,
+      "Theoretically Media": 1,
+      "Starter Story (YouTube)": 1,
+      "Every (YouTube)": 2,
+      "Follow Builders (X)": 23,
+      "Latent Space": 3,
+      "The AI Daily Brief": 1,
+      "Ras Mic": 1,
+      "NYT Personal Tech": 1
+    },
+    "shortlist": [
+      {
+        "id": "c33",
+        "reason": "本人亲历全文：作者 Dan McAteer 用了几周 Claude Mods，按自己的 AI 工程工作流改造 Claude Code，并讲了「注意力界面」这个做法。谁、怎么用都有，个人可以照着试。",
+        "source": "Latent Space",
+        "title": "Claude Mods: Flipping the Harness Inside Out"
+      },
+      {
+        "id": "c38",
+        "reason": "AI 生活类全文：NYT 的 Brian X. Chen 用 Meta Muse 和 OpenAI dots 办四件具体的事，比如投简历、订难订的餐厅。普通读者能直接照做。",
+        "source": "NYT Personal Tech",
+        "title": "Put Your A.I. Agents to Work with These 4 Killer Tasks"
+      },
+      {
+        "id": "c35",
+        "reason": "虽然只有简介，但写清了两个案例：Tenex 按交付结果而不是按工时给 AI 工程师付钱，以及 Kill My SaaS 实验，让开发者自己做一个工具，替换报价每年 4.3 万美元的 SaaS。有商业模式也有数字。",
+        "source": "Latent Space",
+        "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess"
+      },
+      {
+        "id": "c36",
+        "reason": "主播 NLW 讲自己现在实际怎么用 AI：做研究、写代码、做内容、分析数据时分别用哪个模型，还对比了 Claude Duet 和 ChatGPT Dots。只有简介，细节可能不够，但谁、怎么用都清楚。",
+        "source": "The AI Daily Brief",
+        "title": "How I'm Actually Using AI Right Now (Including Claude Duet)"
+      },
+      {
+        "id": "c28",
+        "reason": "认知类：Vercel CEO 说，什么时候该多给 AI 指引、什么时候该放手，是他招人最看重的能力。一线创始人的判断，对大厂员工有参考价值。",
+        "source": "Follow Builders (X)",
+        "title": "Guillermo Rauch: There’ll be times where you over-guide the AI. It knows better than you and is m"
+      },
+      {
+        "id": "c16",
+        "reason": "认知类：Box CEO Aaron Levie 判断，用在网络安全上的 AI agent 会大规模增长，它让中小公司也做得起原本只有大公司负担得起的安全工作。有具体论证。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: We’ll likely have 1,000X more tokens flowing through cyber agents soon than we d"
+      },
+      {
+        "id": "c1",
+        "reason": "Rob Snyder 辅导过 50 多家公司从零做到 100 万美元年收入，讲找到产品市场匹配的 PULL 框架和陌生客户开发方法。有方法论，但只有简介，和 AI 关系不直接，排在后面。",
+        "source": "Lenny's Newsletter & Podcast",
+        "title": "An 86-minute guide to finding PMF | Rob Snyder (Author, The Power of Pull)"
+      },
+      {
+        "id": "c15",
+        "reason": "认知类：参与设计 Cursor 的 Ryo Lu 讲自己靠反复试错学会编程和设计的经历，可以引出 AI 时代「亲手吃苦」的价值。属于一线从业者的观点，排在最后。",
+        "source": "Follow Builders (X)",
+        "title": "Ryo Lu: struggle together\n\ni learned programming and design by trying, failing, and tryi"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 15249,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1679,
+        "output_tokens_details": {
+          "thinking_tokens": 463
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 15249,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1679,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 15249,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 15249
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.15558
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 25258,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 4824,
+      "output_tokens_details": {
+        "thinking_tokens": 1432
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 25258,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 4824,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 25258,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 25258
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.298552
+  }
+}

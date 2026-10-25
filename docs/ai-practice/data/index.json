@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-24T14:45:08.585Z",
+  "updatedAt": "2026-10-25T14:44:24.847Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 14
+      "count": 15
     },
     {
       "id": "consulting",
       "name": "AI 咨询",
       "en": "AI consulting",
       "desc": "找客户、诊断业务、界定交付、培训、实施与维护",
-      "count": 4
+      "count": 5
     },
     {
       "id": "content",
@@ -41,7 +41,7 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 16
+      "count": 17
     },
     {
       "id": "life",
@@ -52,6 +52,34 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-10-25",
+      "number": 16,
+      "title": "一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 6,
+      "itemCount": 3,
+      "categoryCounts": {
+        "productivity": 1,
+        "consulting": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "旁路 Agent 提醒他：还有 45 个文件的改动没提交"
+        },
+        {
+          "category": "consulting",
+          "headline": "按故事点付工程师工资，这家 AI 交付公司做到 75 人"
+        },
+        {
+          "category": "perspective",
+          "headline": "Cursor 设计师 Ryo Lu：别让 Agent 替你跳过难的那段"
+        }
+      ]
+    },
     {
       "date": "2026-10-24",
       "number": 15,
