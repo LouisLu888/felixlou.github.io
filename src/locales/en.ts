@@ -150,7 +150,7 @@ export const en = {
     step3: 'We map the workflow, run the numbers and settle on a plan; you leave with a first step.',
 
     pricingTitle: 'Pricing',
-    pricingNote: 'Early stage: these are friends-and-family prices for now.',
+    pricingNote: 'Early-bird pricing, for a limited time at launch.',
     discountLabel: '{pct}% off',
     tier1Name: 'Intro session',
     tier1Duration: '45 min',

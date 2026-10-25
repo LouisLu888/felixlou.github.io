@@ -150,7 +150,7 @@ export const zh = {
     step3: '我们一起梳理流程、算账、定方案，你带走一个能马上做的第一步。',
 
     pricingTitle: '价格',
-    pricingNote: '现在是早期阶段，价格是亲情价。',
+    pricingNote: '早鸟价，开放初期限时。',
     discountLabel: '优惠 {pct}%',
     tier1Name: '初步咨询',
     tier1Duration: '45 分钟',
