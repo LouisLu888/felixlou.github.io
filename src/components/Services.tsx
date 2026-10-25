@@ -63,7 +63,7 @@ const Services: React.FC = () => {
     }
   };
 
-  const proofs = ['proof1', 'proof2', 'proof3'];
+  const proofs = ['proof1', 'proof4', 'proof2', 'proof3'];
   const problems = ['problem1', 'problem2', 'problem3', 'problem4'];
   const layers = ['layer1', 'layer2', 'layer3', 'layer4'];
   const outcomes = ['outcome1', 'outcome2', 'outcome3'];
