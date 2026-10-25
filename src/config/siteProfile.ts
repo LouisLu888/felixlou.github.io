@@ -97,6 +97,8 @@ export const BUTTONDOWN = {
 
 export const WECHAT = {
   displayName: '沐风',
+  // Searchable WeChat ID; when set, the services page shows a copy button instead of the display name.
+  id: '',
   qrImage: '/images/contact/wechat-qr.jpg',
   mpQrImage: '/images/contact/wechat-mp-qr.jpg',
 };

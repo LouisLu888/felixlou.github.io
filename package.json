@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:blog-index && vite build && npm run generate:rss && npm run copy-blog-posts",
+    "build": "npm run generate:blog-index && vite build && npm run generate:page-shells && npm run generate:rss && npm run copy-blog-posts",
     "generate:blog-index": "node scripts/generate-blog-index.js",
     "copy-blog-posts": "cp -r public/blog-posts docs/ && cp -r public/images docs/ && touch docs/.nojekyll",
     "generate:rss": "node scripts/generate-rss.js",
+    "generate:page-shells": "node scripts/generate-page-shells.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "convert:wechat": "node scripts/convert-wechat-articles.js",

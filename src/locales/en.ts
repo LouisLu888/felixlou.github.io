@@ -64,6 +64,8 @@ export const en = {
 
   // Services
   services: {
+    pageTitle: 'AI Implementation & Business Consulting · Jiabin Lu',
+    pageDescription: 'AI and business consulting for small business owners and small teams: whether AI is worth doing, where to start, and how to avoid wasting money. Ex-Amazon and Apple engineer, now leading AI for GTM at Amplitude.',
     eyebrow: 'AI adoption & business consulting · for small business owners and small teams',
     heroTitle: 'When an AI project stalls, the model is rarely the problem.',
     heroSub: 'The data is scattered, the systems don\'t connect, the team won\'t adopt it, or the business itself isn\'t thought through. I help you decide whether to do AI at all, where to start, and how to avoid wasting money.',
@@ -71,7 +73,7 @@ export const en = {
     ctaCase: 'Read a real session',
     proof1: '10 yrs engineering · 3 yrs eng management',
     proof2: 'Amazon · Apple · Amplitude',
-    proof3: 'Speaker, AI workshop for a founders\' circle',
+    proof3: 'Ongoing advisor to a million-follower creator\'s team',
 
     problemsTitle: 'You might be stuck on one of these',
     problem1Title: 'You want to use AI but don\'t know where to start',
@@ -84,7 +86,7 @@ export const en = {
     problem4: 'Pricing, acquisition, product direction, roles. AI is only one of the variables.',
 
     layersTitle: 'An AI project has to connect four layers',
-    layersIntro: 'Projects rarely die because of the model. They die because these four layers never connect, and each belongs to a different discipline, so few people see all of them. We first find the layer you\'re stuck on, then start there.',
+    layersIntro: 'Each of these four layers belongs to a different discipline, so few people see all of them. We first find the layer you\'re stuck on, then start there.',
     layer1Name: 'Data',
     layer1Issue: 'Information lives in spreadsheets, chat threads and separate systems; AI has no usable input.',
     layer1Do: 'Map what data exists and what\'s missing, then structure the most important piece first.',
@@ -109,8 +111,7 @@ export const en = {
     outcome3: 'Including tool choices and concrete actions, ready to start the same day.',
 
     whyTitle: 'Why me',
-    why1: 'I\'ve seen enough AI projects inside companies to notice the pattern: projects die not because of the model, but because data, systems, organization and GTM never connect.',
-    why2: 'My background sits on all four lines: 10 years as an engineer, 3 years in engineering management, and now building AI systems for customer intelligence and GTM, with regular 1:1s with several C-level leaders.',
+    why2: 'My background covers all four layers (data, systems, organization and GTM): 10 years as an engineer, 3 years in engineering management, and now building AI systems for customer intelligence and GTM, with regular 1:1s with several C-level leaders.',
     why3: 'I don\'t sell tools or courses, so there is nothing I\'m trying to sell you in the advice.',
     cred1Title: '10 years of engineering',
     cred1: 'Wrote code and built products at Amazon and Apple, worked on OLAP databases. I\'ve hit the data and systems pitfalls myself.',
@@ -162,9 +163,35 @@ export const en = {
     tier2Price: '¥1588',
     tier2OriginalPrice: '¥2268',
     tier2Desc: 'Concrete work and business problems where we map the workflow, run the numbers, and settle on a plan together.',
+    tier3Name: 'Ongoing advisor',
+    tier3Duration: 'Monthly · fixed weekly or biweekly slot',
+    tier3Price: 'Priced after we talk',
+    tier3Badge: 'Limited spots',
+    tier3Desc: 'For teams already building an AI project or system. Each week we go through it with you and your tech lead: is the scope drifting from the MVP, should the north-star metric change, how to set milestones and acceptance checks, and how the team splits the work.',
+    tier3Note: 'Start with one deep-dive session, then decide whether to work together long term.',
+    guaranteeTitle: 'Refund promise',
+    guarantee: 'If you leave the first session feeling you got nothing useful, tell me and I\'ll refund it in full, no reason needed.',
+
+    faqTitle: 'FAQ',
+    faq1Q: 'Online or in person?',
+    faq1A: 'Online, over Tencent Meeting or Zoom.',
+    faq2Q: 'You\'re in the US. How do we schedule?',
+    faq2A: 'I\'m on the US West Coast, so we usually meet in the Beijing morning or evening.',
+    faq3Q: 'What should I prepare?',
+    faq3A: 'No materials needed. When you add me on WeChat, describe your business and the problem you most want solved in a few sentences; existing workflows, spreadsheets or screenshots of your systems help.',
+    faq4Q: 'Intro or deep-dive session?',
+    faq4A: 'One focused question: the intro session. Mapping workflows, running numbers, or several moving parts: the deep dive. If unsure, start with the intro and add time if needed.',
+    faq5Q: 'When am I not a good fit?',
+    faq5A: 'You want someone to write the code and deliver a system as outsourced work; you want a generic AI course; or you have no concrete business problem yet and just want to hear about industry trends.',
+    faq6Q: 'How do I pay?',
+    faq6A: 'Pay in advance once we confirm a time, by WeChat Pay or Alipay transfer.',
 
     finalTitle: 'Bring one real problem',
     finalDesc: 'Add me on WeChat, tell me briefly about your business and the problem, and we\'ll set a time.',
+    qrHint: 'Open this page in WeChat: long-press the QR code to add me.',
+    copyWechatId: 'Copy WeChat ID',
+    copiedWechatId: 'Copied. Search it in WeChat to add me.',
+    stickyCta: 'Book on WeChat',
   },
 
   // Products

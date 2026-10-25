@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Quote } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, Copy, Quote, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { WECHAT } from '../config/siteProfile';
 
@@ -16,6 +16,38 @@ const SectionTitle:React.FC<{ children: React.ReactNode; className?: string }> =
 
 const Services: React.FC = () => {
   const { t } = useLanguage();
+  const [showSticky, setShowSticky] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const previous = document.title;
+    document.title = t('services.pageTitle');
+    return () => {
+      document.title = previous;
+    };
+  }, [t]);
+
+  // Mobile booking bar: visible once the hero is scrolled past, hidden from the booking section onward.
+  useEffect(() => {
+    const book = document.getElementById('book');
+    const update = () => {
+      const reachedBook = book ? book.getBoundingClientRect().top < window.innerHeight : false;
+      setShowSticky(window.scrollY > 600 && !reachedBook);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, []);
+
+  const copyWechatId = async () => {
+    try {
+      await navigator.clipboard.writeText(WECHAT.id);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // Clipboard can be blocked in some in-app browsers; the ID stays visible to copy by hand.
+    }
+  };
 
   const proofs = ['proof1', 'proof2', 'proof3'];
   const problems = ['problem1', 'problem2', 'problem3', 'problem4'];
@@ -26,6 +58,7 @@ const Services: React.FC = () => {
   const testimonials = ['t1'];
   const steps = ['step1', 'step2', 'step3'];
   const tiers = ['tier1', 'tier2'];
+  const faqs = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6'];
 
   return (
     <div className="min-h-screen bg-white text-slate-800">
@@ -77,70 +110,8 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* Four layers */}
-      <section className="bg-slate-50 border-y border-slate-100">
-        <div className="max-w-5xl mx-auto px-6 py-20">
-          <SectionTitle>{t('services.layersTitle')}</SectionTitle>
-          <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-3xl">{t('services.layersIntro')}</p>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {layers.map((key) => (
-              <div key={key} className="p-5 rounded-xl bg-white border border-slate-200 flex flex-col">
-                <p className="text-xl font-bold text-slate-900">{t(`services.${key}Name`)}</p>
-                <p className="mt-4 text-xs font-semibold text-slate-400 uppercase tracking-wide">{t('services.issueLabel')}</p>
-                <p className="mt-1 text-sm text-slate-600 leading-relaxed">{t(`services.${key}Issue`)}</p>
-                <p className="mt-4 text-xs font-semibold text-amber-600 uppercase tracking-wide">{t('services.doLabel')}</p>
-                <p className="mt-1 text-sm text-slate-800 leading-relaxed">{t(`services.${key}Do`)}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Outcomes */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <SectionTitle>{t('services.outcomesTitle')}</SectionTitle>
-        <div className="mt-10 grid md:grid-cols-3 gap-8">
-          {outcomes.map((key, i) => (
-            <div key={key} className="border-t-2 border-amber-500 pt-5">
-              <p className="text-sm font-mono text-amber-600">0{i + 1}</p>
-              <p className="mt-1 text-lg font-semibold text-slate-900">{t(`services.${key}Title`)}</p>
-              <p className="mt-2 text-slate-600 leading-relaxed">{t(`services.${key}`)}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why me */}
-      <section className="bg-slate-900 text-slate-100">
-        <div className="max-w-5xl mx-auto px-6 py-20 grid lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2 space-y-5">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">{t('services.whyTitle')}</h2>
-            <p className="text-slate-300 leading-relaxed">{t('services.why1')}</p>
-            <p className="text-slate-300 leading-relaxed">{t('services.why2')}</p>
-            <p className="text-amber-300 font-medium leading-relaxed">{t('services.why3')}</p>
-          </div>
-          <div className="lg:col-span-3 grid sm:grid-cols-2 gap-4">
-            {creds.map((key) => (
-              <div key={key} className="p-5 rounded-xl bg-slate-800/70 border border-slate-700">
-                <p className="font-semibold text-white">{t(`services.${key}Title`)}</p>
-                <p className="mt-2 text-sm text-slate-300 leading-relaxed">{t(`services.${key}`)}</p>
-                {key === 'cred4' && (
-                  <a
-                    href={DECK_URL}
-                    className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-amber-300 hover:text-amber-200"
-                  >
-                    {t('services.cred4Link')}
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
+      <section className="max-w-5xl mx-auto px-6 pb-20">
         <SectionTitle>{t('services.testimonialsTitle')}</SectionTitle>
         <div className="mt-10 grid lg:grid-cols-3 gap-5">
           {testimonials.map((key) => (
@@ -200,6 +171,67 @@ const Services: React.FC = () => {
         </figure>
       </section>
 
+      {/* Four layers */}
+      <section className="bg-slate-50 border-y border-slate-100">
+        <div className="max-w-5xl mx-auto px-6 py-20">
+          <SectionTitle>{t('services.layersTitle')}</SectionTitle>
+          <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-3xl">{t('services.layersIntro')}</p>
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {layers.map((key) => (
+              <div key={key} className="p-5 rounded-xl bg-white border border-slate-200 flex flex-col">
+                <p className="text-xl font-bold text-slate-900">{t(`services.${key}Name`)}</p>
+                <p className="mt-4 text-xs font-semibold text-slate-400 uppercase tracking-wide">{t('services.issueLabel')}</p>
+                <p className="mt-1 text-sm text-slate-600 leading-relaxed">{t(`services.${key}Issue`)}</p>
+                <p className="mt-4 text-xs font-semibold text-amber-600 uppercase tracking-wide">{t('services.doLabel')}</p>
+                <p className="mt-1 text-sm text-slate-800 leading-relaxed">{t(`services.${key}Do`)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Outcomes */}
+      <section className="max-w-5xl mx-auto px-6 py-20">
+        <SectionTitle>{t('services.outcomesTitle')}</SectionTitle>
+        <div className="mt-10 grid md:grid-cols-3 gap-8">
+          {outcomes.map((key, i) => (
+            <div key={key} className="border-t-2 border-amber-500 pt-5">
+              <p className="text-sm font-mono text-amber-600">0{i + 1}</p>
+              <p className="mt-1 text-lg font-semibold text-slate-900">{t(`services.${key}Title`)}</p>
+              <p className="mt-2 text-slate-600 leading-relaxed">{t(`services.${key}`)}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why me */}
+      <section className="bg-slate-900 text-slate-100">
+        <div className="max-w-5xl mx-auto px-6 py-20 grid lg:grid-cols-5 gap-12">
+          <div className="lg:col-span-2 space-y-5">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">{t('services.whyTitle')}</h2>
+            <p className="text-slate-300 leading-relaxed">{t('services.why2')}</p>
+            <p className="text-amber-300 font-medium leading-relaxed">{t('services.why3')}</p>
+          </div>
+          <div className="lg:col-span-3 grid sm:grid-cols-2 gap-4">
+            {creds.map((key) => (
+              <div key={key} className="p-5 rounded-xl bg-slate-800/70 border border-slate-700">
+                <p className="font-semibold text-white">{t(`services.${key}Title`)}</p>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">{t(`services.${key}`)}</p>
+                {key === 'cred4' && (
+                  <a
+                    href={DECK_URL}
+                    className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-amber-300 hover:text-amber-200"
+                  >
+                    {t('services.cred4Link')}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Process + pricing */}
       <section className="bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-14">
@@ -244,8 +276,43 @@ const Services: React.FC = () => {
                   </div>
                 );
               })}
+              <div className="p-6 rounded-xl bg-slate-900 text-white">
+                <div className="flex items-baseline justify-between gap-3">
+                  <p className="font-semibold">{t('services.tier3Name')}</p>
+                  <span className="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold">
+                    {t('services.tier3Badge')}
+                  </span>
+                </div>
+                <p className="mt-1 text-sm text-slate-400">{t('services.tier3Duration')}</p>
+                <p className="mt-2 text-2xl font-bold text-amber-400">{t('services.tier3Price')}</p>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">{t('services.tier3Desc')}</p>
+                <p className="mt-3 text-sm text-amber-200">{t('services.tier3Note')}</p>
+              </div>
+            </div>
+            <div className="mt-4 flex gap-3 p-4 rounded-xl border border-amber-200 bg-amber-50">
+              <ShieldCheck className="shrink-0 w-5 h-5 mt-0.5 text-amber-600" />
+              <div>
+                <p className="font-semibold text-slate-900">{t('services.guaranteeTitle')}</p>
+                <p className="mt-1 text-sm text-slate-700 leading-relaxed">{t('services.guarantee')}</p>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="max-w-3xl mx-auto px-6 pt-20">
+        <SectionTitle>{t('services.faqTitle')}</SectionTitle>
+        <div className="mt-8 divide-y divide-slate-200 border-y border-slate-200">
+          {faqs.map((key) => (
+            <details key={key} className="group py-4">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-slate-900">
+                {t(`services.${key}Q`)}
+                <ChevronDown className="shrink-0 w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" />
+              </summary>
+              <p className="mt-3 text-slate-600 leading-relaxed">{t(`services.${key}A`)}</p>
+            </details>
+          ))}
         </div>
       </section>
 
@@ -255,7 +322,18 @@ const Services: React.FC = () => {
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">{t('services.finalTitle')}</h2>
             <p className="mt-3 text-slate-300 leading-relaxed">{t('services.finalDesc')}</p>
-            <p className="mt-3 text-sm text-slate-400">{t('wechat.handle').replace('{name}', WECHAT.displayName)}</p>
+            {WECHAT.id ? (
+              <button
+                type="button"
+                onClick={copyWechatId}
+                className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-sm font-medium transition-colors"
+              >
+                {copied ? <Check className="w-4 h-4 text-amber-300" /> : <Copy className="w-4 h-4" />}
+                {copied ? t('services.copiedWechatId') : `${t('services.copyWechatId')}：${WECHAT.id}`}
+              </button>
+            ) : (
+              <p className="mt-3 text-sm text-slate-400">{t('wechat.handle').replace('{name}', WECHAT.displayName)}</p>
+            )}
           </div>
           <div className="p-3 bg-white rounded-xl shrink-0">
             <img
@@ -266,9 +344,25 @@ const Services: React.FC = () => {
               loading="lazy"
               className="w-36 h-36 sm:w-40 sm:h-40 object-contain"
             />
+            <p className="md:hidden mt-2 max-w-[9rem] text-center text-xs text-slate-500 leading-snug">{t('services.qrHint')}</p>
           </div>
         </div>
       </section>
+
+      {/* Mobile booking bar */}
+      <div
+        className={`md:hidden fixed inset-x-0 bottom-0 z-40 p-3 bg-white/95 backdrop-blur border-t border-slate-200 transition-transform duration-300 ${
+          showSticky ? 'translate-y-0' : 'translate-y-full'
+        }`}
+      >
+        <a
+          href="#book"
+          className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-amber-600 text-white font-semibold"
+        >
+          {t('services.stickyCta')}
+          <ArrowRight className="w-4 h-4" />
+        </a>
+      </div>
     </div>
   );
 };
