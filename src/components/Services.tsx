@@ -6,6 +6,7 @@ import { WECHAT } from '../config/siteProfile';
 
 const CASE_URL = '/blog/ai-consulting-say-no';
 const DECK_URL = '/decks/ai-three-mindsets/';
+const BIBI_SCREENSHOT = '/images/testimonials/bibi.webp';
 
 const SectionTitle: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
   <h2 className={`text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 ${className}`}>{children}</h2>
@@ -165,6 +166,36 @@ const Services: React.FC = () => {
             </span>
           </Link>
         </div>
+
+        {/* Featured testimonial: original screenshot beside who wrote it */}
+        <figure className="mt-5 p-6 sm:p-8 rounded-2xl border border-slate-200 grid md:grid-cols-5 gap-8 items-start">
+          <div className="md:col-span-2">
+            <img
+              src={BIBI_SCREENSHOT}
+              alt={t('services.bibiImageAlt')}
+              width={923}
+              height={1593}
+              loading="lazy"
+              className="w-full max-w-sm mx-auto rounded-xl shadow-lg ring-1 ring-slate-900/10"
+            />
+            <p className="mt-2 text-center text-xs text-slate-400">{t('services.bibiImageNote')}</p>
+          </div>
+          <div className="md:col-span-3">
+            <p className="text-sm font-semibold text-amber-600">{t('services.bibiLabel')}</p>
+            <Quote className="mt-4 w-8 h-8 text-amber-400" />
+            <blockquote className="mt-3 text-xl text-slate-900 leading-relaxed font-medium">{t('services.bibiQuote')}</blockquote>
+            <figcaption className="mt-5">
+              <span className="font-semibold text-slate-900">{t('services.bibiAuthor')}</span>
+              <span className="block mt-1 text-sm text-slate-500">{t('services.bibiMeta')}</span>
+            </figcaption>
+            <p className="mt-6 text-slate-600 leading-relaxed">{t('services.bibiContext')}</p>
+            <div className="mt-6 pt-5 border-t border-slate-100 text-sm">
+              <span className="text-slate-500">{t('services.bibiIntroLabel')}</span>
+              <span className="font-semibold text-slate-900">{t('services.bibiIntroName')}</span>
+              <span className="block mt-1 text-slate-500">{t('services.bibiIntroMeta')}</span>
+            </div>
+          </div>
+        </figure>
       </section>
 
       {/* Process + pricing */}
