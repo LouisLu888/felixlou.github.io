@@ -119,7 +119,7 @@ const Services: React.FC = () => {
             alt={t('services.portraitName')}
             width={720}
             height={900}
-            className="w-20 h-20 lg:w-full lg:h-auto shrink-0 rounded-full lg:rounded-2xl object-cover object-top shadow-[0_24px_60px_-28px_rgba(120,40,20,0.55)]"
+            className="w-20 h-20 lg:w-full lg:h-auto shrink-0 rounded-full lg:rounded-2xl object-cover object-top shadow-[0_24px_60px_-28px_rgba(28,25,23,0.35)]"
           />
           <figcaption className="lg:mt-4">
             <p className="font-semibold text-stone-900">{t('services.portraitName')}</p>
