@@ -8,13 +8,17 @@
 // (generated), audio/<file>.mp3. Feed URL:
 // https://www.jiabinlu.com/ai-practice/podcast/feed.xml
 //
-// Audio is served from jiabinlu.com itself: Apple Podcasts refuses GitHub
-// Release assets (octet-stream, download-only, expiring redirect). Only the
-// newest MAX_EPISODES MP3s are kept so the Pages site stays small.
+// Audio: when PODCAST_AUDIO_BASE is set (e.g. https://audio.jiabinlu.com/ai-practice/),
+// MP3s live in Cloudflare R2 behind that URL, the workflow uploads them before
+// this script runs, and every episode stays in the feed. Without it, MP3s are
+// committed under audio/ and served by GitHub Pages, newest MAX_EPISODES only.
+// (Apple Podcasts refuses GitHub Release assets: octet-stream, expiring redirect.)
 //
 // Usage:
 //   node podcast-feed.js --episode <episode.json> --audio <path/to/episode.mp3>
-//   node podcast-feed.js --rebuild     (re-render feed.xml from episodes.json)
+//   node podcast-feed.js --rebuild       (re-render feed.xml from episodes.json)
+//   node podcast-feed.js --use-audio-base (point every episode at PODCAST_AUDIO_BASE,
+//                                         drop the committed MP3s, re-render the feed)
 // ============================================================================
 
 import { readFile, writeFile, readdir, copyFile, stat, rm, mkdir } from "fs/promises";
@@ -37,6 +41,7 @@ const SHOW = {
 };
 const AUDIO_DIR = join(PODCAST_DIR, "audio");
 const MAX_EPISODES = 30;
+const AUDIO_BASE = (process.env.PODCAST_AUDIO_BASE || "").replace(/\/?$/, "/").replace(/^\/$/, "");
 
 function parseArgs(argv) {
   const args = {};
@@ -109,6 +114,18 @@ async function main() {
   const episodesPath = join(PODCAST_DIR, "episodes.json");
   const episodes = existsSync(episodesPath) ? JSON.parse(await readFile(episodesPath, "utf-8")) : [];
 
+  // One-time move to R2: the workflow has already uploaded and verified every
+  // MP3 under AUDIO_BASE; repoint the episodes and stop shipping MP3s in Pages.
+  if (process.argv.includes("--use-audio-base")) {
+    if (!AUDIO_BASE) throw new Error("PODCAST_AUDIO_BASE is not set");
+    for (const ep of episodes) ep.audioUrl = `${AUDIO_BASE}ai-practice-${ep.date}.mp3`;
+    await rm(AUDIO_DIR, { recursive: true, force: true });
+    await writeFile(episodesPath, JSON.stringify(episodes, null, 2));
+    await writeFile(join(PODCAST_DIR, "feed.xml"), renderFeed(episodes));
+    console.error(`Audio now served from ${AUDIO_BASE}: ${episodes.length} episodes`);
+    return;
+  }
+
   if (process.argv.includes("--rebuild")) {
     await writeFile(join(PODCAST_DIR, "feed.xml"), renderFeed(episodes));
     console.error(`Feed rebuilt: ${episodes.length} episodes`);
@@ -122,8 +139,10 @@ async function main() {
   if (meta.skip) throw new Error("episode.json is a skip marker; nothing to publish");
 
   const file = `ai-practice-${meta.date}.mp3`;
-  await mkdir(AUDIO_DIR, { recursive: true });
-  await copyFile(args.audio, join(AUDIO_DIR, file));
+  if (!AUDIO_BASE) {
+    await mkdir(AUDIO_DIR, { recursive: true });
+    await copyFile(args.audio, join(AUDIO_DIR, file));
+  }
 
   const episode = {
     date: meta.date,
@@ -133,19 +152,22 @@ async function main() {
     items: meta.items,
     ...(meta.chapters ? { chapters: meta.chapters } : {}),
     duration: meta.duration,
-    audioUrl: `${BASE_URL}audio/${file}`,
-    audioBytes: (await stat(join(AUDIO_DIR, file))).size,
+    audioUrl: AUDIO_BASE ? `${AUDIO_BASE}${file}` : `${BASE_URL}audio/${file}`,
+    audioBytes: (await stat(args.audio)).size,
     publishedAt: new Date().toISOString(),
   };
   // Re-running a day replaces that day's episode.
-  const next = [episode, ...episodes.filter((ep) => ep.date !== episode.date)]
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, MAX_EPISODES);
+  // R2 has room for every episode; Pages keeps only the newest MAX_EPISODES.
+  const all = [episode, ...episodes.filter((ep) => ep.date !== episode.date)]
+    .sort((a, b) => b.date.localeCompare(a.date));
+  const next = AUDIO_BASE ? all : all.slice(0, MAX_EPISODES);
 
-  // Drop audio for episodes that fell out of the feed.
-  const keep = new Set(next.map((ep) => ep.audioUrl.split("/").pop()));
-  for (const f of await readdir(AUDIO_DIR)) {
-    if (!keep.has(f)) await rm(join(AUDIO_DIR, f));
+  if (!AUDIO_BASE) {
+    // Drop audio for episodes that fell out of the feed.
+    const keep = new Set(next.map((ep) => ep.audioUrl.split("/").pop()));
+    for (const f of await readdir(AUDIO_DIR)) {
+      if (!keep.has(f)) await rm(join(AUDIO_DIR, f));
+    }
   }
 
   await writeFile(episodesPath, JSON.stringify(next, null, 2));

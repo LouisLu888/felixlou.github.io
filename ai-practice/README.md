@@ -75,7 +75,9 @@ Buttondown 账号和博客共用一个订阅列表，博客的新文章通知会
 `.github/workflows/ai-practice-podcast.yml` 每天 21:37 UTC（北京时间早上 5:37）运行，赶在国内早高峰前上线，与出刊流程分开，失败不影响图文版：
 
 1. `podcast-build.js`：用 Claude Opus（`claude-opus-5-5`，经 Claude Code CLI 走订阅，失败时退回 `gpt-5.5`）把当天这期改写成口播稿。2026-10-11 用同一期对比了 gpt-5.5、Claude Opus 5.5、Gemini 3.1 Pro、DeepSeek V3.1、Qwen3-235B，Claude 最自然、最忠实；Gemini 加了原文没有的评论，DeepSeek 和 Qwen 漏了条目，规则在 `prompts/podcast.md`：条目、顺序和事实与图文版一致，只改成口语。再用 Inworld TTS-2（经 Replicate，音色 Xiaoyin）按故事分段合成、拼接，编码成单声道 MP3。2026-10-11 用同一段文本盲听对比了 Inworld、MiniMax 2.8 HD、Gemini 3.1 Flash TTS、Qwen3-TTS、ElevenLabs v3 和 OpenAI，选了 Inworld（Replicate 上 $25 / 百万字符，每集约 $0.08）。Inworld 失败时整集改用 OpenAI `gpt-4o-mini-tts`，不会一集里混两种声音。
-2. `podcast-feed.js`：把 MP3 放进 `public/ai-practice/podcast/audio/`，更新 `episodes.json` 和 `feed.xml`，show notes 里的链接取自当期 JSON，不用模型输出。只保留最近 30 集的 MP3（48kbps，每集约 3.5MB），更早的自动删除。workflow 只把 `podcast/` 目录镜像到 `docs/`，也只提交这个目录，不跑 `build-index.js`，以免和改动 `data/index.json` 的其他提交冲突。
+2. `podcast-feed.js`：更新 `episodes.json` 和 `feed.xml`，show notes 里的链接取自当期 JSON，不用模型输出。workflow 只把 `podcast/` 目录镜像到 `docs/`，也只提交这个目录，不跑 `build-index.js`，以免和改动 `data/index.json` 的其他提交冲突。
+   - **音频放在 Cloudflare R2**（设置了仓库变量 `PODCAST_AUDIO_BASE` 时）：workflow 先把 MP3 传到 R2，再用公开地址核对字节数，核对通过才写进 feed；feed 保留所有集，不设上限。需要仓库 secrets `R2_ACCOUNT_ID`、`R2_ACCESS_KEY_ID`、`R2_SECRET_ACCESS_KEY` 和变量 `R2_BUCKET`、`PODCAST_AUDIO_BASE`（bucket 公开域名，例如 `https://audio.jiabinlu.com/`）。R2 不收下载流量费。从 GitHub Pages 迁过去时，在 Actions 页手动运行 podcast workflow 并勾 `migrate_audio`：逐个上传、核对后，改写 feed 并删掉仓库里的 MP3。单集 guid 不变，Apple、小宇宙会把它当作同一集。
+   - **没设 `PODCAST_AUDIO_BASE`**：MP3 提交到 `public/ai-practice/podcast/audio/`，由 GitHub Pages 提供，只保留最近 30 集（48kbps，每集约 3.5MB）。
 3. 音频必须由 jiabinlu.com 自己提供。GitHub Release 附件返回 `application/octet-stream` 加会过期的跳转，Apple Podcasts 会报 “This episode cannot be played on this device”。
 
 需要仓库 secret `CLAUDE_CODE_OAUTH_TOKEN`（写稿）、`OPENAI_API_KEY`（备用写稿和备用 TTS）和 `REPLICATE_API_TOKEN`（Inworld）。可在 Actions 页手动运行 **AI 实干派 podcast**，填 `date` 补做某一天，勾 `force` 重做。换引擎用环境变量 `PODCAST_TTS_ENGINE`（`inworld` 或 `openai`），换 Inworld 音色用 `PODCAST_INWORLD_VOICE`（默认 `Xiaoyin`）。每集成本约 $0.08（写稿走 Claude 订阅不另计费，语音约 $0.08）。
