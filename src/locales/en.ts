@@ -71,6 +71,8 @@ export const en = {
     heroSub: 'The data is scattered, the systems don\'t connect, the team won\'t adopt it, or the business itself isn\'t thought through. I help you decide whether to do AI at all, where to start, and how to avoid wasting money.',
     ctaBook: 'Book a session',
     ctaCase: 'Read a real session',
+    portraitName: 'Jiabin Lu (沐风)',
+    portraitCaption: 'Ex-Amazon and Apple engineer, now leading the GTM transformation at Amplitude',
     proof1: '10 yrs engineering · 3 yrs eng management · now leading a GTM transformation',
     proof4: 'Regular 1:1s with the CEO, CTO, CCO and CMO',
     proof2: 'Amazon · Apple · Amplitude',

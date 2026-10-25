@@ -71,6 +71,8 @@ export const zh = {
     heroSub: '数据没理顺，系统接不上，团队不愿意用，生意本身也没想清楚。我帮你判断 AI 该不该做、从哪个环节切进去、怎么做才不白花钱。',
     ctaBook: '预约咨询',
     ctaCase: '看一次真实咨询',
+    portraitName: '沐风 Jiabin Lu',
+    portraitCaption: '前 Amazon、Apple 工程师，现在领导 Amplitude 的 GTM 转型',
     proof1: '10 年工程 · 3 年工程管理 · 现在领导 GTM 转型',
     proof4: '和 CEO / CTO / CCO / CMO 定期 1:1',
     proof2: 'Amazon · Apple · Amplitude',
