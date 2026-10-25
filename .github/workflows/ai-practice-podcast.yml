@@ -27,6 +27,10 @@ on:
         description: 'Only render voice samples to the voice-audition branch, publish nothing'
         type: boolean
         default: false
+      migrate_audio:
+        description: 'One-time: copy the MP3s committed in the repo to R2, repoint the feed, remove them from the repo'
+        type: boolean
+        default: false
 
 concurrency:
   group: ai-practice-podcast
@@ -38,6 +42,17 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: write
+    # Audio storage. With the repository variable PODCAST_AUDIO_BASE set (public
+    # URL of the R2 bucket root, e.g. https://audio.jiabinlu.com/) MP3s go to
+    # Cloudflare R2 and the feed keeps every episode; unset, they are committed
+    # and served by GitHub Pages (newest 30). See ai-practice/README.md.
+    env:
+      PODCAST_AUDIO_BASE: ${{ vars.PODCAST_AUDIO_BASE }}
+      R2_BUCKET: ${{ vars.R2_BUCKET }}
+      R2_ENDPOINT: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
     steps:
       # Latest master, so the issue committed by the daily run is present.
       - uses: actions/checkout@v4
@@ -69,9 +84,43 @@ jobs:
           git add . && git commit -q -m "Voice audition $(date -u +%FT%TZ)"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" voice-audition
 
+      # R2 speaks the S3 API; the runner image normally ships the AWS CLI.
+      - name: Ensure AWS CLI
+        if: ${{ vars.PODCAST_AUDIO_BASE != '' && !inputs.audition }}
+        run: command -v aws || pipx install awscli
+
+      # Uploads each committed MP3, checks the public URL serves the same number
+      # of bytes, and only then rewrites the feed and deletes the repo copies.
+      - name: Migrate committed audio to R2
+        if: ${{ inputs.migrate_audio }}
+        run: |
+          set -euo pipefail
+          if [ -z "$PODCAST_AUDIO_BASE" ] || [ -z "$R2_BUCKET" ]; then
+            echo "::error::Set repository variables PODCAST_AUDIO_BASE and R2_BUCKET first"; exit 1
+          fi
+          BASE="${PODCAST_AUDIO_BASE%/}/"
+          for f in public/ai-practice/podcast/audio/*.mp3; do
+            name=$(basename "$f")
+            aws s3 cp "$f" "s3://$R2_BUCKET/$name" --endpoint-url "$R2_ENDPOINT" \
+              --content-type audio/mpeg --cache-control "public, max-age=31536000, immutable" --only-show-errors
+            want=$(stat -c %s "$f")
+            got=$(curl -sfIL "$BASE$name" | tr -d '\r' | awk 'tolower($1)=="content-length:"{v=$2} END{print v}')
+            [ "$got" = "$want" ] || { echo "::error::$BASE$name serves $got bytes, expected $want"; exit 1; }
+            echo "ok $name ($want bytes)"
+          done
+          node ai-practice/scripts/podcast-feed.js --use-audio-base
+          rm -rf docs/ai-practice/podcast
+          cp -R public/ai-practice/podcast docs/ai-practice/podcast
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A public/ai-practice/podcast docs/ai-practice/podcast
+          git commit -m "AI 实干派: podcast audio moved to R2 [skip-newsletter]"
+          git pull --rebase --autostash origin master
+          git push origin HEAD:master
+
       - name: Decide date
         id: day
-        if: ${{ !inputs.audition }}
+        if: ${{ !inputs.audition && !inputs.migrate_audio }}
         env:
           INPUT_DATE: ${{ inputs.date }}
           FORCE: ${{ inputs.force }}
@@ -85,18 +134,18 @@ jobs:
           fi
 
       - name: Ensure ffmpeg
-        if: ${{ !inputs.audition && !steps.day.outputs.skip }}
+        if: ${{ !inputs.audition && !inputs.migrate_audio && !steps.day.outputs.skip }}
         run: command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
 
       # The script is written by Claude Opus through the Claude Code CLI on the
       # Claude subscription (same token the daily issue uses); gpt-5.5 is the
       # fallback if Claude fails.
       - name: Install Claude Code
-        if: ${{ !inputs.audition && !steps.day.outputs.skip }}
+        if: ${{ !inputs.audition && !inputs.migrate_audio && !steps.day.outputs.skip }}
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Build episode
-        if: ${{ !inputs.audition && !steps.day.outputs.skip }}
+        if: ${{ !inputs.audition && !inputs.migrate_audio && !steps.day.outputs.skip }}
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -104,11 +153,21 @@ jobs:
         run: node ai-practice/scripts/podcast-build.js --out out --date "${{ steps.day.outputs.date }}"
 
       - name: Update feed and commit
-        if: ${{ !inputs.audition && !steps.day.outputs.skip }}
+        if: ${{ !inputs.audition && !inputs.migrate_audio && !steps.day.outputs.skip }}
         run: |
           if [ "$(jq -r .skip out/episode.json)" = "true" ]; then
             echo "No issue for this date — no episode."
             exit 0
+          fi
+          if [ -n "$PODCAST_AUDIO_BASE" ]; then
+            # Upload first and check the public URL, so the feed never lists a
+            # file listeners cannot download.
+            name="ai-practice-${{ steps.day.outputs.date }}.mp3"
+            aws s3 cp out/episode.mp3 "s3://$R2_BUCKET/$name" --endpoint-url "$R2_ENDPOINT" \
+              --content-type audio/mpeg --cache-control "public, max-age=31536000, immutable" --only-show-errors
+            # A re-run replaces the object; skip any edge copy of the old one.
+            got=$(curl -sfIL "${PODCAST_AUDIO_BASE%/}/$name?v=$(date +%s)" | tr -d '\r' | awk 'tolower($1)=="content-length:"{v=$2} END{print v}')
+            [ "$got" = "$(stat -c %s out/episode.mp3)" ] || { echo "::error::R2 serves $got bytes for $name"; exit 1; }
           fi
           node ai-practice/scripts/podcast-feed.js --episode out/episode.json --audio out/episode.mp3
           # Mirror only the podcast folder. build-index.js would also rewrite
