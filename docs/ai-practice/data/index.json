@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-25T14:44:24.847Z",
+  "updatedAt": "2026-10-26T14:46:35.280Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 15
+      "count": 16
     },
     {
       "id": "consulting",
@@ -20,7 +20,7 @@
       "name": "内容创作",
       "en": "AI content creation",
       "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入",
-      "count": 6
+      "count": 7
     },
     {
       "id": "saas",
@@ -41,7 +41,7 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 17
+      "count": 18
     },
     {
       "id": "life",
@@ -52,6 +52,34 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-10-26",
+      "number": 17,
+      "title": "Reddit 的 700 多个 AI 原型怎么来的，照一段参考片几分钟复刻短视频风格",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 6,
+      "itemCount": 3,
+      "categoryCounts": {
+        "productivity": 1,
+        "content": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "Reddit 自建 AI 原型工具，700 多个原型直接用真实数据"
+        },
+        {
+          "category": "content",
+          "headline": "用 Claude 做短视频：照参考片换风格，拿会议笔记出片"
+        },
+        {
+          "category": "perspective",
+          "headline": "Box CEO：安全 agent 刚能用，先把数据底子理顺"
+        }
+      ]
+    },
     {
       "date": "2026-10-25",
       "number": 16,

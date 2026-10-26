@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-26",
+      "headline": "Reddit 自建 AI 原型工具，700 多个原型直接用真实数据",
+      "oneLiner": "Reddit 首席 UX 工程师 Blair Metcalf 自建原型工具 Reddit Proto。他在节目里说，UX 和产品团队已经全员在用，上线的原型超过 700 个。",
+      "who": "Blair Metcalf，Reddit principal UX engineer，在 Claire Vo 的 How I AI 节目里演示他搭的 vibe-coding 原型工具 Reddit Proto。",
+      "how": "他做了一个 design system MCP，把 Reddit 的产品设计语言对应到生产代码。原型接的是真实 Reddit 数据。在原型上做的标注会变成 Cursor 里一次定向的代码修改，交给工程师时整体打包成一个「feature capsule」。",
+      "result": "节目里称 Proto 在 Reddit 的 UX 和产品组织里达到 100% 采用，在线原型超过 700 个。设计师可以把原型安全地分享给管理层，管理层直接在上面评审、给反馈。",
+      "tryThis": "团队有设计系统和组件库的话，先整理一份「设计稿组件名 ↔ 代码组件」对照表（他叫它 Rosetta stone），让 Cursor 生成原型时直接调用真组件。",
+      "caveat": "这套做法要有成熟的设计系统、内部部署设施和真实数据的访问权限。小团队缺这些条件，可以先只做对照表这一步。",
+      "body": "在 [How I AI 这期节目](https://podcasters.spotify.com/pod/show/pen-name/episodes/Why-Reddit-built-its-own-AI-prototyping-tool--Blair-Metcalf-e3qtst2)里，Blair Metcalf 演示了 Reddit Proto。这是 Reddit 自己搭的 vibe-coding 工具，核心是一个 **design system MCP**，作用是把 Reddit 的产品语言对应到生产代码。节目里给出的数字是：UX 和产品组织 100% 采用，在线原型超过 700 个。内部部署参考了 Vercel 的思路。\n\n可以借鉴的是这条链路：**用真组件、接真数据，在原型上标注，再转成 Cursor 里的定向修改，最后打包交给工程。** 他认为真实数据比 mock 数据好用。原型看着像真产品，管理层的反馈会更具体；交接时工程师拿到的也是能用的代码。他还专门做了一份「Rosetta stone」，把设计语言和代码一一对上。AI 生成跑偏时，这份对照表就是纠正的依据。\n\n这套东西靠的是 Reddit 已有的设计系统和基础设施。普通团队可以先拿最常用的二三十个组件做对照表，试一个页面。演示从 **02:31** 开始，标注转 Cursor 修改在 **09:15**，MCP 怎么搭的在 **17:50**。节目还讲到谁后来成了 Reddit 最会做原型的人，带团队的人可以留意这一段。",
+      "sources": [
+        {
+          "label": "How I AI (Claire Vo)",
+          "title": "Why Reddit built its own AI prototyping tool | Blair Metcalf",
+          "url": "https://podcasters.spotify.com/pod/show/pen-name/episodes/Why-Reddit-built-its-own-AI-prototyping-tool--Blair-Metcalf-e3qtst2"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-26-01",
+      "issueDate": "2026-10-26",
+      "issueNumber": 17
+    },
+    {
+      "candidateIds": [
         "c33"
       ],
       "category": "productivity",

@@ -8,6 +8,45 @@
   "items": [
     {
       "candidateIds": [
+        "c18",
+        "c10",
+        "c25"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-26",
+      "headline": "用 Claude 做短视频：照参考片换风格，拿会议笔记出片",
+      "oneLiner": "Peter Yang 转发的演示里，只要上传一段参考短视频、写清要改的字体和配色，几分钟就能复刻一种风格。Every 的 Mike Taylor 则让 Claude Opus 用他的 Slack 消息和会议笔记剪出了一支讲解视频。",
+      "who": "Jake Moran 在 HyperFrames 团队，Peter Yang 转发了他的演示。另一个例子是 Every 的 Mike Taylor，在节目片段里讲自己怎么用。",
+      "how": "在 HyperFrames studio 里上传或选一段参考片，提示词写清要改哪里，比如换字体、换颜色，结构照原样保留。Mike Taylor 则把 Slack 消息和会议笔记交给 Claude Opus，让它组装素材并剪辑成讲解视频。",
+      "result": "Peter Yang 说几分钟就能复刻一种短视频风格。Mike Taylor 从日常沟通记录里得到了一支讲解视频。",
+      "tryThis": "挑一支你认可的同领域短视频当参考，只换字体和配色，做一版自己的内容。也可以把一周的会议笔记交给 Claude，先让它出讲解视频的脚本和分镜。",
+      "caveat": "能复刻的只是结构和视觉，选题和观点还得自己出。套用别人的风格容易撞款，要留出自己的辨识度。",
+      "body": "Peter Yang 在 [X 上转发](https://x.com/petergyang/status/2114507378532229214)了 HyperFrames 的 Jake Moran 的演示。复刻风格已经是 HyperFrames studio 的内置功能：**上传或选一段参考片，在提示词里描述要改的地方**，比如换字体、换配色。Jake Moran 的原话是「结构上还是同一个想法」。另一个例子来自 Every 的[短片](https://www.youtube.com/shorts/qxljXE5QY6s)：Mike Taylor 把 Slack 消息和会议笔记交给 Claude Opus，由它组装并剪辑一支讲解视频。\n\n两件事加起来，短视频制作可以拆成两块：内容来自你本来就有的工作记录，形式参考一支验证过的样片。做一条视频的成本降下来以后，Zara Zhang 同一天在 [X 上](https://x.com/zarazhangrui/status/2114255477907570865)说的那套打法就做得起了：**搭一个每天出一条视频的系统**，这比花几万美元做一支发布视频更有用。她认为很多人高估了一次大发布，低估了每天在时间线上露面。\n\n适合已经有素材积累、想稳定更新的人，比如做产品、做咨询，手里有大量会议纪要和项目记录。复刻风格只是起点，观众留下来还是看内容。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Peter Yang: Here’s how to use Claude to copy any video shorts style in a few minutes.\n\nFrom ",
+          "url": "https://x.com/petergyang/status/2114507378532229214"
+        },
+        {
+          "label": "Every (YouTube)",
+          "title": "I Gave Claude My Meeting Notes and It Made a Video",
+          "url": "https://www.youtube.com/shorts/qxljXE5QY6s"
+        },
+        {
+          "label": "Follow Builders (X)",
+          "title": "Zara Zhang: Great interview. Most people overestimate the importance of one huge launch and ",
+          "url": "https://x.com/zarazhangrui/status/2114255477907570865"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-26-02",
+      "issueDate": "2026-10-26",
+      "issueNumber": 17
+    },
+    {
+      "candidateIds": [
         "c8"
       ],
       "category": "content",

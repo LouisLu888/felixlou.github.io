@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c22"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-25",
+      "headline": "Box CEO：安全 agent 刚能用，先把数据底子理顺",
+      "oneLiner": "Box CEO Aaron Levie 10 月 25 日说，让 agent 群做安全防护是最近几个月才出现的能力，但多数大企业得先把分散的数据和过宽的权限理顺，才用得上。",
+      "who": "Aaron Levie 是 Box CEO，2026-10-25 在 X 上评论大企业安全的现状。",
+      "how": "他认为企业的风险面会越来越碎：数据分散，有的系统权限开得太宽，有的系统主要靠「没人知道」来保证安全。基础设施理顺以后，agent 群可以并行调用各种安全工具、测试各种攻击变体、读日志，还能评估企业数据的风险等级。",
+      "result": "他的依据是一线观察：大企业连库、工具和基础设施的更新都跟不上，初创公司和非科技公司更难。他说长时运行的 agent 和够用的 computer use 是最近几个月才成熟的，之前做不到。",
+      "tryThis": "做 AI 咨询的人可以从数据梳理和权限盘点切入，这比一上来就卖 agent 更容易落地。他点名的机会覆盖身份、防火墙、网络、代码扫描、数据保护各层。",
+      "caveat": "这是他的判断，落地还没有普及。前提是数据和基础设施先完成现代化，很多非科技公司离这一步还远。同样的能力也会落到攻击方手里，他的乐观只针对攻防平衡这一点。",
+      "body": "Aaron Levie 在 [X 上](https://x.com/levie/status/2114391265655816315)描述了大企业安全的现状：要跟进的库没完没了，基础设施、数据和代码越铺越大，多数大企业都跟不上。数据分散，企业在任何时刻都说不清自己的风险状态。有的系统权限开得太宽，有的主要靠 security through obscurity。\n\n他的判断分两步。第一步是**先做基础工作**，让数据和基础设施现代化。第二步才轮到 agent 群：并行调用安全工具、测试攻击变体、读日志、给数据评风险。他说这类能力是最近几个月才有的，靠的是长时运行的 agent 和够好的 computer use，并认为这是他对攻防平衡保持乐观的一个理由。\n\n对想做 AI 咨询的人，这段话指了一个顺序：客户最先缺的往往是**数据盘点、权限梳理、系统清单**，这些活现在就能接，而且是后面上 agent 的前提。从身份到数据保护，他认为安全栈的每一层都有机会。这是 10 月 25 日的个人判断，具体到某个客户，还要看对方的基础设施成熟到什么程度。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: Good assessment of the on the ground reality for security in most large enterpri",
+          "url": "https://x.com/levie/status/2114391265655816315"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-26-03",
+      "issueDate": "2026-10-26",
+      "issueNumber": 17
+    },
+    {
+      "candidateIds": [
         "c15"
       ],
       "category": "perspective",

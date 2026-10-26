@@ -1,0 +1,253 @@
+{
+  "date": "2026-10-26",
+  "title": "Reddit 的 700 多个 AI 原型怎么来的，照一段参考片几分钟复刻短视频风格",
+  "items": [
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-26",
+      "headline": "Reddit 自建 AI 原型工具，700 多个原型直接用真实数据",
+      "oneLiner": "Reddit 首席 UX 工程师 Blair Metcalf 自建原型工具 Reddit Proto。他在节目里说，UX 和产品团队已经全员在用，上线的原型超过 700 个。",
+      "who": "Blair Metcalf，Reddit principal UX engineer，在 Claire Vo 的 How I AI 节目里演示他搭的 vibe-coding 原型工具 Reddit Proto。",
+      "how": "他做了一个 design system MCP，把 Reddit 的产品设计语言对应到生产代码。原型接的是真实 Reddit 数据。在原型上做的标注会变成 Cursor 里一次定向的代码修改，交给工程师时整体打包成一个「feature capsule」。",
+      "result": "节目里称 Proto 在 Reddit 的 UX 和产品组织里达到 100% 采用，在线原型超过 700 个。设计师可以把原型安全地分享给管理层，管理层直接在上面评审、给反馈。",
+      "tryThis": "团队有设计系统和组件库的话，先整理一份「设计稿组件名 ↔ 代码组件」对照表（他叫它 Rosetta stone），让 Cursor 生成原型时直接调用真组件。",
+      "caveat": "这套做法要有成熟的设计系统、内部部署设施和真实数据的访问权限。小团队缺这些条件，可以先只做对照表这一步。",
+      "body": "在 [How I AI 这期节目](https://podcasters.spotify.com/pod/show/pen-name/episodes/Why-Reddit-built-its-own-AI-prototyping-tool--Blair-Metcalf-e3qtst2)里，Blair Metcalf 演示了 Reddit Proto。这是 Reddit 自己搭的 vibe-coding 工具，核心是一个 **design system MCP**，作用是把 Reddit 的产品语言对应到生产代码。节目里给出的数字是：UX 和产品组织 100% 采用，在线原型超过 700 个。内部部署参考了 Vercel 的思路。\n\n可以借鉴的是这条链路：**用真组件、接真数据，在原型上标注，再转成 Cursor 里的定向修改，最后打包交给工程。** 他认为真实数据比 mock 数据好用。原型看着像真产品，管理层的反馈会更具体；交接时工程师拿到的也是能用的代码。他还专门做了一份「Rosetta stone」，把设计语言和代码一一对上。AI 生成跑偏时，这份对照表就是纠正的依据。\n\n这套东西靠的是 Reddit 已有的设计系统和基础设施。普通团队可以先拿最常用的二三十个组件做对照表，试一个页面。演示从 **02:31** 开始，标注转 Cursor 修改在 **09:15**，MCP 怎么搭的在 **17:50**。节目还讲到谁后来成了 Reddit 最会做原型的人，带团队的人可以留意这一段。",
+      "sources": [
+        {
+          "label": "How I AI (Claire Vo)",
+          "title": "Why Reddit built its own AI prototyping tool | Blair Metcalf",
+          "url": "https://podcasters.spotify.com/pod/show/pen-name/episodes/Why-Reddit-built-its-own-AI-prototyping-tool--Blair-Metcalf-e3qtst2"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-26-01"
+    },
+    {
+      "candidateIds": [
+        "c18",
+        "c10",
+        "c25"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-26",
+      "headline": "用 Claude 做短视频：照参考片换风格，拿会议笔记出片",
+      "oneLiner": "Peter Yang 转发的演示里，只要上传一段参考短视频、写清要改的字体和配色，几分钟就能复刻一种风格。Every 的 Mike Taylor 则让 Claude Opus 用他的 Slack 消息和会议笔记剪出了一支讲解视频。",
+      "who": "Jake Moran 在 HyperFrames 团队，Peter Yang 转发了他的演示。另一个例子是 Every 的 Mike Taylor，在节目片段里讲自己怎么用。",
+      "how": "在 HyperFrames studio 里上传或选一段参考片，提示词写清要改哪里，比如换字体、换颜色，结构照原样保留。Mike Taylor 则把 Slack 消息和会议笔记交给 Claude Opus，让它组装素材并剪辑成讲解视频。",
+      "result": "Peter Yang 说几分钟就能复刻一种短视频风格。Mike Taylor 从日常沟通记录里得到了一支讲解视频。",
+      "tryThis": "挑一支你认可的同领域短视频当参考，只换字体和配色，做一版自己的内容。也可以把一周的会议笔记交给 Claude，先让它出讲解视频的脚本和分镜。",
+      "caveat": "能复刻的只是结构和视觉，选题和观点还得自己出。套用别人的风格容易撞款，要留出自己的辨识度。",
+      "body": "Peter Yang 在 [X 上转发](https://x.com/petergyang/status/2114507378532229214)了 HyperFrames 的 Jake Moran 的演示。复刻风格已经是 HyperFrames studio 的内置功能：**上传或选一段参考片，在提示词里描述要改的地方**，比如换字体、换配色。Jake Moran 的原话是「结构上还是同一个想法」。另一个例子来自 Every 的[短片](https://www.youtube.com/shorts/qxljXE5QY6s)：Mike Taylor 把 Slack 消息和会议笔记交给 Claude Opus，由它组装并剪辑一支讲解视频。\n\n两件事加起来，短视频制作可以拆成两块：内容来自你本来就有的工作记录，形式参考一支验证过的样片。做一条视频的成本降下来以后，Zara Zhang 同一天在 [X 上](https://x.com/zarazhangrui/status/2114255477907570865)说的那套打法就做得起了：**搭一个每天出一条视频的系统**，这比花几万美元做一支发布视频更有用。她认为很多人高估了一次大发布，低估了每天在时间线上露面。\n\n适合已经有素材积累、想稳定更新的人，比如做产品、做咨询，手里有大量会议纪要和项目记录。复刻风格只是起点，观众留下来还是看内容。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Peter Yang: Here’s how to use Claude to copy any video shorts style in a few minutes.\n\nFrom ",
+          "url": "https://x.com/petergyang/status/2114507378532229214"
+        },
+        {
+          "label": "Every (YouTube)",
+          "title": "I Gave Claude My Meeting Notes and It Made a Video",
+          "url": "https://www.youtube.com/shorts/qxljXE5QY6s"
+        },
+        {
+          "label": "Follow Builders (X)",
+          "title": "Zara Zhang: Great interview. Most people overestimate the importance of one huge launch and ",
+          "url": "https://x.com/zarazhangrui/status/2114255477907570865"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-26-02"
+    },
+    {
+      "candidateIds": [
+        "c22"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-25",
+      "headline": "Box CEO：安全 agent 刚能用，先把数据底子理顺",
+      "oneLiner": "Box CEO Aaron Levie 10 月 25 日说，让 agent 群做安全防护是最近几个月才出现的能力，但多数大企业得先把分散的数据和过宽的权限理顺，才用得上。",
+      "who": "Aaron Levie 是 Box CEO，2026-10-25 在 X 上评论大企业安全的现状。",
+      "how": "他认为企业的风险面会越来越碎：数据分散，有的系统权限开得太宽，有的系统主要靠「没人知道」来保证安全。基础设施理顺以后，agent 群可以并行调用各种安全工具、测试各种攻击变体、读日志，还能评估企业数据的风险等级。",
+      "result": "他的依据是一线观察：大企业连库、工具和基础设施的更新都跟不上，初创公司和非科技公司更难。他说长时运行的 agent 和够用的 computer use 是最近几个月才成熟的，之前做不到。",
+      "tryThis": "做 AI 咨询的人可以从数据梳理和权限盘点切入，这比一上来就卖 agent 更容易落地。他点名的机会覆盖身份、防火墙、网络、代码扫描、数据保护各层。",
+      "caveat": "这是他的判断，落地还没有普及。前提是数据和基础设施先完成现代化，很多非科技公司离这一步还远。同样的能力也会落到攻击方手里，他的乐观只针对攻防平衡这一点。",
+      "body": "Aaron Levie 在 [X 上](https://x.com/levie/status/2114391265655816315)描述了大企业安全的现状：要跟进的库没完没了，基础设施、数据和代码越铺越大，多数大企业都跟不上。数据分散，企业在任何时刻都说不清自己的风险状态。有的系统权限开得太宽，有的主要靠 security through obscurity。\n\n他的判断分两步。第一步是**先做基础工作**，让数据和基础设施现代化。第二步才轮到 agent 群：并行调用安全工具、测试攻击变体、读日志、给数据评风险。他说这类能力是最近几个月才有的，靠的是长时运行的 agent 和够好的 computer use，并认为这是他对攻防平衡保持乐观的一个理由。\n\n对想做 AI 咨询的人，这段话指了一个顺序：客户最先缺的往往是**数据盘点、权限梳理、系统清单**，这些活现在就能接，而且是后面上 agent 的前提。从身份到数据保护，他认为安全栈的每一层都有机会。这是 10 月 25 日的个人判断，具体到某个客户，还要看对方的基础设施成熟到什么程度。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: Good assessment of the on the ground reality for security in most large enterpri",
+          "url": "https://x.com/levie/status/2114391265655816315"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-26-03"
+    }
+  ],
+  "action": "打开你们团队最常用的设计稿或文档模板，列一张对照表：左边写团队平时怎么叫一个组件或模块，右边写它在代码库或系统里的真实名字，先列 20 个。下次让 Cursor 或 Claude 生成原型、写方案时，把这张表一起给它，对比一下产物离「能直接用」近了多少。表里对不上的地方，就是团队设计和工程之间要先补的沟通。",
+  "readingMinutes": 6,
+  "meta": {
+    "generatedAt": "2026-10-26T14:46:19.035Z",
+    "engine": "cli",
+    "candidateCount": 30,
+    "candidatesBySource": {
+      "Simon Willison": 1,
+      "How I AI (Claire Vo)": 1,
+      "Lenny's Newsletter & Podcast": 1,
+      "Ali Abdaal": 2,
+      "Matt Wolfe": 1,
+      "Theoretically Media": 2,
+      "Starter Story (YouTube)": 1,
+      "Every (YouTube)": 1,
+      "Rest of World": 1,
+      "Follow Builders (X)": 14,
+      "Latent Space": 2,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 1,
+      "NYT Personal Tech": 1
+    },
+    "shortlist": [
+      {
+        "id": "c30",
+        "reason": "AI 生活类，全文：NYT 科技专栏作者亲自用 Meta Muse 和 OpenAI dots 去求职、订难订的餐厅，有具体任务，结果写在正文里，普通人可以照着试。",
+        "source": "NYT Personal Tech",
+        "title": "Put Your A.I. Agents to Work with These 5 Killer Tasks"
+      },
+      {
+        "id": "c2",
+        "reason": "谁：Reddit 首席 UX 工程师 Blair Metcalf。怎么用：自建 vibe-coding 原型工具 Proto，用设计系统 MCP 把产品语言对应到生产代码。结果：UX 和产品团队 100% 在用，上线 700 多个原型。简介写了数字和要点。与 c3 是同一期，保留 How I AI 原节目这条。",
+        "source": "How I AI (Claire Vo)",
+        "title": "Why Reddit built its own AI prototyping tool | Blair Metcalf"
+      },
+      {
+        "id": "c9",
+        "reason": "谁：独立开发者 Frederick。结果：健康健身 iOS 应用做到月入 1 万美元，核心是一套可复用的营销打法。有收入数字，副业人群可以参考；但只有简介，下一步编辑能写出的细节有限。",
+        "source": "Starter Story (YouTube)",
+        "title": "How I Built a $10K/Month iOS App"
+      },
+      {
+        "id": "c18",
+        "reason": "做法很具体：上传一段参考短视频，再用提示词说明要改的字体、配色，Claude 几分钟就能仿出同样风格。内容创作者可以直接照着试。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Yang: Here’s how to use Claude to copy any video shorts style in a few minutes.\n\nFrom "
+      },
+      {
+        "id": "c1",
+        "reason": "Simon Willison 亲手做了个小工具 Seam Cutter，起因是长截图拼接后想删掉中间一段（比如删掉无关的提示词），可以用来讲个人按需用 AI 做小工具的例子。",
+        "source": "Simon Willison",
+        "title": "Seam Cutter"
+      },
+      {
+        "id": "c29",
+        "reason": "Shopify 设计负责人现场演示设计流程：后台改版、Sidekick、周末做的草地着色器（有开源仓库），一个轮播组件改了 91 次才做对。过程很具体，但只有简介。",
+        "source": "Y Combinator / Lightcone (YouTube)",
+        "title": "The New Full-Stack Designer"
+      },
+      {
+        "id": "c10",
+        "reason": "Every 的 Mike Taylor 把 Slack 消息和会议记录交给 Claude Opus，由它剪出一支讲解视频。工作提效场景新颖，但只有一句简介，排在后面。",
+        "source": "Every (YouTube)",
+        "title": "I Gave Claude My Meeting Notes and It Made a Video"
+      },
+      {
+        "id": "c11",
+        "reason": "AI 认知类，全文：新研究发现非英语用户用 AI 成本更高（分词税），和中文用户的 API 成本直接相关，有依据。",
+        "source": "Rest of World",
+        "title": "AI models cost more when you don’t use English"
+      },
+      {
+        "id": "c25",
+        "reason": "AI 认知类：创作者 Zara Zhang 的判断：每天发一条视频的系统，比花几万美元做一支发布视频更有效，适合做内容和产品增长的人参考。",
+        "source": "Follow Builders (X)",
+        "title": "Zara Zhang: Great interview. Most people overestimate the importance of one huge launch and "
+      },
+      {
+        "id": "c22",
+        "reason": "AI 认知类：Box CEO Aaron Levie 从一线看大企业安全现状：数据分散、风险面越来越复杂。适合大厂读者，但做法和数字较少。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: Good assessment of the on the ground reality for security in most large enterpri"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 12505,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1485,
+        "output_tokens_details": {
+          "thinking_tokens": 511
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 12505,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1485,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 12505,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 12505
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.129748
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 12151,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 6768,
+      "output_tokens_details": {
+        "thinking_tokens": 3321
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 12151,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 6768,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 12151,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 12151
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.232576
+  }
+}
