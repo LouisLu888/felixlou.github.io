@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-10-26",
+    "title": "Reddit 的 700 多个 AI 原型怎么来的，照一段参考片几分钟复刻短视频风格",
+    "summary": "Reddit 自建 AI 原型工具，700 多个原型直接用真实数据；用 Claude 做短视频：照参考片换风格，拿会议笔记出片；Box CEO：安全 agent 刚能用，先把数据底子理顺",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-26/",
+    "items": [
+      {
+        "headline": "Reddit 自建 AI 原型工具，700 多个原型直接用真实数据",
+        "sources": [
+          {
+            "label": "How I AI (Claire Vo)",
+            "title": "Why Reddit built its own AI prototyping tool | Blair Metcalf",
+            "url": "https://podcasters.spotify.com/pod/show/pen-name/episodes/Why-Reddit-built-its-own-AI-prototyping-tool--Blair-Metcalf-e3qtst2"
+          }
+        ]
+      },
+      {
+        "headline": "用 Claude 做短视频：照参考片换风格，拿会议笔记出片",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Peter Yang: Here’s how to use Claude to copy any video shorts style in a few minutes.\n\nFrom ",
+            "url": "https://x.com/petergyang/status/2114507378532229214"
+          },
+          {
+            "label": "Every (YouTube)",
+            "title": "I Gave Claude My Meeting Notes and It Made a Video",
+            "url": "https://www.youtube.com/shorts/qxljXE5QY6s"
+          },
+          {
+            "label": "Follow Builders (X)",
+            "title": "Zara Zhang: Great interview. Most people overestimate the importance of one huge launch and ",
+            "url": "https://x.com/zarazhangrui/status/2114255477907570865"
+          }
+        ]
+      },
+      {
+        "headline": "Box CEO：安全 agent 刚能用，先把数据底子理顺",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: Good assessment of the on the ground reality for security in most large enterpri",
+            "url": "https://x.com/levie/status/2114391265655816315"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Reddit 自建 AI 原型工具，700 多个原型直接用真实数据"
+      },
+      {
+        "start": 133,
+        "title": "用 Claude 做短视频：照参考片换风格，拿会议笔记出片"
+      },
+      {
+        "start": 209,
+        "title": "Box CEO：安全 agent 刚能用，先把数据底子理顺"
+      },
+      {
+        "start": 283,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 327,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-10-26.mp3",
+    "audioBytes": 1964829,
+    "publishedAt": "2026-10-26T22:44:51.539Z"
+  },
+  {
     "date": "2026-10-25",
     "title": "一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人",
     "summary": "旁路 Agent 提醒他：还有 45 个文件的改动没提交；按故事点付工程师工资，这家 AI 交付公司做到 75 人；Cursor 设计师 Ryo Lu：别让 Agent 替你跳过难的那段",

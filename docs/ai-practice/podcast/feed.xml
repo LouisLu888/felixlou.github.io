@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-26 · Reddit 的 700 多个 AI 原型怎么来的，照一段参考片几分钟复刻短视频风格</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-26/</link>
+      <description>Reddit 自建 AI 原型工具，700 多个原型直接用真实数据；用 Claude 做短视频：照参考片换风格，拿会议笔记出片；Box CEO：安全 agent 刚能用，先把数据底子理顺（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-26/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 Reddit 自建 AI 原型工具，700 多个原型直接用真实数据<br>02:13 用 Claude 做短视频：照参考片换风格，拿会议笔记出片<br>03:29 Box CEO：安全 agent 刚能用，先把数据底子理顺<br>04:43 今天可以做的一件事</p><p><b>Reddit 自建 AI 原型工具，700 多个原型直接用真实数据</b><br><a href="https://podcasters.spotify.com/pod/show/pen-name/episodes/Why-Reddit-built-its-own-AI-prototyping-tool--Blair-Metcalf-e3qtst2">How I AI (Claire Vo)</a></p><p><b>用 Claude 做短视频：照参考片换风格，拿会议笔记出片</b><br><a href="https://x.com/petergyang/status/2114507378532229214">Follow Builders (X)</a> · <a href="https://www.youtube.com/shorts/qxljXE5QY6s">Every (YouTube)</a> · <a href="https://x.com/zarazhangrui/status/2114255477907570865">Follow Builders (X)</a></p><p><b>Box CEO：安全 agent 刚能用，先把数据底子理顺</b><br><a href="https://x.com/levie/status/2114391265655816315">Follow Builders (X)</a></p>]]></content:encoded>
+      <enclosure url="https://audio.jiabinlu.com/ai-practice-2026-10-26.mp3" length="1964829" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 22:44:51 GMT</pubDate>
+      <itunes:duration>00:05:27</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-25 · 一个旁路 Agent 保住了 45 个文件的改动，按产出付费的 AI 工程公司做到 75 人</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-25/</link>
       <description>旁路 Agent 提醒他：还有 45 个文件的改动没提交；按故事点付工程师工资，这家 AI 交付公司做到 75 人；Cursor 设计师 Ryo Lu：别让 Agent 替你跳过难的那段（本集语音由 AI 合成）</description>
