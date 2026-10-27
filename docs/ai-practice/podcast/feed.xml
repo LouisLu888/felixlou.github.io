@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-27 · 给水管工修网页漏洞，Reddit 内部做了 700 个 AI 原型</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-27/</link>
+      <description>给达拉斯水管工查网页漏洞，提案里一个 AI 都不提；Reddit 让设计师不碰 Git，做了约 700 个真数据原型；断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug；Cal AI 给网红付多少钱：先算每千次播放能带来多少收入；Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-27/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 给达拉斯水管工查网页漏洞，提案里一个 AI 都不提<br>03:31 Reddit 让设计师不碰 Git，做了约 700 个真数据原型<br>05:04 断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug<br>06:33 Cal AI 给网红付多少钱：先算每千次播放能带来多少收入<br>07:42 Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%<br>09:17 今天可以做的一件事</p><p><b>给达拉斯水管工查网页漏洞，提案里一个 AI 都不提</b><br><a href="https://www.youtube.com/@GregIsenberg/search?query=How%20to%20sell%20AI%20to%20Main%20Street%20(Full%20Playbook)">Startup Ideas Podcast (Greg Isenberg)</a></p><p><b>Reddit 让设计师不碰 Git，做了约 700 个真数据原型</b><br><a href="https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review">Lenny's Newsletter &amp; Podcast</a></p><p><b>断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug</b><br><a href="https://latent.space/p/offline-coding/">Latent Space</a></p><p><b>Cal AI 给网红付多少钱：先算每千次播放能带来多少收入</b><br><a href="https://podcasters.spotify.com/pod/show/app-marketing-podcast/episodes/The-Influencer-Marketing-Math-That-Made-Cal-AI-Profitable-e3r4hve">App Masters (Steve P. Young)</a></p><p><b>Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%</b><br><a href="https://x.com/levie/status/2114761816199098587">Follow Builders (X)</a> · <a href="https://x.com/nikunj/status/2114761204333998427">Follow Builders (X)</a></p>]]></content:encoded>
+      <enclosure url="https://audio.jiabinlu.com/ai-practice-2026-10-27.mp3" length="3623421" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 22:46:37 GMT</pubDate>
+      <itunes:duration>00:10:04</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-26 · Reddit 的 700 多个 AI 原型怎么来的，照一段参考片几分钟复刻短视频风格</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-26/</link>
       <description>Reddit 自建 AI 原型工具，700 多个原型直接用真实数据；用 Claude 做短视频：照参考片换风格，拿会议笔记出片；Box CEO：安全 agent 刚能用，先把数据底子理顺（本集语音由 AI 合成）</description>

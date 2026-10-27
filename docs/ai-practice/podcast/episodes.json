@@ -1,5 +1,98 @@
 [
   {
+    "date": "2026-10-27",
+    "title": "给水管工修网页漏洞，Reddit 内部做了 700 个 AI 原型",
+    "summary": "给达拉斯水管工查网页漏洞，提案里一个 AI 都不提；Reddit 让设计师不碰 Git，做了约 700 个真数据原型；断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug；Cal AI 给网红付多少钱：先算每千次播放能带来多少收入；Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-27/",
+    "items": [
+      {
+        "headline": "给达拉斯水管工查网页漏洞，提案里一个 AI 都不提",
+        "sources": [
+          {
+            "label": "Startup Ideas Podcast (Greg Isenberg)",
+            "title": "How to sell AI to Main Street (Full Playbook)",
+            "url": "https://www.youtube.com/@GregIsenberg/search?query=How%20to%20sell%20AI%20to%20Main%20Street%20(Full%20Playbook)"
+          }
+        ]
+      },
+      {
+        "headline": "Reddit 让设计师不碰 Git，做了约 700 个真数据原型",
+        "sources": [
+          {
+            "label": "Lenny's Newsletter & Podcast",
+            "title": "🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool",
+            "url": "https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review"
+          }
+        ]
+      },
+      {
+        "headline": "断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "Coding From the Himalayas With an Offline AI Agent",
+            "url": "https://latent.space/p/offline-coding/"
+          }
+        ]
+      },
+      {
+        "headline": "Cal AI 给网红付多少钱：先算每千次播放能带来多少收入",
+        "sources": [
+          {
+            "label": "App Masters (Steve P. Young)",
+            "title": "The Influencer Marketing Math That Made Cal AI Profitable",
+            "url": "https://podcasters.spotify.com/pod/show/app-marketing-podcast/episodes/The-Influencer-Marketing-Math-That-Made-Cal-AI-Profitable-e3r4hve"
+          }
+        ]
+      },
+      {
+        "headline": "Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: This is the key stat. The average Fortune 500 customer of Anthropic spends less ",
+            "url": "https://x.com/levie/status/2114761816199098587"
+          },
+          {
+            "label": "Follow Builders (X)",
+            "title": "Nikunj Kothari: The main thing I wanted to dig into @AnthropicAI's S-1 was the compute contracts",
+            "url": "https://x.com/nikunj/status/2114761204333998427"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "给达拉斯水管工查网页漏洞，提案里一个 AI 都不提"
+      },
+      {
+        "start": 211,
+        "title": "Reddit 让设计师不碰 Git，做了约 700 个真数据原型"
+      },
+      {
+        "start": 304,
+        "title": "断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug"
+      },
+      {
+        "start": 393,
+        "title": "Cal AI 给网红付多少钱：先算每千次播放能带来多少收入"
+      },
+      {
+        "start": 462,
+        "title": "Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%"
+      },
+      {
+        "start": 557,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 604,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-10-27.mp3",
+    "audioBytes": 3623421,
+    "publishedAt": "2026-10-27T22:46:37.253Z"
+  },
+  {
     "date": "2026-10-26",
     "title": "Reddit 的 700 多个 AI 原型怎么来的，照一段参考片几分钟复刻短视频风格",
     "summary": "Reddit 自建 AI 原型工具，700 多个原型直接用真实数据；用 Claude 做短视频：照参考片换风格，拿会议笔记出片；Box CEO：安全 agent 刚能用，先把数据底子理顺",
