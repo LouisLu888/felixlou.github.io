@@ -22,6 +22,8 @@
   <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
   <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
 <script>
 (function () {
   var h = location.hash, m;
@@ -30,8 +32,6 @@
   else if (h.indexOf("#/c") === 0) location.replace("/ai-practice/c/");
 })();
 </script>
-  <script src="/vendor/amplitude-min.js" defer></script>
-  <script src="/analytics.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -67,6 +67,17 @@
       <h1>每日精选</h1>
       <p>用 AI 提效、做成商业闭环、拿到收入的人，每天几条一手材料。</p>
     </div>
+    <div class="podcast-card">
+  <img src="/ai-practice/podcast/cover.jpg" alt="AI 实干派 播客封面" width="72" height="72" loading="lazy">
+  <div class="podcast-body">
+    <div class="podcast-title">🎧 AI 实干派 播客版</div>
+    <p>每期也有语音版，通勤、做饭时听完。在播客 App 里订阅，每天自动更新。</p>
+    <div class="podcast-links">
+      <a class="podcast-apple" href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="home">在 Apple 播客订阅</a>
+      <a class="podcast-rss" href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="home">其他播客 App（RSS）</a>
+    </div>
+  </div>
+</div>
     <div class="day-list">
       <a class="day-card" href="/ai-practice/d/2026-10-26/">
         <div class="eyebrow">017 · 2026 年 10 月 26 日 · 周一 · 约 6 分钟</div>
@@ -169,6 +180,7 @@
     <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
   </div>
   <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
 </form>
     <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
   </footer>

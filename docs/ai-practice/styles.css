@@ -237,3 +237,24 @@ details.facts-wrap[open] > summary::before { content: "▾ "; }
 .subscribe-freq { display: flex; gap: 18px; margin-top: 10px; font-size: 14px; color: var(--text-2); }
 .subscribe-freq label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
 .subscribe-note { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+
+/* Podcast */
+.podcast-card {
+  display: flex; gap: 14px; align-items: center;
+  background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; margin: 0 0 20px;
+}
+.podcast-card img { width: 72px; height: 72px; border-radius: 10px; flex-shrink: 0; object-fit: cover; }
+.podcast-body { min-width: 0; }
+.podcast-title { font-weight: 700; font-size: 16px; color: var(--text); }
+.podcast-body p { margin: 2px 0 8px; font-size: 14px; color: var(--text-2); }
+.podcast-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 14px; }
+.podcast-apple {
+  display: inline-block; color: #fff; background: var(--accent); font-weight: 600;
+  border-radius: 8px; padding: 6px 14px;
+}
+.podcast-apple:hover { color: #fff; background: var(--accent-hover); }
+@media (max-width: 480px) {
+  .podcast-card { align-items: flex-start; }
+  .podcast-card img { width: 56px; height: 56px; }
+}

@@ -12,6 +12,24 @@ import {
 } from "./render.js";
 
 const BUTTONDOWN_EMBED = "https://buttondown.com/api/emails/embed-subscribe/325louis";
+const PODCAST_APPLE_URL = "https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340";
+const PODCAST_FEED_PATH = `${BASE_PATH}podcast/feed.xml`;
+
+// Daily audio edition (podcast-feed.js publishes the feed). Shown on the home
+// and subscribe pages; the footer form carries a one-line version.
+export function podcastCard(location) {
+  return `<div class="podcast-card">
+  <img src="${BASE_PATH}podcast/cover.jpg" alt="${BRAND} 播客封面" width="72" height="72" loading="lazy">
+  <div class="podcast-body">
+    <div class="podcast-title">🎧 ${BRAND} 播客版</div>
+    <p>每期也有语音版，通勤、做饭时听完。在播客 App 里订阅，每天自动更新。</p>
+    <div class="podcast-links">
+      <a class="podcast-apple" href="${PODCAST_APPLE_URL}" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="${location}">在 Apple 播客订阅</a>
+      <a class="podcast-rss" href="${PODCAST_FEED_PATH}" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="${location}">其他播客 App（RSS）</a>
+    </div>
+  </div>
+</div>`;
+}
 
 // Both inputs are named "tag": Buttondown applies every submitted tag, so a
 // subscriber gets ai-practice plus their chosen frequency.
@@ -29,6 +47,7 @@ export function subscribeForm() {
     <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
   </div>
   <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="${PODCAST_APPLE_URL}" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="${PODCAST_FEED_PATH}" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
 </form>`;
 }
 
@@ -267,6 +286,7 @@ export function renderHomePage({ days, categories, catById }) {
       <h1>每日精选</h1>
       <p>用 AI 提效、做成商业闭环、拿到收入的人，每天几条一手材料。</p>
     </div>
+    ${podcastCard("home")}
     ${days.length ? `<div class="day-list">\n      ${cards}\n    </div>` : `<p class="empty">还没有内容。第一期会在下一次定时任务运行后出现。</p>`}`;
   return shell({
     title: `${BRAND} · ${TAGLINE}`,
@@ -304,6 +324,7 @@ export function renderSubscribePage({ categories }) {
       <p>${DESCRIPTION}</p>
     </div>
     ${subscribeForm()}
+    ${podcastCard("subscribe_page")}
     <p>选「每天一期」，每天北京时间早上 6 点收到当期要点，几分钟看完，全文在网站上；选「每周精选」，每周日收到一周的要点和链接。</p>`;
   return shell({ title: `订阅｜${BRAND}`, description: DESCRIPTION, path: subscribePath(), type: "website", body, categories, footerForm: false });
 }
