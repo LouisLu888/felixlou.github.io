@@ -8,6 +8,39 @@
   "items": [
     {
       "candidateIds": [
+        "c36",
+        "c37"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-26",
+      "headline": "Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%",
+      "oneLiner": "Box CEO Aaron Levie 读 Anthropic 招股书后指出，财富 500 强客户平均在 Anthropic 上的花费不到总支出的 0.1%。他认为这个比例有可能升到 1% 到 5%。",
+      "who": "Aaron Levie 是 Box CEO，2026-10-26 在 X 上评论 Anthropic 的 S-1 招股书。",
+      "how": "他认为，前沿用户和其他公司之间差距很大。目前大企业的这部分支出主要用在写代码和员工个人提效上，等企业为 agent 重新设计业务流程，用量会大幅上升。",
+      "result": "他的依据是招股书里的数据：财富 500 强客户平均花费不到总支出的 0.1%。投资人 Nikunj Kothari 同日整理了同一份招股书：Anthropic 每 1 美元计算和基础设施支出带来的收入，从 2025 年二季度的 0.57 美元升到 2026 年二季度的 2.08 美元。",
+      "tryThis": "盘点一下你团队的 AI 用法，看是否还停留在有人提问、AI 才回答的阶段，再挑一个可以让 agent 在后台批量处理的流程试点。",
+      "caveat": "「涨 10 到 50 倍」是 Levie 的预测。他自己也说，token 降价和其他大额支出不会消失，这个比例迟早会到顶。",
+      "body": "Aaron Levie 在 [X 上](https://x.com/levie/status/2114761816199098587)说，这是招股书里最关键的数字。他判断，现在只有极少数公司真正让 agent 在后台大量处理任务，不需要人去提示。批量处理数据、多个 agent 并行写代码、在流程里自动执行任务，这类用法消耗的 token 要多出约 100 倍，也更容易直接算出投入回报。\n\n[Nikunj Kothari 的拆解](https://x.com/nikunj/status/2114761204333998427)给了另一面的数据：上半年约 80% 的收入按用量计费，而算力合同大多一签就是好几年。\n\n对读者来说，这组数字有两层意思。大公司里愿意动手改造流程的人仍然不多。能把一个流程改成 **agent 在后台跑、人做判断**的人，在组织里会越来越稀缺。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: This is the key stat. The average Fortune 500 customer of Anthropic spends less ",
+          "url": "https://x.com/levie/status/2114761816199098587"
+        },
+        {
+          "label": "Follow Builders (X)",
+          "title": "Nikunj Kothari: The main thing I wanted to dig into @AnthropicAI's S-1 was the compute contracts",
+          "url": "https://x.com/nikunj/status/2114761204333998427"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-27-05",
+      "issueDate": "2026-10-27",
+      "issueNumber": 18
+    },
+    {
+      "candidateIds": [
         "c22"
       ],
       "category": "perspective",

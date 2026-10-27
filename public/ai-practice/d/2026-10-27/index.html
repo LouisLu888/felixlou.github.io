@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 018｜给水管工修网页漏洞，Reddit 内部做了 700 个 AI 原型</title>
+  <meta name="description" content="James Dickerson 用自建工具几分钟筛出 100 家达拉斯水管公司。他抽查了其中 5 家，有 4 家要往下翻三屏以上才能预约。他卖给这些公司的是预约单和来电，提案里不提 AI。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-10-27/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 018｜给水管工修网页漏洞，Reddit 内部做了 700 个 AI 原型">
+  <meta property="og:description" content="James Dickerson 用自建工具几分钟筛出 100 家达拉斯水管公司。他抽查了其中 5 家，有 4 家要往下翻三屏以上才能预约。他卖给这些公司的是预约单和来电，提案里不提 AI。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-10-27/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-27.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 018｜给水管工修网页漏洞，Reddit 内部做了 700 个 AI 原型">
+  <meta name="twitter:description" content="James Dickerson 用自建工具几分钟筛出 100 家达拉斯水管公司。他抽查了其中 5 家，有 4 家要往下翻三屏以上才能预约。他卖给这些公司的是预约单和来电，提案里不提 AI。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-27.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">17</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">6</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">7</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">8</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">10</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">20</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">9</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 018 · 2026 年 10 月 27 日 · 周二 · 约 8 分钟读完</div>
+        <h1>给水管工修网页漏洞，Reddit 内部做了 700 个 AI 原型</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="consulting">AI 咨询</span><a href="#2026-10-27-01">James Dickerson 用自建工具几分钟筛出 100 家达拉斯水管公司。他抽查了其中 5 家，有 4 家要往下翻三屏以上才能预约。他卖给这些公司的是预约单和来电，提案里不提 AI。</a></li><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-27-02">Reddit 首席 UX 工程师 Blair Metcalf 搭了内部原型平台 Reddit Proto。他说团队已经做出约 700 个原型，UX 和产品团队全员都在用。</a></li><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-10-27-03">Thomson Reuters 首席工程师 Rittika Jindal 在一台断网的 Mac 上用 OpenCode 加本地的 Qwen3.5 9B 修好一个求和 bug。agent 只改了一行代码，五个测试全部通过。</a></li><li><span class="tag" data-cat="app">AI App</span><a href="#2026-10-27-04">Cal AI 的 Jake 说，给网红定价不该照抄行业 CPM，要按每千次播放带来的收入（RPM）倒推，播放奖励在约 100 万次左右封顶。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-10-27-05">Box CEO Aaron Levie 读 Anthropic 招股书后指出，财富 500 强客户平均在 Anthropic 上的花费不到总支出的 0.1%。他认为这个比例有可能升到 1% 到 5%。</a></li></ul>
+      </section>
+      <section class="item" id="2026-10-27-01">
+        <div class="item-meta"><span class="tag" data-cat="consulting">AI 咨询</span><span>·</span>本周演示<span>·</span>2026-10-26<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-27-01/">01｜给达拉斯水管工查网页漏洞，提案里一个 AI 都不提</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>James Dickerson（网名 Boring Marketer）在北卡 Charlotte 经营流动柴油车维修公司 Diesel Dudes，此前多年给本地商家做代理商，也是主持人 Greg Isenberg 的生意伙伴。</dd><dt>怎么用</dt><dd>他在 Claude Code 里搭了一套 MCP 工具（Boring Funnels），从 Google Maps、Yelp 等来源抓取商家信息，按评论数、技师人数和营收线索筛选客户。工具接着自动审查对方的广告和落地页，生成带对方品牌的提案。</dd><dt>结果</dt><dd>他说，约 1 分钟找到 100 家水管公司，约 15 分钟后提案和联系邮箱都已备好。他抽查的 5 家都在投 Google 广告，Google 评分在 4.8 到 4.9 之间。其中 4 家的落地页没有重复广告里的承诺，3 家没展示 Google 评分，4 家要翻三屏以上才能预约。</dd><dt>你可以试</dt><dd>选一个客单价高的本地行业和一个城市，用 AI 把 20 家正在投广告的公司按上面三项检查一遍，整理成截图对比。然后免费给其中一家重做一个页面，换一份案例。</dd><dt>注意</dt><dd>他瞄准的是年营收 200 万到 2000 万美元的商家，取得这些老板的信任要花几个月。他自己试过让 AI 前台接电话，很多来电者问一句「这是不是个蠢 AI」就挂了。</dd></dl>
+        <div class="body"><p>在 Startup Ideas Podcast) 里，James Dickerson 讲了给本地工种公司做服务的一套打法。他的判断是，这些公司已经在花钱买流量，问题出在落地页上。他估计，一家年营收 500 万美元的水管公司每年营销支出在 15 万到 25 万美元之间，而代理商做一个好的漏斗要收 2 万美元。会用 coding agent 的人，可以把这件事做得又快又好。</p><p>他卖的是<strong>预约单和来电</strong>，不讲 AI，因为很多老板分不清 AI agent 和房产中介 agent。交付的是一组漏斗：79 美元的保养引流单、页面上直接报价、「修还是换」测评问卷，以及老板出镜讲解 2 万到 3 万美元的换机决策。不同搜索词的广告对应不同的页面。他说大多数公司把所有流量都导到同一个页面。</p><p>获客用 Chet Holmes 的 <strong>Dream 100</strong>：先列出 100 家目标公司，让 AI 去读评论、爬网站、查老板背景，然后每周给这些人提供有用的内容。他还会寄「lumpy mail」，比如一个盒子里装一枚黄铜管件，附上已经替对方重做好的页面链接。他强调这要做很久才见效，第一单可以用一次免费搭建换一份案例。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/@GregIsenberg/search?query=How%20to%20sell%20AI%20to%20Main%20Street%20(Full%20Playbook)" target="_blank" rel="noopener" title="How to sell AI to Main Street (Full Playbook)">Startup Ideas Podcast (Greg Isenberg)</a></div>
+      </section>
+      <section class="item" id="2026-10-27-02">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-26<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-27-02/">02｜Reddit 让设计师不碰 Git，做了约 700 个真数据原型</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Blair Metcalf 是 Reddit 首席 UX 工程师，在 How I AI 节目里演示了他做的内部工具 Reddit Proto。</dd><dt>怎么用</dt><dd>桌面应用在后台处理仓库、分支和脚手架，原型可以用真实的 Reddit 账号登录。设计师写的批注会连同对应组件和设计规范一起发给 Cursor。团队还自建了设计系统 MCP，把 token 和组件对应到生产代码。</dd><dt>结果</dt><dd>他说团队已做出约 700 个原型，UX 与产品团队采用率 100%。用得最好的人里，有没有工程背景的视觉设计师和动画师。</dd><dt>你可以试</dt><dd>先把团队的组件库和设计规范整理成 AI 能读的文档或 MCP，再让 Cursor 按它改一个现有页面，检查它有没有用对组件。</dd><dt>注意</dt><dd>前提是公司已有成熟的设计系统，还有一位工程师专门搭建和维护这套平台。原型做多了以后，找到已有的原型也成了问题，Reddit 正在做可搜索的原型目录。</dd></dl>
+        <div class="body"><p><a href="https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review">How I AI 本期</a>里，Blair Metcalf 演示了 Reddit Proto。设计师和 PM 不用碰 GitHub，就能做出接近线上产品的原型。原型可以用真实账号登录，信息流、搜索和社区里都是熟悉的内容，管理层评审时不用在脑子里替换占位数据。</p><p>关键是<strong>让 AI 带着上下文改代码</strong>：每条批注都附上对应的组件、设计系统规范和用户意图，再交给 Cursor。设计系统 MCP 告诉 Cursor 该用哪个组件、长什么样、代码放在哪里。交接环节叫「feature capsule」：设计师提交 Figma 链接，系统把每个元素对应到生产组件，结合以往的工程反馈，生成带验收标准的 PRD。</p><p>小团队照搬整套平台不现实，但其中两点可以先试：给 AI 的输入要包括组件和规范，交给工程的需求要写明验收标准。</p></div>
+        <div class="sources">原文：<a href="https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review" target="_blank" rel="noopener" title="🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool">Lenny&#39;s Newsletter &amp; Podcast</a></div>
+      </section>
+      <section class="item" id="2026-10-27-03">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-27<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-27-03/">03｜断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Rittika Jindal 是 Thomson Reuters 首席工程师，一年前搬到喜马拉雅山脚下，那里常断网、断电。</dd><dt>怎么用</dt><dd>Ollama 在本机运行 Qwen3.5 9B，OpenCode 作为终端里的 coding agent。配置里只启用本地模型，编辑文件和执行命令前都要确认，网页工具也被屏蔽。</dd><dt>结果</dt><dd>一个记账函数每次循环都覆盖总额，agent 把 total = 改成 total +=，五个测试全部通过，作者之后又自己跑了一遍测试核对。agent 起初想用 pytest，而项目用的是 unittest。</dd><dt>你可以试</dt><dd>如果你常在飞机或火车上写代码，联网时先拉好模型和依赖，在一个有现成测试的小项目上试一次。提示词里写明准确的测试命令。</dd><dt>注意</dt><dd>9B 模型下载约 6.6 到 7.6 GB，作者引用的估算是需要 12 到 16 GB 内存，开 64k 上下文还要更多。离线时装不了新包，也查不了网页。演示用的是一个范围很小的 bug。</dd></dl>
+        <div class="body"><p>Rittika Jindal 在 <a href="https://latent.space/p/offline-coding/">Latent Space 的文章</a>里一步步记录了离线配置：联网时装好 OpenCode 1.19.4，用 Ollama 拉取 qwen3.5:9b，并让 Ollama 只监听本机、关闭云功能。然后关掉 Wi-Fi，先用 curl 确认本地服务还能响应、外部地址访问失败，再开始干活。</p><p>她的做法里有两点值得照搬。第一，<strong>先让测试失败，再让 agent 修</strong>：三个用例失败给了 agent 明确的目标，也让人可以不看它的解释，直接用测试检查结果。第二，<strong>权限确认是人工检查点</strong>：agent 提议跑 pytest 时，她在确认环节发现命令不对。</p><p>她也引用了一项研究：在云端模型上，OpenCode 每解决一个任务消耗的 token 约为 Goose 的 40 倍。本地运行不按 token 计费，但上下文长度会占用内存。</p></div>
+        <div class="sources">原文：<a href="https://latent.space/p/offline-coding/" target="_blank" rel="noopener" title="Coding From the Himalayas With an Offline AI Agent">Latent Space</a></div>
+      </section>
+      <section class="item" id="2026-10-27-04">
+        <div class="item-meta"><span class="tag" data-cat="app">AI App</span><span>·</span>经营复盘<span>·</span>2026-10-27<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-27-04/">04｜Cal AI 给网红付多少钱：先算每千次播放能带来多少收入</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Jake 负责 AI 卡路里记录 App Cal AI 的网红营销，在 App Masters 播客里讲了他们的计算方法。</dd><dt>怎么用</dt><dd>跟网红谈跨平台发布的打包价，用「底价＋按播放量的奖励」结构付费，用 RPM 推算最多能付多少钱。</dd><dt>结果</dt><dd>Cal AI 把播放奖励封顶在约 100 万次附近。他的解释是，视频火了以后会传到更宽泛的人群，新增播放的价值随之下降。</dd><dt>你可以试</dt><dd>用你已有的一两次网红合作数据，算出每千次播放带来的下载和收入，再定下次合作的底价和奖励上限。</dd><dt>注意</dt><dd>前提是能把下载和收入对应到具体视频。几百万条视频同时在传播时，归因本身就是难题。</dd></dl>
+        <div class="body"><p>在 <a href="https://podcasters.spotify.com/pod/show/app-marketing-podcast/episodes/The-Influencer-Marketing-Math-That-Made-Cal-AI-Profitable-e3r4hve">App Masters 这期节目</a>里，Jake 把问题从「该付多少 CPM」改成了「<strong>这些播放带来的收入，允许我付多少</strong>」。按这个思路，底价负责保底，奖励跟播放量挂钩，到一定量级就封顶，避免爆款视频把单次合作做亏。</p><p>做付费 App 的小团队可以先跑几次小额合作，记录播放、下载和收入，用早期数据定出自己的 RPM，再整理成能重复执行的合作条款。节目还区分了投放广告、网红合作和 UGC 三种渠道。</p></div>
+        <div class="sources">原文：<a href="https://podcasters.spotify.com/pod/show/app-marketing-podcast/episodes/The-Influencer-Marketing-Math-That-Made-Cal-AI-Profitable-e3r4hve" target="_blank" rel="noopener" title="The Influencer Marketing Math That Made Cal AI Profitable">App Masters (Steve P. Young)</a></div>
+      </section>
+      <section class="item" id="2026-10-27-05">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-26<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-10-27-05/">05｜Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Aaron Levie 是 Box CEO，2026-10-26 在 X 上评论 Anthropic 的 S-1 招股书。</dd><dt>核心观点</dt><dd>他认为，前沿用户和其他公司之间差距很大。目前大企业的这部分支出主要用在写代码和员工个人提效上，等企业为 agent 重新设计业务流程，用量会大幅上升。</dd><dt>依据</dt><dd>他的依据是招股书里的数据：财富 500 强客户平均花费不到总支出的 0.1%。投资人 Nikunj Kothari 同日整理了同一份招股书：Anthropic 每 1 美元计算和基础设施支出带来的收入，从 2025 年二季度的 0.57 美元升到 2026 年二季度的 2.08 美元。</dd><dt>对你的意义</dt><dd>盘点一下你团队的 AI 用法，看是否还停留在有人提问、AI 才回答的阶段，再挑一个可以让 agent 在后台批量处理的流程试点。</dd><dt>争议·条件</dt><dd>「涨 10 到 50 倍」是 Levie 的预测。他自己也说，token 降价和其他大额支出不会消失，这个比例迟早会到顶。</dd></dl>
+        <div class="body"><p>Aaron Levie 在 <a href="https://x.com/levie/status/2114761816199098587">X 上</a>说，这是招股书里最关键的数字。他判断，现在只有极少数公司真正让 agent 在后台大量处理任务，不需要人去提示。批量处理数据、多个 agent 并行写代码、在流程里自动执行任务，这类用法消耗的 token 要多出约 100 倍，也更容易直接算出投入回报。</p><p><a href="https://x.com/nikunj/status/2114761204333998427">Nikunj Kothari 的拆解</a>给了另一面的数据：上半年约 80% 的收入按用量计费，而算力合同大多一签就是好几年。</p><p>对读者来说，这组数字有两层意思。大公司里愿意动手改造流程的人仍然不多。能把一个流程改成 <strong>agent 在后台跑、人做判断</strong>的人，在组织里会越来越稀缺。</p></div>
+        <div class="sources">原文：<a href="https://x.com/levie/status/2114761816199098587" target="_blank" rel="noopener" title="Aaron Levie: This is the key stat. The average Fortune 500 customer of Anthropic spends less ">Follow Builders (X)</a><a href="https://x.com/nikunj/status/2114761204333998427" target="_blank" rel="noopener" title="Nikunj Kothari: The main thing I wanted to dig into @AnthropicAI&#39;s S-1 was the compute contracts">Follow Builders (X)</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>找一家你所在城市正在投 Google 或 Meta 广告的本地服务商，比如水管、空调或牙科，点开它的广告落地页，按三项检查一遍：页面有没有重复广告里的承诺，有没有展示 Google 评分，需要往下翻几屏才能预约。各截一张图，再让 AI 根据截图写一版改进后的首屏文案。这一页对比图，可以成为你的第一份案例，也可以成为你和这位老板开口聊的理由。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-26/">← 2026 年 10 月 26 日 · 周一</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c49"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-27",
+      "headline": "Cal AI 给网红付多少钱：先算每千次播放能带来多少收入",
+      "oneLiner": "Cal AI 的 Jake 说，给网红定价不该照抄行业 CPM，要按每千次播放带来的收入（RPM）倒推，播放奖励在约 100 万次左右封顶。",
+      "who": "Jake 负责 AI 卡路里记录 App Cal AI 的网红营销，在 App Masters 播客里讲了他们的计算方法。",
+      "how": "跟网红谈跨平台发布的打包价，用「底价＋按播放量的奖励」结构付费，用 RPM 推算最多能付多少钱。",
+      "result": "Cal AI 把播放奖励封顶在约 100 万次附近。他的解释是，视频火了以后会传到更宽泛的人群，新增播放的价值随之下降。",
+      "tryThis": "用你已有的一两次网红合作数据，算出每千次播放带来的下载和收入，再定下次合作的底价和奖励上限。",
+      "caveat": "前提是能把下载和收入对应到具体视频。几百万条视频同时在传播时，归因本身就是难题。",
+      "body": "在 [App Masters 这期节目](https://podcasters.spotify.com/pod/show/app-marketing-podcast/episodes/The-Influencer-Marketing-Math-That-Made-Cal-AI-Profitable-e3r4hve)里，Jake 把问题从「该付多少 CPM」改成了「**这些播放带来的收入，允许我付多少**」。按这个思路，底价负责保底，奖励跟播放量挂钩，到一定量级就封顶，避免爆款视频把单次合作做亏。\n\n做付费 App 的小团队可以先跑几次小额合作，记录播放、下载和收入，用早期数据定出自己的 RPM，再整理成能重复执行的合作条款。节目还区分了投放广告、网红合作和 UGC 三种渠道。",
+      "sources": [
+        {
+          "label": "App Masters (Steve P. Young)",
+          "title": "The Influencer Marketing Math That Made Cal AI Profitable",
+          "url": "https://podcasters.spotify.com/pod/show/app-marketing-podcast/episodes/The-Influencer-Marketing-Math-That-Made-Cal-AI-Profitable-e3r4hve"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-27-04",
+      "issueDate": "2026-10-27",
+      "issueNumber": 18
+    },
+    {
+      "candidateIds": [
         "c8"
       ],
       "category": "app",

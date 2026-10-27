@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c4"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-26",
+      "headline": "Reddit 让设计师不碰 Git，做了约 700 个真数据原型",
+      "oneLiner": "Reddit 首席 UX 工程师 Blair Metcalf 搭了内部原型平台 Reddit Proto。他说团队已经做出约 700 个原型，UX 和产品团队全员都在用。",
+      "who": "Blair Metcalf 是 Reddit 首席 UX 工程师，在 How I AI 节目里演示了他做的内部工具 Reddit Proto。",
+      "how": "桌面应用在后台处理仓库、分支和脚手架，原型可以用真实的 Reddit 账号登录。设计师写的批注会连同对应组件和设计规范一起发给 Cursor。团队还自建了设计系统 MCP，把 token 和组件对应到生产代码。",
+      "result": "他说团队已做出约 700 个原型，UX 与产品团队采用率 100%。用得最好的人里，有没有工程背景的视觉设计师和动画师。",
+      "tryThis": "先把团队的组件库和设计规范整理成 AI 能读的文档或 MCP，再让 Cursor 按它改一个现有页面，检查它有没有用对组件。",
+      "caveat": "前提是公司已有成熟的设计系统，还有一位工程师专门搭建和维护这套平台。原型做多了以后，找到已有的原型也成了问题，Reddit 正在做可搜索的原型目录。",
+      "body": "[How I AI 本期](https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review)里，Blair Metcalf 演示了 Reddit Proto。设计师和 PM 不用碰 GitHub，就能做出接近线上产品的原型。原型可以用真实账号登录，信息流、搜索和社区里都是熟悉的内容，管理层评审时不用在脑子里替换占位数据。\n\n关键是**让 AI 带着上下文改代码**：每条批注都附上对应的组件、设计系统规范和用户意图，再交给 Cursor。设计系统 MCP 告诉 Cursor 该用哪个组件、长什么样、代码放在哪里。交接环节叫「feature capsule」：设计师提交 Figma 链接，系统把每个元素对应到生产组件，结合以往的工程反馈，生成带验收标准的 PRD。\n\n小团队照搬整套平台不现实，但其中两点可以先试：给 AI 的输入要包括组件和规范，交给工程的需求要写明验收标准。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-27-02",
+      "issueDate": "2026-10-27",
+      "issueNumber": 18
+    },
+    {
+      "candidateIds": [
+        "c43"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-27",
+      "headline": "断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug",
+      "oneLiner": "Thomson Reuters 首席工程师 Rittika Jindal 在一台断网的 Mac 上用 OpenCode 加本地的 Qwen3.5 9B 修好一个求和 bug。agent 只改了一行代码，五个测试全部通过。",
+      "who": "Rittika Jindal 是 Thomson Reuters 首席工程师，一年前搬到喜马拉雅山脚下，那里常断网、断电。",
+      "how": "Ollama 在本机运行 Qwen3.5 9B，OpenCode 作为终端里的 coding agent。配置里只启用本地模型，编辑文件和执行命令前都要确认，网页工具也被屏蔽。",
+      "result": "一个记账函数每次循环都覆盖总额，agent 把 total = 改成 total +=，五个测试全部通过，作者之后又自己跑了一遍测试核对。agent 起初想用 pytest，而项目用的是 unittest。",
+      "tryThis": "如果你常在飞机或火车上写代码，联网时先拉好模型和依赖，在一个有现成测试的小项目上试一次。提示词里写明准确的测试命令。",
+      "caveat": "9B 模型下载约 6.6 到 7.6 GB，作者引用的估算是需要 12 到 16 GB 内存，开 64k 上下文还要更多。离线时装不了新包，也查不了网页。演示用的是一个范围很小的 bug。",
+      "body": "Rittika Jindal 在 [Latent Space 的文章](https://latent.space/p/offline-coding/)里一步步记录了离线配置：联网时装好 OpenCode 1.19.4，用 Ollama 拉取 qwen3.5:9b，并让 Ollama 只监听本机、关闭云功能。然后关掉 Wi-Fi，先用 curl 确认本地服务还能响应、外部地址访问失败，再开始干活。\n\n她的做法里有两点值得照搬。第一，**先让测试失败，再让 agent 修**：三个用例失败给了 agent 明确的目标，也让人可以不看它的解释，直接用测试检查结果。第二，**权限确认是人工检查点**：agent 提议跑 pytest 时，她在确认环节发现命令不对。\n\n她也引用了一项研究：在云端模型上，OpenCode 每解决一个任务消耗的 token 约为 Goose 的 40 倍。本地运行不按 token 计费，但上下文长度会占用内存。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "Coding From the Himalayas With an Offline AI Agent",
+          "url": "https://latent.space/p/offline-coding/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-27-03",
+      "issueDate": "2026-10-27",
+      "issueNumber": 18
+    },
+    {
+      "candidateIds": [
         "c2"
       ],
       "category": "productivity",

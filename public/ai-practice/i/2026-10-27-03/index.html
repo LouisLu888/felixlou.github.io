@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug｜AI 实干派</title>
+  <meta name="description" content="Thomson Reuters 首席工程师 Rittika Jindal 在一台断网的 Mac 上用 OpenCode 加本地的 Qwen3.5 9B 修好一个求和 bug。agent 只改了一行代码，五个测试全部通过。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-27-03/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug｜AI 实干派">
+  <meta property="og:description" content="Thomson Reuters 首席工程师 Rittika Jindal 在一台断网的 Mac 上用 OpenCode 加本地的 Qwen3.5 9B 修好一个求和 bug。agent 只改了一行代码，五个测试全部通过。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-27-03/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-27.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug｜AI 实干派">
+  <meta name="twitter:description" content="Thomson Reuters 首席工程师 Rittika Jindal 在一台断网的 Mac 上用 OpenCode 加本地的 Qwen3.5 9B 修好一个求和 bug。agent 只改了一行代码，五个测试全部通过。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-27.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">17</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">6</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">7</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">8</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">10</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">20</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">9</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-27/">AI 实干派 018 · 2026 年 10 月 27 日 · 周二</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-10-27<span>·</span>US</div>
+        <h1>断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug</h1>
+        <p class="summary">Thomson Reuters 首席工程师 Rittika Jindal 在一台断网的 Mac 上用 OpenCode 加本地的 Qwen3.5 9B 修好一个求和 bug。agent 只改了一行代码，五个测试全部通过。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>Rittika Jindal 是 Thomson Reuters 首席工程师，一年前搬到喜马拉雅山脚下，那里常断网、断电。</dd><dt>怎么用</dt><dd>Ollama 在本机运行 Qwen3.5 9B，OpenCode 作为终端里的 coding agent。配置里只启用本地模型，编辑文件和执行命令前都要确认，网页工具也被屏蔽。</dd><dt>结果</dt><dd>一个记账函数每次循环都覆盖总额，agent 把 total = 改成 total +=，五个测试全部通过，作者之后又自己跑了一遍测试核对。agent 起初想用 pytest，而项目用的是 unittest。</dd><dt>你可以试</dt><dd>如果你常在飞机或火车上写代码，联网时先拉好模型和依赖，在一个有现成测试的小项目上试一次。提示词里写明准确的测试命令。</dd><dt>注意</dt><dd>9B 模型下载约 6.6 到 7.6 GB，作者引用的估算是需要 12 到 16 GB 内存，开 64k 上下文还要更多。离线时装不了新包，也查不了网页。演示用的是一个范围很小的 bug。</dd></dl>
+        <div class="body"><p>Rittika Jindal 在 <a href="https://latent.space/p/offline-coding/">Latent Space 的文章</a>里一步步记录了离线配置：联网时装好 OpenCode 1.19.4，用 Ollama 拉取 qwen3.5:9b，并让 Ollama 只监听本机、关闭云功能。然后关掉 Wi-Fi，先用 curl 确认本地服务还能响应、外部地址访问失败，再开始干活。</p><p>她的做法里有两点值得照搬。第一，<strong>先让测试失败，再让 agent 修</strong>：三个用例失败给了 agent 明确的目标，也让人可以不看它的解释，直接用测试检查结果。第二，<strong>权限确认是人工检查点</strong>：agent 提议跑 pytest 时，她在确认环节发现命令不对。</p><p>她也引用了一项研究：在云端模型上，OpenCode 每解决一个任务消耗的 token 约为 Goose 的 40 倍。本地运行不按 token 计费，但上下文长度会占用内存。</p></div>
+        <div class="sources">原文：<a href="https://latent.space/p/offline-coding/" target="_blank" rel="noopener" title="Coding From the Himalayas With an Offline AI Agent">Latent Space</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-27/">← 当期全部 5 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

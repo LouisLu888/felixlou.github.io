@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c48"
+      ],
+      "category": "consulting",
+      "kind": "本周演示",
+      "eventDate": "2026-10-26",
+      "headline": "给达拉斯水管工查网页漏洞，提案里一个 AI 都不提",
+      "oneLiner": "James Dickerson 用自建工具几分钟筛出 100 家达拉斯水管公司。他抽查了其中 5 家，有 4 家要往下翻三屏以上才能预约。他卖给这些公司的是预约单和来电，提案里不提 AI。",
+      "who": "James Dickerson（网名 Boring Marketer）在北卡 Charlotte 经营流动柴油车维修公司 Diesel Dudes，此前多年给本地商家做代理商，也是主持人 Greg Isenberg 的生意伙伴。",
+      "how": "他在 Claude Code 里搭了一套 MCP 工具（Boring Funnels），从 Google Maps、Yelp 等来源抓取商家信息，按评论数、技师人数和营收线索筛选客户。工具接着自动审查对方的广告和落地页，生成带对方品牌的提案。",
+      "result": "他说，约 1 分钟找到 100 家水管公司，约 15 分钟后提案和联系邮箱都已备好。他抽查的 5 家都在投 Google 广告，Google 评分在 4.8 到 4.9 之间。其中 4 家的落地页没有重复广告里的承诺，3 家没展示 Google 评分，4 家要翻三屏以上才能预约。",
+      "tryThis": "选一个客单价高的本地行业和一个城市，用 AI 把 20 家正在投广告的公司按上面三项检查一遍，整理成截图对比。然后免费给其中一家重做一个页面，换一份案例。",
+      "caveat": "他瞄准的是年营收 200 万到 2000 万美元的商家，取得这些老板的信任要花几个月。他自己试过让 AI 前台接电话，很多来电者问一句「这是不是个蠢 AI」就挂了。",
+      "body": "在 Startup Ideas Podcast) 里，James Dickerson 讲了给本地工种公司做服务的一套打法。他的判断是，这些公司已经在花钱买流量，问题出在落地页上。他估计，一家年营收 500 万美元的水管公司每年营销支出在 15 万到 25 万美元之间，而代理商做一个好的漏斗要收 2 万美元。会用 coding agent 的人，可以把这件事做得又快又好。\n\n他卖的是**预约单和来电**，不讲 AI，因为很多老板分不清 AI agent 和房产中介 agent。交付的是一组漏斗：79 美元的保养引流单、页面上直接报价、「修还是换」测评问卷，以及老板出镜讲解 2 万到 3 万美元的换机决策。不同搜索词的广告对应不同的页面。他说大多数公司把所有流量都导到同一个页面。\n\n获客用 Chet Holmes 的 **Dream 100**：先列出 100 家目标公司，让 AI 去读评论、爬网站、查老板背景，然后每周给这些人提供有用的内容。他还会寄「lumpy mail」，比如一个盒子里装一枚黄铜管件，附上已经替对方重做好的页面链接。他强调这要做很久才见效，第一单可以用一次免费搭建换一份案例。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "How to sell AI to Main Street (Full Playbook)",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=How%20to%20sell%20AI%20to%20Main%20Street%20(Full%20Playbook)"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-27-01",
+      "issueDate": "2026-10-27",
+      "issueNumber": 18
+    },
+    {
+      "candidateIds": [
         "c35"
       ],
       "category": "consulting",

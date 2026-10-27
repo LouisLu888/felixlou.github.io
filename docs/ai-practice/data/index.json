@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-27T05:21:18.215Z",
+  "updatedAt": "2026-10-27T15:16:57.633Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 16
+      "count": 17
     },
     {
       "id": "consulting",
       "name": "AI 咨询",
       "en": "AI consulting",
       "desc": "找客户、诊断业务、界定交付、培训、实施与维护",
-      "count": 5
+      "count": 6
     },
     {
       "id": "content",
@@ -34,14 +34,14 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 9
+      "count": 10
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 18
+      "count": 20
     },
     {
       "id": "life",
@@ -52,6 +52,43 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-10-27",
+      "number": 18,
+      "title": "给水管工修网页漏洞，Reddit 内部做了 700 个 AI 原型",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 8,
+      "itemCount": 5,
+      "categoryCounts": {
+        "consulting": 1,
+        "productivity": 2,
+        "app": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "consulting",
+          "headline": "给达拉斯水管工查网页漏洞，提案里一个 AI 都不提"
+        },
+        {
+          "category": "productivity",
+          "headline": "Reddit 让设计师不碰 Git，做了约 700 个真数据原型"
+        },
+        {
+          "category": "productivity",
+          "headline": "断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug"
+        },
+        {
+          "category": "app",
+          "headline": "Cal AI 给网红付多少钱：先算每千次播放能带来多少收入"
+        },
+        {
+          "category": "perspective",
+          "headline": "Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%"
+        }
+      ]
+    },
     {
       "date": "2026-10-26",
       "number": 17,
