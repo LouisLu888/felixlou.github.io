@@ -36,7 +36,7 @@ const Services: React.FC = () => {
           const section = (entry.target as HTMLElement).dataset.track;
           if (entry.isIntersecting && section && !seen.has(section)) {
             seen.add(section);
-            track('services_section_view', { section });
+            track('Section Viewed', { section });
           }
         });
       },
@@ -85,7 +85,7 @@ const Services: React.FC = () => {
       document.body.removeChild(input);
     }
     // If both fail, the ID stays visible on the button to copy by hand.
-    track('services_wechat_copy', { result: ok ? 'copied' : 'failed' });
+    track('Contact Initiated', { method: 'wechat_id_copy', location: 'book', result: ok ? 'success' : 'failed' });
     if (ok) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
@@ -116,7 +116,7 @@ const Services: React.FC = () => {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#book"
-              onClick={() => track('services_book_click', { location: 'hero' })}
+              onClick={() => track('Booking CTA Clicked', { location: 'hero' })}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-amber-700 text-white font-semibold hover:bg-amber-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700"
             >
               {t('services.ctaBook')}
@@ -124,7 +124,7 @@ const Services: React.FC = () => {
             </a>
             <Link
               to={CASE_URL}
-              onClick={() => track('services_case_click', { location: 'hero' })}
+              onClick={() => track('CTA Clicked', { cta_id: 'read_case', location: 'hero', destination_path: CASE_URL })}
               className="inline-flex items-center px-6 py-3 rounded-lg border border-stone-300 text-stone-800 font-semibold hover:border-stone-900 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700"
             >
               {t('services.ctaCase')}
@@ -201,7 +201,7 @@ const Services: React.FC = () => {
           ))}
           <Link
             to={CASE_URL}
-            onClick={() => track('services_case_click', { location: 'testimonials' })}
+            onClick={() => track('CTA Clicked', { cta_id: 'read_case', location: 'testimonials', destination_path: CASE_URL })}
             className="group p-7 sm:p-8 rounded-2xl ring-1 ring-stone-200 hover:ring-stone-400 transition-shadow flex flex-col"
           >
             <p className="text-sm font-semibold text-amber-700">{t('services.caseCardTitle')}</p>
@@ -305,7 +305,7 @@ const Services: React.FC = () => {
                 {key === 'cred4' && (
                   <a
                     href={DECK_URL}
-                    onClick={() => track('services_deck_click')}
+                    onClick={() => track('CTA Clicked', { cta_id: 'view_deck', location: 'why_me', destination_path: DECK_URL })}
                     className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-amber-300 hover:text-amber-200"
                   >
                     {t('services.cred4Link')}
@@ -393,7 +393,7 @@ const Services: React.FC = () => {
               <details
                 key={key}
                 className="group py-5"
-                onToggle={(e) => e.currentTarget.open && track('services_faq_open', { question: key })}
+                onToggle={(e) => e.currentTarget.open && track('FAQ Opened', { question_id: key, question_text: t(`services.${key}Q`) })}
               >
                 <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-stone-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700 rounded">
                   {t(`services.${key}Q`)}
@@ -431,7 +431,7 @@ const Services: React.FC = () => {
                 qrPressStart.current = Date.now();
               }}
               onTouchEnd={() => {
-                if (Date.now() - qrPressStart.current > 450) track('services_qr_longpress');
+                if (Date.now() - qrPressStart.current > 450) track('Contact Initiated', { method: 'wechat_qr_longpress', location: 'book', result: 'success' });
               }}
               src={WECHAT.qrImage}
               alt={t('wechat.alt')}
@@ -453,7 +453,7 @@ const Services: React.FC = () => {
       >
         <a
           href="#book"
-          onClick={() => track('services_book_click', { location: 'sticky_bar' })}
+          onClick={() => track('Booking CTA Clicked', { location: 'sticky_bar' })}
           className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-amber-700 text-white font-semibold"
         >
           {t('services.stickyCta')}

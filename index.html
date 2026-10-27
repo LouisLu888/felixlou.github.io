@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-spa>
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -54,6 +54,9 @@
       "workLocation": "Remote"
     }
     </script>
+    <!-- Analytics (GA4 + Amplitude), shared with the static pages; see analytics/tracking-plan.md -->
+    <script src="/vendor/amplitude-min.js" defer></script>
+    <script src="/analytics.js" defer></script>
   </head>
   <body>
     <div id="root"></div>

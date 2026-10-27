@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { track } from '../utils/analytics';
 import { useLanguage } from '../contexts/LanguageContext';
 import { WECHAT, XIAOHONGSHU } from '../config/siteProfile';
 
@@ -8,6 +9,14 @@ type WeChatCTAProps = {
 
 const WeChatCTA: React.FC<WeChatCTAProps> = ({ className = '' }) => {
   const { t } = useLanguage();
+  const pressStart = useRef(0);
+
+  // WeChat recognises QR codes on long-press; a long touch on a code is the closest signal we get.
+  const onLongPress = (key: string) => {
+    if (Date.now() - pressStart.current < 450) return;
+    if (key === 'personal') track('Contact Initiated', { method: 'wechat_qr_longpress', location: 'wechat_cta', result: 'success' });
+    else track('CTA Clicked', { cta_id: key === 'mp' ? 'follow_wechat_mp' : 'follow_xiaohongshu', location: 'wechat_cta' });
+  };
 
   const panels = [
     {
@@ -43,6 +52,10 @@ const WeChatCTA: React.FC<WeChatCTAProps> = ({ className = '' }) => {
           <div key={panel.key} className="flex flex-col items-center text-center gap-3">
             <div className="p-2 bg-white border border-emerald-100 rounded-lg shadow-sm">
               <img
+                onTouchStart={() => {
+                  pressStart.current = Date.now();
+                }}
+                onTouchEnd={() => onLongPress(panel.key)}
                 src={panel.src}
                 alt={panel.alt}
                 width={144}

@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Navigation from './components/Navigation';
-import { initAnalytics, trackPageView } from './utils/analytics';
+import { trackPageView } from './utils/analytics';
 
 const Home = lazy(() => import('./components/Home'));
 const BlogList = lazy(() => import('./components/BlogList'));
@@ -15,7 +15,6 @@ const Products = lazy(() => import('./components/Products'));
 function PageViewTracker() {
   const { pathname } = useLocation();
   useEffect(() => {
-    initAnalytics();
     const timer = setTimeout(() => trackPageView(pathname), 600);
     return () => clearTimeout(timer);
   }, [pathname]);

@@ -66,7 +66,7 @@ const Navigation: React.FC = () => {
                         <a href="/decks/" className={linkClass('/decks')}>
                           {t('nav.talks')}
                         </a>
-                        <Link to="/services" className={linkClass('/services')}>
+                        <Link to="/services" data-track-event="Booking CTA Clicked" data-track-location="nav" className={linkClass('/services')}>
                           {t('nav.services')}
                         </Link>
                         <Link to="/products" className={linkClass('/products')}>
@@ -132,7 +132,7 @@ const Navigation: React.FC = () => {
                   <a href="/decks/" className={`block py-2 ${linkClass('/decks')}`}>
                     {t('nav.talks')}
                   </a>
-                  <Link to="/services" className={`block py-2 ${linkClass('/services')}`}>
+                  <Link to="/services" data-track-event="Booking CTA Clicked" data-track-location="nav_mobile" className={`block py-2 ${linkClass('/services')}`}>
                     {t('nav.services')}
                   </Link>
                   <Link to="/products" className={`block py-2 ${linkClass('/products')}`}>

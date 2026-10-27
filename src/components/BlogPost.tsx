@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
@@ -9,6 +9,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import BlogImage from './BlogImage';
 import SubscribeCTA from './SubscribeCTA';
 import WeChatCTA from './WeChatCTA';
+import { track } from '../utils/analytics';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,6 +19,26 @@ const BlogPost: React.FC = () => {
   const [adjacentPosts, setAdjacentPosts] = useState<{ prev: BlogPostMeta | null; next: BlogPostMeta | null }>({ prev: null, next: null });
   const [seriesPosts, setSeriesPosts] = useState<{ prev: BlogPostMeta | null; next: BlogPostMeta | null }>({ prev: null, next: null });
   const { t } = useLanguage();
+  const bodyRef = useRef<HTMLDivElement>(null);
+
+  // Article Read at 50% and 90% of the post body, once each per post.
+  useEffect(() => {
+    if (!post || !id) return;
+    const pending = [50, 90];
+    const onScroll = () => {
+      const body = bodyRef.current;
+      if (!body) return;
+      const rect = body.getBoundingClientRect();
+      const read = ((window.innerHeight - rect.top) / rect.height) * 100;
+      while (pending.length && read >= pending[0]) {
+        const depth = pending.shift()!;
+        track('Article Read', { post_slug: id, post_category: post.category || '', depth });
+      }
+      if (!pending.length) window.removeEventListener('scroll', onScroll);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [post, id]);
   
   // Comment state
   const [comments, setComments] = useState<Comment[]>([]);
@@ -145,7 +166,7 @@ const BlogPost: React.FC = () => {
         </header>
 
         {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none
+        <div ref={bodyRef} className="prose prose-lg prose-slate max-w-none
                        prose-headings:text-slate-800 prose-headings:font-bold
                        prose-p:text-slate-600 prose-p:leading-relaxed
                        prose-ul:text-slate-600 prose-li:text-slate-600
@@ -207,6 +228,7 @@ const BlogPost: React.FC = () => {
               <div className="flex space-x-4 mt-3">
                 <a 
                   href="https://www.linkedin.com/in/jiabinlu/" 
+                  data-track-event="Contact Initiated" data-track-method="linkedin" data-track-location="author_box" data-track-result="success"
                   className="text-amber-600 hover:text-amber-700 text-sm font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -215,6 +237,7 @@ const BlogPost: React.FC = () => {
                 </a>
                 <a 
                   href="https://x.com/jiabinlu123" 
+                  data-track-event="Contact Initiated" data-track-method="x" data-track-location="author_box" data-track-result="success"
                   className="text-amber-600 hover:text-amber-700 text-sm font-medium"
                   target="_blank"
                   rel="noopener noreferrer"

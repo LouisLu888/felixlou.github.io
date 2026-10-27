@@ -84,13 +84,13 @@ const Home: React.FC = () => {
             </li>
           </ul>
           <div className="flex items-center gap-4 pt-1">
-            <a href={`mailto:${EMAIL}`} className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="Email">
+            <a href={`mailto:${EMAIL}`} data-track-event="Contact Initiated" data-track-method="email" data-track-location="home_hero" data-track-result="success" className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="Email">
               <Mail className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com/in/jiabinlu/" className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/jiabinlu/" data-track-event="Contact Initiated" data-track-method="linkedin" data-track-location="home_hero" data-track-result="success" className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="LinkedIn">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="https://x.com/jiabinlu123" className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="X">
+            <a href="https://x.com/jiabinlu123" data-track-event="Contact Initiated" data-track-method="x" data-track-location="home_hero" data-track-result="success" className="text-slate-500 hover:text-amber-600 transition-colors" aria-label="X">
               <Twitter className="w-5 h-5" />
             </a>
           </div>

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { getTranslation } from '../locales';
+import { track } from '../utils/analytics';
 
 export type Language = 'en' | 'zh';
 
@@ -40,7 +41,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     }
   }, []);
 
+  // Keep <html lang> in sync: screen readers use it, and analytics reads it for the language property.
+  useEffect(() => {
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+    window.siteAnalytics?.setUser({ language });
+  }, [language]);
+
   const handleSetLanguage = (lang: Language) => {
+    if (lang !== language) track('Language Switched', { from: language, to: lang });
     setLanguage(lang);
     localStorage.setItem('language', lang);
   };

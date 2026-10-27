@@ -73,6 +73,8 @@ function shell({ title, description: fullDescription, path, image = DEFAULT_OG_I
   <link rel="icon" href="${BASE_PATH}logo.svg" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="${BRAND}" href="${BASE_PATH}feed.xml">
   <link rel="stylesheet" href="${BASE_PATH}styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
 ${headExtra}</head>
 <body>
   <header class="site-header">
@@ -108,7 +110,7 @@ ${body}
   </main>
   <footer class="wrap site-footer">
     ${footerForm ? subscribeForm() : ""}
-    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="${BASE_PATH}feed.xml">RSS</a></p>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="${BASE_PATH}feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
   </footer>
 </body>
 </html>
