@@ -1,5 +1,84 @@
 [
   {
+    "date": "2026-10-28",
+    "title": "一个习惯打卡 App 靠投广告做到月入一万美元，一条 CEO 不喜欢的视频让 ARR 涨了 12 倍",
+    "summary": "一个普通习惯打卡 App，88 天靠广告做到月入一万美元；在巴西卖英语课，Praktika 卖的是一份更好的工作；Simon Willison：现在用 AI 做出好玩的游戏，难的只剩创意；Anthropic 取消代码面试，Amazon 说「AI 帮不上」也算成果",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-28/",
+    "items": [
+      {
+        "headline": "一个普通习惯打卡 App，88 天靠广告做到月入一万美元",
+        "sources": [
+          {
+            "label": "Starter Story Podcast",
+            "title": "I Built a $10K/Month App in 88 Days",
+            "url": "https://www.youtube.com/@starterstory/search?query=I%20Built%20a%20%2410K%2FMonth%20App%20in%2088%20Days"
+          }
+        ]
+      },
+      {
+        "headline": "在巴西卖英语课，Praktika 卖的是一份更好的工作",
+        "sources": [
+          {
+            "label": "Sub Club (RevenueCat)",
+            "title": "How Praktika Built a Profitable $50M ARR AI Business — Adam Turaev, Praktika",
+            "url": "https://subclub.com/episode/how-praktika-built-a-profitable-50m-arr-ai-business-adam-turaev-praktika"
+          }
+        ]
+      },
+      {
+        "headline": "Simon Willison：现在用 AI 做出好玩的游戏，难的只剩创意",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "The October inflection point for vibe game development",
+            "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/"
+          }
+        ]
+      },
+      {
+        "headline": "Anthropic 取消代码面试，Amazon 说「AI 帮不上」也算成果",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "[AINews] Anthropic ends Coding Interviews: \"Hunger beats tenure\"",
+            "url": "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/"
+          },
+          {
+            "label": "Simon Willison",
+            "title": "Quoting Terk Terkowitz",
+            "url": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "一个普通习惯打卡 App，88 天靠广告做到月入一万美元"
+      },
+      {
+        "start": 195,
+        "title": "在巴西卖英语课，Praktika 卖的是一份更好的工作"
+      },
+      {
+        "start": 281,
+        "title": "Simon Willison：现在用 AI 做出好玩的游戏，难的只剩创意"
+      },
+      {
+        "start": 365,
+        "title": "Anthropic 取消代码面试，Amazon 说「AI 帮不上」也算成果"
+      },
+      {
+        "start": 434,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 489,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-10-28.mp3",
+    "audioBytes": 2937117,
+    "publishedAt": "2026-10-28T22:46:39.127Z"
+  },
+  {
     "date": "2026-10-27",
     "title": "给水管工修网页漏洞，Reddit 内部做了 700 个 AI 原型",
     "summary": "给达拉斯水管工查网页漏洞，提案里一个 AI 都不提；Reddit 让设计师不碰 Git，做了约 700 个真数据原型；断网的喜马拉雅山脚下，笔记本上的本地 agent 修好了 bug；Cal AI 给网红付多少钱：先算每千次播放能带来多少收入；Anthropic 招股书：财富 500 强在它身上的花费不到总支出的 0.1%",
