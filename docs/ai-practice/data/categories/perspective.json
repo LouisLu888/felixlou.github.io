@@ -8,6 +8,66 @@
   "items": [
     {
       "candidateIds": [
+        "c1"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-28",
+      "headline": "Simon Willison：现在用 AI 做出好玩的游戏，难的只剩创意",
+      "oneLiner": "Simon Willison 几周内不看一行代码，做出四个自己真心爱玩的浏览器游戏。他认为 2026 年 10 月是 AI 做游戏的拐点。",
+      "who": "开发者 Simon Willison 在个人博客上写的判断，依据是他自己最近做的几个游戏项目，以及在 Foo Camp 上和其他人的交流。",
+      "how": "他认为 Claude Opus 5.5 在 3D 建模、音乐生成，尤其是游戏设计上进步明显。以前模型能做出看着像游戏的东西，现在能做出好玩的。接下来难的是想出新颖、只有借助 AI 才会出现的游戏概念。",
+      "result": "Tree Appreciator 在普通 Claude 对话里一次生成，没有修改。RPG《Emberwick》经过几轮逐步加码的提示和试玩修 bug，做成了一个约 15 分钟的完整故事。即时战略游戏 Battle Drones 在他让模型「Make it a LOT more fun」之后变好玩了。",
+      "tryThis": "想做一个小游戏或交互小工具，可以要求用 three.js 写，先做最小原型，再逐轮加需求，最后让模型「让它更好玩」，每轮都自己试玩。",
+      "caveat": "复杂玩法要靠大量试玩修逻辑问题，比如任务角色被剧情带到了别处。南瓜农场游戏用 Ultracode 跑了近两天、消耗几百万 token，玩法他至今不满意。",
+      "body": "Simon 在[博客](https://simonwillison.net/2026/Oct/28/vibe-game-development/)里列了四个项目，全部用 HTML 和 JavaScript 写，在浏览器里运行。他的经验是**让模型用 three.js**：Claude 没有图像生成能力，但能直接写出效果很好的彩色 3D 模型。Emberwick 的提示是一步步加码的：先做村庄引擎，再加地形、地下室和山洞里睡着的巨魔，最后才说「做成真正的游戏，加剧情和魔法系统，做得很好」。他说自己的创意输入几乎只有「一个奇幻村庄，山洞里睡着一只巨魔」，打通结局时还被打动了。\n\n同一组提示他也交给 GPT-6 Pro 跑了一遍，画面不错，但他觉得玩起来差很多。他认为 GPT-6 Astra 的「好玩感」还不如 Opus 5.5，并预计 OpenAI 年底前能赶上，这是他的个人印象，没有做系统测试。Battle Drones 以 Apache 2.0 开源的第二天，就有人 fork 出一个蒸汽朋克版本。对想做内容或小产品的人来说，制作越来越便宜，概念是否新颖、有没有个人特色变得更关键。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "The October inflection point for vibe game development",
+          "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-28-03",
+      "issueDate": "2026-10-28",
+      "issueNumber": 19
+    },
+    {
+      "candidateIds": [
+        "c47",
+        "c2"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-28",
+      "headline": "Anthropic 取消代码面试，Amazon 说「AI 帮不上」也算成果",
+      "oneLiner": "Anthropic 招聘经理 Felix Reiseberg 说他这个月停掉了传统代码面试；Amazon 工程负责人 Terk Terkowitz 说，能讲清 AI 在哪儿帮不上忙，本身就是判断力。",
+      "who": "两位都在大公司负责工程团队或招聘：Felix Reiseberg 是 Anthropic 的招聘经理，Terk Terkowitz 来自 Amazon 工程管理层。",
+      "how": "Felix 认为 Claude 写 React 小题已经比人强，再考这个就像考汇编一样没有意义。他看重的是能不能做出业务影响。Terk 认为，记录 AI 在哪里帮不上忙并拿出来分享，和用好 AI 一样体现判断力。",
+      "result": "Felix 的依据是他观察到的情况：团队里影响最大的人，跟代码面试成绩好不好没有关系；他也见过小组和个人跳过写 PRD、争取资源的流程，直接用周末做出原型。",
+      "tryThis": "挑一个能明显推进团队目标的大胆想法，周末用 AI 做出一个只验证一个点的原型。如果某项工作 AI 确实帮不上，把原因写下来交给经理。",
+      "caveat": "这是两家公司管理者的个人立场，放到看重流程和资历的团队里不一定适用。",
+      "body": "[Latent Space 转述](https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/)了 Felix 给初级工程师的建议，主题是「Hunger beats tenure」：**优先做有业务影响的事，而不是清 backlog**；提几个一旦成功就能大幅推进组织目标的激进想法；用一个周末做出能跑的原型；一个原型只验证一个点，他见过很多新人把三个好点子埋在二十个坏点子里；做面向用户的产品时，新人对用户的体感是优势。\n\n同一天 Simon Willison [引用](https://simonwillison.net/2026/Oct/28/terk-terkowitz/)了 Amazon 工程管理层 Terk Terkowitz 的话：如果你的工作没法从现在的 AI 工具里获益，那是一个发现，不是失败，应该记录原因、分享给同行、带给经理。\n\n两种说法可以放在一起用：用原型证明 AI 在哪里有用，用书面记录说明它在哪里没用，这两样都能拿去和经理谈。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "[AINews] Anthropic ends Coding Interviews: \"Hunger beats tenure\"",
+          "url": "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/"
+        },
+        {
+          "label": "Simon Willison",
+          "title": "Quoting Terk Terkowitz",
+          "url": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-28-04",
+      "issueDate": "2026-10-28",
+      "issueNumber": 19
+    },
+    {
+      "candidateIds": [
         "c36",
         "c37"
       ],

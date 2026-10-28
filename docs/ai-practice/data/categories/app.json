@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c10"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-25",
+      "headline": "一个普通习惯打卡 App，88 天靠广告做到月入一万美元",
+      "oneLiner": "前大厂工程师 Frederick James 做了一个习惯打卡 App，他说上线约三个月月收入最高约 1.3 万美元、现在约 1 万美元。增长全靠 Apple 广告和 TikTok 广告。",
+      "who": "Frederick James 在伦敦大厂做了五年软件开发，度假时做了这个健康类习惯打卡 App，并在 X 上公开记录过程。",
+      "how": "先在 Figma 画界面草图、数据结构图和架构图，再交给 ChatGPT 写代码。App 里的素材是从 Pinterest 找参考、用 GPT Image 重做的。投放数据每天导出给 AI agent，让它挑出表现最好的广告。",
+      "result": "他展示的后台：近 90 天收入约 2.5 万美元，MRR 约 8000 美元，下载到付费转化率约 7%，退款率 0.7%。只靠广告的利润率约 30%。",
+      "tryThis": "已有上架 App 的话，可以先用 Apple 广告送的 100 美元额度，只投竞品名的精确关键词，配好 RevenueCat 归因后连续看几天数据。",
+      "caveat": "前几周不赚钱，他说第一次做可能亏掉约 1000 美元。只有广告一个渠道时利润薄，App 也难卖出去，账号一旦被封收入就没了。",
+      "body": "Frederick 在 [Starter Story 访谈](https://www.youtube.com/@starterstory/search?query=I%20Built%20a%20%2410K%2FMonth%20App%20in%2088%20Days)里说，这个 App 本身没什么特别，卖点只是设计做得精致。点子来自 X 上一篇拆解别人 App 引导流程的帖子：他觉得自己能做一个更好看、功能更全的版本。代码由 ChatGPT 写（每月 100 美元），后端是 Cloudflare 的 R2、D1 和 Workers，订阅和付费墙用 RevenueCat。\n\n从 0 到月入 5000 美元靠的是 Apple 广告。**关掉 search match，只投竞品名称的精确关键词**，出价先用 Apple 推荐的最高价，等两天再调。5000 到 1 万美元靠 TikTok：他把同领域自然爆火的视频按五种形式各重拍一条，每条投 50 美元，留下效果好的；预算每隔几天最多加 20%。转折点是改用**目标获客成本（target CPA）**出价，日消耗从约 200 美元涨到约 1000 美元，大约一周收入翻倍。\n\n他每天早上算一遍账：每个付费用户带来的实际收入，减去获客成本、Apple 抽成（加入小企业计划后是 15%）、RevenueCat 的 1%，欧盟订单还要再减约 20% 增值税。他的建议是首笔交易就要争取回本，再判断自己愿意亏多少去找到能跑出来的广告。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "I Built a $10K/Month App in 88 Days",
+          "url": "https://www.youtube.com/@starterstory/search?query=I%20Built%20a%20%2410K%2FMonth%20App%20in%2088%20Days"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-28-01",
+      "issueDate": "2026-10-28",
+      "issueNumber": 19
+    },
+    {
+      "candidateIds": [
+        "c12"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-28",
+      "headline": "在巴西卖英语课，Praktika 卖的是一份更好的工作",
+      "oneLiner": "AI 语言教练 App Praktika 联创 Adam Turaev 说，一条 CEO 不喜欢的达人视频在三个平台拿到 3000 万播放，一个月内把 ARR 从 100 万美元带到 1200 万美元。",
+      "who": "Adam Turaev 是 Praktika 联创兼 CEO。他们之前做企业聊天机器人，后来转做 AI 英语口语教练。节目称这个 App 有超过 3000 万学习者。",
+      "how": "产品用动画 AI 形象当老师，减轻开口的紧张，并按 CEFR 给用户定级。增长上找粉丝不到 5000、播放量却有几千万的小达人，内容随他们发挥，跑出来的视频再交给投放团队复制。",
+      "result": "他说一年 100 美元的订阅在购买力不强的巴西卖了出去，靠的是「找到更好的工作」这个说法。达人项目现在有 100 多位创作者，每位国家教练轮流带 20 到 30 人。",
+      "tryThis": "如果你的 App 能帮用户赚钱或升职，可以把卖点从「学到什么」改成「能换来什么结果」，在一个目标市场先测这版文案。",
+      "caveat": "增长内容可以出格，产品本身不行。会骂人的 AI 形象在投放端火了，用户进到 App 里却不接受，团队后来把产品规则写成了一页纸。",
+      "body": "Adam 在 [Sub Club 节目](https://subclub.com/episode/how-praktika-built-a-profitable-50m-arr-ai-business-adam-turaev-praktika)里讲了选市场的过程：英语普及度报告显示巴西排在最低一档，而英语对当地人收入的提升很大。他们的顾虑是巴西人很少为消费订阅付费，所以**卖点从英语换成了更好的工作**，「比真人家教便宜 50 倍」这句文案也是从巴西市场开始用的。\n\n达人这条线有几个具体做法：按播放量而不是粉丝数筛人，因为粉丝少、播放高说明算法已经选中了他们，价格还没涨上去；不告诉达人该怎么拍；达人项目和付费投放分开运营，达人负责不断想出新角度，投放负责复制爆款；项目负责人和各国教练都是以前拍视频的人。\n\n他们在 LLM 还不成熟时就开始做：2022 年的网页版用 Synthesia 做形象，对话分支由文案人员手写了几百棵树。那时录下的用户访谈，内容和今天用户说的几乎一样。",
+      "sources": [
+        {
+          "label": "Sub Club (RevenueCat)",
+          "title": "How Praktika Built a Profitable $50M ARR AI Business — Adam Turaev, Praktika",
+          "url": "https://subclub.com/episode/how-praktika-built-a-profitable-50m-arr-ai-business-adam-turaev-praktika"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-28-02",
+      "issueDate": "2026-10-28",
+      "issueNumber": 19
+    },
+    {
+      "candidateIds": [
         "c49"
       ],
       "category": "app",

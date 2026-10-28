@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-27T15:16:57.633Z",
+  "updatedAt": "2026-10-28T14:47:43.601Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 17
+      "count": 19
     },
     {
       "id": "consulting",
@@ -34,7 +34,7 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 10
+      "count": 12
     },
     {
       "id": "productivity",
@@ -52,6 +52,37 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-10-28",
+      "number": 19,
+      "title": "一个习惯打卡 App 靠投广告做到月入一万美元，一条 CEO 不喜欢的视频让 ARR 涨了 12 倍",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 7,
+      "itemCount": 4,
+      "categoryCounts": {
+        "app": 2,
+        "perspective": 2
+      },
+      "headlines": [
+        {
+          "category": "app",
+          "headline": "一个普通习惯打卡 App，88 天靠广告做到月入一万美元"
+        },
+        {
+          "category": "app",
+          "headline": "在巴西卖英语课，Praktika 卖的是一份更好的工作"
+        },
+        {
+          "category": "perspective",
+          "headline": "Simon Willison：现在用 AI 做出好玩的游戏，难的只剩创意"
+        },
+        {
+          "category": "perspective",
+          "headline": "Anthropic 取消代码面试，Amazon 说「AI 帮不上」也算成果"
+        }
+      ]
+    },
     {
       "date": "2026-10-27",
       "number": 18,
