@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-10-29",
+    "title": "一份幻灯片背后调用 200 次模型，去健身房前先让 AI 教练核对一遍计划",
+    "summary": "Gamma 拆解：一份幻灯片背后调用 200 次模型；去健身房前，先让三个 AI 教练核对训练计划；艾美奖编剧的做法：先花两天清空自己，再打开 AI；犹他州 34 名政府开发者试用 Claude Code 四周；陈然：二十人开发团队压到一两人之后，他怎么看裁员窗口",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-29/",
+    "items": [
+      {
+        "headline": "Gamma 拆解：一份幻灯片背后调用 200 次模型",
+        "sources": [
+          {
+            "label": "Startup Ideas Podcast (Greg Isenberg)",
+            "title": "Stop building AI wrappers. Start building agent harnesses.",
+            "url": "https://www.youtube.com/@GregIsenberg/search?query=Stop%20building%20AI%20wrappers.%20Start%20building%20agent%20harnesses."
+          }
+        ]
+      },
+      {
+        "headline": "去健身房前，先让三个 AI 教练核对训练计划",
+        "sources": [
+          {
+            "label": "少数派",
+            "title": "让 Agent 读懂你的身体：数据处理篇",
+            "url": "https://sspai.com/prime/story/how-to-analyze-health-data-with-agent"
+          }
+        ]
+      },
+      {
+        "headline": "艾美奖编剧的做法：先花两天清空自己，再打开 AI",
+        "sources": [
+          {
+            "label": "The Every Podcast (AI & I)",
+            "title": "Can You Use AI To Make Good Art? — With Fred Graver",
+            "url": "https://www.youtube.com/@EveryInc/search?query=Can%20You%20Use%20AI%20To%20Make%20Good%20Art%3F%20%E2%80%94%20With%20Fred%20Graver"
+          }
+        ]
+      },
+      {
+        "headline": "犹他州 34 名政府开发者试用 Claude Code 四周",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Boris Cherny: Utah gave Claude Code to 34 developers across 10 state agencies. 80% had a worki",
+            "url": "https://x.com/bcherny/status/2115491259381072269"
+          }
+        ]
+      },
+      {
+        "headline": "陈然：二十人开发团队压到一两人之后，他怎么看裁员窗口",
+        "sources": [
+          {
+            "label": "陈然 ranchen.org",
+            "title": "2026，企业最后的裁员窗口",
+            "url": "https://ranchen.org/content/20261028-rancheng-article-ai-transformation-layoff-window"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Gamma 拆解：一份幻灯片背后调用 200 次模型"
+      },
+      {
+        "start": 140,
+        "title": "去健身房前，先让三个 AI 教练核对训练计划"
+      },
+      {
+        "start": 241,
+        "title": "艾美奖编剧的做法：先花两天清空自己，再打开 AI"
+      },
+      {
+        "start": 335,
+        "title": "犹他州 34 名政府开发者试用 Claude Code 四周"
+      },
+      {
+        "start": 402,
+        "title": "陈然：二十人开发团队压到一两人之后，他怎么看裁员窗口"
+      },
+      {
+        "start": 494,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 545,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-10-29.mp3",
+    "audioBytes": 3272061,
+    "publishedAt": "2026-10-29T22:45:56.524Z"
+  },
+  {
     "date": "2026-10-28",
     "title": "一个习惯打卡 App 靠投广告做到月入一万美元，一条 CEO 不喜欢的视频让 ARR 涨了 12 倍",
     "summary": "一个普通习惯打卡 App，88 天靠广告做到月入一万美元；在巴西卖英语课，Praktika 卖的是一份更好的工作；Simon Willison：现在用 AI 做出好玩的游戏，难的只剩创意；Anthropic 取消代码面试，Amazon 说「AI 帮不上」也算成果",
