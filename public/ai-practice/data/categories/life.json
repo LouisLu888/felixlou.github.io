@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c64"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-29",
+      "headline": "去健身房前，先让三个 AI 教练核对训练计划",
+      "oneLiner": "少数派作者叁思 Santh 把 Apple Watch、Oura 和训记的数据接进 NAS 上的 SQLite，每次训练前由两个「教练」出计划、一个「循证教练」核查，他本人确认后再写回 App。",
+      "who": "少数派作者叁思 Santh，平时做抗阻和有氧训练，想让 AI 根据自己的身体数据安排每次训练。",
+      "how": "通过 Freddy 和训记的 API，用 Python 脚本定时把数据拉进本地 SQLite；体脂和训练感受用文字或图片发给 Agent 录入；再给 Agent 定制一个 Skill，规定它怎样分析、怎样给建议。",
+      "result": "他发现直接让 Claude「详细分析」，只能得到好看但没用的看板。改成定制 Skill 后，每次训练形成「出计划→核查→本人确认→练完备注余量→回传」的闭环。",
+      "tryThis": "先导出一段时间的训练和睡眠数据，用 grill-me 这类会反过来追问的 Skill 把需求问清楚，再写自己的分析规则。",
+      "caveat": "他说这套方法只用于辅助日常训练，不能拿来排查症状或处理医疗问题。搭建需要 NAS、API 和写脚本的能力。",
+      "body": "叁思 Santh 在[少数派](https://sspai.com/prime/story/how-to-analyze-health-data-with-agent)记录了数据处理这一步。交给 AI 的是运动、睡眠、恢复数据和训练日志，全部存在家里 NAS 上的本地数据库，只能从局域网访问。计划由他本人确认后才写进训记。\n\n他比较了十个社区 Skill，Star 最多的只有 200 多个，而且多数偏耐力训练，最后决定自己定制，把别人的好做法拿过来用：**缺数据时在报告里注明，用 1 到 5 分的主观精力评分替补；HRV 对比本人近 28 天的均值；至少 10 晚数据才算相关性；统计交给脚本算。**\n\n他强调最难的一步是把需求说清楚。Agent 第一轮就问他：计算和决策分别由谁来做？他的答案是统计数字交给代码。如果你也有手环数据，可以先从这一条做起：数字让脚本算，AI 只负责解释和建议。",
+      "sources": [
+        {
+          "label": "少数派",
+          "title": "让 Agent 读懂你的身体：数据处理篇",
+          "url": "https://sspai.com/prime/story/how-to-analyze-health-data-with-agent"
+        }
+      ],
+      "region": "CN",
+      "id": "2026-10-29-02",
+      "issueDate": "2026-10-29",
+      "issueNumber": 20
+    },
+    {
+      "candidateIds": [
         "c51"
       ],
       "category": "life",

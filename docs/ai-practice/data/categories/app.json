@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c63"
+      ],
+      "category": "app",
+      "kind": "本周演示",
+      "eventDate": "2026-10-28",
+      "headline": "Gamma 拆解：一份幻灯片背后调用 200 次模型",
+      "oneLiner": "Gamma 联创 Jon Noronha 说，用户拿到一份成品演示稿，背后约有 20 个模型、200 次调用，其中包括几轮视觉质检。",
+      "who": "Gamma 联合创始人、首席产品官 Jon Noronha，在 Greg Isenberg 的播客里讲解公司今年把产品重做成 agent 的过程。",
+      "how": "云端沙盒读取用户文件，先弹出表单追问用途，再生成大纲、匹配模板、并行生成文字和图片，最后由视觉模型逐页查错并多轮修复。",
+      "result": "他说一份演示稿约用 20 个模型、200 次调用；产品价值 98% 来自 prompt，fine-tuning 主要用来降成本。判断模型或 prompt 好坏，主要看付费转化。",
+      "tryThis": "想做垂直 agent，先列出这个领域里你独有的工具、数据或审美，再设计一个「生成→自查→修复」的循环。",
+      "caveat": "他认为最适合的是主观性强、用户在意细节的领域，比如设计和游戏；法律科技这类方向他觉得已经太挤。",
+      "body": "Jon Noronha 在 [Greg Isenberg 的节目](https://www.youtube.com/@GregIsenberg/search?query=Stop%20building%20AI%20wrappers.%20Start%20building%20agent%20harnesses.)里，把用户一次输入之后的流程讲了一遍。前 10 秒先问用户「这份稿子给谁看」，并从 Notion、Slack 等连接器拉取上下文。生成大纲、挑模板前已经调用了三四十次。生成完成后，**视觉模型逐页检查文字错位、人像被裁、对比度不对**，修几轮再交给用户。他说现成模型做这种质检效果不好，Gamma 在自己训练专用模型。\n\n评估方面，他说「好不好看」很难写成 eval。Gamma 更依赖大规模 A/B 测试，观察编辑时长、分享导出和付费转化，其中付费最难造假。一次「快速模式」实验里，保留一些**必要的摩擦**反而带来了更高的付费转化。\n\n对小团队来说，他给的门槛是：先用现成闭源模型把使用量做起来，有了真实用户，再考虑微调。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "Stop building AI wrappers. Start building agent harnesses.",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=Stop%20building%20AI%20wrappers.%20Start%20building%20agent%20harnesses."
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-29-01",
+      "issueDate": "2026-10-29",
+      "issueNumber": 20
+    },
+    {
+      "candidateIds": [
         "c10"
       ],
       "category": "app",

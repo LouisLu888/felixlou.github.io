@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c8"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-28",
+      "headline": "陈然：二十人开发团队压到一两人之后，他怎么看裁员窗口",
+      "oneLiner": "陈然说，Pure Global 在 2025 年重写了内部系统，国内开发团队从高峰期二十来人压缩到一两人；他判断 2027 年裁员会变得极难。",
+      "who": "陈然，Pure Global 合伙人，常驻旧金山，这一年和很多老板聊过企业 AI 转型，在个人网站发文。",
+      "how": "他认为 AI 转型的核心收益之一是趁现在还能精简团队；2027 年起，就业保护立法可能让裁员极其困难，而成本只有老公司 1% 的 AI native 小团队会直接抢客户。",
+      "result": "依据是他自己公司的经历，以及合伙人 DJ 去泰国子公司驻场两天、第二天写完整套进出口系统的例子。",
+      "tryThis": "他给员工的建议是：用 AI 省下的时间不要还给公司，先跑通自己的独立收入闭环，哪怕最初只有几百美元。",
+      "caveat": "2027 年立法收紧是他个人的预测。他的例子来自软件团队，在需求清楚、由一个人说了算的业务里才成立。",
+      "body": "陈然在[这篇文章](https://ranchen.org/content/20261028-rancheng-article-ai-transformation-layoff-window)里的说法很直接：AI 转型就是要大裁员，而且有时间窗口。他认为 2025 年是窗口期，2026 年社保等用人成本上升、阻力变大，2027 年可能出现大量就业保护立法。这些都是他的判断，还没有发生。\n\n他给老板的做法是：**旧业务转入维护模式，抽一两个懂客户的人按十倍压缩比重做核心业务**，指定一个人全权负责，把业务规则写进 AI 能读的知识库。他也提醒，交付做完以后，瓶颈会转到获客。\n\n对大厂员工，他的建议更有操作性：把上班当成一种主动选择，同时用一个月 200 美元左右的 coding plan 在熟悉的行业里找真实客户。",
+      "sources": [
+        {
+          "label": "陈然 ranchen.org",
+          "title": "2026，企业最后的裁员窗口",
+          "url": "https://ranchen.org/content/20261028-rancheng-article-ai-transformation-layoff-window"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-29-05",
+      "issueDate": "2026-10-29",
+      "issueNumber": 20
+    },
+    {
+      "candidateIds": [
         "c1"
       ],
       "category": "perspective",

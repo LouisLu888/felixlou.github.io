@@ -1,0 +1,294 @@
+{
+  "date": "2026-10-29",
+  "title": "一份幻灯片背后调用 200 次模型，去健身房前先让 AI 教练核对一遍计划",
+  "items": [
+    {
+      "candidateIds": [
+        "c63"
+      ],
+      "category": "app",
+      "kind": "本周演示",
+      "eventDate": "2026-10-28",
+      "headline": "Gamma 拆解：一份幻灯片背后调用 200 次模型",
+      "oneLiner": "Gamma 联创 Jon Noronha 说，用户拿到一份成品演示稿，背后约有 20 个模型、200 次调用，其中包括几轮视觉质检。",
+      "who": "Gamma 联合创始人、首席产品官 Jon Noronha，在 Greg Isenberg 的播客里讲解公司今年把产品重做成 agent 的过程。",
+      "how": "云端沙盒读取用户文件，先弹出表单追问用途，再生成大纲、匹配模板、并行生成文字和图片，最后由视觉模型逐页查错并多轮修复。",
+      "result": "他说一份演示稿约用 20 个模型、200 次调用；产品价值 98% 来自 prompt，fine-tuning 主要用来降成本。判断模型或 prompt 好坏，主要看付费转化。",
+      "tryThis": "想做垂直 agent，先列出这个领域里你独有的工具、数据或审美，再设计一个「生成→自查→修复」的循环。",
+      "caveat": "他认为最适合的是主观性强、用户在意细节的领域，比如设计和游戏；法律科技这类方向他觉得已经太挤。",
+      "body": "Jon Noronha 在 [Greg Isenberg 的节目](https://www.youtube.com/@GregIsenberg/search?query=Stop%20building%20AI%20wrappers.%20Start%20building%20agent%20harnesses.)里，把用户一次输入之后的流程讲了一遍。前 10 秒先问用户「这份稿子给谁看」，并从 Notion、Slack 等连接器拉取上下文。生成大纲、挑模板前已经调用了三四十次。生成完成后，**视觉模型逐页检查文字错位、人像被裁、对比度不对**，修几轮再交给用户。他说现成模型做这种质检效果不好，Gamma 在自己训练专用模型。\n\n评估方面，他说「好不好看」很难写成 eval。Gamma 更依赖大规模 A/B 测试，观察编辑时长、分享导出和付费转化，其中付费最难造假。一次「快速模式」实验里，保留一些**必要的摩擦**反而带来了更高的付费转化。\n\n对小团队来说，他给的门槛是：先用现成闭源模型把使用量做起来，有了真实用户，再考虑微调。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "Stop building AI wrappers. Start building agent harnesses.",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=Stop%20building%20AI%20wrappers.%20Start%20building%20agent%20harnesses."
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-29-01"
+    },
+    {
+      "candidateIds": [
+        "c64"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-29",
+      "headline": "去健身房前，先让三个 AI 教练核对训练计划",
+      "oneLiner": "少数派作者叁思 Santh 把 Apple Watch、Oura 和训记的数据接进 NAS 上的 SQLite，每次训练前由两个「教练」出计划、一个「循证教练」核查，他本人确认后再写回 App。",
+      "who": "少数派作者叁思 Santh，平时做抗阻和有氧训练，想让 AI 根据自己的身体数据安排每次训练。",
+      "how": "通过 Freddy 和训记的 API，用 Python 脚本定时把数据拉进本地 SQLite；体脂和训练感受用文字或图片发给 Agent 录入；再给 Agent 定制一个 Skill，规定它怎样分析、怎样给建议。",
+      "result": "他发现直接让 Claude「详细分析」，只能得到好看但没用的看板。改成定制 Skill 后，每次训练形成「出计划→核查→本人确认→练完备注余量→回传」的闭环。",
+      "tryThis": "先导出一段时间的训练和睡眠数据，用 grill-me 这类会反过来追问的 Skill 把需求问清楚，再写自己的分析规则。",
+      "caveat": "他说这套方法只用于辅助日常训练，不能拿来排查症状或处理医疗问题。搭建需要 NAS、API 和写脚本的能力。",
+      "body": "叁思 Santh 在[少数派](https://sspai.com/prime/story/how-to-analyze-health-data-with-agent)记录了数据处理这一步。交给 AI 的是运动、睡眠、恢复数据和训练日志，全部存在家里 NAS 上的本地数据库，只能从局域网访问。计划由他本人确认后才写进训记。\n\n他比较了十个社区 Skill，Star 最多的只有 200 多个，而且多数偏耐力训练，最后决定自己定制，把别人的好做法拿过来用：**缺数据时在报告里注明，用 1 到 5 分的主观精力评分替补；HRV 对比本人近 28 天的均值；至少 10 晚数据才算相关性；统计交给脚本算。**\n\n他强调最难的一步是把需求说清楚。Agent 第一轮就问他：计算和决策分别由谁来做？他的答案是统计数字交给代码。如果你也有手环数据，可以先从这一条做起：数字让脚本算，AI 只负责解释和建议。",
+      "sources": [
+        {
+          "label": "少数派",
+          "title": "让 Agent 读懂你的身体：数据处理篇",
+          "url": "https://sspai.com/prime/story/how-to-analyze-health-data-with-agent"
+        }
+      ],
+      "region": "CN",
+      "id": "2026-10-29-02"
+    },
+    {
+      "candidateIds": [
+        "c4"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-28",
+      "headline": "艾美奖编剧的做法：先花两天清空自己，再打开 AI",
+      "oneLiner": "四届艾美奖得主 Fred Graver 说，打开 AI 之前，要先花一两天把自己对作品的想法全部写下来，再让 AI 扮演编剧室和焦点小组。",
+      "who": "Fred Graver，做过 Letterman 节目编剧、Twitter 电视业务负责人，现在运营 AI Writer's Studio。他在 Every 的播客上讲自己的创作流程。",
+      "how": "写一份「我是怎样的写作者」文档和一份项目文档，让 AI 判断这个点子和这个人是否相配、受众在哪；再让 AI 模拟一个 8 人焦点小组，里面要有一个专门唱反调的人。",
+      "result": "他把创作分成构思、制作、营销三个阶段，每个阶段都让 AI 参与讨论，但 AI 不代笔。他说没有自己的观点，AI 只会让作品更平庸。",
+      "tryThis": "选一个想写的题目，先手写或语音口述一页想法，再连同个人文档一起交给 Claude，问它「受众是谁、在哪个平台」。",
+      "caveat": "这套方法的前提是你已经有想表达的东西；要是先打开 AI，就失去了只靠自己思考的那一次机会。",
+      "body": "Fred Graver 在 [The Every Podcast](https://www.youtube.com/@EveryInc/search?query=Can%20You%20Use%20AI%20To%20Make%20Good%20Art%3F%20%E2%80%94%20With%20Fred%20Graver) 里说，他把 AI 当成**虚拟编剧室**，让它做一群帮你想事情的人，不当枪手用。他还会把 Substack 上看到的各种 Skill 和方法丢给 Claude，问它：「这对我有用吗？」Claude 有时会说已经在做了，有时会说可以一起搭。\n\n他的出发点来自电视工作的经验：越靠近受众越安全。他做 Best Week Ever 时，制作人内部交流用的 Tumblr 意外有一两万人在看，于是团队开始读受众的反馈。对做自媒体的人来说，**先写个人定位文档，再用 AI 模拟受众反馈**，花的成本很低，适合在正式写之前检验选题。",
+      "sources": [
+        {
+          "label": "The Every Podcast (AI & I)",
+          "title": "Can You Use AI To Make Good Art? — With Fred Graver",
+          "url": "https://www.youtube.com/@EveryInc/search?query=Can%20You%20Use%20AI%20To%20Make%20Good%20Art%3F%20%E2%80%94%20With%20Fred%20Graver"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-29-03"
+    },
+    {
+      "candidateIds": [
+        "c44"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-28",
+      "headline": "犹他州 34 名政府开发者试用 Claude Code 四周",
+      "oneLiner": "Anthropic 的 Boris Cherny 转述：犹他州 10 个州政府机构的 34 名开发者参加试点，80% 在 30 分钟内配好环境，71% 报告四周里省下 20 小时以上。",
+      "who": "Claude Code 负责人 Boris Cherny 在 X 上转述犹他州政府的四周试点。",
+      "how": "给 10 个州政府机构的 34 名开发者开通 Claude Code，观察上手速度和自报节省的时间。",
+      "result": "他说 80% 的人 30 分钟内跑通环境，71% 自报试点结束时省下超过 20 小时。",
+      "tryThis": "在团队里推 AI 编程工具时，可以照这个结构做小规模试点：固定人数和周期，记录上手时间和每人自报的节省。",
+      "caveat": "节省时间是参与者自报，没有拆分出审查和返工花的时间。",
+      "body": "Boris Cherny 在 [X](https://x.com/bcherny/status/2115491259381072269) 上发了这组数字。政府机构流程多、合规要求严，30 分钟内能上手的比例，可以看作部署门槛的参考。\n\n更值得借鉴的是试点的设计：**人数不多、周期四周、指标只有两个**，分别是多快能用起来、省了多少时间。想在公司内部争取预算的人可以照这个结构做，另外加记一项：省下的时间里，有多少又花在了代码审查上。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Boris Cherny: Utah gave Claude Code to 34 developers across 10 state agencies. 80% had a worki",
+          "url": "https://x.com/bcherny/status/2115491259381072269"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-29-04"
+    },
+    {
+      "candidateIds": [
+        "c8"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-28",
+      "headline": "陈然：二十人开发团队压到一两人之后，他怎么看裁员窗口",
+      "oneLiner": "陈然说，Pure Global 在 2025 年重写了内部系统，国内开发团队从高峰期二十来人压缩到一两人；他判断 2027 年裁员会变得极难。",
+      "who": "陈然，Pure Global 合伙人，常驻旧金山，这一年和很多老板聊过企业 AI 转型，在个人网站发文。",
+      "how": "他认为 AI 转型的核心收益之一是趁现在还能精简团队；2027 年起，就业保护立法可能让裁员极其困难，而成本只有老公司 1% 的 AI native 小团队会直接抢客户。",
+      "result": "依据是他自己公司的经历，以及合伙人 DJ 去泰国子公司驻场两天、第二天写完整套进出口系统的例子。",
+      "tryThis": "他给员工的建议是：用 AI 省下的时间不要还给公司，先跑通自己的独立收入闭环，哪怕最初只有几百美元。",
+      "caveat": "2027 年立法收紧是他个人的预测。他的例子来自软件团队，在需求清楚、由一个人说了算的业务里才成立。",
+      "body": "陈然在[这篇文章](https://ranchen.org/content/20261028-rancheng-article-ai-transformation-layoff-window)里的说法很直接：AI 转型就是要大裁员，而且有时间窗口。他认为 2025 年是窗口期，2026 年社保等用人成本上升、阻力变大，2027 年可能出现大量就业保护立法。这些都是他的判断，还没有发生。\n\n他给老板的做法是：**旧业务转入维护模式，抽一两个懂客户的人按十倍压缩比重做核心业务**，指定一个人全权负责，把业务规则写进 AI 能读的知识库。他也提醒，交付做完以后，瓶颈会转到获客。\n\n对大厂员工，他的建议更有操作性：把上班当成一种主动选择，同时用一个月 200 美元左右的 coding plan 在熟悉的行业里找真实客户。",
+      "sources": [
+        {
+          "label": "陈然 ranchen.org",
+          "title": "2026，企业最后的裁员窗口",
+          "url": "https://ranchen.org/content/20261028-rancheng-article-ai-transformation-layoff-window"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-29-05"
+    }
+  ],
+  "action": "从手头的 AI 使用里挑一个反复做的任务，比如周报、数据整理或训练计划，用 Gamma 和叁思 Santh 的思路给它加一步「自查」：先列出 3 条最常出错的地方，比如数字算错、格式不对、漏了某类信息，写成规则交给 AI，让它生成后按规则逐条检查一遍再交给你。哪些数字必须交给脚本或你自己核对，也写进规则里。做三次后对比一下，你的修改时间有没有变短。",
+  "readingMinutes": 7,
+  "meta": {
+    "generatedAt": "2026-10-29T14:48:57.303Z",
+    "engine": "cli",
+    "candidateCount": 64,
+    "candidatesBySource": {
+      "Simon Willison": 3,
+      "The Every Podcast (AI & I)": 1,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 2,
+      "陈然 ranchen.org": 2,
+      "Starter Story (YouTube)": 2,
+      "Niche Pursuits": 1,
+      "Every (YouTube)": 2,
+      "Rest of World": 1,
+      "Follow Builders (X)": 39,
+      "No Priors": 1,
+      "Latent Space": 2,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 3,
+      "Riley Brown": 1,
+      "Startup Ideas Podcast (Greg Isenberg)": 1,
+      "少数派": 1
+    },
+    "shortlist": [
+      {
+        "id": "c64",
+        "reason": "谁：少数派作者叁思。怎么用：把 Apple Watch、Oura、训记的数据接进 Agent，并引导它做分析，而不是只让它出图表。结果：拿到下次训练怎么加重量这类可执行建议，也讲了结论能信几分。全文，可以照着做，属于 AI 生活类。",
+        "source": "少数派",
+        "title": "让 Agent 读懂你的身体：数据处理篇"
+      },
+      {
+        "id": "c63",
+        "reason": "谁：Gamma 联合创始人 Jon Noronha。怎么用：今年把产品重做成创意 Agent，一份演示文稿背后约 20 个模型、200 次调用；新模型一小时内测完；靠审美而不只靠评测来判断质量。结果：一手的产品开发过程，有逐字稿，适合想做垂直 Agent 的人。",
+        "source": "Startup Ideas Podcast (Greg Isenberg)",
+        "title": "Stop building AI wrappers. Start building agent harnesses."
+      },
+      {
+        "id": "c4",
+        "reason": "谁：艾美奖得主、编剧 Fred Graver。怎么用：先写一份「我是怎样的写作者」文档，再在自己的编剧室里配一组 AI 协作者。结论：没有自己的观点，AI 只会让作品更平庸。有逐字稿，内容创作者可以照着试（这条是逐字稿版，Every YouTube 的简介版 c14 已去重）。",
+        "source": "The Every Podcast (AI & I)",
+        "title": "Can You Use AI To Make Good Art? — With Fred Graver"
+      },
+      {
+        "id": "c44",
+        "reason": "谁：犹他州 10 个州政府机构的 34 名开发者。怎么用：4 周试点 Claude Code。结果：80% 在 30 分钟内装好可用环境，71% 报告节省 20 小时以上。有明确数字，是真实组织的案例。",
+        "source": "Follow Builders (X)",
+        "title": "Boris Cherny: Utah gave Claude Code to 34 developers across 10 state agencies. 80% had a worki"
+      },
+      {
+        "id": "c8",
+        "reason": "谁：Pure Global 创始人陈然。怎么用：2025 年借 Claude Code 这类工具重写业务、砍掉中间层，自家公司亲历。判断：2025 到 2027 年裁员窗口正在关上。有依据的一线判断，大厂读者会很关心（AI 认知类 1/3）。",
+        "source": "陈然 ranchen.org",
+        "title": "2026，企业最后的裁员窗口"
+      },
+      {
+        "id": "c6",
+        "reason": "谁：Nate Herk，Matt Wolfe 访谈。怎么用：每天在用的三个工作流：用 Claude Code 自动剪视频、用 AI 专家团「Roast Room」帮自己做决定、让 AI 社媒经理研究选题并发布 Instagram 内容。只有简介，但简介已写清做法，内容创作者能照着搭。",
+        "source": "Matt Wolfe",
+        "title": "His AI Made 20 Reels Before Breakfast"
+      },
+      {
+        "id": "c62",
+        "reason": "谁：创作者 Riley Brown。怎么用：说自己花了 1 万美元试 Agent 工具，讲做内容和经营业务实际在用的整套配置，包括 Claude Code 和 Codex 怎么分工、剪视频、语音助手、用 Composio 让 Agent 共享技能。只有简介，带赞助，但章节写得具体，可以照着试。",
+        "source": "Riley Brown",
+        "title": "Here Is My ENTIRE AI Setup (Nothing Held Back)"
+      },
+      {
+        "id": "c36",
+        "reason": "谁：前 Claude Code 团队成员 Thariq。判断：技术人员担心自己的技能没用了，非技术人员却急着想变得更懂技术，好用好 Agent。互动量很高，一线视角，能引起大厂员工共鸣（AI 认知类 2/3）。",
+        "source": "Follow Builders (X)",
+        "title": "Thariq: very weird thing happening rn\n\ntechnical people are sad, they think their skills"
+      },
+      {
+        "id": "c3",
+        "reason": "谁：Simon Willison 在 GitHub Universe 现场。内容：Octoverse 2026 的数据，合并的 PR 不到一年涨到原来的三倍、每月 2.2 亿，提交量每月 73.8 亿。用硬数字说明 Agent 写代码的实际影响（AI 认知类 3/3）。",
+        "source": "Simon Willison",
+        "title": "GitHub Octoverse 2026"
+      },
+      {
+        "id": "c10",
+        "reason": "谁：Excel Exercises 站长 Jake。结果：一个很朴素的网站，月入 3 万美元，有经营数字，也给了简单产品的选题建议。只有简介，摘录里没提 AI，适合想做副业的读者，放在最后备选。",
+        "source": "Starter Story (YouTube)",
+        "title": "I Make $30K/Month From the Most Boring Website on the Internet"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 26119,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2058,
+        "output_tokens_details": {
+          "thinking_tokens": 703
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 26119,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2058,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 26119,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 26119
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.25012
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 38363,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 5539,
+      "output_tokens_details": {
+        "thinking_tokens": 1254
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 38363,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 5539,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 38363,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 38363
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.417692
+  }
+}

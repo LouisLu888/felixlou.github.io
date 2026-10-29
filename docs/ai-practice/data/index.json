@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-28T14:47:43.601Z",
+  "updatedAt": "2026-10-29T14:49:05.083Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 19
+      "count": 20
     },
     {
       "id": "consulting",
@@ -20,7 +20,7 @@
       "name": "内容创作",
       "en": "AI content creation",
       "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入",
-      "count": 7
+      "count": 8
     },
     {
       "id": "saas",
@@ -34,24 +34,62 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 12
+      "count": 13
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 20
+      "count": 21
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 9
+      "count": 10
     }
   ],
   "days": [
+    {
+      "date": "2026-10-29",
+      "number": 20,
+      "title": "一份幻灯片背后调用 200 次模型，去健身房前先让 AI 教练核对一遍计划",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 7,
+      "itemCount": 5,
+      "categoryCounts": {
+        "app": 1,
+        "life": 1,
+        "content": 1,
+        "productivity": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "app",
+          "headline": "Gamma 拆解：一份幻灯片背后调用 200 次模型"
+        },
+        {
+          "category": "life",
+          "headline": "去健身房前，先让三个 AI 教练核对训练计划"
+        },
+        {
+          "category": "content",
+          "headline": "艾美奖编剧的做法：先花两天清空自己，再打开 AI"
+        },
+        {
+          "category": "productivity",
+          "headline": "犹他州 34 名政府开发者试用 Claude Code 四周"
+        },
+        {
+          "category": "perspective",
+          "headline": "陈然：二十人开发团队压到一两人之后，他怎么看裁员窗口"
+        }
+      ]
+    },
     {
       "date": "2026-10-28",
       "number": 19,

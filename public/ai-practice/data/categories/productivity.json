@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c44"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-28",
+      "headline": "犹他州 34 名政府开发者试用 Claude Code 四周",
+      "oneLiner": "Anthropic 的 Boris Cherny 转述：犹他州 10 个州政府机构的 34 名开发者参加试点，80% 在 30 分钟内配好环境，71% 报告四周里省下 20 小时以上。",
+      "who": "Claude Code 负责人 Boris Cherny 在 X 上转述犹他州政府的四周试点。",
+      "how": "给 10 个州政府机构的 34 名开发者开通 Claude Code，观察上手速度和自报节省的时间。",
+      "result": "他说 80% 的人 30 分钟内跑通环境，71% 自报试点结束时省下超过 20 小时。",
+      "tryThis": "在团队里推 AI 编程工具时，可以照这个结构做小规模试点：固定人数和周期，记录上手时间和每人自报的节省。",
+      "caveat": "节省时间是参与者自报，没有拆分出审查和返工花的时间。",
+      "body": "Boris Cherny 在 [X](https://x.com/bcherny/status/2115491259381072269) 上发了这组数字。政府机构流程多、合规要求严，30 分钟内能上手的比例，可以看作部署门槛的参考。\n\n更值得借鉴的是试点的设计：**人数不多、周期四周、指标只有两个**，分别是多快能用起来、省了多少时间。想在公司内部争取预算的人可以照这个结构做，另外加记一项：省下的时间里，有多少又花在了代码审查上。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Boris Cherny: Utah gave Claude Code to 34 developers across 10 state agencies. 80% had a worki",
+          "url": "https://x.com/bcherny/status/2115491259381072269"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-29-04",
+      "issueDate": "2026-10-29",
+      "issueNumber": 20
+    },
+    {
+      "candidateIds": [
         "c4"
       ],
       "category": "productivity",

@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c4"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-10-28",
+      "headline": "艾美奖编剧的做法：先花两天清空自己，再打开 AI",
+      "oneLiner": "四届艾美奖得主 Fred Graver 说，打开 AI 之前，要先花一两天把自己对作品的想法全部写下来，再让 AI 扮演编剧室和焦点小组。",
+      "who": "Fred Graver，做过 Letterman 节目编剧、Twitter 电视业务负责人，现在运营 AI Writer's Studio。他在 Every 的播客上讲自己的创作流程。",
+      "how": "写一份「我是怎样的写作者」文档和一份项目文档，让 AI 判断这个点子和这个人是否相配、受众在哪；再让 AI 模拟一个 8 人焦点小组，里面要有一个专门唱反调的人。",
+      "result": "他把创作分成构思、制作、营销三个阶段，每个阶段都让 AI 参与讨论，但 AI 不代笔。他说没有自己的观点，AI 只会让作品更平庸。",
+      "tryThis": "选一个想写的题目，先手写或语音口述一页想法，再连同个人文档一起交给 Claude，问它「受众是谁、在哪个平台」。",
+      "caveat": "这套方法的前提是你已经有想表达的东西；要是先打开 AI，就失去了只靠自己思考的那一次机会。",
+      "body": "Fred Graver 在 [The Every Podcast](https://www.youtube.com/@EveryInc/search?query=Can%20You%20Use%20AI%20To%20Make%20Good%20Art%3F%20%E2%80%94%20With%20Fred%20Graver) 里说，他把 AI 当成**虚拟编剧室**，让它做一群帮你想事情的人，不当枪手用。他还会把 Substack 上看到的各种 Skill 和方法丢给 Claude，问它：「这对我有用吗？」Claude 有时会说已经在做了，有时会说可以一起搭。\n\n他的出发点来自电视工作的经验：越靠近受众越安全。他做 Best Week Ever 时，制作人内部交流用的 Tumblr 意外有一两万人在看，于是团队开始读受众的反馈。对做自媒体的人来说，**先写个人定位文档，再用 AI 模拟受众反馈**，花的成本很低，适合在正式写之前检验选题。",
+      "sources": [
+        {
+          "label": "The Every Podcast (AI & I)",
+          "title": "Can You Use AI To Make Good Art? — With Fred Graver",
+          "url": "https://www.youtube.com/@EveryInc/search?query=Can%20You%20Use%20AI%20To%20Make%20Good%20Art%3F%20%E2%80%94%20With%20Fred%20Graver"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-29-03",
+      "issueDate": "2026-10-29",
+      "issueNumber": 20
+    },
+    {
+      "candidateIds": [
         "c18",
         "c10",
         "c25"
