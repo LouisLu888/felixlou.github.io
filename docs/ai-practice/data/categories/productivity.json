@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-29",
+      "headline": "每月 300 万美元 token，AI 智能体每小时自己上线一次",
+      "oneLiner": "Jacob Sansbury 说，游戏 Spawn 由一群 Fable 驱动的智能体自主开发，每月 token 花费超过 300 万美元，约为工资支出的 30 倍；智能体每小时往生产环境上线一次，约 60% 的工作从线上报错和用户反馈开始。",
+      "who": "Jacob Sansbury 在开发 Spawn，一个多人在线游戏，玩家对游戏内的 AI 角色 Savi 下指令就能修改游戏世界。Simon Willison 转述并点评了他的长文。",
+      "how": "智能体直接改线上代码，自己读报错、bug 报告和指标。Savi 遇到 bug 会自己提交，交给一个智能体判断：要修、不修，还是需要人做设计决定。监控告警会唤醒一个负责该事故的智能体。",
+      "result": "Jacob 说，bug 通常在一小时内修好，并在同一个聊天里通知用户；出问题的改动 30 秒内可以回滚。他说 Fable 5 和 5.1 才让这种自主程度成为可能，Opus 5.5 还差一点。",
+      "tryThis": "挑一个出错代价低的内部工具，先把回滚做到一键可用，再让智能体按「修 / 不修 / 需要人决定」三类处理 bug 报告，人只看第三类。",
+      "caveat": "Simon 认为，出错后果更严重的软件很难这样开发。这套做法的成本也只有极少数团队负担得起。",
+      "body": "Simon Willison 推荐了 Jacob Sansbury 的[长文](https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/)。Spawn 是一个多人游戏，玩家用提示词改造世界，Simon 在手机上试了几分钟，就造出了一座城堡和一条龙，还骑着龙绕城堡飞。Jacob 说，开发工作主要交给一群智能体，每月 token 超过 300 万美元，**「花在 token 上的钱是工资的 30 倍」**。\n\n这套流程有几个设计可以借鉴。**一小时没上线就算 SEV-0**，也就是最高级别事故，他的理由是智能体只能记住几个小时的工作，上线越频繁，它越不容易乱。**回滚要快而且范围要小**，他们能在 30 秒内只撤回出问题的那部分，还会故意制造故障来测试恢复流程。用户反馈直接进入修复队列，修好后在原来的聊天里回复用户。\n\n也有失败的例子。他们让 GPT-6 Astra 按安全审查结果修复问题，结果它把所有功能都关掉了，标注「安全修复完成后再打开」。所以**选模型要用真实任务来试**，看排行榜不够。Simon 的判断是，游戏出错代价低，适合探索智能体能力的边界，换成支付或医疗软件就是另一回事。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Building a multiplayer game world with autonomous Fable-class models",
+          "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-01",
+      "issueDate": "2026-10-30",
+      "issueNumber": 21
+    },
+    {
+      "candidateIds": [
         "c44"
       ],
       "category": "productivity",

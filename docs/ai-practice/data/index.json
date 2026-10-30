@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-29T14:49:05.083Z",
+  "updatedAt": "2026-10-30T15:09:29.189Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 20
+      "count": 21
     },
     {
       "id": "consulting",
@@ -27,7 +27,7 @@
       "name": "Micro SaaS",
       "en": "AI micro SaaS",
       "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
-      "count": 8
+      "count": 9
     },
     {
       "id": "app",
@@ -41,17 +41,54 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 21
+      "count": 22
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 10
+      "count": 12
     }
   ],
   "days": [
+    {
+      "date": "2026-10-30",
+      "number": 21,
+      "title": "每小时自动上线的 AI 游戏公司，以及一年只省 30 美元的 Prime 会员",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 9,
+      "itemCount": 5,
+      "categoryCounts": {
+        "productivity": 1,
+        "life": 2,
+        "saas": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "每月 300 万美元 token，AI 智能体每小时自己上线一次"
+        },
+        {
+          "category": "life",
+          "headline": "把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场"
+        },
+        {
+          "category": "saas",
+          "headline": "工具免费送，靠智能体和人工服务收钱"
+        },
+        {
+          "category": "life",
+          "headline": "问 Alexa 会员值不值：一年省 30 美元，年费 139 美元"
+        },
+        {
+          "category": "perspective",
+          "headline": "Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象"
+        }
+      ]
+    },
     {
       "date": "2026-10-29",
       "number": 20,

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场｜AI 实干派</title>
+  <meta name="description" content="Lifehacker 记者 Meredith Dietz 把 Strava 接入 Gemini 分析训练：取数确实比手工快，但第一次回答漏掉了天气对心率的影响，还把她至少八场马拉松说成一场。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-30-02/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场｜AI 实干派">
+  <meta property="og:description" content="Lifehacker 记者 Meredith Dietz 把 Strava 接入 Gemini 分析训练：取数确实比手工快，但第一次回答漏掉了天气对心率的影响，还把她至少八场马拉松说成一场。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-30-02/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-30.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场｜AI 实干派">
+  <meta name="twitter:description" content="Lifehacker 记者 Meredith Dietz 把 Strava 接入 Gemini 分析训练：取数确实比手工快，但第一次回答漏掉了天气对心率的影响，还把她至少八场马拉松说成一场。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-30.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">21</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">6</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">8</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">9</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">13</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">22</span></a><a class="cat-chip active" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">12</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-30/">AI 实干派 021 · 2026 年 10 月 30 日 · 周五</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="life">AI 生活</span><span>·</span>本周演示<span>·</span>2026-10-29<span>·</span>US</div>
+        <h1>把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场</h1>
+        <p class="summary">Lifehacker 记者 Meredith Dietz 把 Strava 接入 Gemini 分析训练：取数确实比手工快，但第一次回答漏掉了天气对心率的影响，还把她至少八场马拉松说成一场。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>Meredith Dietz 跑过多场马拉松，是 Strava 付费用户，在美国测试刚推出的 Gemini 集成。</dd><dt>怎么用</dt><dd>在 Gemini 的 Personal Intelligence 里选 Strava，登录并授权。之后用自然语言提问，比如「同样心率下我是不是变快了」「比较几场马拉松前的训练量」。</dd><dt>结果</dt><dd>Gemini 先说她效率进步明显，她提醒后才补上：9 月长距离跑时气温 75–84°F，心率被推高。它算出她的轻松跑配速约 9:43/英里，接近马拉松配速，建议放慢到 10:30–11:15，她同意这条建议。</dd><dt>你可以试</dt><dd>连接后问老数据时写明具体日期和地点。对讨好你的结论追问天气、地形和疲劳，把它当作取数工具，不当教练。</dd><dt>注意</dt><dd>授权页写明，Gemini 能读取活动、表现指标、训练计划、装备、俱乐部和个人资料；部分对话内容以及你的姓名和邮箱可能会共享给 Strava。连接是只读的，可以随时断开。</dd></dl>
+        <div class="body"><p>Meredith Dietz 在 <a href="https://lifehacker.com/health/strava-integrates-with-google-gemini-personalized-training-insights?utm_medium=RSS">Lifehacker</a> 测试了 Strava 和 Gemini 的新集成。设置只需三步：打开 Gemini 的 Personal Intelligence，在已连接应用里选 Strava，登录并授权。她要求分析 2019 年以来的每一次马拉松，Gemini 只找到 2026 年 10 月的一场。追问后它解释，受分页限制，它只能读到大约 2026 年夏天以后的记录。可在别的回答里，它又提到了她 2025 年和 2024 年的比赛，能读到多少数据并不稳定。</p><p>她的用法可以照着做：<strong>先让 AI 快速取数，再自己追问它可能漏掉的变量</strong>。Gemini 推荐的追问，让她想到了原本没列的比较，例如不同年份赛前的周跑量和长距离频率。宽泛的问题，比如「我哪里做得对、哪里做错了」，得到的多是讨好式的通用建议。</p><p>她认为这类建议大多是普通跑者看一眼数据也能得出的常识。对已经会看训练数据的人，这个功能主要省的是翻记录的时间，涉及重要数字时仍要回原始记录核对。</p></div>
+        <div class="sources">原文：<a href="https://lifehacker.com/health/strava-integrates-with-google-gemini-personalized-training-insights?utm_medium=RSS" target="_blank" rel="noopener" title="I Tested Strava&#39;s New Integration With Gemini, and I Have Thoughts">Lifehacker</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-30/">← 当期全部 5 条</a></span>
+        <span><a href="/ai-practice/c/life/">更多「AI 生活」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

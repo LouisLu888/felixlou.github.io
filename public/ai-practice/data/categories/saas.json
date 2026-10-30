@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c49"
+      ],
+      "category": "saas",
+      "kind": "机会观察",
+      "eventDate": "2026-10-29",
+      "headline": "工具免费送，靠智能体和人工服务收钱",
+      "oneLiner": "Greg Isenberg 在单人节目里说，按席位收费的 SaaS 已经过时：工具免费送，换来数据和网络效应，再加卖 AI 智能体和人工服务赚钱。",
+      "who": "Startup Ideas Podcast 主持人 Greg Isenberg，2026-10-29 的单人节目。",
+      "how": "他把模式拆成三层：免费工具拉来用户和数据；智能体按 token 或按结果收费；人工服务按周或按月收费。",
+      "result": "他举的例子是卡路里记录 App：记录功能免费，个性化餐单、更精确的追踪要付费，每周一次的减重教练再单独收费。",
+      "tryThis": "找一个用户现在按席位付费、但只用基础功能的细分工具，列出「免费基础版 + 付费智能体 + 付费人工」三档，先去问十个潜在用户最愿意为哪一档付钱。",
+      "caveat": "他认为面向《财富》500 强这类大企业仍会按席位收费，因为它们愿意为安全和被照顾的感觉付钱。免费工具在赚到钱之前就要承担托管和模型成本。",
+      "body": "Greg Isenberg 在[节目](https://www.youtube.com/@GregIsenberg/search?query=SaaS%20is%20dead%3F)里说，过去 15 年 SaaS 的难点是雇够好的工程师把工具做出来，再按每席位 9.99 或 29.99 美元收费。他认为到了 Opus 5.5、GPT-6 这一代模型，做工具已经不难，一两个人加 AI 就能做出过去 20 人做的东西。\n\n他的建议是把工具免费送出去，用户付出的是**数据和网络效应**，再向他们**加卖智能**：「CRM 免费，想让 CRM 用智能体替你干活就要付钱」。收费有三种方式：按 token、按结果、人工服务按周或按月。他认为「把事做完」的市场比「卖工具」大，所以 SaaS 的总市场反而变大了。\n\n这是他个人的判断。对做 Micro SaaS 的人，最直接的用处是**重新设计定价表**，把收费点从「能不能用」移到「替你做了多少」。他也划了边界：中小企业、专业个人用户和个人会越来越多地免费使用，大企业仍会付席位费，只是单价可能下降。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "SaaS is dead?",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=SaaS%20is%20dead%3F"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-03",
+      "issueDate": "2026-10-30",
+      "issueNumber": 21
+    },
+    {
+      "candidateIds": [
         "c10"
       ],
       "category": "saas",

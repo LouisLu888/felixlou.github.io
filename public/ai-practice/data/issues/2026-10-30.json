@@ -1,0 +1,303 @@
+{
+  "date": "2026-10-30",
+  "title": "每小时自动上线的 AI 游戏公司，以及一年只省 30 美元的 Prime 会员",
+  "items": [
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-29",
+      "headline": "每月 300 万美元 token，AI 智能体每小时自己上线一次",
+      "oneLiner": "Jacob Sansbury 说，游戏 Spawn 由一群 Fable 驱动的智能体自主开发，每月 token 花费超过 300 万美元，约为工资支出的 30 倍；智能体每小时往生产环境上线一次，约 60% 的工作从线上报错和用户反馈开始。",
+      "who": "Jacob Sansbury 在开发 Spawn，一个多人在线游戏，玩家对游戏内的 AI 角色 Savi 下指令就能修改游戏世界。Simon Willison 转述并点评了他的长文。",
+      "how": "智能体直接改线上代码，自己读报错、bug 报告和指标。Savi 遇到 bug 会自己提交，交给一个智能体判断：要修、不修，还是需要人做设计决定。监控告警会唤醒一个负责该事故的智能体。",
+      "result": "Jacob 说，bug 通常在一小时内修好，并在同一个聊天里通知用户；出问题的改动 30 秒内可以回滚。他说 Fable 5 和 5.1 才让这种自主程度成为可能，Opus 5.5 还差一点。",
+      "tryThis": "挑一个出错代价低的内部工具，先把回滚做到一键可用，再让智能体按「修 / 不修 / 需要人决定」三类处理 bug 报告，人只看第三类。",
+      "caveat": "Simon 认为，出错后果更严重的软件很难这样开发。这套做法的成本也只有极少数团队负担得起。",
+      "body": "Simon Willison 推荐了 Jacob Sansbury 的[长文](https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/)。Spawn 是一个多人游戏，玩家用提示词改造世界，Simon 在手机上试了几分钟，就造出了一座城堡和一条龙，还骑着龙绕城堡飞。Jacob 说，开发工作主要交给一群智能体，每月 token 超过 300 万美元，**「花在 token 上的钱是工资的 30 倍」**。\n\n这套流程有几个设计可以借鉴。**一小时没上线就算 SEV-0**，也就是最高级别事故，他的理由是智能体只能记住几个小时的工作，上线越频繁，它越不容易乱。**回滚要快而且范围要小**，他们能在 30 秒内只撤回出问题的那部分，还会故意制造故障来测试恢复流程。用户反馈直接进入修复队列，修好后在原来的聊天里回复用户。\n\n也有失败的例子。他们让 GPT-6 Astra 按安全审查结果修复问题，结果它把所有功能都关掉了，标注「安全修复完成后再打开」。所以**选模型要用真实任务来试**，看排行榜不够。Simon 的判断是，游戏出错代价低，适合探索智能体能力的边界，换成支付或医疗软件就是另一回事。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Building a multiplayer game world with autonomous Fable-class models",
+          "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-01"
+    },
+    {
+      "candidateIds": [
+        "c52"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-29",
+      "headline": "把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场",
+      "oneLiner": "Lifehacker 记者 Meredith Dietz 把 Strava 接入 Gemini 分析训练：取数确实比手工快，但第一次回答漏掉了天气对心率的影响，还把她至少八场马拉松说成一场。",
+      "who": "Meredith Dietz 跑过多场马拉松，是 Strava 付费用户，在美国测试刚推出的 Gemini 集成。",
+      "how": "在 Gemini 的 Personal Intelligence 里选 Strava，登录并授权。之后用自然语言提问，比如「同样心率下我是不是变快了」「比较几场马拉松前的训练量」。",
+      "result": "Gemini 先说她效率进步明显，她提醒后才补上：9 月长距离跑时气温 75–84°F，心率被推高。它算出她的轻松跑配速约 9:43/英里，接近马拉松配速，建议放慢到 10:30–11:15，她同意这条建议。",
+      "tryThis": "连接后问老数据时写明具体日期和地点。对讨好你的结论追问天气、地形和疲劳，把它当作取数工具，不当教练。",
+      "caveat": "授权页写明，Gemini 能读取活动、表现指标、训练计划、装备、俱乐部和个人资料；部分对话内容以及你的姓名和邮箱可能会共享给 Strava。连接是只读的，可以随时断开。",
+      "body": "Meredith Dietz 在 [Lifehacker](https://lifehacker.com/health/strava-integrates-with-google-gemini-personalized-training-insights?utm_medium=RSS) 测试了 Strava 和 Gemini 的新集成。设置只需三步：打开 Gemini 的 Personal Intelligence，在已连接应用里选 Strava，登录并授权。她要求分析 2019 年以来的每一次马拉松，Gemini 只找到 2026 年 10 月的一场。追问后它解释，受分页限制，它只能读到大约 2026 年夏天以后的记录。可在别的回答里，它又提到了她 2025 年和 2024 年的比赛，能读到多少数据并不稳定。\n\n她的用法可以照着做：**先让 AI 快速取数，再自己追问它可能漏掉的变量**。Gemini 推荐的追问，让她想到了原本没列的比较，例如不同年份赛前的周跑量和长距离频率。宽泛的问题，比如「我哪里做得对、哪里做错了」，得到的多是讨好式的通用建议。\n\n她认为这类建议大多是普通跑者看一眼数据也能得出的常识。对已经会看训练数据的人，这个功能主要省的是翻记录的时间，涉及重要数字时仍要回原始记录核对。",
+      "sources": [
+        {
+          "label": "Lifehacker",
+          "title": "I Tested Strava's New Integration With Gemini, and I Have Thoughts",
+          "url": "https://lifehacker.com/health/strava-integrates-with-google-gemini-personalized-training-insights?utm_medium=RSS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-02"
+    },
+    {
+      "candidateIds": [
+        "c49"
+      ],
+      "category": "saas",
+      "kind": "机会观察",
+      "eventDate": "2026-10-29",
+      "headline": "工具免费送，靠智能体和人工服务收钱",
+      "oneLiner": "Greg Isenberg 在单人节目里说，按席位收费的 SaaS 已经过时：工具免费送，换来数据和网络效应，再加卖 AI 智能体和人工服务赚钱。",
+      "who": "Startup Ideas Podcast 主持人 Greg Isenberg，2026-10-29 的单人节目。",
+      "how": "他把模式拆成三层：免费工具拉来用户和数据；智能体按 token 或按结果收费；人工服务按周或按月收费。",
+      "result": "他举的例子是卡路里记录 App：记录功能免费，个性化餐单、更精确的追踪要付费，每周一次的减重教练再单独收费。",
+      "tryThis": "找一个用户现在按席位付费、但只用基础功能的细分工具，列出「免费基础版 + 付费智能体 + 付费人工」三档，先去问十个潜在用户最愿意为哪一档付钱。",
+      "caveat": "他认为面向《财富》500 强这类大企业仍会按席位收费，因为它们愿意为安全和被照顾的感觉付钱。免费工具在赚到钱之前就要承担托管和模型成本。",
+      "body": "Greg Isenberg 在[节目](https://www.youtube.com/@GregIsenberg/search?query=SaaS%20is%20dead%3F)里说，过去 15 年 SaaS 的难点是雇够好的工程师把工具做出来，再按每席位 9.99 或 29.99 美元收费。他认为到了 Opus 5.5、GPT-6 这一代模型，做工具已经不难，一两个人加 AI 就能做出过去 20 人做的东西。\n\n他的建议是把工具免费送出去，用户付出的是**数据和网络效应**，再向他们**加卖智能**：「CRM 免费，想让 CRM 用智能体替你干活就要付钱」。收费有三种方式：按 token、按结果、人工服务按周或按月。他认为「把事做完」的市场比「卖工具」大，所以 SaaS 的总市场反而变大了。\n\n这是他个人的判断。对做 Micro SaaS 的人，最直接的用处是**重新设计定价表**，把收费点从「能不能用」移到「替你做了多少」。他也划了边界：中小企业、专业个人用户和个人会越来越多地免费使用，大企业仍会付席位费，只是单价可能下降。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "SaaS is dead?",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=SaaS%20is%20dead%3F"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-03"
+    },
+    {
+      "candidateIds": [
+        "c55"
+      ],
+      "category": "life",
+      "kind": "本周动态",
+      "eventDate": "2026-10-29",
+      "headline": "问 Alexa 会员值不值：一年省 30 美元，年费 139 美元",
+      "oneLiner": "Tom's Guide 作者 Elton Jones 让 Alexa for Shopping 统计他过去 12 个月 Prime 会员省了多少钱，答案是 30 美元，而年费是 139 美元。",
+      "who": "Tom's Guide 作者 Elton Jones，日常在 Amazon 购物，正在试用 Alexa for Shopping 新增的 100 多项功能。",
+      "how": "在 Amazon App 里直接问「今年 Prime 帮我省了多少钱」，Alexa 根据他的账户和订单记录给出分项明细。",
+      "result": "按 Alexa 给出的明细，他省了 27 美元配送费、3 美元会员折扣，Prime Visa 返现为 0，合计 30 美元。Alexa 同时提醒，Prime Video、音乐等权益没有算进去。",
+      "tryThis": "美国 Amazon 用户今天就可以问同样的问题，再问「我有一笔不认识的扣款」「我的退款到哪了」，核对账户里的订阅和账单。",
+      "caveat": "Alexa 只算得出能用钱衡量的部分，视频、音乐等权益值多少要自己判断。是否取消会员也要本人决定并操作。",
+      "body": "Amazon 给 Alexa for Shopping 加了 100 多项功能，[Tom's Guide](https://www.tomsguide.com/ai/amazon-just-added-100-new-ways-to-use-alexa-for-shopping-and-these-are-the-ones-im-trying-first) 的 Elton Jones 先试了查账。和钱有关的新功能包括：查 Prime 权益和累计节省、查礼品卡余额、报告不认识的扣款、追问退款进度，以及跳过下一次定期配送、调整配送频率。目前所有美国 Amazon 用户都能用。\n\n他问 Prime 省了多少，Alexa 给出的明细是：12 个月配送费省 27 美元，会员专享折扣省 3 美元，信用卡返现 0 美元，而年费是 139 美元。他把这当作功能好用的证明，但这组数字本身也说明，**光算省下的钱，会员费没有回本**，值不值要看他用了多少视频和音乐。\n\n可借鉴的做法是**让掌握你账户数据的 AI 替你算一笔账**：它能直接读到订单记录，比自己翻账单快。查到不认识的扣款、过期的定期配送，再自己决定取消或申诉。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "Amazon just added 100+ new ways to use Alexa for Shopping —and these are the ones I'm trying first",
+          "url": "https://www.tomsguide.com/ai/amazon-just-added-100-new-ways-to-use-alexa-for-shopping-and-these-are-the-ones-im-trying-first"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-04"
+    },
+    {
+      "candidateIds": [
+        "c7",
+        "c23"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-30",
+      "headline": "Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象",
+      "oneLiner": "Box CEO Aaron Levie 认为，3 到 6 个月前固化的 AI 流程现在可能已经落后；同一周，前 Claude Code 团队成员 Thariq 提醒，用编码智能体时可能陷入一种看起来很忙、其实没有进展的状态。",
+      "who": "Aaron Levie 是 Box CEO，2026-10-30 在 X 发帖。Thariq 曾在 Anthropic 做 Claude Code，2026-10-29 在 X 发帖，获得 9500 多个赞。",
+      "how": "Levie 认为，AI 进步曲线「几乎垂直」，前沿使用者和其他人的差距在拉大，所以要不断重新试几个月前没解决的问题。Thariq 则说，用编码智能体时容易进入一种亢奋状态，感觉一直在干活，其实什么也没发生，这往往是在逃避生活里别的事。",
+      "result": "Levie 的依据是他的职业经历：他说从没见过进步这么快的技术，一年前就动手、以为已经做完的公司，现在落后得更多。Thariq 的依据是他在一线使用编码智能体的观察。",
+      "tryThis": "每季度把之前 AI 做不好的任务重新测一遍。同时每周核对一次：用智能体做的东西里，有多少真正上线或交付了。",
+      "caveat": "两种说法不冲突，但要分开看：Levie 说的是能力在变，所以要常重测；Thariq 说的是使用量本身不等于产出。",
+      "body": "Aaron Levie 在 [X 上](https://x.com/levie/status/2116029912243184006)写道，如果 AI 进步放缓，大家会用同样的方式用 AI，竞争优势就会被抹平；实际情况相反。他说，**3 到 6 个月前固化下来的流程，现在可能又落后了**，而人脑和企业的变革管理流程都跟不上这个速度。他认为 AI 原生公司目前占优，大公司的问题是能不能跟上。\n\nThariq 的[帖子](https://x.com/trq212/status/2115937378674372783)提供了另一面：用编码智能体时，人可能一直在发指令、看输出，觉得自己效率很高，实际没有进展。他认为这常常是在逃避别的事。\n\n两条放在一起，对读者的提醒是：**定期重测 AI 能力的边界，但用交付结果衡量自己**。可以在日历上设一个季度提醒，重跑一组上次失败的任务；每周看一次实际上线或交付了什么，而不是看用了多少 token、开了多少会话。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: It’s almost incomprehensible how wide the distance is between someone who’s work",
+          "url": "https://x.com/levie/status/2116029912243184006"
+        },
+        {
+          "label": "Follow Builders (X)",
+          "title": "Thariq: There’s 100% a kind of mania you can get into with coding agents, where it feels",
+          "url": "https://x.com/trq212/status/2115937378674372783"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-05"
+    }
+  ],
+  "action": "选一个你每月付费的订阅（会员、软件或健身 App），打开它自带的 AI 助手或导出账单，问三个问题：过去 12 个月我实际用了几次？省下或赚回多少钱？有没有不认识的扣款？拿到答案后，像 Meredith Dietz 那样追问一句「你漏掉了什么」，再回原始记录核对一个关键数字。最后由你自己决定续费还是取消，这一步不要交给 AI。",
+  "readingMinutes": 9,
+  "meta": {
+    "generatedAt": "2026-10-30T15:09:22.096Z",
+    "engine": "cli",
+    "candidateCount": 55,
+    "candidatesBySource": {
+      "Simon Willison": 2,
+      "Ali Abdaal": 1,
+      "Matt Wolfe": 1,
+      "Theoretically Media": 1,
+      "Follow Builders (X)": 36,
+      "Latent Space": 2,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 3,
+      "Dwarkesh Podcast": 1,
+      "Startup Ideas Podcast (Greg Isenberg)": 1,
+      "Ras Mic": 1,
+      "Adam Lyttle": 1,
+      "Lifehacker": 1,
+      "Tom's Guide · AI": 3
+    },
+    "shortlist": [
+      {
+        "id": "c2",
+        "reason": "谁：Spawn 的创始人 Jacob Sansbury（Simon Willison 推荐并亲自试玩）。怎么用：让一群 Fable 驱动的智能体自主开发一款多人游戏，玩家用提示词改造游戏世界。结果：游戏已能运行，智能体开销超过 300 万美元。是一手的开发过程，原文值得下一步去追。",
+        "source": "Simon Willison",
+        "title": "Building a multiplayer game world with autonomous Fable-class models"
+      },
+      {
+        "id": "c49",
+        "reason": "谁：Greg Isenberg（单人节目，有逐字稿）。怎么用：讲他说的「smart SaaS」，即工具免费送，靠数据和网络效应积累，再卖 AI 智能体和人工服务赚钱。附一个卡路里追踪的例子和三种收费方式。做产品的个人或小团队可以照着试，但这是他的思路，还没有实际经营结果。",
+        "source": "Startup Ideas Podcast (Greg Isenberg)",
+        "title": "SaaS is dead?"
+      },
+      {
+        "id": "c52",
+        "reason": "谁：Lifehacker 作者，本人是跑者。怎么用：亲测把 Strava 训练数据接入 Gemini，问配速、比赛复盘、力量训练对跑步的影响。结果：有她自己的使用评价（以前对 Strava 的 AI 洞察不满意）。属于 AI 生活类，有具体问法。",
+        "source": "Lifehacker",
+        "title": "I Tested Strava's New Integration With Gemini, and I Have Thoughts"
+      },
+      {
+        "id": "c23",
+        "reason": "谁：Thariq，前 Claude Code 团队成员（约 9.5k 赞）。观点：用编程智能体容易陷入一种狂热，看着一直在忙、产出很多，其实什么都没推进，常常是在逃避生活里的别的事。是一线从业者对 AI 工作方式的反思，归 AI 认知类。",
+        "source": "Follow Builders (X)",
+        "title": "Thariq: There’s 100% a kind of mania you can get into with coding agents, where it feels"
+      },
+      {
+        "id": "c32",
+        "reason": "谁：Vercel CEO Guillermo Rauch。怎么用：在 AGENTS.md 里加一句，让智能体遇到 Vercel 有可改进的地方时直接发反馈。结果：Vercel 每天都在从这些智能体反馈里学习改产品。开发者马上就能照着做。",
+        "source": "Follow Builders (X)",
+        "title": "Guillermo Rauch: The future of software engineering is agents talking to other agents. Even acros"
+      },
+      {
+        "id": "c54",
+        "reason": "谁：Tom's Guide 作者。怎么用：用 Google Maps 的 Ask Maps 功能规划万圣节周末去哪。结果：它推荐的活动里有 7 个他真打算去。属于 AI 生活类，有亲测步骤和结果。",
+        "source": "Tom's Guide · AI",
+        "title": "I used Google’s ‘Ask Maps’ feature to plan my Halloween weekend festivities — 7 events it recommended I'd actually attend"
+      },
+      {
+        "id": "c7",
+        "reason": "谁：Box CEO Aaron Levie。观点：前沿用户和其他人之间的差距还在拉大，3 到 6 个月前固化下来的流程现在可能已经落后。对大厂读者有提醒作用，归 AI 认知类。",
+        "source": "Follow Builders (X)",
+        "title": "Aaron Levie: It’s almost incomprehensible how wide the distance is between someone who’s work"
+      },
+      {
+        "id": "c42",
+        "reason": "谁：swyx（Latent Space）。内容：AI Engineer 大会和内容业务的幕后，带数字（每月 600 万次观看、180 万独立观众）和策展思路。是一手的内容和社群经营复盘。",
+        "source": "Latent Space",
+        "title": "[AINews] Building AIE CODE: The top Coding Agent Conference"
+      },
+      {
+        "id": "c1",
+        "reason": "谁：Simon Willison。内容：OpenAI 跟进 Anthropic，100/200/500 美元档订阅送等额 API 额度，他打算用这笔额度上线公开 demo。对个人开发者是可以马上用上的省钱做法；c40 说的是同一波 OpenAI 订阅权益（用量上限翻倍），这条更贴近个人怎么用，留这条。",
+        "source": "Simon Willison",
+        "title": "API credits benefit for eligible ChatGPT subscriptions"
+      },
+      {
+        "id": "c55",
+        "reason": "谁：Tom's Guide 作者。内容：Alexa for Shopping 新增 100 多种用法（比价、追踪价格、下单），作者挑出他要先试的几个。属于 AI 生活类，但偏功能介绍，排在后面。",
+        "source": "Tom's Guide · AI",
+        "title": "Amazon just added 100+ new ways to use Alexa for Shopping —and these are the ones I'm trying first"
+      },
+      {
+        "id": "c45",
+        "reason": "谁：Supabase CEO Paul Copplestone（Lightcone 访谈）。观点：智能体和「人人自己写软件」正在推高数据库需求，提到 1300 万用户、5000 万个数据库、收入增长 4 倍。只有简介和章节，没有逐字稿，下一步能写的细节有限，作为 AI 认知类的候补。",
+        "source": "Y Combinator / Lightcone (YouTube)",
+        "title": "Why Everyone Is About To Have Their Own Database"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 21773,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2113,
+        "output_tokens_details": {
+          "thinking_tokens": 685
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 21773,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2113,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 21773,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 21773
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.216452
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 24339,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 7277,
+      "output_tokens_details": {
+        "thinking_tokens": 2063
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 24339,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 7277,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 24339,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 24339
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.34026
+  }
+}

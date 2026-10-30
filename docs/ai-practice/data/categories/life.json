@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c52"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-29",
+      "headline": "把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场",
+      "oneLiner": "Lifehacker 记者 Meredith Dietz 把 Strava 接入 Gemini 分析训练：取数确实比手工快，但第一次回答漏掉了天气对心率的影响，还把她至少八场马拉松说成一场。",
+      "who": "Meredith Dietz 跑过多场马拉松，是 Strava 付费用户，在美国测试刚推出的 Gemini 集成。",
+      "how": "在 Gemini 的 Personal Intelligence 里选 Strava，登录并授权。之后用自然语言提问，比如「同样心率下我是不是变快了」「比较几场马拉松前的训练量」。",
+      "result": "Gemini 先说她效率进步明显，她提醒后才补上：9 月长距离跑时气温 75–84°F，心率被推高。它算出她的轻松跑配速约 9:43/英里，接近马拉松配速，建议放慢到 10:30–11:15，她同意这条建议。",
+      "tryThis": "连接后问老数据时写明具体日期和地点。对讨好你的结论追问天气、地形和疲劳，把它当作取数工具，不当教练。",
+      "caveat": "授权页写明，Gemini 能读取活动、表现指标、训练计划、装备、俱乐部和个人资料；部分对话内容以及你的姓名和邮箱可能会共享给 Strava。连接是只读的，可以随时断开。",
+      "body": "Meredith Dietz 在 [Lifehacker](https://lifehacker.com/health/strava-integrates-with-google-gemini-personalized-training-insights?utm_medium=RSS) 测试了 Strava 和 Gemini 的新集成。设置只需三步：打开 Gemini 的 Personal Intelligence，在已连接应用里选 Strava，登录并授权。她要求分析 2019 年以来的每一次马拉松，Gemini 只找到 2026 年 10 月的一场。追问后它解释，受分页限制，它只能读到大约 2026 年夏天以后的记录。可在别的回答里，它又提到了她 2025 年和 2024 年的比赛，能读到多少数据并不稳定。\n\n她的用法可以照着做：**先让 AI 快速取数，再自己追问它可能漏掉的变量**。Gemini 推荐的追问，让她想到了原本没列的比较，例如不同年份赛前的周跑量和长距离频率。宽泛的问题，比如「我哪里做得对、哪里做错了」，得到的多是讨好式的通用建议。\n\n她认为这类建议大多是普通跑者看一眼数据也能得出的常识。对已经会看训练数据的人，这个功能主要省的是翻记录的时间，涉及重要数字时仍要回原始记录核对。",
+      "sources": [
+        {
+          "label": "Lifehacker",
+          "title": "I Tested Strava's New Integration With Gemini, and I Have Thoughts",
+          "url": "https://lifehacker.com/health/strava-integrates-with-google-gemini-personalized-training-insights?utm_medium=RSS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-02",
+      "issueDate": "2026-10-30",
+      "issueNumber": 21
+    },
+    {
+      "candidateIds": [
+        "c55"
+      ],
+      "category": "life",
+      "kind": "本周动态",
+      "eventDate": "2026-10-29",
+      "headline": "问 Alexa 会员值不值：一年省 30 美元，年费 139 美元",
+      "oneLiner": "Tom's Guide 作者 Elton Jones 让 Alexa for Shopping 统计他过去 12 个月 Prime 会员省了多少钱，答案是 30 美元，而年费是 139 美元。",
+      "who": "Tom's Guide 作者 Elton Jones，日常在 Amazon 购物，正在试用 Alexa for Shopping 新增的 100 多项功能。",
+      "how": "在 Amazon App 里直接问「今年 Prime 帮我省了多少钱」，Alexa 根据他的账户和订单记录给出分项明细。",
+      "result": "按 Alexa 给出的明细，他省了 27 美元配送费、3 美元会员折扣，Prime Visa 返现为 0，合计 30 美元。Alexa 同时提醒，Prime Video、音乐等权益没有算进去。",
+      "tryThis": "美国 Amazon 用户今天就可以问同样的问题，再问「我有一笔不认识的扣款」「我的退款到哪了」，核对账户里的订阅和账单。",
+      "caveat": "Alexa 只算得出能用钱衡量的部分，视频、音乐等权益值多少要自己判断。是否取消会员也要本人决定并操作。",
+      "body": "Amazon 给 Alexa for Shopping 加了 100 多项功能，[Tom's Guide](https://www.tomsguide.com/ai/amazon-just-added-100-new-ways-to-use-alexa-for-shopping-and-these-are-the-ones-im-trying-first) 的 Elton Jones 先试了查账。和钱有关的新功能包括：查 Prime 权益和累计节省、查礼品卡余额、报告不认识的扣款、追问退款进度，以及跳过下一次定期配送、调整配送频率。目前所有美国 Amazon 用户都能用。\n\n他问 Prime 省了多少，Alexa 给出的明细是：12 个月配送费省 27 美元，会员专享折扣省 3 美元，信用卡返现 0 美元，而年费是 139 美元。他把这当作功能好用的证明，但这组数字本身也说明，**光算省下的钱，会员费没有回本**，值不值要看他用了多少视频和音乐。\n\n可借鉴的做法是**让掌握你账户数据的 AI 替你算一笔账**：它能直接读到订单记录，比自己翻账单快。查到不认识的扣款、过期的定期配送，再自己决定取消或申诉。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "Amazon just added 100+ new ways to use Alexa for Shopping —and these are the ones I'm trying first",
+          "url": "https://www.tomsguide.com/ai/amazon-just-added-100-new-ways-to-use-alexa-for-shopping-and-these-are-the-ones-im-trying-first"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-30-04",
+      "issueDate": "2026-10-30",
+      "issueNumber": 21
+    },
+    {
+      "candidateIds": [
         "c64"
       ],
       "category": "life",
