@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-10-30 · 每小时自动上线的 AI 游戏公司，以及一年只省 30 美元的 Prime 会员</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-10-30/</link>
+      <description>每月 300 万美元 token，AI 智能体每小时自己上线一次；把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场；工具免费送，靠智能体和人工服务收钱；问 Alexa 会员值不值：一年省 30 美元，年费 139 美元；Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-10-30/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 每月 300 万美元 token，AI 智能体每小时自己上线一次<br>02:51 把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场<br>04:23 工具免费送，靠智能体和人工服务收钱<br>05:59 问 Alexa 会员值不值：一年省 30 美元，年费 139 美元<br>07:13 Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象<br>08:36 今天可以做的一件事</p><p><b>每月 300 万美元 token，AI 智能体每小时自己上线一次</b><br><a href="https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/">Simon Willison</a></p><p><b>把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场</b><br><a href="https://lifehacker.com/health/strava-integrates-with-google-gemini-personalized-training-insights?utm_medium=RSS">Lifehacker</a></p><p><b>工具免费送，靠智能体和人工服务收钱</b><br><a href="https://www.youtube.com/@GregIsenberg/search?query=SaaS%20is%20dead%3F">Startup Ideas Podcast (Greg Isenberg)</a></p><p><b>问 Alexa 会员值不值：一年省 30 美元，年费 139 美元</b><br><a href="https://www.tomsguide.com/ai/amazon-just-added-100-new-ways-to-use-alexa-for-shopping-and-these-are-the-ones-im-trying-first">Tom's Guide · AI</a></p><p><b>Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象</b><br><a href="https://x.com/levie/status/2116029912243184006">Follow Builders (X)</a> · <a href="https://x.com/trq212/status/2115937378674372783">Follow Builders (X)</a></p>]]></content:encoded>
+      <enclosure url="https://audio.jiabinlu.com/ai-practice-2026-10-30.mp3" length="3368253" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-10-30</guid>
+      <pubDate>Fri, 30 Oct 2026 22:45:41 GMT</pubDate>
+      <itunes:duration>00:09:21</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-10-29 · 一份幻灯片背后调用 200 次模型，去健身房前先让 AI 教练核对一遍计划</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-10-29/</link>
       <description>Gamma 拆解：一份幻灯片背后调用 200 次模型；去健身房前，先让三个 AI 教练核对训练计划；艾美奖编剧的做法：先花两天清空自己，再打开 AI；犹他州 34 名政府开发者试用 Claude Code 四周；陈然：二十人开发团队压到一两人之后，他怎么看裁员窗口（本集语音由 AI 合成）</description>

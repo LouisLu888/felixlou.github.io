@@ -1,5 +1,98 @@
 [
   {
+    "date": "2026-10-30",
+    "title": "每小时自动上线的 AI 游戏公司，以及一年只省 30 美元的 Prime 会员",
+    "summary": "每月 300 万美元 token，AI 智能体每小时自己上线一次；把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场；工具免费送，靠智能体和人工服务收钱；问 Alexa 会员值不值：一年省 30 美元，年费 139 美元；Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-30/",
+    "items": [
+      {
+        "headline": "每月 300 万美元 token，AI 智能体每小时自己上线一次",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "Building a multiplayer game world with autonomous Fable-class models",
+            "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/"
+          }
+        ]
+      },
+      {
+        "headline": "把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场",
+        "sources": [
+          {
+            "label": "Lifehacker",
+            "title": "I Tested Strava's New Integration With Gemini, and I Have Thoughts",
+            "url": "https://lifehacker.com/health/strava-integrates-with-google-gemini-personalized-training-insights?utm_medium=RSS"
+          }
+        ]
+      },
+      {
+        "headline": "工具免费送，靠智能体和人工服务收钱",
+        "sources": [
+          {
+            "label": "Startup Ideas Podcast (Greg Isenberg)",
+            "title": "SaaS is dead?",
+            "url": "https://www.youtube.com/@GregIsenberg/search?query=SaaS%20is%20dead%3F"
+          }
+        ]
+      },
+      {
+        "headline": "问 Alexa 会员值不值：一年省 30 美元，年费 139 美元",
+        "sources": [
+          {
+            "label": "Tom's Guide · AI",
+            "title": "Amazon just added 100+ new ways to use Alexa for Shopping —and these are the ones I'm trying first",
+            "url": "https://www.tomsguide.com/ai/amazon-just-added-100-new-ways-to-use-alexa-for-shopping-and-these-are-the-ones-im-trying-first"
+          }
+        ]
+      },
+      {
+        "headline": "Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: It’s almost incomprehensible how wide the distance is between someone who’s work",
+            "url": "https://x.com/levie/status/2116029912243184006"
+          },
+          {
+            "label": "Follow Builders (X)",
+            "title": "Thariq: There’s 100% a kind of mania you can get into with coding agents, where it feels",
+            "url": "https://x.com/trq212/status/2115937378674372783"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "每月 300 万美元 token，AI 智能体每小时自己上线一次"
+      },
+      {
+        "start": 171,
+        "title": "把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场"
+      },
+      {
+        "start": 263,
+        "title": "工具免费送，靠智能体和人工服务收钱"
+      },
+      {
+        "start": 359,
+        "title": "问 Alexa 会员值不值：一年省 30 美元，年费 139 美元"
+      },
+      {
+        "start": 433,
+        "title": "Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象"
+      },
+      {
+        "start": 516,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 561,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-10-30.mp3",
+    "audioBytes": 3368253,
+    "publishedAt": "2026-10-30T22:45:41.570Z"
+  },
+  {
     "date": "2026-10-29",
     "title": "一份幻灯片背后调用 200 次模型，去健身房前先让 AI 教练核对一遍计划",
     "summary": "Gamma 拆解：一份幻灯片背后调用 200 次模型；去健身房前，先让三个 AI 教练核对训练计划；艾美奖编剧的做法：先花两天清空自己，再打开 AI；犹他州 34 名政府开发者试用 Claude Code 四周；陈然：二十人开发团队压到一两人之后，他怎么看裁员窗口",
