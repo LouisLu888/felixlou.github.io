@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c1"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-30",
+      "headline": "两句提示词，Opus 把 NES 模拟器装进了 4B 模型",
+      "oneLiner": "Drew Breunig 用两条 Opus 5.5 提示词，把任天堂 NES 的 6502 CPU 模拟器做进了 Qwen3.5-4B 的权重，能（很慢地）运行超级马里奥。",
+      "who": "开发者 Drew Breunig 受 Divyansh Agrawal 的 qwenputer 项目启发，做了一个好玩的项目。",
+      "how": "第一条提示词只要求可行性研究：读 qwenputer 的文章和源码，判断能不能用同样方法模拟 NES 的芯片和内存，要多大的模型，换成更小的模型能不能达到原机时钟速度。第二条才说“开做”，并写明要什么：权重文件，加一个能指向游戏 ROM 运行的命令行工具。",
+      "result": "游戏 ROM 能在 Qwen 里运行，只是很慢。过程中 Opus 自己找到了 Christopher Pow 15 年前发布的 NES CPU 一致性测试，并用它来检验结果。",
+      "tryThis": "做一个陌生的技术项目时，先让 AI 只读资料、评估可行性和规模，你确认后再让它动手，同时写清最终要交付的文件和用法。",
+      "caveat": "这个方法之所以能成，是因为现成的权威测试集。没有客观测试标准的任务，AI 很难自己判断做没做对。",
+      "body": "Simon Willison 在[博客](https://simonwillison.net/2026/Oct/30/nesformer/)里介绍了 nesformer：Drew Breunig 把 NES 的 6502 CPU 模拟器“烤”进了 Qwen3.5-4B 的权重，可以在模型里玩超级马里奥，速度很慢。Drew 在 Hacker News 公开了他用的两条 Opus 5.5 提示词。\n\n这两条提示词的顺序可以直接借鉴。**第一步只问“能不能做、要多大”**，给 AI 一篇参考文章和源码，让它探索方案和模型规模，不急着写代码。**第二步才下指令**，并降低不必要的要求（“慢也没关系”），同时说清交付物：权重和一个命令行工具。范围清楚，AI 才有收尾的标准。\n\n更关键的一点是 Opus 找到了一套 15 年前的 CPU 一致性测试。工程、数据、财务类任务都可以照这个思路：开工前先问 AI“有没有现成的测试集、标准答案或对账数据可以用来验收”。有了这些，AI 的产出才能自动核对，不必全靠人逐行检查。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "dbreunig/nesformer",
+          "url": "https://simonwillison.net/2026/Oct/30/nesformer/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-31-02",
+      "issueDate": "2026-10-31",
+      "issueNumber": 22
+    },
+    {
+      "candidateIds": [
         "c2"
       ],
       "category": "productivity",

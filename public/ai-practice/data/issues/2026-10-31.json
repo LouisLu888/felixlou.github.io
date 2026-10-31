@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-31",
+  "title": "一个“无聊”的 Excel 网站月入 3 万美元，两句提示词让小模型跑起马里奥",
+  "items": [
+    {
+      "candidateIds": [
+        "c7"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
+      "eventDate": "2026-10-28",
+      "headline": "Excel 练习网站月入 3 万美元，月付涨价一倍后增长才起来",
+      "oneLiner": "Jake 的 Excel Exercises 过去四周收入 3 万多美元，约 2,500 名付费订阅用户；他把付款按月付、年付拆开算，发现月付几乎不赚钱，于是把月付价格翻倍。",
+      "who": "Jake 读金融出身，自学编程。他在 Starter Story 节目里讲了 Excel Exercises：这个网站用浏览器里的练习教 Excel 函数和快捷键，他做了五六年，前几年一直是业余在做。",
+      "how": "代码大部分是普通 HTML、CSS 和 JavaScript，他说现在新代码由 Claude 来写。网站跑在 GCP 上，云服务每月不到 100 美元，邮件工具 SendGrid 每月 35 美元，另外是 Stripe 手续费。",
+      "result": "他说网站现在每月收入 3 万到 3.5 万美元。过去四周约 5 万访客，约 2,500 名在付费的订阅用户。两年前辞职全职做以后，收入涨了大约 5 倍。",
+      "tryThis": "如果你有订阅收入，把付款记录导出成表格，按月付和年付分别算每个客户的终身价值（LTV）、获客成本和回本周期，再决定改哪档价格。",
+      "caveat": "从月收入 1 万涨到 3 万靠的是付费广告和企业团购，前提是单位经济账算得过来。AI 在这门生意里只负责写代码，增长主要来自 SEO、定价和口碑。",
+      "body": "Jake 在金融公司上班时，入职要看一长串 Excel 培训视频，他看得直犯困。后来做 Duolingo 时他想到“给 Excel 也做一个”。网站还很粗糙、也没推广，就有人付了 50 美元。这是他得到的第一个验证。产品采用免费增值模式：先给几节免费课，之后是硬付费墙。最难做的是让网页上的表格用起来像真的电子表格。[节目](https://www.youtube.com/@starterstory/search?query=I%20Make%20%2430K%2FMonth%20From%20the%20Most%20Boring%20Website%20on%20the%20Internet)\n\n增长分两段。从 0 到每月 1 万美元，靠 SEO：他在首页写了 1500 到 2000 字，讲这是什么、为什么比看视频学得好。有人劝他首页别放这么多字，他没删，因为成交都从这里来。从 1 万到 3 万，靠付费广告和大学、企业订单。用户自己用过觉得好，回公司推荐给老板，老板来问能不能一次开 50 个账号。\n\n最值得学的是他做的**分群核算**。Stripe 只给一个混在一起的平均 LTV，平均下来 LTV 和获客成本的比约 3:1，看着很健康。他把付款按月付、年付拆开以后才发现：年付客户很赚钱，月付客户只是勉强盈利，回本要四五个月。他把月付价格翻倍，年付不变，之后增长才真正起来。开始投广告前，先把这笔账按客户群拆开算。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "I Make $30K/Month From the Most Boring Website on the Internet",
+          "url": "https://www.youtube.com/@starterstory/search?query=I%20Make%20%2430K%2FMonth%20From%20the%20Most%20Boring%20Website%20on%20the%20Internet"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-31-01"
+    },
+    {
+      "candidateIds": [
+        "c1"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-10-30",
+      "headline": "两句提示词，Opus 把 NES 模拟器装进了 4B 模型",
+      "oneLiner": "Drew Breunig 用两条 Opus 5.5 提示词，把任天堂 NES 的 6502 CPU 模拟器做进了 Qwen3.5-4B 的权重，能（很慢地）运行超级马里奥。",
+      "who": "开发者 Drew Breunig 受 Divyansh Agrawal 的 qwenputer 项目启发，做了一个好玩的项目。",
+      "how": "第一条提示词只要求可行性研究：读 qwenputer 的文章和源码，判断能不能用同样方法模拟 NES 的芯片和内存，要多大的模型，换成更小的模型能不能达到原机时钟速度。第二条才说“开做”，并写明要什么：权重文件，加一个能指向游戏 ROM 运行的命令行工具。",
+      "result": "游戏 ROM 能在 Qwen 里运行，只是很慢。过程中 Opus 自己找到了 Christopher Pow 15 年前发布的 NES CPU 一致性测试，并用它来检验结果。",
+      "tryThis": "做一个陌生的技术项目时，先让 AI 只读资料、评估可行性和规模，你确认后再让它动手，同时写清最终要交付的文件和用法。",
+      "caveat": "这个方法之所以能成，是因为现成的权威测试集。没有客观测试标准的任务，AI 很难自己判断做没做对。",
+      "body": "Simon Willison 在[博客](https://simonwillison.net/2026/Oct/30/nesformer/)里介绍了 nesformer：Drew Breunig 把 NES 的 6502 CPU 模拟器“烤”进了 Qwen3.5-4B 的权重，可以在模型里玩超级马里奥，速度很慢。Drew 在 Hacker News 公开了他用的两条 Opus 5.5 提示词。\n\n这两条提示词的顺序可以直接借鉴。**第一步只问“能不能做、要多大”**，给 AI 一篇参考文章和源码，让它探索方案和模型规模，不急着写代码。**第二步才下指令**，并降低不必要的要求（“慢也没关系”），同时说清交付物：权重和一个命令行工具。范围清楚，AI 才有收尾的标准。\n\n更关键的一点是 Opus 找到了一套 15 年前的 CPU 一致性测试。工程、数据、财务类任务都可以照这个思路：开工前先问 AI“有没有现成的测试集、标准答案或对账数据可以用来验收”。有了这些，AI 的产出才能自动核对，不必全靠人逐行检查。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "dbreunig/nesformer",
+          "url": "https://simonwillison.net/2026/Oct/30/nesformer/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-31-02"
+    },
+    {
+      "candidateIds": [
+        "c50"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-29",
+      "headline": "停电断网时，电脑里还有一个能查急救知识的 AI",
+      "oneLiner": "Tom's Guide 作者 Amanda Caswell 试用免费离线助手 Survival LLM，在她的 Windows 电脑上装好用了约 36 分钟；开发者的测试里，16–31GB 内存机器推荐的模型 22 道急救题只答对 14 道。",
+      "who": "Amanda Caswell 所在地区季节性风暴频繁，停电后上不了网，连“冰箱断电后食物能放多久”这种问题都没处查。",
+      "how": "Survival LLM 是免费开源软件，支持 Windows 和 Mac。AI 模型在本机运行，并检索本地参考库，资料来自 Wikipedia、MedlinePlus、FEMA、CDC、iFixit，共约 150 万篇文章。回答时会列出引用了哪些文章，还可以导入自己的 PDF、Word 文件和笔记。",
+      "result": "她查到了停电期间食物保鲜、家电维修、轻度烧伤处理等内容。开发者在旧版资料库上测过 22 道急救题：最大的模型答对 21 道，16–31GB 内存机器推荐的模型答对 14 道。",
+      "tryThis": "趁有网时装好软件，把发电机说明书、紧急联系人、家庭应急计划导进去。之后在断网状态下试问几个问题，用它列出的原文核对答案。",
+      "caveat": "下载量大：资料库 1.3GB 到 9GB，模型 6GB 到 80GB。8GB 内存的电脑开发者不推荐跑模型。笔记本没电就用不了。安全相关的答案一定要看原文。",
+      "body": "Amanda Caswell 在 [Tom's Guide](https://www.tomsguide.com/ai/i-found-a-free-ai-chatbot-that-works-without-wi-fi-and-it-could-be-incredibly-useful-in-an-emergency) 写了她的试用经历。Survival LLM 需要提前联网下载模型和资料库，装好之后可以完全离线提问。开发者估计安装要 20 分钟到两个半小时，她在 Lenovo 的 Windows 11 电脑上用了约 36 分钟。支持搭载 Apple Silicon、系统为 macOS 14 及以上的 Mac，以及 64 位 Windows 10/11。开发者说问题和上传的文件都只留在本机。\n\n她最看重的是**答案附带出处**，可以直接读相关段落，这对安全类问题很重要。可惜准确率和电脑配置关系很大：内存少的机器只能用较小的模型，答对率明显下降，8GB 内存的机器基本只能用检索功能。\n\n家里有 16GB 以上内存的电脑，可以把它当作应急预案的一部分，用处更像一本可检索的离线百科，代替不了专业急救。软件不在应用商店上架，安装时会弹出安全提示，装不装要自己判断。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I found a free AI chatbot that works without Wi-Fi — and it could be incredibly useful in an emergency",
+          "url": "https://www.tomsguide.com/ai/i-found-a-free-ai-chatbot-that-works-without-wi-fi-and-it-could-be-incredibly-useful-in-an-emergency"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-31-03"
+    },
+    {
+      "candidateIds": [
+        "c2"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-30",
+      "headline": "开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断",
+      "oneLiner": "Nathan Lambert 认为，GLM-5.3 这类开放权重模型带来的网络安全风险是“加速”，还不是“跳变”。不过他也说自己不是安全专家，对这个判断有些不安。",
+      "who": "Nathan Lambert 长期研究和训练开放模型，这篇文章发在他的 newsletter Interconnects 上。几周前他写过：Claude Mythos 就算意外以开放权重泄露，世界也“大体没事”。这篇是回应批评后的复盘。",
+      "how": "他的看法是：开放模型给攻防双方都添了力量，资源更多的公司会比攻击者更快用上开放模型；最近的漏洞潮大多是闭源模型发现的；整个问题主要关乎 AI 能力怎样扩散，开源还是闭源是次要的。",
+      "result": "他的依据有三条。第一，GLM-5.3 被认为跨过了这条能力门槛，权重公开已经一个多月，公开证据里看不出局面有大的变化。第二，Epoch AI 用 GLM 5.3 做出了一个 Firefox 漏洞利用，但攻击还需要搭网站、引人访问等多个环节。第三，安全研究者 Joshua Saxe 的数据显示，攻击数量早在 ChatGPT 出现前就在指数增长。",
+      "tryThis": "如果你维护线上产品，可以先按他的预期准备：接下来会是一段漏洞集中被披露、需要密集打补丁的时期。参考他引用的说法，把攻击者看成有固定业务流程的生意人，按他们惯用的手法排查风险，不要把每个新漏洞都当末日。",
+      "caveat": "反方观点他也引用了：Rob Wiblin 和 Anthropic 在 4 月都警告后果可能很严重。他承认，对没预料到会有一段动荡期的人来说，“没事”这个词说轻了。",
+      "body": "Nathan Lambert 在 [Interconnects](https://www.interconnects.ai/p/was-i-wrong-about-open-models-and) 里回顾了被称为“Black October”的这段时间：PHP2Shell、GitLab 等严重漏洞接连被披露，期间 Binance 又出了加密货币安全事件。他仍然基本坚持原来的判断，同时修正了说法：所谓“没事”，指的是整个行业被迫换一种方式维护软件，这个过程会很贵、很辛苦，但社会不至于失序。\n\n**这里要分清“他认为”和“已经发生”。**已经发生的是漏洞数量激增，WSJ 报道网络安全应急人员已经忙不过来。他的判断是：开放模型目前部署成本高、算力紧张，如果近期有攻击用到开放模型，很可能是通过某个防护很差的 API。他自己也说这个判断误差很大。\n\n对读者来说，这篇文章提醒的是**把注意力放回整个生态层面**：补丁、依赖库、部署方式，比争论该怪开源还是闭源更实际。",
+      "sources": [
+        {
+          "label": "Interconnects",
+          "title": "Was I wrong about open models & cyber risks?",
+          "url": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-31-04"
+    },
+    {
+      "candidateIds": [
+        "c40"
+      ],
+      "category": "saas",
+      "kind": "机会观察",
+      "eventDate": "2026-10-31",
+      "headline": "同一个 Agent 任务，不用提示词缓存要贵 3.6 倍",
+      "oneLiner": "Agent Arena 分析了 2.6 万个会话：前十名的 Agent 如果不用提示词缓存，一个任务的成本是用缓存时的 3.6 倍；Fable 5.1 的典型任务，用缓存 7.44 美元，不用 27 美元。",
+      "who": "Latent Space 的 AINews 栏目汇总了本周和模型成本有关的几组数据，适合正在做 AI 产品、自己付模型账单的人。",
+      "how": "Agent Arena 统计了 2.6 万个 Agent 会话的成本。同期 Anthropic 调整了订阅档位：Max 5x 改名 Max，每月 100 美元；Max 20x 改名 Ultra，每月 200 美元。",
+      "result": "Agent Arena 称，缓存每失效一次，任务账单增加约 5%。Anthropic 宣布，通过验证的 Ultra 账户取消 5 小时会话限制，每周额度不变，新账户要等验证完成。",
+      "tryThis": "把产品里 Agent 的调用日志按是否命中缓存拆开，算出每个任务的平均成本，再检查哪些步骤反复让缓存失效。",
+      "caveat": "3.6 倍是这批榜单 Agent 的统计结果，你的任务结构不同，节省比例也会不同。关于订阅补贴的估算来自第三方推算，未经核实。",
+      "body": "[Latent Space](https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/) 本期汇总了几组成本数据。对做 Micro SaaS 的人最有用的是 Agent Arena 这组：用不用提示词缓存，同一个任务的成本差 3.6 倍；缓存只要失效一次，账单就多约 5%。做定价时，模型成本应该按**实际缓存命中率**算，不能直接拿 API 标价去乘。\n\n订阅这边，Claude Ultra 取消了 5 小时限制，对重度个人开发者来说，用订阅干活的空间更大了。同一期还提到 SemiAnalysis 的一份推算：订阅只带来约 18% 的收入，却用掉了一半以上的算力。这个数字未经核实，不过它提醒了一个风险：今天便宜的订阅额度，不一定会一直这么便宜。\n\n同期还有一条和流量有关的消息：Google 首席商务官 Philipp Schindler 说，AI Mode 的变现水平较低，影响了搜索收入。像头条那样靠 SEO 起家的生意，可以开始关注自己的搜索流量有没有变化。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?",
+          "url": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-31-05"
+    }
+  ],
+  "action": "打开你的收款后台（Stripe 或其他平台），导出最近半年的付款记录到表格，按月付、年付（或不同价格档位）分开，各算一个平均客户价值和回本周期。没有订阅产品的话，就拿公司里的一个付费工具或自己的一个副业项目来算。算完后看一个问题：哪一群客户其实不赚钱？再试着回答第二个问题：如果只调这一档的价格，最坏情况会损失多少？这张表就是你下次改定价时的依据。",
+  "readingMinutes": 9,
+  "meta": {
+    "generatedAt": "2026-10-31T14:44:50.608Z",
+    "engine": "cli",
+    "candidateCount": 50,
+    "candidatesBySource": {
+      "Simon Willison": 1,
+      "Interconnects": 1,
+      "Ali Abdaal": 2,
+      "Matt Wolfe": 2,
+      "Starter Story Podcast": 1,
+      "Starter Story (YouTube)": 1,
+      "Follow Builders (X)": 31,
+      "Latent Space": 1,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 3,
+      "Dwarkesh Podcast": 1,
+      "Riley Brown": 1,
+      "App Masters (Steve P. Young)": 1,
+      "Tom's Guide · AI": 3
+    },
+    "shortlist": [
+      {
+        "id": "c7",
+        "reason": "谁：Jake，独立开发者。怎么做：做了一个极简的 Excel 练习网站 Excel Exercises，节目里讲了怎么搭、怎么增长。结果：月入 3 万美元。材料是逐字稿，经营细节最全，个人可以照着试。",
+        "source": "Starter Story Podcast",
+        "title": "I Make $30K/Month From the Most Boring Website on the Internet"
+      },
+      {
+        "id": "c1",
+        "reason": "谁：Drew Breunig。怎么用 AI：用 Opus 5.5 的提示词，把 NES 的 6502 CPU 模拟器写进 Qwen3.5-4B 的权重。结果：能在模型里（很慢地）运行超级马里奥。本人在 HN 公开了提示词，是一手的开发过程。",
+        "source": "Simon Willison",
+        "title": "dbreunig/nesformer"
+      },
+      {
+        "id": "c8",
+        "reason": "谁：Kourosh。起因：住院时看父亲写一封邮件花了三天。怎么用 AI：受 ChatGPT 听写启发，做了一个哪里都能用的语音转文字 App Voicy。结果：作为副业月入 1.6–2 万美元。只有简介，但起因、产品和收入都写清了。",
+        "source": "Starter Story (YouTube)",
+        "title": "Bro built a $18k MRR app because his dad took 3 days to write one email 👍"
+      },
+      {
+        "id": "c41",
+        "reason": "谁：Spawn 的十人团队。怎么用 AI：让一组 AI agent 全天候运转。结果：一个月提交 7.7 万次代码改动。节目总结了五条企业可借鉴的做法。只有简介，但规模和数字很具体，可以作为团队工作流案例。",
+        "source": "The AI Daily Brief",
+        "title": "How the Most AI-Pilled Company in the World Works"
+      },
+      {
+        "id": "c50",
+        "reason": "AI 生活类。谁：作者本人，赶上季节性风暴停电断网。怎么用 AI：试用免费的离线聊天机器人 Survival LLM，在本机运行、不用联网，用来查应急问题。普通人能直接照做。",
+        "source": "Tom's Guide · AI",
+        "title": "I found a free AI chatbot that works without Wi-Fi — and it could be incredibly useful in an emergency"
+      },
+      {
+        "id": "c49",
+        "reason": "AI 生活类。谁：作者本人。怎么用 AI：用 Megu AI 穿搭 App 解决一个连续三天的穿衣难题。结果：自述改变了自己规划穿搭的方式。是全文亲测，有具体场景。",
+        "source": "Tom's Guide · AI",
+        "title": "I used the Megu AI styling app to solve my three-day clothing dilemma — and it changed how I plan my outfits"
+      },
+      {
+        "id": "c2",
+        "reason": "AI 认知类。谁：Nathan Lambert，一线研究者。内容：结合 10 月密集出现的严重漏洞披露（PHP2Shell、GitLab 等），回头检视自己对开源模型网络安全风险的判断，有事实依据。",
+        "source": "Interconnects",
+        "title": "Was I wrong about open models & cyber risks?"
+      },
+      {
+        "id": "c40",
+        "reason": "AI 认知类。谁：Latent Space 的 swyx。内容：分析 Google AI Mode 和 AI 摘要挤占搜索收入、股价下跌约 15%，对做内容和靠 SEO 获客的人有直接参考。",
+        "source": "Latent Space",
+        "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?"
+      },
+      {
+        "id": "c39",
+        "reason": "AI 认知类。谁：Peter Steinberger，OpenClaw 作者。内容：谈 AI 重新定义工作时工程师的身份焦虑，以及企业为什么对此耐心有限，是一线从业者的看法。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Steinberger: Bullish on Andy Yen and Proton. He gets it.\n\nThe culture war, or rather the loss"
+      },
+      {
+        "id": "c23",
+        "reason": "谁：Builder Zara Zhang。内容：一期视频随笔，讲不是设计师也能用 AI 做出有品味的东西；她另一条帖子提到视频剪辑是用一条长提示词交给编程 agent 完成的。摘录信息偏少，排在最后作为备选。",
+        "source": "Follow Builders (X)",
+        "title": "Zara Zhang: Video essay: how to create tasteful things with AI without being a designer http"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 20251,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1644,
+        "output_tokens_details": {
+          "thinking_tokens": 489
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 20251,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1644,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 20251,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 20251
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.194896
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 32660,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 8193,
+      "output_tokens_details": {
+        "thinking_tokens": 2556
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 32660,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 8193,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 32660,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 32660
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.425148
+  }
+}

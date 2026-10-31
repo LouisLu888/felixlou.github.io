@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c50"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-10-29",
+      "headline": "停电断网时，电脑里还有一个能查急救知识的 AI",
+      "oneLiner": "Tom's Guide 作者 Amanda Caswell 试用免费离线助手 Survival LLM，在她的 Windows 电脑上装好用了约 36 分钟；开发者的测试里，16–31GB 内存机器推荐的模型 22 道急救题只答对 14 道。",
+      "who": "Amanda Caswell 所在地区季节性风暴频繁，停电后上不了网，连“冰箱断电后食物能放多久”这种问题都没处查。",
+      "how": "Survival LLM 是免费开源软件，支持 Windows 和 Mac。AI 模型在本机运行，并检索本地参考库，资料来自 Wikipedia、MedlinePlus、FEMA、CDC、iFixit，共约 150 万篇文章。回答时会列出引用了哪些文章，还可以导入自己的 PDF、Word 文件和笔记。",
+      "result": "她查到了停电期间食物保鲜、家电维修、轻度烧伤处理等内容。开发者在旧版资料库上测过 22 道急救题：最大的模型答对 21 道，16–31GB 内存机器推荐的模型答对 14 道。",
+      "tryThis": "趁有网时装好软件，把发电机说明书、紧急联系人、家庭应急计划导进去。之后在断网状态下试问几个问题，用它列出的原文核对答案。",
+      "caveat": "下载量大：资料库 1.3GB 到 9GB，模型 6GB 到 80GB。8GB 内存的电脑开发者不推荐跑模型。笔记本没电就用不了。安全相关的答案一定要看原文。",
+      "body": "Amanda Caswell 在 [Tom's Guide](https://www.tomsguide.com/ai/i-found-a-free-ai-chatbot-that-works-without-wi-fi-and-it-could-be-incredibly-useful-in-an-emergency) 写了她的试用经历。Survival LLM 需要提前联网下载模型和资料库，装好之后可以完全离线提问。开发者估计安装要 20 分钟到两个半小时，她在 Lenovo 的 Windows 11 电脑上用了约 36 分钟。支持搭载 Apple Silicon、系统为 macOS 14 及以上的 Mac，以及 64 位 Windows 10/11。开发者说问题和上传的文件都只留在本机。\n\n她最看重的是**答案附带出处**，可以直接读相关段落，这对安全类问题很重要。可惜准确率和电脑配置关系很大：内存少的机器只能用较小的模型，答对率明显下降，8GB 内存的机器基本只能用检索功能。\n\n家里有 16GB 以上内存的电脑，可以把它当作应急预案的一部分，用处更像一本可检索的离线百科，代替不了专业急救。软件不在应用商店上架，安装时会弹出安全提示，装不装要自己判断。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I found a free AI chatbot that works without Wi-Fi — and it could be incredibly useful in an emergency",
+          "url": "https://www.tomsguide.com/ai/i-found-a-free-ai-chatbot-that-works-without-wi-fi-and-it-could-be-incredibly-useful-in-an-emergency"
+        }
+      ],
+      "region": "US",
+      "id": "2026-10-31-03",
+      "issueDate": "2026-10-31",
+      "issueNumber": 22
+    },
+    {
+      "candidateIds": [
         "c52"
       ],
       "category": "life",

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断｜AI 实干派</title>
+  <meta name="description" content="Nathan Lambert 认为，GLM-5.3 这类开放权重模型带来的网络安全风险是“加速”，还不是“跳变”。不过他也说自己不是安全专家，对这个判断有些不安。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-10-31-04/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断｜AI 实干派">
+  <meta property="og:description" content="Nathan Lambert 认为，GLM-5.3 这类开放权重模型带来的网络安全风险是“加速”，还不是“跳变”。不过他也说自己不是安全专家，对这个判断有些不安。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-10-31-04/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-31.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断｜AI 实干派">
+  <meta name="twitter:description" content="Nathan Lambert 认为，GLM-5.3 这类开放权重模型带来的网络安全风险是“加速”，还不是“跳变”。不过他也说自己不是安全专家，对这个判断有些不安。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-10-31.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip active" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">22</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">6</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">8</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">11</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">13</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">23</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">13</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-10-31/">AI 实干派 022 · 2026 年 10 月 31 日 · 周六</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-10-30<span>·</span>US</div>
+        <h1>开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断</h1>
+        <p class="summary">Nathan Lambert 认为，GLM-5.3 这类开放权重模型带来的网络安全风险是“加速”，还不是“跳变”。不过他也说自己不是安全专家，对这个判断有些不安。</p>
+        <dl class="facts"><dt>谁说的</dt><dd>Nathan Lambert 长期研究和训练开放模型，这篇文章发在他的 newsletter Interconnects 上。几周前他写过：Claude Mythos 就算意外以开放权重泄露，世界也“大体没事”。这篇是回应批评后的复盘。</dd><dt>核心观点</dt><dd>他的看法是：开放模型给攻防双方都添了力量，资源更多的公司会比攻击者更快用上开放模型；最近的漏洞潮大多是闭源模型发现的；整个问题主要关乎 AI 能力怎样扩散，开源还是闭源是次要的。</dd><dt>依据</dt><dd>他的依据有三条。第一，GLM-5.3 被认为跨过了这条能力门槛，权重公开已经一个多月，公开证据里看不出局面有大的变化。第二，Epoch AI 用 GLM 5.3 做出了一个 Firefox 漏洞利用，但攻击还需要搭网站、引人访问等多个环节。第三，安全研究者 Joshua Saxe 的数据显示，攻击数量早在 ChatGPT 出现前就在指数增长。</dd><dt>对你的意义</dt><dd>如果你维护线上产品，可以先按他的预期准备：接下来会是一段漏洞集中被披露、需要密集打补丁的时期。参考他引用的说法，把攻击者看成有固定业务流程的生意人，按他们惯用的手法排查风险，不要把每个新漏洞都当末日。</dd><dt>争议·条件</dt><dd>反方观点他也引用了：Rob Wiblin 和 Anthropic 在 4 月都警告后果可能很严重。他承认，对没预料到会有一段动荡期的人来说，“没事”这个词说轻了。</dd></dl>
+        <div class="body"><p>Nathan Lambert 在 <a href="https://www.interconnects.ai/p/was-i-wrong-about-open-models-and">Interconnects</a> 里回顾了被称为“Black October”的这段时间：PHP2Shell、GitLab 等严重漏洞接连被披露，期间 Binance 又出了加密货币安全事件。他仍然基本坚持原来的判断，同时修正了说法：所谓“没事”，指的是整个行业被迫换一种方式维护软件，这个过程会很贵、很辛苦，但社会不至于失序。</p><p><strong>这里要分清“他认为”和“已经发生”。</strong>已经发生的是漏洞数量激增，WSJ 报道网络安全应急人员已经忙不过来。他的判断是：开放模型目前部署成本高、算力紧张，如果近期有攻击用到开放模型，很可能是通过某个防护很差的 API。他自己也说这个判断误差很大。</p><p>对读者来说，这篇文章提醒的是<strong>把注意力放回整个生态层面</strong>：补丁、依赖库、部署方式，比争论该怪开源还是闭源更实际。</p></div>
+        <div class="sources">原文：<a href="https://www.interconnects.ai/p/was-i-wrong-about-open-models-and" target="_blank" rel="noopener" title="Was I wrong about open models &amp; cyber risks?">Interconnects</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-10-31/">← 当期全部 5 条</a></span>
+        <span><a href="/ai-practice/c/perspective/">更多「AI 认知」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-30T15:09:29.189Z",
+  "updatedAt": "2026-10-31T14:44:56.416Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 21
+      "count": 22
     },
     {
       "id": "consulting",
@@ -27,7 +27,7 @@
       "name": "Micro SaaS",
       "en": "AI micro SaaS",
       "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
-      "count": 9
+      "count": 11
     },
     {
       "id": "app",
@@ -41,17 +41,54 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 22
+      "count": 23
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 12
+      "count": 13
     }
   ],
   "days": [
+    {
+      "date": "2026-10-31",
+      "number": 22,
+      "title": "一个“无聊”的 Excel 网站月入 3 万美元，两句提示词让小模型跑起马里奥",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 9,
+      "itemCount": 5,
+      "categoryCounts": {
+        "saas": 2,
+        "productivity": 1,
+        "life": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "saas",
+          "headline": "Excel 练习网站月入 3 万美元，月付涨价一倍后增长才起来"
+        },
+        {
+          "category": "productivity",
+          "headline": "两句提示词，Opus 把 NES 模拟器装进了 4B 模型"
+        },
+        {
+          "category": "life",
+          "headline": "停电断网时，电脑里还有一个能查急救知识的 AI"
+        },
+        {
+          "category": "perspective",
+          "headline": "开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断"
+        },
+        {
+          "category": "saas",
+          "headline": "同一个 Agent 任务，不用提示词缓存要贵 3.6 倍"
+        }
+      ]
+    },
     {
       "date": "2026-10-30",
       "number": 21,
