@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-10-31",
+    "title": "一个“无聊”的 Excel 网站月入 3 万美元，两句提示词让小模型跑起马里奥",
+    "summary": "Excel 练习网站月入 3 万美元，月付涨价一倍后增长才起来；两句提示词，Opus 把 NES 模拟器装进了 4B 模型；停电断网时，电脑里还有一个能查急救知识的 AI；开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断；同一个 Agent 任务，不用提示词缓存要贵 3.6 倍",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-10-31/",
+    "items": [
+      {
+        "headline": "Excel 练习网站月入 3 万美元，月付涨价一倍后增长才起来",
+        "sources": [
+          {
+            "label": "Starter Story Podcast",
+            "title": "I Make $30K/Month From the Most Boring Website on the Internet",
+            "url": "https://www.youtube.com/@starterstory/search?query=I%20Make%20%2430K%2FMonth%20From%20the%20Most%20Boring%20Website%20on%20the%20Internet"
+          }
+        ]
+      },
+      {
+        "headline": "两句提示词，Opus 把 NES 模拟器装进了 4B 模型",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "dbreunig/nesformer",
+            "url": "https://simonwillison.net/2026/Oct/30/nesformer/"
+          }
+        ]
+      },
+      {
+        "headline": "停电断网时，电脑里还有一个能查急救知识的 AI",
+        "sources": [
+          {
+            "label": "Tom's Guide · AI",
+            "title": "I found a free AI chatbot that works without Wi-Fi — and it could be incredibly useful in an emergency",
+            "url": "https://www.tomsguide.com/ai/i-found-a-free-ai-chatbot-that-works-without-wi-fi-and-it-could-be-incredibly-useful-in-an-emergency"
+          }
+        ]
+      },
+      {
+        "headline": "开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断",
+        "sources": [
+          {
+            "label": "Interconnects",
+            "title": "Was I wrong about open models & cyber risks?",
+            "url": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and"
+          }
+        ]
+      },
+      {
+        "headline": "同一个 Agent 任务，不用提示词缓存要贵 3.6 倍",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?",
+            "url": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Excel 练习网站月入 3 万美元，月付涨价一倍后增长才起来"
+      },
+      {
+        "start": 188,
+        "title": "两句提示词，Opus 把 NES 模拟器装进了 4B 模型"
+      },
+      {
+        "start": 287,
+        "title": "停电断网时，电脑里还有一个能查急救知识的 AI"
+      },
+      {
+        "start": 386,
+        "title": "开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断"
+      },
+      {
+        "start": 489,
+        "title": "同一个 Agent 任务，不用提示词缓存要贵 3.6 倍"
+      },
+      {
+        "start": 585,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 636,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-10-31.mp3",
+    "audioBytes": 3813501,
+    "publishedAt": "2026-10-31T22:46:18.304Z"
+  },
+  {
     "date": "2026-10-30",
     "title": "每小时自动上线的 AI 游戏公司，以及一年只省 30 美元的 Prime 会员",
     "summary": "每月 300 万美元 token，AI 智能体每小时自己上线一次；把 Strava 跑步数据交给 Gemini，它说八场马拉松只有一场；工具免费送，靠智能体和人工服务收钱；问 Alexa 会员值不值：一年省 30 美元，年费 139 美元；Levie 说 AI 前沿差距在拉大，前 Claude Code 成员提醒忙碌假象",
