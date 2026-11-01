@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-31T14:44:56.416Z",
+  "updatedAt": "2026-11-01T14:44:39.607Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 22
+      "count": 23
     },
     {
       "id": "consulting",
@@ -27,21 +27,21 @@
       "name": "Micro SaaS",
       "en": "AI micro SaaS",
       "desc": "窄需求、首批客户、定价、模型成本、续费、利润与维护",
-      "count": 11
+      "count": 12
     },
     {
       "id": "app",
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 13
+      "count": 14
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 23
+      "count": 24
     },
     {
       "id": "life",
@@ -52,6 +52,39 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-11-01",
+      "number": 23,
+      "title": "ChatGPT 插件一周带来 1 万美元 MRR 却留不住人，理财公司让 agent 反过来提醒顾问",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 7,
+      "itemCount": 4,
+      "categoryCounts": {
+        "saas": 1,
+        "productivity": 1,
+        "app": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "saas",
+          "headline": "ChatGPT 插件一周带来 1 万美元 MRR，留存才是难题"
+        },
+        {
+          "category": "productivity",
+          "headline": "理财公司让 agent 干活，涉及钱的操作一律交给人"
+        },
+        {
+          "category": "app",
+          "headline": "50 位创作者每月做 600 条付费广告，撑起 AI 工具的增长"
+        },
+        {
+          "category": "perspective",
+          "headline": "Box CEO 的检验法：没有 AI 也能做出来，说明用得不够狠"
+        }
+      ]
+    },
     {
       "date": "2026-10-31",
       "number": 22,

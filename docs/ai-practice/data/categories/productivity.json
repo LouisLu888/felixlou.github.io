@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c22"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-10-31",
+      "headline": "理财公司让 agent 干活，涉及钱的操作一律交给人",
+      "oneLiner": "Arca 首席 AI 工程师 Aman Singh 说，公司的 agent 任务最长要跑十天，agent 只负责分析和提方案，交易和资金划转全部由人类顾问执行。",
+      "who": "Aman Singh 是理财服务公司 Arca 的首席 AI 工程师，在 AI Engineer New York 期间接受了 Latent Space 采访。",
+      "how": "公司自建 harness，按内部 benchmark 给每类任务挑模型，主力模型是 Claude。每个客户有一套持久记忆，记录进展、待办和负责人。agent 写查询代码后，系统把代码转成固定格式，再经过护栏检查才能访问后台数据。",
+      "result": "他说后台大部分工作由 agent 完成，安全限制全部是确定性规则。另有一个 meta-agent 分析顾问反馈和 agent 运行记录，给 harness 提改进建议。",
+      "tryThis": "如果你在团队里搭 agent 流程，先列出哪些动作有风险，用代码规则直接禁止 agent 执行，别只靠 prompt 约束。",
+      "caveat": "这套做法需要工程团队自建 harness、记忆系统和数据护栏，个人或小团队一时搭不起来。",
+      "body": "Singh 在[访谈](https://latent.space/p/arca/)里说，理财工作的特点是周期长，但并非一直在运行：「走走停停，中间有很多参与者、决策点和交接。」所以 Arca 给每个客户建了记忆，agent 会持续写入：目前进展到哪、接下来几天要做什么、长期在跟踪什么、每一步归谁负责。他的概括是「agent 提示人，多过人提示 agent」。\n\n普通团队可以借鉴三点。**风险动作用代码规则禁掉**，不交给模型判断。**agent 写的代码不直接执行**，先转成预先约定的格式再检查。**人的修改意见回流成评测**，用来改进流程。节目里还讲了处理一笔 10 万美元税单时的人工审批，以及帮客户找出隐藏费用的例子。\n\n自己掌握 harness 还有一个好处：换模型供应商不受限制。代价是要有工程投入来维护。",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+          "url": "https://latent.space/p/arca/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-01-02",
+      "issueDate": "2026-11-01",
+      "issueNumber": 23
+    },
+    {
+      "candidateIds": [
         "c1"
       ],
       "category": "productivity",

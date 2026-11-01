@@ -12,6 +12,33 @@
       ],
       "category": "saas",
       "kind": "经营复盘",
+      "eventDate": "2026-11-01",
+      "headline": "ChatGPT 插件一周带来 1 万美元 MRR，留存才是难题",
+      "oneLiner": "Post Bridge 创始人 Jack Friks 说，产品月收入约 4 万美元、1,600 个客户，但每月流失 20%；上架 ChatGPT 插件那周新增约 1 万美元 MRR，热度只持续了约五天。",
+      "who": "Jack Friks 一个人做社媒多平台定时发布工具 Post Bridge，主要靠自己在 X 上公开创业来获客。Jason Cohen 和 Tibo Louis-Lucas 在 Smart Bear Live 上帮他做了一场诊断。",
+      "how": "他给产品做了 MCP 和 API，最近在 MCP 里加了交互 widget，让用户在 agent 里点几下就能连好账号。产品还上架了 ChatGPT 插件市场。",
+      "result": "他说插件上架后注册量创下两年最高，那周新增约 1 万美元 MRR，五天后回落。用 API 的用户留存大约是其他用户的两倍。在他统计的 1,000 次取消里，三类人各占约三分之一：取消时还在发帖的、一次都没发过的、慢慢不用了的。",
+      "tryThis": "把最近的取消用户按这三类分开，先去访谈「还在用却走了」的那批人。从 agent 渠道进来的新用户要主动带他们上手，别等他们自己来反馈。",
+      "caveat": "插件市场带来的流量来得快去得也快。Tibo 推测平台会按使用量调整推荐，用户上手不顺，插件可能就不再被推荐了。",
+      "body": "Post Bridge 的增长曲线基本是两段：先涨到一千多个订阅用户后走平，后来跟着 OpenClaw 热潮又涨了约 500 个，之后再次走平。Jason Cohen 在[节目](https://smartbearlive.transistor.fm/12)里说，每月 20% 的流失意味着加一个客户就走一个，这给增长封了顶。他拿 Buffer 做对照，Buffer 约 7%。\n\n几条建议可以直接用。**一是主动带用户上手。**Jason 举了 HubSpot 的例子：参加一对一上手引导的用户留存是其他人的四倍，HubSpot 干脆把引导设成必选步骤。**二是只做 LLM 做不好的事。**授权对接、图片视频的格式处理、带阈值的旧帖循环库（比如只重发点赞过 5 的）、效果统计，用户都更愿意交给工具，不会自己让 agent 去搭。**三是先选定客户。**被问到产品最擅长什么，Jack 答「我不知道」。Tibo 建议改成统一价：每个账号 1 美元，最少 30 个。理由是管理 15 个以上账号的用户心理价位在 500 美元，不是 50 美元。\n\n给 agent 时代做工具的人可以参考：插件市场是一个新的获客渠道，但留下来的人才算数，留存要分批次看。",
+      "sources": [
+        {
+          "label": "Smart Bear Live",
+          "title": "E12 w/ Tibo Maker: How can a $40K MRR SaaS be losing 20% of Its Customers",
+          "url": "https://smartbearlive.transistor.fm/12"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-01-01",
+      "issueDate": "2026-11-01",
+      "issueNumber": 23
+    },
+    {
+      "candidateIds": [
+        "c7"
+      ],
+      "category": "saas",
+      "kind": "经营复盘",
       "eventDate": "2026-10-28",
       "headline": "Excel 练习网站月入 3 万美元，月付涨价一倍后增长才起来",
       "oneLiner": "Jake 的 Excel Exercises 过去四周收入 3 万多美元，约 2,500 名付费订阅用户；他把付款按月付、年付拆开算，发现月付几乎不赚钱，于是把月付价格翻倍。",

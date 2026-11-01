@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c15"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-10-31",
+      "headline": "Box CEO 的检验法：没有 AI 也能做出来，说明用得不够狠",
+      "oneLiner": "Aaron Levie 10 月 31 日发帖说，大约半年前 AI 还只能帮人把原本的活做快一点，现在的产出应该明显超过以前能做到的水平。",
+      "who": "Aaron Levie 是 Box 的 CEO，他在 X 上发了一条帖子，获得 600 多个赞。",
+      "how": "他提出一个简单的检验：如果你现在做的事在没有 AI 时也做得出来，你多半还没把 AI 用到位。",
+      "result": "他的依据是能力变化：约半年前，AI 最多帮你更快地产出原本就会产出的东西；现在原型应当完全可交互、功能更多，调研应当覆盖这个主题能找到的所有事实，业务流程应当能从过去的失败里学习。",
+      "tryThis": "给下一个任务设两个目标：一个是按老标准做完，一个是只有借助 AI 才够得着的版本，比如原型多做一项关键功能，调研多覆盖几个分析维度。",
+      "caveat": "Levie 自己也说 AI 的智能「仍然参差不齐」，并非每个维度都强过人。产出变多了，检查的工作量也会跟着变大。",
+      "body": "Levie 在[帖子](https://x.com/levie/status/2116652002830963114)里的判断是：我们正在进入一个 AI 在多数维度上比人更聪明的阶段，人和 AI 各补所长，结果会出现质的不同。这是他个人的判断，不是已经发生的事实。\n\n这个检验对工作方式有实际影响。很多人用 AI 的方式是把原来的流程提速，比如更快地写文档、更快地出原型。按他的标准，这只是半年前的用法。**把目标往上调**，比如原型可以直接交互，调研可以覆盖所有维度，再看 AI 能把你带到哪里。\n\n要注意这条标准的适用范围。它更适合原型、调研这类多做一点就有额外价值的任务，不适合合规、财务这类要求精确、稳定的工作，后者更看重少出错。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: This is one of the better litmus tests for whether you’re pushing your use of AI",
+          "url": "https://x.com/levie/status/2116652002830963114"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-01-04",
+      "issueDate": "2026-11-01",
+      "issueNumber": 23
+    },
+    {
+      "candidateIds": [
         "c2"
       ],
       "category": "perspective",
