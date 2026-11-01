@@ -1,5 +1,79 @@
 [
   {
+    "date": "2026-11-01",
+    "title": "ChatGPT 插件一周带来 1 万美元 MRR 却留不住人，理财公司让 agent 反过来提醒顾问",
+    "summary": "ChatGPT 插件一周带来 1 万美元 MRR，留存才是难题；理财公司让 agent 干活，涉及钱的操作一律交给人；50 位创作者每月做 600 条付费广告，撑起 AI 工具的增长；Box CEO 的检验法：没有 AI 也能做出来，说明用得不够狠",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-11-01/",
+    "items": [
+      {
+        "headline": "ChatGPT 插件一周带来 1 万美元 MRR，留存才是难题",
+        "sources": [
+          {
+            "label": "Smart Bear Live",
+            "title": "E12 w/ Tibo Maker: How can a $40K MRR SaaS be losing 20% of Its Customers",
+            "url": "https://smartbearlive.transistor.fm/12"
+          }
+        ]
+      },
+      {
+        "headline": "理财公司让 agent 干活，涉及钱的操作一律交给人",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+            "url": "https://latent.space/p/arca/"
+          }
+        ]
+      },
+      {
+        "headline": "50 位创作者每月做 600 条付费广告，撑起 AI 工具的增长",
+        "sources": [
+          {
+            "label": "Lenny's Newsletter & Podcast",
+            "title": "How a 19-year-old intern built the growth engine behind this $2B AI company | Hector Serrano",
+            "url": "https://www.lennysnewsletter.com/p/how-a-19-year-old-intern-built-the"
+          }
+        ]
+      },
+      {
+        "headline": "Box CEO 的检验法：没有 AI 也能做出来，说明用得不够狠",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: This is one of the better litmus tests for whether you’re pushing your use of AI",
+            "url": "https://x.com/levie/status/2116652002830963114"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "ChatGPT 插件一周带来 1 万美元 MRR，留存才是难题"
+      },
+      {
+        "start": 194,
+        "title": "理财公司让 agent 干活，涉及钱的操作一律交给人"
+      },
+      {
+        "start": 287,
+        "title": "50 位创作者每月做 600 条付费广告，撑起 AI 工具的增长"
+      },
+      {
+        "start": 372,
+        "title": "Box CEO 的检验法：没有 AI 也能做出来，说明用得不够狠"
+      },
+      {
+        "start": 448,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 502,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-11-01.mp3",
+    "audioBytes": 3009837,
+    "publishedAt": "2026-11-01T22:45:49.107Z"
+  },
+  {
     "date": "2026-10-31",
     "title": "一个“无聊”的 Excel 网站月入 3 万美元，两句提示词让小模型跑起马里奥",
     "summary": "Excel 练习网站月入 3 万美元，月付涨价一倍后增长才起来；两句提示词，Opus 把 NES 模拟器装进了 4B 模型；停电断网时，电脑里还有一个能查急救知识的 AI；开源模型会不会搞垮网络安全？Nathan Lambert 重新检验自己的判断；同一个 Agent 任务，不用提示词缓存要贵 3.6 倍",
