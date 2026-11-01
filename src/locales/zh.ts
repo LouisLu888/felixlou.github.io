@@ -15,6 +15,8 @@ export const zh = {
       name: '卢佳斌 Jiabin Lu',
       location: '旧金山湾区 · San Francisco Bay Area',
       description: 'GTM Eng Lead @ Amplitude，之前做 OLAP database 与 Engineer manager。',
+      bulletFdeBefore: '正在做 ',
+      bulletFdeAfter: ' —— FDE（Forward Deployed Engineer）的学习与最佳实践。',
       bullet1Before: '目前在做 ',
       bullet1After: ' —— 追踪 AI 在 GTM 各角色里的真实落地。',
       bullet2: '写博客记录从 Eng 到 Value Creator 到 Value Owner 的思考。',

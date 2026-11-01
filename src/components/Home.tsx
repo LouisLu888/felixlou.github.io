@@ -48,6 +48,18 @@ const Home: React.FC = () => {
           </p>
           <ul className="list-disc list-outside pl-5 space-y-1.5 text-lg text-slate-700 leading-relaxed">
             <li>
+              {t('home.hero.bulletFdeBefore')}
+              <a
+                href="https://www.open-fde.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-600 hover:text-amber-700 underline underline-offset-2"
+              >
+                open-fde.ai
+              </a>
+              {t('home.hero.bulletFdeAfter')}
+            </li>
+            <li>
               {t('home.hero.bullet1Before')}
               <a
                 href="https://gtm-pod.com/"
