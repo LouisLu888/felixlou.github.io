@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐｜AI 实干派</title>
+  <meta name="description" content="Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-11-02-01/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐｜AI 实干派">
+  <meta property="og:description" content="Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-11-02-01/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-02.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐｜AI 实干派">
+  <meta name="twitter:description" content="Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-02.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">24</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">6</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">8</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">12</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">15</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">26</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">13</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-11-02/">AI 实干派 024 · 2026 年 11 月 2 日 · 周一</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-11-01<span>·</span>US</div>
+        <h1>Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐</h1>
+        <p class="summary">Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>Andrej Karpathy 不满意 YouTube 的推荐，周末给自己做了一个叫 HackerTube 的视频站。</dd><dt>怎么用</dt><dd>他用 Mac 上的 Claude Code 桌面版，默认 Opus 5.5、Medium effort，只和 Claude 对话，分析数据、写代码、部署都交给它；他自己只在浏览器里做了三件事。</dd><dt>结果</dt><dd>他说约 2 小时完成。网站不用登录，推荐状态存在本地浏览器里，评论分析数据打包成一个 zip 公开。</dd><dt>你可以试</dt><dd>挑一个你嫌推荐不准的信息源，找一份能下载的公开数据，让 AI 先做筛选和统计，再决定要不要做成页面。</dd><dt>注意</dt><dd>要申请 API key、开服务器、买域名，账号和付费这几步得本人去办；他是顶尖工程师，判断 AI 做得对不对的能力也是普通人比不上的。</dd></dl>
+        <div class="body"><p>Andrej Karpathy 在 <a href="https://x.com/karpathy/status/2116957135661945283">X 上</a>介绍了一个周末项目 HackerTube。他嫌 YouTube 推荐不好，就让 Claude 读完 Hacker News 二十年来的 4300 万条评论，挑出 6,454 个反复被人推荐的视频。他说用 Opus 5.5 花了大约 2 小时，观看体验好了很多。缩略图取的是视频中段的一帧，不用上传者反复测试过的点击图。底层的评论分析数据他打包成了一个 zip，建议别人「让你的 Claude 读它，做一个自己的版本」。</p><p>分工很清楚。<strong>他只和 Claude 对话，其余都交给 Claude</strong>，自己只在浏览器里做了三件事：在 Google Cloud 后台创建查询 YouTube 元数据的 API key，开一台 VPS，买域名。服务器开好后，他把 IP 给 Claude，让它更新、加固安全、部署并优化代码，这些都是 Claude 完成的。</p><p>可以借鉴的是这种拆法：<strong>需要账号、付钱、身份验证的事本人做，其余交给 AI。</strong>开工前先列出这几个人工节点，就知道卡点在哪。他说很多原本要几周甚至几个月的项目，现在几次尝试就能做出来。这句话放在一个数据公开、需求是他自己的周末项目上成立；涉及客户数据或线上业务的项目，安全加固和代码检查需要的时间会更多。</p></div>
+        <div class="sources">原文：<a href="https://x.com/karpathy/status/2116957135661945283" target="_blank" rel="noopener" title="Andrej Karpathy: Weekend hack: HackerTube. I was annoyed with YouTube&#39;s recommendations so I had ">Follow Builders (X)</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-11-02/">← 当期全部 4 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

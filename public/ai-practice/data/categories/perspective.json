@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c1"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-02",
+      "headline": "大公司用 AI 的比例到了 40%，前提是看清问卷改过字",
+      "oneLiner": "Simon Willison 用最新人口普查局数据重画 AI 采用率图：250 人以上公司回答「用了」的比例从约 12% 升到约 40%，但中间问卷措辞改过一次。",
+      "who": "开发者 Simon Willison 在博客里，用 GPT-6 重新分析美国人口普查局的商业趋势调查 BTOS。",
+      "how": "他认为，大公司 AI 采用率看起来在上升，但前后两段数字不能直接对比，因为问题的问法变了。",
+      "result": "2025 年 9 月，问「是否在生产产品或服务中用 AI」，大公司约 12% 回答是；2025 年 11 月 17 日起改问「是否在任何业务职能中用 AI」，2026 年 2 月约 30%，10 月约 40%。",
+      "tryThis": "下次在汇报或文章里引用「X% 企业在用 AI」时，先找到原始问卷，确认问的是什么、口径什么时候变过。",
+      "caveat": "从 2026 年 10 月 19 日起，因为第 14434 号行政令，问卷把 AI 改称「Super Intelligence」，他担心这会再次影响结果，首批数据本周四发布。",
+      "body": "Simon Willison 在[博客](https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/)里重做了一张去年流传很广的图。美国人口普查局每两周做一次 BTOS 调查，每次向 120 万家企业中的 20 万家发问卷。用 10 月 22 日发布的最新数据，他发现 250 人以上的公司回答「用了 AI」的比例约为 40%，一年前约为 12%。\n\n他强调，**这两个数字不能直接比较**。2025 年 11 月 17 日之前，问题是「过去两周是否在生产产品或服务中使用 AI」，之后改成「是否在任何业务职能中使用 AI」，问的范围大了很多。按新问法，2026 年 2 月约 30%，10 月约 40%，这一段之内的上升可以比较。更新的变化是：从 10 月 19 日起，因为第 14434 号行政令，问卷把 AI 改叫「Super Intelligence（SI）」，例子写成「SI 驱动的数据分析」。他觉得这种措辞很荒唐，也在关心它会不会影响企业怎么回答。\n\n这对读者的用处很实际。向老板论证 AI 投入、写行业分析时，采用率数字常被拿来用，**先查原始问卷和口径变更的时间**。他的做法也可以照搬：下载原始 XLSX，让 AI 画图，同时自己读一遍问卷原文。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "The U.S. Census Bureau and “Super Intelligence”",
+          "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-02-04",
+      "issueDate": "2026-11-02",
+      "issueNumber": 24
+    },
+    {
+      "candidateIds": [
         "c15"
       ],
       "category": "perspective",

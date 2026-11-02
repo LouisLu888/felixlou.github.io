@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c27"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-11-01",
+      "headline": "Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐",
+      "oneLiner": "Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。",
+      "who": "Andrej Karpathy 不满意 YouTube 的推荐，周末给自己做了一个叫 HackerTube 的视频站。",
+      "how": "他用 Mac 上的 Claude Code 桌面版，默认 Opus 5.5、Medium effort，只和 Claude 对话，分析数据、写代码、部署都交给它；他自己只在浏览器里做了三件事。",
+      "result": "他说约 2 小时完成。网站不用登录，推荐状态存在本地浏览器里，评论分析数据打包成一个 zip 公开。",
+      "tryThis": "挑一个你嫌推荐不准的信息源，找一份能下载的公开数据，让 AI 先做筛选和统计，再决定要不要做成页面。",
+      "caveat": "要申请 API key、开服务器、买域名，账号和付费这几步得本人去办；他是顶尖工程师，判断 AI 做得对不对的能力也是普通人比不上的。",
+      "body": "Andrej Karpathy 在 [X 上](https://x.com/karpathy/status/2116957135661945283)介绍了一个周末项目 HackerTube。他嫌 YouTube 推荐不好，就让 Claude 读完 Hacker News 二十年来的 4300 万条评论，挑出 6,454 个反复被人推荐的视频。他说用 Opus 5.5 花了大约 2 小时，观看体验好了很多。缩略图取的是视频中段的一帧，不用上传者反复测试过的点击图。底层的评论分析数据他打包成了一个 zip，建议别人「让你的 Claude 读它，做一个自己的版本」。\n\n分工很清楚。**他只和 Claude 对话，其余都交给 Claude**，自己只在浏览器里做了三件事：在 Google Cloud 后台创建查询 YouTube 元数据的 API key，开一台 VPS，买域名。服务器开好后，他把 IP 给 Claude，让它更新、加固安全、部署并优化代码，这些都是 Claude 完成的。\n\n可以借鉴的是这种拆法：**需要账号、付钱、身份验证的事本人做，其余交给 AI。**开工前先列出这几个人工节点，就知道卡点在哪。他说很多原本要几周甚至几个月的项目，现在几次尝试就能做出来。这句话放在一个数据公开、需求是他自己的周末项目上成立；涉及客户数据或线上业务的项目，安全加固和代码检查需要的时间会更多。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Andrej Karpathy: Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had ",
+          "url": "https://x.com/karpathy/status/2116957135661945283"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-02-01",
+      "issueDate": "2026-11-02",
+      "issueNumber": 24
+    },
+    {
+      "candidateIds": [
+        "c4"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-11-02",
+      "headline": "Figma 的 PM 共用一个 31 个技能的 Claude Code 仓库",
+      "oneLiner": "Figma 增长 PM Ezra Mechaber 把个人的 Claude Code 配置做成共享仓库 PM OS，收了 31 个技能，Figma 六七十位 PM 都在用。",
+      "who": "Ezra Mechaber 是 Figma 的增长产品经理。他入职时发现，工程以外几乎没人用 AI 做正经工作。",
+      "how": "他和几位 PM 把自己的 Claude Code 配置整理成仓库 PM OS，里面有技能、hooks 和私有子仓库。他用 Codex 做 bug bash，还做了自动跑增长实验的 AutoXP，整个流程只设一个人工确认点。",
+      "result": "节目称 Figma 每位 PM 都在用这个仓库，覆盖六七十人；他每天要跑六次一个整理 Slack 的技能；AutoXP 第一次实验就找到了一个大收益。",
+      "tryThis": "把你反复做的一件事（比如整理 Slack、写实验文档）写成一个技能文件，放进团队共享仓库，请同事挑毛病后再精简。",
+      "caveat": "前提是团队里的 PM 能用终端或 Git，他们后来也做了本地网页前端来降低门槛；自动跑实验需要成熟的实验平台和足够的流量。",
+      "body": "在 [How I AI 这一期](https://podcasters.spotify.com/pod/show/pen-name/episodes/How-Figmas-PMs-actually-use-AI-every-day--Ezra-Mechaber-PM--Figma-e3raoc4)里，Ezra Mechaber 说自己的目标是「在该偷懒的地方偷懒」。他把个人的 Claude Code 配置做成 PM OS，**刻意做成一个仓库，不做成产品**：技能和 hooks 放在共享部分，个人内容放进私有子仓库，一个仓库让六七十位 PM 保持同步。技能是一个个做出来的，经过同事「吐槽」后再删减，最后留下 31 个。\n\n节目演示了几样东西：一个「幕僚长」式的配置；一个他每天跑六次、用来消化 Slack 的技能；用 Codex 做 bug bash，他说能发现自己注意不到的问题；还有 AutoXP，一个自动化的增长 PM，**整个实验流程只留一个人工确认点**，第一次实验就找到了大收益。后来他们把入口从终端换成了本地网页前端。\n\n对大厂 PM 来说，比较现实的起点是先在自己身上跑通，再把**最常用的几项**交给同事试用。06:30 的演示和 22:08 的 AutoXP 部分可以先看。",
+      "sources": [
+        {
+          "label": "How I AI (Claire Vo)",
+          "title": "How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma)",
+          "url": "https://podcasters.spotify.com/pod/show/pen-name/episodes/How-Figmas-PMs-actually-use-AI-every-day--Ezra-Mechaber-PM--Figma-e3raoc4"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-02-03",
+      "issueDate": "2026-11-02",
+      "issueNumber": 24
+    },
+    {
+      "candidateIds": [
         "c22"
       ],
       "category": "productivity",

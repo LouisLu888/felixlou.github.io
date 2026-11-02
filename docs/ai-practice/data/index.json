@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-11-01T14:44:39.607Z",
+  "updatedAt": "2026-11-02T14:58:20.630Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 23
+      "count": 24
     },
     {
       "id": "consulting",
@@ -34,14 +34,14 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 14
+      "count": 15
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 24
+      "count": 26
     },
     {
       "id": "life",
@@ -52,6 +52,38 @@
     }
   ],
   "days": [
+    {
+      "date": "2026-11-02",
+      "number": 24,
+      "title": "Karpathy 两小时从 4300 万条评论里挑出一个视频站，屏幕时间 App 月收入做到 40 万美元",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 7,
+      "itemCount": 4,
+      "categoryCounts": {
+        "productivity": 2,
+        "app": 1,
+        "perspective": 1
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐"
+        },
+        {
+          "category": "app",
+          "headline": "屏幕时间 App 一年从月入 1 万做到 40 万美元"
+        },
+        {
+          "category": "productivity",
+          "headline": "Figma 的 PM 共用一个 31 个技能的 Claude Code 仓库"
+        },
+        {
+          "category": "perspective",
+          "headline": "大公司用 AI 的比例到了 40%，前提是看清问卷改过字"
+        }
+      ]
+    },
     {
       "date": "2026-11-01",
       "number": 23,

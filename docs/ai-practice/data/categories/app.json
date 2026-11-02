@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c7"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-11-01",
+      "headline": "屏幕时间 App 一年从月入 1 万做到 40 万美元",
+      "oneLiner": "Brainrot 联创 Yoni Smoliar 说，App 2025 年夏天上线，月收入从约 1 万美元涨到约 40 万美元；他用 Claude 和 Codex 分析埋点数据，找出重度用户的行为。",
+      "who": "Yoni Smoliar 以前是大公司的软件工程师，和联创 Brock Anderson 做了屏幕时间 App Brainrot，主要卖年订阅。",
+      "how": "把采样后的埋点数据发到 Mixpanel 或 PostHog，让 Claude 或 Codex 分析，找激活时刻和最活跃的用户群；平时也用 Claude Code 和 Codex 写代码、做内部事务。",
+      "result": "他说下载量约两百万，用户约 15 万，月收入约 40 万美元；上线第一天约 1 万美元，主要靠他上线前积累的 10 到 15 万 Instagram 粉丝和候补名单。",
+      "tryThis": "已有产品的人，导出一段用户行为数据让 AI 比较重度用户和普通用户，找出一个可以引导其他人照着做的动作。",
+      "caveat": "冷启动靠的是现成的粉丝，后来的增长靠网红内容和付费广告，这两样 AI 都替代不了；40 万是收入，扣掉广告和平台抽成前的数字。",
+      "body": "Yoni Smoliar 在 [Starter Story 访谈](https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%24400K%2FMonth%20iOS%20App)里讲了 Brainrot 的经过。他当时手机成瘾，想到一个点子：刷得越多，App 里那只电子宠物大脑就烂得越厉害。打开被限制的 App 时，要先走一段小流程，比如「接一通大脑打来的 FaceTime」，靠这点阻力改变习惯。上线前他在 Instagram 讲自己的创业经历，攒了 10 到 15 万粉丝，用候补名单制造悬念，他说上线第一天就有约 1 万美元收入。\n\n增长靠什么，他讲得很直接：网红内容和付费广告有效，就**把有效的事做十倍**。AI 用在理解用户上：**埋点采样发到 Mixpanel 或 PostHog，让 Claude 或 Codex 去分析**，弄清激活时刻和最投入的用户群，再想办法让其他用户也做出这些行为。接着做小实验，比如调整引导页某张图的顺序。他说十次里九次没用，第十次可能改变走势。他的工具栈还有 Firebase（实验）、Superwall（付费墙）、AppStack（广告归因），外包人员在 Upwork 上找。\n\n选题上他建议新手避开竞争激烈的品类，做一个解决一个核心问题的简单工具，最好自己每天都用；要么用户终身价值高，要么用户每天都会打开。06:29 起的「2026 年怎么做 App」部分是重点。",
+      "sources": [
+        {
+          "label": "Starter Story Podcast",
+          "title": "How I Built It: $400K/Month iOS App",
+          "url": "https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%24400K%2FMonth%20iOS%20App"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-02-02",
+      "issueDate": "2026-11-02",
+      "issueNumber": 24
+    },
+    {
+      "candidateIds": [
         "c3"
       ],
       "category": "app",

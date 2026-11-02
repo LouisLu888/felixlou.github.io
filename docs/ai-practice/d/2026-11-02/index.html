@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 024｜Karpathy 两小时从 4300 万条评论里挑出一个视频站，屏幕时间 App 月收入做到 40 万美元</title>
+  <meta name="description" content="Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-11-02/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 024｜Karpathy 两小时从 4300 万条评论里挑出一个视频站，屏幕时间 App 月收入做到 40 万美元">
+  <meta property="og:description" content="Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-11-02/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-02.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 024｜Karpathy 两小时从 4300 万条评论里挑出一个视频站，屏幕时间 App 月收入做到 40 万美元">
+  <meta name="twitter:description" content="Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-02.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">24</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">6</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">8</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">12</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">15</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">26</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">13</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 024 · 2026 年 11 月 2 日 · 周一 · 约 7 分钟读完</div>
+        <h1>Karpathy 两小时从 4300 万条评论里挑出一个视频站，屏幕时间 App 月收入做到 40 万美元</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-11-02-01">Andrej Karpathy 让 Claude 把 Hacker News 二十年里的 4300 万条评论筛成 6,454 个反复被推荐的视频，做成网站并部署上线，他说一共用了约 2 小时。</a></li><li><span class="tag" data-cat="app">AI App</span><a href="#2026-11-02-02">Brainrot 联创 Yoni Smoliar 说，App 2025 年夏天上线，月收入从约 1 万美元涨到约 40 万美元；他用 Claude 和 Codex 分析埋点数据，找出重度用户的行为。</a></li><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-11-02-03">Figma 增长 PM Ezra Mechaber 把个人的 Claude Code 配置做成共享仓库 PM OS，收了 31 个技能，Figma 六七十位 PM 都在用。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-11-02-04">Simon Willison 用最新人口普查局数据重画 AI 采用率图：250 人以上公司回答「用了」的比例从约 12% 升到约 40%，但中间问卷措辞改过一次。</a></li></ul>
+      </section>
+      <section class="item" id="2026-11-02-01">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-11-01<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-02-01/">01｜Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Andrej Karpathy 不满意 YouTube 的推荐，周末给自己做了一个叫 HackerTube 的视频站。</dd><dt>怎么用</dt><dd>他用 Mac 上的 Claude Code 桌面版，默认 Opus 5.5、Medium effort，只和 Claude 对话，分析数据、写代码、部署都交给它；他自己只在浏览器里做了三件事。</dd><dt>结果</dt><dd>他说约 2 小时完成。网站不用登录，推荐状态存在本地浏览器里，评论分析数据打包成一个 zip 公开。</dd><dt>你可以试</dt><dd>挑一个你嫌推荐不准的信息源，找一份能下载的公开数据，让 AI 先做筛选和统计，再决定要不要做成页面。</dd><dt>注意</dt><dd>要申请 API key、开服务器、买域名，账号和付费这几步得本人去办；他是顶尖工程师，判断 AI 做得对不对的能力也是普通人比不上的。</dd></dl>
+        <div class="body"><p>Andrej Karpathy 在 <a href="https://x.com/karpathy/status/2116957135661945283">X 上</a>介绍了一个周末项目 HackerTube。他嫌 YouTube 推荐不好，就让 Claude 读完 Hacker News 二十年来的 4300 万条评论，挑出 6,454 个反复被人推荐的视频。他说用 Opus 5.5 花了大约 2 小时，观看体验好了很多。缩略图取的是视频中段的一帧，不用上传者反复测试过的点击图。底层的评论分析数据他打包成了一个 zip，建议别人「让你的 Claude 读它，做一个自己的版本」。</p><p>分工很清楚。<strong>他只和 Claude 对话，其余都交给 Claude</strong>，自己只在浏览器里做了三件事：在 Google Cloud 后台创建查询 YouTube 元数据的 API key，开一台 VPS，买域名。服务器开好后，他把 IP 给 Claude，让它更新、加固安全、部署并优化代码，这些都是 Claude 完成的。</p><p>可以借鉴的是这种拆法：<strong>需要账号、付钱、身份验证的事本人做，其余交给 AI。</strong>开工前先列出这几个人工节点，就知道卡点在哪。他说很多原本要几周甚至几个月的项目，现在几次尝试就能做出来。这句话放在一个数据公开、需求是他自己的周末项目上成立；涉及客户数据或线上业务的项目，安全加固和代码检查需要的时间会更多。</p></div>
+        <div class="sources">原文：<a href="https://x.com/karpathy/status/2116957135661945283" target="_blank" rel="noopener" title="Andrej Karpathy: Weekend hack: HackerTube. I was annoyed with YouTube&#39;s recommendations so I had ">Follow Builders (X)</a></div>
+      </section>
+      <section class="item" id="2026-11-02-02">
+        <div class="item-meta"><span class="tag" data-cat="app">AI App</span><span>·</span>经营复盘<span>·</span>2026-11-01<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-02-02/">02｜屏幕时间 App 一年从月入 1 万做到 40 万美元</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Yoni Smoliar 以前是大公司的软件工程师，和联创 Brock Anderson 做了屏幕时间 App Brainrot，主要卖年订阅。</dd><dt>怎么用</dt><dd>把采样后的埋点数据发到 Mixpanel 或 PostHog，让 Claude 或 Codex 分析，找激活时刻和最活跃的用户群；平时也用 Claude Code 和 Codex 写代码、做内部事务。</dd><dt>结果</dt><dd>他说下载量约两百万，用户约 15 万，月收入约 40 万美元；上线第一天约 1 万美元，主要靠他上线前积累的 10 到 15 万 Instagram 粉丝和候补名单。</dd><dt>你可以试</dt><dd>已有产品的人，导出一段用户行为数据让 AI 比较重度用户和普通用户，找出一个可以引导其他人照着做的动作。</dd><dt>注意</dt><dd>冷启动靠的是现成的粉丝，后来的增长靠网红内容和付费广告，这两样 AI 都替代不了；40 万是收入，扣掉广告和平台抽成前的数字。</dd></dl>
+        <div class="body"><p>Yoni Smoliar 在 <a href="https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%24400K%2FMonth%20iOS%20App">Starter Story 访谈</a>里讲了 Brainrot 的经过。他当时手机成瘾，想到一个点子：刷得越多，App 里那只电子宠物大脑就烂得越厉害。打开被限制的 App 时，要先走一段小流程，比如「接一通大脑打来的 FaceTime」，靠这点阻力改变习惯。上线前他在 Instagram 讲自己的创业经历，攒了 10 到 15 万粉丝，用候补名单制造悬念，他说上线第一天就有约 1 万美元收入。</p><p>增长靠什么，他讲得很直接：网红内容和付费广告有效，就<strong>把有效的事做十倍</strong>。AI 用在理解用户上：<strong>埋点采样发到 Mixpanel 或 PostHog，让 Claude 或 Codex 去分析</strong>，弄清激活时刻和最投入的用户群，再想办法让其他用户也做出这些行为。接着做小实验，比如调整引导页某张图的顺序。他说十次里九次没用，第十次可能改变走势。他的工具栈还有 Firebase（实验）、Superwall（付费墙）、AppStack（广告归因），外包人员在 Upwork 上找。</p><p>选题上他建议新手避开竞争激烈的品类，做一个解决一个核心问题的简单工具，最好自己每天都用；要么用户终身价值高，要么用户每天都会打开。06:29 起的「2026 年怎么做 App」部分是重点。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%24400K%2FMonth%20iOS%20App" target="_blank" rel="noopener" title="How I Built It: $400K/Month iOS App">Starter Story Podcast</a></div>
+      </section>
+      <section class="item" id="2026-11-02-03">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-11-02<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-02-03/">03｜Figma 的 PM 共用一个 31 个技能的 Claude Code 仓库</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Ezra Mechaber 是 Figma 的增长产品经理。他入职时发现，工程以外几乎没人用 AI 做正经工作。</dd><dt>怎么用</dt><dd>他和几位 PM 把自己的 Claude Code 配置整理成仓库 PM OS，里面有技能、hooks 和私有子仓库。他用 Codex 做 bug bash，还做了自动跑增长实验的 AutoXP，整个流程只设一个人工确认点。</dd><dt>结果</dt><dd>节目称 Figma 每位 PM 都在用这个仓库，覆盖六七十人；他每天要跑六次一个整理 Slack 的技能；AutoXP 第一次实验就找到了一个大收益。</dd><dt>你可以试</dt><dd>把你反复做的一件事（比如整理 Slack、写实验文档）写成一个技能文件，放进团队共享仓库，请同事挑毛病后再精简。</dd><dt>注意</dt><dd>前提是团队里的 PM 能用终端或 Git，他们后来也做了本地网页前端来降低门槛；自动跑实验需要成熟的实验平台和足够的流量。</dd></dl>
+        <div class="body"><p>在 <a href="https://podcasters.spotify.com/pod/show/pen-name/episodes/How-Figmas-PMs-actually-use-AI-every-day--Ezra-Mechaber-PM--Figma-e3raoc4">How I AI 这一期</a>里，Ezra Mechaber 说自己的目标是「在该偷懒的地方偷懒」。他把个人的 Claude Code 配置做成 PM OS，<strong>刻意做成一个仓库，不做成产品</strong>：技能和 hooks 放在共享部分，个人内容放进私有子仓库，一个仓库让六七十位 PM 保持同步。技能是一个个做出来的，经过同事「吐槽」后再删减，最后留下 31 个。</p><p>节目演示了几样东西：一个「幕僚长」式的配置；一个他每天跑六次、用来消化 Slack 的技能；用 Codex 做 bug bash，他说能发现自己注意不到的问题；还有 AutoXP，一个自动化的增长 PM，<strong>整个实验流程只留一个人工确认点</strong>，第一次实验就找到了大收益。后来他们把入口从终端换成了本地网页前端。</p><p>对大厂 PM 来说，比较现实的起点是先在自己身上跑通，再把<strong>最常用的几项</strong>交给同事试用。06:30 的演示和 22:08 的 AutoXP 部分可以先看。</p></div>
+        <div class="sources">原文：<a href="https://podcasters.spotify.com/pod/show/pen-name/episodes/How-Figmas-PMs-actually-use-AI-every-day--Ezra-Mechaber-PM--Figma-e3raoc4" target="_blank" rel="noopener" title="How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma)">How I AI (Claire Vo)</a></div>
+      </section>
+      <section class="item" id="2026-11-02-04">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-11-02<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-02-04/">04｜大公司用 AI 的比例到了 40%，前提是看清问卷改过字</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>开发者 Simon Willison 在博客里，用 GPT-6 重新分析美国人口普查局的商业趋势调查 BTOS。</dd><dt>核心观点</dt><dd>他认为，大公司 AI 采用率看起来在上升，但前后两段数字不能直接对比，因为问题的问法变了。</dd><dt>依据</dt><dd>2025 年 9 月，问「是否在生产产品或服务中用 AI」，大公司约 12% 回答是；2025 年 11 月 17 日起改问「是否在任何业务职能中用 AI」，2026 年 2 月约 30%，10 月约 40%。</dd><dt>对你的意义</dt><dd>下次在汇报或文章里引用「X% 企业在用 AI」时，先找到原始问卷，确认问的是什么、口径什么时候变过。</dd><dt>争议·条件</dt><dd>从 2026 年 10 月 19 日起，因为第 14434 号行政令，问卷把 AI 改称「Super Intelligence」，他担心这会再次影响结果，首批数据本周四发布。</dd></dl>
+        <div class="body"><p>Simon Willison 在<a href="https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/">博客</a>里重做了一张去年流传很广的图。美国人口普查局每两周做一次 BTOS 调查，每次向 120 万家企业中的 20 万家发问卷。用 10 月 22 日发布的最新数据，他发现 250 人以上的公司回答「用了 AI」的比例约为 40%，一年前约为 12%。</p><p>他强调，<strong>这两个数字不能直接比较</strong>。2025 年 11 月 17 日之前，问题是「过去两周是否在生产产品或服务中使用 AI」，之后改成「是否在任何业务职能中使用 AI」，问的范围大了很多。按新问法，2026 年 2 月约 30%，10 月约 40%，这一段之内的上升可以比较。更新的变化是：从 10 月 19 日起，因为第 14434 号行政令，问卷把 AI 改叫「Super Intelligence（SI）」，例子写成「SI 驱动的数据分析」。他觉得这种措辞很荒唐，也在关心它会不会影响企业怎么回答。</p><p>这对读者的用处很实际。向老板论证 AI 投入、写行业分析时，采用率数字常被拿来用，<strong>先查原始问卷和口径变更的时间</strong>。他的做法也可以照搬：下载原始 XLSX，让 AI 画图，同时自己读一遍问卷原文。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/" target="_blank" rel="noopener" title="The U.S. Census Bureau and “Super Intelligence”">Simon Willison</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>学一下 Karpathy 的拆法：从手头挑一件拖了很久的小项目，比如一个内部数据看板，或者把一份公开数据整理成自己用的清单。动手前在纸上列两栏，一栏是必须本人做的事（申请账号、开权限、付费、最后验收），另一栏是交给 AI 的事。然后只做第一栏，第二栏整段交给 Claude Code 或 Codex。做完记下总用时，以及你在哪一步插手修正过。这份记录能告诉你，这类任务以后值不值得交给 AI。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-11-01/">← 2026 年 11 月 1 日 · 周日</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>
