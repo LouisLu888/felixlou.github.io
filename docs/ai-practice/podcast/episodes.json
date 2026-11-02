@@ -1,5 +1,79 @@
 [
   {
+    "date": "2026-11-02",
+    "title": "Karpathy 两小时从 4300 万条评论里挑出一个视频站，屏幕时间 App 月收入做到 40 万美元",
+    "summary": "Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐；屏幕时间 App 一年从月入 1 万做到 40 万美元；Figma 的 PM 共用一个 31 个技能的 Claude Code 仓库；大公司用 AI 的比例到了 40%，前提是看清问卷改过字",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-11-02/",
+    "items": [
+      {
+        "headline": "Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Andrej Karpathy: Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had ",
+            "url": "https://x.com/karpathy/status/2116957135661945283"
+          }
+        ]
+      },
+      {
+        "headline": "屏幕时间 App 一年从月入 1 万做到 40 万美元",
+        "sources": [
+          {
+            "label": "Starter Story Podcast",
+            "title": "How I Built It: $400K/Month iOS App",
+            "url": "https://www.youtube.com/@starterstory/search?query=How%20I%20Built%20It%3A%20%24400K%2FMonth%20iOS%20App"
+          }
+        ]
+      },
+      {
+        "headline": "Figma 的 PM 共用一个 31 个技能的 Claude Code 仓库",
+        "sources": [
+          {
+            "label": "How I AI (Claire Vo)",
+            "title": "How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma)",
+            "url": "https://podcasters.spotify.com/pod/show/pen-name/episodes/How-Figmas-PMs-actually-use-AI-every-day--Ezra-Mechaber-PM--Figma-e3raoc4"
+          }
+        ]
+      },
+      {
+        "headline": "大公司用 AI 的比例到了 40%，前提是看清问卷改过字",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "The U.S. Census Bureau and “Super Intelligence”",
+            "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐"
+      },
+      {
+        "start": 159,
+        "title": "屏幕时间 App 一年从月入 1 万做到 40 万美元"
+      },
+      {
+        "start": 269,
+        "title": "Figma 的 PM 共用一个 31 个技能的 Claude Code 仓库"
+      },
+      {
+        "start": 360,
+        "title": "大公司用 AI 的比例到了 40%，前提是看清问卷改过字"
+      },
+      {
+        "start": 457,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 512,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-11-02.mp3",
+    "audioBytes": 3070173,
+    "publishedAt": "2026-11-02T22:45:54.469Z"
+  },
+  {
     "date": "2026-11-01",
     "title": "ChatGPT 插件一周带来 1 万美元 MRR 却留不住人，理财公司让 agent 反过来提醒顾问",
     "summary": "ChatGPT 插件一周带来 1 万美元 MRR，留存才是难题；理财公司让 agent 干活，涉及钱的操作一律交给人；50 位创作者每月做 600 条付费广告，撑起 AI 工具的增长；Box CEO 的检验法：没有 AI 也能做出来，说明用得不够狠",
