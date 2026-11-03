@@ -1,0 +1,307 @@
+{
+  "date": "2026-11-03",
+  "title": "36 小时做出的 AI 员工怎么卖，Figma 六七十位 PM 共用一个技能库",
+  "items": [
+    {
+      "candidateIds": [
+        "c47"
+      ],
+      "category": "consulting",
+      "kind": "本周演示",
+      "eventDate": "2026-11-02",
+      "headline": "36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业",
+      "oneLiner": "Orgo 联合创始人 Nick 用一个周末做出多智能体平台 Bops，建议给小企业按 2.5 万美元一次性交付，另加每月 3000 美元的可选维护费。",
+      "who": "Nick 是 Orgo 联合创始人，公司为智能体提供云电脑，已经在给企业客户做智能体。他在 Greg Isenberg 的节目里拆解了整套做法。",
+      "how": "先让模型调研同类产品，再用 Paper 的 MCP 出设计稿，然后选现成组件拼成产品，遇到问题截图发给模型修。每个 bot 有自己的邮箱、电话号码和电脑。",
+      "result": "他说 Bops 是在 T3 Code 里用 Opus 5.5 一个长对话做了 36 小时做出来的，演示视频有 7.5 万次观看。有客户看到后找上门，一家保险客户的定制版正在做。",
+      "tryThis": "先给身边 50 个人打电话，找出一个行业，第一单免费做，用案例换转介绍。前提是你看得懂这个行业每天卡在哪里。",
+      "caveat": "2.5 万美元加每月 3000 美元是他建议的报价。客户能不能接受，要看你能不能讲清楚系统替代了哪些岗位工作。",
+      "body": "Nick 在 Startup Ideas Podcast) 里演示了 Bops：他打电话给「幕僚长」bot，让它查潜在客户、盯 Hacker News，bot 随后在自己的四屏电脑上开始干活。他的开发顺序是：**先让模型调研 GrokBot、Muse、Dots，弄清要做什么；再在 Paper 里每次要三四个设计方案，挑出各自好的部分合起来；选好组件后，要求模型先读文档和 API 参考。** 组件用的是 Orgo 电脑、Agent Mail、Agent Phone 和 Composio 连接器。他还给每个平台单独配一个智能体，例如 LinkedIn 智能体负责加好友、发消息、约会议。\n\n报价逻辑也讲得很细：老板只想把问题解决掉，不想自己去配置一个通用平台。可以拿前台一年 5 到 7 万美元的工资来对比，**系统交付后归客户所有**，30 天实施期结束后再推每月 3000 美元的维护。Greg 建议再送一个重新设计的网站，加上退款保证。\n\n这条路适合熟悉某个行业的人。他们可以先在自己的工作里给每个平台配一个智能体，跑顺了再拿去给客户演示。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "The $1M+ Solo Grok Bot Business (Full Course)",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=The%20%241M%2B%20Solo%20Grok%20Bot%20Business%20(Full%20Course)"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-01"
+    },
+    {
+      "candidateIds": [
+        "c4"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-11-02",
+      "headline": "Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能",
+      "oneLiner": "Figma 增长 PM Ezra Mechaber 把 PM 的日常工作做成 31 个技能放进一个 Git 仓库，他每天用其中的「what's up」技能约六次，每天能归档约 10 个 Slack 频道。",
+      "who": "Ezra Mechaber 是 Figma 的增长 PM，也是内部 PM OS 的作者之一。这套系统供公司六七十位 PM 使用。",
+      "how": "仓库里有一个 AGENTS.md、一组可复用技能和几个命令钩子。技能负责汇总 Slack、找相关同事、生成文档、做 bug bash。",
+      "result": "他说版本自动检查让 60 到 70 位 PM 保持同步。浏览器智能体在 bug bash 里找出了 1000 个 emoji 撑爆文本框这类边缘问题。",
+      "tryThis": "挑一件你常跳过的例行工作，比如发布前通知客服，写成一个技能文件，放进团队共享仓库。",
+      "caveat": "需要团队愿意维护共享仓库，智能体也要有测试账号和工具权限。",
+      "body": "在 [How I AI](https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet) 里，Ezra 说 PM OS 是围绕 **PM 经常漏掉的工作**设计的，例如发布前拉上客服、记录会议，目的是给每个流程定一个最低标准。Figma 大约 2000 人，光是找对协作者就不容易，所以有一个技能专门梳理团队结构，自动把相关的设计师、工程经理和负责人加为审阅人。每个人在私有子仓库里做自己的定制。\n\n做 bug bash 时，他给智能体一个测试账号和一块写满测试场景的 FigJam 白板，让它记录发现的问题。增长实验 AutoXP 由三个智能体分工：一个找漏斗流失点，一个写新文案，一个准备实现。**上线前人只审一次**，之后系统自己分析结果，开始下一轮。\n\n他还有一个习惯：对话跑偏时直接开新对话，把目标重新讲一遍，不在被污染的上下文里继续争论。最初这套东西跑在 Claude Code 终端里，现在他主要用 Codex。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-02"
+    },
+    {
+      "candidateIds": [
+        "c41"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-02",
+      "headline": "看不到客户数据，Legora 怎么测法律智能体",
+      "oneLiner": "Legora CTO Jacob Lauritzen 估计，模型已经能把约 60% 的法律工作做得很好；看不到客户数据时，他们靠模拟真实工作来做评测。",
+      "who": "Jacob Lauritzen 是法律 AI 公司 Legora 的 CTO，在 Latent Space 访谈中讲了他们怎么做评测和产品。",
+      "how": "他认为评测要模拟客户的真实工作，并按业务领域分开看；新模型往往在某些任务上变好，另一些变差。",
+      "result": "三名工程师和三名律师搭了模拟环境，例如让智能体在一万份文件的数据室里做尽调。他说有一次版本更新把引用准确率从 70% 提到了 99%。",
+      "tryThis": "给自己的 AI 流程建一组模拟任务，按任务类型记录得分，换模型前先跑一遍。批量处理文档时先跑 10 行，把提示词调好再全量跑。",
+      "caveat": "「60%」是他本人的估计；他也说处理百万 token 级合同的复杂分析和修改，模型还不够聪明。",
+      "body": "Legora 的用户上传的几乎都是保密文件，团队没法像一般做法那样读日志来改进智能体。Jacob 在 [Latent Space](https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/) 里说，他们把评测结果按业务领域和任务画成热力图，线上的失败归纳成 10 到 20 类，再用便宜的 LLM 检查。所有生成内容都附引用，能定位到源 PDF 里的具体位置。\n\n产品上，Tabular Review 把每份文件做成一行、每个问题做成一列，最多支持一百万个单元格，但**默认先跑 10 行**。他对初级律师的判断也和常见说法相反：好的初级律师现在比两年前更值钱，因为同样时间能做完更多事。他还说美国律所的常规审阅正在转向按项目固定收费。\n\n对用 AI 交付的咨询和 SaaS，这几条可以直接借用：**建模拟任务、给失败分类、先小批量再全量。**",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora",
+          "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-03"
+    },
+    {
+      "candidateIds": [
+        "c4"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-11-02",
+      "headline": "四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse",
+      "oneLiner": "Claire 用九个真实任务对比了四个个人智能体：Grok Bot 总分 93%，Muse 在四项任务里速度第一，Claude Duet 测试中要了四次授权。",
+      "who": "How I AI 主持人 Claire 自己测试，任务包括 Slack 回复、收件箱分拣、写代码、剪视频、做 Figma 缩略图、家庭项目和购物。",
+      "how": "四个智能体做同样的任务，比较结果质量、速度和需要人确认的次数，并让 Codex 检查各自的配置是否公平。",
+      "result": "Grok Bot 赢下 Figma、收件箱和购物三项；Muse 做家庭小报和短视频最好；写代码时 Dot 和 Duet 判断更准。她现在工作用 Grok Bot，生活用 Muse。",
+      "tryThis": "选两三件你每周都做的事，让手头的两个智能体各做一遍，同时记下质量、耗时和需要你确认几次。",
+      "caveat": "连接器不一样，比较就不公平：Muse 没接 Slack 和 GitHub，几项工作任务因此没能完成。",
+      "body": "Claire 在 [How I AI](https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet) 的单人节目里给出了一个清楚的分工：**按任务选智能体，不指望一个产品包办所有事。** Grok Bot 做 Figma 缩略图时会提出新的标题和版式，另外两个大多只是往现有模板里填内容。Muse 几乎不用写提示词就做出了最好的家庭小报，回答物理问题快到来不及计时，她因此把更多日常问答从 ChatGPT 转到了 Muse。\n\n她把速度放在很重要的位置：智能体一走开就是好几分钟，用户会断掉思路，也就不想再用。Claude Duet 每次操作都要授权，用起来更像需要人盯着，而不是能放手交给它。Dot 有一个亮点：只有它问了她那场 Lovable 演讲是不是有报酬、是不是远程，像一个真正的幕僚长。\n\n做类似对比前，先确认各个智能体能用的工具一样。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-04"
+    },
+    {
+      "candidateIds": [
+        "c50"
+      ],
+      "category": "life",
+      "kind": "本周动态",
+      "eventDate": "2026-11-02",
+      "headline": "Chrome 开始读你的 Gmail，帮你自动填订单号和预订号",
+      "oneLiner": "开启 Personal Intelligence 的美国用户，在 Chrome 里填表时，Gemini 会从 Gmail 里找出订单号、物流单号、会员号和预订确认号供你选用。",
+      "who": "想少在邮箱和网页之间来回翻找的普通用户，目前先面向美国的桌面版，以及 Android、iOS 上的 Gemini in Chrome。",
+      "how": "点到表单里的某个字段时，弹出标有「Suggested by Gemini」的建议，可以查看来源邮件，也可以把这条建议移除。",
+      "result": "退货、改签、填会员号时不用再去搜邮件。",
+      "tryThis": "下次退货或改订单时试一下，先点开来源邮件，确认号码对得上再提交。",
+      "caveat": "Google 最近更新了隐私政策：连接 Personal Intelligence 后，Gmail、Photos、Drive 的数据可能被用于个性化广告。",
+      "body": "据 [Lifehacker](https://lifehacker.com/tech/chrome-will-read-your-gmail-to-autofill-forms?utm_medium=RSS) 报道，Chrome 的增强自动填充现在可以读取 Gmail。移除某条建议只是在 Chrome 里不再显示，不会删除邮件。Google 称敏感数据是加密的，增强建议可以在 Chrome 设置里关掉。\n\n这里交出去的是**整个邮箱的读取权限**。按新的隐私政策，这些数据还可能用于广告定向；Google 说不会把能识别个人身份的信息发给广告主。在意这一点的人，可以只在集中处理售后的那段时间打开这个功能，用完再关掉。",
+      "sources": [
+        {
+          "label": "Lifehacker",
+          "title": "This New Chrome AI Feature Reads Your Gmail to Make Filling Out Web Forms Easier",
+          "url": "https://lifehacker.com/tech/chrome-will-read-your-gmail-to-autofill-forms?utm_medium=RSS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-05"
+    }
+  ],
+  "action": "找一件你每周都做、又经常拖着或漏掉的例行工作，比如汇总一周的 Slack 消息，或者发布前通知相关同事。用三五行写下输入是什么、要什么产物、由谁检查，存成一个技能文件，这周用两次。每次都记下花了多少时间、手动改了哪些地方。下周把这个文件分享给一位同事，看他能不能直接拿去用。",
+  "readingMinutes": 8,
+  "meta": {
+    "generatedAt": "2026-11-03T14:44:48.302Z",
+    "engine": "cli",
+    "candidateCount": 51,
+    "candidatesBySource": {
+      "Simon Willison": 3,
+      "Lenny's Newsletter & Podcast": 1,
+      "Matt Wolfe": 1,
+      "Theoretically Media": 1,
+      "Creator Science (Jay Clouse)": 1,
+      "Starter Story (YouTube)": 1,
+      "Liam Ottley / Morningside AI": 1,
+      "Every (YouTube)": 1,
+      "Follow Builders (X)": 29,
+      "Latent Space": 3,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 2,
+      "Riley Brown": 1,
+      "Startup Ideas Podcast (Greg Isenberg)": 1,
+      "Ras Mic": 1,
+      "App Masters (Steve P. Young)": 1,
+      "Lifehacker": 1,
+      "少数派": 1
+    },
+    "shortlist": [
+      {
+        "id": "c47",
+        "reason": "Full transcript. Orgo co-founder Nick explains how he builds a custom Grok Bot for a business and sells it for $25K up front plus $3K a month. It covers the stack, the offer, picking a niche, and getting referrals from a case study, plus an open-source repo. He also shows the platform he built in 36 hours. It answers all three: who, how, and the result.",
+        "source": "Startup Ideas Podcast (Greg Isenberg)",
+        "title": "The $1M+ Solo Grok Bot Business (Full Course)"
+      },
+      {
+        "id": "c4",
+        "reason": "Full article. Claire puts four personal agents through nine real tasks, including Slack replies, inbox triage, coding and shopping, and gives a clear ranking. It also covers how Figma's PMs use AI every day. Readers can copy both the tests and the conclusions.",
+        "source": "Lenny's Newsletter & Podcast",
+        "title": "🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day"
+      },
+      {
+        "id": "c41",
+        "reason": "Full article. Legora's CTO explains how the product grew from a basement setup (ChatGPT, Swedish law and a search tool) into agents that draft documents and review thousands of contracts. Founder-level view on how to build agents. (Perspective slot 1)",
+        "source": "Latent Space",
+        "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora"
+      },
+      {
+        "id": "c46",
+        "reason": "Riley Brown uses Codex and OpenAI's Decisions API to turn an old iPhone into a focus helper that catches him slacking off. The summary covers the prompt, the build steps and the finished result, and the code is open source. A solo project anyone can try.",
+        "source": "Riley Brown",
+        "title": "I Built an App That Watches Me Work (Insane Focus)"
+      },
+      {
+        "id": "c43",
+        "reason": "Practical habits for cutting AI slop: forming your own point of view, teaching the model your taste, and adding review checkpoints. NLW also shows how he uses AI to make his own show. The summary already gives the method, though it's thin on detail.",
+        "source": "The AI Daily Brief",
+        "title": "How to Deslopify Your AI"
+      },
+      {
+        "id": "c49",
+        "reason": "Steve Young breaks down the animated explainer ads of an app making about $200K a month, then uses Claude and AI video tools to recreate them. The summary lists the steps from competitor research to script, animation and voiceover. Useful for small app teams. Note that it carries an affiliate link.",
+        "source": "App Masters (Steve P. Young)",
+        "title": "I Recreated a $200K/Month App's Ads Using AI"
+      },
+      {
+        "id": "c32",
+        "reason": "Peter Yang tested ChatGPT and Gemini on copy edits for a real post. Gemini's suggestions were clearly better, but its tool can't edit in the browser, so he works around it by hand. A first-hand comparison for writers.",
+        "source": "Follow Builders (X)",
+        "title": "Peter Yang: The best model for writing & editing is held back by its harness.\n\nI just had bo"
+      },
+      {
+        "id": "c23",
+        "reason": "YC CEO Garry Tan says coordinating multiple agents with Capy Captains made him about 5x faster at fixing issues overnight. First-hand productivity number, though the post is short.",
+        "source": "Follow Builders (X)",
+        "title": "Garry Tan: Capy Captains increased my issue fixing throughput by about 5X overnight\n\nBeing "
+      },
+      {
+        "id": "c36",
+        "reason": "Thariq, formerly on the Claude Code team, says after a week of testing that the $200 plans are enough for great work and intelligence will only get cheaper. A practitioner's view on what it costs to use AI. (Perspective slot 2)",
+        "source": "Follow Builders (X)",
+        "title": "Thariq: one week in my takeaway is that you don't need unlimited tokens to do great work"
+      },
+      {
+        "id": "c31",
+        "reason": "Vercel CEO Guillermo Rauch argues that agents are only useful when they carry their own workspace (identity, skills, repos, memories), and gives growth data for Vercel Sandbox. A founder's well-supported view on agent infrastructure. (Perspective slot 3)",
+        "source": "Follow Builders (X)",
+        "title": "Guillermo Rauch: Stateless sandboxes are the wrong benchmark. Agents are only useful if they have"
+      },
+      {
+        "id": "c50",
+        "reason": "AI for everyday life: Chrome's Gemini can now pull order numbers, tracking info and booking confirmations from Gmail to fill in forms. The article explains how to use it and what it does. Good material for the life section, including the privacy trade-off.",
+        "source": "Lifehacker",
+        "title": "This New Chrome AI Feature Reads Your Gmail to Make Filling Out Web Forms Easier"
+      },
+      {
+        "id": "c48",
+        "reason": "Ras Mic has an abliterated (safety-removed) model try to get root access on his own Samsung TV, and it succeeds in 31 minutes. The chapter list also covers what this means for defenders and what ordinary people should do now. A first-hand security demo.",
+        "source": "Ras Mic",
+        "title": "The Model That's Been Hacking Everything (I got access)"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 20662,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 2055,
+        "output_tokens_details": {
+          "thinking_tokens": 610
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 20662,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2055,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 20662,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 20662
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.206404
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 35518,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 7136,
+      "output_tokens_details": {
+        "thinking_tokens": 2595
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 35518,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 7136,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 35518,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 35518
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.42687200000000003
+  }
+}

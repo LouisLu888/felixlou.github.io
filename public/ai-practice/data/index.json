@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-02T14:58:20.630Z",
+  "updatedAt": "2026-11-03T14:45:32.634Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 24
+      "count": 25
     },
     {
       "id": "consulting",
       "name": "AI 咨询",
       "en": "AI consulting",
       "desc": "找客户、诊断业务、界定交付、培训、实施与维护",
-      "count": 6
+      "count": 7
     },
     {
       "id": "content",
@@ -41,17 +41,54 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 26
+      "count": 28
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 13
+      "count": 14
     }
   ],
   "days": [
+    {
+      "date": "2026-11-03",
+      "number": 25,
+      "title": "36 小时做出的 AI 员工怎么卖，Figma 六七十位 PM 共用一个技能库",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 8,
+      "itemCount": 5,
+      "categoryCounts": {
+        "consulting": 1,
+        "productivity": 2,
+        "perspective": 1,
+        "life": 1
+      },
+      "headlines": [
+        {
+          "category": "consulting",
+          "headline": "36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业"
+        },
+        {
+          "category": "productivity",
+          "headline": "Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能"
+        },
+        {
+          "category": "perspective",
+          "headline": "看不到客户数据，Legora 怎么测法律智能体"
+        },
+        {
+          "category": "productivity",
+          "headline": "四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse"
+        },
+        {
+          "category": "life",
+          "headline": "Chrome 开始读你的 Gmail，帮你自动填订单号和预订号"
+        }
+      ]
+    },
     {
       "date": "2026-11-02",
       "number": 24,

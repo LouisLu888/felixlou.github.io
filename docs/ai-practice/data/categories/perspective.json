@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c41"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-02",
+      "headline": "看不到客户数据，Legora 怎么测法律智能体",
+      "oneLiner": "Legora CTO Jacob Lauritzen 估计，模型已经能把约 60% 的法律工作做得很好；看不到客户数据时，他们靠模拟真实工作来做评测。",
+      "who": "Jacob Lauritzen 是法律 AI 公司 Legora 的 CTO，在 Latent Space 访谈中讲了他们怎么做评测和产品。",
+      "how": "他认为评测要模拟客户的真实工作，并按业务领域分开看；新模型往往在某些任务上变好，另一些变差。",
+      "result": "三名工程师和三名律师搭了模拟环境，例如让智能体在一万份文件的数据室里做尽调。他说有一次版本更新把引用准确率从 70% 提到了 99%。",
+      "tryThis": "给自己的 AI 流程建一组模拟任务，按任务类型记录得分，换模型前先跑一遍。批量处理文档时先跑 10 行，把提示词调好再全量跑。",
+      "caveat": "「60%」是他本人的估计；他也说处理百万 token 级合同的复杂分析和修改，模型还不够聪明。",
+      "body": "Legora 的用户上传的几乎都是保密文件，团队没法像一般做法那样读日志来改进智能体。Jacob 在 [Latent Space](https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/) 里说，他们把评测结果按业务领域和任务画成热力图，线上的失败归纳成 10 到 20 类，再用便宜的 LLM 检查。所有生成内容都附引用，能定位到源 PDF 里的具体位置。\n\n产品上，Tabular Review 把每份文件做成一行、每个问题做成一列，最多支持一百万个单元格，但**默认先跑 10 行**。他对初级律师的判断也和常见说法相反：好的初级律师现在比两年前更值钱，因为同样时间能做完更多事。他还说美国律所的常规审阅正在转向按项目固定收费。\n\n对用 AI 交付的咨询和 SaaS，这几条可以直接借用：**建模拟任务、给失败分类、先小批量再全量。**",
+      "sources": [
+        {
+          "label": "Latent Space",
+          "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora",
+          "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-03",
+      "issueDate": "2026-11-03",
+      "issueNumber": 25
+    },
+    {
+      "candidateIds": [
         "c1"
       ],
       "category": "perspective",

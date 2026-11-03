@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c47"
+      ],
+      "category": "consulting",
+      "kind": "本周演示",
+      "eventDate": "2026-11-02",
+      "headline": "36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业",
+      "oneLiner": "Orgo 联合创始人 Nick 用一个周末做出多智能体平台 Bops，建议给小企业按 2.5 万美元一次性交付，另加每月 3000 美元的可选维护费。",
+      "who": "Nick 是 Orgo 联合创始人，公司为智能体提供云电脑，已经在给企业客户做智能体。他在 Greg Isenberg 的节目里拆解了整套做法。",
+      "how": "先让模型调研同类产品，再用 Paper 的 MCP 出设计稿，然后选现成组件拼成产品，遇到问题截图发给模型修。每个 bot 有自己的邮箱、电话号码和电脑。",
+      "result": "他说 Bops 是在 T3 Code 里用 Opus 5.5 一个长对话做了 36 小时做出来的，演示视频有 7.5 万次观看。有客户看到后找上门，一家保险客户的定制版正在做。",
+      "tryThis": "先给身边 50 个人打电话，找出一个行业，第一单免费做，用案例换转介绍。前提是你看得懂这个行业每天卡在哪里。",
+      "caveat": "2.5 万美元加每月 3000 美元是他建议的报价。客户能不能接受，要看你能不能讲清楚系统替代了哪些岗位工作。",
+      "body": "Nick 在 Startup Ideas Podcast) 里演示了 Bops：他打电话给「幕僚长」bot，让它查潜在客户、盯 Hacker News，bot 随后在自己的四屏电脑上开始干活。他的开发顺序是：**先让模型调研 GrokBot、Muse、Dots，弄清要做什么；再在 Paper 里每次要三四个设计方案，挑出各自好的部分合起来；选好组件后，要求模型先读文档和 API 参考。** 组件用的是 Orgo 电脑、Agent Mail、Agent Phone 和 Composio 连接器。他还给每个平台单独配一个智能体，例如 LinkedIn 智能体负责加好友、发消息、约会议。\n\n报价逻辑也讲得很细：老板只想把问题解决掉，不想自己去配置一个通用平台。可以拿前台一年 5 到 7 万美元的工资来对比，**系统交付后归客户所有**，30 天实施期结束后再推每月 3000 美元的维护。Greg 建议再送一个重新设计的网站，加上退款保证。\n\n这条路适合熟悉某个行业的人。他们可以先在自己的工作里给每个平台配一个智能体，跑顺了再拿去给客户演示。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "The $1M+ Solo Grok Bot Business (Full Course)",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=The%20%241M%2B%20Solo%20Grok%20Bot%20Business%20(Full%20Course)"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-01",
+      "issueDate": "2026-11-03",
+      "issueNumber": 25
+    },
+    {
+      "candidateIds": [
         "c48"
       ],
       "category": "consulting",

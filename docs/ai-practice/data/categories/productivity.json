@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c4"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-11-02",
+      "headline": "Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能",
+      "oneLiner": "Figma 增长 PM Ezra Mechaber 把 PM 的日常工作做成 31 个技能放进一个 Git 仓库，他每天用其中的「what's up」技能约六次，每天能归档约 10 个 Slack 频道。",
+      "who": "Ezra Mechaber 是 Figma 的增长 PM，也是内部 PM OS 的作者之一。这套系统供公司六七十位 PM 使用。",
+      "how": "仓库里有一个 AGENTS.md、一组可复用技能和几个命令钩子。技能负责汇总 Slack、找相关同事、生成文档、做 bug bash。",
+      "result": "他说版本自动检查让 60 到 70 位 PM 保持同步。浏览器智能体在 bug bash 里找出了 1000 个 emoji 撑爆文本框这类边缘问题。",
+      "tryThis": "挑一件你常跳过的例行工作，比如发布前通知客服，写成一个技能文件，放进团队共享仓库。",
+      "caveat": "需要团队愿意维护共享仓库，智能体也要有测试账号和工具权限。",
+      "body": "在 [How I AI](https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet) 里，Ezra 说 PM OS 是围绕 **PM 经常漏掉的工作**设计的，例如发布前拉上客服、记录会议，目的是给每个流程定一个最低标准。Figma 大约 2000 人，光是找对协作者就不容易，所以有一个技能专门梳理团队结构，自动把相关的设计师、工程经理和负责人加为审阅人。每个人在私有子仓库里做自己的定制。\n\n做 bug bash 时，他给智能体一个测试账号和一块写满测试场景的 FigJam 白板，让它记录发现的问题。增长实验 AutoXP 由三个智能体分工：一个找漏斗流失点，一个写新文案，一个准备实现。**上线前人只审一次**，之后系统自己分析结果，开始下一轮。\n\n他还有一个习惯：对话跑偏时直接开新对话，把目标重新讲一遍，不在被污染的上下文里继续争论。最初这套东西跑在 Claude Code 终端里，现在他主要用 Codex。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-02",
+      "issueDate": "2026-11-03",
+      "issueNumber": 25
+    },
+    {
+      "candidateIds": [
+        "c4"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-11-02",
+      "headline": "四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse",
+      "oneLiner": "Claire 用九个真实任务对比了四个个人智能体：Grok Bot 总分 93%，Muse 在四项任务里速度第一，Claude Duet 测试中要了四次授权。",
+      "who": "How I AI 主持人 Claire 自己测试，任务包括 Slack 回复、收件箱分拣、写代码、剪视频、做 Figma 缩略图、家庭项目和购物。",
+      "how": "四个智能体做同样的任务，比较结果质量、速度和需要人确认的次数，并让 Codex 检查各自的配置是否公平。",
+      "result": "Grok Bot 赢下 Figma、收件箱和购物三项；Muse 做家庭小报和短视频最好；写代码时 Dot 和 Duet 判断更准。她现在工作用 Grok Bot，生活用 Muse。",
+      "tryThis": "选两三件你每周都做的事，让手头的两个智能体各做一遍，同时记下质量、耗时和需要你确认几次。",
+      "caveat": "连接器不一样，比较就不公平：Muse 没接 Slack 和 GitHub，几项工作任务因此没能完成。",
+      "body": "Claire 在 [How I AI](https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet) 的单人节目里给出了一个清楚的分工：**按任务选智能体，不指望一个产品包办所有事。** Grok Bot 做 Figma 缩略图时会提出新的标题和版式，另外两个大多只是往现有模板里填内容。Muse 几乎不用写提示词就做出了最好的家庭小报，回答物理问题快到来不及计时，她因此把更多日常问答从 ChatGPT 转到了 Muse。\n\n她把速度放在很重要的位置：智能体一走开就是好几分钟，用户会断掉思路，也就不想再用。Claude Duet 每次操作都要授权，用起来更像需要人盯着，而不是能放手交给它。Dot 有一个亮点：只有它问了她那场 Lovable 演讲是不是有报酬、是不是远程，像一个真正的幕僚长。\n\n做类似对比前，先确认各个智能体能用的工具一样。",
+      "sources": [
+        {
+          "label": "Lenny's Newsletter & Podcast",
+          "title": "🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day",
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-04",
+      "issueDate": "2026-11-03",
+      "issueNumber": 25
+    },
+    {
+      "candidateIds": [
         "c27"
       ],
       "category": "productivity",

@@ -11,6 +11,33 @@
         "c50"
       ],
       "category": "life",
+      "kind": "本周动态",
+      "eventDate": "2026-11-02",
+      "headline": "Chrome 开始读你的 Gmail，帮你自动填订单号和预订号",
+      "oneLiner": "开启 Personal Intelligence 的美国用户，在 Chrome 里填表时，Gemini 会从 Gmail 里找出订单号、物流单号、会员号和预订确认号供你选用。",
+      "who": "想少在邮箱和网页之间来回翻找的普通用户，目前先面向美国的桌面版，以及 Android、iOS 上的 Gemini in Chrome。",
+      "how": "点到表单里的某个字段时，弹出标有「Suggested by Gemini」的建议，可以查看来源邮件，也可以把这条建议移除。",
+      "result": "退货、改签、填会员号时不用再去搜邮件。",
+      "tryThis": "下次退货或改订单时试一下，先点开来源邮件，确认号码对得上再提交。",
+      "caveat": "Google 最近更新了隐私政策：连接 Personal Intelligence 后，Gmail、Photos、Drive 的数据可能被用于个性化广告。",
+      "body": "据 [Lifehacker](https://lifehacker.com/tech/chrome-will-read-your-gmail-to-autofill-forms?utm_medium=RSS) 报道，Chrome 的增强自动填充现在可以读取 Gmail。移除某条建议只是在 Chrome 里不再显示，不会删除邮件。Google 称敏感数据是加密的，增强建议可以在 Chrome 设置里关掉。\n\n这里交出去的是**整个邮箱的读取权限**。按新的隐私政策，这些数据还可能用于广告定向；Google 说不会把能识别个人身份的信息发给广告主。在意这一点的人，可以只在集中处理售后的那段时间打开这个功能，用完再关掉。",
+      "sources": [
+        {
+          "label": "Lifehacker",
+          "title": "This New Chrome AI Feature Reads Your Gmail to Make Filling Out Web Forms Easier",
+          "url": "https://lifehacker.com/tech/chrome-will-read-your-gmail-to-autofill-forms?utm_medium=RSS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-03-05",
+      "issueDate": "2026-11-03",
+      "issueNumber": 25
+    },
+    {
+      "candidateIds": [
+        "c50"
+      ],
+      "category": "life",
       "kind": "本周演示",
       "eventDate": "2026-10-29",
       "headline": "停电断网时，电脑里还有一个能查急救知识的 AI",
