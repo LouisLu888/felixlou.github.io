@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-11-03",
+    "title": "36 小时做出的 AI 员工怎么卖，Figma 六七十位 PM 共用一个技能库",
+    "summary": "36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业；Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能；看不到客户数据，Legora 怎么测法律智能体；四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse；Chrome 开始读你的 Gmail，帮你自动填订单号和预订号",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-11-03/",
+    "items": [
+      {
+        "headline": "36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业",
+        "sources": [
+          {
+            "label": "Startup Ideas Podcast (Greg Isenberg)",
+            "title": "The $1M+ Solo Grok Bot Business (Full Course)",
+            "url": "https://www.youtube.com/@GregIsenberg/search?query=The%20%241M%2B%20Solo%20Grok%20Bot%20Business%20(Full%20Course)"
+          }
+        ]
+      },
+      {
+        "headline": "Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能",
+        "sources": [
+          {
+            "label": "Lenny's Newsletter & Podcast",
+            "title": "🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day",
+            "url": "https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet"
+          }
+        ]
+      },
+      {
+        "headline": "看不到客户数据，Legora 怎么测法律智能体",
+        "sources": [
+          {
+            "label": "Latent Space",
+            "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora",
+            "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/"
+          }
+        ]
+      },
+      {
+        "headline": "四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse",
+        "sources": [
+          {
+            "label": "Lenny's Newsletter & Podcast",
+            "title": "🎙️ How I AI: Grok vs. Dot vs. Muse vs. Duet + How Figma’s PMs actually use AI every day",
+            "url": "https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet"
+          }
+        ]
+      },
+      {
+        "headline": "Chrome 开始读你的 Gmail，帮你自动填订单号和预订号",
+        "sources": [
+          {
+            "label": "Lifehacker",
+            "title": "This New Chrome AI Feature Reads Your Gmail to Make Filling Out Web Forms Easier",
+            "url": "https://lifehacker.com/tech/chrome-will-read-your-gmail-to-autofill-forms?utm_medium=RSS"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业"
+      },
+      {
+        "start": 177,
+        "title": "Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能"
+      },
+      {
+        "start": 274,
+        "title": "看不到客户数据，Legora 怎么测法律智能体"
+      },
+      {
+        "start": 380,
+        "title": "四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse"
+      },
+      {
+        "start": 464,
+        "title": "Chrome 开始读你的 Gmail，帮你自动填订单号和预订号"
+      },
+      {
+        "start": 549,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 593,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-11-03.mp3",
+    "audioBytes": 3561213,
+    "publishedAt": "2026-11-03T22:46:29.105Z"
+  },
+  {
     "date": "2026-11-02",
     "title": "Karpathy 两小时从 4300 万条评论里挑出一个视频站，屏幕时间 App 月收入做到 40 万美元",
     "summary": "Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐；屏幕时间 App 一年从月入 1 万做到 40 万美元；Figma 的 PM 共用一个 31 个技能的 Claude Code 仓库；大公司用 AI 的比例到了 40%，前提是看清问卷改过字",

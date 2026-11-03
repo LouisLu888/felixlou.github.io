@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-11-03 · 36 小时做出的 AI 员工怎么卖，Figma 六七十位 PM 共用一个技能库</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-11-03/</link>
+      <description>36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业；Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能；看不到客户数据，Legora 怎么测法律智能体；四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse；Chrome 开始读你的 Gmail，帮你自动填订单号和预订号（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-11-03/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业<br>02:57 Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能<br>04:34 看不到客户数据，Legora 怎么测法律智能体<br>06:20 四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse<br>07:44 Chrome 开始读你的 Gmail，帮你自动填订单号和预订号<br>09:09 今天可以做的一件事</p><p><b>36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业</b><br><a href="https://www.youtube.com/@GregIsenberg/search?query=The%20%241M%2B%20Solo%20Grok%20Bot%20Business%20(Full%20Course)">Startup Ideas Podcast (Greg Isenberg)</a></p><p><b>Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能</b><br><a href="https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet">Lenny's Newsletter &amp; Podcast</a></p><p><b>看不到客户数据，Legora 怎么测法律智能体</b><br><a href="https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/">Latent Space</a></p><p><b>四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse</b><br><a href="https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet">Lenny's Newsletter &amp; Podcast</a></p><p><b>Chrome 开始读你的 Gmail，帮你自动填订单号和预订号</b><br><a href="https://lifehacker.com/tech/chrome-will-read-your-gmail-to-autofill-forms?utm_medium=RSS">Lifehacker</a></p>]]></content:encoded>
+      <enclosure url="https://audio.jiabinlu.com/ai-practice-2026-11-03.mp3" length="3561213" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 22:46:29 GMT</pubDate>
+      <itunes:duration>00:09:53</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-11-02 · Karpathy 两小时从 4300 万条评论里挑出一个视频站，屏幕时间 App 月收入做到 40 万美元</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-11-02/</link>
       <description>Karpathy 周末两小时，用 HN 二十年评论重做 YouTube 推荐；屏幕时间 App 一年从月入 1 万做到 40 万美元；Figma 的 PM 共用一个 31 个技能的 Claude Code 仓库；大公司用 AI 的比例到了 40%，前提是看清问卷改过字（本集语音由 AI 合成）</description>
