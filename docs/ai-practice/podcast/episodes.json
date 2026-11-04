@@ -1,5 +1,98 @@
 [
   {
+    "date": "2026-11-04",
+    "title": "一个月写出八万行 Windows 代码，笔记本上的小模型看权重猜出游戏",
+    "summary": "一个月八万行：他在 Mac 上让 AI 写出 Windows 版；每两周让 Claude Code 给自己的用法做一次体检；讨价还价、退会员、排队等客服，交给 Grok 打电话；笔记本上的 Qwen 只看权重，猜出了三个游戏；从逐条批准到默认放行，用不用 AI 的差距在拉大",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-11-04/",
+    "items": [
+      {
+        "headline": "一个月八万行：他在 Mac 上让 AI 写出 Windows 版",
+        "sources": [
+          {
+            "label": "少数派",
+            "title": "你不知道的客户端开发：AI 时代下的选型、原生与借力",
+            "url": "https://sspai.com/post/117713"
+          }
+        ]
+      },
+      {
+        "headline": "每两周让 Claude Code 给自己的用法做一次体检",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Nikunj Kothari: My two favorite default skills on Claude Code, still, that seem relatively less ",
+            "url": "https://x.com/nikunj/status/2117773647868018897"
+          }
+        ]
+      },
+      {
+        "headline": "讨价还价、退会员、排队等客服，交给 Grok 打电话",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Peter Yang: Think about how much time we all waste waiting on hold or trying to navigate leg",
+            "url": "https://x.com/petergyang/status/2117783921748558185"
+          }
+        ]
+      },
+      {
+        "headline": "笔记本上的 Qwen 只看权重，猜出了三个游戏",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+            "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+          }
+        ]
+      },
+      {
+        "headline": "从逐条批准到默认放行，用不用 AI 的差距在拉大",
+        "sources": [
+          {
+            "label": "Follow Builders (X)",
+            "title": "Cat Wu: Friday was my last day at Anthropic.\n\nTwo years ago, when Claude Code was a smal",
+            "url": "https://x.com/_catwu/status/2117731934340337676"
+          },
+          {
+            "label": "Follow Builders (X)",
+            "title": "Aaron Levie: The divergence in AI output weirdly may be the highest it’s ever been, even thou",
+            "url": "https://x.com/levie/status/2117505799937577263"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "一个月八万行：他在 Mac 上让 AI 写出 Windows 版"
+      },
+      {
+        "start": 167,
+        "title": "每两周让 Claude Code 给自己的用法做一次体检"
+      },
+      {
+        "start": 246,
+        "title": "讨价还价、退会员、排队等客服，交给 Grok 打电话"
+      },
+      {
+        "start": 335,
+        "title": "笔记本上的 Qwen 只看权重，猜出了三个游戏"
+      },
+      {
+        "start": 441,
+        "title": "从逐条批准到默认放行，用不用 AI 的差距在拉大"
+      },
+      {
+        "start": 534,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 579,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-11-04.mp3",
+    "audioBytes": 3471357,
+    "publishedAt": "2026-11-04T22:46:08.797Z"
+  },
+  {
     "date": "2026-11-03",
     "title": "36 小时做出的 AI 员工怎么卖，Figma 六七十位 PM 共用一个技能库",
     "summary": "36 小时做出 AI 员工平台，再按 2.5 万美元卖给小企业；Figma 的 PM 们共用一个 Git 仓库，里面放了 31 个 AI 技能；看不到客户数据，Legora 怎么测法律智能体；四个个人智能体九项实测：工作选 Grok Bot，生活选 Muse；Chrome 开始读你的 Gmail，帮你自动填订单号和预订号",
