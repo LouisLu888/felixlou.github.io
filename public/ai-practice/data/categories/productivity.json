@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c40"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-11-04",
+      "headline": "一个月八万行：他在 Mac 上让 AI 写出 Windows 版",
+      "oneLiner": "Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。",
+      "who": "独立开发者 Tw93，Mac 软件 Mole（Swift + SwiftUI）的作者，要做一个原生 Windows 版（C# + WinUI 3）。",
+      "how": "代码和 Claude Code 留在 Mac 上，编译和运行交给 Parallels 虚拟机，用脚本把崩溃日志回传给 AI；设计 token 和 11 种语言的文案用脚本同步，再用一份 SYNC.md 核对两边功能。",
+      "result": "他说一个月写了 8 万多行代码、4000 多个测试，几位天使用户试用后反馈解决了不少痛点。",
+      "tryThis": "如果你要维护两个版本的产品，先建一份对账表：每个功能写清已实现、刻意不同还是不适用，以及理由。",
+      "caveat": "Windows 签名绕不开：他买了 3 年 300 多美元的云端 OV 证书，签名会话闲置几小时就断，所以很难做成云端自动打包。",
+      "body": "少数派作者 Tw93 在[这篇文章](https://sspai.com/post/117713)里讲了 Mole Windows 版的做法。他先让 AI 分析十几万行 Swift 代码，能脱离 macOS 框架复用的不到 20%，所以决定从零重写。他把架构分成四层：Core 只依赖 .NET，用模拟的 Windows 文件系统测试；Platform 层开启 EnableWindowsTargeting 后在 Mac 上也能编译；ViewModel 和 Mac 版一一对应；只有最上层界面必须在 Windows 里编译。架构由他出思路，大部分实现交给 Opus 5.5。\n\n调试也由脚本串起来。仓库作为共享文件夹挂进虚拟机，用 prlctl exec 远程编译、启动；程序崩溃时，Windows 只报一个 0xc000027b，Mole 会把真正的异常写进日志，打印出来给 Claude 读。需要点界面的地方交给 Codex 的 computer use，他自己只负责点系统确认弹框。虚拟机测不准的高分屏、电池和 SmartScreen，放到一台永不休眠的 ThinkPad 上回归测试，覆盖 400 多款软件的卸载和残留清理。\n\n他的结论是：**代码抽象没那么重要了，规则抽象更重要。**两边同步时，他会记下对应的是 Mac 的哪个提交，防止 AI 跑偏。用 AI 做跨平台，可以先拿这两条规矩试。",
+      "sources": [
+        {
+          "label": "少数派",
+          "title": "你不知道的客户端开发：AI 时代下的选型、原生与借力",
+          "url": "https://sspai.com/post/117713"
+        }
+      ],
+      "region": "CN",
+      "id": "2026-11-04-01",
+      "issueDate": "2026-11-04",
+      "issueNumber": 26
+    },
+    {
+      "candidateIds": [
+        "c16"
+      ],
+      "category": "productivity",
+      "kind": "本周演示",
+      "eventDate": "2026-11-04",
+      "headline": "每两周让 Claude Code 给自己的用法做一次体检",
+      "oneLiner": "投资人 Nikunj Kothari 用定时任务每两周跑一次 Claude Code 的 /insights，再对照收藏的行业做法升级自己的配置。",
+      "who": "FPV Ventures 合伙人 Nikunj Kothari，在副项目里长期用 Claude Code 和 Codex。",
+      "how": "cron 每两周运行 /insights，看自己的配置哪里能改；再用 /playground 把 GitHub 项目架构和工作流画出来，并让 Codex 和 Claude Code 一起找死代码、热点路径和延迟问题。",
+      "result": "他把这称为一个自我改进的循环：一边是自己的使用记录，一边是收藏的行业新做法。",
+      "tryThis": "用 Claude Code 的人，今天先手动跑一次 /insights，挑一条建议改进配置，两周后再跑一次对比。",
+      "caveat": "这套做法依赖 Claude Code 的内置技能，他也没有给出具体提效的数字。",
+      "body": "Nikunj Kothari 在 [X 上](https://x.com/nikunj/status/2117773647868018897)说，他最常用、但别人很少用的两个 Claude Code 默认技能是 /insights 和 /playground。前者他设成 cron 定时任务，每两周运行一次，告诉他怎样升级自己的设置；他再拿 X 收藏夹里别人搭「软件工厂」的新做法来对照。\n\n/playground 他用来可视化：看陌生 GitHub 仓库的架构，或者在副项目里模拟一整套学习流程。他最近的用法是**让 Codex 和 Claude Code 一起用这个技能**，找出死代码、热点路径和可以降延迟的地方。\n\n可借鉴的是复盘的节奏，用哪个具体命令是次要的。多数人配好工具后就不再动，定期让 AI 读一遍自己的使用记录，能发现没用上的功能。换成其他工具，也可以每两周导出一次使用记录，让模型给出三条改进建议。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Nikunj Kothari: My two favorite default skills on Claude Code, still, that seem relatively less ",
+          "url": "https://x.com/nikunj/status/2117773647868018897"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-04-02",
+      "issueDate": "2026-11-04",
+      "issueNumber": 26
+    },
+    {
+      "candidateIds": [
         "c4"
       ],
       "category": "productivity",

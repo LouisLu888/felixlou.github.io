@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c14"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-11-04",
+      "headline": "讨价还价、退会员、排队等客服，交给 Grok 打电话",
+      "oneLiner": "Peter Yang 分享了 Grok 打电话功能的五个用法，包括按竞品价格砍网费和取消健身房会员，目前只支持美国号码。",
+      "who": "写 AI 实用教程的 Peter Yang，在测试 Grok 新的代打电话功能。",
+      "how": "用一句话交代目标、账户信息和底线，让 Grok 替你拨号、等待、谈判，再要回确认号或整理成表格。",
+      "result": "他给出了五个提示词模板，另外录了一段真实通话的演示视频。",
+      "tryThis": "在美国有账单要谈的，可以照他的模板写：现在付多少、竞品报价多少、要什么结果、拿到确认号才算完成。",
+      "caveat": "目前只能拨美国号码；要交出账户信息，需要身份验证的环节可能仍得本人出面。",
+      "body": "Peter Yang 在 [X 上](https://x.com/petergyang/status/2117783921748558185)列了五个场景，每个都给了可以直接改用的提示词：\n\n- **谈账单：**「我每月付 Comcast 84 美元，竞争对手报价 49 美元，要求降价。」\n- **退订阅：**提供健身房账户信息，拒绝所有挽留优惠，拿到确认号。\n- **等人工：**给出航班确认码，一直排队到真人接听，要求全额退款。\n- **订餐厅：**周五 7 点 4 人，订不到的话 6 点到 8 点都行。\n- **比价：**给三家承包商打电话，问热水器更换的报价和最早开工日期，整理成表格。\n\n这些提示词的共同点是写清**现状、目标、可接受的范围和完成标准**。范围让 AI 有谈判空间，确认号让你事后能核对。把账户信息交给 AI 之前，只提供这一次通话需要的信息就够了。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Peter Yang: Think about how much time we all waste waiting on hold or trying to navigate leg",
+          "url": "https://x.com/petergyang/status/2117783921748558185"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-04-03",
+      "issueDate": "2026-11-04",
+      "issueNumber": 26
+    },
+    {
+      "candidateIds": [
         "c50"
       ],
       "category": "life",

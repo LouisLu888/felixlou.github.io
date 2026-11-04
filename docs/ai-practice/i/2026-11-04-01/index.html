@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一个月八万行：他在 Mac 上让 AI 写出 Windows 版｜AI 实干派</title>
+  <meta name="description" content="Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-11-04-01/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="一个月八万行：他在 Mac 上让 AI 写出 Windows 版｜AI 实干派">
+  <meta property="og:description" content="Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-11-04-01/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-04.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="一个月八万行：他在 Mac 上让 AI 写出 Windows 版｜AI 实干派">
+  <meta name="twitter:description" content="Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-04.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">27</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">7</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">8</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">12</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">15</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">30</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">15</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-11-04/">AI 实干派 026 · 2026 年 11 月 4 日 · 周三</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-11-04<span>·</span>CN</div>
+        <h1>一个月八万行：他在 Mac 上让 AI 写出 Windows 版</h1>
+        <p class="summary">Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>独立开发者 Tw93，Mac 软件 Mole（Swift + SwiftUI）的作者，要做一个原生 Windows 版（C# + WinUI 3）。</dd><dt>怎么用</dt><dd>代码和 Claude Code 留在 Mac 上，编译和运行交给 Parallels 虚拟机，用脚本把崩溃日志回传给 AI；设计 token 和 11 种语言的文案用脚本同步，再用一份 SYNC.md 核对两边功能。</dd><dt>结果</dt><dd>他说一个月写了 8 万多行代码、4000 多个测试，几位天使用户试用后反馈解决了不少痛点。</dd><dt>你可以试</dt><dd>如果你要维护两个版本的产品，先建一份对账表：每个功能写清已实现、刻意不同还是不适用，以及理由。</dd><dt>注意</dt><dd>Windows 签名绕不开：他买了 3 年 300 多美元的云端 OV 证书，签名会话闲置几小时就断，所以很难做成云端自动打包。</dd></dl>
+        <div class="body"><p>少数派作者 Tw93 在<a href="https://sspai.com/post/117713">这篇文章</a>里讲了 Mole Windows 版的做法。他先让 AI 分析十几万行 Swift 代码，能脱离 macOS 框架复用的不到 20%，所以决定从零重写。他把架构分成四层：Core 只依赖 .NET，用模拟的 Windows 文件系统测试；Platform 层开启 EnableWindowsTargeting 后在 Mac 上也能编译；ViewModel 和 Mac 版一一对应；只有最上层界面必须在 Windows 里编译。架构由他出思路，大部分实现交给 Opus 5.5。</p><p>调试也由脚本串起来。仓库作为共享文件夹挂进虚拟机，用 prlctl exec 远程编译、启动；程序崩溃时，Windows 只报一个 0xc000027b，Mole 会把真正的异常写进日志，打印出来给 Claude 读。需要点界面的地方交给 Codex 的 computer use，他自己只负责点系统确认弹框。虚拟机测不准的高分屏、电池和 SmartScreen，放到一台永不休眠的 ThinkPad 上回归测试，覆盖 400 多款软件的卸载和残留清理。</p><p>他的结论是：<strong>代码抽象没那么重要了，规则抽象更重要。</strong>两边同步时，他会记下对应的是 Mac 的哪个提交，防止 AI 跑偏。用 AI 做跨平台，可以先拿这两条规矩试。</p></div>
+        <div class="sources">原文：<a href="https://sspai.com/post/117713" target="_blank" rel="noopener" title="你不知道的客户端开发：AI 时代下的选型、原生与借力">少数派</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-11-04/">← 当期全部 5 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

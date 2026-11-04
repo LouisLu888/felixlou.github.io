@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 026｜一个月写出八万行 Windows 代码，笔记本上的小模型看权重猜出游戏</title>
+  <meta name="description" content="Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-11-04/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 026｜一个月写出八万行 Windows 代码，笔记本上的小模型看权重猜出游戏">
+  <meta property="og:description" content="Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-11-04/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-04.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 026｜一个月写出八万行 Windows 代码，笔记本上的小模型看权重猜出游戏">
+  <meta name="twitter:description" content="Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-04.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">27</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">7</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">8</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">12</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">15</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">30</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">15</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 026 · 2026 年 11 月 4 日 · 周三 · 约 7 分钟读完</div>
+        <h1>一个月写出八万行 Windows 代码，笔记本上的小模型看权重猜出游戏</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-11-04-01">Tw93 用 Claude Code 等工具，一个月给 Mac 清理软件 Mole 写出原生 Windows 版。他说写了 8 万多行代码、4000 多个测试，大部分在 Mac 上就能验证。</a></li><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-11-04-02">投资人 Nikunj Kothari 用定时任务每两周跑一次 Claude Code 的 /insights，再对照收藏的行业做法升级自己的配置。</a></li><li><span class="tag" data-cat="life">AI 生活</span><a href="#2026-11-04-03">Peter Yang 分享了 Grok 打电话功能的五个用法，包括按竞品价格砍网费和取消健身房会员，目前只支持美国号码。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-11-04-04">Simon Willison 让本地 17GB 的 Qwen 3.8 27B 只读神经网络权重来判断游戏，四个猜对三个，每个耗时 46 分钟到 1 小时多。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-11-04-05">Box CEO Aaron Levie 认为，两年里 AI 提效的上限从 30%–50% 升到 5 到 10 倍；刚离开 Anthropic 的 Cat Wu 说，Claude Code 用户已从逐条批准改为默认放行。</a></li></ul>
+      </section>
+      <section class="item" id="2026-11-04-01">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-11-04<span>·</span>CN</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-04-01/">01｜一个月八万行：他在 Mac 上让 AI 写出 Windows 版</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>独立开发者 Tw93，Mac 软件 Mole（Swift + SwiftUI）的作者，要做一个原生 Windows 版（C# + WinUI 3）。</dd><dt>怎么用</dt><dd>代码和 Claude Code 留在 Mac 上，编译和运行交给 Parallels 虚拟机，用脚本把崩溃日志回传给 AI；设计 token 和 11 种语言的文案用脚本同步，再用一份 SYNC.md 核对两边功能。</dd><dt>结果</dt><dd>他说一个月写了 8 万多行代码、4000 多个测试，几位天使用户试用后反馈解决了不少痛点。</dd><dt>你可以试</dt><dd>如果你要维护两个版本的产品，先建一份对账表：每个功能写清已实现、刻意不同还是不适用，以及理由。</dd><dt>注意</dt><dd>Windows 签名绕不开：他买了 3 年 300 多美元的云端 OV 证书，签名会话闲置几小时就断，所以很难做成云端自动打包。</dd></dl>
+        <div class="body"><p>少数派作者 Tw93 在<a href="https://sspai.com/post/117713">这篇文章</a>里讲了 Mole Windows 版的做法。他先让 AI 分析十几万行 Swift 代码，能脱离 macOS 框架复用的不到 20%，所以决定从零重写。他把架构分成四层：Core 只依赖 .NET，用模拟的 Windows 文件系统测试；Platform 层开启 EnableWindowsTargeting 后在 Mac 上也能编译；ViewModel 和 Mac 版一一对应；只有最上层界面必须在 Windows 里编译。架构由他出思路，大部分实现交给 Opus 5.5。</p><p>调试也由脚本串起来。仓库作为共享文件夹挂进虚拟机，用 prlctl exec 远程编译、启动；程序崩溃时，Windows 只报一个 0xc000027b，Mole 会把真正的异常写进日志，打印出来给 Claude 读。需要点界面的地方交给 Codex 的 computer use，他自己只负责点系统确认弹框。虚拟机测不准的高分屏、电池和 SmartScreen，放到一台永不休眠的 ThinkPad 上回归测试，覆盖 400 多款软件的卸载和残留清理。</p><p>他的结论是：<strong>代码抽象没那么重要了，规则抽象更重要。</strong>两边同步时，他会记下对应的是 Mac 的哪个提交，防止 AI 跑偏。用 AI 做跨平台，可以先拿这两条规矩试。</p></div>
+        <div class="sources">原文：<a href="https://sspai.com/post/117713" target="_blank" rel="noopener" title="你不知道的客户端开发：AI 时代下的选型、原生与借力">少数派</a></div>
+      </section>
+      <section class="item" id="2026-11-04-02">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周演示<span>·</span>2026-11-04<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-04-02/">02｜每两周让 Claude Code 给自己的用法做一次体检</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>FPV Ventures 合伙人 Nikunj Kothari，在副项目里长期用 Claude Code 和 Codex。</dd><dt>怎么用</dt><dd>cron 每两周运行 /insights，看自己的配置哪里能改；再用 /playground 把 GitHub 项目架构和工作流画出来，并让 Codex 和 Claude Code 一起找死代码、热点路径和延迟问题。</dd><dt>结果</dt><dd>他把这称为一个自我改进的循环：一边是自己的使用记录，一边是收藏的行业新做法。</dd><dt>你可以试</dt><dd>用 Claude Code 的人，今天先手动跑一次 /insights，挑一条建议改进配置，两周后再跑一次对比。</dd><dt>注意</dt><dd>这套做法依赖 Claude Code 的内置技能，他也没有给出具体提效的数字。</dd></dl>
+        <div class="body"><p>Nikunj Kothari 在 <a href="https://x.com/nikunj/status/2117773647868018897">X 上</a>说，他最常用、但别人很少用的两个 Claude Code 默认技能是 /insights 和 /playground。前者他设成 cron 定时任务，每两周运行一次，告诉他怎样升级自己的设置；他再拿 X 收藏夹里别人搭「软件工厂」的新做法来对照。</p><p>/playground 他用来可视化：看陌生 GitHub 仓库的架构，或者在副项目里模拟一整套学习流程。他最近的用法是<strong>让 Codex 和 Claude Code 一起用这个技能</strong>，找出死代码、热点路径和可以降延迟的地方。</p><p>可借鉴的是复盘的节奏，用哪个具体命令是次要的。多数人配好工具后就不再动，定期让 AI 读一遍自己的使用记录，能发现没用上的功能。换成其他工具，也可以每两周导出一次使用记录，让模型给出三条改进建议。</p></div>
+        <div class="sources">原文：<a href="https://x.com/nikunj/status/2117773647868018897" target="_blank" rel="noopener" title="Nikunj Kothari: My two favorite default skills on Claude Code, still, that seem relatively less ">Follow Builders (X)</a></div>
+      </section>
+      <section class="item" id="2026-11-04-03">
+        <div class="item-meta"><span class="tag" data-cat="life">AI 生活</span><span>·</span>本周演示<span>·</span>2026-11-04<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-04-03/">03｜讨价还价、退会员、排队等客服，交给 Grok 打电话</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>写 AI 实用教程的 Peter Yang，在测试 Grok 新的代打电话功能。</dd><dt>怎么用</dt><dd>用一句话交代目标、账户信息和底线，让 Grok 替你拨号、等待、谈判，再要回确认号或整理成表格。</dd><dt>结果</dt><dd>他给出了五个提示词模板，另外录了一段真实通话的演示视频。</dd><dt>你可以试</dt><dd>在美国有账单要谈的，可以照他的模板写：现在付多少、竞品报价多少、要什么结果、拿到确认号才算完成。</dd><dt>注意</dt><dd>目前只能拨美国号码；要交出账户信息，需要身份验证的环节可能仍得本人出面。</dd></dl>
+        <div class="body"><p>Peter Yang 在 <a href="https://x.com/petergyang/status/2117783921748558185">X 上</a>列了五个场景，每个都给了可以直接改用的提示词：</p><p>- <strong>谈账单：</strong>「我每月付 Comcast 84 美元，竞争对手报价 49 美元，要求降价。」<br>- <strong>退订阅：</strong>提供健身房账户信息，拒绝所有挽留优惠，拿到确认号。<br>- <strong>等人工：</strong>给出航班确认码，一直排队到真人接听，要求全额退款。<br>- <strong>订餐厅：</strong>周五 7 点 4 人，订不到的话 6 点到 8 点都行。<br>- <strong>比价：</strong>给三家承包商打电话，问热水器更换的报价和最早开工日期，整理成表格。</p><p>这些提示词的共同点是写清<strong>现状、目标、可接受的范围和完成标准</strong>。范围让 AI 有谈判空间，确认号让你事后能核对。把账户信息交给 AI 之前，只提供这一次通话需要的信息就够了。</p></div>
+        <div class="sources">原文：<a href="https://x.com/petergyang/status/2117783921748558185" target="_blank" rel="noopener" title="Peter Yang: Think about how much time we all waste waiting on hold or trying to navigate leg">Follow Builders (X)</a></div>
+      </section>
+      <section class="item" id="2026-11-04-04">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-11-03<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-04-04/">04｜笔记本上的 Qwen 只看权重，猜出了三个游戏</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>开发者 Simon Willison，在博客上复现一篇热门论文的实验，2026-11-03。</dd><dt>核心观点</dt><dd>他认为这篇论文把两件事混在了一起：模型不借助工具读懂权重，以及模型写代码改进别的模型。前者更有意思，但外界的引申言过其实。</dd><dt>依据</dt><dd>他用 LM Studio 在本地运行 Qwen 3.8 27B，它猜对了 Pac-Man、Pong、Breakout，没猜出更冷门的 Freeway；Kimi K3.1 Pro 用 9 分 41 秒猜对了 Breakout。</dd><dt>对你的意义</dt><dd>看到「AI 已经能 X」这类热门论文，可以学他：拿论文公开的提示词，自己找一个模型跑一次。</dd><dt>争议·条件</dt><dd>他认为一个有经验的人拿纸笔，花足够功夫也能做到；Matthew Honnibal 批评这篇论文有误导性，Sean Goedecke 则指出改进小模型的步骤和人类研究员一样。</dd></dl>
+        <div class="body"><p>一篇论文称 GPT-6 Astra 能直接读写模型权重，Simon Willison 拿论文仓库里的提示词做了<a href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/">复现</a>：把四个网格小游戏策略网络的浮点权重喂给模型，要求它不用任何工具，判断网络是为哪个游戏训练的。</p><p>他用自己写的 llm 工具配合 LM Studio，在笔记本上运行 Qwen 3.8 27B。默认的 8192 上下文会报错，超时也要调到 900 秒。Pac-Man 用了 46 分钟、4.3 万个推理 token，Pong 用了 1 小时 4 分钟，Breakout 用了 52 分钟，置信度分别是 72%、75%、88%。推理过程几乎看不懂。</p><p>他的态度值得照着做：<strong>承认能力确实存在，但不跟着下大结论。</strong>他说自己还没准备好宣布源代码时代结束。读者判断这类新闻时，看一个可以本地复现的例子，比看转发评论更有用。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/" target="_blank" rel="noopener" title="Qwen 3.8 27B on my laptop can interpret model weights, too">Simon Willison</a></div>
+      </section>
+      <section class="item" id="2026-11-04-05">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-11-03<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-04-05/">05｜从逐条批准到默认放行，用不用 AI 的差距在拉大</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Box CEO Aaron Levie；Claude Code 早期团队成员 Cat Wu，两人都在 2026-11-03 发帖。</dd><dt>核心观点</dt><dd>Levie 的判断是：AI 已被广泛采用，但人和人之间产出的差距反而是历来最大，紧跟前沿和完全不关注，产出可能差一个数量级。</dd><dt>依据</dt><dd>Cat Wu 回忆，刚上线时多数人手动批准每个权限，主要拿 Claude 答问题、写测试；现在默认是信任 Claude 自动批准，用它做大型迁移和新产品。</dd><dt>对你的意义</dt><dd>检查自己交给 AI 的任务还停在哪一级：问答和写测试，还是能独立跑完的长任务。</dd><dt>争议·条件</dt><dd>5 到 10 倍是 Levie 按领域给的上限估计，不是测量结果，普通使用者到不了。</dd></dl>
+        <div class="body"><p>Aaron Levie 在 <a href="https://x.com/levie/status/2117505799937577263">X 上</a>写道，几年前即使在最适合 AI 的编程领域，熟练使用者大约能提效 30% 到 50%，还要花不少时间收拾模型的错误。现在模型能更长时间独立工作，工具支持同时用多个 agent，他估计提效上限已到 5 到 10 倍，并预计差距会继续扩大。</p><p>离开 Anthropic 的 Cat Wu 在<a href="https://x.com/_catwu/status/2117731934340337676">告别帖</a>里提供了一个使用侧的变化：她两年前用内部版 Claude Code 搭了一个强化学习环境，引导了几十个小时，自己没写一行代码。用户的习惯也从<strong>逐条批准权限</strong>变成了<strong>默认信任自动批准</strong>。</p><p>对读者有用的是这条变化路径：先放手让 AI 做小任务，建立检查机制后再放开权限和任务长度。</p></div>
+        <div class="sources">原文：<a href="https://x.com/_catwu/status/2117731934340337676" target="_blank" rel="noopener" title="Cat Wu: Friday was my last day at Anthropic.
+
+Two years ago, when Claude Code was a smal">Follow Builders (X)</a><a href="https://x.com/levie/status/2117505799937577263" target="_blank" rel="noopener" title="Aaron Levie: The divergence in AI output weirdly may be the highest it’s ever been, even thou">Follow Builders (X)</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>从你手上的工作里，挑一个以前只让 AI 回答问题的环节，改成一个它能独立跑完的小任务，比如让它整理一份表格并自己检查一遍。先学 Tw93，写一份三行的对账规则：输入是什么，产出应该长什么样，哪一步由你验收。做完后记下总耗时和你改了几处。两周后再做一次，看看这几处有没有减少。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-11-03/">← 2026 年 11 月 3 日 · 周二</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

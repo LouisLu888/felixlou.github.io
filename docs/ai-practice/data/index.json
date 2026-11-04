@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-11-03T14:45:32.634Z",
+  "updatedAt": "2026-11-04T14:45:36.599Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 25
+      "count": 27
     },
     {
       "id": "consulting",
@@ -41,17 +41,53 @@
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 28
+      "count": 30
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 14
+      "count": 15
     }
   ],
   "days": [
+    {
+      "date": "2026-11-04",
+      "number": 26,
+      "title": "一个月写出八万行 Windows 代码，笔记本上的小模型看权重猜出游戏",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 7,
+      "itemCount": 5,
+      "categoryCounts": {
+        "productivity": 2,
+        "life": 1,
+        "perspective": 2
+      },
+      "headlines": [
+        {
+          "category": "productivity",
+          "headline": "一个月八万行：他在 Mac 上让 AI 写出 Windows 版"
+        },
+        {
+          "category": "productivity",
+          "headline": "每两周让 Claude Code 给自己的用法做一次体检"
+        },
+        {
+          "category": "life",
+          "headline": "讨价还价、退会员、排队等客服，交给 Grok 打电话"
+        },
+        {
+          "category": "perspective",
+          "headline": "笔记本上的 Qwen 只看权重，猜出了三个游戏"
+        },
+        {
+          "category": "perspective",
+          "headline": "从逐条批准到默认放行，用不用 AI 的差距在拉大"
+        }
+      ]
+    },
     {
       "date": "2026-11-03",
       "number": 25,

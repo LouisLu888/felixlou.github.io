@@ -8,6 +8,66 @@
   "items": [
     {
       "candidateIds": [
+        "c1"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-03",
+      "headline": "笔记本上的 Qwen 只看权重，猜出了三个游戏",
+      "oneLiner": "Simon Willison 让本地 17GB 的 Qwen 3.8 27B 只读神经网络权重来判断游戏，四个猜对三个，每个耗时 46 分钟到 1 小时多。",
+      "who": "开发者 Simon Willison，在博客上复现一篇热门论文的实验，2026-11-03。",
+      "how": "他认为这篇论文把两件事混在了一起：模型不借助工具读懂权重，以及模型写代码改进别的模型。前者更有意思，但外界的引申言过其实。",
+      "result": "他用 LM Studio 在本地运行 Qwen 3.8 27B，它猜对了 Pac-Man、Pong、Breakout，没猜出更冷门的 Freeway；Kimi K3.1 Pro 用 9 分 41 秒猜对了 Breakout。",
+      "tryThis": "看到「AI 已经能 X」这类热门论文，可以学他：拿论文公开的提示词，自己找一个模型跑一次。",
+      "caveat": "他认为一个有经验的人拿纸笔，花足够功夫也能做到；Matthew Honnibal 批评这篇论文有误导性，Sean Goedecke 则指出改进小模型的步骤和人类研究员一样。",
+      "body": "一篇论文称 GPT-6 Astra 能直接读写模型权重，Simon Willison 拿论文仓库里的提示词做了[复现](https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/)：把四个网格小游戏策略网络的浮点权重喂给模型，要求它不用任何工具，判断网络是为哪个游戏训练的。\n\n他用自己写的 llm 工具配合 LM Studio，在笔记本上运行 Qwen 3.8 27B。默认的 8192 上下文会报错，超时也要调到 900 秒。Pac-Man 用了 46 分钟、4.3 万个推理 token，Pong 用了 1 小时 4 分钟，Breakout 用了 52 分钟，置信度分别是 72%、75%、88%。推理过程几乎看不懂。\n\n他的态度值得照着做：**承认能力确实存在，但不跟着下大结论。**他说自己还没准备好宣布源代码时代结束。读者判断这类新闻时，看一个可以本地复现的例子，比看转发评论更有用。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-04-04",
+      "issueDate": "2026-11-04",
+      "issueNumber": 26
+    },
+    {
+      "candidateIds": [
+        "c26",
+        "c38"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-03",
+      "headline": "从逐条批准到默认放行，用不用 AI 的差距在拉大",
+      "oneLiner": "Box CEO Aaron Levie 认为，两年里 AI 提效的上限从 30%–50% 升到 5 到 10 倍；刚离开 Anthropic 的 Cat Wu 说，Claude Code 用户已从逐条批准改为默认放行。",
+      "who": "Box CEO Aaron Levie；Claude Code 早期团队成员 Cat Wu，两人都在 2026-11-03 发帖。",
+      "how": "Levie 的判断是：AI 已被广泛采用，但人和人之间产出的差距反而是历来最大，紧跟前沿和完全不关注，产出可能差一个数量级。",
+      "result": "Cat Wu 回忆，刚上线时多数人手动批准每个权限，主要拿 Claude 答问题、写测试；现在默认是信任 Claude 自动批准，用它做大型迁移和新产品。",
+      "tryThis": "检查自己交给 AI 的任务还停在哪一级：问答和写测试，还是能独立跑完的长任务。",
+      "caveat": "5 到 10 倍是 Levie 按领域给的上限估计，不是测量结果，普通使用者到不了。",
+      "body": "Aaron Levie 在 [X 上](https://x.com/levie/status/2117505799937577263)写道，几年前即使在最适合 AI 的编程领域，熟练使用者大约能提效 30% 到 50%，还要花不少时间收拾模型的错误。现在模型能更长时间独立工作，工具支持同时用多个 agent，他估计提效上限已到 5 到 10 倍，并预计差距会继续扩大。\n\n离开 Anthropic 的 Cat Wu 在[告别帖](https://x.com/_catwu/status/2117731934340337676)里提供了一个使用侧的变化：她两年前用内部版 Claude Code 搭了一个强化学习环境，引导了几十个小时，自己没写一行代码。用户的习惯也从**逐条批准权限**变成了**默认信任自动批准**。\n\n对读者有用的是这条变化路径：先放手让 AI 做小任务，建立检查机制后再放开权限和任务长度。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Cat Wu: Friday was my last day at Anthropic.\n\nTwo years ago, when Claude Code was a smal",
+          "url": "https://x.com/_catwu/status/2117731934340337676"
+        },
+        {
+          "label": "Follow Builders (X)",
+          "title": "Aaron Levie: The divergence in AI output weirdly may be the highest it’s ever been, even thou",
+          "url": "https://x.com/levie/status/2117505799937577263"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-04-05",
+      "issueDate": "2026-11-04",
+      "issueNumber": 26
+    },
+    {
+      "candidateIds": [
         "c41"
       ],
       "category": "perspective",
