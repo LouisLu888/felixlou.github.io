@@ -14,6 +14,18 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>2026-11-05 · Claude 当起了剪辑师，靠一段唱歌视频做出月入 2.5 万美元的 App</title>
+      <link>https://www.jiabinlu.com/ai-practice/d/2026-11-05/</link>
+      <description>三张截图生成发布视频，Claude 开始替创作者剪片；软件人人都能做出来，Greg Isenberg 看好八类难复制的生意；一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App；InstructGPT 作者：大多数大模型调用，读结果的是机器不是人；用 ChatGPT 挑节日礼物前，先过这几道防骗检查；Datasette 的 AI 助手，现在能停在数据表旁边改应用了（本集语音由 AI 合成）</description>
+      <content:encoded><![CDATA[<p><a href="https://www.jiabinlu.com/ai-practice/d/2026-11-05/">图文版</a> · 本集口播稿与语音由 AI 生成合成</p><p>00:00 三张截图生成发布视频，Claude 开始替创作者剪片<br>02:39 软件人人都能做出来，Greg Isenberg 看好八类难复制的生意<br>04:35 一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App<br>06:00 InstructGPT 作者：大多数大模型调用，读结果的是机器不是人<br>07:36 用 ChatGPT 挑节日礼物前，先过这几道防骗检查<br>09:20 Datasette 的 AI 助手，现在能停在数据表旁边改应用了<br>10:22 今天可以做的一件事</p><p><b>三张截图生成发布视频，Claude 开始替创作者剪片</b><br><a href="https://podcasters.spotify.com/pod/show/peter-yang42/episodes/How-to-Edit-Videos-Like-a-Pro-with-Claude-and-HyperFrames--Jake-Moran-e3r0521">Behind the Craft (Peter Yang)</a> · <a href="https://www.youtube.com/watch?v=ep4psgAFOqc">Matt Wolfe</a></p><p><b>软件人人都能做出来，Greg Isenberg 看好八类难复制的生意</b><br><a href="https://www.youtube.com/@GregIsenberg/search?query=8%20AI-Proof%20Businesses%20I'd%20build%20in%202027">Startup Ideas Podcast (Greg Isenberg)</a></p><p><b>一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App</b><br><a href="https://www.youtube.com/watch?v=KgS3hbpxTzE">Starter Story (YouTube)</a></p><p><b>InstructGPT 作者：大多数大模型调用，读结果的是机器不是人</b><br><a href="https://unsupervised-learning.simplecast.com/episodes/ep-97-jev-creator-on-decision-models-benchmark-fatigue-why-the-labs-missed-it-lw9nHzNX">Unsupervised Learning (Redpoint)</a></p><p><b>用 ChatGPT 挑节日礼物前，先过这几道防骗检查</b><br><a href="https://www.tomsguide.com/ai/i-asked-a-cybersecurity-expert-how-to-shop-more-safely-with-ai-these-are-their-5-non-negotiables">Tom's Guide · AI</a></p><p><b>Datasette 的 AI 助手，现在能停在数据表旁边改应用了</b><br><a href="https://simonwillison.net/2026/Nov/3/datasette-agent/">Simon Willison</a></p>]]></content:encoded>
+      <enclosure url="https://audio.jiabinlu.com/ai-practice-2026-11-05.mp3" length="4019420" type="audio/mpeg"/>
+      <guid isPermaLink="false">ai-practice-2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 22:46:16 GMT</pubDate>
+      <itunes:duration>00:11:10</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>2026-11-04 · 一个月写出八万行 Windows 代码，笔记本上的小模型看权重猜出游戏</title>
       <link>https://www.jiabinlu.com/ai-practice/d/2026-11-04/</link>
       <description>一个月八万行：他在 Mac 上让 AI 写出 Windows 版；每两周让 Claude Code 给自己的用法做一次体检；讨价还价、退会员、排队等客服，交给 Grok 打电话；笔记本上的 Qwen 只看权重，猜出了三个游戏；从逐条批准到默认放行，用不用 AI 的差距在拉大（本集语音由 AI 合成）</description>

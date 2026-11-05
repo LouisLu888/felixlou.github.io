@@ -1,5 +1,112 @@
 [
   {
+    "date": "2026-11-05",
+    "title": "Claude 当起了剪辑师，靠一段唱歌视频做出月入 2.5 万美元的 App",
+    "summary": "三张截图生成发布视频，Claude 开始替创作者剪片；软件人人都能做出来，Greg Isenberg 看好八类难复制的生意；一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App；InstructGPT 作者：大多数大模型调用，读结果的是机器不是人；用 ChatGPT 挑节日礼物前，先过这几道防骗检查；Datasette 的 AI 助手，现在能停在数据表旁边改应用了",
+    "link": "https://www.jiabinlu.com/ai-practice/d/2026-11-05/",
+    "items": [
+      {
+        "headline": "三张截图生成发布视频，Claude 开始替创作者剪片",
+        "sources": [
+          {
+            "label": "Behind the Craft (Peter Yang)",
+            "title": "How to Edit Videos Like a Pro with Claude and HyperFrames | Jake Moran",
+            "url": "https://podcasters.spotify.com/pod/show/peter-yang42/episodes/How-to-Edit-Videos-Like-a-Pro-with-Claude-and-HyperFrames--Jake-Moran-e3r0521"
+          },
+          {
+            "label": "Matt Wolfe",
+            "title": "How I Get Claude To Edit My Videos (No Code Needed)",
+            "url": "https://www.youtube.com/watch?v=ep4psgAFOqc"
+          }
+        ]
+      },
+      {
+        "headline": "软件人人都能做出来，Greg Isenberg 看好八类难复制的生意",
+        "sources": [
+          {
+            "label": "Startup Ideas Podcast (Greg Isenberg)",
+            "title": "8 AI-Proof Businesses I'd build in 2027",
+            "url": "https://www.youtube.com/@GregIsenberg/search?query=8%20AI-Proof%20Businesses%20I'd%20build%20in%202027"
+          }
+        ]
+      },
+      {
+        "headline": "一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App",
+        "sources": [
+          {
+            "label": "Starter Story (YouTube)",
+            "title": "I turned a viral idea into a $25K/month app",
+            "url": "https://www.youtube.com/watch?v=KgS3hbpxTzE"
+          }
+        ]
+      },
+      {
+        "headline": "InstructGPT 作者：大多数大模型调用，读结果的是机器不是人",
+        "sources": [
+          {
+            "label": "Unsupervised Learning (Redpoint)",
+            "title": "Ep 97: Jev Creator on Decision Models, Benchmark Fatigue & Why the Labs Missed It",
+            "url": "https://unsupervised-learning.simplecast.com/episodes/ep-97-jev-creator-on-decision-models-benchmark-fatigue-why-the-labs-missed-it-lw9nHzNX"
+          }
+        ]
+      },
+      {
+        "headline": "用 ChatGPT 挑节日礼物前，先过这几道防骗检查",
+        "sources": [
+          {
+            "label": "Tom's Guide · AI",
+            "title": "I asked a cybersecurity expert how to shop more safely with AI — these are their 5 non-negotiables",
+            "url": "https://www.tomsguide.com/ai/i-asked-a-cybersecurity-expert-how-to-shop-more-safely-with-ai-these-are-their-5-non-negotiables"
+          }
+        ]
+      },
+      {
+        "headline": "Datasette 的 AI 助手，现在能停在数据表旁边改应用了",
+        "sources": [
+          {
+            "label": "Simon Willison",
+            "title": "datasette-agent 0.5a0",
+            "url": "https://simonwillison.net/2026/Nov/3/datasette-agent/"
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "start": 0,
+        "title": "三张截图生成发布视频，Claude 开始替创作者剪片"
+      },
+      {
+        "start": 159,
+        "title": "软件人人都能做出来，Greg Isenberg 看好八类难复制的生意"
+      },
+      {
+        "start": 275,
+        "title": "一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App"
+      },
+      {
+        "start": 360,
+        "title": "InstructGPT 作者：大多数大模型调用，读结果的是机器不是人"
+      },
+      {
+        "start": 456,
+        "title": "用 ChatGPT 挑节日礼物前，先过这几道防骗检查"
+      },
+      {
+        "start": 560,
+        "title": "Datasette 的 AI 助手，现在能停在数据表旁边改应用了"
+      },
+      {
+        "start": 622,
+        "title": "今天可以做的一件事"
+      }
+    ],
+    "duration": 670,
+    "audioUrl": "https://audio.jiabinlu.com/ai-practice-2026-11-05.mp3",
+    "audioBytes": 4019420,
+    "publishedAt": "2026-11-05T22:46:16.087Z"
+  },
+  {
     "date": "2026-11-04",
     "title": "一个月写出八万行 Windows 代码，笔记本上的小模型看权重猜出游戏",
     "summary": "一个月八万行：他在 Mac 上让 AI 写出 Windows 版；每两周让 Claude Code 给自己的用法做一次体检；讨价还价、退会员、排队等客服，交给 Grok 打电话；笔记本上的 Qwen 只看权重，猜出了三个游戏；从逐条批准到默认放行，用不用 AI 的差距在拉大",
