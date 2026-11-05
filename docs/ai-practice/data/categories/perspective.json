@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c52"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-04",
+      "headline": "软件人人都能做出来，Greg Isenberg 看好八类难复制的生意",
+      "oneLiner": "Greg Isenberg 认为，AI 让软件、内容和答案几乎免费之后，实体、牌照和市场平台这几类生意最难被复制，「按结果收费」排在最后。",
+      "who": "Greg Isenberg 是 Startup Ideas Podcast 主持人，长期做创业点子研究，也办线下活动。这是他 2026-11-04 的单人节目。",
+      "how": "他把「AI 难以复制」的生意分成八类：实体、准入、注意力、时机、归属感、流动性、独有数据和结果交付。他说实体和持牌业务排在最前，按结果收费的自动化服务排在最后，几类可以组合起来做。",
+      "result": "他举了自己的经历：以前讨厌剪短视频，现在让 Opus 5.5 当剪辑，过去一周拿到几十万播放；他在 Nashville 办的创始人线下活动，需求多到接不过来。他还提到 Hampton、Cars & Bids 等案例。",
+      "tryThis": "给你的副业想法逐项对照这八类，看至少占了哪一项。如果只有软件本身，就想想能不能加上受众、社群或者独有数据。",
+      "caveat": "这是他的判断和排序，没有数据支撑。他自己也承认，抢先做的产品本身往往最容易被抄，留得住的是过程中积累的数据、品牌和信任。",
+      "body": "Greg Isenberg 在[本期节目](https://www.youtube.com/@GregIsenberg/search?query=8%20AI-Proof%20Businesses%20I'd%20build%20in%202027)里回答一个问题：谁都能按几下按钮做出一家公司，那什么生意还难被复制？他给了八个方向。其中几条对上班族做副业比较实在。\n\n**准入**：牌照、监管，或者成为大公司的指定供应商。他举例说，有些国家要求律所老板本人是律师，那就找一位律师合伙，自己负责营销、增长和 AI 这部分。**注意力**：围绕一个很窄的细分领域搭内容机器，newsletter、梗图账号、创始人自己出镜都算，他认为媒体现在被低估了。**流动性**：做市场平台。他说过去运营市场平台要处理大量工单，现在靠 agent，一到五个人就能撑起成交额几百万的平台。他朋友做的收藏车拍卖网站，就是先有 Instagram 受众，再把这些人导进来。\n\n**独有数据**：一种做法是把高质量评价整理成付费目录，他拿 Yelp 上只剩五星和一星的两极评价举例；另一种是把别人拿不到的数据卖给模型公司。他把按结果收费的自动化服务排在最后，理由是这类生意的护城河只能靠更好的上下文和系统来建。",
+      "sources": [
+        {
+          "label": "Startup Ideas Podcast (Greg Isenberg)",
+          "title": "8 AI-Proof Businesses I'd build in 2027",
+          "url": "https://www.youtube.com/@GregIsenberg/search?query=8%20AI-Proof%20Businesses%20I'd%20build%20in%202027"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-05-02",
+      "issueDate": "2026-11-05",
+      "issueNumber": 27
+    },
+    {
+      "candidateIds": [
+        "c45"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-05",
+      "headline": "InstructGPT 作者：大多数大模型调用，读结果的是机器不是人",
+      "oneLiner": "InstructGPT 论文合著者 Diogo Almeida 估计，coding agent 能让开发提速 20% 到 40%；他还认为，AI 离真正的自主能力还差两次大突破。",
+      "who": "Diogo Almeida 是 OpenAI InstructGPT 论文的合著者、TypeSafe AI 联合创始人。他在 Redpoint 的 Unsupervised Learning 播客里接受了 Jacob Effron 的访谈。",
+      "how": "他认为，AI 早就聪明到能做那些简单的工作，迟迟没被自动化，卡在可靠性上。所以他做了 Jev：一种「系统一」模型，输出结构化的决策，不输出大段文本。",
+      "result": "依据来自他的亲身经历：Jev 闭门做了两年，9 月发布。他原以为一周就能做出来，结果花了好几年。他说新的模型形态很便宜，难的是可靠性。",
+      "tryThis": "检查你工作流里的 AI 调用：如果结果是给程序读的，就要求它输出固定的结构和选项，再去测稳定性，不要依赖一段自由文本。估算 coding agent 带来的收益时，按两到四成的提速来做预期。",
+      "caveat": "20% 到 40% 是他个人的估计。他做的正是「可靠性」方向的模型，看法跟自己的产品方向一致。",
+      "body": "在 [Unsupervised Learning 第 97 期](https://unsupervised-learning.simplecast.com/episodes/ep-97-jev-creator-on-decision-models-benchmark-fatigue-why-the-labs-missed-it-lw9nHzNX)里，Diogo Almeida 谈到一个现象：很多简单工作，模型几年前就有能力做，到现在还没被自动化。他的解释是可靠性不够，而且模型能力参差不齐，有的地方很强，有的地方突然失灵。他建议开发者在这一点上**更强硬地向模型厂商提要求**。\n\n他的核心观点是：**几乎每一次 LLM 调用，结果都是给机器读的**，所以应该输出结构化的决策，而不是给人看的文字。他的 Jev 就是按这个思路做的。节目里他还谈到 KV cache 对 coding agent 的限制，估计 coding agent 能带来 20% 到 40% 的提速，并认为离真正的 AI 自主能力还差两次巨大突破。\n\n对做自动化的人来说，可以把问题从「模型够不够聪明」换成「同样的输入跑一百次，结果是否稳定」。",
+      "sources": [
+        {
+          "label": "Unsupervised Learning (Redpoint)",
+          "title": "Ep 97: Jev Creator on Decision Models, Benchmark Fatigue & Why the Labs Missed It",
+          "url": "https://unsupervised-learning.simplecast.com/episodes/ep-97-jev-creator-on-decision-models-benchmark-fatigue-why-the-labs-missed-it-lw9nHzNX"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-05-04",
+      "issueDate": "2026-11-05",
+      "issueNumber": 27
+    },
+    {
+      "candidateIds": [
         "c1"
       ],
       "category": "perspective",

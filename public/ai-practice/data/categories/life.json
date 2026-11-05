@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c56"
+      ],
+      "category": "life",
+      "kind": "本周动态",
+      "eventDate": "2026-11-04",
+      "headline": "用 ChatGPT 挑节日礼物前，先过这几道防骗检查",
+      "oneLiner": "Bain 数据显示，接近四分之一的美国网购者打算从 ChatGPT、Gemini 这类 AI 平台开始节日购物（去年是 17%）。网络安全专家 Serena Sullivan 给出了一套防骗检查。",
+      "who": "Tom's Guide 记者采访网络安全专家 Serena Sullivan，对象是用 AI 助手做节日购物的普通人。",
+      "how": "她的建议有几条：只说必要的信息；不直接点 AI 给的链接，改用搜索引擎找到官网再进；核对证书和域名；查付款方式和隐私政策；查 BBB 评级。",
+      "result": "文章援引的数据是，假冒网店大约每三分钟冒出一家，而且已经出现在 AI 助手的推荐结果里。",
+      "tryThis": "下次让 AI 推荐礼物时，只描述礼物的类型和预算，不提家人的年龄、住址和行程。看中商品后，自己搜索官网再下单，用信用卡或 PayPal 付款。",
+      "caveat": "这些检查要逐个网站手动做，会多花几分钟。AI 生成的网站和评价越来越逼真，页面看起来专业，不代表网站可信。",
+      "body": "Tom's Guide 的[这篇采访](https://www.tomsguide.com/ai/i-asked-a-cybersecurity-expert-how-to-shop-more-safely-with-ai-these-are-their-5-non-negotiables)讲的是用 AI 买节日礼物时容易忽略的两类风险。第一类是**隐私**。你跟 AI 说要给女儿买芭蕾舞鞋，或者计划一家人去主题乐园，就可能透露出孩子的年龄和性别、家里有几口人、住在哪、收入大概多少。这些零散信息拼起来，足够有人给你写一封精准的钓鱼邮件。\n\n第二类是**假网站**。Serena Sullivan 提醒，AI 推荐的链接没有经过安全审核，也可能已经过期。她的检查清单是：证书报警就别继续；打开后域名变成了不相关的名字，要警惕；常卖 100 美元的东西只卖 10 美元，多半有问题；要求汇款、礼品卡或加密货币付款的，是危险信号；隐私政策缺失或写得不像律师手笔的，不要下单。\n\n给孩子买 AI 玩具时，要看它有没有麦克风、摄像头和定位功能，对话会不会上传到云端，并提前设置好家长控制。",
+      "sources": [
+        {
+          "label": "Tom's Guide · AI",
+          "title": "I asked a cybersecurity expert how to shop more safely with AI — these are their 5 non-negotiables",
+          "url": "https://www.tomsguide.com/ai/i-asked-a-cybersecurity-expert-how-to-shop-more-safely-with-ai-these-are-their-5-non-negotiables"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-05-05",
+      "issueDate": "2026-11-05",
+      "issueNumber": 27
+    },
+    {
+      "candidateIds": [
         "c14"
       ],
       "category": "life",

@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-11-04T14:45:36.599Z",
+  "updatedAt": "2026-11-05T14:45:12.734Z",
   "categories": [
     {
       "id": "perspective",
       "name": "AI 认知",
       "en": "Perspectives on AI",
       "desc": "方法论与世界观：一线的人怎么看 AI 的能力边界和走向，人该怎么和 AI 一起工作",
-      "count": 27
+      "count": 29
     },
     {
       "id": "consulting",
@@ -20,7 +20,7 @@
       "name": "内容创作",
       "en": "AI content creation",
       "desc": "用 AI 辅助研究与制作，积累受众，获得广告、赞助和相关收入",
-      "count": 8
+      "count": 9
     },
     {
       "id": "saas",
@@ -34,24 +34,66 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 15
+      "count": 16
     },
     {
       "id": "productivity",
       "name": "工作提效",
       "en": "AI at work",
       "desc": "真实工作场景里的步骤、输入与产物、人工检查和失败",
-      "count": 30
+      "count": 31
     },
     {
       "id": "life",
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 15
+      "count": 16
     }
   ],
   "days": [
+    {
+      "date": "2026-11-05",
+      "number": 27,
+      "title": "Claude 当起了剪辑师，靠一段唱歌视频做出月入 2.5 万美元的 App",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 10,
+      "itemCount": 6,
+      "categoryCounts": {
+        "content": 1,
+        "perspective": 2,
+        "app": 1,
+        "life": 1,
+        "productivity": 1
+      },
+      "headlines": [
+        {
+          "category": "content",
+          "headline": "三张截图生成发布视频，Claude 开始替创作者剪片"
+        },
+        {
+          "category": "perspective",
+          "headline": "软件人人都能做出来，Greg Isenberg 看好八类难复制的生意"
+        },
+        {
+          "category": "app",
+          "headline": "一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App"
+        },
+        {
+          "category": "perspective",
+          "headline": "InstructGPT 作者：大多数大模型调用，读结果的是机器不是人"
+        },
+        {
+          "category": "life",
+          "headline": "用 ChatGPT 挑节日礼物前，先过这几道防骗检查"
+        },
+        {
+          "category": "productivity",
+          "headline": "Datasette 的 AI 助手，现在能停在数据表旁边改应用了"
+        }
+      ]
+    },
     {
       "date": "2026-11-04",
       "number": 26,

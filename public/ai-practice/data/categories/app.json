@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c9"
+      ],
+      "category": "app",
+      "kind": "经营复盘",
+      "eventDate": "2026-11-04",
+      "headline": "一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App",
+      "oneLiner": "Ben 把一条自己唱法语歌的爆款视频做成了通过音乐学语言的 App Canary。他说不到一年月收入约 2.5 万美元，目前一个人运营。",
+      "who": "独立开发者 Ben，在 Starter Story 的访谈里复盘 Canary。",
+      "how": "顺序是先发内容测需求，再做一个简单的第一版。视频依次讲了技术栈和工具、早期增长、现在还管用的营销方法，以及他怎么找 App 点子。",
+      "result": "按他的说法，Canary 上线不到一年，月收入约 2.5 万美元，由他一人运营。",
+      "tryThis": "先别写代码。把你的产品概念拍成一条短视频，发出去看播放、评论和私信里有没有人问「在哪能用」，再决定要不要做第一版。",
+      "caveat": "起点是一条已经爆了的视频，大多数测试内容到不了这个量级。用内容验证需求，需要连续发很多条，并且能分清哪些是真需求。",
+      "body": "Starter Story 的[这期视频](https://www.youtube.com/watch?v=KgS3hbpxTzE)讲 Ben 的 Canary。起点是他发的一条自己用法语唱歌的视频，火了，他由此做出一个通过唱歌学语言的 App。他说上线不到一年，月收入约 2.5 万美元，到现在还是一个人在做。\n\n这期节目被定位成一份打法：**用内容测试 App 点子，做一个简单的第一版，再快速增长。**这个顺序的好处是，有人看、有人问，就说明有需求，而且第一批用户来自同一个渠道。对有一技之长的人来说，把自己学语言、练乐器、健身的过程拍出来，本身就是一次低成本的验证。\n\n想看具体工具和获客方法，可以从 4:34 的开发过程看起，7:04 讲的是目前还管用的营销方法。",
+      "sources": [
+        {
+          "label": "Starter Story (YouTube)",
+          "title": "I turned a viral idea into a $25K/month app",
+          "url": "https://www.youtube.com/watch?v=KgS3hbpxTzE"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-05-03",
+      "issueDate": "2026-11-05",
+      "issueNumber": 27
+    },
+    {
+      "candidateIds": [
         "c7"
       ],
       "category": "app",

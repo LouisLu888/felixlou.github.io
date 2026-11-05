@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datasette 的 AI 助手，现在能停在数据表旁边改应用了｜AI 实干派</title>
+  <meta name="description" content="Simon Willison 发布 datasette-agent 0.5a0。新增的面板让 agent 对话窗口停在数据表或查询页旁边，可以边看数据边让它做、改数据库驱动的小应用。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/i/2026-11-05-06/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Datasette 的 AI 助手，现在能停在数据表旁边改应用了｜AI 实干派">
+  <meta property="og:description" content="Simon Willison 发布 datasette-agent 0.5a0。新增的面板让 agent 对话窗口停在数据表或查询页旁边，可以边看数据边让它做、改数据库驱动的小应用。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/i/2026-11-05-06/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-05.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Datasette 的 AI 助手，现在能停在数据表旁边改应用了｜AI 实干派">
+  <meta name="twitter:description" content="Simon Willison 发布 datasette-agent 0.5a0。新增的面板让 agent 对话窗口停在数据表或查询页旁边，可以边看数据边让它做、改数据库驱动的小应用。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-05.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">29</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">7</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">9</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">12</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">16</span></a><a class="cat-chip active" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">31</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">16</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <div class="eyebrow"><a href="/ai-practice/d/2026-11-05/">AI 实干派 027 · 2026 年 11 月 5 日 · 周四</a></div>
+      <section class="item item-single">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周动态<span>·</span>2026-11-03<span>·</span>US</div>
+        <h1>Datasette 的 AI 助手，现在能停在数据表旁边改应用了</h1>
+        <p class="summary">Simon Willison 发布 datasette-agent 0.5a0。新增的面板让 agent 对话窗口停在数据表或查询页旁边，可以边看数据边让它做、改数据库驱动的小应用。</p>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison 更新了自己的开源项目 Datasette Agent。</dd><dt>怎么用</dt><dd>新功能叫 panel：agent 的对话窗口固定在 Datasette 的表格页或查询页旁边。配合 datasette-apps，可以用提示词生成一个基于数据库的应用，再在旁边的对话框里继续修改。</dd><dt>结果</dt><dd>这次是 alpha 版。用 GitHub 账号登录 agent.datasette.io 就能试用。</dd><dt>你可以试</dt><dd>手上有 CSV 或 SQLite 数据的分析和运营同学，可以登录试用，看看能不能用一句话先做出一个筛选或汇总页面。</dd><dt>注意</dt><dd>alpha 版功能可能变动，敏感数据不要上传到公共试用站。</dd></dl>
+        <div class="body"><p>Simon Willison 在<a href="https://simonwillison.net/2026/Nov/3/datasette-agent/">发布说明</a>里说，这是 Datasette Agent 一次比较大的更新。新增的 panel 让 agent 对话窗口停在数据页面旁边。配合 datasette-apps，可以<strong>先用提示词做出一个基于数据库的应用，再在旁边的对话里边看边改</strong>。</p><p>这种做法适合内部的小报表、数据查询页这类需求范围明确的工具：数据和 AI 对话放在同一个界面里，改完马上能看到效果。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Nov/3/datasette-agent/" target="_blank" rel="noopener" title="datasette-agent 0.5a0">Simon Willison</a></div>
+      </section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-11-05/">← 当期全部 6 条</a></span>
+        <span><a href="/ai-practice/c/productivity/">更多「工作提效」→</a></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

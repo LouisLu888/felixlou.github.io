@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c3"
+      ],
+      "category": "productivity",
+      "kind": "本周动态",
+      "eventDate": "2026-11-03",
+      "headline": "Datasette 的 AI 助手，现在能停在数据表旁边改应用了",
+      "oneLiner": "Simon Willison 发布 datasette-agent 0.5a0。新增的面板让 agent 对话窗口停在数据表或查询页旁边，可以边看数据边让它做、改数据库驱动的小应用。",
+      "who": "开发者 Simon Willison 更新了自己的开源项目 Datasette Agent。",
+      "how": "新功能叫 panel：agent 的对话窗口固定在 Datasette 的表格页或查询页旁边。配合 datasette-apps，可以用提示词生成一个基于数据库的应用，再在旁边的对话框里继续修改。",
+      "result": "这次是 alpha 版。用 GitHub 账号登录 agent.datasette.io 就能试用。",
+      "tryThis": "手上有 CSV 或 SQLite 数据的分析和运营同学，可以登录试用，看看能不能用一句话先做出一个筛选或汇总页面。",
+      "caveat": "alpha 版功能可能变动，敏感数据不要上传到公共试用站。",
+      "body": "Simon Willison 在[发布说明](https://simonwillison.net/2026/Nov/3/datasette-agent/)里说，这是 Datasette Agent 一次比较大的更新。新增的 panel 让 agent 对话窗口停在数据页面旁边。配合 datasette-apps，可以**先用提示词做出一个基于数据库的应用，再在旁边的对话里边看边改**。\n\n这种做法适合内部的小报表、数据查询页这类需求范围明确的工具：数据和 AI 对话放在同一个界面里，改完马上能看到效果。",
+      "sources": [
+        {
+          "label": "Simon Willison",
+          "title": "datasette-agent 0.5a0",
+          "url": "https://simonwillison.net/2026/Nov/3/datasette-agent/"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-05-06",
+      "issueDate": "2026-11-05",
+      "issueNumber": 27
+    },
+    {
+      "candidateIds": [
         "c40"
       ],
       "category": "productivity",

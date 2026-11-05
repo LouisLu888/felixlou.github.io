@@ -8,6 +8,39 @@
   "items": [
     {
       "candidateIds": [
+        "c44",
+        "c8"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-11-04",
+      "headline": "三张截图生成发布视频，Claude 开始替创作者剪片",
+      "oneLiner": "Jake Moran 用 Claude 加开源工具 HyperFrames，从三张截图做出产品发布视频；Matt Wolfe 把 vidIQ、ElevenLabs 接进 Claude，把原始口播素材剪成成片。",
+      "who": "Jake Moran 是 Peter Yang 节目里请来讲 AI 剪辑的嘉宾；Matt Wolfe 是长期做 AI 工具内容的 YouTuber。两人都在演示自己的剪辑流程。",
+      "how": "Jake 用剪辑术语给 Claude 下指令，用本地免费模型 Parakeet 转写、定剪切点，再用 HyperFrames 做缩放、B-roll 和甩镜。Matt 先用 vidIQ 做选题，再给 Claude 写好针对自己频道的 skills，让它处理 B-roll 选择、音频和节奏。",
+      "result": "Jake 演示了三类成品：一支只用三张截图做的发布视频、一条 YouTube 单人视频、一条短视频。Matt 说这套流程能把 A-roll 原始素材变成成片。",
+      "tryThis": "拿一段现成的口播录像，先用 Parakeet 或其他转写工具出带时间戳的文字稿，再让 Claude 列剪切点和 B-roll 建议，人工过一遍后再交给剪辑工具。",
+      "caveat": "两个流程都要能装开源工具、调 API，Matt 在视频里专门讲了 API 报错怎么排查。Claude 有时会自作主张，比如 Jake 没要求，它就加进了他的 AI 头像，所以每一版都得人工看。",
+      "body": "Peter Yang 在[这期节目](https://podcasters.spotify.com/pod/show/peter-yang42/episodes/How-to-Edit-Videos-Like-a-Pro-with-Claude-and-HyperFrames--Jake-Moran-e3r0521)里请 Jake Moran 演示用 Claude 加免费开源工具 HyperFrames 剪片。开头先讲**哪些剪辑术语能让 AI 听懂你要什么**，接着讲用 NVIDIA 的本地模型 Parakeet 做精确剪切。之后是三段演示：只用三张截图做的产品发布视频，Jake 对 Peter 一条原始 YouTube 素材的 AI 剪辑，还有短视频。发布视频按四段结构来：**钩子、背景、兑现、品牌**。另外两个细节很实用：给 Claude 一段 5 秒的片段，它就能仿出别的创作者用的效果；反馈时直接在画面上圈画，比打字说明更准。\n\n同一天，Matt Wolfe 在[视频](https://www.youtube.com/watch?v=ep4psgAFOqc)里演示了另一条路线：用 vidIQ 研究选题，把 vidIQ 接进 Claude，再为自己的频道写 Claude skills，配合 ElevenLabs 和 Premiere Pro 处理脚本、B-roll、音频和节奏。他的目标是少做重复劳动，同时把创作控制权留在自己手里。这条视频里放了 vidIQ 的推广链接。\n\n两条流程的共同点是：**把个人风格写成可以复用的指令**，可以是剪辑术语，也可以是频道 skill，然后反复给反馈来迭代。适合已经有一批原始素材、但卡在剪辑上的人。Peter Yang 的节目从 13:37 开始看演示。",
+      "sources": [
+        {
+          "label": "Behind the Craft (Peter Yang)",
+          "title": "How to Edit Videos Like a Pro with Claude and HyperFrames | Jake Moran",
+          "url": "https://podcasters.spotify.com/pod/show/peter-yang42/episodes/How-to-Edit-Videos-Like-a-Pro-with-Claude-and-HyperFrames--Jake-Moran-e3r0521"
+        },
+        {
+          "label": "Matt Wolfe",
+          "title": "How I Get Claude To Edit My Videos (No Code Needed)",
+          "url": "https://www.youtube.com/watch?v=ep4psgAFOqc"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-05-01",
+      "issueDate": "2026-11-05",
+      "issueNumber": 27
+    },
+    {
+      "candidateIds": [
         "c4"
       ],
       "category": "content",

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 027｜Claude 当起了剪辑师，靠一段唱歌视频做出月入 2.5 万美元的 App</title>
+  <meta name="description" content="Jake Moran 用 Claude 加开源工具 HyperFrames，从三张截图做出产品发布视频；Matt Wolfe 把 vidIQ、ElevenLabs 接进 Claude，把原始口播素材剪成成片。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-11-05/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 027｜Claude 当起了剪辑师，靠一段唱歌视频做出月入 2.5 万美元的 App">
+  <meta property="og:description" content="Jake Moran 用 Claude 加开源工具 HyperFrames，从三张截图做出产品发布视频；Matt Wolfe 把 vidIQ、ElevenLabs 接进 Claude，把原始口播素材剪成成片。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-11-05/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-05.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 027｜Claude 当起了剪辑师，靠一段唱歌视频做出月入 2.5 万美元的 App">
+  <meta name="twitter:description" content="Jake Moran 用 Claude 加开源工具 HyperFrames，从三张截图做出产品发布视频；Matt Wolfe 把 vidIQ、ElevenLabs 接进 Claude，把原始口播素材剪成成片。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-05.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">29</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">7</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">9</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">12</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">16</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">31</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">16</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 027 · 2026 年 11 月 5 日 · 周四 · 约 10 分钟读完</div>
+        <h1>Claude 当起了剪辑师，靠一段唱歌视频做出月入 2.5 万美元的 App</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="content">内容创作</span><a href="#2026-11-05-01">Jake Moran 用 Claude 加开源工具 HyperFrames，从三张截图做出产品发布视频；Matt Wolfe 把 vidIQ、ElevenLabs 接进 Claude，把原始口播素材剪成成片。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-11-05-02">Greg Isenberg 认为，AI 让软件、内容和答案几乎免费之后，实体、牌照和市场平台这几类生意最难被复制，「按结果收费」排在最后。</a></li><li><span class="tag" data-cat="app">AI App</span><a href="#2026-11-05-03">Ben 把一条自己唱法语歌的爆款视频做成了通过音乐学语言的 App Canary。他说不到一年月收入约 2.5 万美元，目前一个人运营。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-11-05-04">InstructGPT 论文合著者 Diogo Almeida 估计，coding agent 能让开发提速 20% 到 40%；他还认为，AI 离真正的自主能力还差两次大突破。</a></li><li><span class="tag" data-cat="life">AI 生活</span><a href="#2026-11-05-05">Bain 数据显示，接近四分之一的美国网购者打算从 ChatGPT、Gemini 这类 AI 平台开始节日购物（去年是 17%）。网络安全专家 Serena Sullivan 给出了一套防骗检查。</a></li><li><span class="tag" data-cat="productivity">工作提效</span><a href="#2026-11-05-06">Simon Willison 发布 datasette-agent 0.5a0。新增的面板让 agent 对话窗口停在数据表或查询页旁边，可以边看数据边让它做、改数据库驱动的小应用。</a></li></ul>
+      </section>
+      <section class="item" id="2026-11-05-01">
+        <div class="item-meta"><span class="tag" data-cat="content">内容创作</span><span>·</span>本周演示<span>·</span>2026-11-04<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-05-01/">01｜三张截图生成发布视频，Claude 开始替创作者剪片</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Jake Moran 是 Peter Yang 节目里请来讲 AI 剪辑的嘉宾；Matt Wolfe 是长期做 AI 工具内容的 YouTuber。两人都在演示自己的剪辑流程。</dd><dt>怎么用</dt><dd>Jake 用剪辑术语给 Claude 下指令，用本地免费模型 Parakeet 转写、定剪切点，再用 HyperFrames 做缩放、B-roll 和甩镜。Matt 先用 vidIQ 做选题，再给 Claude 写好针对自己频道的 skills，让它处理 B-roll 选择、音频和节奏。</dd><dt>结果</dt><dd>Jake 演示了三类成品：一支只用三张截图做的发布视频、一条 YouTube 单人视频、一条短视频。Matt 说这套流程能把 A-roll 原始素材变成成片。</dd><dt>你可以试</dt><dd>拿一段现成的口播录像，先用 Parakeet 或其他转写工具出带时间戳的文字稿，再让 Claude 列剪切点和 B-roll 建议，人工过一遍后再交给剪辑工具。</dd><dt>注意</dt><dd>两个流程都要能装开源工具、调 API，Matt 在视频里专门讲了 API 报错怎么排查。Claude 有时会自作主张，比如 Jake 没要求，它就加进了他的 AI 头像，所以每一版都得人工看。</dd></dl>
+        <div class="body"><p>Peter Yang 在<a href="https://podcasters.spotify.com/pod/show/peter-yang42/episodes/How-to-Edit-Videos-Like-a-Pro-with-Claude-and-HyperFrames--Jake-Moran-e3r0521">这期节目</a>里请 Jake Moran 演示用 Claude 加免费开源工具 HyperFrames 剪片。开头先讲<strong>哪些剪辑术语能让 AI 听懂你要什么</strong>，接着讲用 NVIDIA 的本地模型 Parakeet 做精确剪切。之后是三段演示：只用三张截图做的产品发布视频，Jake 对 Peter 一条原始 YouTube 素材的 AI 剪辑，还有短视频。发布视频按四段结构来：<strong>钩子、背景、兑现、品牌</strong>。另外两个细节很实用：给 Claude 一段 5 秒的片段，它就能仿出别的创作者用的效果；反馈时直接在画面上圈画，比打字说明更准。</p><p>同一天，Matt Wolfe 在<a href="https://www.youtube.com/watch?v=ep4psgAFOqc">视频</a>里演示了另一条路线：用 vidIQ 研究选题，把 vidIQ 接进 Claude，再为自己的频道写 Claude skills，配合 ElevenLabs 和 Premiere Pro 处理脚本、B-roll、音频和节奏。他的目标是少做重复劳动，同时把创作控制权留在自己手里。这条视频里放了 vidIQ 的推广链接。</p><p>两条流程的共同点是：<strong>把个人风格写成可以复用的指令</strong>，可以是剪辑术语，也可以是频道 skill，然后反复给反馈来迭代。适合已经有一批原始素材、但卡在剪辑上的人。Peter Yang 的节目从 13:37 开始看演示。</p></div>
+        <div class="sources">原文：<a href="https://podcasters.spotify.com/pod/show/peter-yang42/episodes/How-to-Edit-Videos-Like-a-Pro-with-Claude-and-HyperFrames--Jake-Moran-e3r0521" target="_blank" rel="noopener" title="How to Edit Videos Like a Pro with Claude and HyperFrames | Jake Moran">Behind the Craft (Peter Yang)</a><a href="https://www.youtube.com/watch?v=ep4psgAFOqc" target="_blank" rel="noopener" title="How I Get Claude To Edit My Videos (No Code Needed)">Matt Wolfe</a></div>
+      </section>
+      <section class="item" id="2026-11-05-02">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-11-04<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-05-02/">02｜软件人人都能做出来，Greg Isenberg 看好八类难复制的生意</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Greg Isenberg 是 Startup Ideas Podcast 主持人，长期做创业点子研究，也办线下活动。这是他 2026-11-04 的单人节目。</dd><dt>核心观点</dt><dd>他把「AI 难以复制」的生意分成八类：实体、准入、注意力、时机、归属感、流动性、独有数据和结果交付。他说实体和持牌业务排在最前，按结果收费的自动化服务排在最后，几类可以组合起来做。</dd><dt>依据</dt><dd>他举了自己的经历：以前讨厌剪短视频，现在让 Opus 5.5 当剪辑，过去一周拿到几十万播放；他在 Nashville 办的创始人线下活动，需求多到接不过来。他还提到 Hampton、Cars &amp; Bids 等案例。</dd><dt>对你的意义</dt><dd>给你的副业想法逐项对照这八类，看至少占了哪一项。如果只有软件本身，就想想能不能加上受众、社群或者独有数据。</dd><dt>争议·条件</dt><dd>这是他的判断和排序，没有数据支撑。他自己也承认，抢先做的产品本身往往最容易被抄，留得住的是过程中积累的数据、品牌和信任。</dd></dl>
+        <div class="body"><p>Greg Isenberg 在<a href="https://www.youtube.com/@GregIsenberg/search?query=8%20AI-Proof%20Businesses%20I&#39;d%20build%20in%202027">本期节目</a>里回答一个问题：谁都能按几下按钮做出一家公司，那什么生意还难被复制？他给了八个方向。其中几条对上班族做副业比较实在。</p><p><strong>准入</strong>：牌照、监管，或者成为大公司的指定供应商。他举例说，有些国家要求律所老板本人是律师，那就找一位律师合伙，自己负责营销、增长和 AI 这部分。<strong>注意力</strong>：围绕一个很窄的细分领域搭内容机器，newsletter、梗图账号、创始人自己出镜都算，他认为媒体现在被低估了。<strong>流动性</strong>：做市场平台。他说过去运营市场平台要处理大量工单，现在靠 agent，一到五个人就能撑起成交额几百万的平台。他朋友做的收藏车拍卖网站，就是先有 Instagram 受众，再把这些人导进来。</p><p><strong>独有数据</strong>：一种做法是把高质量评价整理成付费目录，他拿 Yelp 上只剩五星和一星的两极评价举例；另一种是把别人拿不到的数据卖给模型公司。他把按结果收费的自动化服务排在最后，理由是这类生意的护城河只能靠更好的上下文和系统来建。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/@GregIsenberg/search?query=8%20AI-Proof%20Businesses%20I&#39;d%20build%20in%202027" target="_blank" rel="noopener" title="8 AI-Proof Businesses I&#39;d build in 2027">Startup Ideas Podcast (Greg Isenberg)</a></div>
+      </section>
+      <section class="item" id="2026-11-05-03">
+        <div class="item-meta"><span class="tag" data-cat="app">AI App</span><span>·</span>经营复盘<span>·</span>2026-11-04<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-05-03/">03｜一条法语唱歌视频火了，他一个人做成月入 2.5 万美元的 App</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>独立开发者 Ben，在 Starter Story 的访谈里复盘 Canary。</dd><dt>怎么用</dt><dd>顺序是先发内容测需求，再做一个简单的第一版。视频依次讲了技术栈和工具、早期增长、现在还管用的营销方法，以及他怎么找 App 点子。</dd><dt>结果</dt><dd>按他的说法，Canary 上线不到一年，月收入约 2.5 万美元，由他一人运营。</dd><dt>你可以试</dt><dd>先别写代码。把你的产品概念拍成一条短视频，发出去看播放、评论和私信里有没有人问「在哪能用」，再决定要不要做第一版。</dd><dt>注意</dt><dd>起点是一条已经爆了的视频，大多数测试内容到不了这个量级。用内容验证需求，需要连续发很多条，并且能分清哪些是真需求。</dd></dl>
+        <div class="body"><p>Starter Story 的<a href="https://www.youtube.com/watch?v=KgS3hbpxTzE">这期视频</a>讲 Ben 的 Canary。起点是他发的一条自己用法语唱歌的视频，火了，他由此做出一个通过唱歌学语言的 App。他说上线不到一年，月收入约 2.5 万美元，到现在还是一个人在做。</p><p>这期节目被定位成一份打法：<strong>用内容测试 App 点子，做一个简单的第一版，再快速增长。</strong>这个顺序的好处是，有人看、有人问，就说明有需求，而且第一批用户来自同一个渠道。对有一技之长的人来说，把自己学语言、练乐器、健身的过程拍出来，本身就是一次低成本的验证。</p><p>想看具体工具和获客方法，可以从 4:34 的开发过程看起，7:04 讲的是目前还管用的营销方法。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/watch?v=KgS3hbpxTzE" target="_blank" rel="noopener" title="I turned a viral idea into a $25K/month app">Starter Story (YouTube)</a></div>
+      </section>
+      <section class="item" id="2026-11-05-04">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-11-05<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-05-04/">04｜InstructGPT 作者：大多数大模型调用，读结果的是机器不是人</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Diogo Almeida 是 OpenAI InstructGPT 论文的合著者、TypeSafe AI 联合创始人。他在 Redpoint 的 Unsupervised Learning 播客里接受了 Jacob Effron 的访谈。</dd><dt>核心观点</dt><dd>他认为，AI 早就聪明到能做那些简单的工作，迟迟没被自动化，卡在可靠性上。所以他做了 Jev：一种「系统一」模型，输出结构化的决策，不输出大段文本。</dd><dt>依据</dt><dd>依据来自他的亲身经历：Jev 闭门做了两年，9 月发布。他原以为一周就能做出来，结果花了好几年。他说新的模型形态很便宜，难的是可靠性。</dd><dt>对你的意义</dt><dd>检查你工作流里的 AI 调用：如果结果是给程序读的，就要求它输出固定的结构和选项，再去测稳定性，不要依赖一段自由文本。估算 coding agent 带来的收益时，按两到四成的提速来做预期。</dd><dt>争议·条件</dt><dd>20% 到 40% 是他个人的估计。他做的正是「可靠性」方向的模型，看法跟自己的产品方向一致。</dd></dl>
+        <div class="body"><p>在 <a href="https://unsupervised-learning.simplecast.com/episodes/ep-97-jev-creator-on-decision-models-benchmark-fatigue-why-the-labs-missed-it-lw9nHzNX">Unsupervised Learning 第 97 期</a>里，Diogo Almeida 谈到一个现象：很多简单工作，模型几年前就有能力做，到现在还没被自动化。他的解释是可靠性不够，而且模型能力参差不齐，有的地方很强，有的地方突然失灵。他建议开发者在这一点上<strong>更强硬地向模型厂商提要求</strong>。</p><p>他的核心观点是：<strong>几乎每一次 LLM 调用，结果都是给机器读的</strong>，所以应该输出结构化的决策，而不是给人看的文字。他的 Jev 就是按这个思路做的。节目里他还谈到 KV cache 对 coding agent 的限制，估计 coding agent 能带来 20% 到 40% 的提速，并认为离真正的 AI 自主能力还差两次巨大突破。</p><p>对做自动化的人来说，可以把问题从「模型够不够聪明」换成「同样的输入跑一百次，结果是否稳定」。</p></div>
+        <div class="sources">原文：<a href="https://unsupervised-learning.simplecast.com/episodes/ep-97-jev-creator-on-decision-models-benchmark-fatigue-why-the-labs-missed-it-lw9nHzNX" target="_blank" rel="noopener" title="Ep 97: Jev Creator on Decision Models, Benchmark Fatigue &amp; Why the Labs Missed It">Unsupervised Learning (Redpoint)</a></div>
+      </section>
+      <section class="item" id="2026-11-05-05">
+        <div class="item-meta"><span class="tag" data-cat="life">AI 生活</span><span>·</span>本周动态<span>·</span>2026-11-04<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-05-05/">05｜用 ChatGPT 挑节日礼物前，先过这几道防骗检查</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Tom&#39;s Guide 记者采访网络安全专家 Serena Sullivan，对象是用 AI 助手做节日购物的普通人。</dd><dt>怎么用</dt><dd>她的建议有几条：只说必要的信息；不直接点 AI 给的链接，改用搜索引擎找到官网再进；核对证书和域名；查付款方式和隐私政策；查 BBB 评级。</dd><dt>结果</dt><dd>文章援引的数据是，假冒网店大约每三分钟冒出一家，而且已经出现在 AI 助手的推荐结果里。</dd><dt>你可以试</dt><dd>下次让 AI 推荐礼物时，只描述礼物的类型和预算，不提家人的年龄、住址和行程。看中商品后，自己搜索官网再下单，用信用卡或 PayPal 付款。</dd><dt>注意</dt><dd>这些检查要逐个网站手动做，会多花几分钟。AI 生成的网站和评价越来越逼真，页面看起来专业，不代表网站可信。</dd></dl>
+        <div class="body"><p>Tom&#39;s Guide 的<a href="https://www.tomsguide.com/ai/i-asked-a-cybersecurity-expert-how-to-shop-more-safely-with-ai-these-are-their-5-non-negotiables">这篇采访</a>讲的是用 AI 买节日礼物时容易忽略的两类风险。第一类是<strong>隐私</strong>。你跟 AI 说要给女儿买芭蕾舞鞋，或者计划一家人去主题乐园，就可能透露出孩子的年龄和性别、家里有几口人、住在哪、收入大概多少。这些零散信息拼起来，足够有人给你写一封精准的钓鱼邮件。</p><p>第二类是<strong>假网站</strong>。Serena Sullivan 提醒，AI 推荐的链接没有经过安全审核，也可能已经过期。她的检查清单是：证书报警就别继续；打开后域名变成了不相关的名字，要警惕；常卖 100 美元的东西只卖 10 美元，多半有问题；要求汇款、礼品卡或加密货币付款的，是危险信号；隐私政策缺失或写得不像律师手笔的，不要下单。</p><p>给孩子买 AI 玩具时，要看它有没有麦克风、摄像头和定位功能，对话会不会上传到云端，并提前设置好家长控制。</p></div>
+        <div class="sources">原文：<a href="https://www.tomsguide.com/ai/i-asked-a-cybersecurity-expert-how-to-shop-more-safely-with-ai-these-are-their-5-non-negotiables" target="_blank" rel="noopener" title="I asked a cybersecurity expert how to shop more safely with AI — these are their 5 non-negotiables">Tom&#39;s Guide · AI</a></div>
+      </section>
+      <section class="item" id="2026-11-05-06">
+        <div class="item-meta"><span class="tag" data-cat="productivity">工作提效</span><span>·</span>本周动态<span>·</span>2026-11-03<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-05-06/">06｜Datasette 的 AI 助手，现在能停在数据表旁边改应用了</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>开发者 Simon Willison 更新了自己的开源项目 Datasette Agent。</dd><dt>怎么用</dt><dd>新功能叫 panel：agent 的对话窗口固定在 Datasette 的表格页或查询页旁边。配合 datasette-apps，可以用提示词生成一个基于数据库的应用，再在旁边的对话框里继续修改。</dd><dt>结果</dt><dd>这次是 alpha 版。用 GitHub 账号登录 agent.datasette.io 就能试用。</dd><dt>你可以试</dt><dd>手上有 CSV 或 SQLite 数据的分析和运营同学，可以登录试用，看看能不能用一句话先做出一个筛选或汇总页面。</dd><dt>注意</dt><dd>alpha 版功能可能变动，敏感数据不要上传到公共试用站。</dd></dl>
+        <div class="body"><p>Simon Willison 在<a href="https://simonwillison.net/2026/Nov/3/datasette-agent/">发布说明</a>里说，这是 Datasette Agent 一次比较大的更新。新增的 panel 让 agent 对话窗口停在数据页面旁边。配合 datasette-apps，可以<strong>先用提示词做出一个基于数据库的应用，再在旁边的对话里边看边改</strong>。</p><p>这种做法适合内部的小报表、数据查询页这类需求范围明确的工具：数据和 AI 对话放在同一个界面里，改完马上能看到效果。</p></div>
+        <div class="sources">原文：<a href="https://simonwillison.net/2026/Nov/3/datasette-agent/" target="_blank" rel="noopener" title="datasette-agent 0.5a0">Simon Willison</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>从你手机或硬盘里找一段已经录好、还没剪的口播视频，三五分钟就够。先用转写工具生成带时间戳的文字稿，交给 Claude，让它按「钩子、背景、兑现、品牌」四段结构，列出要保留的片段和每段可以配的 B-roll。你自己对照原片挑出不合适的地方，记录 AI 的方案里哪些能直接用、哪些要改，以及总共花了多少时间。把这份记录存下来，下次剪辑时可以写成给 Claude 的固定指令。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-11-04/">← 2026 年 11 月 4 日 · 周三</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>
