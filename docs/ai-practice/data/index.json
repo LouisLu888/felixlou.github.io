@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T14:45:12.734Z",
+  "updatedAt": "2026-11-06T14:44:35.618Z",
   "categories": [
     {
       "id": "perspective",
@@ -34,7 +34,7 @@
       "name": "AI App",
       "en": "AI app",
       "desc": "消费者体验与分发：获客、商店、付费转化、退款和留存",
-      "count": 16
+      "count": 17
     },
     {
       "id": "productivity",
@@ -48,10 +48,33 @@
       "name": "AI 生活",
       "en": "AI in daily life",
       "desc": "个人和家庭用 AI 办生活里的事：个人助手、清理忘了取消的订阅、打客服电话追回退款、账单、看病、出行",
-      "count": 16
+      "count": 17
     }
   ],
   "days": [
+    {
+      "date": "2026-11-06",
+      "number": 28,
+      "title": "一条唱歌视频变成月入 2.5 万美元的 App，一句提示词让 agent 催你洗衣服",
+      "sample": false,
+      "hasEditorNote": false,
+      "readingMinutes": 4,
+      "itemCount": 2,
+      "categoryCounts": {
+        "app": 1,
+        "life": 1
+      },
+      "headlines": [
+        {
+          "category": "app",
+          "headline": "一条法语唱歌视频，九个月后变成月入 2.5 万美元的 App"
+        },
+        {
+          "category": "life",
+          "headline": "让 AI 助手记住你几天没洗衣服，到家后再来催"
+        }
+      ]
+    },
     {
       "date": "2026-11-05",
       "number": 27,

@@ -8,6 +8,39 @@
   "items": [
     {
       "candidateIds": [
+        "c35",
+        "c29"
+      ],
+      "category": "life",
+      "kind": "本周动态",
+      "eventDate": "2026-11-05",
+      "headline": "让 AI 助手记住你几天没洗衣服，到家后再来催",
+      "oneLiner": "曾在 Anthropic 做 Claude Code 的 Thariq 分享了一条他常给 Instinct 这类个人 agent 下的指令：超过 5 天没洗衣服，就在工作日到家 30 分钟后提醒，一直催到他确认或推迟为止。",
+      "who": "Thariq 曾在 Anthropic 做 Claude Code，他在 X 上分享了自己用个人 agent 的一个习惯。同一天，Vercel CEO Guillermo Rauch 也谈到了 Muse 和 Instinct 这类助手。",
+      "how": "一句自然语言交代三件事：记录这项家务上次完成的时间；设定触发条件，即超过 5 天、工作日、到家 30 分钟后；设定跟进方式，即反复提醒，直到确认或推迟。",
+      "result": "这是一个可以直接照抄的指令模板，帖子获得 2000 多个赞。Rauch 认为「长期替你做事」是 agent 的杀手级用途，他举的例子有：夜里整理记忆、早上提醒、距上次互动 N 天后主动发消息。",
+      "tryThis": "挑一件你常忘的周期性小事，比如换床单、给植物浇水或给父母打电话，按「记录上次时间 + 触发条件 + 催到确认」的格式写一条指令。",
+      "caveat": "位置触发需要授权 agent 读取你的实时位置。「完成」要靠你自己回复确认，忘了回复记录就不准。",
+      "body": "Thariq 在 [X 上](https://x.com/trq212/status/2118399561324699655)说，他最喜欢给 Instinct 这类 agent 用的提示词之一是基于位置的提醒，原话的例子是：「记录我什么时候洗过衣服。如果超过 5 天，就在工作日我到家 30 分钟后提醒我，一直催，直到我确认或推迟。」\n\n这条指令比普通闹钟多了三层：**有状态**（记住上次完成的时间），**有条件**（只在该做、方便做的时候触发），**会跟进**（不回复就继续提醒）。日历和待办软件很难这样设置，用一句话交给 agent 就行。Guillermo Rauch 在[同日帖子](https://x.com/rauchg/status/2118440831355068671)里把这类能力称为 agent 的杀手级用途，并顺带介绍了自家 Vercel Schedules，可以给开发者做类似的定时任务。\n\n使用前要想清楚交出去的权限：这类提醒依赖实时位置，有的还要读消息记录。可以先从洗衣、浇水这类不涉及隐私的家务试起，觉得可靠了再扩大范围。确认这一步始终要你自己做，agent 只知道你回复过什么。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Thariq: one of my favorite prompts for agents like Instinct is location based reminders\n",
+          "url": "https://x.com/trq212/status/2118399561324699655"
+        },
+        {
+          "label": "Follow Builders (X)",
+          "title": "Guillermo Rauch: “Doing stuff for you over time” is the killer app of agents.\n\nMuse and Instinct ",
+          "url": "https://x.com/rauchg/status/2118440831355068671"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-06-02",
+      "issueDate": "2026-11-06",
+      "issueNumber": 28
+    },
+    {
+      "candidateIds": [
         "c56"
       ],
       "category": "life",
