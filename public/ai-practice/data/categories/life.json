@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c42"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-11-06",
+      "headline": "用 ChatGPT 把自己的画和照片做成 GIF 发群里",
+      "oneLiner": "Lifehacker 作者 Khamosh Pathak 试了 ChatGPT 新出的 GIF 功能：几秒出图，改几轮能做出愿意发群的动图，复杂动作仍然不行。",
+      "who": "Lifehacker 作者 Khamosh Pathak，给 WhatsApp 群和社交平台做节日动图、表情包，也给自己的 JBL 音箱做了一张宣传图。",
+      "how": "写尽量详细的提示词，或者上传自己的手绘、照片；生成后继续用对话修改，比如调长短、删物体、换风格、放慢过渡。",
+      "result": "他说一次生成很少直接能用，改几轮后做出了愿意分享的 GIF。猫玩球、排灯节祝福这类轻松题材效果好，手冲咖啡这种需要真实物理细节的画面明显失真。",
+      "tryThis": "拿一张自己的涂鸦或宠物照片，让 ChatGPT 做成循环动图，第一版出来后只改过渡速度这一项。",
+      "caveat": "手部位置会在帧之间跳动，物体和颜色会凭空出现。需要真实动作细节时，用免版权视频转成的 GIF 效果更好。",
+      "body": "Khamosh Pathak 在 [Lifehacker](https://lifehacker.com/tech/chatgpts-new-gif-generator-is-fun-but-wont-replace-us-humans?utm_medium=RSS) 上实测了 ChatGPT 新出的 GIF 生成功能。可以用文字起手，也可以上传手绘或照片作底稿，几秒就出结果，之后用对话继续修改。他觉得用自己的画做动图最有意思。给音箱做宣传 GIF 时，第一版过渡太生硬、动作也不合理，改过几轮才可以用。\n\n这个工具的用处可以说得具体一点：**节日祝福、群聊表情、小店简单的产品动图**，都是不在意细节、追求好玩的场合。他用手冲咖啡做过对比：水壶不会画圈，水面上升不均匀，也没有气泡，比不上一段低清的真实视频。\n\n建议的用法是：先选一个动作简单的题材，第一版出来后每轮只改一个问题，比如速度、多余的物体或风格，这样比一次重写整段提示词更容易收敛。",
+      "sources": [
+        {
+          "label": "Lifehacker",
+          "title": "ChatGPT's New GIF Generator Is Fun, but Won't Replace Us Humans (Yet)",
+          "url": "https://lifehacker.com/tech/chatgpts-new-gif-generator-is-fun-but-wont-replace-us-humans?utm_medium=RSS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-07-03",
+      "issueDate": "2026-11-07",
+      "issueNumber": 29
+    },
+    {
+      "candidateIds": [
         "c35",
         "c29"
       ],

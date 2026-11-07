@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 实干派 029｜一部 AI 短片的完整流水线，以及新模型发布后该删掉哪些 skill</title>
+  <meta name="description" content="Tim Simmons 用 Seedance 2.5、Claude Code、Gemini 4 做出系列短片 Planet Hell 第一集，剪辑和镜头选择仍由他本人负责，这一集由 OpenArt 赞助。">
+  <link rel="canonical" href="https://www.jiabinlu.com/ai-practice/d/2026-11-07/">
+  <meta property="og:site_name" content="AI 实干派">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI 实干派 029｜一部 AI 短片的完整流水线，以及新模型发布后该删掉哪些 skill">
+  <meta property="og:description" content="Tim Simmons 用 Seedance 2.5、Claude Code、Gemini 4 做出系列短片 Planet Hell 第一集，剪辑和镜头选择仍由他本人负责，这一集由 OpenArt 赞助。">
+  <meta property="og:url" content="https://www.jiabinlu.com/ai-practice/d/2026-11-07/">
+  <meta property="og:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-07.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 实干派 029｜一部 AI 短片的完整流水线，以及新模型发布后该删掉哪些 skill">
+  <meta name="twitter:description" content="Tim Simmons 用 Seedance 2.5、Claude Code、Gemini 4 做出系列短片 Planet Hell 第一集，剪辑和镜头选择仍由他本人负责，这一集由 OpenArt 赞助。">
+  <meta name="twitter:image" content="https://www.jiabinlu.com/ai-practice/og/2026-11-07.png">
+  <link rel="icon" href="/ai-practice/logo.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AI 实干派" href="/ai-practice/feed.xml">
+  <link rel="stylesheet" href="/ai-practice/styles.css">
+  <script src="/vendor/amplitude-min.js" defer></script>
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/">Jiabin Lu</a>
+      <nav class="site-nav" aria-label="站点">
+        <a href="/blog">博客</a>
+        <a href="/ai-practice/" class="active">AI 实干派</a>
+        <a href="/decks/">演讲</a>
+        <a href="/services">咨询</a>
+        <a href="/products">产品</a>
+      </nav>
+    </div>
+  </header>
+  <div class="section-bar">
+    <div class="wrap header-inner">
+      <a class="brand" href="/ai-practice/">
+        <img class="brand-mark" src="/ai-practice/logo.svg" alt="" width="34" height="34">
+        <span>
+          <span class="brand-name">AI 实干派</span>
+          <span class="brand-tag">看真正用 AI 拿到结果的人怎么做</span>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="视图">
+        <a href="/ai-practice/" class="active">按日期</a>
+        <a href="/ai-practice/c/">按栏目</a>
+      </nav>
+    </div>
+    <div class="wrap"><nav class="cat-bar" aria-label="栏目"><a class="cat-chip" data-cat="perspective" href="/ai-practice/c/perspective/"><span class="dot"></span>AI 认知<span class="count">31</span></a><a class="cat-chip" data-cat="consulting" href="/ai-practice/c/consulting/"><span class="dot"></span>AI 咨询<span class="count">7</span></a><a class="cat-chip" data-cat="content" href="/ai-practice/c/content/"><span class="dot"></span>内容创作<span class="count">10</span></a><a class="cat-chip" data-cat="saas" href="/ai-practice/c/saas/"><span class="dot"></span>Micro SaaS<span class="count">12</span></a><a class="cat-chip" data-cat="app" href="/ai-practice/c/app/"><span class="dot"></span>AI App<span class="count">17</span></a><a class="cat-chip" data-cat="productivity" href="/ai-practice/c/productivity/"><span class="dot"></span>工作提效<span class="count">31</span></a><a class="cat-chip" data-cat="life" href="/ai-practice/c/life/"><span class="dot"></span>AI 生活<span class="count">18</span></a></nav></div>
+  </div>
+  <main class="wrap">
+    <article>
+      <header class="issue-head">
+        <div class="eyebrow">AI 实干派 029 · 2026 年 11 月 7 日 · 周六 · 约 6 分钟读完</div>
+        <h1>一部 AI 短片的完整流水线，以及新模型发布后该删掉哪些 skill</h1>
+      </header>
+      
+      <section class="tldr">
+        <h2>30 秒速读</h2>
+        <ul><li><span class="tag" data-cat="content">内容创作</span><a href="#2026-11-07-01">Tim Simmons 用 Seedance 2.5、Claude Code、Gemini 4 做出系列短片 Planet Hell 第一集，剪辑和镜头选择仍由他本人负责，这一集由 OpenArt 赞助。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-11-07-02">YC CEO Garry Tan 说，Opus 5.5 不靠 /investigate skill 反而做得更好，所以他把这个 skill 删了。</a></li><li><span class="tag" data-cat="life">AI 生活</span><a href="#2026-11-07-03">Lifehacker 作者 Khamosh Pathak 试了 ChatGPT 新出的 GIF 功能：几秒出图，改几轮能做出愿意发群的动图，复杂动作仍然不行。</a></li><li><span class="tag" data-cat="perspective">AI 认知</span><a href="#2026-11-07-04">前 Claude Code 团队成员 Thariq 注意到，Instagram Edits、Roblox Studio 已经内置 MCP：agent 先做一部分，熟练用户在熟悉的工具里接着改。</a></li></ul>
+      </section>
+      <section class="item" id="2026-11-07-01">
+        <div class="item-meta"><span class="tag" data-cat="content">内容创作</span><span>·</span>本周演示<span>·</span>2026-11-06<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-07-01/">01｜一个人拍 AI 科幻剧集：哪些环节交给模型，哪些还得自己做</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Theoretically Media 频道主 Tim Simmons，自编自导 AI 科幻系列 Planet Hell，第一集发布后公开幕后流程。</dd><dt>怎么用</dt><dd>Gemini 4 Argon 把两年的笔记整理成十集路线图；在 OpenArt 上用 Seedance 2.5 生成镜头，部分通过 MCP 从 Claude Code 和 Codex 调用；After Effects 里的抠像由 Claude 完成；Gemini 4 读取 Premiere XML，在 DaVinci Resolve 里调色混音；配乐用 Suno。</dd><dt>结果</dt><dd>第一集已经上线。他总结了三条经验：镜头不交给机器决定，能局部修就别整段重新生成，一个人现在已经能把片子做出来。</dd><dt>你可以试</dt><dd>先建一个总表，把剧本、参考图、提示词和每个素材登记进去，再开始批量生成。</dd><dt>注意</dt><dd>角色一致性仍不稳定，主角形象需要绕道 Nano Banana 才能修好；3D 预演花的时间比省下的还多。整套工具链要付多份订阅费，还要会剪辑。</dd></dl>
+        <div class="body"><p>Tim Simmons 在<a href="https://www.youtube.com/watch?v=OWr3IU82bJ8">幕后视频</a>里讲 Planet Hell 第一集的制作，重点放在出过的问题上。Seedance 2.5 一直不肯还原主角 Tom，他把形象放进 Nano Banana 处理一遍才解决，原因他自己也说不清。另一个角色换了人演，他觉得效果比原来更贴合故事。用 CozyClay 和 three.js 做的 3D 预演最后弃用了，花的时间比省下的多。画面里一颗大得离谱的子弹，是在 After Effects 里抠掉的，抠像由 Claude 完成。</p><p>可借鉴的是<strong>分工方式</strong>。生成、抠像、调色这些重复劳动交给 AI，剪辑和镜头取舍留给自己。他还专门做了一个「第二大脑」小组件，剧本、参考、提示词和每个素材都登记在里面。另外他发现，有时直接用平台界面比通过 MCP 从 Claude Code 调用更省事。</p><p>商业上，这一集由 OpenArt 赞助，频道观众有专属折扣链接，延续了「用 AI 创作，再做成教程内容」的模式。想照着做的人，可以从 07:37 的 MCP 生成部分和 15:50 起的三条经验看起。他还提醒一点：上传 YouTube 时关掉 Stable Volume 和 Voice Boost。</p></div>
+        <div class="sources">原文：<a href="https://www.youtube.com/watch?v=OWr3IU82bJ8" target="_blank" rel="noopener" title="The New Cinematic AI Film Workflow (What Actually Works)">Theoretically Media</a></div>
+      </section>
+      <section class="item" id="2026-11-07-02">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-11-07<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-07-02/">02｜Garry Tan：换上新模型后，删掉一个它已经不需要的 skill</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Y Combinator CEO Garry Tan，自己写了 GStack 等 agent 工具，2026-11-07 在 X 上发帖。</dd><dt>核心观点</dt><dd>他认为 agent skill 必须用评测驱动的循环来维护：每次换新模型都重新测一遍，多余的 skill 就去掉。</dd><dt>依据</dt><dd>他举了自己的例子：Opus 5.5 不带 /investigate 时效果更好，于是把这个 skill 删了。</dd><dt>对你的意义</dt><dd>给自己最常用的几个 skill 或提示词模板各准备几条固定测试任务，换模型时跑一遍有和没有的对比。</dd><dt>争议·条件</dt><dd>只有一个例子，也没有公开评测集。没有固定测试任务就做不了对比，只能凭感觉判断。</dd></dl>
+        <div class="body"><p>Garry Tan 在<a href="https://x.com/garrytan/status/2118920030243139596">帖子</a>里说，给 agent 写的 skill 需要<strong>评测驱动的开发循环</strong>。模型每一代都在变强，有些 skill 会变成多余，他刚因为 Opus 5.5 不用 /investigate 做得更好，就把这个 skill 删了。</p><p>这对正在积累提示词库、skill 和工作流模板的人有直接影响。我们平时只往里加东西，很少删。旧模型时代写的长串约束，放到新模型上可能反而碍事。比较稳妥的做法是给每个 skill 留三到五条有标准答案的任务，换模型时分别跑带 skill 和不带 skill 两个版本，看结果和耗时再决定去留。</p><p>这个判断有前提：任务能评测，结果能比较。写作风格这类主观任务比较难测，删之前最好让实际使用的人一起看结果。</p></div>
+        <div class="sources">原文：<a href="https://x.com/garrytan/status/2118920030243139596" target="_blank" rel="noopener" title="Garry Tan: Eval-driven development loops for agent skills is necessary. Every new model get">Follow Builders (X)</a></div>
+      </section>
+      <section class="item" id="2026-11-07-03">
+        <div class="item-meta"><span class="tag" data-cat="life">AI 生活</span><span>·</span>本周演示<span>·</span>2026-11-06<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-07-03/">03｜用 ChatGPT 把自己的画和照片做成 GIF 发群里</a></h3>
+        <dl class="facts"><dt>谁·场景</dt><dd>Lifehacker 作者 Khamosh Pathak，给 WhatsApp 群和社交平台做节日动图、表情包，也给自己的 JBL 音箱做了一张宣传图。</dd><dt>怎么用</dt><dd>写尽量详细的提示词，或者上传自己的手绘、照片；生成后继续用对话修改，比如调长短、删物体、换风格、放慢过渡。</dd><dt>结果</dt><dd>他说一次生成很少直接能用，改几轮后做出了愿意分享的 GIF。猫玩球、排灯节祝福这类轻松题材效果好，手冲咖啡这种需要真实物理细节的画面明显失真。</dd><dt>你可以试</dt><dd>拿一张自己的涂鸦或宠物照片，让 ChatGPT 做成循环动图，第一版出来后只改过渡速度这一项。</dd><dt>注意</dt><dd>手部位置会在帧之间跳动，物体和颜色会凭空出现。需要真实动作细节时，用免版权视频转成的 GIF 效果更好。</dd></dl>
+        <div class="body"><p>Khamosh Pathak 在 <a href="https://lifehacker.com/tech/chatgpts-new-gif-generator-is-fun-but-wont-replace-us-humans?utm_medium=RSS">Lifehacker</a> 上实测了 ChatGPT 新出的 GIF 生成功能。可以用文字起手，也可以上传手绘或照片作底稿，几秒就出结果，之后用对话继续修改。他觉得用自己的画做动图最有意思。给音箱做宣传 GIF 时，第一版过渡太生硬、动作也不合理，改过几轮才可以用。</p><p>这个工具的用处可以说得具体一点：<strong>节日祝福、群聊表情、小店简单的产品动图</strong>，都是不在意细节、追求好玩的场合。他用手冲咖啡做过对比：水壶不会画圈，水面上升不均匀，也没有气泡，比不上一段低清的真实视频。</p><p>建议的用法是：先选一个动作简单的题材，第一版出来后每轮只改一个问题，比如速度、多余的物体或风格，这样比一次重写整段提示词更容易收敛。</p></div>
+        <div class="sources">原文：<a href="https://lifehacker.com/tech/chatgpts-new-gif-generator-is-fun-but-wont-replace-us-humans?utm_medium=RSS" target="_blank" rel="noopener" title="ChatGPT&#39;s New GIF Generator Is Fun, but Won&#39;t Replace Us Humans (Yet)">Lifehacker</a></div>
+      </section>
+      <section class="item" id="2026-11-07-04">
+        <div class="item-meta"><span class="tag" data-cat="perspective">AI 认知</span><span>·</span>观点访谈<span>·</span>2026-11-06<span>·</span>US</div>
+        <h3><a class="permalink" href="/ai-practice/i/2026-11-07-04/">04｜创作工具开始内置 MCP，agent 和人可以接力干活</a></h3>
+        <dl class="facts"><dt>谁说的</dt><dd>Thariq，曾在 Anthropic 做 Claude Code，2026-11-06 在 X 上发帖。</dd><dt>核心观点</dt><dd>他喜欢这种模式：创作类 App 自带 MCP，让 agent 承担部分工作，熟练用户再在原有工具里协作、接手。</dd><dt>依据</dt><dd>他举了 Instagram Edits 和 Roblox Studio 两个例子。同一周，Tim Simmons 拍 AI 短片时也通过 MCP 从 Claude Code 调用 OpenArt 生成镜头。</dd><dt>对你的意义</dt><dd>查一下自己每天用的设计、剪辑或表格工具有没有 MCP 接口，先让 agent 做准备性的粗活，精修留在原工具里自己做。</dd><dt>争议·条件</dt><dd>Tim Simmons 的经验是，有些操作直接用平台界面更省事。MCP 只适合能说清楚、可以批量做的步骤。</dd></dl>
+        <div class="body"><p>Thariq 在<a href="https://x.com/trq212/status/2118822238262853904">帖子</a>里说，他看好一种做法：Instagram Edits、Roblox Studio 这类创作工具直接内置 MCP。agent 先完成一部分工作，熟练用户在自己熟悉的工具里接着协作，不用把工作搬到新平台。</p><p>头条里的 Tim Simmons 就是这样用的：在 Claude Code 里通过 MCP 驱动 OpenArt 批量生成镜头，剪辑仍在 Premiere 里亲手做。他也提到，有些操作直接用平台更方便。</p><p>对做内容和做工具的人，判断标准可以是：<strong>哪些步骤能用一句话交代清楚、需要重复很多次</strong>，这些交给 agent；需要审美判断的部分留在人手里。做 SaaS 的人也可以想一想，自己的产品要不要开放 MCP 接口，好让用户的 agent 直接调用。</p></div>
+        <div class="sources">原文：<a href="https://x.com/trq212/status/2118822238262853904" target="_blank" rel="noopener" title="Thariq: a pattern I’m liking: creator apps like Instagram Edits and Roblox Studio shippi">Follow Builders (X)</a></div>
+      </section>
+      <section class="action"><h2>今天可以做的一件事</h2><p>打开你最常用的那份提示词或 agent skill，挑出用得最多的一个，写三条有明确合格标准的测试任务。用现在的模型分别跑「带 skill」和「不带 skill」两个版本，记录结果质量和耗时。不带反而更好的，就像 Garry Tan 那样删掉；带了明显更好的，保留下来，下次换模型时再测一遍。</p></section>
+      <nav class="pager">
+        <span><a href="/ai-practice/d/2026-11-06/">← 2026 年 11 月 6 日 · 周五</a></span>
+        <span></span>
+      </nav>
+    </article>
+  </main>
+  <footer class="wrap site-footer">
+    <form class="subscribe" action="https://buttondown.com/api/emails/embed-subscribe/325louis" method="post" target="_blank">
+  <div class="subscribe-title">订阅 AI 实干派</div>
+  <input type="hidden" name="embed" value="1">
+  <input type="hidden" name="tag" value="ai-practice">
+  <div class="subscribe-row">
+    <input type="email" name="email" placeholder="你的邮箱" required aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </div>
+  <div class="subscribe-freq">
+    <label><input type="radio" name="tag" value="ai-practice-daily" checked> 每天一期</label>
+    <label><input type="radio" name="tag" value="ai-practice-weekly"> 每周精选</label>
+  </div>
+  <p class="subscribe-note">邮件由 Buttondown 发送，可随时退订。订阅后也会收到卢佳斌博客的新文章通知。</p>
+  <p class="subscribe-note">也可以听：<a href="https://podcasts.apple.com/us/podcast/ai-%E5%AE%9E%E5%B9%B2%E6%B4%BE/id6826900340" target="_blank" rel="noopener" data-track-event="CTA Clicked" data-track-cta_id="podcast_apple" data-track-location="subscribe_form">Apple 播客</a> · <a href="/ai-practice/podcast/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="podcast_rss" data-track-location="subscribe_form">播客 RSS</a></p>
+</form>
+    <p>每天从全球一手来源中挑选，由 Claude 按编辑规则成稿。收入和效果按本人披露的口径呈现，不等于审计；每条都附原文链接。<a href="/">卢佳斌</a> 编辑 · <a href="/ai-practice/feed.xml" data-track-event="CTA Clicked" data-track-cta_id="rss" data-track-location="footer">RSS</a></p>
+  </footer>
+</body>
+</html>

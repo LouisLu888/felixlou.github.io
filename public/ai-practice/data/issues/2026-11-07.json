@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-07",
+  "title": "一部 AI 短片的完整流水线，以及新模型发布后该删掉哪些 skill",
+  "items": [
+    {
+      "candidateIds": [
+        "c6"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-11-06",
+      "headline": "一个人拍 AI 科幻剧集：哪些环节交给模型，哪些还得自己做",
+      "oneLiner": "Tim Simmons 用 Seedance 2.5、Claude Code、Gemini 4 做出系列短片 Planet Hell 第一集，剪辑和镜头选择仍由他本人负责，这一集由 OpenArt 赞助。",
+      "who": "Theoretically Media 频道主 Tim Simmons，自编自导 AI 科幻系列 Planet Hell，第一集发布后公开幕后流程。",
+      "how": "Gemini 4 Argon 把两年的笔记整理成十集路线图；在 OpenArt 上用 Seedance 2.5 生成镜头，部分通过 MCP 从 Claude Code 和 Codex 调用；After Effects 里的抠像由 Claude 完成；Gemini 4 读取 Premiere XML，在 DaVinci Resolve 里调色混音；配乐用 Suno。",
+      "result": "第一集已经上线。他总结了三条经验：镜头不交给机器决定，能局部修就别整段重新生成，一个人现在已经能把片子做出来。",
+      "tryThis": "先建一个总表，把剧本、参考图、提示词和每个素材登记进去，再开始批量生成。",
+      "caveat": "角色一致性仍不稳定，主角形象需要绕道 Nano Banana 才能修好；3D 预演花的时间比省下的还多。整套工具链要付多份订阅费，还要会剪辑。",
+      "body": "Tim Simmons 在[幕后视频](https://www.youtube.com/watch?v=OWr3IU82bJ8)里讲 Planet Hell 第一集的制作，重点放在出过的问题上。Seedance 2.5 一直不肯还原主角 Tom，他把形象放进 Nano Banana 处理一遍才解决，原因他自己也说不清。另一个角色换了人演，他觉得效果比原来更贴合故事。用 CozyClay 和 three.js 做的 3D 预演最后弃用了，花的时间比省下的多。画面里一颗大得离谱的子弹，是在 After Effects 里抠掉的，抠像由 Claude 完成。\n\n可借鉴的是**分工方式**。生成、抠像、调色这些重复劳动交给 AI，剪辑和镜头取舍留给自己。他还专门做了一个「第二大脑」小组件，剧本、参考、提示词和每个素材都登记在里面。另外他发现，有时直接用平台界面比通过 MCP 从 Claude Code 调用更省事。\n\n商业上，这一集由 OpenArt 赞助，频道观众有专属折扣链接，延续了「用 AI 创作，再做成教程内容」的模式。想照着做的人，可以从 07:37 的 MCP 生成部分和 15:50 起的三条经验看起。他还提醒一点：上传 YouTube 时关掉 Stable Volume 和 Voice Boost。",
+      "sources": [
+        {
+          "label": "Theoretically Media",
+          "title": "The New Cinematic AI Film Workflow (What Actually Works)",
+          "url": "https://www.youtube.com/watch?v=OWr3IU82bJ8"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-07-01"
+    },
+    {
+      "candidateIds": [
+        "c14"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-07",
+      "headline": "Garry Tan：换上新模型后，删掉一个它已经不需要的 skill",
+      "oneLiner": "YC CEO Garry Tan 说，Opus 5.5 不靠 /investigate skill 反而做得更好，所以他把这个 skill 删了。",
+      "who": "Y Combinator CEO Garry Tan，自己写了 GStack 等 agent 工具，2026-11-07 在 X 上发帖。",
+      "how": "他认为 agent skill 必须用评测驱动的循环来维护：每次换新模型都重新测一遍，多余的 skill 就去掉。",
+      "result": "他举了自己的例子：Opus 5.5 不带 /investigate 时效果更好，于是把这个 skill 删了。",
+      "tryThis": "给自己最常用的几个 skill 或提示词模板各准备几条固定测试任务，换模型时跑一遍有和没有的对比。",
+      "caveat": "只有一个例子，也没有公开评测集。没有固定测试任务就做不了对比，只能凭感觉判断。",
+      "body": "Garry Tan 在[帖子](https://x.com/garrytan/status/2118920030243139596)里说，给 agent 写的 skill 需要**评测驱动的开发循环**。模型每一代都在变强，有些 skill 会变成多余，他刚因为 Opus 5.5 不用 /investigate 做得更好，就把这个 skill 删了。\n\n这对正在积累提示词库、skill 和工作流模板的人有直接影响。我们平时只往里加东西，很少删。旧模型时代写的长串约束，放到新模型上可能反而碍事。比较稳妥的做法是给每个 skill 留三到五条有标准答案的任务，换模型时分别跑带 skill 和不带 skill 两个版本，看结果和耗时再决定去留。\n\n这个判断有前提：任务能评测，结果能比较。写作风格这类主观任务比较难测，删之前最好让实际使用的人一起看结果。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Garry Tan: Eval-driven development loops for agent skills is necessary. Every new model get",
+          "url": "https://x.com/garrytan/status/2118920030243139596"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-07-02"
+    },
+    {
+      "candidateIds": [
+        "c42"
+      ],
+      "category": "life",
+      "kind": "本周演示",
+      "eventDate": "2026-11-06",
+      "headline": "用 ChatGPT 把自己的画和照片做成 GIF 发群里",
+      "oneLiner": "Lifehacker 作者 Khamosh Pathak 试了 ChatGPT 新出的 GIF 功能：几秒出图，改几轮能做出愿意发群的动图，复杂动作仍然不行。",
+      "who": "Lifehacker 作者 Khamosh Pathak，给 WhatsApp 群和社交平台做节日动图、表情包，也给自己的 JBL 音箱做了一张宣传图。",
+      "how": "写尽量详细的提示词，或者上传自己的手绘、照片；生成后继续用对话修改，比如调长短、删物体、换风格、放慢过渡。",
+      "result": "他说一次生成很少直接能用，改几轮后做出了愿意分享的 GIF。猫玩球、排灯节祝福这类轻松题材效果好，手冲咖啡这种需要真实物理细节的画面明显失真。",
+      "tryThis": "拿一张自己的涂鸦或宠物照片，让 ChatGPT 做成循环动图，第一版出来后只改过渡速度这一项。",
+      "caveat": "手部位置会在帧之间跳动，物体和颜色会凭空出现。需要真实动作细节时，用免版权视频转成的 GIF 效果更好。",
+      "body": "Khamosh Pathak 在 [Lifehacker](https://lifehacker.com/tech/chatgpts-new-gif-generator-is-fun-but-wont-replace-us-humans?utm_medium=RSS) 上实测了 ChatGPT 新出的 GIF 生成功能。可以用文字起手，也可以上传手绘或照片作底稿，几秒就出结果，之后用对话继续修改。他觉得用自己的画做动图最有意思。给音箱做宣传 GIF 时，第一版过渡太生硬、动作也不合理，改过几轮才可以用。\n\n这个工具的用处可以说得具体一点：**节日祝福、群聊表情、小店简单的产品动图**，都是不在意细节、追求好玩的场合。他用手冲咖啡做过对比：水壶不会画圈，水面上升不均匀，也没有气泡，比不上一段低清的真实视频。\n\n建议的用法是：先选一个动作简单的题材，第一版出来后每轮只改一个问题，比如速度、多余的物体或风格，这样比一次重写整段提示词更容易收敛。",
+      "sources": [
+        {
+          "label": "Lifehacker",
+          "title": "ChatGPT's New GIF Generator Is Fun, but Won't Replace Us Humans (Yet)",
+          "url": "https://lifehacker.com/tech/chatgpts-new-gif-generator-is-fun-but-wont-replace-us-humans?utm_medium=RSS"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-07-03"
+    },
+    {
+      "candidateIds": [
+        "c26"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-06",
+      "headline": "创作工具开始内置 MCP，agent 和人可以接力干活",
+      "oneLiner": "前 Claude Code 团队成员 Thariq 注意到，Instagram Edits、Roblox Studio 已经内置 MCP：agent 先做一部分，熟练用户在熟悉的工具里接着改。",
+      "who": "Thariq，曾在 Anthropic 做 Claude Code，2026-11-06 在 X 上发帖。",
+      "how": "他喜欢这种模式：创作类 App 自带 MCP，让 agent 承担部分工作，熟练用户再在原有工具里协作、接手。",
+      "result": "他举了 Instagram Edits 和 Roblox Studio 两个例子。同一周，Tim Simmons 拍 AI 短片时也通过 MCP 从 Claude Code 调用 OpenArt 生成镜头。",
+      "tryThis": "查一下自己每天用的设计、剪辑或表格工具有没有 MCP 接口，先让 agent 做准备性的粗活，精修留在原工具里自己做。",
+      "caveat": "Tim Simmons 的经验是，有些操作直接用平台界面更省事。MCP 只适合能说清楚、可以批量做的步骤。",
+      "body": "Thariq 在[帖子](https://x.com/trq212/status/2118822238262853904)里说，他看好一种做法：Instagram Edits、Roblox Studio 这类创作工具直接内置 MCP。agent 先完成一部分工作，熟练用户在自己熟悉的工具里接着协作，不用把工作搬到新平台。\n\n头条里的 Tim Simmons 就是这样用的：在 Claude Code 里通过 MCP 驱动 OpenArt 批量生成镜头，剪辑仍在 Premiere 里亲手做。他也提到，有些操作直接用平台更方便。\n\n对做内容和做工具的人，判断标准可以是：**哪些步骤能用一句话交代清楚、需要重复很多次**，这些交给 agent；需要审美判断的部分留在人手里。做 SaaS 的人也可以想一想，自己的产品要不要开放 MCP 接口，好让用户的 agent 直接调用。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Thariq: a pattern I’m liking: creator apps like Instagram Edits and Roblox Studio shippi",
+          "url": "https://x.com/trq212/status/2118822238262853904"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-07-04"
+    }
+  ],
+  "action": "打开你最常用的那份提示词或 agent skill，挑出用得最多的一个，写三条有明确合格标准的测试任务。用现在的模型分别跑「带 skill」和「不带 skill」两个版本，记录结果质量和耗时。不带反而更好的，就像 Garry Tan 那样删掉；带了明显更好的，保留下来，下次换模型时再测一遍。",
+  "readingMinutes": 6,
+  "meta": {
+    "generatedAt": "2026-11-07T14:43:49.830Z",
+    "engine": "cli",
+    "candidateCount": 43,
+    "candidatesBySource": {
+      "Simon Willison": 1,
+      "Ali Abdaal": 2,
+      "Matt Wolfe": 2,
+      "Theoretically Media": 1,
+      "Starter Story (YouTube)": 1,
+      "Follow Builders (X)": 29,
+      "Latent Space": 2,
+      "The AI Daily Brief": 1,
+      "Y Combinator / Lightcone (YouTube)": 1,
+      "App Masters (Steve P. Young)": 1,
+      "Lifehacker": 1,
+      "Tom's Guide · AI": 1
+    },
+    "shortlist": [
+      {
+        "id": "c6",
+        "reason": "谁：Theoretically Media 创作者；怎么用：亲自拆解短片 Planet Hell 的 AI 制作流程，用 Claude Code/Codex 通过 MCP 驱动 Seedance，Gemini 负责剪辑把关和调色，再回到 After Effects 修补；结果：系列首集已上线，还讲了哪些环节 AI 不如老办法。简介本身已写清工具链和踩坑，适合做内容创作类头条。",
+        "source": "Theoretically Media",
+        "title": "The New Cinematic AI Film Workflow (What Actually Works)"
+      },
+      {
+        "id": "c41",
+        "reason": "谁：独立开发者 Shane Hudson；怎么用：把周末做的项目 Value Study 一步步做成生意，靠美术老师推荐、细分社群和 ASO/Apple 搜索广告获客；结果：1 万多名用户，月经常性收入超过 5000 美元，累计 6.1 万美元。有可照着做的获客复盘，不过摘录里没提 AI 起了什么作用。",
+        "source": "App Masters (Steve P. Young)",
+        "title": "From Weekend Project to $61K"
+      },
+      {
+        "id": "c7",
+        "reason": "谁：Charlie 在全职工作之外做副业；怎么用：做 Linktree 替代品 Liinks，Instagram 广告失效后改靠 Google 搜索广告，增长持续了 4 年；结果：月经常性收入 3.15 万美元。有带数字的经营复盘，适合想做副业的读者，但摘录里也没提 AI 起了什么作用。",
+        "source": "Starter Story (YouTube)",
+        "title": "Bro's $30k MRR link-in-bio tool has been powered by Google ads 🥶"
+      },
+      {
+        "id": "c14",
+        "reason": "谁：YC 总裁 Garry Tan；怎么用：给 agent skills 做评测驱动的迭代，每出一个新模型就检查哪些 skill 可以删；结果：已经删掉 /investigate，因为 Opus 5.5 不靠它做得更好。属于一线判断加具体做法（认知类）。",
+        "source": "Follow Builders (X)",
+        "title": "Garry Tan: Eval-driven development loops for agent skills is necessary. Every new model get"
+      },
+      {
+        "id": "c26",
+        "reason": "谁：前 Claude Code 团队的 Thariq；判断：Instagram Edits、Roblox Studio 这类创作工具开始内置 MCP，agent 先完成一部分，熟练用户再在熟悉的工具里接着做。对做内容和做产品的人有参考（认知类）。",
+        "source": "Follow Builders (X)",
+        "title": "Thariq: a pattern I’m liking: creator apps like Instagram Edits and Roblox Studio shippi"
+      },
+      {
+        "id": "c27",
+        "reason": "谁：Peter Yang；判断：能调用多家实验室模型的应用（Conductor、Cursor 等）正在被模型实验室收购，剩下的多是开源，但用户和企业对多模型应用仍有需求。对选赛道做 AI 应用的创业者有用（认知类）。",
+        "source": "Follow Builders (X)",
+        "title": "Peter Yang: Feels like all the apps that can use models from different labs like @conductor_"
+      },
+      {
+        "id": "c42",
+        "reason": "谁：Lifehacker 作者亲测；怎么用：写了 ChatGPT 新 GIF 动图功能的具体操作步骤；结果：能玩但还替代不了人。属于普通人可以照着试的生活类用法，只是偏工具测评，排在后面。",
+        "source": "Lifehacker",
+        "title": "ChatGPT's New GIF Generator Is Fun, but Won't Replace Us Humans (Yet)"
+      },
+      {
+        "id": "c22",
+        "reason": "谁：Nikunj Kothari；做了什么：开源的 texts wrapped，一条终端命令就能在 Mac 本地分析 iMessage、WhatsApp 和通话记录，也可以交给 Claude Code/Codex 去跑。是个人能马上试的小工具，但工具本身不用 AI，信息量一般，作为备选。",
+        "source": "Follow Builders (X)",
+        "title": "Nikunj Kothari: (re) introducing texts wrapped\n\n&gt; imessage, whatsapp and phone calls analyzed"
+      }
+    ],
+    "droppedForLength": [],
+    "screen": {
+      "model": "claude-opus-5-5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 17508,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1600,
+        "output_tokens_details": {
+          "thinking_tokens": 468
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 17508,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1600,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 17508,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 17508
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "costUsd": 0.172072
+    },
+    "model": "claude-opus-5-5",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 13531,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 4831,
+      "output_tokens_details": {
+        "thinking_tokens": 1090
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 13531,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 4831,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 13531,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 13531
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "costUsd": 0.204876
+  }
+}

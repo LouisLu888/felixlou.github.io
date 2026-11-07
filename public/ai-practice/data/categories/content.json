@@ -8,6 +8,33 @@
   "items": [
     {
       "candidateIds": [
+        "c6"
+      ],
+      "category": "content",
+      "kind": "本周演示",
+      "eventDate": "2026-11-06",
+      "headline": "一个人拍 AI 科幻剧集：哪些环节交给模型，哪些还得自己做",
+      "oneLiner": "Tim Simmons 用 Seedance 2.5、Claude Code、Gemini 4 做出系列短片 Planet Hell 第一集，剪辑和镜头选择仍由他本人负责，这一集由 OpenArt 赞助。",
+      "who": "Theoretically Media 频道主 Tim Simmons，自编自导 AI 科幻系列 Planet Hell，第一集发布后公开幕后流程。",
+      "how": "Gemini 4 Argon 把两年的笔记整理成十集路线图；在 OpenArt 上用 Seedance 2.5 生成镜头，部分通过 MCP 从 Claude Code 和 Codex 调用；After Effects 里的抠像由 Claude 完成；Gemini 4 读取 Premiere XML，在 DaVinci Resolve 里调色混音；配乐用 Suno。",
+      "result": "第一集已经上线。他总结了三条经验：镜头不交给机器决定，能局部修就别整段重新生成，一个人现在已经能把片子做出来。",
+      "tryThis": "先建一个总表，把剧本、参考图、提示词和每个素材登记进去，再开始批量生成。",
+      "caveat": "角色一致性仍不稳定，主角形象需要绕道 Nano Banana 才能修好；3D 预演花的时间比省下的还多。整套工具链要付多份订阅费，还要会剪辑。",
+      "body": "Tim Simmons 在[幕后视频](https://www.youtube.com/watch?v=OWr3IU82bJ8)里讲 Planet Hell 第一集的制作，重点放在出过的问题上。Seedance 2.5 一直不肯还原主角 Tom，他把形象放进 Nano Banana 处理一遍才解决，原因他自己也说不清。另一个角色换了人演，他觉得效果比原来更贴合故事。用 CozyClay 和 three.js 做的 3D 预演最后弃用了，花的时间比省下的多。画面里一颗大得离谱的子弹，是在 After Effects 里抠掉的，抠像由 Claude 完成。\n\n可借鉴的是**分工方式**。生成、抠像、调色这些重复劳动交给 AI，剪辑和镜头取舍留给自己。他还专门做了一个「第二大脑」小组件，剧本、参考、提示词和每个素材都登记在里面。另外他发现，有时直接用平台界面比通过 MCP 从 Claude Code 调用更省事。\n\n商业上，这一集由 OpenArt 赞助，频道观众有专属折扣链接，延续了「用 AI 创作，再做成教程内容」的模式。想照着做的人，可以从 07:37 的 MCP 生成部分和 15:50 起的三条经验看起。他还提醒一点：上传 YouTube 时关掉 Stable Volume 和 Voice Boost。",
+      "sources": [
+        {
+          "label": "Theoretically Media",
+          "title": "The New Cinematic AI Film Workflow (What Actually Works)",
+          "url": "https://www.youtube.com/watch?v=OWr3IU82bJ8"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-07-01",
+      "issueDate": "2026-11-07",
+      "issueNumber": 29
+    },
+    {
+      "candidateIds": [
         "c44",
         "c8"
       ],

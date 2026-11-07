@@ -8,6 +8,60 @@
   "items": [
     {
       "candidateIds": [
+        "c14"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-07",
+      "headline": "Garry Tan：换上新模型后，删掉一个它已经不需要的 skill",
+      "oneLiner": "YC CEO Garry Tan 说，Opus 5.5 不靠 /investigate skill 反而做得更好，所以他把这个 skill 删了。",
+      "who": "Y Combinator CEO Garry Tan，自己写了 GStack 等 agent 工具，2026-11-07 在 X 上发帖。",
+      "how": "他认为 agent skill 必须用评测驱动的循环来维护：每次换新模型都重新测一遍，多余的 skill 就去掉。",
+      "result": "他举了自己的例子：Opus 5.5 不带 /investigate 时效果更好，于是把这个 skill 删了。",
+      "tryThis": "给自己最常用的几个 skill 或提示词模板各准备几条固定测试任务，换模型时跑一遍有和没有的对比。",
+      "caveat": "只有一个例子，也没有公开评测集。没有固定测试任务就做不了对比，只能凭感觉判断。",
+      "body": "Garry Tan 在[帖子](https://x.com/garrytan/status/2118920030243139596)里说，给 agent 写的 skill 需要**评测驱动的开发循环**。模型每一代都在变强，有些 skill 会变成多余，他刚因为 Opus 5.5 不用 /investigate 做得更好，就把这个 skill 删了。\n\n这对正在积累提示词库、skill 和工作流模板的人有直接影响。我们平时只往里加东西，很少删。旧模型时代写的长串约束，放到新模型上可能反而碍事。比较稳妥的做法是给每个 skill 留三到五条有标准答案的任务，换模型时分别跑带 skill 和不带 skill 两个版本，看结果和耗时再决定去留。\n\n这个判断有前提：任务能评测，结果能比较。写作风格这类主观任务比较难测，删之前最好让实际使用的人一起看结果。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Garry Tan: Eval-driven development loops for agent skills is necessary. Every new model get",
+          "url": "https://x.com/garrytan/status/2118920030243139596"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-07-02",
+      "issueDate": "2026-11-07",
+      "issueNumber": 29
+    },
+    {
+      "candidateIds": [
+        "c26"
+      ],
+      "category": "perspective",
+      "kind": "观点访谈",
+      "eventDate": "2026-11-06",
+      "headline": "创作工具开始内置 MCP，agent 和人可以接力干活",
+      "oneLiner": "前 Claude Code 团队成员 Thariq 注意到，Instagram Edits、Roblox Studio 已经内置 MCP：agent 先做一部分，熟练用户在熟悉的工具里接着改。",
+      "who": "Thariq，曾在 Anthropic 做 Claude Code，2026-11-06 在 X 上发帖。",
+      "how": "他喜欢这种模式：创作类 App 自带 MCP，让 agent 承担部分工作，熟练用户再在原有工具里协作、接手。",
+      "result": "他举了 Instagram Edits 和 Roblox Studio 两个例子。同一周，Tim Simmons 拍 AI 短片时也通过 MCP 从 Claude Code 调用 OpenArt 生成镜头。",
+      "tryThis": "查一下自己每天用的设计、剪辑或表格工具有没有 MCP 接口，先让 agent 做准备性的粗活，精修留在原工具里自己做。",
+      "caveat": "Tim Simmons 的经验是，有些操作直接用平台界面更省事。MCP 只适合能说清楚、可以批量做的步骤。",
+      "body": "Thariq 在[帖子](https://x.com/trq212/status/2118822238262853904)里说，他看好一种做法：Instagram Edits、Roblox Studio 这类创作工具直接内置 MCP。agent 先完成一部分工作，熟练用户在自己熟悉的工具里接着协作，不用把工作搬到新平台。\n\n头条里的 Tim Simmons 就是这样用的：在 Claude Code 里通过 MCP 驱动 OpenArt 批量生成镜头，剪辑仍在 Premiere 里亲手做。他也提到，有些操作直接用平台更方便。\n\n对做内容和做工具的人，判断标准可以是：**哪些步骤能用一句话交代清楚、需要重复很多次**，这些交给 agent；需要审美判断的部分留在人手里。做 SaaS 的人也可以想一想，自己的产品要不要开放 MCP 接口，好让用户的 agent 直接调用。",
+      "sources": [
+        {
+          "label": "Follow Builders (X)",
+          "title": "Thariq: a pattern I’m liking: creator apps like Instagram Edits and Roblox Studio shippi",
+          "url": "https://x.com/trq212/status/2118822238262853904"
+        }
+      ],
+      "region": "US",
+      "id": "2026-11-07-04",
+      "issueDate": "2026-11-07",
+      "issueNumber": 29
+    },
+    {
+      "candidateIds": [
         "c52"
       ],
       "category": "perspective",
